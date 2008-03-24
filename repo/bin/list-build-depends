@@ -1,0 +1,45 @@
+#!/usr/bin/python
+# Author: Carlos Parra Camargo <cparra@emergya.es>
+
+import sys
+import re
+
+def main ():
+	if sys.argv.__len__() != 2:
+		print "Use: %s \"path to debian/control file\"" % sys.argv[0]
+		sys.exit(1)
+
+	# Open debian/control file	
+	file_control = open(sys.argv[1], 'r')
+	
+	# Generate a re that catches the packages
+	re_build_dep = re.compile('^Build-Depends\: (.*)')
+	re_build_dep_indep = re.compile('^Build-Depends-Indep\: (.*)')
+
+	bdepends = []
+	bdepends_indep = []
+
+	for line in file_control.readlines():
+		info_build_dep = re_build_dep.findall(line)
+		info_build_dep_indep = re_build_dep_indep.findall(line)
+		if info_build_dep:
+			pkgs_raw = info_build_dep[0].split(',')
+			for pkg_raw in pkgs_raw:
+				if pkg_raw.count('(') != 0:
+					pkg = pkg_raw[0:pkg_raw.index('(')].strip()
+				else:
+					pkg = pkg_raw.strip()
+				bdepends.append(pkg)
+		if info_build_dep_indep:
+			pkgs_raw = info_build_dep_indep[0].split(',')
+			for pkg_raw in pkgs_raw:
+				if pkg_raw.count('(') != 0:
+					pkg = pkg_raw[0:pkg_raw.index('(')].strip()
+				else:
+					pkg = pkg_raw.strip()
+				bdepends_indep.append(pkg)
+
+	print " ".join(bdepends) + " " + " ".join(bdepends_indep)
+
+if __name__ == '__main__':
+	main()

@@ -1,0 +1,139 @@
+#!/bin/bash
+
+DERIVATIVE_PACKAGES=/var/mirror/pkgs
+SVN_ROOT=/var/gv5
+
+
+# Steady...
+[ ! -d $DERIVATIVE_PACKAGES ] && mkdir -p $DERIVATIVE_PACKAGES
+
+DATE=$(date +%Y%m%d)
+
+function clean_debian_files ()
+{
+        DIR=$1
+        echo
+        echo " === Cleaning deb files under $DIR ==="
+        echo
+        [ -f $DIR/*build ] && rm $DIR/*build
+        [ -f $DIR/*changes ] && rm $DIR/*changes
+
+	# No work with sources
+	#[ -f $DIR/*gz ] && rm $DIR/*gz
+	#[ -f $DIR/*dsc ] && rm $DIR/*dsc
+}
+
+function retrieve_debian_files ()
+{
+        DIR=$1
+        echo 
+        echo " === Retrieve deb files under $DIR ==="
+        echo
+	
+	if [ -n "$(ls $DIR | grep -E '\.deb$|\.dsc$|tar\.gz|\.diff\.gz')" ]; then
+	        mv $DIR/*\.deb $DIR/*\.dsc $DIR/*\.diff\.gz $DIR/*\.tar\.gz $DERIVATIVE_PACKAGES
+	else
+                echo " ***** Warning: No debian files founded under $DIR, it may be something wrong with the compilation ***** "
+        fi
+
+
+}
+
+function check_build_depends ()
+{
+        CONTROL=$1
+        echo
+        echo " === Checking and installing if needed build dependencies... ==="
+        echo
+#        sudo apt-get -f -y --force-yes install $(/var/mirror/bin/list-build-depends $CONTROL)
+}
+
+# Get the 
+cd $SVN_ROOT > /dev/null
+svn up --config-dir /home/ggv4/.subversion/config.ggv4gensys/ --username ggv4gensys > /tmp/repository-stuff.$USER.$DATE
+[ "$?" != "0" ] && echo " * * * * * Problems updating repository * * * * *" && exit 1
+REPO_VERSION=$(cat /tmp/repository-stuff.$USER.$DATE | tail -1 | sed -e 's/.*\ //g' | sed -e 's/\.//g')
+cd - > /dev/null
+
+echo
+echo "Repository version: $REPO_VERSION"
+echo
+
+if [ "$1" != "--force" ]; then
+	if [ -f /var/mirror/pkgs/.last-compiled ]; then
+		LAST_COMPILED=$(cat /var/mirror/pkgs/.last-compiled)
+		if [ $LAST_COMPILED -ge $REPO_VERSION ]; then
+			echo "  No es necesario recompilar, use el argumento \"--force\" para forzar la recompilación"
+			echo
+			exit 0
+	        fi
+	fi
+fi
+
+# Look for all the packages under customize_system, compile it and include and copy to guada-packages.
+#for x in $(find $SVN_ROOT/customize_system -name trunk)
+for x in $(find /var/ggv4/customize_system/ -name gcs | sed -e 's/\/gcs$//g')
+do
+        echo
+        echo " === Going to $x... ==="
+        echo
+        if [ -d $x/gcs ]; then
+                cd $x
+                cp gcs/info gcs/info.back
+                sed -i "s/^version\:.*/version: r$REPO_VERSION/g" gcs/info
+                gcs_build
+                mv gcs/info.back gcs/info
+                retrieve_debian_files $x/..
+                clean_debian_files $x/..
+                rm -rf $x/debian
+                cd - > /dev/null
+        fi
+done
+
+# Look for all the application released (under a tag dir), compile it and include and copy to guada-packages.
+for TAG_DIR in $(find $SVN_ROOT -name tags | grep -v gcs\/tags)
+do
+        for TAG_VERSION in $(ls $TAG_DIR)
+        do
+                if [ -d $TAG_DIR/$TAG_VERSION ]; then
+			if [ -d $TAG_DIR/$TAG_VERSION/debian ]; then
+	                        echo
+	                        echo " === Going to $TAG_DIR/$TAG_VERSION ... ==="
+	                        echo
+				if [[ "$1" != "--force" && -f $TAG_DIR/$TAG_VERSION/.compiled ]]; then
+					echo
+					echo " ---> No es necesario recompilar. La versión $TAG_VERSION ya ha sido compilada. <---"
+					echo 
+				else
+		                        cd $TAG_DIR/$TAG_VERSION
+		                        check_build_depends debian/control
+		                        debuild --no-tgz-check -uc -us
+		                        debclean
+		                        retrieve_debian_files $TAG_DIR
+		                        clean_debian_files $TAG_DIR
+					touch $TAG_DIR/$TAG_VERSION/.compiled
+		                        cd - > /dev/null
+				fi
+			fi
+                fi
+        done
+done
+
+
+echo $REPO_VERSION > /var/mirror/pkgs/.last-compiled
+
+# Packages needed by the installer or generation system
+#for x in $(find $SVN_ROOT/customize_system/packages -name debian)
+#do
+#        echo
+#        echo " === Going to $x/.. ... ==="
+#        echo
+#        cd $x/..
+#        check_build_depends debian/control
+#        debuild --no-tgz-check -uc -us
+#        debclean
+#        retrieve_debian_files $x/../..
+#        clean_debian_files $x/../..
+#        cd - > /dev/null
+#done
+

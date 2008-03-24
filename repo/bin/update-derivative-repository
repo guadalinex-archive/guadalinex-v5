@@ -1,0 +1,22 @@
+#!/bin/bash
+set -x
+DERIVATIVE_PACKAGES=/var/mirror/pkgs-dev
+DERIVATIVE_REPOSITORY=/var/mirror/derivative
+REPREPRO=/usr/bin/reprepro
+LOG_FILE=/var/mirror/logs/update-derivative.log
+CODENAME=lobo-dev
+OPTIONS="-Vb $DERIVATIVE_REPOSITORY --ignore=wrongdistribution"
+
+# Ready...
+# Including packages
+for pkg in $(ls $DERIVATIVE_PACKAGES | grep -E '.*deb$|.*dsc$');do
+  if [[ $(echo $pkg|awk -F . '{print $NF}') = "dsc" ]];then
+	$REPREPRO $OPTIONS -S guada -P low includedsc $CODENAME $DERIVATIVE_PACKAGES/$pkg | tee -a $LOG_FILE
+  else	
+	if [[ $(echo $pkg|awk -F . '{print $NF}') = "udeb" ]];then
+  		$REPREPRO $OPTIONS includeudeb $CODENAME $DERIVATIVE_PACKAGES/$pkg | tee -a $LOG_FILE
+  	else
+        	$REPREPRO $OPTIONS includedeb $CODENAME $DERIVATIVE_PACKAGES/$pkg | tee -a $LOG_FILE
+	fi
+  fi
+done
