@@ -1,0 +1,10 @@
+# File/Dir      InstallDir
+builder.py      /usr/share/gcs
+config.py       /usr/share/gcs
+generators      /usr/share/gcs
+skel            /usr/share/gcs
+templates       /usr/share/gcs
+doc             /usr/share/gcs
+gcs_build       /usr/bin
+gcs_skel        /usr/bin 
+gcs.conf        /etc
