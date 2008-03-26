@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+
+rm -f /etc/ejemplo.conf
+dpkg-divert --package dummy-conf --rename --quiet --remove /etc/ejemplo.conf

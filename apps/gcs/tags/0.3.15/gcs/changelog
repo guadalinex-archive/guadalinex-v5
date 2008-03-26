@@ -1,0 +1,30 @@
+gcs (0.3.13) edgy; urgency=low
+
+  * Added support for desktop files.
+
+ -- Junta de Andalucia <packmaster@guadalinex.org>  Tue, 25 Mar 2008 17:20:59 -0000
+
+
+gcs (0.3.12) edgy; urgency=low
+
+  * Added support for pre-depends.
+  * Added support for conflict fields.
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.info>  Mon, 19 Mar 2007 09:00:14 -0000
+
+
+gcs (0.3.9) edgy; urgency=low
+
+  * 0.4 rc1.
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.info>  Wed, 20 Dec 2006 11:55:20 -0000
+
+
+gcs (0.3.8) edgy; urgency=low
+
+  * Development release.
+  * Fixing a minor bug with skel.
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.info>  Thu, 30 Nov 2006 16:08:22 -0000
+
+

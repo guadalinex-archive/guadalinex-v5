@@ -1,0 +1,12 @@
+Source: dummy
+Section: doc
+Priority: optional
+Maintainer: Gumer Coronel <gcoronel@emergya.es>
+Build-Depends: debhelper (>> 3.0.0)
+Standards-Version: 3.5.2 
+
+Package: dummy
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: Dummy package
+ Paquete de pruebas para el sistema de personalización de Guadalinex

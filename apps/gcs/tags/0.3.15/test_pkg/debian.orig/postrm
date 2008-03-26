@@ -1,0 +1,8 @@
+#!/bin/sh
+#DEBHELPER#
+
+
+
+script_command posrm
+
+

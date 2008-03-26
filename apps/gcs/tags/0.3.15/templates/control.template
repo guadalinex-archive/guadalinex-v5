@@ -1,0 +1,14 @@
+Source: <NAME>
+Section: <SECTION>
+Priority: <PRIORITY>
+Maintainer: <MANTAINER>
+Build-Depends: debhelper (>> 3.0.0)
+Standards-Version: 3.7.3
+
+Package: <NAME>
+Architecture: i386
+Pre-Depends: <PREDEPENDS>
+Depends: <DEPENDS>
+Conflicts: <CONFLICTS>
+Description: <SHORTDESC> 
+ <LONGDESC>

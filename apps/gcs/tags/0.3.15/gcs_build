@@ -1,0 +1,14 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import os
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+sys.path.insert(0, '/usr/share/gcs/')
+
+from builder import Builder
+
+if __name__ == "__main__":
+    builder = Builder(os.getcwd())
+    builder.make_package()

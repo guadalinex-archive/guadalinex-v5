@@ -1,0 +1,9 @@
+#!/bin/bash
+# Missing "==" operator in dash!
+if [ "$1" == "-f" ]
+then
+    cp -r /usr/share/gcs/skel/* ./ 2> /dev/null
+else
+    yes no |cp -r /usr/share/gcs/skel/* ./ 2> /dev/null
+fi
+

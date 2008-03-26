@@ -1,0 +1,12 @@
+Source: gcs-test-pkg
+Section: main
+Priority: optional
+Maintainer: Gumersindo Coronel Pérez <gcoronel@emergya.info>
+Build-Depends: debhelper (>> 3.0.0)
+Standards-Version: 3.7.2
+
+Package: gcs-test-pkg
+Architecture: i386
+Depends: python, gnome-terminal
+Description: Paquete para los test de gcs 
+ Paquete para las pruebas de los cambios que se hagan del gcs

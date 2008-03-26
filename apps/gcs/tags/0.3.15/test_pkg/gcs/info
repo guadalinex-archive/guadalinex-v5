@@ -1,0 +1,24 @@
+# YAML 1.1
+# Fichero de configuración de paquetes de personalización de Guadalinex v4
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: gcs-test-pkg
+
+shortdesc: Paquete para los test de gcs
+longdesc: Paquete para las pruebas de los cambios que se hagan del gcs
+
+# Autor 
+author: Gumersindo Coronel Pérez <gcoronel@emergya.info>
+
+# Priority
+priority: optional
+
+# Section
+section: main
+
+# Versión del paquete
+version: 0.1
+
+# Cambios en esta versión
+changes:
+    - Initial release

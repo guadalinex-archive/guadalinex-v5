@@ -1,0 +1,20 @@
+Format: 1.7
+Date: Fri,  3 Nov 2006 11:46:57 +0100
+Source: dummy
+Binary: dummy
+Architecture: source i386
+Version: 0.1
+Distribution: edgy
+Urgency: low
+Maintainer: Gumer Coronel <gcoronel@emergya.es>
+Changed-By: Gumersindo Coronel Pérez <gcoronel@emergya.es>
+Description: 
+ dummy      - Dummy package
+Changes: 
+ dummy (0.1) edgy; urgency=low
+ .
+   * Initial release.
+Files: 
+ b97dbba20367cc337a40c1a72606c9a1 244 doc optional dummy_0.1.dsc
+ 948a968230cf13f086b4eca9c5047f0b 5444 doc optional dummy_0.1.tar.gz
+ be4b145f14187b7d2ab4cb8425ae58cc 1242 doc optional dummy_0.1_i386.deb
