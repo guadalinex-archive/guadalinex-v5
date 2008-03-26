@@ -1,10 +1,10 @@
 #!/bin/bash
-set -x
-DERIVATIVE_PACKAGES=/var/mirror/pkgs-dev
+#set -x
+DERIVATIVE_PACKAGES=/var/mirror/pkgs
 DERIVATIVE_REPOSITORY=/var/mirror/derivative
 REPREPRO=/usr/bin/reprepro
 LOG_FILE=/var/mirror/logs/update-derivative.log
-CODENAME=lobo-dev
+CODENAME=lobo
 OPTIONS="-Vb $DERIVATIVE_REPOSITORY --ignore=wrongdistribution"
 
 # Ready...
