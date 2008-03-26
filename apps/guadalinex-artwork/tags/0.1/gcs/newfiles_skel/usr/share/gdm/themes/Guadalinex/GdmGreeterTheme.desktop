@@ -1,0 +1,8 @@
+[GdmGreeterTheme]
+Greeter=Guadalinex.xml
+Name=Guadalinex
+Description=Tema de bienvenida de Guadalinex v4
+Author=Abel Domínguez, Wenceslao Castillo, Juan Jesús Ojeda
+Copyright=(c) 2007 Junta de Andalucía
+Screenshot=screenshot.png
+X-Ubuntu-Gettext-Domain=guadalinex-artwork

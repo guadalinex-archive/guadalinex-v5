@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Guadalinex
+Comment=Tema de Guadalinex
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Guadalinex
+IconTheme=Guadalinex
+MetacityTheme=Guadalinex
