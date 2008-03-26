@@ -80,7 +80,7 @@ do
         if [ -d $x/gcs ]; then
                 cd $x
                 cp gcs/info gcs/info.back
-                sed -i "s/^version\:.*/version: r$REPO_VERSION/g" gcs/info
+                sed -i "s/\(^version\:.*\)/\1r$REPO_VERSION/g" gcs/info
                 gcs_build
                 mv gcs/info.back gcs/info
                 retrieve_debian_files $x/..
