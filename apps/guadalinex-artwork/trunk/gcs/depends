@@ -4,5 +4,5 @@
 # gnome-terminal
 # nautilus  >=2.6.10
 
-usplash-theme-guadalinex
+usplash-theme-guadalinex (>= 0.3)
 ubuntu-artwork
