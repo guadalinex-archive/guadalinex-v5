@@ -1,0 +1,20 @@
+usplash-theme-guadalinex (0.3) hardy; urgency=low
+
+  * Initial release for Guadalinex v5 purposes.
+  * Changed usplash-dev build-dependence to libusplash-dev
+  * Usplash images modified for alpha1
+  * Several bugfixes on source-package. No lintian errors now.
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Wed, 26 Mar 2008 16:29:49 +0100
+
+usplash-theme-guadalinex (0.2) stable; urgency=low
+
+  * New theme.
+
+ -- Juan Jesus Ojeda Croissier <jojeda@emergya.es>  Fri, 23 Feb 2007 15:37:00 +0100
+
+usplash-theme-guadalinex (0.1) stable; urgency=low
+
+  * Initial release.
+
+ -- Gabriel Rodriguez Alberich <grodriguez@yaco.es>  Tue, 29 Nov 2006 11:02:00 +0100
