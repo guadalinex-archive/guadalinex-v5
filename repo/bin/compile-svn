@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DERIVATIVE_PACKAGES=/var/mirror/pkgs
-SVN_ROOT=/var/gv5
+SVN_ROOT=/var/guadalinexv5
 
 
 # Steady...
@@ -50,9 +50,9 @@ function check_build_depends ()
 
 # Get the 
 cd $SVN_ROOT > /dev/null
-svn up --config-dir /home/ggv4/.subversion/config.ggv4gensys/ --username ggv4gensys > /tmp/repository-stuff.$USER.$DATE
+svn up 
 [ "$?" != "0" ] && echo " * * * * * Problems updating repository * * * * *" && exit 1
-REPO_VERSION=$(cat /tmp/repository-stuff.$USER.$DATE | tail -1 | sed -e 's/.*\ //g' | sed -e 's/\.//g')
+REPO_VERSION=$(svn st -Nqv . | awk 'END{print $1}')
 cd - > /dev/null
 
 echo
@@ -72,7 +72,7 @@ fi
 
 # Look for all the packages under customize_system, compile it and include and copy to guada-packages.
 #for x in $(find $SVN_ROOT/customize_system -name trunk)
-for x in $(find /var/ggv4/customize_system/ -name gcs | sed -e 's/\/gcs$//g')
+for x in $(find ${SVN_ROOT}/metapkgs/ -name gcs | sed -e 's/\/gcs$//g')
 do
         echo
         echo " === Going to $x... ==="
