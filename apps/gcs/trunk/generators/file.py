@@ -282,7 +282,7 @@ class ChangelogGenerator(FileGenerator):
         newcontent = newcontent.replace('<AUTHOR>', 
                 info['author'])
         newcontent = newcontent.replace('<DATE>',
-                email.Utils.formatdate()) 
+                email.Utils.formatdate(None,True)) 
 
         self.template_content = newcontent
 
