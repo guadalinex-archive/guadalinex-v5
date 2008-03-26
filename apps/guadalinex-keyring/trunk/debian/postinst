@@ -1,9 +1,9 @@
 #!/bin/sh
 
 # make sure apt knows about the new keys
-if [ -x /usr/bin/apt-key ]; then
-    /usr/bin/apt-key update
-fi
+#if [ -x /usr/bin/apt-key ]; then
+#    /usr/bin/apt-key update
+#fi
 
 # the keyring in /var that gets fetched by apt-key net-update
 # if it does not yet exist, copy it to avoid uneeded net copy
@@ -15,6 +15,11 @@ if ! test -d $KEYRINGDIR; then
 fi
 
 if ! test -f $KEYRING; then
-     cp /usr/share/keyrings/ubuntu-archive-keyring.gpg $KEYRING
+     cp /usr/share/keyrings/guadalinex-archive-keyring.gpg $KEYRING
      touch $KEYRING
 fi
+
+if [ -x /usr/bin/apt-key ]; then
+    /usr/bin/apt-key add /usr/share/keyrings/guadalinex-archive-keyring.gpg
+fi
+

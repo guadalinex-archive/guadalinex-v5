@@ -1,6 +1,10 @@
 #!/bin/sh
 set -e
 DIR=/usr/share/keyrings
+#purge old keyring
+if [ -e $DIR/archive.gpg ]; then
+	rm $DIR/archive.gpg	
+fi
 if [ ! -e $DIR/archive.gpg ]; then
-	ln -s ubuntu-archive-keyring.gpg $DIR/archive.gpg
+	ln -s guadalinex-archive-keyring.gpg $DIR/archive.gpg
 fi

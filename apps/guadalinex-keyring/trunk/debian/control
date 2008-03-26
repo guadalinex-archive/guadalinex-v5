@@ -15,7 +15,7 @@ Description: GnuPG keys of the Ubuntu archive
 
 Package: guadalinex-keyring-udeb
 Provides: ubuntu-keyring-udeb
-Priority: optional
+Priority: important
 Architecture: all
 Section: debian-installer
 Recommends: gpgv-udeb
