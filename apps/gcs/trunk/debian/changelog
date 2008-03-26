@@ -1,3 +1,9 @@
+gcs (0.3.15) hardy; urgency=low
+
+  * Changed standards-version to current 3.7.3
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Wed, 26 Mar 2008 10:40:12 +0000
+
 gcs (0.3.14) hardy; urgency=low
 
   * Initial release for Guadalinex v5 purposes.
