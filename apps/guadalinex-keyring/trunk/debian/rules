@@ -30,8 +30,8 @@ binary-indep: checkroot
 	$(install_script) debian/postinst debian/tmp/DEBIAN/
 
 	$(install_dir) debian/tmp/usr/share/keyrings/
-	$(install_file) keyrings/ubuntu-archive-keyring.gpg debian/tmp/usr/share/keyrings/
-	$(install_file) keyrings/ubuntu-master-keyring.gpg debian/tmp/usr/share/keyrings/
+	$(install_file) keyrings/guadalinex-archive-keyring.gpg debian/tmp/usr/share/keyrings/
+	$(install_file) keyrings/guadalinex-master-keyring.gpg debian/tmp/usr/share/keyrings/
 
 	$(install_dir) debian/tmp/usr/share/doc/guadalinex-keyring/
 	$(install_file) debian/changelog debian/tmp/usr/share/doc/guadalinex-keyring/changelog
@@ -47,7 +47,7 @@ binary-indep: checkroot
 	$(install_dir) debian/guadalinex-keyring-udeb/DEBIAN/
 
 	$(install_dir) debian/guadalinex-keyring-udeb/usr/share/keyrings/
-	$(install_file) keyrings/ubuntu-archive-keyring.gpg debian/guadalinex-keyring-udeb/usr/share/keyrings/
+	$(install_file) keyrings/guadalinex-archive-keyring.gpg debian/guadalinex-keyring-udeb/usr/share/keyrings/
 	install -m 755 debian/guadalinex-keyring-udeb.postinst debian/guadalinex-keyring-udeb/DEBIAN/postinst
 
 	# Don't let dpkg-gencontrol write incorrect guesses to debian/files.
@@ -60,7 +60,7 @@ binary-indep: checkroot
 binary-arch:
 
 define checkdir
-	test -f keyrings/ubuntu-archive-keyring.gpg
+	test -f keyrings/guadalinex-archive-keyring.gpg
 endef
 
 # Below here is fairly generic really
