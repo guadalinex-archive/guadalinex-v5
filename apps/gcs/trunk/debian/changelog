@@ -1,3 +1,9 @@
+gcs (0.3.16) hardy; urgency=low
+
+  * Changed the version style to v[Guadalinex version].
+
+ -- Juanje Ojeda Croissier <jojeda@emergya.es>  Thu, 27 Mar 2008 00:59:12 +0100
+
 gcs (0.3.15) hardy; urgency=low
 
   * Changed standards-version to current 3.7.3
