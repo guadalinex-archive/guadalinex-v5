@@ -1,0 +1,13 @@
+Source: casper-guada
+Section: misc
+Priority: optional
+Maintainer: Junta de Andalucía <packmaster@guadalinex.org>
+Build-Depends: debhelper (>> 4.2.0)
+Standards-Version: 3.7.2
+
+Package: casper-guada
+Architecture: any
+Section: misc
+Priority: extra
+Depends: casper (= 1.123)
+Description: Run a "live" preinstalled system from read-only media
