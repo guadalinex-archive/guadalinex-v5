@@ -1,0 +1,10 @@
+#!/bin/sh
+#DEBHELPER#
+
+rm -f /etc/lsb-release
+dpkg-divert --package gcs-test-pkg --rename --quiet --remove /etc/lsb-release
+
+
+script_command prerm
+
+

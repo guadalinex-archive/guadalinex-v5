@@ -1,0 +1,15 @@
+Source: gcs
+Section: admin
+Priority: optional
+Maintainer: Junta de Andalucia <packmaster@guadalinex.org>
+Build-Depends: debhelper (>> 3.0.0)
+Standards-Version: 3.7.3
+
+Package: gcs
+Architecture: i386
+Pre-Depends: 
+Depends: python, python-syck, python-support, debhelper, devscripts, make, fakeroot, gcc
+Conflicts: 
+Description: Sistema de configuración de Guadalinex v4 
+ Consiste en un conjunto de herramientas que facilitan
+ la creacion de metapaquetes y paquetes de configuración.

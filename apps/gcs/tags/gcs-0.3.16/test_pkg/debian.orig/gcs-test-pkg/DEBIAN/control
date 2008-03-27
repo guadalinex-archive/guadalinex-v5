@@ -1,0 +1,10 @@
+Package: gcs-test-pkg
+Version: 0.1
+Section: main
+Priority: optional
+Architecture: i386
+Depends: python, gnome-terminal
+Installed-Size: 68
+Maintainer: Gumersindo Coronel Pérez <gcoronel@emergya.info>
+Description: Paquete para los test de gcs
+ Paquete para las pruebas de los cambios que se hagan del gcs

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+dpkg-divert --package dummy-conf --rename --quiet --add /etc/ejemplo.conf
+ln -s /etc/ejemplo.conf.new /etc/ejemplo.conf

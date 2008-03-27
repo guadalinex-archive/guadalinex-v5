@@ -1,0 +1,26 @@
+# YAML 1.1
+# Fichero de configuración de paquetes de personalización de Guadalinex v4
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: gcs
+
+# Autor 
+author: Junta de Andalucia <packmaster@guadalinex.org>
+
+# Priority
+priority: optional
+
+# Section
+section: admin
+
+shortdesc: "Sistema de configuración de Guadalinex v4"
+
+longdesc: "Consiste en un conjunto de herramientas que facilitan\n la creacion de metapaquetes y paquetes de configuración."
+
+# Versión del paquete
+version: 0.3.13
+
+# Cambios en esta versión
+changes:
+    - Added support for desktop files.
+

@@ -1,0 +1,8 @@
+#!/bin/bash
+#DEBHELPER#
+
+<DIVERT_SLOT>
+
+<SCRIPTS_SLOT>
+
+exit 0

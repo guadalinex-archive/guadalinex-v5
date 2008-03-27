@@ -1,0 +1,2 @@
+# File/Dir      InstallDir (only dirs NOT files)
+test_pkg.conf   /etc
