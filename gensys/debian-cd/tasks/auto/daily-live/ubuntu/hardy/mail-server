@@ -1,0 +1,15 @@
+#ifdef ARCH_i386
+dovecot-common
+dovecot-imapd
+dovecot-pop3d
+liblockfile1
+libmysqlclient15off
+libpq5
+mailx
+mutt
+mysql-common
+openssl
+postfix
+procmail
+ssl-cert
+#endif /* ARCH_i386 */

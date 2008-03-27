@@ -1,0 +1,630 @@
+#! /bin/sh
+set -e
+
+export CDIMAGE_ROOT="${CDIMAGE_ROOT:-/srv/cdimage.ubuntu.com}"
+. "$CDIMAGE_ROOT/etc/config"
+
+if [ -z "$1" ] || [ -z "$2" ]; then
+	echo 'Usage: make-web-indices DIR CDPREFIX' >&2
+	exit 1
+fi
+
+DIR="$1"
+CDPREFIX="$2"
+
+HEADER="$DIR/HEADER.html"
+FOOTER="$DIR/FOOTER.html"
+HTACCESS="$DIR/.htaccess"
+
+count () {
+	case $1 in
+		1)	echo one ;;
+		2)	echo two ;;
+		3)	echo three ;;
+		4)	echo four ;;
+		5)	echo five ;;
+		6)	echo six ;;
+		7)	echo seven ;;
+		8)	echo eight ;;
+		9)	echo nine ;;
+		*)
+			echo "Can't count up to $1!" >&2
+			exit 1
+			;;
+	esac
+}
+
+titlecase () {
+	perl -ne 'print "\u$_"'
+}
+
+cssincludes () {
+	case $PROJECT in
+		kubuntu)
+			echo 'http://releases.ubuntu.com/include/kubuntu.css'
+			;;
+		kubuntu-kde4)
+			echo 'http://releases.ubuntu.com/include/kubuntu.css'
+			;;
+		*)
+			echo 'http://releases.ubuntu.com/include/plone.css http://releases.ubuntu.com/include/ubuntu.css'
+			;;
+	esac
+}
+
+cdtypestr () {
+	# Ubuntu Studio is expected to be oversized in Gutsy; sigh.
+	case $PROJECT in
+		ubuntustudio)
+			CD=DVD
+			;;
+		*)
+			CD=CD
+			;;
+	esac
+
+	case $1 in
+		live)
+			echo "live $CD"
+			;;
+		desktop)
+			echo "desktop $CD"
+			;;
+		install)
+			echo "install $CD"
+			;;
+		alternate)
+			echo "alternate install $CD"
+			;;
+		server)
+			case $PROJECT in
+				edubuntu)
+					echo "classroom server $CD"
+					;;
+				*)
+					echo "server install $CD"
+					;;
+			esac
+			;;
+		serveraddon)
+			# Edubuntu only
+			echo "classroom server add-on $CD"
+			;;
+		addon)
+			# Edubuntu only
+			echo "add-on $CD"
+			;;
+		dvd)
+			echo 'install/live DVD'
+			;;
+		src)
+			echo "source $CD"
+			;;
+		*)
+			echo "Unknown CD type $1!" >&2
+			;;
+	esac
+}
+
+cdtypedesc () {
+	case $PROJECT in
+		xubuntu)
+			DESKTOP_RAM=128
+			;;
+		*)
+			case $DIST in
+				warty|hoary|breezy|dapper|edgy|feisty)
+					DESKTOP_RAM=256
+					;;
+				*)
+					DESKTOP_RAM=320
+					;;
+			esac
+			;;
+	esac
+
+	# Ubuntu Studio is expected to be oversized in Gutsy; sigh.
+	case $PROJECT in
+		ubuntustudio)
+			CD=DVD
+			;;
+		*)
+			CD=CD
+			;;
+	esac
+
+	case $1 in
+		live)
+			cat <<EOF
+<p>The live $CD allows you to try $CAPPROJECT without changing your computer
+at all, and at your option to install it permanently later.</p>
+EOF
+			;;
+		desktop)
+			case $PROJECT in
+				edubuntu)
+					cat <<EOF
+<p>The desktop $CD allows you to try $CAPPROJECT without changing your
+computer at all, and at your option to install it permanently later. You
+will need at least ${DESKTOP_RAM}MB of RAM to install from this $CD. You can
+install additional educational programs using the classroom server add-on
+$CD.</p>
+EOF
+					;;
+				*)
+					cat <<EOF
+<p>The desktop $CD allows you to try $CAPPROJECT without changing your
+computer at all, and at your option to install it permanently later. This
+type of $CD is what most people will want to use. You will need at least
+${DESKTOP_RAM}MB of RAM to install from this $CD.</p>
+EOF
+					;;
+			esac
+			;;
+		install)
+			cat <<EOF
+<p>The install $CD allows you to install $CAPPROJECT permanently on a
+computer.</p>
+EOF
+			;;
+		alternate)
+			cat <<EOF
+<p>The alternate install $CD allows you to perform certain specialist
+installations of $CAPPROJECT. It provides for the following situations:</p>
+
+<ul>
+<li>creating pre-configured OEM systems;
+<li>setting up automated deployments;
+<li>upgrading from older installations without network access;
+<li>LVM and/or RAID partitioning;
+<li>installs on systems with less than about ${DESKTOP_RAM}MB of RAM
+(although note that low-memory systems may not be able to run a full desktop
+environment reasonably).
+</ul>
+
+<p>
+In the event that you encounter a bug using the alternate installer,
+please file a bug on the
+<a href="https://bugs.launchpad.net/ubuntu/+source/debian-installer/+filebug">debian-installer</a>
+package.
+</p>
+EOF
+			;;
+		server)
+			case $PROJECT in
+				edubuntu)
+					cat <<EOF
+<p>The classroom server $CD allows you to install $CAPPROJECT permanently on
+a computer. It includes LTSP (Linux Terminal Server Project) support,
+providing out-of-the-box thin client support. After installation you can
+install additional educational programs using the classroom server add-on
+$CD.</p>
+EOF
+					;;
+				*)
+					cat <<EOF
+<p>The server install $CD allows you to install $CAPPROJECT permanently on a
+computer for use as a server. It will not install a graphical user
+interface.</p>
+EOF
+					;;
+			esac
+			;;
+		serveraddon)
+			# Edubuntu only
+			cat <<EOF
+<p>The classroom server add-on $CD contains additional useful packages,
+including many educational programs and all available language packs. It
+requires that an $CAPPROJECT desktop be installed on the machine.</p>
+EOF
+			;;
+		addon)
+			# Edubuntu only
+			cat <<EOF
+<p>The add-on $CD contains additional useful packages, including many
+educational programs and all available language packs. It requires that an
+Ubuntu desktop system already be installed.</p>
+EOF
+			;;
+		dvd)
+			case $PROJECT in
+				edubuntu)
+					cat <<EOF
+The install DVD allows you to install $CAPPROJECT permanently on a computer.
+EOF
+					;;
+				*)
+					cat <<EOF
+The combined install/live DVD allows you either to install $CAPPROJECT
+permanently on a computer, or (by entering 'live' at the boot prompt) to try
+$CAPPROJECT without changing your computer at all.
+EOF
+					;;
+			esac
+			;;
+		src)
+			cat <<EOF
+The source ${CD}s contain the source code used to build $CAPPROJECT.
+EOF
+			;;
+		*)
+			echo "Unknown CD type $1!" >&2
+			;;
+	esac
+}
+
+archstr () {
+	case $1 in
+		amd64)
+			echo '64-bit PC (AMD64)'
+			;;
+		hppa)
+			echo 'HP PA-RISC'
+			;;
+		i386)
+			echo 'PC (Intel x86)'
+			;;
+		ia64)
+			echo 'IA-64'
+			;;
+		powerpc)
+			echo 'Mac (PowerPC) and IBM-PPC (POWER5)'
+			;;
+		powerpc+ps3)
+			echo 'PlayStation 3'
+			;;
+		sparc)
+			echo 'SPARC'
+			;;
+		*)
+			echo "Unknown architecture $1!" >&2
+			;;
+	esac
+}
+
+archdesc () {
+	case $1 in
+		amd64)
+			cat <<EOF
+Choose this to take full advantage of computers based on the AMD64 or EM64T
+architecture (e.g., Athlon64, Opteron, EM64T Xeon). If you have a non-64-bit
+processor made by AMD, or if you need full support for 32-bit code, use the
+Intel x86 images instead.
+EOF
+			;;
+		hppa)
+			cat <<EOF
+For HP PA-RISC computers.
+EOF
+			;;
+		i386)
+			cat <<EOF
+For almost all PCs. This includes most machines with Intel/AMD/etc type
+processors and almost all computers that run Microsoft Windows, as well as
+newer Apple Macintosh systems based on Intel processors. Choose this if you
+are at all unsure.
+EOF
+			;;
+		ia64)
+			cat <<EOF
+For Intel Itanium and Itanium 2 computers.
+EOF
+			;;
+		powerpc)
+			cat <<EOF
+For Apple Macintosh G3, G4, and G5 computers, including iBooks and
+PowerBooks as well as IBM OpenPower machines.
+EOF
+			;;
+		powerpc+ps3)
+			cat <<EOF
+For Sony PlayStation 3 systems.
+EOF
+			if [ "$2" = desktop ]; then
+				case $DIST in
+					warty|hoary|breezy|dapper|edgy|feisty)
+						;;
+					*)
+						cat <<EOF
+(This defaults to installing $CAPPROJECT permanently, since there is usually
+not enough memory to try out the full desktop system and run the installer
+at the same time. An alternative boot option to try $CAPPROJECT without
+changing your computer is available.)
+EOF
+						;;
+				esac
+			fi
+			;;
+		sparc)
+			cat <<EOF
+For Sun UltraSPARC computers, including those based on the multicore
+UltraSPARC T1 ("Niagara") processors.
+EOF
+			;;
+		*)
+			echo "Unknown architecture $1!" >&2
+			;;
+	esac
+}
+
+extensionstr () {
+	case $1 in
+		iso)
+			echo 'standard download'
+			;;
+		iso.torrent)
+			echo '<a href=\"https://help.ubuntu.com/community/BitTorrent\">BitTorrent</a> download'
+			;;
+		jigdo)
+			echo '<a href=\"http://atterer.net/jigdo/\">jigdo</a> download'
+			;;
+		list)
+			echo 'file listing'
+			;;
+		manifest)
+			echo 'contents of live filesystem'
+			;;
+		manifest-desktop)
+			echo 'contents of desktop part of live filesystem'
+			;;
+		template)
+			echo '<a href=\"http://atterer.net/jigdo/\">jigdo</a> template'
+			;;
+		*)
+			echo "Unknown extension $1!" >&2
+			;;
+	esac
+}
+
+rm -f "$HTACCESS" "$HEADER" "$FOOTER"
+
+> "$HTACCESS"
+
+case $DIST in
+	warty)
+		distversion=4.10
+		distfullname='Warty Warthog'
+		;;
+	hoary)
+		distversion=5.04
+		distfullname='Hoary Hedgehog'
+		;;
+	breezy)
+		distversion=5.10
+		distfullname='Breezy Badger'
+		;;
+	dapper)
+		distversion=6.06.2
+		distfullname='Dapper Drake'
+		case $PROJECT in
+			ubuntu|kubuntu|edubuntu|ubuntu-server)
+				distversion="$distversion LTS"
+				;;
+		esac
+		;;
+	edgy)
+		distversion=6.10
+		distfullname='Edgy Eft'
+		;;
+	feisty)
+		distversion=7.04
+		distfullname='Feisty Fawn'
+		;;
+	gutsy)
+		distversion=7.10
+		distfullname='Gutsy Gibbon'
+		;;
+	hardy)
+		distversion=8.04
+		distfullname='Hardy Heron'
+		;;
+esac
+
+case $CDPREFIX in
+	*-preview)
+		distextra=' Preview'
+		;;
+	*-beta)
+		distextra=' Beta'
+		;;
+	*-beta?*)
+		distextra=" Beta $(echo "$CDPREFIX" | sed 's/.*-beta//')"
+		;;
+	*-rc)
+		distextra=' Release Candidate'
+		;;
+	$DIST)
+		distextra=' Daily Build'
+		;;
+	*)
+		distextra=
+		;;
+esac
+
+cat <<EOF > "$HEADER"
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head>
+  <title>$CAPPROJECT $distversion ($distfullname)$distextra</title>
+  <!-- Main style sheets for CSS2 capable browsers -->
+  <style type="text/css" media="screen">
+EOF
+for css in $(cssincludes); do
+	cat <<EOF >> "$HEADER"
+  @import url($css);
+EOF
+done
+cat <<EOF >> "$HEADER"
+  pre { background: none; }
+  body { margin: 2em; }
+  </style>
+ </head>
+ <body><div id="pageWrapper">
+
+<h1>$CAPPROJECT $distversion ($distfullname)$distextra</h1>
+
+<h2>Select an image</h2>
+
+EOF
+
+cdtypecount=0
+for cdtype in live desktop server install alternate serveraddon addon dvd src; do
+	if find "$DIR/" -follow -maxdepth 1 -type f -name "$CDPREFIX-$cdtype-*.list" | grep . >/dev/null; then
+		cdtypecount="$(($cdtypecount + 1))"
+	fi
+done
+
+if [ "$cdtypecount" -gt 1 ]; then
+	cat <<EOF >> "$HEADER"
+<p>$CAPPROJECT is distributed on $(count "$cdtypecount") types of images described below.</p>
+
+EOF
+fi
+
+foundtorrent=0
+
+for cdtype in live desktop server install alternate serveraddon addon dvd src; do
+	if ! find "$DIR/" -follow -maxdepth 1 -type f -name "$CDPREFIX-$cdtype-*.list" | grep . >/dev/null; then
+		continue
+	fi
+
+	case $cdtype in
+		src)
+			# Perverse, but works.
+			arches="$(find "$DIR/" -follow -maxdepth 1 -type f -name "$CDPREFIX-$cdtype-*.iso" -printf '%P\n' | \
+				  sed "s/$CDPREFIX-$cdtype-\\(.*\\)\\.iso/\\1/")"
+			;;
+		*)
+			arches='i386 powerpc amd64 hppa ia64 sparc powerpc+ps3'
+			;;
+	esac
+
+	cat <<EOF >> "$HEADER"
+<h3>$(cdtypestr "$cdtype" | titlecase)</h3>
+
+$(cdtypedesc "$cdtype")
+
+EOF
+
+	archcount=0
+	for arch in $arches; do
+		if [ -e "$DIR/$CDPREFIX-$cdtype-$arch.list" ]; then
+			archcount="$(($archcount + 1))"
+		fi
+	done
+
+	if [ "$archcount" -eq 1 ]; then
+		cat <<EOF >> "$HEADER"
+<p>There is one image available:</p>
+EOF
+	elif [ "$cdtype" = src ]; then
+		cat <<EOF >> "$HEADER"
+<p>There are $(count "$archcount") images available:</p>
+EOF
+	else
+		cat <<EOF >> "$HEADER"
+<p>There are $(count "$archcount") images available, each for a different type of computer:</p>
+EOF
+	fi
+
+	cat <<EOF >> "$HEADER"
+
+<dl>
+EOF
+
+	for arch in $arches; do
+		case $cdtype in
+			src)
+				imagestr="$(cdtypestr "$cdtype" | titlecase) $arch"
+				htaccessimagestr="$imagestr"
+				;;
+			*)
+				imagestr="$(archstr "$arch") $(cdtypestr "$cdtype")"
+				htaccessimagestr="$(cdtypestr "$cdtype" | titlecase) for $(archstr "$arch") computers"
+				;;
+		esac
+
+		if [ -e "$DIR/$CDPREFIX-$cdtype-$arch.iso" ]; then
+			cat <<EOF >> "$HEADER"
+<dt><a href="$CDPREFIX-$cdtype-$arch.iso">$imagestr</a>
+EOF
+		elif [ -e "$DIR/$CDPREFIX-$cdtype-$arch.iso.torrent" ]; then
+			cat <<EOF >> "$HEADER"
+<dt><a href="$CDPREFIX-$cdtype-$arch.iso.torrent">$imagestr (<a href="https://help.ubuntu.com/community/BitTorrent">BitTorrent</a> only)</a>
+EOF
+		else
+			continue
+		fi
+
+		if [ -e "$DIR/$CDPREFIX-$cdtype-$arch.iso.torrent" ]; then
+			foundtorrent=1
+		fi
+
+		if [ "$cdtype" != src ]; then
+			cat <<EOF >> "$HEADER"
+
+<dd>$(archdesc "$arch" "$cdtype")</dd>
+
+EOF
+		fi
+
+		for extension in iso.torrent iso jigdo list manifest manifest-desktop template; do
+			if ! [ -e "$DIR/$CDPREFIX-$cdtype-$arch.$extension" ]; then
+				continue
+			fi
+
+			echo "AddDescription \"$htaccessimagestr ($(extensionstr "$extension"))\" $CDPREFIX-$cdtype-$arch.$extension" >> "$HTACCESS"
+		done
+	done
+
+	cat <<EOF >> "$HEADER"
+</dl>
+
+EOF
+done
+
+if [ "$foundtorrent" = 1 ]; then
+	cat <<EOF >> "$HEADER"
+<p>A full list of available files, including <a
+href="https://help.ubuntu.com/community/BitTorrent">BitTorrent</a> files,
+can be found below.</p>
+
+EOF
+else
+	cat <<EOF >> "$HEADER"
+<p>A full list of available files can be found below.</p>
+
+EOF
+fi
+
+cat <<EOF >> "$HEADER"
+<p>If you need help burning these images to disk, see
+<a href="http://wiki.ubuntu.com/BurningIsoHowto">this guide</a>.</p>
+
+EOF
+
+cat <<EOF > "$FOOTER"
+</div></body></html>
+EOF
+
+if [ "$PROJECT" = kubuntu ]; then
+	CDICONS=/cdicons/kubuntu-
+elif [ "$PROJECT" = kubuntu-kde4 ]; then
+	CDICONS=/cdicons/kubuntu-
+else
+	CDICONS=/cdicons/
+fi
+
+cat <<EOF >> "$HTACCESS"
+
+HeaderName HEADER.html
+ReadmeName FOOTER.html
+IndexIgnore .htaccess HEADER.html FOOTER.html
+IndexOptions NameWidth=* DescriptionWidth=* SuppressHTMLPreamble FancyIndexing IconHeight=22 IconWidth=22
+AddIcon ${CDICONS}folder.png ^^DIRECTORY^^
+AddIcon ${CDICONS}iso.png .iso
+AddIcon ${CDICONS}jigdo.png .jigdo .template
+AddIcon ${CDICONS}list.png .list .manifest .html MD5SUMS MD5SUMS.gpg
+AddIcon ${CDICONS}torrent.png .torrent
+EOF

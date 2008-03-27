@@ -1,0 +1,4 @@
+#ifdef ARCH_i386
+libck-connector0
+openssh-server
+#endif /* ARCH_i386 */

@@ -1,0 +1,3 @@
+usr/lib/germinate/germinate.py usr/bin/germinate
+usr/lib/germinate/pkg-diff.py usr/bin/germinate-pkg-diff
+usr/lib/germinate/update-metapackage.py usr/bin/germinate-update-metapackage

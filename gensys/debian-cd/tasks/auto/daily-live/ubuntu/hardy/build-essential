@@ -1,0 +1,24 @@
+#ifdef ARCH_i386
+apt
+binutils
+bzip2
+cpio
+cpp
+cpp-4.2
+dpkg-dev
+g++
+g++-4.2
+gcc
+gcc-4.2
+libbz2-1.0
+libc6-dev
+libgdbm3
+libgomp1
+libstdc++6-4.2-dev
+libtimedate-perl
+linux-libc-dev
+make
+patch
+perl
+perl-modules
+#endif /* ARCH_i386 */

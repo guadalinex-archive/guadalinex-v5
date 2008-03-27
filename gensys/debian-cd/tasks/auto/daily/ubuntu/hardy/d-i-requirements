@@ -1,0 +1,13 @@
+#ifdef ARCH_i386
+console-terminus
+cryptsetup
+dmsetup
+jfsutils
+libpopt0
+lupin-support
+lvm2
+mdadm
+mouseemu
+unifont
+xfsprogs
+#endif /* ARCH_i386 */

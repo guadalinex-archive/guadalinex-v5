@@ -1,0 +1,61 @@
+#! /bin/sh
+set -e
+
+# Build a manifest of the simple release tree.
+
+export CDIMAGE_ROOT="${CDIMAGE_ROOT:-/srv/cdimage.ubuntu.com}"
+. "$CDIMAGE_ROOT/etc/config"
+
+if [ -z "$1" ]; then
+	echo 'Usage: build-manifest DIRECTORY' >&2
+	exit 1
+fi
+
+cd "$1"
+
+main_manifest=
+
+file_to_manifest () {
+	case $file in
+		kubuntu/*|edubuntu/*|xubuntu/*|gobuntu/*|ubuntu-server/*)
+			project="${file%%/*}"
+			;;
+		*)
+			project='ubuntu'
+			;;
+	esac
+	base="${file##*/}"
+	if [ "$main_manifest" ] && \
+	   echo "$main_manifest" | grep -q "/$base[[:space:]]"; then
+		return
+	fi
+	version="${base#*-}"
+	version="${version%%-*}"
+	case $version in
+		4.10*)	dist=warty ;;
+		5.04*)	dist=hoary ;;
+		5.10*)	dist=breezy ;;
+		6.06*)	dist=dapper ;;
+		6.10*)	dist=edgy ;;
+		7.04*)	dist=feisty ;;
+		7.10*)	dist=gutsy ;;
+		8.04*)	dist=hardy ;;
+		*)
+			echo "Unknown version: $version" >&2
+			return
+			;;
+	esac
+	size="$(stat -c %s -L "$file")"
+	printf '%s\t%s\t%s\t%d\n' "$project" "$dist" "/$file" "$size"
+}
+
+main_manifest="$(
+	find -name .pool -prune -o \( -type f -o -type l \) -name \*.iso -printf '%P\n' | \
+	while read file; do file_to_manifest; done | sort)"
+
+echo "$main_manifest"
+
+find \( -type f -o -type l \) -path '*/.pool/*.iso' -printf '%P\n' | \
+while read file; do file_to_manifest; done | sort
+
+exit 0

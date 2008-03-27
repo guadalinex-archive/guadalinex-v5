@@ -1,0 +1,9 @@
+#ifdef ARCH_i386
+libcupsys2
+samba
+samba-common
+samba-doc
+smbclient
+smbfs
+winbind
+#endif /* ARCH_i386 */

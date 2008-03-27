@@ -1,0 +1,23 @@
+#! /bin/sh
+set -e
+
+case $DIST in
+	warty|hoary|breezy|dapper)
+		export ARCHES="${ARCHES:-hppa ia64 sparc}"
+		;;
+	edgy)
+		export ARCHES="${ARCHES:-ia64 sparc}"
+		;;
+	*)
+		export ARCHES="${ARCHES:-ia64 powerpc powerpc+ps3 sparc}"
+		;;
+esac
+
+export CDIMAGE_ROOT="${CDIMAGE_ROOT:-/srv/cdimage.ubuntu.com}"
+. "$CDIMAGE_ROOT/etc/config"
+
+PATH="$CDIMAGE_ROOT/bin${PATH:+:$PATH}"
+
+export CDIMAGE_LIVE=1
+
+build-image-set ports_daily-live

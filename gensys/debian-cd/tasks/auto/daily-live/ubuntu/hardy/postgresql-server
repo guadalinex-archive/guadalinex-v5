@@ -1,0 +1,18 @@
+#ifdef ARCH_i386
+libossp-uuid15
+libpq5
+libxml2
+libxslt1.1
+openssl
+postgresql
+postgresql-8.3
+postgresql-client
+postgresql-client-8.3
+postgresql-client-common
+postgresql-common
+postgresql-contrib
+postgresql-contrib-8.3
+postgresql-doc
+postgresql-doc-8.3
+ssl-cert
+#endif /* ARCH_i386 */

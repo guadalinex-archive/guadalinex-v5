@@ -1,0 +1,35 @@
+#ifdef ARCH_i386
+avm-fritz-firmware
+avm-fritz-firmware-2.6.24-12
+bpalogin
+build-essential
+capiutils
+dpkg-dev
+drdsl
+fakeroot
+g++
+g++-4.2
+ipppd
+isdnutils-base
+isdnutils-xtools
+libc6-dev
+libcapi20-3
+libcapi20-dev
+libstdc++6-4.2-dev
+libtimedate-perl
+linux-libc-dev
+linux-wlan-ng
+localechooser-data
+lupin-support
+mouseemu
+ndisgtk
+ndiswrapper-common
+ndiswrapper-utils-1.9
+oem-config
+oem-config-gtk
+patch
+pppdcapiplugin
+pptp-linux
+setserial
+sl-modem-daemon
+#endif /* ARCH_i386 */

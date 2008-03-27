@@ -1,0 +1,60 @@
+#! /bin/sh
+set -e
+
+# This script originates from http://www.debian.org/mirror/anonftpsync
+
+# Note: You MUST have rsync 2.0.16-1 or newer, which is available in slink
+# and all newer Debian releases, or at http://rsync.samba.org/
+
+# Set the variables below to fit your site. You can then use cron to have
+# this script run daily to automatically update your copy of the archive.
+
+# Don't forget:
+# chmod 744 anonftpsync
+
+export CDIMAGE_ROOT="${CDIMAGE_ROOT:-/srv/cdimage.ubuntu.com}"
+. "$CDIMAGE_ROOT/etc/config"
+
+# TO is the destination for the base of the Debian mirror directory
+# (the dir that holds dists/ and ls-lR).
+
+TO="$CDIMAGE_ROOT/ftp"
+
+HOSTNAME=`hostname -f`
+
+LOCK="${TO}/Archive-Update-in-Progress-${HOSTNAME}"
+
+# Get in the right directory
+cd "$CDIMAGE_ROOT/log"
+
+# Check to see if another sync is in progress
+if lockfile -! -l 43200 -r 0 "$LOCK"; then
+  echo ${HOSTNAME} is unable to start rsync, lock file exists
+  exit 1
+fi
+# Note: on some non-Debian systems, trap doesn't accept "exit" as signal
+# specification. If that's the case on your system, try using "0".
+trap "rm -f $LOCK > /dev/null 2>&1" exit
+
+set +e
+
+reprepro -b $TO update lobo
+
+cd $TO
+./reoverride.sh
+cd -
+
+# Delete dangling symlinks.
+find $TO/ -type l -xtype l | xargs -r rm 
+
+# Make sure everything is group-writable etc. (the upstream mirror may have
+# too restrictive permissions, so umask doesn't help).
+find "$TO" -type d -print0 | xargs -0r chmod g+s 2>/dev/null || true
+chmod -R g+rwX "$TO" 2>/dev/null || true
+
+mkdir -p "${TO}/project/trace"
+date -u > "${TO}/project/trace/${HOSTNAME}"
+
+# Note: if you don't have savelog, use any other log rotation facility, or
+# comment this out, the log will simply be overwritten each time.
+savelog repo-sync.log > /dev/null 2>&1

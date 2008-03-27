@@ -1,0 +1,44 @@
+#! /bin/sh
+
+# Settings for building Ubuntu CD images.  The build procedure also involves
+# syncing a local Ubuntu mirror; see etc/anonftpsync for settings affecting what
+# is mirrored and where.
+
+export LC_ALL=C
+
+PROJECT="${PROJECT:-ubuntu}"
+CAPPROJECT="${CAPPROJECT:-Ubuntu}"
+DIST="${DIST:-gutsy}"
+case $DIST in
+	warty|hoary|breezy|dapper|edgy)
+		ARCHES="${ARCHES:-amd64 i386 powerpc}"
+		;;
+	feisty|gutsy|hardy)
+		ARCHES="${ARCHES:-amd64 i386}"
+		;;
+esac
+CPUARCHES="$(echo "$ARCHES" | xargs -n1 | sed 's/+.*//' | sort -u | xargs)"
+
+GNUPG_DIR="$CDIMAGE_ROOT/secret/dot-gnupg"
+SIGNING_KEYID=8CB1684F
+
+# Hosts that need to be notified when the build is done.  Third-party users
+# will want to keep this variable empty.
+# The "async" mirrors will be notified asynchronously, i.e. we won't wait for
+# them to respond.
+TRIGGER_MIRRORS=
+TRIGGER_MIRRORS_ASYNC=
+
+export TRIGGER_MIRRORS
+export TRIGGER_MIRRORS_ASYNC
+
+# Some older versions of debootstrap must *think* they're running as root,
+# even though that's not really needed here.  If you have that problem, make
+# sure you have fakeroot installed and uncomment this variable.
+DEBOOTSTRAPROOT=fakeroot
+export DEBOOTSTRAPROOT
+
+PATH="$CDIMAGE_ROOT/bin:$PATH"
+export PATH
+
+umask 002

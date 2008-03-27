@@ -1,0 +1,75 @@
+#! /bin/sh -x
+set -e
+
+export CDIMAGE_ROOT="${CDIMAGE_ROOT:-/srv/cdimage.ubuntu.com}"
+. "$CDIMAGE_ROOT/etc/config"
+. "$CDIMAGE_ROOT/bin/functions.sh"
+
+LIVE_OUT="$CDIMAGE_ROOT/scratch/$PROJECT/$IMAGE_TYPE/live"
+
+fetch () {
+	case $1 in
+		'')
+			return 1
+			;;
+		/*)
+			ln "$1" "$2"
+			;;
+		*)
+			ret=0
+			wget -nv "$1" -O "$2" || ret=$?
+			if [ "$ret" -ne 0 ]; then
+				rm -f "$2"
+			fi
+			return $ret
+			;;
+	esac
+}
+
+mkemptydir "$LIVE_OUT"
+
+if [ "$CDIMAGE_LIVE" ]; then
+	for arch in $ARCHES; do
+		if fetch "$(find-live-filesystem "$arch" cloop)" \
+				"$LIVE_OUT/$arch.cloop"; then
+			:
+		elif fetch "$(find-live-filesystem "$arch" squashfs)" \
+				"$LIVE_OUT/$arch.squashfs"; then
+			:
+		else
+			continue
+		fi
+		case $DIST in
+			warty|hoary|breezy)
+				;;
+			*)
+				for item in kernel initrd; do
+					for url in $(find-live-filesystem "$arch" "$item"); do
+						flavour="${url##*/}"
+						flavour="${flavour#*.*.*-}"
+						fetch "$url" "$LIVE_OUT/$arch.$item-$flavour" || true
+					done
+				done
+				;;
+		esac
+		fetch "$(find-live-filesystem "$arch" manifest)" \
+			"$LIVE_OUT/$arch.manifest" || true
+		fetch "$(find-live-filesystem "$arch" manifest-desktop)" \
+			"$LIVE_OUT/$arch.manifest-desktop" || true
+
+		if [ "$PROJECT" != livecd-base ]; then
+			fetch "$(find-live-filesystem "$arch" wubi-cdboot)" \
+				"$LIVE_OUT/$arch.wubi-cdboot.exe" || true
+		fi
+	done
+fi
+
+# TheOpenCD goes on the amd64/i386 live CDs, and on the Edubuntu add-on CDs.
+if ([ "$PROJECT" = edubuntu ] && [ "$CDIMAGE_INSTALL" ]) || \
+   ([ "$PROJECT" != edubuntu ] && [ "$CDIMAGE_LIVE" ]); then
+	for arch in $CPUARCHES; do
+		if winfoss="$(find-live-filesystem "$arch" winfoss)"; then
+			fetch "$winfoss" "$LIVE_OUT/$arch.winfoss.tgz"
+		fi
+	done
+fi

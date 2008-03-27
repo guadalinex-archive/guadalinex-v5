@@ -1,0 +1,4 @@
+#ifdef ARCH_i386
+bind9
+bind9-doc
+#endif /* ARCH_i386 */

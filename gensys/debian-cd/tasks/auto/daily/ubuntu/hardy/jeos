@@ -1,0 +1,19 @@
+#ifdef ARCH_i386
+cryptsetup
+dmsetup
+grub
+jfsutils
+libpopt0
+libusplash0
+libx86-1
+linux-image-2.6.24-12-virtual
+linux-image-virtual
+linux-ubuntu-modules-2.6.24-12-virtual
+lvm2
+mdadm
+ucf
+unifont
+usplash
+usplash-theme-ubuntu
+xfsprogs
+#endif /* ARCH_i386 */

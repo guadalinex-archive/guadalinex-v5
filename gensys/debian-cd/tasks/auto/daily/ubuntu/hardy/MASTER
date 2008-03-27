@@ -1,0 +1,9 @@
+#include <ubuntu/hardy/installer>
+#include <ubuntu/hardy/boot>
+#include <ubuntu/hardy/required>
+#include <ubuntu/hardy/minimal>
+#include <ubuntu/hardy/standard>
+#include <ubuntu/hardy/desktop-common>
+#include <ubuntu/hardy/desktop>
+#include <ubuntu/hardy/d-i-requirements>
+#include <ubuntu/hardy/ship>

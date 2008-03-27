@@ -1,0 +1,184 @@
+#! /bin/sh
+
+# Outputs debian-cd task lists to
+# $CDIMAGE_ROOT/scratch/$PROJECT/$IMAGE_TYPE/tasks/.
+
+export CDIMAGE_ROOT="${CDIMAGE_ROOT:-/srv/cdimage.ubuntu.com}"
+. "$CDIMAGE_ROOT/etc/config"
+. "$CDIMAGE_ROOT/bin/functions.sh"
+
+GERMINATE_OUT="$CDIMAGE_ROOT/scratch/$PROJECT/$IMAGE_TYPE/germinate"
+TASKS_OUT="$CDIMAGE_ROOT/scratch/$PROJECT/$IMAGE_TYPE/tasks"
+
+if [ -z "$1" ]; then
+	echo 'Usage: germinate-to-tasks IMAGE_TYPE' >&2
+	exit 1
+fi
+IMAGE_TYPE="$1"
+
+mkemptydir "$TASKS_OUT/$DIST"
+
+# ubuntu-server really wants ubuntu-* tasks.
+case $PROJECT in
+	ubuntu-server)
+		TASKPROJECT=ubuntu
+		;;
+	*)
+		TASKPROJECT="$PROJECT"
+		;;
+esac
+
+# Hackily exclude kernel-image-* from the installer and casper tasks. Those
+# udebs only exist to satisfy dependencies when building the
+# debian-installer package.
+for seed in $(list-seeds "$GERMINATE_OUT/$DIST/STRUCTURE" installer); do
+	for arch in $ARCHES; do
+		grep -v ^kernel-image- "$GERMINATE_OUT/$DIST/$arch/$seed" \
+			> "$GERMINATE_OUT/$DIST/$arch/$seed.new"
+		mv "$GERMINATE_OUT/$DIST/$arch/$seed.new" \
+			"$GERMINATE_OUT/$DIST/$arch/$seed"
+	done
+done
+
+# germinate doesn't yet support subarchitecture specifications, so we need
+# to hack the boot and installer seeds a bit for powerpc+ps3 (only gutsy).
+case $DIST in
+	gutsy)
+		for arch in $ARCHES; do
+			[ "$arch" = powerpc+ps3 ] || continue
+			for seed in $(list-seeds "$GERMINATE_OUT/$DIST/STRUCTURE" installer); do
+				sed -i '/-powerpc-di/d; s/-powerpc64-smp-di/-cell-di/g' \
+					"$GERMINATE_OUT/$DIST/$arch/$seed"
+			done
+			sed -i '/^linux-\(restricted\|ubuntu\)-modules/d; /^[^ ]*-powerpc /d; s/-powerpc64-smp/-cell/g' \
+				"$GERMINATE_OUT/$DIST/$arch/boot"
+		done
+		;;
+esac
+
+for seed in $(list-seeds "$GERMINATE_OUT/$DIST/STRUCTURE" all); do
+	exec >"$TASKS_OUT/$DIST/$seed"
+	if [ "$seed" = supported ]; then
+		seedsource="$seed+build-depends"
+	else
+		seedsource="$seed"
+	fi
+	for arch in $ARCHES; do
+		cpparch="$(echo "$arch" | sed 's/+/_/g')"
+		echo "#ifdef ARCH_$cpparch"
+		if [ -e "$GERMINATE_OUT/$DIST/$arch/$seedsource" ]; then
+			< "$GERMINATE_OUT/$DIST/$arch/$seedsource" \
+				tail -n +3 | head -n -2 | cut -d' ' -f1
+		fi
+		echo "#endif /* ARCH_$cpparch */"
+	done
+done
+
+# Help debian-cd to regenerate Task headers, to make sure that we don't
+# accidentally end up out of sync with the archive and break the package
+# installation step. In breezy, also generate Archive-Copier-Set headers for
+# sets of packages that archive-copier needs to know to copy but that shouldn't
+# appear as tasks in aptitude et al.
+for arch in $ARCHES; do
+	exec >"$TASKS_OUT/$DIST/tasks.$arch"
+	for seed in $(list-seeds "$GERMINATE_OUT/$DIST/STRUCTURE" tasks); do
+		case $seed in
+			boot|required|server-ship)
+				continue
+				;;
+			server)
+				case $PROJECT in
+					edubuntu)
+						;;
+					*)
+						continue
+						;;
+				esac
+				;;
+			ship)
+				case $DIST in
+					warty|hoary|breezy)
+						;;
+					*)
+						continue
+						;;
+				esac
+				;;
+		esac
+		case $DIST in
+			warty|hoary|breezy|dapper)
+				case $seed in
+					base|minimal|standard|desktop|server|ship)
+						task="$TASKPROJECT-$seed"
+						;;
+					*)
+						task="$seed"
+						;;
+				esac
+				;;
+			*)
+				# TODO: hack around lack of proper seed/task
+				# mapping
+				case $seed in
+					required)
+						task=minimal
+						;;
+					desktop-common|desktop-kubuntu-common)
+						task=desktop
+						;;
+					*)
+						task="$seed"
+						;;
+				esac
+				if grep -iq '^Task-Per-Derivative:' "$GERMINATE_OUT/$DIST/$arch/$task.seedtext"; then
+					task="$TASKPROJECT-$task"
+				fi
+				;;
+		esac
+		< "$GERMINATE_OUT/$DIST/$arch/$seed" \
+			tail -n +3 | head -n -2 | cut -d' ' -f1 | \
+			sed "s/\$/ $task/"
+	done
+	if [ "$DIST" = breezy ]; then
+		exec >"$TASKS_OUT/$DIST/acsets.$arch"
+		if [ -e "$GERMINATE_OUT/$DIST/$arch/ship.acsets" ]; then
+			for acset in $(< "$GERMINATE_OUT/$DIST/$arch/ship.acsets"); do
+				< "$GERMINATE_OUT/$DIST/$arch/$acset" \
+					tail -n +3 | head -n -2 | cut -d' ' -f1 | \
+					sed "s/\$/ $acset/"
+			done
+		fi
+	fi
+	exec >"$TASKS_OUT/$DIST/override.$arch"
+	perl -alne '
+		push @{$tasks{$F[0]}}, $F[1];
+		END {
+			for my $pkg (sort keys %tasks) {
+				print "$pkg  Task  ", join(", ", @{$tasks{$pkg}});
+			}
+		}' "$TASKS_OUT/$DIST/tasks.$arch"
+	if [ "$DIST" = breezy ]; then
+		perl -alne '
+			push @{$acsets{$F[0]}}, $F[1];
+			END {
+				for my $pkg (sort keys %acsets) {
+					print "$pkg  Archive-Copier-Set  ", join(", ", @{$acsets{$pkg}});
+				}
+			}' "$TASKS_OUT/$DIST/acsets.$arch"
+	fi
+done
+
+# Help debian-cd to get priorities in sync with the current base system,
+# so that debootstrap >= 0.3.1 can work out the correct set of packages
+# to install.
+for arch in $ARCHES; do
+	exec >"$TASKS_OUT/$DIST/important.$arch"
+	for seed in $(list-seeds "$GERMINATE_OUT/$DIST/STRUCTURE" debootstrap); do
+		< "$GERMINATE_OUT/$DIST/$arch/$seed" \
+			tail -n +3 | head -n -2 | cut -d' ' -f1 | \
+			egrep -v '^(linux-(image|restricted|amd64|386|686|k7|power|itanium|mckinley|sparc|hppa).*|nvidia-kernel-common|grub|yaboot|efibootmgr|elilo|silo|palo)$' || true
+	done
+done
+
+# Make the master task file for debian-cd.
+make-master-task "$GERMINATE_OUT/$DIST/STRUCTURE" > "$TASKS_OUT/$DIST/MASTER"

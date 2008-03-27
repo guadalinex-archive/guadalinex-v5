@@ -1,0 +1,13 @@
+#! /bin/sh
+set -e
+
+export CDIMAGE_ROOT="${CDIMAGE_ROOT:-/srv/cdimage.ubuntu.com}"
+. "$CDIMAGE_ROOT/etc/config"
+
+PATH="$CDIMAGE_ROOT/bin${PATH:+:$PATH}"
+
+export CDIMAGE_INSTALL=1
+export CDIMAGE_LIVE=1
+export CDIMAGE_DVD=1
+
+build-image-set dvd

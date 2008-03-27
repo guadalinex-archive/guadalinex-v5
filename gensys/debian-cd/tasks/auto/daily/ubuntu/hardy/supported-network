@@ -1,0 +1,9 @@
+#ifdef ARCH_i386
+bittorrent
+irssi
+jigit
+libglib2.0-0
+libpcre3
+libperl5.8
+python-bittorrent
+#endif /* ARCH_i386 */

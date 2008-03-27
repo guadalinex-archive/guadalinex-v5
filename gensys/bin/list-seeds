@@ -1,0 +1,140 @@
+#! /bin/sh
+set -e
+
+export CDIMAGE_ROOT="${CDIMAGE_ROOT:-/srv/cdimage.ubuntu.com}"
+. "$CDIMAGE_ROOT/etc/config"
+
+if [ -z "$1" ] || [ -z "$2" ]; then
+	echo 'Usage: list-seeds structure all|tasks|installer|debootstrap|base|ship-live|addon' >&2
+	exit 1
+fi
+
+STRUCTURE="$1"
+MODE="$2"
+
+add_inheritance () {
+	case " $inherit " in
+		*" $1 "*)
+			;;
+		*)
+			inherit="${inherit:+$inherit }$1"
+			;;
+	esac
+}
+
+expand_inheritance () {
+	for seed in $(grep "^$1:" "$STRUCTURE" | cut -d: -f2); do
+		expand_inheritance "$seed"
+	done
+	add_inheritance "$1"
+}
+
+inheritance () {
+	inherit=
+	expand_inheritance "$1"
+	echo "$inherit"
+}
+
+case $MODE in
+	all)
+		grep -v '^#' "$STRUCTURE" | cut -d: -f1
+		;;
+	tasks)
+		SHIP=ship
+		if grep -q "^ship-addon:" "$STRUCTURE"; then
+			SHIP=ship-addon
+		fi
+		case $PROJECT in
+			ubuntu-server)
+				case $DIST in
+					warty|hoary|breezy)
+						;;
+					dapper)
+						SHIP=server
+						;;
+					*)
+						SHIP=server-ship
+						;;
+				esac
+				;;
+		esac
+		inheritance "$SHIP"
+		if [ "$CDIMAGE_DVD" ]; then
+			case $DIST in
+				warty|hoary|breezy|dapper)
+					;;
+				*)
+					# TODO cjwatson 2007-04-18: hideous
+					# hack to fix DVD tasks
+					echo dns-server
+					echo lamp-server
+					;;
+			esac
+		fi
+		;;
+	installer)
+		if [ "$CDIMAGE_INSTALL_BASE" ]; then
+			echo 'installer'
+		fi
+		if [ "$CDIMAGE_LIVE" ]; then
+			case $DIST in
+				hoary|breezy)
+					echo 'casper'
+					;;
+			esac
+		fi
+		;;
+	debootstrap)
+		case $DIST in
+			warty|hoary)
+				echo 'base'
+				;;
+			breezy|dapper|edgy|feisty)
+				echo 'minimal'
+				;;
+			*)
+				echo 'required minimal'
+				;;
+		esac
+		;;
+	base)
+		case $DIST in
+			warty|hoary)
+				echo 'base'
+				;;
+			breezy)
+				echo 'minimal standard'
+				;;
+			dapper|edgy|feisty)
+				echo 'boot minimal standard'
+				;;
+			*)
+				echo 'boot required minimal standard'
+				;;
+		esac
+		;;
+	ship-live)
+		case $DIST in
+			warty|hoary|breezy)
+				;;
+			*)
+				echo 'ship-live'
+				;;
+		esac
+		;;
+	addon)
+		SHIP="$(inheritance ship)"
+		SHIP_ADDON="$(inheritance ship-addon)"
+		for seed in $SHIP_ADDON; do
+			case " $SHIP " in
+				*" $seed "*)
+					;;
+				*)
+					echo "$seed"
+					;;
+			esac
+		done
+		;;
+esac
+
+exit 0

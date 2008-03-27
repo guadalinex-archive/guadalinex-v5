@@ -1,0 +1,281 @@
+#! /bin/sh
+set -e
+
+export CDIMAGE_ROOT="${CDIMAGE_ROOT:-/srv/cdimage.ubuntu.com}"
+. "$CDIMAGE_ROOT/etc/config"
+. "$CDIMAGE_ROOT/bin/functions.sh"
+
+if [ -z "$1" ]; then
+	echo 'Usage: publish-daily DATE [IMAGE_TYPE]' >&2
+	exit 1
+fi
+
+DATE="$1"
+IMAGE_TYPE="${2:-daily}"
+IMAGE_TYPE_DIR="$(echo "$IMAGE_TYPE" | sed 's,_,/,g')"
+case $DIST in
+	warty|hoary|breezy|dapper|edgy|feisty)
+		IMAGE_TYPE_DIR="$DIST/$IMAGE_TYPE_DIR"
+		;;
+esac
+
+CDOUT="$CDIMAGE_ROOT/scratch/$PROJECT/$IMAGE_TYPE/debian-cd"
+BRITNEY_REPORT="$CDIMAGE_ROOT/britney/report/$PROJECT/$IMAGE_TYPE"
+
+case $PROJECT in
+	ubuntu)
+		FULL_TREE=full
+		TORRENT_TREE=torrent
+		;;
+	*)
+		FULL_TREE="full/$PROJECT"
+		TORRENT_TREE="torrent/$PROJECT"
+		;;
+esac
+
+PUBLISH="$CDIMAGE_ROOT/www/$FULL_TREE/$IMAGE_TYPE_DIR/$DATE"
+
+case $IMAGE_TYPE in
+	*-live)
+		case $PROJECT in
+			edubuntu)
+				case $DIST in
+					warty|hoary|breezy|dapper|edgy)
+						TYPE=live
+						;;
+					*)
+						TYPE=desktop
+						;;
+				esac
+				;;
+			ubuntu-server)
+				TYPE=live
+				;;
+			*)
+				case $DIST in
+					warty|hoary|breezy)
+						TYPE=live
+						;;
+					*)
+						TYPE=desktop
+						;;
+				esac
+				;;
+		esac
+		;;
+	*_dvd|dvd)
+		TYPE=dvd
+		;;
+	*)
+		case $PROJECT in
+			edubuntu)
+				case $DIST in
+					warty|hoary|breezy|dapper|edgy)
+						TYPE=install
+						;;
+					feisty|gutsy)
+						TYPE=server
+						;;
+					*)
+						TYPE=addon
+						;;
+				esac
+				;;
+			ubuntu-server)
+				case $DIST in
+					warty|hoary|breezy)
+						TYPE=install
+						;;
+					*)
+						TYPE=server
+						;;
+				esac
+				;;
+			*)
+				case $DIST in
+					warty|hoary|breezy)
+						TYPE=install
+						;;
+					*)
+						TYPE=alternate
+						;;
+				esac
+				;;
+		esac
+		;;
+esac
+
+# Start with copy of previous published tree so that single-architecture
+# rebuilds can carry over other architectures from previous builds.
+if [ -z "$CDIMAGE_NOCOPY" ] && \
+   [ -d "$CDIMAGE_ROOT/www/$FULL_TREE/$IMAGE_TYPE_DIR/current/" ]; then
+	cp -alL "$CDIMAGE_ROOT/www/$FULL_TREE/$IMAGE_TYPE_DIR/current" \
+	        "$PUBLISH"
+else
+	mkdir -p "$PUBLISH"
+fi
+
+# TODO: emptying the file should be unnecessary; we need to carry over
+# md5sums from previous builds if we carried over the images.
+rm -f "$PUBLISH/MD5SUMS" "$PUBLISH/MD5SUMS.gpg"
+> "$PUBLISH/MD5SUMS"
+if [ -d "$PUBLISH/source" ]; then
+	rm -f "$PUBLISH/source/MD5SUMS" "$PUBLISH/source/MD5SUMS.gpg"
+	> "$PUBLISH/source/MD5SUMS"
+fi
+
+if [ "$PUBLISH" ]; then
+	mkemptydir "$CDIMAGE_ROOT/www/$TORRENT_TREE/$IMAGE_TYPE_DIR"
+	TORRENTS="$CDIMAGE_ROOT/www/$TORRENT_TREE/$IMAGE_TYPE_DIR/$DATE"
+	mkemptydir "$TORRENTS"
+fi
+
+publish_binary () {
+	local TYPE="$1"
+	local arch="$2"
+
+	case $TYPE in
+		dvd)
+			# http://en.wikipedia.org/wiki/DVD_plus_RW
+			SIZELIMIT=4700372992
+			;;
+		*)
+			# http://en.wikipedia.org/wiki/CD-ROM says
+			# 737280000; Media Motion say 736051200 for our
+			# pressed CDs, so we'll use the smaller value.
+			#SIZELIMIT=736051200
+			# ... except apparently some software/media has
+			# problems with anything over 700 (binary) MB. Argh.
+			SIZELIMIT="$((700 * 1024 * 1024))"
+			;;
+	esac
+
+	# Ubuntu Studio is always DVD-sized for now.
+	if [ "$PROJECT" = ubuntustudio ]; then
+		SIZELIMIT=4700372992
+	fi
+
+	if [ -e "$CDOUT/$arch/$DIST-$TYPE-$arch.raw" ]; then
+		echo "Publishing $arch ..."
+		mkdir -p "$PUBLISH"
+		mv "$CDOUT/$arch/$DIST-$TYPE-$arch.raw" \
+		   "$PUBLISH/$DIST-$TYPE-$arch.iso"
+		mv "$CDOUT/$arch/$DIST-$TYPE-$arch.list" \
+		   "$PUBLISH/$DIST-$TYPE-$arch.list"
+		md5sum="$(grep -qs "[ *]$DIST-$TYPE-$arch\.raw\$" \
+				   "$CDOUT/$arch/MD5SUMS" | cut -d' ' -f1)" \
+			|| true
+		if [ "$md5sum" ]; then
+			echo "$md5sum *$DIST-$TYPE-$arch.iso" \
+				>> "$PUBLISH/MD5SUMS"
+		else
+			(cd "$PUBLISH" && md5sum -b "$DIST-$TYPE-$arch.iso" \
+				>> MD5SUMS)
+		fi
+
+		# Jigdo integration
+		if [ -e "$CDOUT/$arch/$DIST-$TYPE-$arch.jigdo" ]; then
+			echo "Publishing $arch jigdo ..."
+			mv "$CDOUT/$arch/$DIST-$TYPE-$arch.jigdo" \
+			   "$PUBLISH/$DIST-$TYPE-$arch.jigdo"
+			mv "$CDOUT/$arch/$DIST-$TYPE-$arch.template" \
+			   "$PUBLISH/$DIST-$TYPE-$arch.template"
+		else
+			rm -f "$PUBLISH/$DIST-$TYPE-$arch.jigdo" \
+			      "$PUBLISH/$DIST-$TYPE-$arch.template"
+		fi
+
+		# Live filesystem manifests
+		if [ -e "$CDOUT/$arch/$DIST-$TYPE-$arch.manifest" ]; then
+			echo "Publishing $arch live manifest ..."
+			mv "$CDOUT/$arch/$DIST-$TYPE-$arch.manifest" \
+			   "$PUBLISH/$DIST-$TYPE-$arch.manifest"
+		else
+			rm -f "$PUBLISH/$DIST-$TYPE-$arch.manifest"
+		fi
+
+		SIZE="$(stat -c %s "$PUBLISH/$DIST-$TYPE-$arch.iso")"
+		if [ "$SIZE" -gt "$SIZELIMIT" ]; then
+			touch "$PUBLISH/$DIST-$TYPE-$arch.OVERSIZED"
+		else
+			rm -f "$PUBLISH/$DIST-$TYPE-$arch.OVERSIZED"
+		fi
+	else
+		echo "No $TYPE CD for $arch!" >&2
+		rm -f "$PUBLISH/$DIST-$TYPE-$arch".*
+	fi
+
+	if [ -d "$PUBLISH" ]; then
+		# Create and publish torrents.
+		make-torrents "$PUBLISH" "$DIST-$TYPE-$arch" cdimage.ubuntu.com
+		if [ -e "$PUBLISH/$DIST-$TYPE-$arch.iso" ]; then
+			ln -f "$PUBLISH/$DIST-$TYPE-$arch.iso" \
+				"$TORRENTS/$DIST-$TYPE-$arch.iso"
+			ln -f "$PUBLISH/$DIST-$TYPE-$arch.iso.torrent" \
+				"$TORRENTS/$DIST-$TYPE-$arch.iso.torrent"
+		fi
+	fi
+}
+
+for arch in $ARCHES; do
+	publish_binary "$TYPE" "$arch"
+done
+if [ "$PROJECT" = edubuntu ] && [ "$TYPE" = server ]; then
+	for arch in $ARCHES; do
+		publish_binary serveraddon "$arch"
+	done
+fi
+
+i=1
+while [ -e "$CDOUT/src/$DIST-src-$i.raw" ]; do
+	echo "Publishing source $i ..."
+	mkdir -p "$PUBLISH/source"
+	mv "$CDOUT/src/$DIST-src-$i.raw" "$PUBLISH/source/$DIST-src-$i.iso"
+	mv "$CDOUT/src/$DIST-src-$i.list" "$PUBLISH/source/$DIST-src-$i.list"
+	md5sum="$(grep -qs "[ *]$DIST-src-$i\.raw\$" "$CDOUT/src/MD5SUMS" \
+			| cut -d' ' -f1)" || true
+	if [ "$md5sum" ]; then
+		echo "$md5sum *$DIST-src-$i.iso" >> "$PUBLISH/source/MD5SUMS"
+	else
+		(cd "$PUBLISH/source" && md5sum -b "$DIST-src-$i.iso" \
+			>> MD5SUMS)
+	fi
+
+	# Jigdo integration
+	if [ -e "$CDOUT/src/$DIST-src-$i.jigdo" ]; then
+		echo "Publishing source $i jigdo ..."
+		mv "$CDOUT/src/$DIST-src-$i.jigdo" \
+		   "$PUBLISH/source/$DIST-src-$i.jigdo"
+		mv "$CDOUT/src/$DIST-src-$i.template" \
+		   "$PUBLISH/source/$DIST-src-$i.template"
+	else
+		echo "No jigdo for source $i!" >&2
+		rm -f "$PUBLISH/source/$DIST-src-$i.jigdo" \
+		      "$PUBLISH/source/$DIST-src-$i.template"
+	fi
+
+	i="$(($i + 1))"
+done
+# If the number of source CDs has decreased since the last build, make sure
+# to remove the carried-over versions.
+if [ "$i" != 1 ]; then
+	while [ -e "$PUBLISH/source/$DIST-src-$i.iso" ]; do
+		rm -f "$PUBLISH/source/$DIST-src-$i".*
+		i="$(($i + 1))"
+	done
+fi
+
+if [ -d "$PUBLISH" ]; then
+	rm -f "$PUBLISH/report.html"
+	if [ "$CDIMAGE_INSTALL_BASE" ] && [ -e "$BRITNEY_REPORT/${DIST}_probs.html" ]; then
+		cp -a "$BRITNEY_REPORT/${DIST}_probs.html" "$PUBLISH/report.html"
+	fi
+	sign-cdimage "$PUBLISH/MD5SUMS"
+	if [ -d "$PUBLISH/source" ]; then
+		sign-cdimage "$PUBLISH/source/MD5SUMS"
+	fi
+	make-web-indices "$PUBLISH" "$DIST"
+	ln -nsf "$DATE" "$CDIMAGE_ROOT/www/$FULL_TREE/$IMAGE_TYPE_DIR/current"
+else
+	echo "No CDs produced!" >&2
+fi

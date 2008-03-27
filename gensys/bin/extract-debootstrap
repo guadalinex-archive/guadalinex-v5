@@ -1,0 +1,22 @@
+#! /bin/sh -x
+set -e
+
+export CDIMAGE_ROOT="${CDIMAGE_ROOT:-/srv/cdimage.ubuntu.com}"
+. "$CDIMAGE_ROOT/etc/config"
+. "$CDIMAGE_ROOT/bin/functions.sh"
+
+DEBOOTSTRAP_OUT="$CDIMAGE_ROOT/scratch/$PROJECT/$IMAGE_TYPE/debootstrap"
+
+mkemptydir "$DEBOOTSTRAP_OUT"
+for fullarch in $ARCHES; do
+	arch="${fullarch%%+*}"
+	mirror="$(find-mirror "$arch")"
+	udeb="$(zcat "$mirror/dists/$DIST/main/debian-installer/binary-$arch/Packages.gz" | grep-dctrl -nsFilename -PX debootstrap-udeb)"
+	if [ -f "$mirror/$udeb" ]; then
+		dpkg --fsys-tarfile "$mirror/$udeb" | \
+			tar -xOf - "./usr/share/debootstrap/scripts/gutsy" \
+			> "$DEBOOTSTRAP_OUT/$DIST-$fullarch"
+	else
+		echo "No debootstrap-udeb for $DIST/$arch!" >&2
+	fi
+done

@@ -1,0 +1,7 @@
+Codename: lobo
+Components: main restricted
+UDebComponents: main restricted
+Architectures: i386
+Update: - ubuntu guadalinex
+DebOverride: override.lobo.deb
+UDebOverride: override.lobo.udeb

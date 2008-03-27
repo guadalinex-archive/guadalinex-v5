@@ -1,0 +1,103 @@
+#!/bin/sh
+
+# Create the needed directories before putting packages into them
+
+set -e
+
+# There's no difference between NONFREE and EXTRANONFREE for this script
+if [ "${EXTRANONFREE:-0}" != "0" ]
+then
+    NONFREE=1
+fi
+
+cd $1
+
+if [ ! -e ubuntu ] ; then
+    ln -sf . ubuntu
+fi
+
+if [ ! -d dists/$CODENAME ] ; then
+    mkdir -p dists/$CODENAME
+    for name in stable unstable; do
+	ln -sf $CODENAME dists/$name
+    done
+fi
+
+# Commodity link for tools which want local in dists/local/local ...
+if [ -n "$LOCAL" ]
+then
+    ln -sf $CODENAME dists/local
+fi
+
+
+if [ ! -d .disk ] ; then
+    mkdir .disk
+fi
+
+mkdir -p dists/$CODENAME/main/binary-$ARCH
+mkdir -p dists/$CODENAME/main/source
+if [ "${CONTRIB:-0}" != 0 ]; then
+    mkdir -p dists/$CODENAME/contrib/binary-$ARCH
+    mkdir -p dists/$CODENAME/contrib/source
+fi
+if [ "${NONFREE:-0}" != "0" ]; then
+    mkdir -p dists/$CODENAME/non-free/binary-$ARCH
+    mkdir -p dists/$CODENAME/non-free/source
+fi
+if [ "${RESTRICTED:-0}" != "0" ]; then
+    mkdir -p dists/$CODENAME/restricted/binary-$ARCH
+    mkdir -p dists/$CODENAME/restricted/source
+fi
+if [ "${UNIVERSE:-0}" != "0" ]; then
+    mkdir -p dists/$CODENAME/universe/binary-$ARCH
+    mkdir -p dists/$CODENAME/universe/source
+fi
+if [ "${MULTIVERSE:-0}" != "0" ]; then
+    mkdir -p dists/$CODENAME/multiverse/binary-$ARCH
+    mkdir -p dists/$CODENAME/multiverse/source
+fi
+
+if [ -n "$LOCAL"  -a -e "${LOCALDEBS:-$MIRROR}/dists/$DI_CODENAME/local/debian-installer" ]; then
+    mkdir -p dists/$CODENAME/local/debian-installer/binary-$ARCH
+fi
+if [ -e "$MIRROR/dists/$DI_CODENAME/main/debian-installer" ]; then
+    mkdir -p dists/$CODENAME/main/debian-installer/binary-$ARCH
+fi
+if [ "${RESTRICTED:-0}" != "0" ] && \
+   [ -e "$MIRROR/dists/$DI_CODENAME/restricted/debian-installer" ]; then
+    mkdir -p dists/$CODENAME/restricted/debian-installer/binary-$ARCH
+fi
+if [ "${UNIVERSE:-0}" != "0" ] && \
+   [ -e "$MIRROR/dists/$DI_CODENAME/universe/debian-installer" ]; then
+    mkdir -p dists/$CODENAME/universe/debian-installer/binary-$ARCH
+fi
+    
+if [ -n "$NONUS" ]; then
+    mkdir -p dists/$CODENAME/non-US/main/binary-$ARCH
+    mkdir -p dists/$CODENAME/non-US/main/source
+    if [ "${CONTRIB:-0}" != "0" ]; then
+        mkdir -p dists/$CODENAME/non-US/contrib/binary-$ARCH
+        mkdir -p dists/$CODENAME/non-US/contrib/source
+    fi
+    if [ "${NONFREE:-0}" != "0" ]; then
+	    mkdir -p dists/$CODENAME/non-US/non-free/binary-$ARCH
+	    mkdir -p dists/$CODENAME/non-US/non-free/source
+    fi
+    if [ "${RESTRICTED:-0}" != "0" ]; then
+	    mkdir -p dists/$CODENAME/non-US/restricted/binary-$ARCH
+	    mkdir -p dists/$CODENAME/non-US/restricted/source
+    fi
+    if [ "${UNIVERSE:-0}" != "0" ]; then
+	    mkdir -p dists/$CODENAME/non-US/universe/binary-$ARCH
+	    mkdir -p dists/$CODENAME/non-US/universe/source
+    fi
+    if [ "${MULTIVERSE:-0}" != "0" ]; then
+	    mkdir -p dists/$CODENAME/non-US/multiverse/binary-$ARCH
+	    mkdir -p dists/$CODENAME/non-US/multiverse/source
+    fi
+fi
+
+if [ -n "$LOCAL" ]; then
+    mkdir -p dists/$CODENAME/local/binary-$ARCH
+    mkdir -p dists/$CODENAME/local/source
+fi

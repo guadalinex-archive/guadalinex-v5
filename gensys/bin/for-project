@@ -1,0 +1,80 @@
+#! /bin/sh
+set -e
+
+# Execute a subsidiary command in the context of a given project.
+
+case $1 in
+	ubuntu)
+		export PROJECT=ubuntu
+		export CAPPROJECT=Ubuntu
+		;;
+	kubuntu)
+		export PROJECT=kubuntu
+		export CAPPROJECT=Kubuntu
+		;;
+	kubuntu-kde4)
+		export PROJECT=kubuntu-kde4
+		export CAPPROJECT=Kubuntu-KDE4
+		;;
+	edubuntu)
+		export PROJECT=edubuntu
+		export CAPPROJECT=Edubuntu
+		;;
+	xubuntu)
+		export PROJECT=xubuntu
+		export CAPPROJECT=Xubuntu
+		;;
+	gobuntu)
+		export PROJECT=gobuntu
+		export CAPPROJECT=Gobuntu
+		;;
+	ubuntu-server)
+		export PROJECT=ubuntu-server
+		export CAPPROJECT=Ubuntu-Server
+		;;
+	ubuntustudio)
+		export PROJECT=ubuntustudio
+		export CAPPROJECT=Ubuntu-Studio
+		;;
+	mythbuntu)
+		export PROJECT=mythbuntu
+		export CAPPROJECT=MythBuntu
+		;;
+	tocd3)
+		export PROJECT=tocd3
+		export CAPPROJECT=TheOpenCDv3
+		;;
+	tocd3.1)
+		export PROJECT=tocd3.1
+		export CAPPROJECT=TheOpenCDv3.1
+		;;
+	guadalinex)
+		export PROJECT=guadalinex
+		export CAPPROJECT=Guadalinex
+		;;
+	*)
+		cat <<EOF >&2
+Usage: for-project PROJECT [COMMAND ARGS...]
+Recognised projects:
+  ubuntu
+  kubuntu
+  kubuntu-kde4
+  edubuntu
+  xubuntu
+  gobuntu
+  ubuntu-server
+  ubuntustudio
+  mythbuntu
+  tocd3
+  tocd3.1
+EOF
+		exit 1
+		;;
+esac
+shift
+
+if [ $# -eq 0 ]; then
+	exec "${SHELL:-/bin/sh}" -i
+else
+	exec "$@"
+fi

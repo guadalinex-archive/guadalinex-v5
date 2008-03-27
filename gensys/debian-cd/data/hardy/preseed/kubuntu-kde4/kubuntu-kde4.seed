@@ -1,0 +1,4 @@
+# Install the Kubuntu desktop.
+tasksel	tasksel/first	multiselect kubuntu-kde4-desktop
+# Install KDE translation packages.
+d-i	pkgsel/language-pack-patterns	string language-pack-$LL kde-l10n-$LL

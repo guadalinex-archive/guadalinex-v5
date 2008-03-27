@@ -1,0 +1,317 @@
+#! /bin/sh
+set -e
+
+export CDIMAGE_ROOT="${CDIMAGE_ROOT:-/srv/cdimage.ubuntu.com}"
+. "$CDIMAGE_ROOT/etc/config"
+
+if [ -z "$1" ] || [ -z "$2" ]; then
+	echo 'Usage: find-live-filesystem ARCH cloop|squashfs|kernel|initrd|manifest|manifest-desktop|winfoss|wubi|wubi-cdboot' >&2
+	exit 1
+fi
+ARCH="$1"
+ITEM="$2"
+CPUARCH="${ARCH%%+*}"
+SUBARCH="${ARCH#*+}"
+
+case $CPUARCH in
+	amd64)
+		LIVECD=http://king.buildd/~buildd/LiveCD
+		case $DIST in
+			warty|hoary|breezy|dapper)
+				FLAVOURS=amd64-generic ;;
+			*)
+				FLAVOURS=generic ;;
+		esac
+		;;
+	hppa)
+		LIVECD=http://castilla.buildd/~buildd/LiveCD
+		FLAVOURS='hppa32 hppa64'
+		;;
+	i386)
+		LIVECD=ftp://gensys
+		case $DIST in
+			warty|hoary|breezy|dapper)
+				FLAVOURS=386 ;;
+			*)
+				FLAVOURS=generic ;;
+		esac
+		;;
+	ia64)
+		LIVECD=http://weddell.buildd/~buildd/LiveCD
+		case $DIST in
+			warty|hoary|breezy|dapper)
+				FLAVOURS='itanium-smp mckinley-smp'
+				;;
+			*)
+				FLAVOURS='itanium mckinley'
+				;;
+		esac
+		;;
+	powerpc)
+		LIVECD=http://royal.buildd/~buildd/LiveCD
+		case $SUBARCH in
+			ps3)
+				case $DIST in
+					gutsy)
+						FLAVOURS=cell
+						;;
+					*)
+						FLAVOURS='powerpc powerpc64-smp'
+						;;
+				esac
+				;;
+			*)
+				FLAVOURS='powerpc powerpc64-smp'
+				;;
+		esac
+		;;
+	sparc)
+		LIVECD=http://vivies.buildd/~buildd/LiveCD
+		FLAVOURS=sparc64
+		;;
+	*)
+		echo "No live filesystem source known for $ARCH" >&2
+		exit 1
+		;;
+esac
+
+case $PROJECT in
+	livecd-base)
+		LIVEPROJECT=base
+		;;
+	tocd3.1)
+		LIVEPROJECT=tocd
+		;;
+	*)
+		LIVEPROJECT="$PROJECT"
+		;;
+esac
+case $ARCH in
+	*+*)
+		LIVEPROJECT="$LIVEPROJECT-$SUBARCH"
+		;;
+esac
+
+case $ITEM in
+	cloop|squashfs|manifest|manifest-desktop)
+		case $PROJECT in
+			tocd3)
+				# auto-purged - reverting to plan B
+				echo "/home/cjwatson/tocd3/livecd.tocd3.$ITEM"
+				;;
+			ubuntu)
+				case $DIST in
+					breezy)
+						# auto-purged - reverting to plan B
+						echo "/home/cjwatson/breezy-live/ubuntu/livecd.$ARCH.$ITEM"
+						;;
+					*)
+						echo "$LIVECD/$DIST/$LIVEPROJECT/current/livecd.$LIVEPROJECT.$ITEM"
+						;;
+				esac
+				;;
+			*)
+				echo "$LIVECD/$DIST/$LIVEPROJECT/current/livecd.$LIVEPROJECT.$ITEM"
+				;;
+		esac
+		;;
+	kernel|initrd)
+		for flavour in $FLAVOURS; do
+			echo "$LIVECD/$DIST/$LIVEPROJECT/current/livecd.$LIVEPROJECT.$ITEM-$flavour"
+		done
+		;;
+	winfoss)
+		if [ "$DIST" = warty ]; then
+			exit 1
+		fi
+		case $PROJECT in
+			ubuntu)
+				case $DIST in
+					hoary)
+						case $CPUARCH in
+							i386)
+								echo http://maitri.ubuntu.com/theopencd/ubuntu/winfoss/latest/Hoary-WinFOSS.tgz
+								;;
+							amd64)
+								echo http://maitri.ubuntu.com/theopencd/ubuntu/amd64/latest/Hoary-WinFOSS-amd64.tgz
+								;;
+							*)	exit 1 ;;
+						esac
+						;;
+					breezy)
+						case $CPUARCH in
+							i386|amd64)
+								echo http://maitri.ubuntu.com/theopencd/winfoss/ubuntu/current/Ubuntu-WinFOSS-5.10.tgz
+								;;
+							*)	exit 1 ;;
+						esac
+						;;
+					dapper)
+						case $CPUARCH in
+							i386|amd64)
+								echo http://people.ubuntu.com/~henrik/winfoss/dapper/ubuntu/current/ubuntu-winfoss-6.06.tar.gz
+								;;
+							*)	exit 1 ;;
+						esac
+						;;
+					edgy)
+						case $CPUARCH in
+							i386|amd64)
+								echo http://people.ubuntu.com/~henrik/winfoss/edgy/ubuntu/current/ubuntu-winfoss-6.10.tar.gz
+								;;
+							*)	exit 1 ;;
+						esac
+						;;
+					feisty)
+						case $CPUARCH in
+							i386|amd64)
+								echo http://people.ubuntu.com/~henrik/winfoss/feisty/ubuntu/current/ubuntu-winfoss-7.04.tar.gz
+								;;
+							*)	exit 1 ;;
+						esac
+						;;
+					gutsy|hardy)
+						case $CPUARCH in
+							i386|amd64)
+								echo ftp://gensys/ubuntu-winfoss-7.10.tar.gz
+								;;
+							*)	exit 1 ;;
+						esac
+						;;
+				esac
+				;;
+			kubuntu)
+				case $DIST in
+					hoary)
+						case $CPUARCH in
+							i386)
+								echo http://maitri.ubuntu.com/theopencd/kubuntu/winfoss/latest/Kubuntu-WinFOSS-i386.tgz
+								;;
+							*)	exit 1 ;;
+						esac
+						;;
+					breezy)
+						case $CPUARCH in
+							i386)
+								echo http://maitri.ubuntu.com/theopencd/winfoss/kubuntu/current/Kubuntu-WinFOSS-5.10.tgz
+								;;
+							amd64)
+								echo http://maitri.ubuntu.com/theopencd/winfoss/kubuntu-AMD/current/Kubuntu-WinFOSS-5.10-AMD.tgz
+								;;
+							*)	exit 1 ;;
+						esac
+						;;
+					dapper)
+						case $CPUARCH in
+							i386|amd64)
+								echo http://people.ubuntu.com/~henrik/winfoss/dapper/kubuntu/current/kubuntu-winfoss-6.06.tar.gz
+								;;
+							*)	exit 1 ;;
+						esac
+						;;
+					edgy)
+						case $CPUARCH in
+							i386|amd64)
+								echo http://people.ubuntu.com/~henrik/winfoss/edgy/kubuntu/current/kubuntu-winfoss-6.10.tar.gz
+								;;
+							*)	exit 1 ;;
+						esac
+						;;
+					feisty)
+						case $CPUARCH in
+							i386|amd64)
+								echo http://people.ubuntu.com/~henrik/winfoss/feisty/kubuntu/current/kubuntu-winfoss-7.04.tar.gz
+								;;
+							*)	exit 1 ;;
+						esac
+						;;
+					gutsy|hardy)
+						case $CPUARCH in
+							i386|amd64)
+								echo http://people.ubuntu.com/~henrik/winfoss/gutsy/kubuntu/current/kubuntu-winfoss-7.10.tar.gz
+								;;
+							*)	exit 1 ;;
+						esac
+						;;
+				esac
+				;;
+			edubuntu)
+				case $DIST in
+					feisty)
+						case $CPUARCH in
+							i386|amd64)
+								echo http://people.ubuntu.com/~henrik/winfoss/feisty/edubuntu/current/edubuntu-winfoss-7.04.tar.gz
+								;;
+							*)	exit 1 ;;
+						esac
+						;;
+					gutsy|hardy)
+						case $CPUARCH in
+							i386|amd64)
+								echo http://people.ubuntu.com/~henrik/winfoss/gutsy/edubuntu/current/edubuntu-winfoss-7.10.tar.gz
+								;;
+							*)	exit 1 ;;
+						esac
+						;;
+				esac
+				;;
+			tocd3)
+				case $CPUARCH in
+					i386)
+						echo http://maitri.ubuntu.com/theopencd/tocd3/fsm/TOCD3.tgz
+						;;
+					*)	exit 1 ;;
+				esac
+				;;
+			tocd3.1)
+				case $CPUARCH in
+					i386)
+						echo http://maitri.ubuntu.com/theopencd/winfoss/tocd3.1/current/TOCD-31.tgz
+						;;
+					*)	exit 1 ;;
+				esac
+				;;
+			*)	exit 1 ;;
+		esac
+		;;
+	wubi)
+		case $ARCH in
+			amd64|i386)
+				;;
+			*)
+				exit 1
+				;;
+		esac
+		case $DIST in
+			warty|hoary|breezy|dapper|edgy|feisty)
+				exit 1
+				;;
+			*)
+				#echo http://wubi-installer.org/devel/minefields/Ubuntu-7.10-alpha.exe
+				;;
+		esac
+		;;
+	wubi-cdboot)
+		case $ARCH in
+			amd64|i386)
+				;;
+			*)
+				exit 1
+				;;
+		esac
+		case $DIST in
+			warty|hoary|breezy|dapper|edgy|feisty)
+				exit 1
+				;;
+			*)
+				echo http://wubi-installer.org/devel/minefields/Ubuntu-cdboot-7.10-alpha.exe
+				;;
+		esac
+		;;
+	*)
+		echo "Unknown live filesystem item '$ITEM'" >&2
+		exit 1
+		;;
+esac
+
+exit 0
