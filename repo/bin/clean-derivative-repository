@@ -1,0 +1,23 @@
+#!/bin/bash
+
+MIRROR_ROOT=/var/mirror
+DERIVATIVE_DIR=${MIRROR_ROOT}/derivative/
+conffile=${DERIVATIVE_DIR}/conf/distributions
+
+rm -fr ${DERIVATIVE_DIR}
+
+mkdir -p ${DERIVATIVE_DIR}/conf/
+
+cat <<EOF > $conffile 
+Codename: lobo
+Suite: guadalinex
+Components: main restricted universe multiverse
+UDebComponents: main restricted
+Architectures: i386 source
+Origin: Ubuntu
+Version: 5.0
+Description: Repositorio de Guadalinex v5 -lobo-
+SignWith: 8CB1684F
+EOF
+
+
