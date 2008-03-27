@@ -1,0 +1,28 @@
+# YAML 1.1
+# Fichero de configuración de paquetes de personalización de Guadalinex v4
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: guadalinex-artwork
+
+# Autor 
+author: J. Félix Ontañón <fontanon@emergya.info>
+
+#Priority
+priority: optional
+
+# Section
+section: misc
+
+# Descripción corta
+shortdesc: "The Guadalinex artwork system"
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "This package depends on all of the packages in the Guadalinex artwork system\n  .\n  It is also used to help ensure proper upgrades, so it is recommended that\n  it not be removed."
+
+
+# Versión del paquete
+version: v5
+
+# Cambios en esta versión
+changes:
+    - Background modified for gv5 alpha

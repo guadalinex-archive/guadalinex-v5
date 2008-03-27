@@ -1,0 +1,8 @@
+# Dependencias del paquete. Un paquete por línea. Si se desea, se puede indicar la versión del paquete en una segunda columna
+# Ejemplos:
+#
+# gnome-terminal
+# nautilus  >=2.6.10
+
+usplash-theme-guadalinex (>= 0.3)
+ubuntu-artwork
