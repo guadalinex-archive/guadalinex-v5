@@ -1,3 +1,9 @@
+gfxboot-theme-guada (0.1.1) hardy; urgency=low
+
+  * Fixed mistake with debian files names.
+
+ -- Juanje Ojeda Croissier <jojeda@emergya.es>  Thu, 27 Mar 2008 15:13:24 +0100
+
 gfxboot-theme-guada (0.1.0) hardy; urgency=low
 
   * Created new gfxboot-theme based on the Ubuntu one.
