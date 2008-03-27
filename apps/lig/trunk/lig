@@ -1,0 +1,43 @@
+#!/bin/bash
+
+#
+# Description:
+#   LIG is a Live Images Generator.
+#  
+#   This program generate a chroot system from a debian repository in order
+#   to create a squashfs compressed image of that system for being able to run
+#   as a live GNU/Linux system.
+#
+# Authors: 
+#   Juan Jesús Ojeda Croissier (juanje) <jojeda@emergya.es>   
+#
+# Last modified: 
+#   $Date: 2007-05-21 18:45:56 +0200 (lun, 21 may 2007) $ 
+#   $Author: jojeda $
+#   $Rev: 467 $
+#
+
+
+# load functions from library
+. functions
+
+## Start main program ##
+
+must_be_root
+
+# load the config
+load_config
+
+# parse the menu options
+menu "$@"
+
+# if clean is selected, just clean up and exit
+if [ "$clean" = "yes" ]; then
+    clean
+fi
+
+install_image
+
+bye
+
+# vim:ai:et:sts=4:tw=80:sw=4:

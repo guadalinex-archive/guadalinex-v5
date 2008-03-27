@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+export DEB_DH_ALWAYS_EXCLUDE=".svn"
+DEB_INSTALL_MANPAGES_lig := debian/lig.8
+DEB_INSTALL_DOCS_lig := doc/README doc/HOWTO doc/TODO
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+

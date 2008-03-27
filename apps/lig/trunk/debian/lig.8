@@ -1,0 +1,61 @@
+.TH "lig" "8" "0.1" "Juan Jesus Ojeda Croissier" ""
+.SH "NAME"
+.LP 
+LIG \- Live Image Generator
+.SH "SYNTAX"
+.LP 
+lig [\-h] [\-d|\-\-no\-deboostrap] [\-s|\-\-no\-squashfs] [\-k|\-\-keep\-sources] [\-q|\-\-quiet] [\-v|\-\-verbose]
+.br 
+.SH "DESCRIPTION"
+.LP 
+This program generate a chroot system from a debian repository in order
+to create a squashfs compressed image of that system for being able to run
+as a live GNU/Linux system.
+
+.SH "OPTIONS"
+.LP 
+.TP 
+\fB\-h, \-\-help\fR
+Show this help
+.TP 
+\fB\-d, \-\-no\-debootstrap\fR
+Not to build from the packages
+.TP 
+\fB\-s, \-\-no\-squashfs\fR
+Not to create the squashfs image
+.TP 
+\fB\-k, \-\-keep\-sources\fR
+Keep the sources directory after finish
+.TP 
+\fB\-q, \-\-quiet\fR
+Don't show any messages
+.TP 
+\fB\-v, \-\-verbose\fR
+Show more information about the execution
+.br 
+.SH "FILES"
+.LP 
+\fI/etc/lig/conf\fP 
+.br 
+.SH "EXAMPLES"
+.LP 
+To run this program the standard way type:
+.LP 
+lig
+.LP 
+Alternativly you might like run it as:
+.LP 
+lig \-k
+.LP
+This keep the sources directory so you could run it as:
+.LP
+lig \-d
+.LP
+Or some other configuration which need the sources directory, but you don't want to wait for debootstrap process.
+.LP
+.SH "AUTHORS"
+.br 
+Juan Jesus Ojeda Croissier <jojeda@emergya.es>
+.SH "SEE ALSO"
+.LP 
+mkisofs(8) mksquashfs(8)

@@ -1,0 +1,44 @@
+## Define variables
+# logs files
+root_logs="/var/log"
+log_file="${root_logs}/gig-$(date +%Y%m%d%H%M).log"
+current_log_file="${root_logs}/gig.log"
+
+## directories
+
+## Apt vars
+mirror_dir="/var/mirror/ubuntu"
+#mirror="file://${mirror_dir}"
+mirror="ftp://gensys/ubuntu"
+components="main,restricted"
+#components="main,restricted,universe,multiverse"
+
+
+##################################  From GLIG ###############################################
+
+# Define variables
+live_dir=$CDIMAGE_ROOT"/ftp/"
+
+sources_dir="/tmp/sources"
+sources_dir_escaped="\/tmp\/sources"
+
+pre_base_pkgs="language-support-es"
+
+base_pkgs="linux-image-generic language-pack-gnome-es ubuntu-desktop guadalinex-artwork"
+live_pkgs="casper ubiquity-frontend-gtk ubiquity-ubuntu-artwork xfsprogs jfsutils ntfsprogs discover1 xresprobe laptop-detect gparted"
+
+#live_pkgs="casper ubiquity-frontend-gtk ubiquity-ubuntu-artwork xfsprogs jfsutils ntfsprogs discover1 xresprobe laptop-detect extrahooks-casper extrahooks-ubiquity gru gparted"
+#base_pkgs="linux-image-generic guadalinex-desktop guadalinex-minimal-conf guadalinex-desktop-conf guadalinex-artwork guadalinex-doc casper ubiquity-frontend-gtk ubiquity-ubuntu-artwork xfsprogs jfsutils ntfsprogs discover1 xresprobe laptop-detect"
+
+excluded_pkgs="guadalinex-minimal-conf,ubuntu-keyring"
+
+# guadalinex-desktop,guadalinex-minimal,guadalinex-desktop-conf,guadalinex-minimal-conf,guadalinex-artwork,guadalinex-doc
+# casper,ubiquity-frontend-gtk,ubiquity-ubuntu-artwork,xfsprogs,jfsutils,ntfsprogs,discover1,xresprobe,laptop-detect
+
+# Parameters vars to default values
+debootstrap="yes"
+squashfs="yes"
+keep_sources="no"
+verbose="no"
+quiet="no"
+debug="no"
