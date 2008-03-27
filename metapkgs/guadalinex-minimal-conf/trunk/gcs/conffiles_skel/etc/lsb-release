@@ -1,0 +1,4 @@
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=8.04
+DISTRIB_CODENAME=hardy
+DISTRIB_DESCRIPTION="Guadalinex v5 (alpha version)"

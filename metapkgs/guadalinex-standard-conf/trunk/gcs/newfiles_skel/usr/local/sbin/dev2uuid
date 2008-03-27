@@ -1,0 +1,202 @@
+#!/bin/bash
+
+
+menu_lst_conversion()
+{
+	menu_file="/boot/grub/menu.lst"
+	if [ ! -e "$menu_file" ]; then
+		echo "ERROR: $menu_file doesn't exist"
+		#exit 1
+	else
+		dev=$(grep -m 1 ^kernel $menu_file | awk '{print $3}')
+		echo $dev | grep -q "UUID=" && return
+		cp ${menu_file} ${menu_file}.pre-uuid
+		dev=${dev#root=}
+		uuid="$(/sbin/vol_id -u $dev)"
+		if [ -z "$uuid" ]; then
+			new_dev=${dev/h/s}
+			if [ "$dev" = "$new_dev" ]; then
+				real_dev=${dev/s/h}
+			else
+				real_dev=$new_dev
+			fi
+			uuid="$(/sbin/vol_id -u $real_dev)"
+		fi
+		root_uuid="UUID=$uuid"
+		sed -i "s|kopt=root=$dev|kopt=root=$root_uuid|" $menu_file
+		sed -i "/End/,$ s|$dev|$root_uuid|" $menu_file
+	fi
+}
+
+# Rewrite /etc/fstab so that filesystems are mounted by UUID
+fstab_conversion()
+{
+    if [ -e /etc/fstab.pre-uuid ]; then
+	grep -q UNCONFIGURED /etc/fstab.pre-uuid || return
+
+	trap "rm -f /etc/fstab.pre-uuid" 0
+    fi
+
+    cp -a /etc/fstab /etc/fstab.pre-uuid
+    exec 9<&0 8>&1 </etc/fstab >/etc/fstab.new
+    trap "rm -f /etc/fstab.new" 0
+
+    uuids=""
+
+    old_IFS="$IFS"
+    IFS="
+"
+    while read LINE
+    do
+	IFS="$old_IFS"
+	set -- $LINE
+	IFS="
+"
+	DEV=$1 MTPT=$2 FSTYPE=$3 OPTS=$4
+
+	# Check the device is sane for conversion
+	case "$DEV" in
+	    ""|\#*)		# Preserve blank lines and user comments
+		echo "$LINE"
+		continue
+		;;
+	    LABEL=*|UUID=*)	# Already mounting by LABEL or UUID
+	        echo "$LINE"
+		continue
+		;;
+	    /dev/disk/*)	# Already mounting by particulars
+	        echo "$LINE"
+		continue
+		;;
+	    /dev/fd[0-9]*)	# Floppy devices, not mounted by filesystem
+	        echo "$LINE"
+		continue
+		;;
+	    /dev/mapper/*)	# devmapper devices, already by "label"
+	        echo "$LINE"
+		continue
+		;;
+	    /dev/evms/*)	# evms devices, already by "label"
+	        echo "$LINE"
+		continue
+		;;
+	    /dev/md[0-9]*)	# RAID devices, broken
+	        echo "$LINE"
+		continue
+		;;
+	    /dev/*)		# Ordinary devices -- we want to convert
+		if [ -L "$DEV" ] && readlink "$DEV" | grep -q "^/dev/mapper/"; then	
+		    echo "$LINE"
+		    continue
+		elif [ ! -b "$DEV" ]; then
+		    echo "$LINE"
+		    continue
+		fi
+	        ;;
+	    *)			# Anything else gets left alone
+	        echo "$LINE"
+		continue
+	esac 
+	
+	# Don't convert filesystem types that don't make sense
+	case "$FSTYPE" in
+	    auto)		# Auto detection -- implies non-fixed fs
+		echo "$LINE"
+		continue
+		;;
+	esac
+	
+	# Check filesystem options also
+	case "$OPTS" in
+	    noauto|*,noauto|noauto,*|*,noauto,*)	# Implies non-fixed
+	        echo "$LINE"
+		continue
+		;;
+	esac
+
+
+	# If we reach this point, we think we want to move the fstab
+	# entry over to mount-by-UUID.  The first check is that the
+	# filesystem on the device *has* a uuid
+	UUID=$(/sbin/vol_id -u "$DEV" || true)
+	if [ -z "$UUID" ]; then
+	    # Can we generate one?
+	    if [ "$FSTYPE" = "swap" ]; then
+		REAL_FSTYPE=$(/sbin/vol_id -t "$DEV" || true)
+		case "$REAL_FSTYPE" in
+		    swap)	# is a swap device, add a UUID to it
+			UUID=$(uuidgen)
+			echo -n "$UUID" |
+			  perl -ne 's/-//g;chomp;print pack "H*",$_' |
+			  dd conv=notrunc "of=$DEV" obs=1 seek=1036 2>/dev/null
+			;;
+		    swsusp)	# contains a suspended image, mkswap it!
+			if ! mkswap "$DEV" >/dev/null; then
+			    echo "Warning: unable to make swap $DEV" 1>&2
+			    echo "$LINE"
+			    continue
+			fi
+
+			UUID=$(/sbin/vol_id -u "$DEV" || true)
+			if [ -z "$UUID" ]; then
+			    echo "Warning: unable to generate uuid for $DEV" 1>&2
+			    echo "$LINE"
+			    continue
+			fi
+			;;
+		    *)
+			echo "Warning: $DEV is not a swap partition" 1>&2
+			echo "$LINE"
+			continue
+			;;
+		esac
+	    else
+		echo "Warning: unable to find a UUID for $DEV" 1>&2
+		echo "$LINE"
+		continue
+	    fi
+	fi
+
+	# Check for duplicates
+	case "$uuids" in
+	"$UUID" | "$UUID "* | *" $UUID" | *" $UUID "*)
+	    echo "Error: duplicate UUID $UUID detected" 1>&2
+	    echo "Unable to migrate /etc/fstab to UUID-based mounting" 1>&2
+
+	    exec 0<&9 9<&- 1>&8 8>&-
+	    trap 0
+
+	    rm -f /etc/fstab.new
+	    return
+	    ;;
+	*)
+	    uuids="${uuids:+$uuids }$UUID"
+	    ;;
+	esac
+
+	# Now write the new line out
+	shift
+	echo "# $DEV -- converted during upgrade to edgy"
+	echo "UUID=$UUID $@"
+    done
+    IFS="$old_IFS"
+
+    exec 0<&9 9<&- 1>&8 8>&-
+    trap 0
+
+    mv -f /etc/fstab.new /etc/fstab
+}
+
+# Update the initramfs
+update_initramfs()
+{
+    update-initramfs -u
+}
+
+menu_lst_conversion
+
+fstab_conversion
+
+update_initramfs -u
+
+exit 0

@@ -1,0 +1,21 @@
+
+case "$1" in
+    configure)
+        # Upgrade from Guadalinex v4.0 or
+        # installation from mini (which uses 2.6.17 kernel for during it)
+        kver=$(cat /proc/sys/kernel/osrelease)
+        if [[ "${kver%%-*}" =~ "2.6.2" ]]; then
+            [ -e /etc/fstab.pre-uuid ] && rm -f /etc/fstab.pre-uuid
+            /usr/local/sbin/dev2uuid
+        fi
+
+        ;;
+
+    abort-upgrade|abort-deconfigure|abort-remove)
+        ;;
+
+    *)
+        echo "$0 called with unknown argument \`$1'" 1>&2
+        exit 1
+        ;;
+esac

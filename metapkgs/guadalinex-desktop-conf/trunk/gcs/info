@@ -1,0 +1,28 @@
+# YAML 1.1
+# Fichero de configuración de paquetes de personalización de Guadalinex v4
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: guadalinex-desktop-conf
+
+# Autor 
+author: Gumersindo Coronel Pérez <gcoronel@emergya.info>
+
+# Priority
+priority: optional
+
+# Section
+section: base
+
+# Descripción corta
+shortdesc: "The configuration of Guadalinex desktop system"
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "This package config all the packages in the Guadalinex desktop system."
+
+# Versión del paquete
+version: 0.1
+
+# Cambios en esta versión
+changes:
+    - Initial package
+

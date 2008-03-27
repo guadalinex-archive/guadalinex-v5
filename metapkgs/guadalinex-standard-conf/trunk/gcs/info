@@ -1,0 +1,27 @@
+# YAML 1.1
+# Fichero de configuración de paquetes de personalización de Guadalinex v4
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: guadalinex-standard-conf
+
+# Autor 
+author: Carlos Parra Camargo <cparra@emergya.es>
+
+# Priority
+priority: standard
+
+# Section
+section: base
+
+# Descripción corta
+shortdesc: "The Guadalinex standard system conf"
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "This package configure all packages from Guadalinex standard\n  system. This set of packages provides a comfortable command-line Unix-like\n  environment.\n  .\n  It is also used to help ensure proper upgrades, so it is recommended that\n  it not be removed."
+
+# Versión del paquete
+version: 0.1
+
+# Cambios en esta versión
+changes:
+    - Initial package
