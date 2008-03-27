@@ -52,7 +52,7 @@ function check_build_depends ()
 cd $SVN_ROOT > /dev/null
 svn up 
 [ "$?" != "0" ] && echo " * * * * * Problems updating repository * * * * *" && exit 1
-REPO_VERSION=$(svn st -Nqv . | awk 'END{print $1}')
+REPO_VERSION=$(svnversion .)
 cd - > /dev/null
 
 echo
@@ -77,9 +77,10 @@ do
         echo " === Going to $x... ==="
         echo
         if [ -d $x/gcs ]; then
+		REVISION=${x##*v5}
                 cd $x
                 cp gcs/info gcs/info.back
-                sed -i "s/\(^version\:.*\)/\1r$REPO_VERSION/g" gcs/info
+                sed -i "s/^version\:.*/version\: v5$REVISION/g" gcs/info
                 gcs_build
                 mv gcs/info.back gcs/info
                 retrieve_debian_files $x/..
