@@ -60,7 +60,7 @@ CASPER=/root/etc/init.d/casper
 
 # FIXME: Nasty hack for translate to spanish the last message
 # Original text
-TEXT="Please remove the disc, close the tray (if any) and press ENTER: "
+TEXT="Please remove the disc and close the tray (if any) then press ENTER: "
 TEXT_URGENT1="Please remove the disc, close the tray (if any)"
 TEXT_URGENT2="and press ENTER to continue"
 
