@@ -20,7 +20,7 @@ shortdesc: "The configuration of Guadalinex desktop system"
 longdesc: "This package config all the packages in the Guadalinex desktop system."
 
 # Versión del paquete
-version: 0.1
+version: v5 
 
 # Cambios en esta versión
 changes:

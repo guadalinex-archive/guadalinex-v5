@@ -20,7 +20,7 @@ shortdesc: "The Guadalinex desktop system"
 longdesc: "This package depends on all of the packages in the Guadalinex desktop system\n  .\n  It is also used to help ensure proper upgrades, so it is recommended that\n  it not be removed."
 
 # Versión del paquete
-version: 0.1
+version: gv5 
 
 # Cambios en esta versión
 changes:

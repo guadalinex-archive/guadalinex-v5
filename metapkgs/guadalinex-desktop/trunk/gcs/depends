@@ -125,8 +125,8 @@ libglut3
 libgnome2-perl
 libgnomevfs2-bin
 libgnomevfs2-extra
-libpt-1.10.10-plugins-v4l
-libpt-1.10.10-plugins-v4l2
+libpt-plugins-v4l
+libpt-plugins-v4l2
 libsasl2-modules
 libxp6
 metacity
@@ -147,6 +147,7 @@ screensaver-default-images
 scrollkeeper
 seahorse
 serpentine
+slocate
 smbclient
 software-properties-gtk
 sound-juicer

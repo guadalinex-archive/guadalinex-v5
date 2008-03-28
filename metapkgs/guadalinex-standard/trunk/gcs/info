@@ -20,7 +20,7 @@ shortdesc: "The Guadalinex standard system"
 longdesc: "This package depends on all of the packages in the Guadalinex standard\n  system. This set of packages provides a comfortable command-line Unix-like\n  environment.\n  .\n  It is also used to help ensure proper upgrades, so it is recommended that\n  it not be removed."
 
 # Versión del paquete
-version: 0.1
+version: v5
 
 # Cambios en esta versión
 changes:
