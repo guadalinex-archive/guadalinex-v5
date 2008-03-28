@@ -5,7 +5,7 @@ acpid
 alacarte
 alsa-base
 alsa-utils
-amigu
+#amigu
 amsn
 amule
 amule-utils
@@ -63,7 +63,7 @@ foomatic-db-hpijs
 foomatic-filters
 fortune-mod
 f-spot
-g3g
+#g3g
 pidgin
 gcalctool
 gcc
