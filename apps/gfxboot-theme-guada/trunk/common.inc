@@ -529,8 +529,9 @@
     } ifelse
 
   } if
-
-  panel.lang
+  % GUADA HACK
+  % removes the language selection panel at gfxboot's startup 
+  %panel.lang
 
   50 sound.setvolume
   "startup.mod" findfile dup .undef ne {
