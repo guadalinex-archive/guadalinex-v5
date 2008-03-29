@@ -13,8 +13,8 @@ function error()
 }
 
 PKG=$(basename $PWD)
-REVISION=$(svnversion trunk)
-TAG_NAME=${PKG}-v5r${REVISION}
+REVISION=$(svnversion -c trunk | cut -d':' -f 2)
+TAG_NAME=${PKG}-v5r${REVISION/M/}
 
 
 # Update the trunk directory to avoid svnversions with ':'
