@@ -52,7 +52,8 @@ function check_build_depends ()
 cd $SVN_ROOT > /dev/null
 svn up 
 [ "$?" != "0" ] && echo " * * * * * Problems updating repository * * * * *" && exit 1
-REPO_VERSION=$(svnversion .)
+REVISION=$(svnversion -c .  | cut -d':' -f 2)
+REPO_VERSION=${REVISION/M/}
 cd - > /dev/null
 
 echo
