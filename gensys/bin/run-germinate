@@ -7,7 +7,7 @@ export CDIMAGE_ROOT="${CDIMAGE_ROOT:-/srv/cdimage.ubuntu.com}"
 
 GERMINATE_OUT="$CDIMAGE_ROOT/scratch/$PROJECT/$IMAGE_TYPE/germinate"
 # set to the empty string instead to use old-style seed checkouts
-GERMINATE_BZR=--bzr
+# GERMINATE_BZR=--bzr
 if [ "$GERMINATE_BZR" ]; then
 #	SEED_SOURCE=http://bazaar.launchpad.net/~ubuntu-core-dev/ubuntu-seeds/
 

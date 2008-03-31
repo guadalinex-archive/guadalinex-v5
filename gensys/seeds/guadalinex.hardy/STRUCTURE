@@ -1,0 +1,19 @@
+include platform.hardy
+desktop: desktop-common
+dns-server: standard
+lamp-server: standard
+openssh-server: standard
+print-server: standard
+samba-server: standard
+postgresql-server: standard
+mail-server: standard
+server-ship: boot dns-server lamp-server openssh-server print-server samba-server postgresql-server mail-server
+ship: boot desktop d-i-requirements
+live: desktop
+dvd-live: live
+ship-live: boot live
+development: desktop
+mobile: minimal
+mobile-dev: mobile
+jeos: minimal
+supported: server-ship ship ship-live development mobile-dev jeos supported-common
