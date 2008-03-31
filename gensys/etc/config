@@ -1,5 +1,11 @@
 #! /bin/sh
 
+# Derivation settings
+export ARCHES="i386"
+export SKIPMIRRORCHECK="yes"
+export DERIVATIVE="guada"
+export LOCAL_SEEDS="file://$CDIMAGE_ROOT/seeds/"
+
 # Settings for building Ubuntu CD images.  The build procedure also involves
 # syncing a local Ubuntu mirror; see etc/anonftpsync for settings affecting what
 # is mirrored and where.

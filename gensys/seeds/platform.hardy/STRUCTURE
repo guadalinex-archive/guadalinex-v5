@@ -1,0 +1,16 @@
+required:
+minimal: required
+boot:
+standard: minimal
+desktop-common: standard
+d-i-requirements: minimal
+installer:
+build-essential: required
+supported-development: standard
+supported-hardware: standard
+supported-installer: standard
+supported-kernel: standard
+supported-network: standard
+supported-misc-servers: standard
+supported-sysadmin: standard
+supported-common: build-essential supported-development supported-hardware supported-installer supported-kernel supported-network supported-misc-servers supported-sysadmin

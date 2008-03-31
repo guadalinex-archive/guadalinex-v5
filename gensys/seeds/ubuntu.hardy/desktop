@@ -1,0 +1,209 @@
+Task-Per-Derivative: 1
+Task-Section: user
+Task-Description: Ubuntu desktop
+Task-Extended-Description: This task provides the Ubuntu desktop environment.
+Task-Key: ubuntu-desktop
+Task-Seeds: desktop-common
+
+= Hardware and Architecture Support =
+
+== Architecture-independent ==
+
+ * (hal-cups-utils) # fully automagic printer configuration
+
+Bluetooth:
+
+ * (bluez-gnome) # desktop bluetooth support
+
+= Network Services =
+
+Basic network services and Windows integration.
+
+ * (avahi-autoipd)     # IPv4 link-local interface configuration support
+ * (network-manager-gnome) # see NetworkRoaming spec
+
+= Printing =
+
+ * cupsys-driver-gutenprint     # a ton of cupsys ppds, for real comprehensive printer support
+
+= GUI infrastructure =
+
+ * xterm                         # Provide a backup terminal and complete X env.
+
+Extra fonts (should be common, but not so for space reasons):
+
+ * (ttf-arphic-uming)
+ * (ttf-unfonts-core)
+
+Input methods:
+
+ * (im-switch)
+ * (scim)
+ * (scim-bridge-agent)
+ * (scim-bridge-client-gtk)
+ * (scim-gtk2-immodule)
+
+= Desktop GNOME Apps =
+
+We've chosen GNOME as our desktop user interface of choice. Rather than using the meta-packages they are deliberately expanded so that we can select things a bit better.
+
+ * (bug-buddy)             # potentially replaced with reportbug + b-b-like pygtk gui
+ * (apport-gtk)
+ * consolekit 
+ * (contact-lookup-applet)
+ * (deskbar-applet)
+ * desktop-file-utils
+ * dcraw 		   # used by f-spot to display RAW images
+ * eog
+ * (evolution)
+ * (evolution-plugins)
+ * (evolution-exchange)
+ * (evolution-webcal)
+ * fast-user-switch-applet
+ * file-roller
+ * (pidgin)
+ * (pidgin-otr)
+ * gcalctool
+ * gconf-editor
+ * gdm
+ * gedit
+ * (gimp)
+ * (gimp-gnomevfs)
+ * gnome-about
+ * gnome-applets
+ * gnome-app-install
+ * (app-install-data-commercial)
+ * (transmission-gtk)       # simple GNOME frontend for bittorrent downloads
+ * gnome-control-center
+ * system-config-printer-gnome
+ * (gnome-games) [!ia64]
+ * gnome-icon-theme
+ * gnome-media
+ * gnome-menus
+ * gnome-netstatus-applet
+ * gnome-nettool            # part of 2.8
+ * gnome-panel
+ * gnome-pilot-conduits
+ * gnome-session
+ * gnome-spell
+ * seahorse
+ * (libpam-gnome-keyring)
+ * gnome-system-monitor     # SebastienBacher
+ * gnome-volume-manager     # JeffWaugh, gives us an efficient autoplay framework
+ * gnome-power-manager		# OliverGrawert finally ready for shipment
+ * gnome-system-tools
+ * gnome-terminal
+ * gnome-utils
+ * (gnome2-user-guide)
+ * (ekiga)
+ * libgnomevfs2-bin
+ * libgnomevfs2-extra
+ * libpt-1.10.10-plugins-v4l       # V4L1 plugins for use with ekiga
+ * libpt-1.10.10-plugins-v4l2      # V4L2 plugins for use with ekiga
+ * gucharmap               # SebastienBacher
+ * hal
+ * hwtest-gtk
+ * language-selector	   # MichaelVogt
+ * metacity                # SebastienBacher
+ * (compiz)		   # compiz is our default WM 'mkay
+ * (firefox)
+ * (firefox-gnome-support)
+ * (ubufox)                # ubuntu firefox tweaks - AlexanderSack
+ * nautilus                # SebastienBacher
+ * nautilus-cd-burner      # SebastienBacher
+ * nautilus-sendto
+ * notification-daemon           # backend for libnotify
+ * (rhythmbox)
+ * (brasero)		   # Oliver Grawert
+ * scrollkeeper
+ * alacarte		   # default menu editor
+ * (sound-juicer)
+ * ssh-askpass-gnome
+ * synaptic                # default GUI package manager
+ * libgnome2-perl          # so that the debconf GNOME frontend can be used from synaptic
+ * software-properties-gtk # default GUI sources.list editor
+ * (tracker)
+ * (libdeskbar-tracker)
+ * (tracker-search-tool)
+ * (totem)
+ * (totem-mozilla)
+ * update-notifier
+ * gdebi                   # view/install deb packages
+ * (vino) # vnc server
+ * yelp
+ * zenity
+ * (xdg-utils)		   # useful utilities
+ * xdg-user-dirs
+ * xdg-user-dirs-gtk
+ * pulseaudio-esound-compat
+ * pulseaudio
+ * (pulseaudio-module-gconf)
+ * (pulseaudio-module-hal)
+
+Themes: we will ship only the very best looking themes. We won't ship everything that Debian ships, just a custom package that includes the themes we want. These packages are included for size guidance until we have Ubuntu-specific packages.
+
+ * gnome-themes
+ * gtk2-engines			# DanielHolbach (gtk2-engines were merged into one package)
+ * gtk2-engines-pixbuf          # Required by some themes the user might install
+ * ubuntu-artwork
+ * ubuntu-sounds
+ * tangerine-icon-theme		# DanielHolbach (Mark's request)
+
+The gstreamer0.10 packages we want to install:
+
+ * gstreamer0.10-alsa
+ * gstreamer0.10-plugins-base-apps
+ * gstreamer0.10-pulseaudio
+
+Accessibility tools:
+
+ * (gnome-accessibility-themes)
+ * (gnome-mag)
+ * (gnome-orca)
+ * (onboard)
+ * (brltty)
+ * (brltty-x11)
+ * (xcursor-themes)
+ * (espeak)
+ * (mousetweaks)
+
+= Other Desktop GUI Apps =
+
+ * (openoffice.org-gnome) [i386 amd64]  # before OOo to avoid openoffice.org-style-default
+ * (openoffice.org-writer) [i386 amd64]
+ * (openoffice.org-calc) [i386 amd64]
+ * (openoffice.org-impress) [i386 amd64]
+ #* (openoffice.org-evolution) [i386 amd64] # pulls in oo.o-base, broken ATM
+ * (xsane)         # scanner utils
+ * evince
+ * (gnome-screensaver) # recommends to allow for xscreensaver to be used
+ * rss-glx         # MRS, very slick screensavers
+ * xscreensaver-gl # MRS, we will only ship a subset of the screensavers from rss-glx and xscreensaver
+ * xscreensaver-data # subset package for the non-gl screensavers we ship
+ * screensaver-default-images
+ * tsclient        # rdesktop/vnc/xdmcp client gui
+ * (vinagre)      # needed by tsclient
+ * (tomboy) [i386 powerpc amd64 ia64 sparc]  # Sebastian Dröge, approved by mdz
+ * (f-spot) [i386 powerpc amd64 ia64 sparc]  # Andrew Mitchell, approved by mdz
+ * (jockey-gtk) # enable non-free graphics and other drivers easily
+ * (displayconfig-gtk)
+
+= Python =
+
+Python is a significant commitment, we will present Python wherever we can.
+
+Python Integrated Applications:
+
+ * gimp-python
+
+Documentation:
+
+ * (diveintopython)
+ * doc-base			# integrates with scrollkeeper
+ * (ubuntu-docs)
+
+= Other =
+
+ * ubuntu-desktop # metapackage for everything here
+ * usplash-theme-ubuntu
+ * (example-content) # dholbach: dapper feature goal (wiki.ubuntu.com/ExampleContent)
