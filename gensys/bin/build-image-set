@@ -76,7 +76,6 @@ case $PROJECT in
 		;;
 	# por el momento no cogemos nada del universe
 	guadalinex)
-		export CDIMAGE_UNSUPPORTED=0
 		;;
 esac
 
