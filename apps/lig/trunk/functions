@@ -1,4 +1,4 @@
-
+#!/bin/sh
 ## Functions ##
 
 # exit with a warning at screen and also on the log files
@@ -31,6 +31,7 @@ Options:
     -b, --debug            Show extra information about the execution of gig
     -c, --clean		   Cleans debootstrap dir and squashfs\' output dir
     -D, --distro	   Select the source Ubuntu version to build
+    -P, --project          Set the project name  
 
 EOF
 
@@ -144,6 +145,9 @@ function menu ()
                     _distro=$2
                     shift && shift
                     ;;
+            -P|--project)
+                    _project=$2
+                    shift && shift
             *) 
                     usage
                     exit 0
@@ -158,13 +162,17 @@ function menu ()
     verbose=${_verbose:-${verbose}}
     debug=${_debug:-${debug}}
     distro=${_distro:-${distro}}
-
+    project=${_project:-${project}}
     if [ -z ${distro} ]
     then 
-        echo "No distro specified"
+        echo "No distro specified ej: -D hardy"
 	exit
+    elif [ -z ${project} ]
+    then
+        echo "No project specified, ej: -P guadalinex"
+        exit
     else
-        live_dir=${live_dir}${distro}"/ubuntu/current/"
+        live_dir=${live_dir}${distro}"/${project}/current/"
     fi
 
     cat <<EOF >&1 | tee -a  $log_file
@@ -445,7 +453,7 @@ EOF
 function create_manifests() {
     #FIXME 
     # livecd.ubuntu.initrd-generic  livecd.ubuntu.kernel-generic 
-    chroot ${sources_dir} dpkg-query -W --showformat='${Package} ${Version}\n' > ${live_dir}livecd.ubuntu.manifest
+    chroot ${sources_dir} dpkg-query -W --showformat='${Package} ${Version}\n' > ${live_dir}livecd.${project}.manifest
 
     log_it "$?" "create manifest"
 
@@ -458,7 +466,7 @@ function create_manifests() {
         echo "/$i/d" >> $filter
     done
     
-    sed -f $filter < ${live_dir}livecd.ubuntu.manifest > ${live_dir}livecd.ubuntu.manifest-desktop 
+    sed -f $filter < ${live_dir}livecd.${project}.manifest > ${live_dir}livecd.${project}.manifest-desktop 
 
     log_it "$?" "create manifest-desktop"
 
@@ -467,10 +475,10 @@ function create_manifests() {
 
 function create_squashfs() {
     
-    if [ -f "${live_dir}livecd.ubuntu.squashfs" ]; then
-        rm -f ${live_dir}livecd.ubuntu.squashfs
+    if [ -f "${live_dir}livecd.${project}.squashfs" ]; then
+        rm -f ${live_dir}livecd.${project}.squashfs
     fi
-    mksquashfs ${sources_dir} ${live_dir}livecd.ubuntu.squashfs || error "create_squashfs"
+    mksquashfs ${sources_dir} ${live_dir}livecd.${project}.squashfs || error "create_squashfs"
 
     log_it "$?" "create squashfs"
 
@@ -478,20 +486,20 @@ function create_squashfs() {
 
 function copy_livecd_files() {
 
-    if [ -f "${live_dir}livecd.ubuntu.initrd-generic" ]; then
-        rm -f ${live_dir}livecd.ubuntu.initrd-generic
+    if [ -f "${live_dir}livecd.${project}.initrd-generic" ]; then
+        rm -f ${live_dir}livecd.${project}.initrd-generic
     fi
     initrd=$(readlink ${sources_dir}/initrd.img)
     test -f "${sources_dir}/${initrd}" || error "${sources_dir}/initrd.img not found"
-    cp ${sources_dir}/${initrd} ${live_dir}/livecd.ubuntu.initrd-generic 
+    cp ${sources_dir}/${initrd} ${live_dir}/livecd.${project}.initrd-generic 
     log_it "$?" "copy initrd"
 
-    if [ -f "${live_dir}/livecd.ubuntu.kernel-generic" ]; then
-    	rm -f ${live_dir}/livecd.ubuntu.kernel-generic
+    if [ -f "${live_dir}/livecd.${project}.kernel-generic" ]; then
+    	rm -f ${live_dir}/livecd.${project}.kernel-generic
     fi
     kernel=$(readlink ${sources_dir}/vmlinuz)
     test -f "${sources_dir}/${kernel}" || error "${sources_dir}/vmlinuz not found"
-    cp ${sources_dir}/${kernel} ${live_dir}/livecd.ubuntu.kernel-generic 
+    cp ${sources_dir}/${kernel} ${live_dir}/livecd.${project}.kernel-generic 
     log_it "$?" "copy kernel"
 
     chmod +r ${live_dir}/*
