@@ -78,10 +78,10 @@ do
         echo " === Going to $x... ==="
         echo
         if [ -d $x/gcs ]; then
-		REVISION=${x##*v5}
+		VERSION=${x##*-}
                 cd $x
                 cp gcs/info gcs/info.back
-                sed -i "s/^version\:.*/version\: v5$REVISION/g" gcs/info
+                sed -i "s/^version\:.*/version\: $VERSION/g" gcs/info
                 gcs_build
                 mv gcs/info.back gcs/info
                 retrieve_debian_files $x/..
