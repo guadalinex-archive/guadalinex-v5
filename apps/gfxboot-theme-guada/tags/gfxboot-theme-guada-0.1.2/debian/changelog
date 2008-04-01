@@ -1,3 +1,10 @@
+gfxboot-theme-guada (0.1.2) hardy; urgency=low
+
+  * Modified in order to not display the language selection.
+  * Set "es" as default language.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Thu, 27 Mar 2008 15:13:24 +0100
+
 gfxboot-theme-guada (0.1.1) hardy; urgency=low
 
   * Fixed mistake with debian files names.
