@@ -1,2 +1,0 @@
-Makefile install/lang langlist *.config *.fnt *.inc *.jpg install/bootlogo.tar.gz usr/share/gfxboot-theme-guada
-po/*.po po/Makefile po/README po/bin usr/share/gfxboot-theme-guada/po
