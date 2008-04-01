@@ -1,4 +1,3 @@
-accesibility-profiles
 acpi
 acpi-support
 acpid
@@ -16,14 +15,12 @@ aspell-es
 audacity
 avahi-daemon
 avidemux
-bb-assist
 bc
 consolekit
 bluefish
 bluetooth
 bluez-cups
 bluez-pcmcia-support
-bluez-pin
 bluez-utils
 brasero
 brltty
@@ -73,7 +70,6 @@ gdm
 gedit
 genisoimage
 gimp
-gimp-print
 gimp-python
 gnochm
 gnome2-user-guide
@@ -103,7 +99,6 @@ gnome-themes
 gnome-utils
 gnome-volume-manager
 gpaint
-grubaker
 gs-esp
 gstreamer0.10-alsa
 gstreamer0.10-plugins-base-apps
@@ -117,7 +112,6 @@ hwtest-gtk
 inkscape
 language-selector
 language-support-es
-lemurae
 lftp
 libbluetooth2
 libgl1-mesa-glx
@@ -125,8 +119,6 @@ libglut3
 libgnome2-perl
 libgnomevfs2-bin
 libgnomevfs2-extra
-libpt-plugins-v4l
-libpt-plugins-v4l2
 libsasl2-modules
 libxp6
 metacity
