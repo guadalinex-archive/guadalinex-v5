@@ -1,0 +1,10 @@
+# Build an LTSP client chroot.
+d-i	mythbuntu-client-builder/run	boolean true
+# Install the Mythbuntu desktop and LTSP server.
+tasksel	tasksel/first	multiselect mythbuntu-desktop
+d-i	pkgsel/include	string mythbuntu-diskless-server-standalone openssh-server
+# No XFCE translation packages yet.
+d-i	pkgsel/install-language-support	boolean false
+d-i	pkgsel/language-pack-patterns	string
+# Build a client chroot.
+d-i	preseed/late_command	string chroot /target /usr/sbin/ltsp-update-sshkeys
