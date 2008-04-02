@@ -2,8 +2,9 @@ Name: ubuntu
 Method: http://gensys/hardy
 Suite: hardy
 Architectures: i386
+FilterList: install paquetescorruptos
 
 Name: guadalinex
-Method: http://gensys/guadalinex
+Method: http://gensys/derivative
 Suite: lobo
 Architectures: i386

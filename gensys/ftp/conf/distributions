@@ -1,7 +1,8 @@
 Codename: lobo
-Components: main restricted
+Components: main restricted universe multiverse
 UDebComponents: main restricted
 Architectures: i386
 Update: - ubuntu guadalinex
 DebOverride: override.lobo.deb
 UDebOverride: override.lobo.udeb
+SignWith: 8CB1684F
