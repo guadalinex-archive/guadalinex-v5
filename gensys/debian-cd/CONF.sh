@@ -119,6 +119,13 @@ case $DIST in
     export DEBVERSION=8.04
     export OFFICIAL="Alpha"
     ;;
+  lobo)
+    export PREV_CODENAME=toro
+    export CODENAME=lobo
+    export CAPCODENAME='Lobo'
+    export DEBVERSION=V5
+    export OFFICIAL="Alpha"
+    ;;
 esac
 
 # By default use Debian installer packages from $CODENAME
