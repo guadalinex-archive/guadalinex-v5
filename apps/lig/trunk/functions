@@ -28,7 +28,7 @@ Options:
     -k, --keep-sources     Keep the sources directory after finish
     -q, --quiet            Don't show any messages
     -v, --verbose          Show information about what is happening to the stdout
-    -b, --debug            Show extra information about the execution of gig
+    -b, --debug            Show extra information about the execution of lig
     -c, --clean		   Cleans debootstrap dir and squashfs\' output dir
     -D, --distro	   Select the source Ubuntu version to build
     -P, --project          Set the project name  
@@ -41,7 +41,7 @@ EOF
 # load the configuration and vars from the conf file
 function load_config ()
 {
-    conffile="/etc/gig/conf"
+    conffile="/etc/lig/conf"
     if [ -f "$conffile" ]; then
         . $conffile
     else
