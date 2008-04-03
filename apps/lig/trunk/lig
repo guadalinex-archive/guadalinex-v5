@@ -19,7 +19,7 @@
 
 
 # load functions from library
-. functions
+. $(dirname $0)/functions
 
 ## Start main program ##
 
