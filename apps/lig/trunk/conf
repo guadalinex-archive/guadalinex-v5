@@ -27,6 +27,8 @@ pre_base_pkgs="language-support-es"
 base_pkgs="linux-image-generic language-pack-gnome-es ubuntu-desktop guadalinex-artwork"
 live_pkgs="casper ubiquity-frontend-gtk ubiquity-ubuntu-artwork xfsprogs jfsutils ntfsprogs discover1 xresprobe laptop-detect gparted"
 
+update_pkgs="" # packages (if any) that will be installed on "lig --update"
+
 #live_pkgs="casper ubiquity-frontend-gtk ubiquity-ubuntu-artwork xfsprogs jfsutils ntfsprogs discover1 xresprobe laptop-detect extrahooks-casper extrahooks-ubiquity gru gparted"
 #base_pkgs="linux-image-generic guadalinex-desktop guadalinex-minimal-conf guadalinex-desktop-conf guadalinex-artwork guadalinex-doc casper ubiquity-frontend-gtk ubiquity-ubuntu-artwork xfsprogs jfsutils ntfsprogs discover1 xresprobe laptop-detect"
 
@@ -42,3 +44,4 @@ keep_sources="no"
 verbose="no"
 quiet="no"
 debug="no"
+update="no"

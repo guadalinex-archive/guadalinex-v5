@@ -36,7 +36,11 @@ if [ "$clean" = "yes" ]; then
     clean
 fi
 
-install_image
+if [ "$update" = "yes" ]; then
+    update_chroot
+else
+    install_image
+fi
 
 bye
 

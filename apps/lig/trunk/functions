@@ -32,6 +32,7 @@ Options:
     -c, --clean		   Cleans debootstrap dir and squashfs\' output dir
     -D, --distro	   Select the source Ubuntu version to build
     -P, --project          Set the project name  
+    -u, --update	   Use current jailed system as base. It does an "upgrade" + an "install update_pkgs"
 
 EOF
 
@@ -141,13 +142,18 @@ function menu ()
                     _debug="yes"
                     shift
                     ;;
-            -D|--distro)
+            -u|--update) 
+                    _update="yes"
+                    shift
+                    ;;
+	    -D|--distro)
                     _distro=$2
                     shift && shift
                     ;;
             -P|--project)
                     _project=$2
                     shift && shift
+		    ;;
             *) 
                     usage
                     exit 0
@@ -163,6 +169,7 @@ function menu ()
     debug=${_debug:-${debug}}
     distro=${_distro:-${distro}}
     project=${_project:-${project}}
+    update=${_update:-${update}}
     if [ -z ${distro} ]
     then 
         echo "No distro specified ej: -D hardy"
@@ -186,6 +193,7 @@ Configuration values:
   quiet?       = $quiet
   verbose?     = $verbose
   debug?       = $debug
+  update?      = $update
 
 EOF
 
@@ -277,6 +285,12 @@ function mount_virtualfs ()
     fi
     mount sysfs-live -t sysfs ${sources_dir}/sys
 
+    if [ ! -d ${sources_dir}/dev/pts ]; then
+        mkdir -p ${sources_dir}/dev/pts
+    fi
+    mount devpts-live -t devpts ${sources_dir}/dev/pts
+
+
 }
 # umount directory mounted with unionfs with the base plus changes
 function umount_virtualfs ()
@@ -285,6 +299,7 @@ function umount_virtualfs ()
 #    awk "/${sources_dir_escaped}// {print \$2};" /proc/mounts | sort -r | xargs umount
     umount sysfs-live
     umount proc-live
+    umount devpts-live
 }
 
 function mount_mirror ()
@@ -312,8 +327,7 @@ function setup_tmp_sources ()
 {
 
     cat <<EOF > ${sources_dir}/etc/apt/sources.list
-deb ${mirror} ${distro} main restricted 
-#deb file:///var/mirror/ubuntu ${distro} main restricted universe multiverse
+deb ${mirror} ${distro} main restricted universe multiverse 
 EOF
 
 }
@@ -344,6 +358,16 @@ function check_dirs ()
     fi 
 
 }
+
+function check_chroot ()
+{
+    if [ $(ls ${sources_dir}|wc -l) -lt 17 ]
+    then
+	    error "sources_dir seems not a complete base system"
+    fi
+}
+
+
 
 # copy the grub and others files into the target grub directory
 function install_files ()
@@ -386,7 +410,7 @@ function install_files ()
         -e "s|^ *BOOTTIME_KMAP_MD5=.*|BOOTTIME_KMAP_MD5=\"\"|" \
         ${sources_dir}/etc/default/console-setup
 
-    log_it "$?" "Force the console-seupt values"
+    log_it "$?" "Force the console-setup values"
 
     #HACK: activate the /etc/shadow because few package need it
     chroot $sources_dir shadowconfig on >&2
@@ -548,6 +572,54 @@ function install_image ()
     update_initramfs || error "update_initramfs"
 
     unfake_daemons || error "unfake_daemons"
+
+#    update_initramfs || error "update_initramfs"
+
+    create_squashfs || error "create_squashfs"
+
+    copy_livecd_files || error "copy_livecd_files"
+}
+
+
+function update_chroot ()
+{
+
+    # check if the jailed system contains at least the necesary
+    # base dirs
+    check_chroot    
+
+    mount_virtualfs || error "mount_virtualfs"
+
+    # sources=sources.list
+    setup_tmp_sources || error "setup_tmp_sources"
+
+    fake_daemons || error "fake_daemons"
+    
+    apt_get update || error "apt_get install"
+
+    apt_get install || error "apt_get install"
+
+    apt_get upgrade || error "apt_get install upgrade"
+
+    apt_get install || error "apt_get install"
+
+    if [ ${update_pkgs} != "" ]
+    then
+	    apt_get install ${update_pkgs} || error "apt_get install update_pkgs"
+	    apt_get install || error "apt_get install"
+    fi
+
+    setup_final_sources || error "setup_final_sources"
+
+    umount_virtualfs # || error "umount_virtualfs"
+    
+    create_manifests || error "create_manifests" 
+    
+    update_initramfs || error "update_initramfs"
+
+    unfake_daemons || error "unfake_daemons"
+
+#    update_initramfs || error "update_initramfs"
 
     create_squashfs || error "create_squashfs"
 
