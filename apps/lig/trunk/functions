@@ -10,7 +10,7 @@ function error ()
 #    umount_union     ; log_it "$?" "Umounted unionfs"
 #    clean_sources_dirs ; log_it "$?" "Unionfs dir cleaned"
 #    umount_base      ; log_it "$?" "Umounted base system"
-    exit
+    exit -1
 }
 
 # how to use the program and the parameter it accepts
