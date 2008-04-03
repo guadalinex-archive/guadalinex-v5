@@ -38,7 +38,7 @@ trap "rm -f $LOCK > /dev/null 2>&1" exit
 
 set +e
 
-reprepro -b $TO update lobo
+reprepro --noskipold -b $TO update lobo
 
 cd $TO
 ./reoverride.sh
