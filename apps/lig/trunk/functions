@@ -220,7 +220,7 @@ EOF
 function apt_get() {
 
     export LC_ALL=es_ES.UTF-8 LANGUAGE=es_ES.UTF-8 LANG=es_ES.UTF-8 DEBIAN_FRONTEND=noninteractive 
-    sudo chroot ${sources_dir} apt-get -f -y --force-yes $*  >&2
+    chroot ${sources_dir} apt-get -f -y --force-yes $*  >&2
     ret="$?"
     log_it "$ret" "apt-get -f -y --force-yes $*"
 
@@ -454,7 +454,7 @@ function do_debootstrap() {
 
     echo debootstrap --components=${components} --exclude=${excluded_pkgs} ${distro} ${sources_dir} ${mirror}
 
-    sudo debootstrap --components=${components} \
+    debootstrap --components=${components} \
     --exclude=${excluded_pkgs} \
     ${distro} ${sources_dir} ${mirror}  >&2
 

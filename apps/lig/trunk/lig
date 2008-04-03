@@ -23,7 +23,7 @@
 
 ## Start main program ##
 
-#must_be_root
+must_be_root
 
 # load the config
 load_config
