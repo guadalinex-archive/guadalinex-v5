@@ -1,0 +1,139 @@
+#!/bin/sh
+## Functions ##
+
+# exit with a warning at screen and also on the log files
+function error ()
+{
+    echo "Error: $*" | tee -a $log_file 
+    exit
+}
+
+# how to use the program and the parameter it accepts
+function usage() {
+    program=$(basename $0)
+    cat <<EOF
+Usage:
+    $program [-D | --distro DISTRONAME] [-P | --project PROJECTNAME] 
+
+Options:
+    -h, --help             Show this help
+    -D, --distro	   Select the source Ubuntu version to build
+    -P, --project          Set the project name  
+    -u, --update	   Pass "--update" to lig
+
+EOF
+
+}
+
+# load the configuration and vars from the conf file
+# NOT IN USE
+function load_config ()
+{
+    conffile="/etc/conf"
+    if [ -f "$conffile" ]; then
+        . $conffile
+    else
+        echo "ERROR: ${conffile} not found"
+        exit
+    fi
+    
+    log_it "$?" "Setting the config"
+    return 0
+}
+
+
+function log_it() {
+
+    code="$1"
+    shift
+    msg="$*"
+    case $code in
+        0)
+            echo "${msg} ($(date +'%b %e %H:%M:%S')): OK" | tee -a $log_file
+            ;;
+        *)
+            echo "${msg} ($(date +'%b %e %H:%M:%S')): Fail" | tee -a $log_file
+            ;;
+    esac
+}
+
+
+
+# parse the options passed to the program
+function menu ()
+{
+    if [ "$#" -gt 0 ]
+    then
+       while [ "$#" -gt 0 ]
+       do
+           case $1 in
+               -h|--help) 
+                       usage
+                       exit 0
+                       ;;
+               -u|--update) 
+                       update=yes 
+                       ;;
+	       -D|--distro)
+                       distro=$2
+                       shift && shift
+                       ;;
+               -P|--project)
+                       project=$2
+                       shift && shift
+   		    ;;
+               *) 
+                       usage
+                       exit 0
+                       ;;
+           esac
+       done
+    else
+	    usage
+	    exit 0
+    fi
+    
+    
+    # setting up the vars values
+   if [ -z ${distro} ]
+    then 
+        echo "No distro specified ej: -D hardy"
+	exit
+    elif [ -z ${project} ]
+    then
+        echo "No project specified, ej: -P guadalinex"
+        exit
+    fi
+
+    cat <<EOF >&1 | tee -a  $log_file
+
+Configuration values:
+  distro       = $distro
+  project      = $project
+
+EOF
+
+
+}
+
+function update_repository ()
+{
+	$CDIMAGE_ROOT/repo-bin/compile-svn || error "compile_svn"
+	$CDIMAGE_ROOT/repo-bin/clean-derivative-repository || error "clean-derivative-repository"
+	$CDIMAGE_ROOT/repo-bin/update-derivative-repository || error "update-derivative-repository"
+}
+
+function create_live_image ()
+{
+	if [ "$update" = "yes" ]
+	then
+		sudo $CDIMAGE_ROOT/lig/lig -D $distro -P $project --update || error "create_live_image (lig)"
+	else
+		sudo $CDIMAGE_ROOT/lig/lig -D $distro -P $project || error "create_live_image (lig)"
+	fi
+}
+
+function create_iso ()
+{
+	$CDIMAGE_ROOT/bin/for-project $project cron.daily-live
+}
