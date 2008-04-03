@@ -14,13 +14,16 @@ export LC_ALL=C
 
 PROJECT="${PROJECT:-ubuntu}"
 CAPPROJECT="${CAPPROJECT:-Ubuntu}"
-DIST="${DIST:-gutsy}"
+DIST="${DIST:-hardy}"
 case $DIST in
 	warty|hoary|breezy|dapper|edgy)
 		ARCHES="${ARCHES:-amd64 i386 powerpc}"
 		;;
 	feisty|gutsy|hardy)
 		ARCHES="${ARCHES:-amd64 i386}"
+		;;
+	lobo)
+		ARCHES="${ARCHES:-i386}"
 		;;
 esac
 CPUARCHES="$(echo "$ARCHES" | xargs -n1 | sed 's/+.*//' | sort -u | xargs)"
