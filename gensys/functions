@@ -121,6 +121,7 @@ function update_repository ()
 	$CDIMAGE_ROOT/repo-bin/compile-svn || error "compile_svn"
 	$CDIMAGE_ROOT/repo-bin/clean-derivative-repository || error "clean-derivative-repository"
 	$CDIMAGE_ROOT/repo-bin/update-derivative-repository || error "update-derivative-repository"
+	$CDIMAGE_ROOT/bin/anonftpsync || error "anonftpsync"
 }
 
 function create_live_image ()
