@@ -45,8 +45,17 @@ live_pkgs="casper casper-guada ubiquity-frontend-gtk ubiquity-ubuntu-artwork xfs
 update_pkgs="" 
 
 
+# final /etc/apt/sources.list
 
+final_sources_list="# junta's repository here
+deb http://archive.ubuntu.com/ubuntu hardy main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu hardy-updates main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu hardy-security main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu hardy-backports main restricted universe multiverse"
 
+#
+# SOME OLD STUFF 
+#
 
 #live_pkgs="casper ubiquity-frontend-gtk ubiquity-ubuntu-artwork xfsprogs jfsutils ntfsprogs discover1 xresprobe laptop-detect extrahooks-casper extrahooks-ubiquity gru gparted"
 #base_pkgs="linux-image-generic guadalinex-desktop guadalinex-minimal-conf guadalinex-desktop-conf guadalinex-artwork guadalinex-doc casper ubiquity-frontend-gtk ubiquity-ubuntu-artwork xfsprogs jfsutils ntfsprogs discover1 xresprobe laptop-detect"

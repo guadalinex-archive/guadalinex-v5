@@ -327,7 +327,7 @@ function setup_tmp_sources ()
 {
 
     cat <<EOF > ${sources_dir}/etc/apt/sources.list
-deb ${mirror} ${distro} ${components//","/" "} 
+deb ${mirror} ${distro} main restricted universe multiverse 
 EOF
 
 }
@@ -337,11 +337,13 @@ function setup_final_sources ()
 
     #FIXME: Take this off to conffile and check the new Junta's mirrors
     cat <<EOF > ${sources_dir}/etc/apt/sources.list
-deb http://archive.ubuntu.com/ubuntu ${distro} main restricted universe multiverse
-deb http://archive.ubuntu.com/ubuntu ${distro}-updates main restricted universe multiverse
-deb http://archive.ubuntu.com/ubuntu ${distro}-security main restricted universe multiverse
-deb http://archive.ubuntu.com/ubuntu ${distro}-backports main restricted universe multiverse
+${final_sources_list}
 EOF
+
+#deb http://archive.ubuntu.com/ubuntu ${distro} main restricted universe multiverse
+#deb http://archive.ubuntu.com/ubuntu ${distro}-updates main restricted universe multiverse
+#deb http://archive.ubuntu.com/ubuntu ${distro}-security main restricted universe multiverse
+#deb http://archive.ubuntu.com/ubuntu ${distro}-backports main restricted universe multiverse
 
 }
 
