@@ -327,7 +327,7 @@ function setup_tmp_sources ()
 {
 
     cat <<EOF > ${sources_dir}/etc/apt/sources.list
-deb ${mirror} ${distro} main restricted universe multiverse 
+deb ${mirror} ${distro} ${components//","/" "} 
 EOF
 
 }

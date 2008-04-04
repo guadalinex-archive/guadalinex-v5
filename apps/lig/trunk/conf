@@ -1,47 +1,58 @@
 ## Define variables
 # logs files
 root_logs="/var/log"
-log_file="${root_logs}/gig-$(date +%Y%m%d%H%M).log"
-current_log_file="${root_logs}/gig.log"
+log_file="${root_logs}/lig-$(date +%Y%m%d%H%M).log"
+current_log_file="${root_logs}/lig.log"
 
 ## directories
-
-## Apt vars
-mirror_dir="/var/mirror/ubuntu"
-#mirror="file://${mirror_dir}"
-mirror="ftp://gensys/ubuntu"
-components="main,restricted"
-#components="main,restricted,universe,multiverse"
-
-
-##################################  From GLIG ###############################################
-
-# Define variables
+CDIMAGE_ROOT=/var/opt/cdimage
 live_dir=$CDIMAGE_ROOT"/ftp/"
-
 sources_dir="/tmp/sources"
-sources_dir_escaped="\/tmp\/sources"
 
-pre_base_pkgs="language-support-es"
+## generation repository vars
 
-base_pkgs="linux-image-generic language-pack-gnome-es ubuntu-desktop guadalinex-artwork"
-live_pkgs="casper ubiquity-frontend-gtk ubiquity-ubuntu-artwork xfsprogs jfsutils ntfsprogs discover1 xresprobe laptop-detect gparted"
+#mirror="file://${mirror_dir}"
+mirror="ftp://192.168.1.208/ubuntu"
 
-update_pkgs="" # packages (if any) that will be installed on "lig --update"
+# this var is used for debootstrap and for the temporal jailed /etc/apt/sources.list
 
-#live_pkgs="casper ubiquity-frontend-gtk ubiquity-ubuntu-artwork xfsprogs jfsutils ntfsprogs discover1 xresprobe laptop-detect extrahooks-casper extrahooks-ubiquity gru gparted"
-#base_pkgs="linux-image-generic guadalinex-desktop guadalinex-minimal-conf guadalinex-desktop-conf guadalinex-artwork guadalinex-doc casper ubiquity-frontend-gtk ubiquity-ubuntu-artwork xfsprogs jfsutils ntfsprogs discover1 xresprobe laptop-detect"
+#components="main,restricted"
+components="main,restricted,universe,multiverse"
 
-excluded_pkgs="guadalinex-minimal-conf,ubuntu-keyring"
-
-# guadalinex-desktop,guadalinex-minimal,guadalinex-desktop-conf,guadalinex-minimal-conf,guadalinex-artwork,guadalinex-doc
-# casper,ubiquity-frontend-gtk,ubiquity-ubuntu-artwork,xfsprogs,jfsutils,ntfsprogs,discover1,xresprobe,laptop-detect
-
-# Parameters vars to default values
+# arguments vars default values
 debootstrap="yes"
 squashfs="yes"
 keep_sources="no"
 verbose="no"
 quiet="no"
 debug="no"
-update="no"
+
+# packages variables
+
+# these packages will be excluded from debootstrap (note that they are separated by commas)
+excluded_pkgs="guadalinex-minimal-conf,ubuntu-keyring"
+
+# these will be the firstly installed packages
+pre_base_pkgs="language-support-es"
+
+# these will be the following (second)
+base_pkgs="linux-image-generic language-pack-gnome-es meta-guadalinex-v5" 
+
+# and these the last ones
+live_pkgs="casper casper-guada ubiquity-frontend-gtk ubiquity-ubuntu-artwork xfsprogs jfsutils ntfsprogs discover1 xresprobe laptop-detect gparted"
+
+# packages (if any) that will be installed on "lig --update"
+update_pkgs="" 
+
+
+
+
+
+#live_pkgs="casper ubiquity-frontend-gtk ubiquity-ubuntu-artwork xfsprogs jfsutils ntfsprogs discover1 xresprobe laptop-detect extrahooks-casper extrahooks-ubiquity gru gparted"
+#base_pkgs="linux-image-generic guadalinex-desktop guadalinex-minimal-conf guadalinex-desktop-conf guadalinex-artwork guadalinex-doc casper ubiquity-frontend-gtk ubiquity-ubuntu-artwork xfsprogs jfsutils ntfsprogs discover1 xresprobe laptop-detect"
+
+
+# guadalinex-desktop,guadalinex-minimal,guadalinex-desktop-conf,guadalinex-minimal-conf,guadalinex-artwork,guadalinex-doc
+# casper,ubiquity-frontend-gtk,ubiquity-ubuntu-artwork,xfsprogs,jfsutils,ntfsprogs,discover1,xresprobe,laptop-detect
+
+
