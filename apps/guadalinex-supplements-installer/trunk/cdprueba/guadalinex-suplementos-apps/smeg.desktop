@@ -1,0 +1,18 @@
+[Desktop Entry]
+Version=0.7.1
+Encoding=UTF-8
+Name=Applications Menu Editor
+Name[ca]=Editor del menú d'aplicacions
+Name[de]=Menü-Editor Anwendungen
+Name[fr]=Éditeur de menu Applications
+Comment=Simple Menu Editor
+Comment[ca]=Editor de menús simple
+Comment[de]=Einfacher Menü-Editor
+Comment[fr]=Simple éditeur de menu
+Exec=smeg
+Icon=gnome-main-menu
+NotShowIn=KDE;
+Terminal=false
+StartupNotify=true
+Type=Application
+Categories=Application;System;

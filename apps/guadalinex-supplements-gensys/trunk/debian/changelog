@@ -1,0 +1,22 @@
+guadalinex-supplement-generator (0.2.1) unstable; urgency=low
+
+  * Initial Guadalinex v5: fixed dependencies
+    for Guadalinex v5.
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Wed, 21 Mar 2007 12:16:42 +0100
+
+guadalinex-supplement-generator (0.2) unstable; urgency=low
+
+  * New release, many bugs fixed.
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Wed, 21 Mar 2007 12:16:42 +0100
+
+guadalinex-supplement-generator (0.1-1) unstable; urgency=low
+
+  [ Gumersindo Coronel Pérez ]
+  * Initial release Closes: #nnnn  (nnnn is the bug number of your ITP)
+  *
+  * 
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Tue, 16 Jan 2007 12:04:16 +0100
+

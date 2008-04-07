@@ -1,0 +1,98 @@
+
+
+==================================
+Estructura de un cd de suplementos
+==================================
+
+dist/
+pool/    ------> Directorios típicos de un repositorio debian
+
+guadalinex-suplementos-apps/ -----> Directorio que contiene los .desktop y el
+                                    application.menu pertenecientes al
+                                    suplemento
+
+README.diskdefines   -----> Fichero que contiene la descripción del suplemento.
+                            Formato:
+
+                            #define DISKNAME Suplemento para Guadalinex ...
+                            #define URI1
+                            #define URI2 http://archive.ubuntu.com/ubuntu main
+                            ...
+
+                            Este fichero debe contener como mínimo:
+
+                                La propiedad DISKNAME
+
+                                La pripiedad URI1. Esta puede ser (la mayoría de
+                                las veces será) vacía. Las URI pueden contener:
+
+                                1) un path relativo al cd del suplemento
+
+                                2) una url indicando el repositorio (rama
+                                incluída)
+
+                                Estas propiedades URI se utilizan para genera el
+                                sources.list que usará el sistema de instalación
+                                de suplementos.
+
+.icon.png   ----->  Opcional. Contiene el icono que aparecerá en el mensaje al
+                    usuario.
+
+
+=====================
+Sistema de generación
+=====================
+
+El sistema de generación de suplementos debe generar una iso con todo lo
+necesario para que el sistema de detección/instalación de suplementos funcione.
+(punto anterior). 
+
+Antes de seguir una nota: un suplemento no será nada más que un meta-paquete con
+dependencias a los paquetes que forman parte del suplemento
+
+A continuación se muestra un listado de los datos que el usuario del sistema de
+generación debe indicar, así como los objetos en los que deriva (entiéndase
+objeto por cualquier cosa lógica, un fichero, etc):
+
+____________________
+Entrada:
+    Directorio con los .deb de los paquetes que forman el suplemento.
+
+Deriva en:
+    - Dependencias del meta-paquete del suplemento.
+    - Repositorio (directorios pool y dist del cd).
+
+____________________
+Entrada:
+    Nombre del suplemento.
+Deriva en:
+    - Nombre del metapaquete. Éste será formado por un nombre genérico (por
+      ejemplo, meta-guadalinex-suplemento-<nombre>).
+    - Propiedad DISKNAME del fichero README.diskdefines del cd.
+
+____________________
+Entrada:
+    Descripción del suplemento.
+Deriva en:
+    - Campo descripción del meta-paquete del suplemento.
+
+____________________
+Entrada (Opcional):
+    Fichero png con el icono.
+Deriva en:
+    - El fichero .icon.png del cd.
+    
+____________________
+Entrada (Opcional):
+    URI1, URI2, ...
+Deriva en:
+    - Entradas correspondientes (URI1, URI2, etc) del fichero README.diskdefines
+      del cd.
+Nota:
+    Se permiten tener todas las URIs que se quiera para añadirlas al
+    sources.list. La única condición es que los nombres de los campos 
+    correspondientes del fichero README.diskdefines _COMIENCEN_ con la palabra
+    URI.
+    
+____________________
+    

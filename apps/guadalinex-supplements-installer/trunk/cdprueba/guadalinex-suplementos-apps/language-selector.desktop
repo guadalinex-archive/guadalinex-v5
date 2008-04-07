@@ -1,0 +1,19 @@
+[Desktop Entry]
+Name=Language Selector
+Name[cs]=Výběr jazyka
+Name[de]=Sprachauswahl
+Name[pt_BR]=Escolha do Idioma
+GenericName=Language Selector
+GenericName[cs]=Výběr jazyka
+GenericName[de]=Sprachauswahl
+GenericName[pt_BR]=Escolha do Idioma
+Comment=Install/remove language support
+Comment[cs]=Instaluj/odeber podporu jazyků
+Comment[de]=Installieren und entfernen von Sprachunterstützung
+Comment[pt_BR]=Instalar/remover suporte a idiomas
+Exec=gksudo /usr/bin/gnome-language-selector
+Icon=language-selector.png
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=Application;System;Settings;

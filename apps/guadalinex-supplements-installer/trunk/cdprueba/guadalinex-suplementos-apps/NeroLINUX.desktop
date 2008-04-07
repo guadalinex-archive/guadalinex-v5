@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=NeroLINUX
+Comment=NeroLINUX CD/DVD burning software
+Terminal=false
+Categories=Application;System;AudioVideo;DiscBurning;X-Red-Hat-Base;X-FedoraApplication;System;X-Red-Hat-Base;X-Fedora
+Exec=/usr/bin/nero
+Icon=/usr/share/nero/pixmaps/nero.png

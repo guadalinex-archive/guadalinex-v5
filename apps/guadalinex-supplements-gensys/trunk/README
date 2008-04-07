@@ -1,0 +1,36 @@
+Este es el sistema de generación de Suplementos para Guadalinex 2005.
+
+Se basa en el uso de dos herramientas: sdg_new y sdg_build
+
+==============================
+Pasos para crear un suplemento
+==============================
+
+1) Creamos un directorio en cualquier lugar del disco duro:
+
+    $> mkdir ~/suple1
+
+2) Desde el directorio recién creado ejecutamos sdg_new:
+
+    $> cd ~/suple1
+    $> gs_new
+
+    Esto crea la estructura básica de configuración para un suplemento.
+
+3) Configuramos el suplemento
+
+    3.1) Editamos el fichero "config" que se encuentra en el directorio. En ese
+    fichero  podemos encontrar información sobre los parámetros a configurar.
+
+    3.2) Copiamos al directorio "debs" todos los paquetes que forman parte del
+    suplemento.
+
+    3.3) Si queremos cambiar la imagen que aparece en el mensaje de aviso al
+    usuario simplemente deberemos modificar el fichero "icon.png" que se
+    encuentra en el directorio.
+
+4) Generamos la imagen del suplemento simplemente ejecutando sdg_build:
+
+    $> gs_build
+
+5) Grabamos la imagen en un CD.

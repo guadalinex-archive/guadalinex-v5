@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Ruby Browser
+GenericName=
+Comment=Browse Ruby Classes and Modules
+Icon=rbbr.xpm
+Exec=rbbr
+Terminal=false
+Categories=Application;Development;

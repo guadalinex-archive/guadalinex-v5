@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Mozilla Composer
+Comment=HTML editor from Mozilla project
+Comment[ru]=Редактор HTML из проекта Mozilla
+Exec=mozilla-suite -edit
+Icon=mozilla-composer.png
+Terminal=false
+Type=Application
+Categories=Application;Network
+StartupNotify=true

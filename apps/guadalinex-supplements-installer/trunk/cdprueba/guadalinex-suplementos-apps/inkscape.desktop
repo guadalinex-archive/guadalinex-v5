@@ -1,0 +1,50 @@
+[Desktop Entry]
+Name=Inkscape SVG Vector Illustrator
+Name[ca]=Il·lustrador vectorial SVG Inkscape
+Name[cs]=Inkscape SVG Vektorový Ilustrátor
+Name[de]=Inkscape SVG-Vektorillustrator
+Name[es]=Inkscape, ilustrador vectorial SVG
+Name[fr]=Illustrateur vectoriel SVG Inkscape
+Name[hu]=Inkscape - vektoros (SVG) rajzoló
+Name[it]=Inkscape Illustratore Vettoriale SVG
+Name[ja]=Inkscape SVGベクトル イラストレータ
+Name[nl]=Inkscape SVG vector illustrator
+Name[nn]=Inkscape SVG-vektorteikneprogram
+Name[pl]=Program do tworzenia ilustracji wektorowych
+Name[pt_BR]=Ilustrador Vetorial em SVG Inkscape 
+Name[ru]=Редактор векторной графики в формате SVG
+Name[sk]=Inkscape SVG Vektorový ilustrátor
+Name[sl]=Ilustrator vektorjev SVG Inkscape
+Name[sr]=Inkscape — програм за векторско цртање
+Name[sr@Latn]=Inkscape — program za vektorsko crtanje
+Name[uk]=Редактор векторної SVG графіки Inkscape
+Comment=Create and edit Scalable Vector Graphics images
+Comment[cs]=Vytvářejte a upravujte vektorovou grafiku(SVG)
+Comment[de]=Skalierbare Vektorgrafiken (SVG) erzeugen und bearbeiten
+Comment[es]=Cree y edite Gráficos Vectoriales Escalables (SVG)
+Comment[fr]=Créer et éditer des images Scalable Vector Graphics
+Comment[hu]=Scalable Vector Graphics (méretezhető vektorgrafika, SVG) képek létrehozása és szerkesztése
+Comment[it]=Crea e modifica immagini Scalable Vector Graphics
+Comment[nl]='Scalable Vector Graphics (SVG) '-tekeningen maken en bewerken
+Comment[nn]=Lag og rediger skalerbare vektorbilete (SVG)
+Comment[pl]=Utwórz i edytuj rysunek wektorowy SVG
+Comment[sl]=Ustvarjaj in urejaj SVG vektorske slike
+Comment[sr]=Прављење и уређивање SVG векторских слика
+Comment[sr@Latn]=Pravljenje i uređivanje SVG vektorskih slika
+Comment[uk]=Створення та редагування векторних графічних зображень
+
+Encoding=UTF-8
+Version=1.0
+
+Type=Application
+Categories=Application;Graphics;VectorGraphics;GTK;
+
+MimeType=image/svg+xml
+
+FilePattern=inkscape
+Exec=inkscape %F
+TryExec=inkscape
+Terminal=false
+StartupNotify=true
+
+Icon=inkscape.png
