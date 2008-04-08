@@ -1,0 +1,13 @@
+Package: guadalinex-supplement-generator
+Version: 0.2
+Architecture: i386
+Maintainer: Junta de Andalucía <packmaster@guadalinex.org>
+Installed-Size: 1276
+Depends: genisoimage, guadalinex-supplement-installer, python (>= 2.4), python-xdg
+Section: unknown
+Priority: optional
+Description: Sistema generador de suplementos para Guadalinex v3.
+ El sistema generador de suplementos para Guadalinex v3 permite generar de
+ forma sencilla un suplemento, que no es más que un conjunto de paquetes
+ extra, con la particularidad de que su instalación resulta sumamente fácil para
+ el usuario final.

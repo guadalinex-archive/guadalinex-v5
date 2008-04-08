@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=BitTorrent
+Comment=Download files with BitTorrent
+Comment[de]=Dateien mit BitTorrent herunterladen
+Comment[fr]=Télécharger des fichiers avec BitTorrent
+Exec=gnome-btdownload
+Terminal=false
+Type=Application
+StartupNotify=true
+Icon=/usr/share/gnome-btdownload/pixmaps/download.png
+Categories=Application;Network;
+MimeType=application/x-bittorrent

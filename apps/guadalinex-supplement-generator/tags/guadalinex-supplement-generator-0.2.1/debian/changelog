@@ -1,0 +1,26 @@
+guadalinex-supplement-generator (0.2.1) lobo; urgency=low
+
+  * Initial Guadalinex v5: fixed dependencies
+    for Guadalinex v5.
+  * Fixed for hard-linking instead of copying every package
+    the 'tmp' dir to the 'master/pool' dir
+  * Changed 'gsg/sources.list.gv4' for 'gsg/sources.list.guada'
+  * Fixed some bugs in 'README' and added some extra info.
+
+ -- Roberto C. Morano Vazquez <rcmorano@emergya.es>  Wed, 21 Mar 2007 12:16:42 +0100
+
+guadalinex-supplement-generator (0.2) unstable; urgency=low
+
+  * New release, many bugs fixed.
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Wed, 21 Mar 2007 12:16:42 +0100
+
+guadalinex-supplement-generator (0.1-1) unstable; urgency=low
+
+  [ Gumersindo Coronel Pérez ]
+  * Initial release Closes: #nnnn  (nnnn is the bug number of your ITP)
+  *
+  * 
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Tue, 16 Jan 2007 12:04:16 +0100
+

@@ -1,0 +1,211 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+"""
+Este script genera una iso con un suplemento para Guadalinex 2005
+"""
+
+import os
+import sys
+import os.path
+import shutil
+import xdg.Menu
+import shutil
+
+sys.path.insert(0, '/usr/share/gsd')
+import gsdutils
+GSGTEMP = '/tmp/guadalinex-supplement-generator/'
+gsdutils.APTCONFPATH = '/usr/share/guadalinex-supplement-generator/apt.conf'
+gsdutils.SOURCESFILE = GSGTEMP + 'sources.list'
+os.environ['APT_CONFIG'] = gsdutils.APTCONFPATH
+
+DISTCODENAME = 'toro'
+DIR = os.path.abspath('./')
+MASTERDIR = DIR + '/master' 
+
+DFOLDER = MASTERDIR + '/guadalinex-suplementos-apps/desktop' 
+APPMENU = 'applications.menu'
+
+os.system('mkdir -p ' + DFOLDER + '/icons')
+
+
+class ConfigParser(dict):
+
+    def __init__(self):
+        dict.__init__(self)
+        
+        #Fill obligatory fields.
+        self['NAME'] = 'Default Name'
+        self['DESC'] = 'Default Description'
+        self['URIS'] = []
+        self.configure()
+
+    def configure(self):
+        objfile = open('./config')
+        for line in objfile.readlines():
+            if not line.strip().startswith('#'):
+                try:
+                    key, value = line.split(None, 1)
+                    if key == 'URI':
+                        self['URIS'].append(value.strip())
+                    else:
+                        self[key] = value.strip()
+                except:
+                    key = line.strip()
+                    if key.startswith('URI'):
+                        self['URIS'].append(' ')
+                    self[key] = ''
+        
+    def get_uris(self):
+        return self['URIS']
+
+
+def generate_pool():
+    PACKAGESDIR = MASTERDIR + '/dists/' + DISTCODENAME + '/main/binary-i386'
+    os.system('mkdir -p ' + PACKAGESDIR)
+    os.system('rm -rf ' + MASTERDIR + '/pool')
+    os.system('mkdir ' + MASTERDIR + '/pool')
+    # hard linking is better in this case
+    #os.system('cp -a ./debs/* ' + MASTERDIR + '/pool')
+    os.system('ln ./debs/* ' + MASTERDIR + '/pool/')
+    
+    os.chdir(MASTERDIR)
+    os.system('rm ' + PACKAGESDIR + '/Packages.gz')
+    os.system('dpkg-scanpackages ./pool /dev/null > ' + PACKAGESDIR + '/Packages')
+    os.chdir('..')
+    os.system('yes | gzip '+ PACKAGESDIR + '/Packages')
+
+
+def add_extra_packages():
+    archives_dir = GSGTEMP + 'var/cache/apt/archives/'
+    archives_in_debs = os.listdir('./debs/')
+    archives_in_debs = [ele for ele in archives_in_debs\
+               if ele.endswith('.deb')]
+
+    archives = os.listdir(archives_dir)
+    new_debs = [ele for ele in archives \
+            if (ele.endswith('.deb')) and \
+                ele not in archives_in_debs]
+    if new_debs:
+        print "####################################"
+        print "WARNING !!!"
+        print "####################################"
+        print "You need to add these extra packages to pool:"
+        for pkg_name in new_debs:
+            print "\t* " + pkg_name
+        res = raw_input("Can I proceed (Y/n)?")
+        if (not res) or (res.lower().strip() == 'y'):
+            for pkg_name in new_debs:
+                shutil.move(archives_dir + '/' + pkg_name, './debs')
+
+
+def check_pool(config):
+    try:
+        if sys.argv[1] == '-s':
+            return
+    except:
+        pass 
+
+    # Prepare system
+    os.system('cp -a /usr/share/guadalinex-supplement-generator /tmp/')
+    sc = gsdutils.SupplementCustomizer(MASTERDIR, as_user = True)
+    sc.customize()
+
+    # Add gv4 repos to sources
+    sources_f = open(gsdutils.SOURCESFILE, 'a')
+    sources_f.write(open(GSGTEMP + '/sources.list.gv4').read())
+    sources_f.close()
+
+    sc.apt_get_update()
+
+    # Simulate supplement installation
+    print "\n\n#########################################"
+    print "Simulation of metapackage installation..."
+    print "#########################################"
+    res = os.system('apt-get -d install ' + config['METAPACKAGE'])
+    if res != 0:
+        print "###########################################"
+        print "ERROR"
+        print "###########################################"
+        print "It's impossible to install " + config['METAPACKAGE']
+        sys.exit(1)
+
+    # Add extra packages to pool
+    add_extra_packages()
+    generate_pool()
+    
+
+def main():
+    config = ConfigParser()
+    # Generate README.diskdefines ###########################
+    objfile = open(MASTERDIR + '/README.diskdefines', 'w') 
+
+    #Default URI objfile.write ('#define URI     \n') 
+    objfile.write ('#define DISKNAME ' + config['NAME'] + '\n') 
+    for ele in config.get_uris():
+        objfile.write('#define URI ' + ele + '\n')
+
+    objfile.close()
+
+    # Generate nice tool.
+    generate_pool()
+    check_pool(config)
+    
+    # Icon 
+    if os.path.isfile('./icon.png'):
+        shutil.copy('./icon.png', MASTERDIR + '/.icon.png')
+        shutil.copy('./icon.png', 
+                MASTERDIR + '/guadalinex-suplementos-apps/icons/icon.png')
+
+    
+    ############################################################################
+    # Step 3: Generate supplement.desktop and applications.menu
+    ############################################################################
+
+    menuentry = xdg.Menu.MenuEntry(DFOLDER + '/supplement.desktop')
+    menuentry.DesktopEntry.set('Name', config['NAME'])
+    menuentry.DesktopEntry.set('Comment', config['DESC'])
+
+    menuentry.DesktopEntry.set('X-AppInstall-Section', 'main')
+    menuentry.DesktopEntry.set('X-AppInstall-Package', config['METAPACKAGE'])
+
+    featured_file = open(DFOLDER + '/featured.txt', 'w')
+
+    featured_file.write(config['METAPACKAGE'] + '\n')
+    featured_file.close()
+
+    menuentry.DesktopEntry.set('Categories', 'Suplementos;')
+    menuentry.DesktopEntry.set('Icon', 'icon')
+    menuentry.DesktopEntry.write(DFOLDER + '/supplement.desktop')
+
+    shutil.copy(APPMENU, DFOLDER)
+
+    for package_name in config['PACKAGES'].split():
+        menufile = DFOLDER + "/%s.desktop" % package_name
+        menuentry = xdg.Menu.MenuEntry(menufile)
+        menuentry.DesktopEntry.set('Name', package_name)
+
+        menuentry.DesktopEntry.set('X-AppInstall-Section', 'main')
+        menuentry.DesktopEntry.set('X-AppInstall-Package', package_name)
+
+        menuentry.DesktopEntry.set('Categories', "Suplementos;%s" % \
+                config['METAPACKAGE'])
+        menuentry.DesktopEntry.set('Icon', package_name)
+        menuentry.DesktopEntry.write(menufile)
+
+        shutil.copy(APPMENU, DFOLDER)
+
+
+    ########################################################################## 
+    # Step 4: Create the iso
+    ########################################################################## 
+
+    cmd = "mkisofs -o guadalinex-suplementos.iso -joliet-long -V"
+    cmd += "GSD-" + config['SHORTNAME'] + ' ' + MASTERDIR
+    print "mkisofs command:", cmd
+    os.system(cmd)
+
+    os.system('rm -rf ' +  GSGTEMP)
+
+if __name__ == "__main__":
+    main()

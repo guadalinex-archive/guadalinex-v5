@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=VMware Workstation
+Comment=Run virtual machines
+Exec=vmware
+Terminal=false
+Type=Application
+Icon=vmware-workstation.png
+StartupNotify=true
+Categories=Application;System;
+X-Desktop-File-Install-Version=0.10
+MimeType=application/x-vmware-vm;application/x-vmware-team;

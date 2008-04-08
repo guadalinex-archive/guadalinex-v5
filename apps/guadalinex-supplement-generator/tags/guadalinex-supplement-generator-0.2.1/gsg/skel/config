@@ -1,0 +1,59 @@
+NAME    Nombre del Suplemento
+SHORTNAME Supl1
+DESC    Descripción del suplemento. 1 línea.
+METAPACKAGE nombre-del-metapaquete
+PACKAGES 
+
+# Repositorios ===================================
+# En blanco para autogenerarse el del cdrom
+URI
+
+
+# Este es el fichero de configuración del suplemento. Aquí se indica todo lo
+# necesario para crear un suplemento.
+
+# El formato de cada línea es el siguiente:
+#
+# VARIABLE valor
+#
+# Para comentarios use #
+#
+#
+# DESCRIPCIÓN DE LAS VARIABLES DISPONIBLES:
+#
+# NAME    Nombre del suplemento
+#
+# SHORTNAME Nombre corto del suplemento. No debe tener más de 8 letras. Es el
+#           que aparece concatenado al nombre de la iso, Por ejemplo:
+#
+#
+#           Guadalinex.suplementos-Juegos1
+#                                  -------
+#                                       |
+#                                       \
+#                                        Valor de SHORTNAME
+#
+# DESC    Descripción del suplemento. 1 línea.
+#
+# METAPACKAGE   Nombre del paquete que instala el suplemento. Hay que especificarlo
+# forzosamente.
+# 
+# PACKAGES  Lista de paquetes (separados por espacios) que se quiere estén
+# disponibles para instalar (además del paquete del suplemento). Esta variable
+# se puede utilizar para crear sub-suplementos. Por ejemplo, puede ser
+# conveniente tener un suplemento para juegos dividido en varios sub-suplementos
+# tales como juegos de estregia, de acción, etc. En  este entorno, tendríamos un
+# meta-paquete "suplementos-juegos" que tenga como dependencia otros
+# metapaquetes (jugos-estrategia, juegos-accion), que estarán disponibles a
+# través de la variable PACKAGES.
+#
+#
+# URI   Dirección del repositorio + rama (main, universe, etc). Si no se usa
+# ningún repositorio, debe aparecer esta opción vacía (por defecto), para que se
+# añada el repositorio que se crea en el cdrom.
+#
+#       Ejemplo: Añadimos el repositorio de breezy
+#
+#       URI   http://archive.ubuntu.com/breezy main universe
+#
+#       Se pueden añadir tantas URIs como se quiera. 

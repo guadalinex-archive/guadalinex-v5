@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=hermesdruid
+GenericName=Hermes druid
+Name[es]=Asistente para Hermes
+Comment=Druid for capture hardware data
+Comment[es]=Asistente para la recogida de datos sobre dispositivos para Hermes.
+Exec=hermesdruid
+Icon=hwbrowser
+Terminal=false
+Type=Application
+Categories=GNOME;Application;System;
+StartupNotify=true

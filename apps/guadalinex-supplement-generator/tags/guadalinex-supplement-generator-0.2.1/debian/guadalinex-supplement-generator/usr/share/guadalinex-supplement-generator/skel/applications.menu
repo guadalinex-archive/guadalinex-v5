@@ -1,0 +1,26 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+ "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+
+<Menu>
+
+  <Name>Applications</Name>
+  <Directory>Applications.directory</Directory>
+
+  <!-- Read standard .directory and .desktop file locations -->
+  <!-- <DefaultAppDirs/> -->
+  <AppDir>.</AppDir>
+
+  <!-- Read in overrides and child menus from applications-merged/ -->
+  <DefaultMergeDirs/>
+
+  <!-- Suplementos -->
+  <Menu>
+    <Name>Suplementos</Name>
+    <Include>
+      <And>
+        <Category>Suplementos</Category>
+      </And>
+    </Include>
+  </Menu> <!-- End Suplementos -->
+
+</Menu> <!-- End Applications -->

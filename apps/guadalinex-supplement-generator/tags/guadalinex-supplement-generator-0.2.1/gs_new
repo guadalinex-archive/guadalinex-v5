@@ -1,0 +1,6 @@
+#!/bin/bash
+
+SDGPATH="/usr/share/guadalinex-supplement-generator/skel"
+
+cp -a $SDGPATH/* .
+

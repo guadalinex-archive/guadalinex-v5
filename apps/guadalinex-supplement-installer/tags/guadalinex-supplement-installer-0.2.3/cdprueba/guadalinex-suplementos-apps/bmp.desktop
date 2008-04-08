@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Beep Media Player
+Comment=Play music
+Exec=beep-media-player
+Icon=bmp.svg
+MimeType=audio/x-scpls;audio/x-mpegurl;audio/mpegurl;audio/mp3;audio/x-mp3;audio/mpeg;audio/x-mpeg;audio/x-wav;application/x-ogg;application/ogg
+Categories=Application;GTK;AudioVideo;Player;
+Terminal=false
+Type=Application
+Encoding=UTF-8

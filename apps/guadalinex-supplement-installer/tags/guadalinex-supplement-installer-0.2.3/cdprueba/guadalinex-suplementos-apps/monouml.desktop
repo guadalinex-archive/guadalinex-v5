@@ -1,0 +1,17 @@
+[Desktop Entry]
+Version=0.1.0
+Encoding=UTF-8
+Name=MonoUML CASE Tool
+Type=Application
+Comment=MonoUML CASE Tool
+#Icon=/home/mario/Projects/MonoUML/monouml/src/IconLibrary/Pixmaps/gnome_icon.png
+#Exec=/home/mario/Projects/MonoUML/monouml/bin/monouml
+#Path=/home/mario/Projects/MonoUML/monouml/bin
+#GenericName[en]=Runs MonoUML
+#GenericName[es]=Ejecutar MonoUML
+Categories=Application;Development;
+Icon=/usr/monouml/icons/gnome_icon.png
+Exec=/usr/bin/monouml
+Path=/usr/bin
+GenericName[en]=Runs MonoUML
+GenericName[es]=Ejecutar MonoUML

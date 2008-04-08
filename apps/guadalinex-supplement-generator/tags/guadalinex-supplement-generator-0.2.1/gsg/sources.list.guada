@@ -1,0 +1,7 @@
+deb http://archive.ubuntu.com/ubuntu edgy main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu edgy-security main restricted universe multiverse
+deb http://v4.guadalinex.org/guadalinex-toro toro main restricted universe multiverse
+deb http://v4.guadalinex.org/guadalinex-toro toro-updates main restricted universe multiverse
+deb http://v4.guadalinex.org/guadalinex-toro toro-security main restricted universe multiverse
+deb http://v4.guadalinex.org/guadalinex-toro toro-backports main restricted universe multiverse
+

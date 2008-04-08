@@ -1,0 +1,6 @@
+usr/bin
+usr/sbin
+usr/share/guadalinex-supplement-generator/var/lib/apt/lists/partial
+usr/share/guadalinex-supplement-generator/var/cache/apt/archives/partial
+usr/share/guadalinex-supplement-generator/skel/debs
+usr/share/guadalinex-supplement-generator/skel/master/guadalinex-suplementos-apps/icons/
