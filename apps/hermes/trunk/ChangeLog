@@ -1,0 +1,18 @@
+2006-11-28  Francisco Javier F. Serrador  <serrador@openshine.com>
+
+	* all: Internacionalización
+
+2006-11-27  Francisco Javier F. Serrador  <serrador@openshine.com>
+
+	* m4/intltool.m4, m4/python.m4: Added customized m4 macros.
+	
+2006-11-27  Francisco Javier F. Serrador  <serrador@openshine.com>
+
+	* po, po/POTFILES.in: Added missing dir.
+
+2006-11-27  Francisco Javier F. Serrador  <serrador@openshine.com>
+
+	* configure.in, ChangeLog, NEWS, AUTHORS, INSTALL: Added files for
+	autotools
+	* hermes_hardware.py: Added Gettext stuff
+
