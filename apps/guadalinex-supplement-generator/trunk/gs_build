@@ -65,7 +65,9 @@ def generate_pool():
     os.system('mkdir -p ' + PACKAGESDIR)
     os.system('rm -rf ' + MASTERDIR + '/pool')
     os.system('mkdir ' + MASTERDIR + '/pool')
-    os.system('cp -a ./debs/* ' + MASTERDIR + '/pool')
+    # hard linking is better in this case
+    #os.system('cp -a ./debs/* ' + MASTERDIR + '/pool')
+    os.system('ln ./debs/* ' + MASTERDIR + '/pool/')
     
     os.chdir(MASTERDIR)
     os.system('rm ' + PACKAGESDIR + '/Packages.gz')

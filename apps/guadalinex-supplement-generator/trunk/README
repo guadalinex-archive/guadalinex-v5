@@ -1,6 +1,17 @@
-Este es el sistema de generación de Suplementos para Guadalinex 2005.
+Este es el sistema de generación de Suplementos para Guadaline.
 
-Se basa en el uso de dos herramientas: sdg_new y sdg_build
+Se basa en el uso de dos herramientas: gs_new y gs_build
+
+==============================
+Configuracion del generador
+==============================
+
+1) Hay que configurar:
+  '/usr/share/guadalinex-supplement-generator/sources.list.guada'
+  Con los repositorios base que usaráel generador de suplementos,
+  (a parte de los URI del 'config' del suplemento en s�).
+
+2) Hay que configurar la variable 'DIST' en '/usr/bin/gs_build'.
 
 ==============================
 Pasos para crear un suplemento
@@ -8,11 +19,11 @@ Pasos para crear un suplemento
 
 1) Creamos un directorio en cualquier lugar del disco duro:
 
-    $> mkdir ~/suple1
+    $> mkdir ~/suplemento1
 
-2) Desde el directorio recién creado ejecutamos sdg_new:
+2) Desde el directorio recién creado ejecutamosgs_new:
 
-    $> cd ~/suple1
+    $> cd ~/suplemento1
     $> gs_new
 
     Esto crea la estructura básica de configuración para un suplemento.
@@ -29,7 +40,7 @@ Pasos para crear un suplemento
     usuario simplemente deberemos modificar el fichero "icon.png" que se
     encuentra en el directorio.
 
-4) Generamos la imagen del suplemento simplemente ejecutando sdg_build:
+4) Generamos la imagen del suplemento simplemente ejecutando gs_build:
 
     $> gs_build
 
