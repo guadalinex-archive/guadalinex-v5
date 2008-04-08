@@ -41,13 +41,10 @@ cupsys
 cupsys-bsd
 cupsys-client
 cupsys-driver-gutenprint
-d4x
 dasher
-dc
 dcraw
 desktop-file-utils
 devede
-dillo
 doc-base
 dvd+rw-tools
 eciadsl
@@ -85,7 +82,6 @@ gnome-accessibility-themes
 gnome-app-install
 gnome-applets
 gnome-bluetooth
-gnome-btdownload
 gnome-control-center
 gnome-icon-theme
 gnome-media
@@ -115,7 +111,6 @@ gtk2-engines
 gucharmap
 hal
 hotkey-setup
-hwtest-gtk
 inkscape
 language-selector
 language-support-es
@@ -129,10 +124,12 @@ libgnomevfs2-extra
 libsasl2-modules
 libxp6
 metacity
+multisync
 nautilus
 nautilus-cd-burner
 nautilus-sendto
 notification-daemon
+onboard
 openjdk-6-jre
 openprinting-ppds
 pnm2ppa
@@ -167,12 +164,12 @@ unzip
 update-notifier
 usplash
 x-ttcidfont-conf
+xchat
 xdg-user-dirs
 xdg-user-dirs-gtk
 xkb-data
 xorg
 xscreensaver-data
-xterm
 yelp
 zenity
 zip
