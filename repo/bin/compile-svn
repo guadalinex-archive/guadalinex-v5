@@ -72,7 +72,7 @@ if [ "$1" != "--force" ]; then
 fi
 
 # Look for all the packages under customize_system, compile it and include and copy to guada-packages.
-for x in $(find ${SVN_ROOT} -name gcs | grep tags | grep -v skel\/gcs | grep -v pkg\/gcs | sed 's/\/gcs$//g')
+for x in $(find ${SVN_ROOT}/metapkgs -name gcs | grep -v skel\/gcs | grep -v pkg\/gcs | sed 's/\/gcs$//g')
 do
         echo
         echo " === Going to $x... ==="
