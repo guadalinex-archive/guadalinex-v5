@@ -78,7 +78,7 @@ do
         echo " === Going to $x... ==="
         echo
         if [ -d $x/gcs ]; then
-		VERSION=${x##*-}
+		VERSION=v5r$REPO_VERSION
                 cd $x
                 cp gcs/info gcs/info.back
                 sed -i "s/^version\:.*/version\: $VERSION/g" gcs/info
