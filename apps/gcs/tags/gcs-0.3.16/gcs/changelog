@@ -1,3 +1,10 @@
+gcs (0.3.16) hardy; urgency=low
+
+  * Added support for desktop files.
+
+ -- Junta de Andalucia <packmaster@guadalinex.org>  Tue, 01 Apr 2008 11:06:19 +0000
+
+
 gcs (0.3.13) edgy; urgency=low
 
   * Added support for desktop files.

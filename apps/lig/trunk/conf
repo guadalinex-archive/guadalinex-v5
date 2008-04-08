@@ -1,57 +1,66 @@
-## Define variables
+# Define variables
 # logs files
-root_logs="/var/log"
-log_file="${root_logs}/lig-$(date +%Y%m%d%H%M).log"
-current_log_file="${root_logs}/lig.log"
+root_logs="/var/log" 
+log_file="${root_logs}/lig-$(date +%Y%m%d%H%M).log" 
+current_log_file="${root_logs}/lig.log" 
 
 ## directories
+# these is where the gensys is installed
 CDIMAGE_ROOT=/var/opt/cdimage
-live_dir=$CDIMAGE_ROOT"/ftp/"
-sources_dir="/tmp/sources"
+
+# dir where squashfs file should be dropped for the gensys
+live_dir=$CDIMAGE_ROOT"/ftp/" 
+
+# dir where the live system will be jailed into
+sources_dir="/tmp/sources" 
 
 ## generation repository vars
 
-#mirror="file://${mirror_dir}"
-mirror="ftp://192.168.1.208/ubuntu"
+#mirror="file://${mirror_dir}" 
+mirror="ftp://192.168.1.208/ubuntu" 
 
-# this var is used for debootstrap and for the temporal jailed /etc/apt/sources.list
+# this var is used for debootstrap and for the temporal /etc/apt/sources.list
+# during the generation.
 
-#components="main,restricted"
-components="main,restricted,universe,multiverse"
+#components="main,restricted" 
+components="main,restricted,universe,multiverse" 
 
 # arguments vars default values
-debootstrap="yes"
-squashfs="yes"
-keep_sources="no"
-verbose="no"
-quiet="no"
-debug="no"
+debootstrap="yes" 
+squashfs="yes" 
+keep_sources="no" 
+verbose="no" 
+quiet="no" 
+debug="no" 
 
 # packages variables
-
-# these packages will be excluded from debootstrap (note that they are separated by commas)
-excluded_pkgs="guadalinex-minimal-conf,ubuntu-keyring"
+#
+# Packages are installed on 3 different stages:
 
 # these will be the firstly installed packages
-pre_base_pkgs="language-support-es"
+pre_base_pkgs="language-support-es" 
 
 # these will be the following (second)
-base_pkgs="linux-image-generic language-pack-gnome-es meta-guadalinex-v5" 
+base_pkgs="linux-image-generic language-pack-gnome-es meta-guadalinex-v5 guadalinex-minimal-conf" 
 
 # and these the last ones
-live_pkgs="casper casper-guada ubiquity-frontend-gtk ubiquity-ubuntu-artwork xfsprogs jfsutils ntfsprogs discover1 xresprobe laptop-detect gparted"
+live_pkgs="casper casper-guada ubiquity-frontend-gtk ubiquity-ubuntu-artwork xfsprogs jfsutils ntfsprogs discover1 xresprobe laptop-detect gparted" 
 
-# packages (if any) that will be installed on "lig --update"
+# packages (if any) that will be installed on "lig --update" 
 update_pkgs="" 
 
+# these packages will be excluded from debootstrap (note that they are separated by commas)
+excluded_pkgs="ubuntu-keyring" 
 
-# final /etc/apt/sources.list
+# final /etc/apt/sources.list for the live system
 
 final_sources_list="# junta's repository here
 deb http://archive.ubuntu.com/ubuntu hardy main restricted universe multiverse
 deb http://archive.ubuntu.com/ubuntu hardy-updates main restricted universe multiverse
 deb http://archive.ubuntu.com/ubuntu hardy-security main restricted universe multiverse
-deb http://archive.ubuntu.com/ubuntu hardy-backports main restricted universe multiverse"
+deb http://archive.ubuntu.com/ubuntu hardy-backports main restricted universe multiverse" 
+
+
 
 #
 # SOME OLD STUFF 
