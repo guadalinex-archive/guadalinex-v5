@@ -1,3 +1,10 @@
+hermeshardware (0.4.3) lobo; urgency=low
+
+  * Initial Guadalinex v5 version: fixed some dependences to make it work
+    with gv5.
+
+ -- Roberto C. Morano Vazquez <rcmorano@emergya.es>  Wed, 14 Nov 2007 12:27:12 +0200
+
 hermeshardware (0.4.2) feisty; urgency=low
 
   * Added checking for the automount medias Gconf key at the cdrommount.py
