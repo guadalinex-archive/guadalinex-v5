@@ -1,0 +1,27 @@
+#!/bin/bash
+LOCK_DIR=~/.movistar_desktop
+LOCK_FILE=$LOCK_DIR/escritoriom.lock
+
+echo $LOCK_FILE
+[ -d $LOCK_DIR ] || mkdir $LOCK_DIR
+if [ -f $LOCK_FILE ] ; then
+  # the lock file already exists, so what to do?
+  if [ "$(ps -p `cat $LOCK_FILE` | wc -l)" -gt 1 ]; then
+    # process is still running copy 
+    if [ $# -ge 1 ]; then    
+	cp "$1"  ~/.movistar_desktop/import
+    fi
+    exit 0
+  else
+    # process not running, but lock file not deleted?
+    echo " $0: orphan lock file warning. Lock file deleted."
+    rm $LOCK_FILE
+  fi
+fi
+if [ $# -ge 1 ]; then
+    cp "$1"  ~/.movistar_desktop/import
+fi
+
+
+LANG=es_ES.UTF-8 /usr/bin/python @prefix@/bin/MSDesktop.py $@ > /dev/null 
+rm $LOCK_FILE

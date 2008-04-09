@@ -1,0 +1,592 @@
+/*=(===============================================================)*/
+
+/*=(===============================================================)*/
+/*=(Created with RoboEditor.)=======================================*/
+/*=(===============================================================)*/
+
+/* CSS Document */
+BODY {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	width: 1000px;
+	background-color: #ffffff;
+	color: #000000;
+}
+
+h5 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h5 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+/***/
+.Izq {
+	width: 20%;
+	border: 1px #999999 solid;
+	float: left;
+	position: relative;
+	padding: 5px 5px 5px 10px;
+}
+/*height:500px;*/
+	
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+/***/
+LI.kadov-CIzq {
+}
+/*height:500px;*/
+	
+/*}}end!kadov=======================================================*/ 
+
+
+
+.Der {
+	width: 73%;
+	float: left;
+	position: relative;
+	padding: 5px 5px 5px 15px;
+}
+/*height:500px;*/
+	
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-CDer {
+}
+/*height:500px;*/
+	
+/*}}end!kadov=======================================================*/ 
+
+
+
+.Der a.estasEn {
+	background-color: #EFEFEF;
+	color: #000099;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+.Der a.estasEn:hover {
+	background-color: #EFEFEF;
+	color: #000099;
+	x-text-underline: normal;
+	/*begin!kadov{{*/ text-decoration: underline; /*}}end!kadov*/ 
+}
+
+.CabeceraMarcas {
+	width: 100%;
+	background-image: url("../img/portadap.jpg");
+	background-position: right;
+	background-position: top;
+	background-repeat: no-repeat;
+	height: 95px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-CCabeceraMarcas {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+.VolverArriba {
+	color: #248EE0;
+	text-align: right;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-CVolverArriba {
+	color: #248EE0;
+	text-align: right;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+.Titulo {
+	background-color: #ffffff;
+	color: #000099;
+	text-align: center;
+	font-size: 16px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-CTitulo {
+	color: #000099;
+	text-align: center;
+	font-size: 16px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+.TituloPrincipal {
+	background-color: #ffffff;
+	color: #000099;
+	text-align: center;
+	font-size: 16px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-CTituloPrincipal {
+	color: #000099;
+	text-align: center;
+	font-size: 16px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+.Enlaces a {
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+.Enlaces a:hover {
+	x-text-underline: normal; /*}}end!kadov*/
+}
+
+.Enlaces a.Nivel1 {
+	background-color: #ffffff;
+	color: #000055;
+	font-weight: bold;
+}
+
+.Enlaces a.Nivel1:visited {
+	background-color: #ffffff;
+	color: #000055;
+	font-weight: bold;
+}
+
+.Nivel1Seleccionado {
+	padding: 5px 0px 5px 0px;
+	background-color: #000099;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-CNivel1Seleccionado {
+	color: #ffffff;
+	font-weight: bold;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+.Nivel1Seleccionado a {
+	background-color: #000099;
+	color: #ffffff;
+}
+
+.Nivel1Seleccionado a:hover {
+	background-color: #000099;
+	color: #ffffff;
+}
+
+.Nivel1Seleccionado a:visited {
+	background-color: #000099;
+	color: #ffffff;
+}
+
+.Enlaces a.Nivel2 {
+	background-color: #ffffff;
+	color: #0000ff;
+	padding: 0px 0px 0px 10px;
+}
+
+.Nivel2Seleccionado {
+	padding: 5px 0px 5px 10px;
+	background-color: #000099;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-CNivel2Seleccionado {
+	color: #ffffff;
+	font-weight: bold;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+.Nivel2Seleccionado a {
+	background-color: #000099;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.Nivel2Seleccionado a:hover {
+	background-color: #000099;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.Enlaces img {
+	border: 0px #ffffff solid;
+	padding: 0px 5px 0px 0px;
+}
+
+.BarraSuperior {
+	text-align: left;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	background-color: #EFEFEF;
+	color: #666666;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+/*border: 1px #666666 solid;*/
+	
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-CBarraSuperior {
+	text-align: left;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	color: #666666;
+	text-decoration: none none none;
+}
+/*border: 1px #666666 solid;*/
+	
+/*}}end!kadov=======================================================*/ 
+
+
+
+.BarraSuperior a {
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	background-color: #EFEFEF;
+	color: #0000ff;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+.BarraSuperior a:hover {
+	x-text-underline: normal; /*}}end!kadov*/
+}
+
+.BarraSuperior p {
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	background-color: #EFEFEF;
+	color: #0000ff;
+	text-align: right;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+.BarraSuperior LI.kadov-p {
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	color: #0000ff;
+	text-align: right;
+	text-decoration: none none none;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+.SigAnt {
+	background-color: #E8F2FF;
+	color: #000000;
+	text-align: right;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin: 0px 0px 10px 0px;
+}
+/*border: 1px #666666 solid;*/
+	
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-CSigAnt {
+	color: #000000;
+	text-align: right;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+/*border: 1px #666666 solid;*/
+	
+/*}}end!kadov=======================================================*/ 
+
+
+
+.SigAnt a:hover {
+	x-text-underline: normal;
+	/*begin!kadov{{*/ text-decoration: underline; /*}}end!kadov*/ 
+}
+
+.SigAnt a {
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	background-color: #E8F2FF;
+	color: #0000ff;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+.Contenido {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: justify;
+	margin: 5px 5px 5px 5px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-CContenido {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: justify;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+.Contenido table {
+	padding: 0px 0px 10px 0px;
+	text-align: center;
+	margin: auto;
+}
+
+.Contenido td {
+	border: 1px #000000 solid;
+	width: 300px;
+}
+
+.Contenido tr {
+	border: 1px #000000 solid;
+}
+
+.Contenido th {
+	border: 1px #000000 solid;
+	font-weight: bold;
+	color: #000000;
+	background-color: #EFEFEF;
+	width: 300px;
+}
+
+.Contenido caption {
+	padding: 0px 0px 7px 0px;
+	font-weight: bold;
+	margin: auto;
+}
+
+.Contenido img {
+	border: 0px #000000 solid;
+	padding: 7px 0px 5px 0px;
+	display: block;
+	margin: auto;
+}
+
+.glosarioLetra {
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: center;
+	color: #000000;
+	background-color: #0099FF;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-CglosarioLetra {
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: center;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+.Contenido ul {
+	list-style-type: disc;
+}
+
+#Importante {
+	border: 2px #333333 double;
+	background-color: #EEEEEE;
+	color: #000000;
+	margin: 10px 5px 10px 5px;
+	padding: 5px 5px 5px 5px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-IImportante {
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+.centrado {
+	text-align: center;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-Ccentrado {
+	text-align: center;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+.piePagina {
+	width: 100%;
+	height: 50px;
+	position: relative;
+	float: left;
+	text-align: center;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-CpiePagina {
+	text-align: center;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+.MensajesCorporativos a {
+	text-align: center;
+	background-color: #ffffff;
+	color: #999999;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+.MensajesCorporativos a:hover {
+	x-text-underline: normal;
+	/*begin!kadov{{*/ text-decoration: underline; /*}}end!kadov*/ 
+}
+
+.MensajesCorporativos p {
+	text-align: center;
+	background-color: #ffffff;
+	color: #999999;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	text-indent: 2px;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+.MensajesCorporativos LI.kadov-p {
+	text-align: center;
+	color: #999999;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	text-indent: 2px;
+	text-decoration: none none none;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+.separador {
+	height: 1px;
+	background-color: #666666;
+	color: #000000;
+	margin: 10px 0px 0px 0px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-Cseparador {
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.SigAnt {
+	font-family: Verdana, sans-serif;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CSigAnt {
+	font-family: Verdana, sans-serif;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+
+/*=(===============================================================)*/

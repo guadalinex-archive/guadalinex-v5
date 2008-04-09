@@ -1,0 +1,15 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+[encoding: UTF-8]
+data/mobile-manager/mm_puk_dialog.glade
+data/mobile-manager/mm_pin_dialog.glade
+data/mobile-manager/mm_carrier_dialog.glade
+data/mobile-manager/mm_menu_at_options.glade
+data/mobile-manager/mm_devices_conf.glade
+src/mobilemanager/ui/MobileTrafficGraph.py
+src/mobilemanager/ui/MobileDeviceConf.py
+src/mobilemanager/ui/MobilePinDialog.py
+src/mobilemanager/ui/MobileCarrierDialog.py
+src/mobilemanager/ui/MobileATOptionsButton.py
+src/mobilemanager/ui/MobilePukDialog.py
+src/mobilemanager/MobileDeviceSerial.py

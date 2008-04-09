@@ -1,0 +1,13 @@
+SUBSYSTEM!="usb_device", GOTO="huawei_rules_end"
+ACTION!="add", GOTO="huawei_rules_end"
+
+ATTRS{idProduct}=="1003", ATTRS{idVendor}=="12d1", RUN+="/usr/sbin/huaweiAktBbo1003"
+ATTRS{idProduct}=="1003", ATTRS{idVendor}=="12d1", RUN+="/bin/sleep 5"
+ATTRS{idProduct}=="1003", ATTRS{idVendor}=="12d1", RUN+="/sbin/modprobe usbserial vendor=0x12d1 product=0x1003"
+
+
+ATTRS{idProduct}=="1004", ATTRS{idVendor}=="12d1", RUN+="/usr/sbin/huaweiAktBbo1004"
+ATTRS{idProduct}=="1004", ATTRS{idVendor}=="12d1", RUN+="/bin/sleep 5"
+ATTRS{idProduct}=="1004", ATTRS{idVendor}=="12d1", RUN+="/sbin/modprobe usbserial vendor=0x12d1 product=0x1004"
+
+LABEL="huawei_rules_end"
