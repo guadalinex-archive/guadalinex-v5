@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Icon=/usr/share/pixmaps/amigu/icon_paginacion.png
+Name=Asistente de Migración (AMIGU)
+Comment= Asistente de migración de Guadalinex
+Exec=/usr/bin/amigu
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Application;Utility
+StartupNotify=false

@@ -1,0 +1,79 @@
+version 0.1:
++ detect windows partitions and existing users
++ read saved information in the windows registry using the external program 'dumphive'
+	(http://www.mirkes.de/en/delphi/samples/dumphive.php)
++ copy files located in 'My documents' and 'Desktop' folder
++ support for MSN messenger accounts
++ support for YAHOO! messenger accounts
++ support for GATLK (Jabber) messenger accounts
++ support for AOL messenger accounts
++ support for OUTLOOK Express mail accounts
++ support for MS OFFICE OUTLOOK mail accounts
++ support for Mozilla-Thunderbird configuration (only mail accounts at the moment)
++ import 'Favorites' from IExplorer to Mozilla-Firefox
++ import 'Bookmarks' from IExplorer to Mozilla-Firefox
++ import IM accounts to aMSN (only MSN accounts)
++ import IM accounts to Kopete
++ import IM accounts to Gaim
+
+version 0.2:
++ support for KMAIL
++ support for EVOLUTION using 'gconftool'
++ better support for SSL accounts
+
+version 0.3:
++ better use of temporary file names
++ check free space on target directory
++ support for Opera
++ fixed bugs importing bookmarks
++ added multithread mode (serial and parallel)--> more stability
++ import eMule configuration and temporary files to aMule
++ import and set de Wallpaper used in Windows (uses gconftool for GNOME or dcop for KDE)
+
+version 0.4:
++ import Fonts
++ set adecuated permissión to copied files
++ import Thunderbird profile from Windows before configure it
+New inner distribution based in classes and heritance of classes:
++ replaced 'firefox.py' library for 'webbrowser.py' library that includes support for Konqueror
++ replaced 'outlookmail.py' library for 'mail.py' library
++ replaced 'winregistry.py' library for 'registry.py' library 
++ replaced 'documents.py' library for 'folder.py' library 
++ added 'computer.py' library
++ removed 'auxtools.py' library
+
+version 0.4.1:
++ fixed bug copying files
++ fixed bug configuring aMule
+
+version 0.4.2:
++ fixed bug detecting mounted partitions
+
+version 0.5:
++ fixed bug asociating several mount-points
++ added fuction to get information about users' settings and installed software
++ fixe bug copying files from eMule
++ added support for convert .pst files (saved mails in Outlook) using 'libpst'
+	(http://alioth.debian.org/projects/libpst/)
++ import mails only from IMAP accounts of Outlook to Evolution
+
+version 0.5.2:
++ fixed bug creatin Incoming and Temp folder of aMule
++ replaced image title
++ added autoselection of options
+
+version 0.5.3:
++ added support for Outlook Express mailboxes
++ added support for Windows Live Messenger accounts
++ support for case sensitives filesystems
++ added error dialog if the application crashs
++ added support for amsn
++ fixed bug if Outlook is not installed
++ added detail information about the process
+
+version 0.6:
++ new visual aspect
++ added about dialog
++ added hyperlink to the developer's web (also in the Desktop)
++ added suppport for units mounted with fuse (ntfs write support)
++ support for internationalitation

@@ -1,0 +1,47 @@
+amigu (0.6.3-2) unstable; urgency=low
+
+  * Removed statically-linked binary dumphive.
+  * Added dumphive dependency.
+
+ -- Junta de Andalucía <packmaster@guadalinex.org>  Mon, 25 Jun 2007 12:54:47 +0200
+
+amigu (0.6.3-1) unstable; urgency=low
+
+  * Some bugs fixed in the debian package.
+  * Changed maintainer to packmaster of the universe.
+
+ -- Junta de Andalucía <packmaster@guadalinex.org>  Mon, 25 Jun 2007 12:40:47 +0200
+
+amigu (0.6.3) unstable; urgency=low
+
+  * Fixed bug for system without configured Outlook Express
+  * Fixed bug migrating Thunderbird profile
+  * Fixed bug that tried to read unmounted partitions
+  * Verified compatibility with Iceweasel and Icedove in Debian
+
+ -- fernando <fruiz@cassfa.com>  Thu, 17 May 2007 10:20:21 +0200
+
+amigu (0.6.2) unstable; urgency=low
+
+  * Added support for Outlook Address Book
+
+ -- fernando <fruiz@cassfa.com>  Thu, 12 Apr 2007 09:38:51 +0200
+
+amigu (0.6.1-1) unstable; urgency=low
+
+  * Added multilingual support
+
+ -- fernando <fruiz@cassfa.com>  Mon, 26 Mar 2007 16:38:51 +0200
+
+amigu (0.6-2) unstable; urgency=low
+
+  * Revision
+
+ -- fernando <fruiz@cassfa.com>  Mon, 26 Mar 2007 16:38:51 +0200
+
+
+amigu (0.6-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- fernando <fruiz@cassfa.com>  Mon, 26 Mar 2007 16:38:51 +0200

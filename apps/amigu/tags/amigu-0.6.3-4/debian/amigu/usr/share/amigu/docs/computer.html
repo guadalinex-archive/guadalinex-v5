@@ -1,0 +1,171 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module computer</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>computer</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/fernando/Desktop/paquetes/amigu-0.6/computer.py">/home/fernando/Desktop/paquetes/amigu-0.6/computer.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;-*-&nbsp;coding:&nbsp;utf-8&nbsp;-*-</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="computer.html">computer</a><br>
+<a href="copy.html">copy</a><br>
+<a href="mail.html">mail</a><br>
+</td><td width="25%" valign=top><a href="messenger.html">messenger</a><br>
+<a href="os.html">os</a><br>
+<a href="re.html">re</a><br>
+</td><td width="25%" valign=top><a href="registry.html">registry</a><br>
+<a href="settings.html">settings</a><br>
+<a href="shutil.html">shutil</a><br>
+</td><td width="25%" valign=top><a href="webbrowser.html">webbrowser</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="computer.html#pc">pc</a>
+</font></dt><dt><font face="helvetica, arial"><a href="registry.html#winregistry">registry.winregistry</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="computer.html#MSwindow">MSwindow</a>
+</font></dt><dt><font face="helvetica, arial"><a href="computer.html#user">user</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MSwindow">class <strong>MSwindow</strong></a>(<a href="registry.html#winregistry">registry.winregistry</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Clase&nbsp;para&nbsp;el&nbsp;manejo&nbsp;de&nbsp;la&nbsp;informacion&nbsp;del&nbsp;Sistema&nbsp;Operativo&nbsp;Windows<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="MSwindow-__init__"><strong>__init__</strong></a>(self, path)</dt><dd><tt>Constructor&nbsp;de&nbsp;la&nbsp;clase.<br>
+Recibe&nbsp;la&nbsp;partición&nbsp;donde&nbsp;existe&nbsp;un&nbsp;Windows&nbsp;instalado</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="registry.html#winregistry">registry.winregistry</a>:<br>
+<dl><dt><a name="MSwindow-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Borra&nbsp;el&nbsp;archivo&nbsp;temporal&nbsp;del&nbsp;registro</tt></dd></dl>
+
+<dl><dt><a name="MSwindow-error"><strong>error</strong></a>(self, e)</dt><dd><tt>Alamacena&nbsp;los&nbsp;errores&nbsp;en&nbsp;tiempo&nbsp;de&nbsp;ejecución</tt></dd></dl>
+
+<dl><dt><a name="MSwindow-get_AOL_accounts"><strong>get_AOL_accounts</strong></a>(self)</dt><dd><tt>Devuelve&nbsp;una&nbsp;lista&nbsp;con&nbsp;los&nbsp;usuarios&nbsp;de&nbsp;AOL&nbsp;Instant&nbsp;Messenger</tt></dd></dl>
+
+<dl><dt><a name="MSwindow-get_GTALK_account"><strong>get_GTALK_account</strong></a>(self)</dt><dd><tt>Devuelve&nbsp;el&nbsp;identificador&nbsp;usado&nbsp;en&nbsp;Gtalk</tt></dd></dl>
+
+<dl><dt><a name="MSwindow-get_MSN_account"><strong>get_MSN_account</strong></a>(self)</dt><dd><tt>Devuelve&nbsp;la&nbsp;cuenta&nbsp;asociada&nbsp;a&nbsp;MSNMessenger</tt></dd></dl>
+
+<dl><dt><a name="MSwindow-get_OUTLOOK_account"><strong>get_OUTLOOK_account</strong></a>(self, num)</dt><dd><tt>Devuelve&nbsp;la&nbsp;configuración&nbsp;de&nbsp;la&nbsp;cuenta&nbsp;de&nbsp;Outlook&nbsp;que&nbsp;se&nbsp;le&nbsp;indica</tt></dd></dl>
+
+<dl><dt><a name="MSwindow-get_OUTLOOKexpress_account"><strong>get_OUTLOOKexpress_account</strong></a>(self, num)</dt><dd><tt>Devuelve&nbsp;la&nbsp;configuración&nbsp;de&nbsp;la&nbsp;cuenta&nbsp;de&nbsp;OutlookExpress&nbsp;que&nbsp;se&nbsp;le&nbsp;indica</tt></dd></dl>
+
+<dl><dt><a name="MSwindow-get_YAHOO_account"><strong>get_YAHOO_account</strong></a>(self)</dt><dd><tt>Devuelve&nbsp;el&nbsp;identificador&nbsp;usado&nbsp;en&nbsp;Yahoo!&nbsp;Messneger</tt></dd></dl>
+
+<dl><dt><a name="MSwindow-get_user_folders"><strong>get_user_folders</strong></a>(self)</dt><dd><tt>Devuelve&nbsp;las&nbsp;carpetas&nbsp;de&nbsp;archivos,&nbsp;confifguraciones&nbsp;y&nbsp;programas&nbsp;del&nbsp;usuario</tt></dd></dl>
+
+<dl><dt><a name="MSwindow-num_OUTLOOK_accounts"><strong>num_OUTLOOK_accounts</strong></a>(self)</dt><dd><tt>Devuelve&nbsp;el&nbsp;número&nbsp;de&nbsp;cuentas&nbsp;de&nbsp;Outlook&nbsp;y&nbsp;OutlookExpress&nbsp;(por&nbsp;ese&nbsp;orden)&nbsp;que&nbsp;están&nbsp;almacenadas&nbsp;en&nbsp;el&nbsp;registro</tt></dd></dl>
+
+<dl><dt><a name="MSwindow-search_key"><strong>search_key</strong></a>(self, key)</dt><dd><tt>Busca&nbsp;la&nbsp;clave&nbsp;en&nbsp;el&nbsp;registro&nbsp;de&nbsp;Windows.<br>
+Devuelve&nbsp;un&nbsp;diccionario&nbsp;con&nbsp;los&nbsp;valores&nbsp;de&nbsp;la&nbsp;clave</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="pc">class <strong>pc</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Clase&nbsp;para&nbsp;el&nbsp;manejo&nbsp;de&nbsp;particiones&nbsp;del&nbsp;PC<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="pc-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Constructor&nbsp;de&nbsp;la&nbsp;clase</tt></dd></dl>
+
+<dl><dt><a name="pc-error"><strong>error</strong></a>(self, e)</dt><dd><tt>Almacena&nbsp;los&nbsp;errores&nbsp;en&nbsp;tiempo&nbsp;de&nbsp;ejecución</tt></dd></dl>
+
+<dl><dt><a name="pc-get_win_users"><strong>get_win_users</strong></a>(self)</dt><dd><tt>Devuelve&nbsp;una&nbsp;lista&nbsp;con&nbsp;la&nbsp;ruta&nbsp;a&nbsp;las&nbsp;carpetas&nbsp;de&nbsp;los&nbsp;usuarios&nbsp;de&nbsp;Windows</tt></dd></dl>
+
+<dl><dt><a name="pc-get_windows"><strong>get_windows</strong></a>(self)</dt><dd><tt>Devuelve&nbsp;las&nbsp;particiones&nbsp;que&nbsp;contienen&nbsp;un&nbsp;Sistema&nbsp;Operativo&nbsp;Windows&nbsp;instalado</tt></dd></dl>
+
+<dl><dt><a name="pc-mount_win_parts"><strong>mount_win_parts</strong></a>(self)</dt><dd><tt>Busca&nbsp;particiones&nbsp;Windows&nbsp;(ntfs&nbsp;y&nbsp;vfat)&nbsp;no&nbsp;montadas&nbsp;en&nbsp;el&nbsp;sistema&nbsp;para&nbsp;intentar&nbsp;montarlas</tt></dd></dl>
+
+<dl><dt><a name="pc-search_win_parts"><strong>search_win_parts</strong></a>(self)</dt><dd><tt>Busca&nbsp;particiones&nbsp;Windows&nbsp;montadas&nbsp;en&nbsp;el&nbsp;sistema.<br>
+Devuelve&nbsp;uan&nbsp;lista&nbsp;con&nbsp;los&nbsp;puntos&nbsp;de&nbsp;montaje&nbsp;de&nbsp;las&nbsp;particiones&nbsp;ntfs&nbsp;y&nbsp;vfat&nbsp;montadas</tt></dd></dl>
+
+<dl><dt><a name="pc-search_win_users"><strong>search_win_users</strong></a>(self)</dt><dd><tt>Busca&nbsp;posibles&nbsp;usuarios&nbsp;de&nbsp;Windows&nbsp;en&nbsp;la&nbsp;particiones&nbsp;detectadas</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="user">class <strong>user</strong></a>(<a href="registry.html#winregistry">registry.winregistry</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Clase&nbsp;para&nbsp;los&nbsp;usuarios&nbsp;de&nbsp;Windows<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="user-__init__"><strong>__init__</strong></a>(self, path)</dt><dd><tt>Constructor&nbsp;de&nbsp;la&nbsp;clase.<br>
+Recibe&nbsp;la&nbsp;ruta&nbsp;a&nbsp;la&nbsp;carpeta&nbsp;del&nbsp;usuario&nbsp;de&nbsp;Windows</tt></dd></dl>
+
+<dl><dt><a name="user-all_errors"><strong>all_errors</strong></a>(self)</dt><dd><tt>Recopila&nbsp;los&nbsp;errores&nbsp;producidos&nbsp;en&nbsp;tiempo&nbsp;de&nbsp;ejecuccion</tt></dd></dl>
+
+<dl><dt><a name="user-config_aMule"><strong>config_aMule</strong></a>(self)</dt><dd><tt>Configura&nbsp;el&nbsp;programa&nbsp;de&nbsp;P2P&nbsp;aMule&nbsp;con&nbsp;la&nbsp;configuración&nbsp;del&nbsp;programa&nbsp;eMule&nbsp;en&nbsp;Windows</tt></dd></dl>
+
+<dl><dt><a name="user-get_incoming_path"><strong>get_incoming_path</strong></a>(self)</dt><dd><tt>Devuelve&nbsp;la&nbsp;ruta&nbsp;del&nbsp;directorio&nbsp;de&nbsp;descargas</tt></dd></dl>
+
+<dl><dt><a name="user-get_info"><strong>get_info</strong></a>(self)</dt><dd><tt>Devuelve&nbsp;la&nbsp;información&nbsp;de&nbsp;archivos&nbsp;y&nbsp;programas&nbsp;del&nbsp;usuario</tt></dd></dl>
+
+<dl><dt><a name="user-get_messenger_accounts"><strong>get_messenger_accounts</strong></a>(self)</dt><dd><tt>Devuelve&nbsp;las&nbsp;cuentas&nbsp;de&nbsp;mensajería&nbsp;de&nbsp;Windows&nbsp;Live&nbsp;Messenger</tt></dd></dl>
+
+<dl><dt><a name="user-get_name"><strong>get_name</strong></a>(self)</dt><dd><tt>Devuelve&nbsp;el&nbsp;nombre&nbsp;del&nbsp;usuario&nbsp;de&nbsp;Windows</tt></dd></dl>
+
+<dl><dt><a name="user-get_path"><strong>get_path</strong></a>(self)</dt><dd><tt>Devuelve&nbsp;la&nbsp;carpeta&nbsp;del&nbsp;usuario</tt></dd></dl>
+
+<dl><dt><a name="user-get_personal_folder"><strong>get_personal_folder</strong></a>(self)</dt><dd><tt>Devuelve&nbsp;las&nbsp;carpetas&nbsp;personales&nbsp;y&nbsp;de&nbsp;configuración&nbsp;del&nbsp;usuario</tt></dd></dl>
+
+<dl><dt><a name="user-get_temp_path"><strong>get_temp_path</strong></a>(self)</dt><dd><tt>Devuelve&nbsp;la&nbsp;ruta&nbsp;del&nbsp;directorio&nbsp;de&nbsp;temporales</tt></dd></dl>
+
+<dl><dt><a name="user-import_eMule_files"><strong>import_eMule_files</strong></a>(self)</dt><dd><tt>Importa&nbsp;los&nbsp;archivos&nbsp;descargados&nbsp;con&nbsp;eMule</tt></dd></dl>
+
+<dl><dt><a name="user-import_eMule_temp"><strong>import_eMule_temp</strong></a>(self)</dt><dd><tt>Importa&nbsp;los&nbsp;archivos&nbsp;temporales&nbsp;con&nbsp;eMule</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="registry.html#winregistry">registry.winregistry</a>:<br>
+<dl><dt><a name="user-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Borra&nbsp;el&nbsp;archivo&nbsp;temporal&nbsp;del&nbsp;registro</tt></dd></dl>
+
+<dl><dt><a name="user-error"><strong>error</strong></a>(self, e)</dt><dd><tt>Alamacena&nbsp;los&nbsp;errores&nbsp;en&nbsp;tiempo&nbsp;de&nbsp;ejecución</tt></dd></dl>
+
+<dl><dt><a name="user-get_AOL_accounts"><strong>get_AOL_accounts</strong></a>(self)</dt><dd><tt>Devuelve&nbsp;una&nbsp;lista&nbsp;con&nbsp;los&nbsp;usuarios&nbsp;de&nbsp;AOL&nbsp;Instant&nbsp;Messenger</tt></dd></dl>
+
+<dl><dt><a name="user-get_GTALK_account"><strong>get_GTALK_account</strong></a>(self)</dt><dd><tt>Devuelve&nbsp;el&nbsp;identificador&nbsp;usado&nbsp;en&nbsp;Gtalk</tt></dd></dl>
+
+<dl><dt><a name="user-get_MSN_account"><strong>get_MSN_account</strong></a>(self)</dt><dd><tt>Devuelve&nbsp;la&nbsp;cuenta&nbsp;asociada&nbsp;a&nbsp;MSNMessenger</tt></dd></dl>
+
+<dl><dt><a name="user-get_OUTLOOK_account"><strong>get_OUTLOOK_account</strong></a>(self, num)</dt><dd><tt>Devuelve&nbsp;la&nbsp;configuración&nbsp;de&nbsp;la&nbsp;cuenta&nbsp;de&nbsp;Outlook&nbsp;que&nbsp;se&nbsp;le&nbsp;indica</tt></dd></dl>
+
+<dl><dt><a name="user-get_OUTLOOKexpress_account"><strong>get_OUTLOOKexpress_account</strong></a>(self, num)</dt><dd><tt>Devuelve&nbsp;la&nbsp;configuración&nbsp;de&nbsp;la&nbsp;cuenta&nbsp;de&nbsp;OutlookExpress&nbsp;que&nbsp;se&nbsp;le&nbsp;indica</tt></dd></dl>
+
+<dl><dt><a name="user-get_YAHOO_account"><strong>get_YAHOO_account</strong></a>(self)</dt><dd><tt>Devuelve&nbsp;el&nbsp;identificador&nbsp;usado&nbsp;en&nbsp;Yahoo!&nbsp;Messneger</tt></dd></dl>
+
+<dl><dt><a name="user-get_user_folders"><strong>get_user_folders</strong></a>(self)</dt><dd><tt>Devuelve&nbsp;las&nbsp;carpetas&nbsp;de&nbsp;archivos,&nbsp;confifguraciones&nbsp;y&nbsp;programas&nbsp;del&nbsp;usuario</tt></dd></dl>
+
+<dl><dt><a name="user-num_OUTLOOK_accounts"><strong>num_OUTLOOK_accounts</strong></a>(self)</dt><dd><tt>Devuelve&nbsp;el&nbsp;número&nbsp;de&nbsp;cuentas&nbsp;de&nbsp;Outlook&nbsp;y&nbsp;OutlookExpress&nbsp;(por&nbsp;ese&nbsp;orden)&nbsp;que&nbsp;están&nbsp;almacenadas&nbsp;en&nbsp;el&nbsp;registro</tt></dd></dl>
+
+<dl><dt><a name="user-search_key"><strong>search_key</strong></a>(self, key)</dt><dd><tt>Busca&nbsp;la&nbsp;clave&nbsp;en&nbsp;el&nbsp;registro&nbsp;de&nbsp;Windows.<br>
+Devuelve&nbsp;un&nbsp;diccionario&nbsp;con&nbsp;los&nbsp;valores&nbsp;de&nbsp;la&nbsp;clave</tt></dd></dl>
+
+</td></tr></table></td></tr></table>
+</body></html>

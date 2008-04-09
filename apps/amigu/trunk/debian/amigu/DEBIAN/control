@@ -1,0 +1,12 @@
+Package: amigu
+Version: 0.6.3-2
+Section: utils
+Priority: extra
+Architecture: i386
+Depends: python (>= 2.4.2), python-gtk2 (>= 2.8), gconf2 (>= 2.12.0), gksu, python-gnome2, dumphive
+Installed-Size: 656
+Maintainer: Junta de Andalucía <packmaster@guadalinex.org>
+Description: Asistente de migracion a Guadalinex
+ Amigu es un asistente para la migración de archivos y configuraciones
+ desde sistemas Windows 2000/XP a Guadalinex. Actualmente no soporta
+ Windows Vista.
