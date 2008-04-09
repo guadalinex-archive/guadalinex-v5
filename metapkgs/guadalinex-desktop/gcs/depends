@@ -63,7 +63,6 @@ foomatic-db-engine
 foomatic-db-hpijs
 foomatic-filters
 fortune-mod
-f-spot
 #g3g
 gcalctool
 gcc
@@ -73,7 +72,6 @@ gdm
 gedit
 genisoimage
 gimp
-gimp-python
 gnochm
 gnome2-user-guide
 gnome-about
@@ -187,6 +185,7 @@ tangerine-icon-theme
 tango-icon-theme
 tango-icon-theme-common
 totem
+transmission-gtk
 tsclient
 ttf-bitstream-vera
 ttf-dejavu-core
