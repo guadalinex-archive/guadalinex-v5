@@ -1,0 +1,14 @@
+Source: g3g
+Section: net
+Priority: optional
+Maintainer: David Teyssiere Rubio <dteyssiere@emergya.es>
+Build-Depends: debhelper (>> 3.0.0)
+Standards-Version: 3.7.2
+
+Package: g3g
+Architecture: i386
+Depends: vodafone-mobile-connect-card-driver-for-linux
+Conflicts: vodafone-mobile-connect-driver-linux
+Description: Asistente para conexión con dispositivos móviles 
+ Con este asistente usted podrá lanzar los programas y configuraciones
+ necesarias dependiendo del operador con el que realize su conexión 3g

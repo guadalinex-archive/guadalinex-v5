@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Asistente para conexión móvil 3G
+Name[es]=Asistente para conexión móvil 3G
+Exec=/usr/share/g3g/g3g
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=Application;Network;
+Icon=/usr/share/pixmaps/g3g.png

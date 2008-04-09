@@ -1,0 +1,14 @@
+g3g (1.0.1) edgy; urgency=low
+
+  * Añadido campo Conflicts en el fichero de control de debian para forzar la
+    desinstalación de la versión anterior del paquete
+
+ --  <rmartin@emergya.es>  Fri, 23 Mar 2007 13:34:30 +0100
+
+g3g (1.0) edgy; urgency=low
+
+  * Primera versión.
+
+ -- nombre del autor <dteyssiere@emergya.es>  Mon, 19 Feb 2007 10:07:24 -0000
+
+

@@ -1,0 +1,46 @@
+#!/usr/bin/make -f
+
+export DH_ALWAYS_EXCLUDE=.svn
+
+build:
+
+clean:
+	dh_testdir
+	dh_testroot
+	dh_clean
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+	dh_install g3g usr/share/g3g
+	dh_install soportados usr/share/g3g
+	dh_install g3g.desktop usr/share/applications
+	dh_install g3g.png usr/share/pixmaps
+
+
+
+binary-indep:  build install
+
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installdebconf
+	dh_installdocs
+	dh_installcron
+	dh_installchangelogs
+	dh_installdirs
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_builddeb
+
+binary: binary-indep binary-arch
+
+.PHONY: build clean install binary binary-indep binary-arch
+
+

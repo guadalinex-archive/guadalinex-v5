@@ -1,0 +1,51 @@
+#!/bin/bash
+
+CONFFILE="/usr/share/g3g/soportados"
+CONT=0
+SELECTED="${HOME}/.g3g"
+USERGROUPS=`id`
+
+if [[ ! "$USERGROUPS" =~ "dialout" ]];then
+   if [[ "$USERGROUPS" =~ "\(admin\)" ]];then
+      gksudo -m "Es necesario que pertenezca al grupo \"dialout\", introduzca la clave de administrador para hacerlo. Tenga en cuenta que sin esto no podrá utilizar sus dispositivos 3G" adduser $USERNAME dialout
+      if [[ `grep dialout /etc/group` =~ "$USERNAME" ]];then
+         zenity --height=300 --info --text "Se añadió al grupo dialout, reinicie su sesión para que los cambios tengan efecto"
+         exit 0
+      else
+         zenity --height=300 --info --text "Lo sentimos pero hasta que no pertenezca al grupo \"dialout\" no podrá usar su dispositivo 3G"
+         exit 1
+      fi 
+   else
+      zenity --height=300 --info --text "Debe contactar con el administrador del sistema para que le añada al grupo 'dialout', sin esto no podra realizar conexiones 3G"
+      exit 1
+   fi
+fi
+      
+if [ -f "$CONFFILE" ]; then
+    for a in `awk {'print $1'} $CONFFILE`;do
+        OPERATORS[$CONT]="FALSE $a"
+        CONT=$(expr ${CONT} + 1)
+    done
+else
+    echo "No existe el fichero \"soportados\" en /usr/share/g3g"
+    exit 1
+fi
+
+if [ -e "$SELECTED" ]; then
+   SEL=`cat $SELECTED`
+   for i in `seq 0 ${#OPERATORS[@]}`;do
+       if [ "${OPERATORS[$i]}" = "FALSE $SEL" ];then
+          OPERATORS[$i]="TRUE ${OPERATORS[$i]#FALSE}"
+       fi
+   done
+fi
+
+SELECTION=`zenity --height=300 --window-icon=/usr/share/pixmaps/g3g.png --list --radiolist --title="Asistente para conexión 3G" --text="Actualmente existe soporte en Guadalinex para los siguientes operadores.\n Seleccione el suyo para lanzar el programa apropiado" --column="" --column="OPERADORES" ${OPERATORS[@]}`
+
+if [ -z "$SELECTION" ];then
+    exit 1
+else
+    echo $SELECTION > ~/.g3g
+    COMMAND=`grep $SELECTION $CONFFILE|cut -f2`
+    exec $COMMAND
+fi
