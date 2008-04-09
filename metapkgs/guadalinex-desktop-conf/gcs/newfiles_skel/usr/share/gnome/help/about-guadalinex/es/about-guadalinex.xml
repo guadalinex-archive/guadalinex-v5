@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+	"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % globalent SYSTEM "../../../libs/global.ent">
+%globalent;
+<!ENTITY % cdo-C SYSTEM "../../../libs/cdo-C.ent">
+%cdo-C;
+<!ENTITY % gnome-menus-es SYSTEM "../../libs/gnome-menus-es.ent">
+%gnome-menus-es;
+<!ENTITY language "&EnglishAmerican;">
+<!ENTITY language "en">
+]>
+<?db.chunk.max_depth 0?>
+<?yelp:chunk-depth 0?>
+<article id="art-about-ubuntu" status="complete" lang="es">
+<articleinfo>
+  <title>Guadalinex</title>
+	<legalnotice id="Credits-And-License">
+	    <title>Créditos y Licencia</title>
+	    <para>Los siguientes autores del Equipo de Documentación de Ubuntu le dan mantenimiento a este documento:</para>
+		 <itemizedlist>
+			<listitem>
+		    <para>Matthew East</para>
+			</listitem>
+		 </itemizedlist>
+	    <para>Las siguientes personas han contribuido a este documento:</para>
+		 <itemizedlist>
+			<listitem>
+		    <para>Mark Shuttleworth</para>
+			</listitem>
+			<listitem>
+		    <para>Robert Stoffers</para>
+			</listitem>
+			<listitem>
+		    <para>Jerome Gotangco</para>
+			</listitem>
+			<listitem>
+		    <para>Brian Burger</para>
+			</listitem>
+		</itemizedlist>
+	    <para>Este documento está disponible bajo una estrategia de doble licencia que incluye la Licencia de Documentación Libre GNU (GFDL) y la Licencia Creative Commons ShareAlike 2.0 (CC-BY-SA).</para>
+	    <para>Usted es libre de modificar, extender y mejorar el código fuente de la documentación de Ubuntu bajo los términos de estas licencias. Todos los trabajos que deriven de éste deben ser liberados bajo alguna o ambas de estas licencias.</para>
+	    <para>Esta documentación se distribuye con la intención de que resulte de utilidad, pero SIN NINGÚN TIPO DE GARANTÍA, ni siquiera la garantía implícita de COMERCIALIZACIÓN o de que SEA ADECUADA PARA UN PROPÓSITO PARTICULAR, TAL Y COMO SE INDICA EN LA CLÁUSULA DE EXENCIÓN DE RESPONSABILIDAD.</para>
+	    <para>Hay copias disponibles de estas licencias en la sección de apéndices de este libro. Las versiones en línea se pueden conseguir en las siguientes direcciones:</para>
+	    <itemizedlist>
+	        <listitem>
+	            <para>&fdl-url;</para>
+	        </listitem>
+	        <listitem>
+	            <para>&cc-attrib;</para>
+	        </listitem>
+	    </itemizedlist>
+	</legalnotice>
+        &copyright;<copyright><year>2006</year><holder>Carlos A. Mota Gámez (karlozmota@gmail.com)</holder></copyright>
+	<authorgroup>
+		&author-ubuntu-documentation-project;
+	</authorgroup>
+        <abstract>
+            <para>Este documento es una introducción a Ubuntu. Explica la filosofía de Ubuntu y sus raíces, proporciona información sobre cómo contribuir con Ubuntu, y muestra cómo conseguir ayuda con Ubuntu.</para>
+        </abstract>
+        &disclaimer;
+        &publisher;
+  </articleinfo>
+    <para>
+        <inlinemediaobject>
+            <imageobject>
+                <imagedata fileref="../../libs/img/ubuntuheader.png" format="PNG"/>
+            </imageobject>
+  <textobject>
+    <phrase>Logotipo de Ubuntu</phrase>
+  </textobject>
+        </inlinemediaobject>
+    </para>
+            <para>Gracias por su interés en Ubuntu &distro-rev; - la <emphasis>&distro-version;</emphasis> - lanzada en &distro-release-date;.</para> 
+		<para>Ubuntu es un sistema operativo enteramente de fuente abierta construído alrededor del núcleo de <emphasis>Linux</emphasis>. La comunidad Ubuntu es construída sobre los ideales enraizados en la <ulink url="&ubuntu-philosophy;">Filosofía Ubuntu</ulink>: que el software debe estar disponible libre de cargos, que las herramientas de software deben ser usables por la gente en su lengua local y a pesar de cualquier inhabilidad, y esa gente debe tener la libertad para personalizar y para alterar su software en cualquier manera que ella vea conveniente. Por esas razones: <itemizedlist>
+                    <listitem>
+                        <para>Ubuntu siempre será gratuito, y no habrá un coste adicional para la «edición empresarial»; hacemos que lo mejor de nuestro trabajo esté disponible para todos bajo los mismos términos de libertad.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Ubuntu usa lo mejor en infraestructura de traducciones y accesibilidad que la comunidad del Software Libre es capaz de ofrecer, para hacer que Ubuntu sea utilizable por el mayor número de personas posible.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Ubuntu se publica se manera regular y predecible; se publica una nueva versión cada seis meses. Puede usar la versión estable actual o ayudar a mejorar la versión actualmente en desarrollo.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Ubuntu está totalmente comprometido con los principios del desarrollo de software de código abierto; animamos a la gente a utilizar software de código abierto, a mejorarlo y a compartirlo.</para>
+                    </listitem>
+                </itemizedlist></para>
+		<para>Más información en <ulink url="&ubuntu-web;">la página web de Ubuntu</ulink>.</para>
+
+            <sect1 id="about-ubuntu-name" status="complete">
+                    <title>Sobre el nombre</title>
+							<para>Ubuntu es una ideología étnica Sud-Africana que se enfoca en las alianzas y relaciones interpersonales. La palabra proviene de las lenguas Zulu y Xhosa. Ubuntu (pronunciado "oo-Bun-Tu" es visto como un concepto Africano tradicional, guardado como uno de los principios fundamentales de la nueva República de África del Sur y está conectado a la idea de un Renacimiento Africano.</para>
+							<para>Una traducción a grandes rasgos del principio de Ubuntu es "humanidad hacia otros". Otra traducción podría ser: "la creencia en un enlace universal de convivencia que conecta a toda la humanidad".</para>
+			<blockquote><attribution>Arzobispo Desmond Tutu</attribution>
+				<para>"Una persona con ubuntu está abierta y disponible para otros, aclarando a otros, no se siente amenazada por la habilidad y bondad de otros, tiene una seguridad propia que viene del saber que el o ella proviene de un gran todo y es disminuida cuando otros son humillados o disminuidos, cuando otros son torturados u oprimidos."</para>
+			</blockquote>
+                    	<para>Como plataforma basada en Linux, el sistema operativo Ubuntu trae el espíritu de ubuntu al mundo del software.</para>
+		</sect1>
+                <sect1 id="free-software" status="complete">
+                    <title>Software Libre</title>
+                    		<para>El proyecto Ubuntu está totalmente basado en los principios del desarrollo de software de código abierto; se anima a que la gente use, mejore y distribuya software de código abierto. Esto significa que Ubuntu es, y siempre será, gratuito.</para>
+                    <para>Sin embargo, esto significa algo más que estar disponible a coste cero. La filosofía del software libre es que la gente pueda usar libremente el software de todas las formas que considere «socialmente útiles». «Software libre» no significa únicamente que no tiene que pagar por él, sino que también supone que podrá usar el software como usted desee: el código que forma el software libre está disponible para poder descargarlo, modificarlo, arreglarlo y usarlo de la manera que se considere conveniente. Por tanto, además del hecho de que el software libre a menudo se puede conseguir sin ningún coste, esta libertad también tiene ventajas técnicas: cuando se desarrollan los programas, puede usarse el duro trabajo de los demás y construir a partir de éste. Con el software no libre, esto no puede ocurrir, y cuando se desarrollan los programas, se tiene que empezar desde cero. Por esta razón, el desarrollo de software libre es rápido, eficiente y excitante.</para>
+			<para>Puedes encontrar más información sobre la filosofía del software libre <ulink url="&gnu-philosophy;">aquí</ulink>.</para>
+                </sect1>
+                <sect1 id="ubuntu-difference" status="complete">
+                    <title>La diferencia</title>
+                    	<para>Hay muchos sistemas operativos distintos basados en Linux: Debian, SuSE, Gentoo, RedHat y Mandriva son algunos ejemplos. Ubuntu es otro competidor más en lo que ya es un mundo altamente competitivo. Así que ¿qué hace a Ubuntu diferente?</para>
+                    	<para>Basado en Debian (una de las distribuciones más aclamadas, tecnológicamente avanzadas y mejor soportadas), Ubuntu pretende crear una distribución que proporcione un sistema Linux actualizado y coherente para la informática de escritorio y servidores. Ubuntu incluye un número de paquetes cuidadosamente seleccionados de la distribución Debian, y mantiene su poderoso sistema de gestión de paquetes, lo que permite de forma fácil la instalación y desinstalación limpia de programas. A diferencia de la mayoría de las distribuciones, que vienen con una enorme cantidad de software que puede o no ser de utilidad, la lista de paquetes de Ubuntu se ha reducido a un número de aplicaciones importantes de alta calidad.</para>
+                    	<para>Con la mirada puesta en la calidad, Ubuntu proporciona un entorno informático robusto y de gran funcionalidad, adecuado para entornos domésticos así como comerciales. El proyecto consume el tiempo que sea necesario en los detalles más finos, y es capaz de publicar una nueva versión con el software más actual y magnífico cada seis meses. Ubuntu está disponible en sabores para las arquitecturas i386 (procesadores 386/486/Pentium(II/III/IV) y Athlon/Duron/Sempron), AMD64 (Athlon64, Opteron y los nuevos procesadores Intel de 64 bits) y PowerPC (iBook/Powerbook, G4 y G5).</para>
+                </sect1>
+                <sect1 id="ubuntu-desktop" status="complete">
+                    <title>El escritorio</title>
+                    	<para>El entorno de escritorio predeterminado en Ubuntu es <ulink url="&gnome;">Gnome</ulink>, una suite líder de escritorio y desarrollo para UNIX y Linux.</para>
+                    	<para>Otro escritorio líder en UNIX y Linux es <ulink url="&kde;">KDE</ulink>. El proyecto <ulink url="&kubuntu-main;">Kubuntu</ulink> ofrece a los usuarios de Ubuntu una opción alternativa al entorno de escritorio predeterminado Gnome. Gracias a los esfuerzos del equipo Kubuntu, los usuarios de Ubuntu pueden instalar y usar el escritorio KDE fácilmente en su sistema. Para conseguir una instalación funcional de Kubuntu en Ubuntu, instale el paquete <application>kubuntu-desktop</application>. Una que vez que kubuntu-desktop está instalado, se puede elegir si usar el entorno de escritorio Gnome o KDE.</para>
+                </sect1>
+                <sect1 id="version-numbers" status="complete">
+                    <title>Números de versión y publicación</title>
+                    	<para>El esquema de numeración de las versiones de Ubuntu está basado en la fecha de lanzamiento de la distribución. El número de versión proviene del año y el mes de lanzamiento, en lugar de reflejar la version del software. Nuestro primer lanzamiento (Warty Warthog) fue en octubre de 2004, por lo que la versión fue la 4.10. Esta versión (&distro-version;) fué lanzada en &distro-release-date; por lo que su número de versión es &distro-rev;.</para>
+                </sect1>
+                <sect1 id="ubuntu-backing-support" status="complete">
+                    <title>Respaldo y Soporte</title>
+                    	<para>Ubuntu se mantiene por una comunidad que crece deprisa. El proyecto está patrocinado por <ulink url="&canonical-url;">Canonical Ltd.</ulink>, una compañía de holding fundada por Mark Shuttleworth. Canonical tiene en nómina a los desarrolladores centrales de Ubuntu y ofrece soporte y servicios de consulta para Ubuntu.</para>
+			<para>Canonical Ltd. también patrocina otros proyectos de software de código abierto (Open Source), sobre los que se puede encontrar más información en <ulink url="&canonical-url;">la página web de Canonical</ulink>.</para>
+                </sect1>
+            <sect1 id="about-linux" status="complete">
+            <title>¿Qué es Linux?</title>
+            <para>El <ulink url="&kernel;">núcleo Linux</ulink> es el corazón del sistema operativo Ubuntu. El núcleo es una parte importante de cualquier sistema operativo, ya que proporciona el canal de comunicación entre el hardware y el software.</para>
+            <para>Linux nació en 1991 gracias a un estudiante finlandés llamado Linus Torvalds. Por aquel entonces sólo funcionaba en sistemas i386, y era esencialmente un clónico del núcleo de UNIX creado de manera independiente, buscando sacar partido a la recién creada arquitectura i386.</para>
+            <para>Hoy en día, gracias a un sustancial aumento en el esfuerzo de desarrollo por parte de personas de todo el mundo, Linux funciona prácticamente en cualquier arquitectura moderna.</para>
+            <para>El núcleo Linux ha ganado una importancia tanto ideológica como técnica. Existe una comunidad entera de personas que creen en los ideales del software libre e invierten su tiempo en ayudar a hacer que la tecnología de código abierto sea tan buena como sea posible.</para>
+            <para>La gente en esta comunidad le da cabida a iniciativas como Ubuntu, comités de estándares que le dan forma al desarrollo de Internet, organizaciones como la Fundación Mozilla, responsables de la creación de Mozilla Firefox, y otros tantos proyectos de software de los cuales ciertamente ha sido usted beneficiado.</para>
+            <para>El espíritu del código abierto, comúnmente atribuido a Linux, está influenciando a desarrolladores de software y a usuarios en todos lados a conducir comunidades con metas comunes.</para>
+        </sect1>
+        <sect1 id="about-gnu" status="complete">
+            <title>¿Qué es GNU?</title>
+            <para>El <emphasis>GNU Project</emphasis> se inició en 1984 con el objetivo de desarrollar un sistema operativo completo tipo UNIX, compuesto enteramente por software libre: el sistema GNU. Hoy día se usan ampliamente muchas variantes del sistema operativo GNU que usan el núcleo Linux.</para>
+            <para>El proyecto GNU está fuertemente unido a la filosofía del software libre, que es central en los proyectos que derivan de él, como Ubuntu. El concepto del software libre se explica en <xref linkend="free-software"/>.</para>
+			</sect1>
+
+</article>
+

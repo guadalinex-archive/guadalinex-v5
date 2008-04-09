@@ -41,6 +41,7 @@ cupsys
 cupsys-bsd
 cupsys-client
 cupsys-driver-gutenprint
+d4x
 dasher
 dcraw
 desktop-file-utils
@@ -101,7 +102,10 @@ gnome-volume-manager
 gpaint
 gs-esp
 gstreamer0.10-alsa
+gstreamer0.10-plugins-bad
+gstreamer0.10-plugins-good
 gstreamer0.10-plugins-base-apps
+gstreamer0.10-plugins-ugly
 gstreamer0.10-pulseaudio
 gthumb
 gtk2-engines
@@ -126,6 +130,7 @@ metacity
 multisync
 nautilus
 nautilus-cd-burner
+nautilus-image-converter
 nautilus-sendto
 notification-daemon
 onboard
