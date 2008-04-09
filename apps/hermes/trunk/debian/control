@@ -3,30 +3,34 @@ Section: utils
 Priority: optional
 Maintainer: Gumersindo Coronel Pérez <gcoronel@emergya.es>
 Build-Depends: debhelper (>= 4.0.0), python-gnome2-dev, python-gtk2-dev, python-all-dev, gnome-common
-Standards-Version: 3.7.2
+Standards-Version: 3.7.3
 
 Package: hermeshardware
 Architecture: any
 Depends: hal, dbus, python2.4-dbus, python, python2.4, notification-daemon, libsane, grepmap, python-syck, hermeshardware-descriptors, hermeshardware-actors, python-gnome2-extras, python-glade2, xsltproc ${shlibs:Depends}, ${misc:Depends}
-Description: detección y soporte de dispositivos
- el sistema de detección de hardware engloba tanto las tareas de detección
- y soporte de dispositivos, como aquellas que tienen que ver con la 
- configuración de los mismos y la interacción con el usuario.
+Description: Detección y soporte de dispositivos
+ Engloba tanto las tareas de detección y soporte de dispositivos, 
+ como aquellas que tienen que ver con la  configuración de los mismos 
+ y la interacción con el usuario.
 
 Package: hermeshardware-actors
 Depends: hermeshardware, ${shlibs:Depends}, ${misc:Depends}
 Architecture: any
-Description: hermeshardware actors set.
- el sistema de detección de hardware engloba tanto las tareas de detección
- y soporte de dispositivos, como aquellas que tienen que ver con la 
- configuración de los mismos y la interacción con el usuario.
+Description: Set de actores Hermes
+ Engloba tanto las tareas de detección y soporte de dispositivos, 
+ como aquellas que tienen que ver con la  configuración de los mismos 
+ y la interacción con el usuario.
+ .
+ Este es el set de actores para el sistema de detección de hardware.
 
 Package: hermeshardware-guada
 Architecture: any
 Depends: hermeshardware
 Conflicts: hermeshardware-kde
 Provides: hermeshardware-descriptors
-Description: Hermes packages selection for GNOME
- el sistema de detección de hardware engloba tanto las tareas de detección
- y soporte de dispositivos, como aquellas que tienen que ver con la 
- configuración de los mismos y la interacción con el usuario.
+Description: Selección de paquetes Hermes para GNOME
+ Engloba tanto las tareas de detección y soporte de dispositivos, 
+ como aquellas que tienen que ver con la  configuración de los mismos 
+ y la interacción con el usuario.
+ .
+ Esta es la selección de paquetes hermes para GNOME.

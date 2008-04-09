@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 #Módulo usbmouse- Módulo que implementa el "actor hardware" para los

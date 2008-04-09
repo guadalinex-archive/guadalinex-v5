@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 #Módulo deviceactor - Módulo que contiene la clase DeviceActor, clase base para

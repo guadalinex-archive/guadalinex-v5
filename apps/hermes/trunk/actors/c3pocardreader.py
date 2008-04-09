@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 #Módulo c3pocardreader- Módulo que implementa el "actor hardware" para los

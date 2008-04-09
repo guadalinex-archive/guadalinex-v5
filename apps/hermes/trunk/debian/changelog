@@ -1,9 +1,17 @@
+hermeshardware (0.4.4) lobo; urgency=low
+
+  * Removed every #!/usr/bin/python from actors and other non-script python
+    files
+  * Fixed some bugs on debian package
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Wed, 9 Apr 2008 12:48:10 +0100
+
 hermeshardware (0.4.3) lobo; urgency=low
 
   * Initial Guadalinex v5 version: fixed some dependences to make it work
     with gv5.
 
- -- Roberto C. Morano Vazquez <rcmorano@emergya.es>  Wed, 14 Nov 2007 12:27:12 +0200
+ -- Roberto C. Morano Vazquez <rcmorano@emergya.es>  Tue, 8 Apr 2008 13:17:20 +0100
 
 hermeshardware (0.4.2) feisty; urgency=low
 
