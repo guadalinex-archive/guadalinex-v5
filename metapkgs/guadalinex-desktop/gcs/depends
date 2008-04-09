@@ -4,6 +4,7 @@ acpi-support
 alacarte
 alsa-base
 alsa-utils
+amigu
 #amigu
 amsn
 amule
@@ -51,6 +52,7 @@ dvd+rw-tools
 eciadsl
 ekiga
 eog
+escritorio-movistar
 evince
 evolution
 evolution-exchange
@@ -64,6 +66,7 @@ foomatic-db-engine
 foomatic-db-hpijs
 foomatic-filters
 fortune-mod
+g3g
 #g3g
 gcalctool
 gcc
@@ -103,8 +106,8 @@ gpaint
 gs-esp
 gstreamer0.10-alsa
 gstreamer0.10-plugins-bad
-gstreamer0.10-plugins-good
 gstreamer0.10-plugins-base-apps
+gstreamer0.10-plugins-good
 gstreamer0.10-plugins-ugly
 gstreamer0.10-pulseaudio
 gthumb
@@ -116,6 +119,7 @@ hotkey-setup
 inkscape
 language-selector
 language-support-es
+lemurae
 lftp
 libbluetooth2
 libgl1-mesa-glx
