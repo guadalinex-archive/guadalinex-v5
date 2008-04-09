@@ -1,0 +1,12 @@
+Source: lemurae
+Section: gnome
+Priority: optional
+Maintainer: Gumersindo Coronel Pérez <goomerko@gmail.com>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.1
+
+Package: lemurae
+Architecture: any
+Depends: python, python-gnome2-extras
+Description: Graphical frontend for DRAE
+ Graphical frontend for DRAE written Python.

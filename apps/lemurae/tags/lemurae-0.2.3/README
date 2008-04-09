@@ -1,0 +1,25 @@
+============
+Dependenciaj
+============
+
+Los siguientes son nombres de paquetes en Ubuntu:
+
+mono
+gtk-cil
+libgtk2.0-cil
+libgecko-cil
+
+========
+Instalar
+========
+
+1) tar zxvf dicrae.tar.gz
+
+Para instalar las dependencias en ubuntu:
+
+2) sudo make depend
+
+3) make
+
+4) sudo make install
+

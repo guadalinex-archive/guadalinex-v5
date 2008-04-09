@@ -1,0 +1,43 @@
+lemurae (0.2.3) hardy; urgency=low
+
+  * Hardy update 
+
+ -- Alfredo Matas <amatas@emergya.es>  Wed, 09 Apr 2008 15:59:32 +0200
+
+lemurae (0.2.2) unstable; urgency=low
+
+  * Added TryIcon. 
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Tue, 20 Feb 2007 16:04:43 +0100
+
+lemurae (0.2.1) unstable; urgency=low
+
+  * Depends updated.
+  * Fixed webcontrol bug locating gtkmozembed library.
+
+ -- Gumersindo Coronel Pérez <goomerko@gmail.com>  Wed, 13 Dec 2006 13:38:21 +0100
+
+lemurae (0.2) unstable; urgency=low
+
+  * Python port. 
+
+ -- Gumersindo Coronel Pérez <goomerko@gmail.com>  Wed, 13 Dec 2006 13:35:55 +0100
+
+lemurae (0.1-3) unstable; urgency=low
+
+  * Added usability features.
+
+ -- Gumersindo Coronel Pérez <goomerko@gmail.com>  Mon, 21 Dec 2005 17:32:03 +0100
+
+lemurae (0.1-2) unstable; urgency=low
+
+  * Fixed LD_LIBRARY_PATH error (gtkembedmoz.so not found) 
+
+ -- Gumersindo Coronel Pérez <goomerko@gmail.com>  Mon, 14 Nov 2005 20:07:38 +0100
+
+lemurae (0.1-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Gumersindo Coronel Pérez <goomerko@gmail.com>  Mon, 14 Nov 2005 17:52:24 +0100
+

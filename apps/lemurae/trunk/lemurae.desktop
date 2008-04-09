@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0.0
+Encoding=UTF-8
+Name=LemuRae
+Name[es]=Buscador DRAE (LemuRae)
+Comment=Tool to search in DRAE
+Comment[es]=Busque en el diccionario de la RAE.
+Exec=lemurae
+Icon=/usr/share/pixmaps/lemurae.svg
+Terminal=false
+Type=Application
+Categories=Application;Utility
+StartupNotify=true
