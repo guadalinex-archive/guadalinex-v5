@@ -4,8 +4,6 @@ acpi-support
 alacarte
 alsa-base
 alsa-utils
-amigu
-#amigu
 amsn
 amule
 amule-utils
@@ -66,8 +64,6 @@ foomatic-db-engine
 foomatic-db-hpijs
 foomatic-filters
 fortune-mod
-g3g
-#g3g
 gcalctool
 gcc
 gconf-editor
