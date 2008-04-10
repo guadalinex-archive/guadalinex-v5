@@ -1,0 +1,23 @@
+2008/03/04 17:40 +0200 [-] Log opened.
+2008/03/04 17:40 +0200 [-] Unhandled error in Deferred:
+2008/03/04 17:40 +0200 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "/usr/lib/python2.5/site-packages/twisted/internet/base.py", line 561, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/usr/lib/python2.5/site-packages/twisted/internet/base.py", line 414, in _continueSystemEvent
+	    callable(*args, **kw)
+	  File "/usr/bin/vmc-cli-client.py", line 84, in start_cli_client
+	    d = hw_reg.get_devices()
+	  File "/usr/lib/python2.5/site-packages/twisted/internet/defer.py", line 677, in unwindGenerator
+	    return _deferGenerator(f(*args, **kwargs), Deferred())
+	--- <exception caught here> ---
+	  File "/usr/lib/python2.5/site-packages/twisted/internet/defer.py", line 576, in _deferGenerator
+	    result = g.next()
+	  File "/usr/lib/python2.5/site-packages/vmc/common/hardware/_unixhardwarereg.py", line 113, in get_devices
+	    yield model; model = model.getResult()
+	  File "/usr/lib/python2.5/site-packages/twisted/internet/defer.py", line 555, in getResult
+	    self.result.raiseException()
+	  File "/usr/lib/python2.5/site-packages/twisted/python/failure.py", line 259, in raiseException
+	    raise self.type, self.value, self.tb
+	serial.serialutil.SerialException: Could not open port: [Errno 16] Device or resource busy: '/dev/noz0'
+	
