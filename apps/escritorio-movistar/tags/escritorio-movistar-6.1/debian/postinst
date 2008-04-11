@@ -35,7 +35,7 @@ case "$1" in
 	/usr/bin/gtk-update-icon-cache -q /usr/share/icons/gnome
 	touch -m /usr/share/icons/hicolor
 	touch -m /usr/share/icons/gnome
-	/etc/init.d/udev reload
+	#/etc/init.d/udev reload
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
