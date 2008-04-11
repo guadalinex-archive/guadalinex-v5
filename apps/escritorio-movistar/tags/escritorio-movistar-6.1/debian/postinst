@@ -25,6 +25,7 @@ case "$1" in
 	    echo "Movistar	/usr/bin/escritorio-movistar" > /usr/share/g3g/soportados
 	    cat /usr/share/g3g/soportados.tmp >> /usr/share/g3g/soportados
 	    rm /usr/share/g3g/soportados.tmp
+            cp /usr/share/applications/escritorio-movistar.desktop /usr/share/escritorio-movistar/escritorio-movistar.desktop
 	    cat /usr/share/escritorio-movistar/escritorio-movistar.desktop | grep -v Categories > /usr/share/applications/escritorio-movistar.desktop
 	fi
 
