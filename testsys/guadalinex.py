@@ -1,14 +1,39 @@
 # -*- coding: utf-8 -*-
 # Configuración útil para master.cfg
 
+############
 # SVN 
+############
+
+# URL del subversion sobre el que hacer polling.
 svn = "file:///var/svn/gv5"
+
+# Tiempo de polling, en segundos, sobre el subversion para detectar cambios.
+polling_time = 3
+
+# Nombre del directorio que contendrá las apps. 
+# Las apps son ramas de subversion con tags y trunk y que se construyen 
+# con debuild. Solo se chequeará la última versión el tag sobre la que se
+# hayan aplicado commits. 
 apps_dir = "apps"
+
+# Nombre del directorio que contendrá los metapkgs.
+# Los metapkgs son ramas de subversion a construir con gcs_build.
 metapkgs_dir = "metapkgs"
+
+# Nombre de la subrama trunk.
 trunk_dir = "trunk"
+
+# Nombre de la subrama tags.
 tags_dir = "tags"
+
+# Nombre de la subrama gcs.
 gcs_dir = "gcs"
 
+# Lista de nombre de las apps. El nombre debe coincidir 
+# con la rama de subversion que contiene la app.
+# La inclusión en esta lista de una nueva app hace que
+# buildbot la gestione automáticamente.
 apps=[
 	"casper-guada", 
 	"gcs", 
@@ -18,6 +43,10 @@ apps=[
 	"usplash-theme-guadalinex"
 ]
 
+# Lista de nombre de los metapkgs. El nombre debe coincidir 
+# con la rama de subversion que contiene el metapkg.
+# La inclusión en esta lista de un nuevo metapkg hace que
+# buildbot la gestione automáticamente.
 metapkgs = [
 	"guadalinex-artwork", 
 	"guadalinex-desktop", 
@@ -29,12 +58,59 @@ metapkgs = [
 	"meta-guadalinex-v5"
 ]
 
-# Build
-app_timer = 5
-metapkg_timer = 5
-genera_iso_timer = 60
-halt_on_lintian_error = 0
-halt_on_unittest_error = 0
 
-# Upload
+############
+# Building 
+############
+
+# Tiempo de cortesía, en segundos,  entre que se detecta un cambio en el último
+# tag de la app y se comienza el proceso de integración.
+app_timer = 5
+
+# Tiempo de cortesía, en segundos, entre que se detecta un cambio en el metapkg
+# y se comienza el proceso de integración.
+metapkg_timer = 5
+
+# Gensys es ejecutado una vez al día. Defínase aquí la hora concreta de lanzamienzo.
+gensys_time = "00:00"
+
+# Indica si debemos abortar el proceso de integración ante errores 
+# de lintian.
+halt_on_lintian_error = False
+
+# Indica si debemos abortar el proceso de integración ante errores
+# de unittests.
+halt_on_unittest_error = True
+
+
+################
+# Gensys
+################
+
+# Directorio donde se subirán automáticamente los paquetes construidos.
 upload_dir = "/var/mirror/pkgs"
+
+# Path por defecto
+path = "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+# Script para generar el repositorio 'derivative' y variables de entorno
+# que necesite para su ejecución
+derivative = "update-derivative-repository"
+derivative_env = {
+    "PATH" : "/var/opt/cdimage/repo-bin:" + path
+}
+
+# Script para realizar el merge derivative+hardy y variables de entorno
+# que necesite para su ejecución
+merge = "anonftpsync"
+merge_env = {
+    "PATH" : "/var/opt/cdimage/bin:" + path,
+    "CDIMAGE_ROOT" : "/var/opt/cdimage"
+}
+# Script lig y variables de entorno que necesite para su ejecución
+lig = "lig -D lobo -P guadalinex"
+lig_env = { 
+    "CDIMAGE_ROOT" : "/var/opt/cdimage",
+    "DIST" : "lobo",
+    "PATH" : "/var/opt/cdimage/bin:" + path + ":" + "/var/opt/cdimage/lig"
+}

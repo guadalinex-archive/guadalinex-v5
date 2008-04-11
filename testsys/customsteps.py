@@ -1,4 +1,5 @@
-from os import sep
+from os import sep, walk, path, getcwd
+from shutil import rmtree
 from buildbot.steps.source import SVN
 from buildbot.interfaces import BuildSlaveTooOldError
 from buildbot.process.buildstep import LoggedRemoteCommand
@@ -59,7 +60,7 @@ class SVNLastTag(SVN):
             if patch:
                 raise BuildSlaveTooOldError("old slave can't do patch")
 
-	f = open("bicheando","a"); f.write(branch+"\n"); f.close()
+	#f = open("bicheando","a"); f.write(branch+"\n"); f.close()
         if self.svnurl:
             assert not branch # we need baseURL= to use branches
             self.args['svnurl'] = self.svnurl
@@ -89,10 +90,10 @@ class SVNLastTag(SVN):
 
 	last_tag_name = ''
 	for file in files:
-            f = open("bicheando","a"); f.write(file+"\n"); f.close()
+            #f = open("bicheando","a"); f.write(file+"\n"); f.close()
 	    tag_name = file.split(sep)[0]
 	    if tag_name > last_tag_name:
                 last_tag_name = tag_name
 
-	f = open("bicheando","a"); f.write(tags_dir + sep + last_tag_name + "\n"); f.close()
+	#f = open("bicheando","a"); f.write(tags_dir + sep + last_tag_name + "\n"); f.close()
 	return tags_dir + sep + last_tag_name 
