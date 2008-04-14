@@ -1,0 +1,53 @@
+#! /bin/sh
+set -e
+
+. /usr/share/debconf/confmodule
+db_capb backup
+
+# For now, this is a separate script from tzsetup because we want to ask the
+# time zone question even if there's only one plausible zone for the
+# selected language's default country.
+
+db_get debian-installer/country
+CC="$RET"
+# per-country templates are used for countries with multiple choices
+if db_get "tzsetup/country/$CC"; then
+	db_register "tzsetup/country/$CC" time/zone
+	db_fget time/zone seen
+	if [ "$RET" = false ]; then
+		db_reset time/zone
+	fi
+	db_input high time/zone || :
+	if ! db_go; then
+		exit 10 # back to menu
+	fi
+else
+	db_register time/zone time/zone # might be registered to something else
+	# tzmap is also in oem-config-timezone (with a different path);
+	# later, this should be moved into a tzsetup.deb.
+	zone=$(grep "^$CC" /usr/lib/ubiquity/tzsetup/tzmap | cut -d ' ' -f 2)
+	db_set time/zone "$zone"
+	db_input high time/zone || true
+	if ! db_go; then
+		exit 10 # back to menu
+	fi
+fi
+
+# Reconfigure locale according to the selected country. We rely on
+# ubiquity/components/timezone.py having set debian-installer/country for
+# us.
+db_get debian-installer/country
+country="$RET"
+db_set mirror/country "$country"
+db_get debian-installer/locale
+newlocale="$(echo "$RET" | sed "s/_[A-Z][A-Z]*/_$country/")"
+if grep -q "^${newlocale%%[.@]*}[.@ ]" /usr/share/i18n/SUPPORTED; then
+	db_set debian-installer/locale "$newlocale"
+	db_fset debian-installer/locale seen true
+	# Let localechooser know that we're using the same language as
+	# before, so that it doesn't set a default country again.
+	db_fset languagechooser/language-name seen true
+	db_set localechooser/alreadyrun false
+	PATH="/usr/lib/ubiquity/localechooser:$PATH" \
+		/usr/lib/ubiquity/localechooser/localechooser
+fi
