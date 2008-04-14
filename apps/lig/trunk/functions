@@ -46,7 +46,7 @@ function load_config ()
         . $conffile
     else
         echo "ERROR: ${conffile} not found"
-        exit
+        exit 1
     fi
     
     log_it "$?" "Setting the config"
@@ -58,7 +58,7 @@ function must_be_root() {
     id=$(id -u)
     if [ "$id" != 0 ]; then
         echo "You are not a root and you need to be root to run this script"
-        exit
+        exit 2
     fi
     return 0
 
@@ -97,7 +97,7 @@ function clean ()
             echo "Operation canceled"
             ;;
     esac
-    exit
+    exit 3
 
 }
 
@@ -173,11 +173,11 @@ function menu ()
     if [ -z ${distro} ]
     then 
         echo "No distro specified ej: -D hardy"
-	exit
+	exit 4
     elif [ -z ${project} ]
     then
         echo "No project specified, ej: -P guadalinex"
-        exit
+        exit 5
     else
         live_dir=${live_dir}${distro}"/${project}/current/"
     fi
@@ -590,42 +590,42 @@ function update_chroot ()
     # base dirs
     check_chroot    
 
-    mount_virtualfs || error "mount_virtualfs"
+    mount_virtualfs || error "mount_virtualfs" 127
 
     # sources=sources.list
-    setup_tmp_sources || error "setup_tmp_sources"
+    setup_tmp_sources || error "setup_tmp_sources" 128
 
-    fake_daemons || error "fake_daemons"
+    fake_daemons || error "fake_daemons" 129
     
-    apt_get update || error "apt_get install"
+    apt_get update || error "apt_get install" 130
 
-    apt_get install || error "apt_get install"
+    apt_get install || error "apt_get install" 131
 
-    apt_get upgrade || error "apt_get install upgrade"
+    apt_get upgrade || error "apt_get install upgrade" 132
 
-    apt_get install || error "apt_get install"
+    apt_get install || error "apt_get install" 133
 
     if [ ${update_pkgs} != "" ]
     then
-	    apt_get install ${update_pkgs} || error "apt_get install update_pkgs"
-	    apt_get install || error "apt_get install"
+	    apt_get install ${update_pkgs} || error "apt_get install update_pkgs" 134
+	    apt_get install || error "apt_get install" 135
     fi
 
-    setup_final_sources || error "setup_final_sources"
+    setup_final_sources || error "setup_final_sources" 136
 
     umount_virtualfs # || error "umount_virtualfs"
     
-    create_manifests || error "create_manifests" 
+    create_manifests || error "create_manifests" 137
     
-    update_initramfs || error "update_initramfs"
+    update_initramfs || error "update_initramfs" 138
 
-    unfake_daemons || error "unfake_daemons"
+    unfake_daemons || error "unfake_daemons" 139 
 
 #    update_initramfs || error "update_initramfs"
 
-    create_squashfs || error "create_squashfs"
+    create_squashfs || error "create_squashfs" 140
 
-    copy_livecd_files || error "copy_livecd_files"
+    copy_livecd_files || error "copy_livecd_files" 141
 }
 
 
