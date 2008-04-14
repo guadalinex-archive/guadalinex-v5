@@ -1,0 +1,22 @@
+content	guadafox	content/
+locale	guadafox	af-ZA	locale/af-ZA/
+locale	guadafox	cs-CZ	locale/cs-CZ/
+locale	guadafox	el-GR	locale/el-GR/
+locale	guadafox	en-US	locale/en-US/
+locale	guadafox	eu-ES	locale/eu-ES/
+locale	guadafox	fi-FI	locale/fi-FI/
+locale	guadafox	fr-CA	locale/fr-CA/
+locale	guadafox	fr-FR	locale/fr-FR/
+locale	guadafox	hu-HU	locale/hu-HU/
+locale	guadafox	it-IT	locale/it-IT/
+locale	guadafox	it-IT	locale/lt-LT/
+locale	guadafox	pl-PL	locale/pl-PL/
+locale	guadafox	pt-BR	locale/pt-BR/
+locale	guadafox	ru-RU	locale/ru-RU/
+locale	guadafox	sl-SI	locale/sl-SI/
+locale	guadafox	sv-SE	locale/sv-SE/
+skin	guadafox	classic/1.0	skin/
+overlay	chrome://browser/content/browser.xul	chrome://guadafox/content/guadalinexHelpMenuOverlay.xul
+overlay chrome://mozapps/content/extensions/extensions.xul chrome://guadafox/content/guadalinexAddonsOverlay.xul appversion>=3.0b3
+overlay chrome://mozapps/content/extensions/extensions.xul chrome://guadafox/content/guadalinexAddonsOverlay.ffox2.xul appversion<2.0.0.*
+override chrome://mozapps/content/plugins/pluginInstallerWizard.xul chrome://guadafox/content/pluginInstallerWizard.xul
