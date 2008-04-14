@@ -1,3 +1,9 @@
+casper-guada (1.2) hardy; urgency=low
+
+  * Copy casper.conf to /etc/casper.conf for ubiquity-dm installer 
+
+ -- Alfredo Matas <amatas@emergya.es>  Mon, 14 Apr 2008 09:21:16 +0200
+
 casper-guada (1.1) unstable; urgency=low
 
   * Initial release for hardy. 
