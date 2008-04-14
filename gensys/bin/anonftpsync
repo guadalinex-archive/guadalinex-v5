@@ -38,10 +38,12 @@ trap "rm -f $LOCK > /dev/null 2>&1" exit
 
 set +e
 
-reprepro --noskipold -b $TO update lobo
+reprepro --export=force -b $TO update lobo
+[ $? -eq 0 ] || exit 2
 
 cd $TO
 ./reoverride.sh
+[ $? -eq 0 ] || exit 3
 cd -
 
 # Delete dangling symlinks.
