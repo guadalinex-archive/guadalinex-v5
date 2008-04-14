@@ -18,4 +18,4 @@ you should do the following:
 For more information, see the Mozillazine Knowledge Base:
 http://kb.mozillazine.org/Getting_started_with_extension_development
 
--Ted Mielczarek <ted.mielczarek@gmail.com>
+-Ted Mielczarek <ted.mielczarek@gmail.com> 
