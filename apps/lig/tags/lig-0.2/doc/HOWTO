@@ -1,0 +1,101 @@
+How to use the Guadalinex Live Image Generator system
+
+1 - Files:
+
+There are three important files in this system:
+ 1.1 The configuration file: /etc/glig/conf
+ 1.2 The script itself: /usr/sbin/glig
+ 1.3 The log file: /var/log/glig-{date}.log
+
+
+1.1 - The configuration file: /etc/glig/conf
+
+The configuration file contains the default values for the vars the system 
+is going to use. Such as:
+
+mirror="file:///var/mirror/ubuntu/"
+live_dir="/var/cdimage/live/edgy/ubuntu/current/"
+sources="/tmp/sources/"
+base="ubuntu-desktop,linux-image-generic"
+live="casper,ubiquity-frontend-gtk,ubiquity-ubuntu-artwork,xfsprogs,jfsutils,ntfsprogs,discover1,xresprobe,laptop-detect"
+# Parameters vars to default values
+debootstrap="yes"
+squashfs="yes"
+keep_sources="no"
+verbose="no"
+quiet="no"
+
+
+1.1.1 - The variables:
+
+Now we are going to explain the most important variables that maybe you like
+to change:
+
+* General variables:
+  - mirror: It's the URI of the repository from where the system gets the packages.
+  	  It could be a local or remote one.
+  - live_dir: This is the directory where GLIG is going to store the files
+              generates. And the place where are supposed to be seeked from
+  	    the cdimage system.
+  - sources: This is the directory where GLIG will generate a temporary 
+             debootstrap to work with.
+  - base: Base is the list of packages or metapackages which will install the 
+          whole distro.
+  - live: The list of packages the live system needs to be Live or to be installed.
+
+* Parameters by default (They are all boolean values. I mean "yes" or "no"):
+  - deboostrap: Do you want to generate the debootstrap from the repository?
+                By default the answer is "yes"
+  - squashfs: Do you want to generate a compressed image of the debootstrap?
+                By default the answer is "yes"
+  - keep_sources: Do you want keep the temporary directory where the debootstrap
+                  was generated?
+                  By default the answer is "no"
+  - verbose: Do you want a verbose output for debugging purposes? This active 
+             the "set -x" bash ption for the script.
+             By default the answer is "no"
+  - quiet: Do you want every output from the program be redirected to the log file
+  	   instead of the standard or error output?
+           By default the answer is "no"
+  
+
+
+1.2 - The script itself: /usr/sbin/glig
+
+This is just a bash script file but it is who run all the party. But the only 
+user who can run this script is the root (or a sudoed user) because it needs
+run debotstrap, mksquashfs and mkisofs, which some in this case need special
+permissions for reading some file and directories.
+
+The options are:
+
+  Usage:
+      glig [-h] [-d | --no-deboostrap] [-s | --no-squashfs] [-k | --keep-sources] [-q | --quiet] [-v | --verbose]
+  
+  Options:
+      -h, --help             Show this help
+      -d, --no-debootstrap   Not to build from the packages
+      -s, --no-squashfs      Not to create the squashfs image
+      -k, --keep-sources     Keep the sources directory after finish
+      -q, --quiet            Don't show any messages
+      -v, --verbose          Show more information about the execution
+
+
+The normal way to use it is with no parameters. If the /etc/glig/conf is well 
+defined, just running the command without parameters is enough.
+
+
+1.3 - The log file: /var/log/glig-{date}.log
+
+This is a log file which is generated on the fly by the "glig" program when
+it is running by a root.
+
+This file is going to be stored on /var/lib/ and the name will be:
+/var/log/glig-{DATE}.log
+
+Where {DATE} is the output of the command: date +%Y%m%d%H%M
+
+Which means year + month + day + hour + minute
+Example:
+/var/log/glig-200611141038.log
+

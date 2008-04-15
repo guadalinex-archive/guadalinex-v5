@@ -1,0 +1,48 @@
+LIG is a Live Image Generator
+
+#FIXME: Change the content
+
+Description:
+
+It means with this software you can generate a Live system based on Guadalinex
+or Ubuntu (6.10 or higher).
+
+This program is complementary part of cdimage, the system for generating Ubuntu
+CD/DVDs. What it makes is generate all the files the cdimage needs to create a
+live CD/DVD version of a distro.
+
+The files that are generates by this system are:
+- livecd.ubuntu.kernel-generic
+- livecd.ubuntu.manifest
+- livecd.ubuntu.manifest-desktop
+- livecd.ubuntu.squashfs
+
+
+IMPORTANT: GLIG is definitive not a remaster system and neither an "I install
+whatever I want, by hand, into a chrooted directory and customized, also by hand,
+all the artwork stuff" system.
+This is a packages based and repository oriented system.
+
+How does it work?:
+
+This is a common Debian/Ubuntu package which depend of a few other packages
+(syslinux, mkisofs, squashfs-tools, debootstrap and maybe another one). And
+also is a shell script who can be used automatically, by using a config
+file, or on the fly, by passing options as parameters.
+
+The process is... the script call to 'debootstrap' program indicating a 
+few metapackages (the ones who make the difference between the base system
+and your distro) and their dependencies (which are automatically located
+by the system itself).
+
+What that means is the GLIG is going to create a fresh installation of
+your distro in a directory from the packages repository you choice.
+
+Once your distro is installed a directory, GLIG generate the compressed image
+of it, and the rest of stuff you may need for a "Ubuntu alike" live system,
+as the usplash and isolinux/gfxboot themes for the booting, the md5sum file
+for the cd integrity checking and so on.
+
+
+
+

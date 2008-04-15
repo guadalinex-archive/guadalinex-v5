@@ -1,0 +1,112 @@
+lig (0.2) stable; urgency=low
+
+  * Initial working version used for Guadalinex v5.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Thu, 16 Aug 2007 19:25:40 +0200
+
+lig (0.1) stable; urgency=low
+
+  * Initial version. Imported from gv4's glig 
+
+ -- Juanje Ojeda Croisier <jojeda@emergya.es>  Thu, 16 Aug 2007 19:25:40 +0200
+
+glig (0.16) unstable; urgency=low
+
+  * Added package gru 
+
+ -- Carlos Parra Camargo <cparra@emergya.es>  Wed, 28 Mar 2007 10:07:59 +0200
+
+glig (0.15) unstable; urgency=low
+
+  * updated sources.list to work properly with watermain 
+
+ -- Carlos Parra Camargo <cparra@emergya.es>  Mon, 19 Mar 2007 18:52:04 +0100
+
+glig (0.14) unstable; urgency=low
+
+  * Added meta-guadalinex-v4 package
+
+ -- Carlos Parra Camargo <cparra@emergya.es>  Mon, 15 Jan 2007 18:06:42 +0100
+
+glig (0.13) unstable; urgency=low
+
+  * Added hack to create ssl-cert-snakeoil.key 
+
+ -- Carlos Parra Camargo <cparra@emergya.es>  Mon,  8 Jan 2007 17:35:49 +0100
+
+glig (0.12) unstable; urgency=low
+
+  * Added libgl1-mesa-glx 
+
+ -- Carlos Parra Camargo <cparra@emergya.es>  Mon,  8 Jan 2007 17:29:54 +0100
+
+glig (0.11) unstable; urgency=low
+
+  * Added ubiquity-guadalinex-lang 
+
+ -- Carlos Parra Camargo <cparra@emergya.es>  Wed,  3 Jan 2007 13:25:09 +0100
+
+glig (0.10) unstable; urgency=low
+
+  * Upgrade packages versions after deboostrap
+
+ -- Rafa Martín <rmartin@emergya.es>  Thu, 28 Dec 2006 10:41:13 +0100
+
+glig (0.9) unstable; urgency=low
+
+  * Final repositories 
+
+ -- Carlos Parra Camargo <cparra@emergya.info>  Thu, 21 Dec 2006 19:32:32 +0100
+
+glig (0.8) unstable; urgency=low
+
+  * Added guadalinex-standard-conf 
+
+ -- Carlos Parra Camargo <cparra@emergya.es>  Wed, 20 Dec 2006 11:27:17 +0100
+
+glig (0.7) unstable; urgency=low
+
+  * Now guadalinex-standard is installed in live systems
+
+ -- Rafale Martin de Agar Tirado <rmartin@emergya.es>  Wed, 20 Dec 2006 09:07:21 +0100
+
+glig (0.6) unstable; urgency=low
+
+  * Added restricted component to glig conf file to be able to install
+    restricted pkgs during live generation
+
+ -- Rafael Martin de Agar Tirado <rmartin@emergya.es>  Wed, 20 Dec 2006 08:42:23 +0100
+
+glig (0.5) unstable; urgency=low
+
+  * Added restricted component 
+
+ -- Carlos Parra Camargo <cparra@emergya.es>  Mon, 18 Dec 2006 17:29:40 +0100
+
+glig (0.4) unstable; urgency=low
+
+  * problems with anacron, stop it inmediatly after his installation.
+  * added universe and multiverse to default conf. 
+
+ -- Carlos Parra Camargo <cparra@emergya.es>  Wed, 13 Dec 2006 11:41:11 +0100
+
+glig (0.3) unstable; urgency=low
+
+  * added casper-guada and ubiquity-casper-guada
+
+ -- Carlos Parra Camargo <cparra@emergya.es>  Mon, 11 Dec 2006 12:31:34 +0100
+
+glig (0.2) unstable; urgency=low
+
+  * exclude some packages of the debootstrap process
+  * work with a local repository (file:///...)
+  * debootstrap process splited in various "apt-get install ..."
+  * sub start-stop-daemon by an empty script during the install
+
+ -- Carlos Parra Camargo <cparra@emergya.es>  Tue, 28 Nov 2006 19:40:37 +0100
+
+glig (0.1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Juanje Ojeda <jojeda@emergya.es>  Mon, 13 Nov 2006 16:42:51 +0200

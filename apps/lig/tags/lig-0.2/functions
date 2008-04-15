@@ -1,0 +1,640 @@
+#!/bin/sh
+## Functions ##
+
+# exit with a warning at screen and also on the log files
+function error ()
+{
+    echo "Error: $*" | tee -a $log_file 
+    umount_virtualfs ; log_it "$?" "Umounted procfs, sysfs and udev" 
+#    umount_mirror ; log_it "$?" "Umounted mirror_dir" 
+#    umount_union     ; log_it "$?" "Umounted unionfs"
+#    clean_sources_dirs ; log_it "$?" "Unionfs dir cleaned"
+#    umount_base      ; log_it "$?" "Umounted base system"
+    exit -1
+}
+
+# how to use the program and the parameter it accepts
+function usage() {
+#FIXME: Cambiar las opciones
+    program=$(basename $0)
+    cat <<EOF
+Usage:
+    $program [-h] [-d | --no-deboostrap] [-k | --keep-sources] \
+[-q | --quiet] [-v | --verbose] [-b | --debug]
+
+Options:
+    -h, --help             Show this help
+    -d, --no-debootstrap   Not to build from the packages
+    -k, --keep-sources     Keep the sources directory after finish
+    -q, --quiet            Don't show any messages
+    -v, --verbose          Show information about what is happening to the stdout
+    -b, --debug            Show extra information about the execution of lig
+    -c, --clean		   Cleans debootstrap dir and squashfs\' output dir
+    -D, --distro	   Select the source Ubuntu version to build
+    -P, --project          Set the project name  
+    -u, --update	   Use current jailed system as base. It does an "upgrade" + an "install update_pkgs"
+
+EOF
+
+}
+
+# load the configuration and vars from the conf file
+function load_config ()
+{
+    conffile="/etc/lig/conf"
+    if [ -f "$conffile" ]; then
+        . $conffile
+    else
+        echo "ERROR: ${conffile} not found"
+        exit 1
+    fi
+    
+    log_it "$?" "Setting the config"
+    return 0
+}
+
+function must_be_root() {
+
+    id=$(id -u)
+    if [ "$id" != 0 ]; then
+        echo "You are not a root and you need to be root to run this script"
+        exit 2
+    fi
+    return 0
+
+}
+
+function log_it() {
+
+    code="$1"
+    shift
+    msg="$*"
+    case $code in
+        0)
+            echo "${msg} ($(date +'%b %e %H:%M:%S')): OK" | tee -a $log_file
+            ;;
+        *)
+            echo "${msg} ($(date +'%b %e %H:%M:%S')): Fail" | tee -a $log_file
+            ;;
+    esac
+}
+
+# clean old images 
+function clean ()
+{
+
+    echo "These dirs will be deleted:"
+    echo "debootsrap dir and squashfs."
+    echo "Do you really want to do that? (Y/N)"
+    read ret
+    case $ret in
+        y|Y)
+            rm -vfr ${sources_dir}
+            rm -vfr ${live_dir}
+            echo "Dirs deleted."
+            ;;
+        *)
+            echo "Operation canceled"
+            ;;
+    esac
+    exit 3
+
+}
+
+# parse the options passed to the program
+function menu ()
+{
+
+#FIXME: Cambiar el menú
+#FIXME: Añadir las combinaciones más probables de generar o dejar de generar
+# cosas (la base, imagenes sueltas, todas, sólo el dvd, etc.
+# OPTIONS:
+# * --help:    usage()
+# * --client:  generate client partimage ($image_list="${image_list} client")
+# * --server:  generate server partimage ($image_list="${image_list} server")
+# * --hibrid:  generate hibrid partimage ($image_list="${image_list} hibrid")
+# * --all:     generate all the partimages ($image_list="client server hibrid")
+# * --no-dvd:  not to generate the dvd iso image ($dvd = "no")
+# * --clean:   clean all the old images. To be used alone. clean()
+# * --verbose: send the errors to the stdout ($verbose = "yes")
+# * --quiet:   send all messages to the log file ($quiet = "yes")
+# * --debug:   show extra messages for debug purposes (set -x) ($debug = "yes")
+    while [ "$#" -gt 0 ]
+    do
+        case $1 in
+            -h|--help) 
+                    usage
+                    exit 0
+                    ;;
+            -q|--quiet)  
+                    _quiet="yes"
+                    shift
+                    ;;
+            -v|--verbose) 
+                    _verbose="yes"
+                    shift
+                    ;;
+            -c|--clean) 
+                    _clean="yes"
+                    shift
+                    ;;
+            -d|--debug) 
+                    _debug="yes"
+                    shift
+                    ;;
+            -u|--update) 
+                    _update="yes"
+                    shift
+                    ;;
+	    -D|--distro)
+                    _distro=$2
+                    shift && shift
+                    ;;
+            -P|--project)
+                    _project=$2
+                    shift && shift
+		    ;;
+            *) 
+                    usage
+                    exit 0
+                    ;;
+        esac
+    done
+    
+    
+    # setting up the vars values
+    clean=${_clean:-${clean}}
+    quiet=${_quiet:-${quiet}}
+    verbose=${_verbose:-${verbose}}
+    debug=${_debug:-${debug}}
+    distro=${_distro:-${distro}}
+    project=${_project:-${project}}
+    update=${_update:-${update}}
+    if [ -z ${distro} ]
+    then 
+        echo "No distro specified ej: -D hardy"
+	exit 4
+    elif [ -z ${project} ]
+    then
+        echo "No project specified, ej: -P guadalinex"
+        exit 5
+    else
+        live_dir=${live_dir}${distro}"/${project}/current/"
+    fi
+
+    cat <<EOF >&1 | tee -a  $log_file
+
+Configuration values:
+  mirror       = $mirror
+  components   = $components
+  log_file     = $log_file
+  distro       = $distro
+  clean?       = $clean
+  quiet?       = $quiet
+  verbose?     = $verbose
+  debug?       = $debug
+  update?      = $update
+
+EOF
+
+
+    # log all the errors
+    exec 2> $log_file 2>&2
+
+    if [ "$quiet" = "yes" ]; then
+        exec &> $log_file
+    fi
+    
+    if [ "$verbose" = "yes" ]; then
+        exec 2>&1
+    fi
+    
+    if [ "$debug" = "yes" ]; then
+        set -x
+    fi
+
+}
+
+
+# forced and non interactive apt-get
+function apt_get() {
+
+    export LC_ALL=es_ES.UTF-8 LANGUAGE=es_ES.UTF-8 LANG=es_ES.UTF-8 DEBIAN_FRONTEND=noninteractive 
+    chroot ${sources_dir} apt-get -f -y --force-yes $*  >&2
+    ret="$?"
+    log_it "$ret" "apt-get -f -y --force-yes $*"
+
+    return $ret
+}
+
+
+# put a fake start-stop-daemon and invoke-rc.d to avoid starting services
+function fake_daemons ()
+{
+   
+    # check if $sources_dir is empty to avoid write over /
+    [ -z ${sources_dir} ] && error "sources_dir var is empty"
+
+                if [ -f ${sources_dir}/usr/sbin/policy-rc.d ]
+                then
+                        # Save policy-rc.d file
+                        mv ${sources_dir}/usr/sbin/policy-rc.d ${sources_dir}/usr/sbin/policy-rc.d.orig
+                fi
+
+                # Create policy-rc.d file
+cat  > ${sources_dir}/usr/sbin/policy-rc.d << EOF
+#!/bin/sh
+
+echo
+echo "Warning: invoke-rc.d policy in action. Skiping daemon starting"
+
+exit 101
+EOF
+
+                chmod 0755 ${sources_dir}/usr/sbin/policy-rc.d
+ 
+}
+
+# take off the fake start-stop-daemon and invoke-rc.d
+function unfake_daemons ()
+{
+   
+    # check if $sources_dir is empty to avoid write over /
+    [ -z ${sources_dir} ] && error "sources_dir var is empty"
+
+                if [ -f ${sources_dir}/usr/sbin/policy-rc.d.orig ]
+                then
+                        # Restore policy-rc.d file
+                        mv ${sources_dir}/usr/sbin/policy-rc.d.orig ${sources_dir}/usr/sbin/policy-rc.d
+                else
+                        # Remove policy-rc.d file
+                        rm -f ${sources_dir}/usr/sbin/policy-rc.d
+                fi
+     
+}
+function mount_virtualfs ()
+{
+
+    if [ ! -d ${sources_dir}/proc ]; then
+        mkdir -p ${sources_dir}/proc
+    fi
+    mount proc-live -t proc ${sources_dir}/proc
+
+    if [ ! -d ${sources_dir}/sys ]; then
+        mkdir -p ${sources_dir}/sys
+    fi
+    mount sysfs-live -t sysfs ${sources_dir}/sys
+
+    if [ ! -d ${sources_dir}/dev/pts ]; then
+        mkdir -p ${sources_dir}/dev/pts
+    fi
+    mount devpts-live -t devpts ${sources_dir}/dev/pts
+
+
+}
+# umount directory mounted with unionfs with the base plus changes
+function umount_virtualfs ()
+{
+#    grep -q ${sources_dir} /proc/mounts && \
+#    awk "/${sources_dir_escaped}// {print \$2};" /proc/mounts | sort -r | xargs umount
+    umount sysfs-live
+    umount proc-live
+    umount devpts-live
+}
+
+function mount_mirror ()
+{
+    
+    if [ ! -d ${sources_dir}/${mirror_dir} ]; then
+        mkdir -p ${sources_dir}/${mirror_dir}
+    fi
+    mount --bind ${mirror_dir} ${sources_dir}/${mirror_dir}
+
+}
+
+function umount_mirror ()
+{
+
+    # check if $sources_dir is empty to avoid write over /
+    [ -z "${sources_dir}" ] && error "sources_dir var is empty"
+
+    umount ${sources_dir}/${mirror_dir}
+    rm -fr ${sources_dir}/${mirror_dir}
+
+}
+
+function setup_tmp_sources ()
+{
+
+    cat <<EOF > ${sources_dir}/etc/apt/sources.list
+deb ${mirror} ${distro} main restricted universe multiverse 
+EOF
+
+}
+
+function setup_final_sources ()
+{
+
+    #FIXME: Take this off to conffile and check the new Junta's mirrors
+    cat <<EOF > ${sources_dir}/etc/apt/sources.list
+${final_sources_list}
+EOF
+
+#deb http://archive.ubuntu.com/ubuntu ${distro} main restricted universe multiverse
+#deb http://archive.ubuntu.com/ubuntu ${distro}-updates main restricted universe multiverse
+#deb http://archive.ubuntu.com/ubuntu ${distro}-security main restricted universe multiverse
+#deb http://archive.ubuntu.com/ubuntu ${distro}-backports main restricted universe multiverse
+
+}
+
+# check if the required dirs exists and create if they don't
+function check_dirs ()
+{
+
+    if [ ! -d "${sources_dir}" ]; then
+        mkdir -p ${sources_dir}
+    fi
+    
+    if [ ! -d "${live_dir}" ]; then
+        mkdir -p ${live_dir}
+    fi 
+
+}
+
+function check_chroot ()
+{
+    if [ $(ls ${sources_dir}|wc -l) -lt 17 ]
+    then
+	    error "sources_dir seems not a complete base system"
+    fi
+}
+
+
+
+# copy the grub and others files into the target grub directory
+function install_files ()
+{
+
+    # check if $sources_dir is empty to avoid write over /
+    [ -z ${sources_dir} ] && error "sources_dir var is empty"
+
+    # Initialize some variables.
+#    pkglibdir="${sources_dir}/lib/grub/i386-pc"
+#    grubdir="${sources_dir}/boot/grub/"
+#    setup_file="$1"
+#
+#    for file in \
+#        ${pkglibdir}/stage1 ${pkglibdir}/stage2 ${pkglibdir}/*stage1_5; do
+#        cp -vf $file ${grubdir} >&2 || \
+#        error "$file couldn't be copied to ${grubdir}"
+#    done
+#
+#    log_it "$?" "Install grub files"
+
+    #FIXME: Mmmmmmm???
+    echo "LANG=\"es_ES.UTF-8\"" >> ${sources_dir}/etc/default/locale
+    echo "LANG=\"es_ES.UTF-8\"" >> ${sources_dir}/etc/environment
+    echo "LANGUAGE=\"es_ES:es:en_GB:en\"" >> ${sources_dir}/etc/default/locale
+    echo "LANGUAGE=\"es_ES:es:en_GB:en\"" >> ${sources_dir}/etc/environment
+
+    log_it "$?" "Setup locales"
+
+    sed -i \
+        -e "s|^ *ACTIVE_CONSOLES=.*|ACTIVE_CONSOLES=\"/dev/tty[1-6]\"|" \
+        -e "s|^ *CHARMAP=.*|CHARMAP=\"UTF-8\"|" \
+        -e "s|^ *CODESET=.*|CODESET=\"Lat15\"|" \
+        -e "s|^ *FONTFACE=.*|FONTFACE=\"VGA\"|" \
+        -e "s|^ *FONTSIZE=.*|FONTSIZE=\"16\"|" \
+        -e "s|^ *XKBMODEL=.*|XKBMODEL=\"pc105\"|" \
+        -e "s|^ *XKBLAYOUT=.*|XKBLAYOUT=\"es\"|" \
+        -e "s|^ *XKBVARIANT=.*|XKBVARIANT=\"\"|" \
+        -e "s|^ *XKBOPTIONS=.*|XKBOPTIONS=\"lv3:ralt_switch\"|" \
+        -e "s|^ *BOOTTIME_KMAP_MD5=.*|BOOTTIME_KMAP_MD5=\"\"|" \
+        ${sources_dir}/etc/default/console-setup
+
+    log_it "$?" "Force the console-setup values"
+
+    #HACK: activate the /etc/shadow because few package need it
+    chroot $sources_dir shadowconfig on >&2
+
+    log_it "$?" "Force system to use shadowing for the passwords"
+
+}
+
+# install packages for this image
+function install_pkgs ()
+{
+
+    install_files $setup_file
+
+    apt_get update 
+
+    apt_get upgrade
+
+    apt_get install $pre_base_pkgs
+
+    apt_get install || error "install_pkgs upgrade"
+
+    #FIXME: Check if more than one stage is needed
+    apt_get install $base_pkgs 
+
+    apt_get install || error "install_pkgs base packages"
+
+    apt_get install $live_pkgs 
+
+    apt_get install || error "install_pkgs live packages"
+
+    apt_get clean
+
+
+    log_it "$?" "Install packages"
+
+}
+
+# create the initial image from debootstrap
+function do_debootstrap() {
+
+    echo debootstrap --components=${components} --exclude=${excluded_pkgs} ${distro} ${sources_dir} ${mirror}
+
+    debootstrap --components=${components} \
+    --exclude=${excluded_pkgs} \
+    ${distro} ${sources_dir} ${mirror}  >&2
+
+
+    log_it "$?" "do debootstrap"
+
+    # HACK: This is a ugly hack for avoiding the debconf ask to configure 
+    # the kernel package
+    cat <<EOF > ${sources_dir}/etc/kernel-img.conf
+do_symlinks = yes
+relative_links = yes
+do_bootloader = no
+do_bootfloppy = no
+do_initrd = yes
+link_in_boot = no
+EOF
+
+}
+
+function create_manifests() {
+    #FIXME 
+    # livecd.ubuntu.initrd-generic  livecd.ubuntu.kernel-generic 
+    chroot ${sources_dir} dpkg-query -W --showformat='${Package} ${Version}\n' > ${live_dir}livecd.${project}.manifest
+
+    log_it "$?" "create manifest"
+
+    filter="/tmp/filter"
+    if [ -f "$filter" ]; then
+        rm -f $filter
+    fi
+    for i in $(echo $live_pkgs | tr ',' ' ' );
+        do
+        echo "/$i/d" >> $filter
+    done
+    
+    sed -f $filter < ${live_dir}livecd.${project}.manifest > ${live_dir}livecd.${project}.manifest-desktop 
+
+    log_it "$?" "create manifest-desktop"
+
+    rm -f $filter
+}
+
+function create_squashfs() {
+    
+    if [ -f "${live_dir}livecd.${project}.squashfs" ]; then
+        rm -f ${live_dir}livecd.${project}.squashfs
+    fi
+    mksquashfs ${sources_dir} ${live_dir}livecd.${project}.squashfs || error "create_squashfs"
+
+    log_it "$?" "create squashfs"
+
+}
+
+function copy_livecd_files() {
+
+    if [ -f "${live_dir}livecd.${project}.initrd-generic" ]; then
+        rm -f ${live_dir}livecd.${project}.initrd-generic
+    fi
+    initrd=$(readlink ${sources_dir}/initrd.img)
+    test -f "${sources_dir}/${initrd}" || error "${sources_dir}/initrd.img not found"
+    cp ${sources_dir}/${initrd} ${live_dir}/livecd.${project}.initrd-generic 
+    log_it "$?" "copy initrd"
+
+    if [ -f "${live_dir}/livecd.${project}.kernel-generic" ]; then
+    	rm -f ${live_dir}/livecd.${project}.kernel-generic
+    fi
+    kernel=$(readlink ${sources_dir}/vmlinuz)
+    test -f "${sources_dir}/${kernel}" || error "${sources_dir}/vmlinuz not found"
+    cp ${sources_dir}/${kernel} ${live_dir}/livecd.${project}.kernel-generic 
+    log_it "$?" "copy kernel"
+
+    chmod +r ${live_dir}/*
+
+}
+
+function update_initramfs ()
+{
+	update-initramfs -u || error "update-initramfs -u failed"
+	log_it "$?" "update-initramfs"
+}
+
+
+#FIXME: change and finish the function
+function install_image ()
+{
+
+    # prepare the system
+    
+    check_dirs
+
+    do_debootstrap || error "do_debootstrap"
+
+# deprecated, lets use a local ftp :]
+#   mount_mirror || error "mount_mirror"
+
+    mount_virtualfs || error "mount_virtualfs"
+
+    # sources=sources.list
+    setup_tmp_sources || error "setup_tmp_sources"
+
+    fake_daemons || error "fake_daemons"
+    
+    # install packages for this image
+    install_pkgs || error "install_pkgs"
+
+# deprecated aswell
+#    umount_mirror || error "mount_mirror"
+
+    setup_final_sources || error "setup_final_sources"
+
+    umount_virtualfs # || error "umount_virtualfs"
+    
+    create_manifests || error "create_manifests" 
+    
+    update_initramfs || error "update_initramfs"
+
+    unfake_daemons || error "unfake_daemons"
+
+#    update_initramfs || error "update_initramfs"
+
+    create_squashfs || error "create_squashfs"
+
+    copy_livecd_files || error "copy_livecd_files"
+}
+
+
+function update_chroot ()
+{
+
+    # check if the jailed system contains at least the necesary
+    # base dirs
+    check_chroot    
+
+    mount_virtualfs || error "mount_virtualfs" 127
+
+    # sources=sources.list
+    setup_tmp_sources || error "setup_tmp_sources" 128
+
+    fake_daemons || error "fake_daemons" 129
+    
+    apt_get update || error "apt_get install" 130
+
+    apt_get install || error "apt_get install" 131
+
+    apt_get upgrade || error "apt_get install upgrade" 132
+
+    apt_get install || error "apt_get install" 133
+
+    if [ ${update_pkgs} != "" ]
+    then
+	    apt_get install ${update_pkgs} || error "apt_get install update_pkgs" 134
+	    apt_get install || error "apt_get install" 135
+    fi
+
+    setup_final_sources || error "setup_final_sources" 136
+
+    umount_virtualfs # || error "umount_virtualfs"
+    
+    create_manifests || error "create_manifests" 137
+    
+    update_initramfs || error "update_initramfs" 138
+
+    unfake_daemons || error "unfake_daemons" 139 
+
+#    update_initramfs || error "update_initramfs"
+
+    create_squashfs || error "create_squashfs" 140
+
+    copy_livecd_files || error "copy_livecd_files" 141
+}
+
+
+# print on the screen and log message as the task is finnished and successfully
+function bye ()
+{
+
+    echo "Process finished. It seems ok."
+    echo -e "Check the squashfs file at:\n  $live_dir" 
+}
+
+# vim:ai:et:sts=4:tw=80:sw=4:

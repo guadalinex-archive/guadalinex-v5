@@ -1,0 +1,3 @@
+conf           etc/lig/
+lig            usr/sbin/
+functions      usr/share/lig/

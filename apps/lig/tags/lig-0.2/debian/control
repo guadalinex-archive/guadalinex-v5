@@ -1,0 +1,15 @@
+Source: lig
+Section: admin
+Priority: optional
+Maintainer: Juanje Ojeda <jojeda@emergya.es>
+Standards-Version: 3.7.2
+Build-Depends: debhelper (>= 4), cdbs
+
+Package: lig
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, mkisofs, squashfs-tools
+Recommends: 
+Description: Live Image Generator system
+ LIG is a system for generating all the files the software cdimage needs to
+ create a live CD or DVD.
+
