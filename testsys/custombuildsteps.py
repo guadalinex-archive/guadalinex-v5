@@ -73,7 +73,7 @@ class BuildPkg(ShellCommand):
 
 
 class GCSBuild(BuildPkg):
-    """It performs building of a gcs package."""
+    """It performs the building of a gcs package."""
     name = "GCSBuild"
     command = ["gcs_build"]
     description = [name]
@@ -82,9 +82,19 @@ class GCSBuild(BuildPkg):
 	BuildPkg.__init__(self, **kwargs)
 
 
+class CheckBuildDeps(ShellCommand):
+    """Run pbuilder-satisfydepends to supply the requiered build dependences"""
+    name = "CheckBuildDeps"
+    command = ["sudo /usr/lib/pbuilder/pbuilder-satisfydepends"]
+    description = [name]
+
+    def __init__(self, **kwargs):
+	ShellCommand.__init__(self, **kwargs)
+
+
 class SetSVNRev(ShellCommand):
     """
-    On a gcs package, it sets the svn-revision as package version/revision.
+    In gcs packages, it sets the svn-revision as package version/revision.
     """
     name = "SetSVNRev"
     command = ["sed", "-i", WithProperties("s/^version\:.*/version\: v5r%s/g", "got_revision"), "gcs/info"]
