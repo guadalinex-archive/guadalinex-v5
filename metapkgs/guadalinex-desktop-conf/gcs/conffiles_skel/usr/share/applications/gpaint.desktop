@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=GNU Paint
+Name=Editor sencillo de imágenes (GNU Paint)
+Comment=A small-scale painting program for GNOME, the GNU Desktop
+Comment[fr]=Un petit outil de dessin pour GNOME, le desktop GNU
+Comment[pt_BR]=Um pequeno programa de desenho para o GNOME, o Desktop GNU
+Comment[es]=Un pequeño programa de dibujo para GNOME
+TryExec=gpaint
+Exec=gpaint
+Icon=gpaint.xpm
+Terminal=0
+Type=Application
+Categories=Graphics;2DGraphics;RasterGraphics;
+X-Ubuntu-Gettext-Domain=gpaint-2

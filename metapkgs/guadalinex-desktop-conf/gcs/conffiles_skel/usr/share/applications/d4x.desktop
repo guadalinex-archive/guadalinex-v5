@@ -1,0 +1,23 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Downloader for X
+Name[ru]=Качалка для Иксов
+Name[de]=Downloader für X
+Name[es]=Gestor de descargas de Internet (d4x)
+Name[fr]=Downloader for X
+Name[pl]=Downloader dla X
+GenericName=File Downloading Program
+GenericName[ru]=Программа для загрузки файлов
+Comment=Manage your downloads
+Comment[ru]=Программа для загрузки файлов по сети
+Comment[de]=Programm zum Downloaden von Dateien
+Comment[es]=Una herramienta para descagar ficheros
+Comment[fr]=Programme de téléchargement de fichiers
+Comment[pl]=Program do pobierania plików z Internetu.
+TryExec=nt
+Exec=nt -a %U
+Icon=nt.png
+Terminal=false
+StartupNotify=true
+Type=Application
+Categories=Application;Network;
