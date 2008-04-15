@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: partman-target@packages.debian.org\n"
-"POT-Creation-Date: 2008-03-03 21:30+0000\n"
+"POT-Creation-Date: 2008-04-15 01:03+0100\n"
 "PO-Revision-Date: 2008-01-16 09:10+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <debian-l10n-swedish@lists.debian.org>\n"
@@ -258,7 +258,7 @@ msgstr "Använd som:"
 #. Description
 #: ../partman-target.templates:11001
 msgid "Failed to remove conflicting files"
-msgstr ""
+msgstr "Misslyckades med att ta bort filer i konflikt"
 
 #. Type: error
 #. Description
@@ -267,9 +267,39 @@ msgid ""
 "The installer needs to remove operating system files from the install "
 "target, but was unable to do so.  The install cannot continue."
 msgstr ""
+"Installationsprogrammet behöver ta bort operativsystemsfiler från "
+"installationsmålet, men kunde inte göra det.  Installationen kan inte "
+"fortsätta."
 
 #. Type: text
 #. Description
 #: ../partman-target.templates:12001
 msgid "Removing conflicting operating system files..."
+msgstr "Tar bort operativsystemsfiler i konflikt..."
+
+#. Type: boolean
+#. Description
+#: ../partman-target.templates:13001
+msgid "Do you want to return to the partitioner?"
+msgstr "Vill du återvända till partitioneraren?"
+
+#. Type: boolean
+#. Description
+#: ../partman-target.templates:13001
+msgid ""
+"The file system on ${PARTITION} assigned to ${MOUNTPOINT} has not been "
+"marked for formatting.  Directories containing system files (/boot, /etc, /"
+"usr, /var, ...) that already exist under any defined mountpoint will be "
+"deleted during the install."
+msgstr ""
+"Filsystemet på ${PARTITION} som tilldelats till ${MOUNTPOINT} har inte "
+"markerats för formatering.  Kataloger som innehåller systemfiler (/boot, /"
+"etc, /usr, /var, ...) som redan finns under definierade monteringspunkter "
+"kommer att raderas under installationen."
+
+#. Type: boolean
+#. Description
+#: ../partman-target.templates:13001
+msgid ""
+"Please ensure that you have backed up any critical data before installing."
 msgstr ""

@@ -170,8 +170,8 @@ else
 fi
 
 #Setup theme
-DoSQL "$HOSTNAME" "$ADMINUSER" "$ADMINPASS" "$DB" "INSERT INTO $DB.settings (data,hostname,value) VALUES ('Mythbuntu', '$HOSTNAME', 'Theme')"
-DoSQL "$HOSTNAME" "$ADMINUSER" "$ADMINPASS" "$DB" "INSERT INTO $DB.settings (data,hostname,value) VALUES ('Mythbuntu', '$LOCALHOSTNAME', 'Theme')"
+DoSQL "$HOSTNAME" "$ADMINUSER" "$ADMINPASS" "$DB" "INSERT INTO $DB.settings (data,hostname,value) VALUES ('Mythbuntu-8.04', '$HOSTNAME', 'Theme')"
+DoSQL "$HOSTNAME" "$ADMINUSER" "$ADMINPASS" "$DB" "INSERT INTO $DB.settings (data,hostname,value) VALUES ('Mythbuntu-8.04', '$LOCALHOSTNAME', 'Theme')"
 
 #Stop SQL
 /etc/init.d/mysql stop
@@ -308,7 +308,7 @@ for \\\$s (@statements) { \\\$db->do(\\\$s) || die 'Failed to execute SQL: ' . \
 }
 
 #Setup theme
-DoSQL "$HOSTNAME" "$USER" "$PASSWORD" "$DB" "INSERT INTO $DB.settings (data,hostname,value) VALUES ('Mythbuntu', '$LOCALHOSTNAME', 'Theme')"
+DoSQL "$HOSTNAME" "$USER" "$PASSWORD" "$DB" "INSERT INTO $DB.settings (data,hostname,value) VALUES ('Mythbuntu-8.04', '$LOCALHOSTNAME', 'Theme')"
 THEME
     chmod +x $ROOT/tmp/theme
     mount -t proc none $ROOT/proc

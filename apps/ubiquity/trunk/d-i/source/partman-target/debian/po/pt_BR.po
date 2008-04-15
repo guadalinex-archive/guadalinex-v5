@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: partman-target@packages.debian.org\n"
-"POT-Creation-Date: 2008-03-03 21:30+0000\n"
+"POT-Creation-Date: 2008-04-15 01:03+0100\n"
 "PO-Revision-Date: 2008-02-04 03:46-0200\n"
 "Last-Translator: Felipe Augusto van de Wiel (faw) <faw@debian.org>\n"
 "Language-Team: l10n portuguese <debian-l10n-portuguese@lists.debian.org>\n"
@@ -251,7 +251,7 @@ msgstr "Usar como:"
 #. Description
 #: ../partman-target.templates:11001
 msgid "Failed to remove conflicting files"
-msgstr ""
+msgstr "Falha ao remover arquivos conflitantes"
 
 #. Type: error
 #. Description
@@ -260,9 +260,38 @@ msgid ""
 "The installer needs to remove operating system files from the install "
 "target, but was unable to do so.  The install cannot continue."
 msgstr ""
+"O instalador precisa remover arquivos do sistema operacional do destino da "
+"instalação, mas não foi capaz de fazê-lo. A instalação não pode continuar."
 
 #. Type: text
 #. Description
 #: ../partman-target.templates:12001
 msgid "Removing conflicting operating system files..."
+msgstr "Removendo arquivos conflitantes do sistema operacional..."
+
+#. Type: boolean
+#. Description
+#: ../partman-target.templates:13001
+msgid "Do you want to return to the partitioner?"
+msgstr "Você quer retornar para a partição?"
+
+#. Type: boolean
+#. Description
+#: ../partman-target.templates:13001
+msgid ""
+"The file system on ${PARTITION} assigned to ${MOUNTPOINT} has not been "
+"marked for formatting.  Directories containing system files (/boot, /etc, /"
+"usr, /var, ...) that already exist under any defined mountpoint will be "
+"deleted during the install."
+msgstr ""
+"O sistema de arquivos em ${PARTITION} atribuído a ${MOUNTPOINT} não foi "
+"marcado para formatação. Diretórios contendo arquivos de sistema (/boot, /"
+"etc, /usr, /var, ...) que já existem em qualquer ponto de montagem definido "
+"serão apagados durante a instalação."
+
+#. Type: boolean
+#. Description
+#: ../partman-target.templates:13001
+msgid ""
+"Please ensure that you have backed up any critical data before installing."
 msgstr ""

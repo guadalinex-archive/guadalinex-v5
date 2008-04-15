@@ -6,14 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: Source: ubiquity@packages.debian.org\n"
-"POT-Creation-Date: 2008-04-10 04:12-0400\n"
-"PO-Revision-Date: 2008-04-08 22:14+0000\n"
-"Last-Translator: Felipe Gil Castiñeira <felipexil@gmail.com>\n"
+"POT-Creation-Date: 2008-04-14 20:32-0400\n"
+"PO-Revision-Date: 2008-04-12 15:00+0000\n"
+"Last-Translator: Xosé <Unknown>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-04-12 12:02+0000\n"
+"X-Launchpad-Export-Date: 2008-04-14 09:05+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. Type: text
@@ -568,14 +568,12 @@ msgstr "Continuar"
 #. Type: text
 #. Description
 #: ../ubiquity.templates:78001
-#, fuzzy
 msgid ""
 "Installation is complete. You need to restart the computer in order to use "
 "the new installation."
 msgstr ""
 "Completouse a instalación. É preciso reiniciar a computadora para poder usar "
-"a nova instalación. Pode continuar usando este \"live CD\", pero perderanse "
-"os cambios que faga ou os documentos que garde."
+"a nova instalación."
 
 #. Type: note
 #. Description
@@ -743,7 +741,6 @@ msgstr ""
 #. Type: select
 #. Description
 #: ../ubiquity.templates:91001
-#, fuzzy
 msgid "The following file did not match its source copy on the CD/DVD:"
 msgstr "O seguinte ficheiro non coincide coa copia orixinal no CD/DVD:"
 
@@ -971,29 +968,13 @@ msgstr "¿Desexa que o instalador tente desmontar outra vez estas particións?"
 
 #. Type: boolean
 #. Description
-#. Type: boolean
-#. Description
-#: ../ubiquity.templates:124001 ../ubiquity.templates:130001
+#: ../ubiquity.templates:129001
 msgid "Do you want to return to the partitioner?"
 msgstr "Quere voltar ao particionador?"
 
 #. Type: boolean
 #. Description
-#: ../ubiquity.templates:124001
-msgid ""
-"The file system on ${PARTITION} assigned to ${MOUNTPOINT} has not been "
-"marked for formatting.  Directories containing system files (/boot, /etc, /"
-"usr, /var, ...) that already exist under any defined mountpoint will be "
-"deleted during the install."
-msgstr ""
-"O sistema de ficheiros en ${PARTITION} asignado a ${MOUNTPOINT} non foi "
-"marcado para ser formatado. Os directorio que conteñen ficheiros do sistema "
-"(/boot, /etc, /usr, /var, ...) que xa existen en calquera punto de montaxe "
-"definido serán borrados durante a instalación."
-
-#. Type: boolean
-#. Description
-#: ../ubiquity.templates:130001
+#: ../ubiquity.templates:129001
 msgid ""
 "Some of the partitions you created are too small.  Please make the following "
 "partitions at least this large (in bytes):"
@@ -1003,7 +984,7 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../ubiquity.templates:130001
+#: ../ubiquity.templates:129001
 msgid ""
 "If you do not go back to the partitioner and increase the size of these "
 "partitions, the installation may fail."
@@ -1263,7 +1244,6 @@ msgstr "Controis Myth"
 #. Type: text
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:30001
-#, fuzzy
 msgid "Myth Movies"
 msgstr "Películas de Myth"
 
@@ -1611,3 +1591,14 @@ msgstr "A configurar os servizos adicionais"
 #: ../ubiquity-frontend-mythbuntu.templates:78001
 msgid "Configuring infrared devices..."
 msgstr "Configurando dispositivos de infravermellos..."
+
+#~ msgid ""
+#~ "The file system on ${PARTITION} assigned to ${MOUNTPOINT} has not been "
+#~ "marked for formatting.  Directories containing system files (/boot, /"
+#~ "etc, /usr, /var, ...) that already exist under any defined mountpoint "
+#~ "will be deleted during the install."
+#~ msgstr ""
+#~ "O sistema de ficheiros en ${PARTITION} asignado a ${MOUNTPOINT} non foi "
+#~ "marcado para ser formatado. Os directorio que conteñen ficheiros do "
+#~ "sistema (/boot, /etc, /usr, /var, ...) que xa existen en calquera punto "
+#~ "de montaxe definido serán borrados durante a instalación."

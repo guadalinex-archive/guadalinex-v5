@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lv.po.gz_[BY8Drc]\n"
 "Report-Msgid-Bugs-To: partman-target@packages.debian.org\n"
-"POT-Creation-Date: 2008-03-03 21:30+0000\n"
+"POT-Creation-Date: 2008-04-15 01:03+0100\n"
 "PO-Revision-Date: 2008-02-02 15:16+0200\n"
 "Last-Translator: Viesturs Zarins <viesturs.zarins@mii.lu.lv>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -253,7 +253,7 @@ msgstr "Lietojums:"
 #. Description
 #: ../partman-target.templates:11001
 msgid "Failed to remove conflicting files"
-msgstr ""
+msgstr "Neizdevās izdzēst konflikējošos failus"
 
 #. Type: error
 #. Description
@@ -262,9 +262,38 @@ msgid ""
 "The installer needs to remove operating system files from the install "
 "target, but was unable to do so.  The install cannot continue."
 msgstr ""
+"Nebija iespējams izdzēst operētājsistēmas failus no instalācijas mērķa. "
+"Instalācija nevar turpināties."
 
 #. Type: text
 #. Description
 #: ../partman-target.templates:12001
 msgid "Removing conflicting operating system files..."
+msgstr "Notiek konfliktējošo failu dzēšana..."
+
+#. Type: boolean
+#. Description
+#: ../partman-target.templates:13001
+msgid "Do you want to return to the partitioner?"
+msgstr "Atgriezties pie diska sadalīšanas?"
+
+#. Type: boolean
+#. Description
+#: ../partman-target.templates:13001
+msgid ""
+"The file system on ${PARTITION} assigned to ${MOUNTPOINT} has not been "
+"marked for formatting.  Directories containing system files (/boot, /etc, /"
+"usr, /var, ...) that already exist under any defined mountpoint will be "
+"deleted during the install."
+msgstr ""
+"Failu sistēma, kas atrodas uz ${PARTITION} un kura ir piemontēta "
+"${MOUNTPOINT}, nav atzīmēta kā formatējama. Direktorijas, kas satur sistēmas "
+"failus (/boot, /etc, /usr, /var, ...) un jau eksistē zem jebkura definētā "
+"montēšanas punkta tiks izdzēstas instalācijas laikā."
+
+#. Type: boolean
+#. Description
+#: ../partman-target.templates:13001
+msgid ""
+"Please ensure that you have backed up any critical data before installing."
 msgstr ""

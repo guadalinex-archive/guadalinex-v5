@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: partman-target@packages.debian.org\n"
-"POT-Creation-Date: 2008-03-03 21:30+0000\n"
+"POT-Creation-Date: 2008-04-15 01:03+0100\n"
 "PO-Revision-Date: 2008-01-16 06:03+0100\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -258,7 +258,7 @@ msgstr "Utiliser comme :"
 #. Description
 #: ../partman-target.templates:11001
 msgid "Failed to remove conflicting files"
-msgstr ""
+msgstr "La suppression des fichiers en conflit a échoué"
 
 #. Type: error
 #. Description
@@ -267,9 +267,38 @@ msgid ""
 "The installer needs to remove operating system files from the install "
 "target, but was unable to do so.  The install cannot continue."
 msgstr ""
+"L'installation ne peut continuer car il y a des fichiers du système "
+"d'exploitation qui ne peuvent être enlevés."
 
 #. Type: text
 #. Description
 #: ../partman-target.templates:12001
 msgid "Removing conflicting operating system files..."
+msgstr "Suppression des fichiers systèmes en conflit..."
+
+#. Type: boolean
+#. Description
+#: ../partman-target.templates:13001
+msgid "Do you want to return to the partitioner?"
+msgstr "Voulez-vous revenir à l'outil de partitionnement ?"
+
+#. Type: boolean
+#. Description
+#: ../partman-target.templates:13001
+msgid ""
+"The file system on ${PARTITION} assigned to ${MOUNTPOINT} has not been "
+"marked for formatting.  Directories containing system files (/boot, /etc, /"
+"usr, /var, ...) that already exist under any defined mountpoint will be "
+"deleted during the install."
+msgstr ""
+"Le système de fichier sur ${PARTITION} assigné à ${MOUNTPOINT} n'a pas été "
+"marqué pour être formaté. Les dossiers contenant les fichiers systèmes (/"
+"boot, /etc, /usr, /var, ...) qui existent déjà sous tous les points de "
+"montages seront supprimés durant l'installation."
+
+#. Type: boolean
+#. Description
+#: ../partman-target.templates:13001
+msgid ""
+"Please ensure that you have backed up any critical data before installing."
 msgstr ""

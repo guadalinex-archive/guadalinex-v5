@@ -60,7 +60,8 @@ class ConsoleSetup(FilteredCommand):
         # bother for now.
         return (['/usr/lib/ubiquity/console-setup/console-setup.postinst',
                  'configure'],
-                ['^console-setup/layout', '^console-setup/variant'])
+                ['^console-setup/layout', '^console-setup/variant'],
+                {'OVERRIDE_ALLOW_PRESEEDING': '1'})
 
     def run(self, priority, question):
         if self.done:

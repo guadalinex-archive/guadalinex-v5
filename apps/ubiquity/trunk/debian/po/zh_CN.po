@@ -6,14 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: Source: ubiquity@packages.debian.org\n"
-"POT-Creation-Date: 2008-04-10 04:12-0400\n"
-"PO-Revision-Date: 2008-04-10 13:52+0000\n"
-"Last-Translator: 刘其帅 <lqs.buaa@gmail.com>\n"
+"POT-Creation-Date: 2008-04-14 20:32-0400\n"
+"PO-Revision-Date: 2008-04-14 02:52+0000\n"
+"Last-Translator: ChenMing <Unknown>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-04-12 12:04+0000\n"
+"X-Launchpad-Export-Date: 2008-04-14 09:09+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. Type: text
@@ -168,7 +168,7 @@ msgstr "您想用什么名字作为登录名？"
 msgid ""
 "If more than one person will use this computer, you can set up multiple "
 "accounts after installation."
-msgstr "如果有多名用户使用本计算机，你可以在完成安装后建立多个帐户。"
+msgstr "如果有多个用户使用本计算机，你可以在完成安装后建立多个帐户。"
 
 #. Type: text
 #. Description
@@ -263,7 +263,7 @@ msgstr "你的新操作系统将以如下设置进行安装："
 #. Description
 #: ../ubiquity.templates:34001
 msgid "Advanced..."
-msgstr "高级…"
+msgstr "高级..."
 
 #. Type: text
 #. Description
@@ -547,13 +547,10 @@ msgstr "继续"
 #. Type: text
 #. Description
 #: ../ubiquity.templates:78001
-#, fuzzy
 msgid ""
 "Installation is complete. You need to restart the computer in order to use "
 "the new installation."
-msgstr ""
-"安装完成。你需要重新启动计算机以使用新安装的系统。你可以继续使用live CD，不过"
-"你所做的任何更改和保存的文档不会被保留。"
+msgstr "安装完成。你需要重新启动计算机以使用新安装的系统。"
 
 #. Type: note
 #. Description
@@ -934,27 +931,13 @@ msgstr "你是否想让安装程序再次尝试卸载这些分区？"
 
 #. Type: boolean
 #. Description
-#. Type: boolean
-#. Description
-#: ../ubiquity.templates:124001 ../ubiquity.templates:130001
+#: ../ubiquity.templates:129001
 msgid "Do you want to return to the partitioner?"
 msgstr "您希望返回到分区工具吗？"
 
 #. Type: boolean
 #. Description
-#: ../ubiquity.templates:124001
-msgid ""
-"The file system on ${PARTITION} assigned to ${MOUNTPOINT} has not been "
-"marked for formatting.  Directories containing system files (/boot, /etc, /"
-"usr, /var, ...) that already exist under any defined mountpoint will be "
-"deleted during the install."
-msgstr ""
-"在 ${PARTITION} 上分配为 ${MOUNTPOINT} 的文件系统将不会格式化。在已定义的挂载"
-"点中包含系统文件的目录（如 /boot, /etc, /usr, /var, ...）将会在安装时删除。"
-
-#. Type: boolean
-#. Description
-#: ../ubiquity.templates:130001
+#: ../ubiquity.templates:129001
 msgid ""
 "Some of the partitions you created are too small.  Please make the following "
 "partitions at least this large (in bytes):"
@@ -962,7 +945,7 @@ msgstr "您建立的一些分区太小。请确保以下分区的最少字节数
 
 #. Type: boolean
 #. Description
-#: ../ubiquity.templates:130001
+#: ../ubiquity.templates:129001
 msgid ""
 "If you do not go back to the partitioner and increase the size of these "
 "partitions, the installation may fail."
@@ -1224,7 +1207,7 @@ msgstr "Myth Flix"
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:32001
 msgid "Myth Gallery"
-msgstr "Myth Gallery"
+msgstr "Myth 画廊"
 
 #. Type: text
 #. Description
@@ -1236,13 +1219,13 @@ msgstr "Myth Game"
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:34001
 msgid "Myth Music"
-msgstr "Myth Music"
+msgstr "Myth 音乐"
 
 #. Type: text
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:35001
 msgid "Myth News"
-msgstr "Myth News"
+msgstr "Myth 新闻"
 
 #. Type: text
 #. Description
@@ -1254,13 +1237,13 @@ msgstr "Myth Phone"
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:37001
 msgid "Myth Stream"
-msgstr "Copy text"
+msgstr "Myth Stream"
 
 #. Type: text
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:38001
 msgid "Myth Video"
-msgstr "Myth Video"
+msgstr "Myth 视频"
 
 #. Type: text
 #. Description
@@ -1532,3 +1515,13 @@ msgstr "正在配置附加服务..."
 #: ../ubiquity-frontend-mythbuntu.templates:78001
 msgid "Configuring infrared devices..."
 msgstr "配置红外设备..."
+
+#~ msgid ""
+#~ "The file system on ${PARTITION} assigned to ${MOUNTPOINT} has not been "
+#~ "marked for formatting.  Directories containing system files (/boot, /"
+#~ "etc, /usr, /var, ...) that already exist under any defined mountpoint "
+#~ "will be deleted during the install."
+#~ msgstr ""
+#~ "在 ${PARTITION} 上分配为 ${MOUNTPOINT} 的文件系统将不会格式化。在已定义的"
+#~ "挂载点中包含系统文件的目录（如 /boot, /etc, /usr, /var, ...）将会在安装时"
+#~ "删除。"

@@ -1182,7 +1182,7 @@ if db_get debian-installer/keymap && [ "$RET" ]; then
 fi
     
 # Get defaults from debconf, to allow preseeding.
-if [ -d /lib/debian-installer ]; then
+if [ -d /lib/debian-installer ] || [ "$OVERRIDE_ALLOW_PRESEEDING" ]; then
     if db_get console-setup/modelcode && [ "$RET" ]; then
 	default_model="$RET"
     fi

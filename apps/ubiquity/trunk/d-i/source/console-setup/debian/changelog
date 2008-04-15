@@ -1,3 +1,11 @@
+console-setup (1.21ubuntu7) hardy; urgency=low
+
+  * Honour OVERRIDE_ALLOW_PRESEEDING environment variable when deciding
+    whether to allow preseeding, which is ordinarily only allowed in d-i
+    (LP: #188492).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 14 Apr 2008 11:49:55 +0100
+
 console-setup (1.21ubuntu6) hardy; urgency=low
 
   * Handle some special cases for the KPDL key (LP: #189529).

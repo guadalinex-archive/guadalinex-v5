@@ -6,14 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: Source: ubiquity@packages.debian.org\n"
-"POT-Creation-Date: 2008-04-10 04:12-0400\n"
+"POT-Creation-Date: 2008-04-14 20:32-0400\n"
 "PO-Revision-Date: 2007-06-15 12:46+0000\n"
 "Last-Translator: Notclive <mynamesnotclive@notclive.co.uk>\n"
 "Language-Team: Welsh <daf@muse.19inch.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-04-12 12:03+0000\n"
+"X-Launchpad-Export-Date: 2008-04-14 09:07+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. Type: text
@@ -917,25 +917,13 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#. Type: boolean
-#. Description
-#: ../ubiquity.templates:124001 ../ubiquity.templates:130001
+#: ../ubiquity.templates:129001
 msgid "Do you want to return to the partitioner?"
 msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../ubiquity.templates:124001
-msgid ""
-"The file system on ${PARTITION} assigned to ${MOUNTPOINT} has not been "
-"marked for formatting.  Directories containing system files (/boot, /etc, /"
-"usr, /var, ...) that already exist under any defined mountpoint will be "
-"deleted during the install."
-msgstr ""
-
-#. Type: boolean
-#. Description
-#: ../ubiquity.templates:130001
+#: ../ubiquity.templates:129001
 msgid ""
 "Some of the partitions you created are too small.  Please make the following "
 "partitions at least this large (in bytes):"
@@ -943,7 +931,7 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../ubiquity.templates:130001
+#: ../ubiquity.templates:129001
 msgid ""
 "If you do not go back to the partitioner and increase the size of these "
 "partitions, the installation may fail."

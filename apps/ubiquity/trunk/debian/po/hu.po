@@ -6,14 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: Source: ubiquity@packages.debian.org\n"
-"POT-Creation-Date: 2008-04-10 04:12-0400\n"
-"PO-Revision-Date: 2008-04-08 14:13+0000\n"
-"Last-Translator: SZERVÑC Attila <Unknown>\n"
+"POT-Creation-Date: 2008-04-14 20:32-0400\n"
+"PO-Revision-Date: 2008-04-14 02:12+0000\n"
+"Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Debian L10n Hungarian <debian-l10n-hungarian@lists.debian>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-04-12 12:02+0000\n"
+"X-Launchpad-Export-Date: 2008-04-14 09:05+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. Type: text
@@ -230,6 +230,8 @@ msgid ""
 "Select any accounts you would like to import.  The documents and settings "
 "for these accounts will be available after the install completes."
 msgstr ""
+"Válassza ki az importálandó fiókokat. A fiókokhoz tartozó dokumentumok és "
+"beállítások a telepítés befejeződése után elérhetők lesznek."
 
 #. Type: text
 #. Description
@@ -523,19 +525,19 @@ msgstr "Vegyen részt a csomaghasználat-felmérésben"
 #. Description
 #: ../ubiquity.templates:72001
 msgid "Network proxy"
-msgstr ""
+msgstr "Hálózati proxy"
 
 #. Type: text
 #. Description
 #: ../ubiquity.templates:73001
 msgid "HTTP proxy:"
-msgstr ""
+msgstr "HTTP proxy:"
 
 #. Type: text
 #. Description
 #: ../ubiquity.templates:74001
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 #. Type: text
 #. Description
@@ -635,7 +637,7 @@ msgstr "Fájlok másolása (kevesebb, mint egy perc van hátra)..."
 #. Description
 #: ../ubiquity.templates:87001
 msgid "Failed to copy files; out of disk space."
-msgstr ""
+msgstr "A fájlok másolása meghiúsult, elfogyott a lemezterület."
 
 #. Type: error
 #. Description
@@ -658,6 +660,9 @@ msgid ""
 "install to complete on the target partition.  Please run the installer again "
 "and select a larger partition to install into."
 msgstr ""
+"A hiba oka, hogy a célpartíción nincs elegendő lemezterület a telepítés "
+"befejeződéséhez. Futtassa újra a telepítőt és válasszon nagyobb partíciót a "
+"telepítés céljaként."
 
 #. Type: error
 #. Description
@@ -731,12 +736,13 @@ msgstr ""
 #: ../ubiquity.templates:91001
 msgid "Failed to copy file; faulty CD/DVD or hard disk?"
 msgstr ""
+"A fájl másolása meghiúsult. Lehet, hogy hibás a CD/DVD vagy a merevlemez?"
 
 #. Type: select
 #. Description
 #: ../ubiquity.templates:91001
 msgid "The following file did not match its source copy on the CD/DVD:"
-msgstr ""
+msgstr "A következő fájl nem egyezik meg a CD/DVD-n található forrásfájllal:"
 
 #. Type: text
 #. Description
@@ -961,37 +967,29 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#. Type: boolean
-#. Description
-#: ../ubiquity.templates:124001 ../ubiquity.templates:130001
+#: ../ubiquity.templates:129001
 msgid "Do you want to return to the partitioner?"
-msgstr ""
+msgstr "Visszatér a particionálóhoz?"
 
 #. Type: boolean
 #. Description
-#: ../ubiquity.templates:124001
-msgid ""
-"The file system on ${PARTITION} assigned to ${MOUNTPOINT} has not been "
-"marked for formatting.  Directories containing system files (/boot, /etc, /"
-"usr, /var, ...) that already exist under any defined mountpoint will be "
-"deleted during the install."
-msgstr ""
-
-#. Type: boolean
-#. Description
-#: ../ubiquity.templates:130001
+#: ../ubiquity.templates:129001
 msgid ""
 "Some of the partitions you created are too small.  Please make the following "
 "partitions at least this large (in bytes):"
 msgstr ""
+"Néhány létrehozott partíció túl kicsi. A következő partíciókat növelje "
+"legalább ekkora méretűre (bájtban):"
 
 #. Type: boolean
 #. Description
-#: ../ubiquity.templates:130001
+#: ../ubiquity.templates:129001
 msgid ""
 "If you do not go back to the partitioner and increase the size of these "
 "partitions, the installation may fail."
 msgstr ""
+"Ha nem lép vissza a particionálóba és nem növeli a partíciók méretét, akkor "
+"a telepítés meghiúsulhat."
 
 #. Type: note
 #. Description
@@ -1246,7 +1244,7 @@ msgstr "Myth vezérlés"
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:30001
 msgid "Myth Movies"
-msgstr ""
+msgstr "Myth filmek"
 
 #. Type: text
 #. Description
@@ -1332,7 +1330,7 @@ msgstr ""
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:43001
 msgid "Find movies playing in nearby local cinemas"
-msgstr ""
+msgstr "A közeli mozikban játszott filmek keresése"
 
 #. Type: text
 #. Description
@@ -1417,6 +1415,8 @@ msgid ""
 "Themes can greatly improve the aesthetic appeal of a MythTV setup, and "
 "display it to match your tastes much better."
 msgstr ""
+"A témák jelentősen javíthatják a MythTV rendszer megjelenését és az "
+"ízlésének megfelelően jelenítik azt meg."
 
 #. Type: text
 #. Description
@@ -1425,7 +1425,7 @@ msgstr ""
 #: ../ubiquity-frontend-mythbuntu.templates:55001
 #: ../ubiquity-frontend-mythbuntu.templates:56001
 msgid "Enable/Disable All"
-msgstr ""
+msgstr "Összes engedélyezése/tiltása"
 
 #. Type: text
 #. Description
@@ -1589,4 +1589,15 @@ msgstr "A további kiszolgálók konfigurálása..."
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:78001
 msgid "Configuring infrared devices..."
-msgstr ""
+msgstr "Infravörös eszközök beállítása..."
+
+#~ msgid ""
+#~ "The file system on ${PARTITION} assigned to ${MOUNTPOINT} has not been "
+#~ "marked for formatting.  Directories containing system files (/boot, /"
+#~ "etc, /usr, /var, ...) that already exist under any defined mountpoint "
+#~ "will be deleted during the install."
+#~ msgstr ""
+#~ "A(z) ${MOUNTPOINT} csatolási ponthoz társított ${PARTITION} partíció "
+#~ "fájlrendszere nincs kijelölve formázásra. A megadott csatolási pontok "
+#~ "alatti meglévő, rendszerfájlokat tartalmazó könyvtárak (/boot, /etc, /"
+#~ "usr, /var) törlésre kerülnek a telepítés során."

@@ -2,7 +2,7 @@ apt-setup 1:0.31ubuntu7
 base-installer 1.86ubuntu2
 choose-mirror 2.19ubuntu5
 clock-setup 0.92ubuntu3
-console-setup 1.21ubuntu6
+console-setup 1.21ubuntu7
 debian-installer-utils 1.50ubuntu3
 grub-installer 1.27ubuntu6
 hw-detect 1.58ubuntu2
@@ -21,7 +21,7 @@ partman-jfs 25ubuntu1
 partman-newworld 18ubuntu1
 partman-partitioning 54ubuntu5
 partman-reiserfs 39ubuntu1
-partman-target 54ubuntu4
+partman-target 54ubuntu6
 partman-xfs 35ubuntu2
 silo-installer 1.12ubuntu1
 tzsetup 1:0.20

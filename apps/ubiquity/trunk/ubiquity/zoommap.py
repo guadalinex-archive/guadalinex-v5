@@ -27,6 +27,11 @@ from math import pi
 from gtk import gdk
 import ubiquity.tz
 
+# The width, in pixels, of the hover-to-move areas.
+MOTION_AREA = 50
+# The distance, in pixels, to step when moving.
+MOTION_STEP = 20
+
 if gtk.pygtk_version < (2, 8):
     print "PyGtk 2.8 or later required"
     raise SystemExit
@@ -46,7 +51,7 @@ class HotSpot:
         self.y = float(y)
         self.selected = False
         # FIXME evand 2008-02-18: something a bit more accurate.
-        self.width, self.height = (5, 5)
+        self.width, self.height = (50, 50)
 
 class ZoomMapWidget(gtk.Widget):
     __gsignals__ = {
@@ -69,6 +74,8 @@ class ZoomMapWidget(gtk.Widget):
         self.location_selected = None
         self.tzdb = ubiquity.tz.Database()
         self.lit = False
+        self.start_x = 0
+        self.start_y = 0
         
         timezone_city_combo = self.frontend.timezone_city_combo
 
@@ -103,7 +110,8 @@ class ZoomMapWidget(gtk.Widget):
 
         timezone_city_combo.connect("changed", self.city_changed)
         self.connect("button_release_event", self.button_release)
-        self.connect("motion_notify_event", self.motion_notify)
+        self.motion_notify_id = None
+        self.connect("enter_notify_event", self.enter_event)
         self.connect("leave_notify_event", self.leave_event)
         self.connect("map-event", self.mapped)
         self.connect("unmap-event", self.unmapped)
@@ -118,9 +126,93 @@ class ZoomMapWidget(gtk.Widget):
                 # before the epoch (http://python.org/sf/1646728).
                 self.frontend.timezone_time_text.set_text('<clock error>')
 
+    def scroll_map(self):
+        if not self.allocation:
+            return
+        x, y, w, h = self.allocation
+
+        left = right = bottom = top = False
+        if self.start_x >= 0:
+            self.start_x = 0
+        else:
+            left = True
+        if self.start_y >= 0:
+            self.start_y = 0
+        else:
+            top = True
+        map_w = self.big_pixbuf.get_width()
+        map_h = self.big_pixbuf.get_height()
+        if self.start_x <= (-map_w + w):
+            self.start_x = (-map_w + w)
+        else:
+            right = True
+        if self.start_y <= (-map_h + h):
+            self.start_y = (-map_h + h)
+        else:
+            bottom = True
+
+        self.zoom_window_alllocation = (0, 0, w, h)
+        self.map_window_alllocation = (-self.start_x, -self.start_y, w, h)
+        
+        cr = self.window.cairo_create()
+        self.context = cr
+        cr.set_source_pixbuf(self.big_pixbuf, self.start_x, self.start_y)
+        cr.paint()
+
+        cr.set_line_width(10)
+        cr.set_source_rgba(0.0, 0.0, 0.0, 0.5)
+        cr.set_line_join(cairo.LINE_JOIN_MITER)
+
+        if top:
+            cr.move_to((w/2)-10, 20)
+            cr.rel_line_to(10, -10)
+            cr.rel_line_to(10, 10)
+            cr.stroke()
+        if bottom:
+            cr.move_to((w/2)-10,h-20)
+            cr.rel_line_to(10, 10)
+            cr.rel_line_to(10, -10)
+            cr.stroke()
+        if left:
+            cr.move_to(20, (h/2)-10)
+            cr.rel_line_to(-10, 10)
+            cr.rel_line_to(10, 10)
+            cr.stroke()
+        if right:
+            cr.move_to(w-20, (h/2)-10)
+            cr.rel_line_to(10, 10)
+            cr.rel_line_to(-10, 10)
+            cr.stroke()
+
+        self.draw_hotspots()
+
     def timeout(self):
         self.update_current_time()
         self.blink()
+        if not self.cursor_x or not self.cursor_y:
+            return True
+        x, y, w, h = self.allocation
+        map_w = self.big_pixbuf.get_width()
+        map_h = self.big_pixbuf.get_height()
+        scrolling = False
+        # right
+        if w - self.cursor_x < MOTION_AREA and self.start_x > (-map_w + w):
+            self.start_x = self.start_x - MOTION_STEP
+            scrolling = True
+        # left
+        elif self.cursor_x < MOTION_AREA and self.start_x < 0:
+            self.start_x = self.start_x + MOTION_STEP
+            scrolling = True
+        # top
+        if self.cursor_y < MOTION_AREA and self.start_y < 0:
+            self.start_y = self.start_y + MOTION_STEP
+            scrolling = True
+        # bottom
+        elif h - self.cursor_y < MOTION_AREA and self.start_y > (-map_h + h):
+            self.start_y = self.start_y - MOTION_STEP
+            scrolling = True
+        if scrolling:
+            self.scroll_map()
         return True
 
     def mapped(self, widget, event):
@@ -132,9 +224,53 @@ class ZoomMapWidget(gtk.Widget):
             gobject.source_remove(self.update_timeout)
             self.update_timeout = None
 
+    def enter_timeout(self):
+        if not self.allocation:
+            return False
+        x, y, w, h = self.allocation
+        map_w = self.big_pixbuf.get_width()
+        map_h = self.big_pixbuf.get_height()
+        cursor_x, cursor_y = self.get_pointer()
+        if cursor_x >= 0 and cursor_x < w and cursor_y >= 0 and cursor_y < h:
+            self.cursor_x = cursor_x
+            self.cursor_y = cursor_y
+        else:
+            return False
+
+        if self.cursor_x < MOTION_AREA:
+            self.start_x = 0
+        elif w - self.cursor_x < MOTION_AREA:
+            self.start_x = (-map_w + w)
+        else:
+            map_x = 1.0 * self.cursor_x / w * map_w
+            map_x_offset = min(map_w - w / 2.0, max(map_x - w/2.0, 0.0)) - x
+            self.start_x = -map_x_offset
+        if self.cursor_y < MOTION_AREA:
+            self.start_y = 0
+        elif h - self.cursor_y < MOTION_AREA:
+            self.start_y = (-map_h + h)
+        else:
+            map_y = 1.0 * self.cursor_y / h * map_h
+            map_y_offset = min(map_h - h / 2.0, max(map_y - h/2.0, 0.0)) - y
+            self.start_y = -map_y_offset
+
+        if self.motion_notify_id is None:
+            self.motion_notify_id = self.connect("motion_notify_event",
+                                                 self.motion_notify)
+        self.scroll_map()
+        self.redraw_zoom_window()
+        return False
+
+    def enter_event(self, widget, event):
+        gobject.timeout_add(500, self.enter_timeout)
+        return True
+
     def leave_event(self, widget, event):
         self.cursor_x = None
         self.cursor_y = None
+        if self.motion_notify_id is not None:
+            self.disconnect(self.motion_notify_id)
+            self.motion_notify_id = None
         self.redraw_all()
 
     def load_pixmap(self, pixmap_filename):
@@ -142,10 +278,6 @@ class ZoomMapWidget(gtk.Widget):
             self.pixbuf = gtk.gdk.pixbuf_new_from_file(pixmap_filename)
         except:
             raise ZoomMapException("Cannot load the pixmap file %s" % pixmap_filename)
-        self.pixbuf = gtk.gdk.pixbuf_new_from_file(pixmap_filename)
-        # TODO evand 2008-03-11: re-investigate enlarging this.  Past testing
-        # has shown it to be too slow to be useful.
-        self.big_pixbuf = self.pixbuf
 
     def button_release(self,widget,event):
         self.hit_test(event.x, event.y)
@@ -176,6 +308,7 @@ class ZoomMapWidget(gtk.Widget):
             wclass=gdk.INPUT_OUTPUT,
             event_mask=self.get_events() |
                         gdk.EXPOSURE_MASK |
+                        gdk.ENTER_NOTIFY_MASK |
                         gdk.LEAVE_NOTIFY_MASK |
                         gdk.BUTTON_PRESS_MASK |
                         gdk.BUTTON_RELEASE_MASK |
@@ -197,38 +330,21 @@ class ZoomMapWidget(gtk.Widget):
             self.window.move_resize(*allocation)
         x,y,w,h = allocation
         self.small_pixbuf = self.pixbuf.scale_simple(w, h, gtk.gdk.INTERP_BILINEAR)
+        self.big_pixbuf = self.pixbuf.scale_simple(w * 4.5, h * 4.5, gtk.gdk.INTERP_BILINEAR)
 
     def do_expose_event(self, event):
         self.context = self.window.cairo_create()
         self.context.rectangle(event.area.x, event.area.y,
                            event.area.width, event.area.height)
         self.context.clip()
-        self.draw_all()
-
-    def draw_all(self):
-        if self.full_zoom:
-            self.draw_full_zoom()
-        else:
-            self.draw_map()
-            self.draw_zoom_window()
-        self.draw_hotspots()
-
-    def draw_full_zoom(self):
         if not self.cursor_x and not self.cursor_y:
             self.draw_map()
             return
-        cr = self.context
-        x, y, w, h = self.allocation
-        map_w = self.big_pixbuf.get_width()
-        map_h = self.big_pixbuf.get_height()
-        map_x = 1.0 * self.cursor_x / w * map_w
-        map_y = 1.0 * self.cursor_y / h * map_h
-        map_x_offset = min(map_w-w, max(map_x-w/2, 0.0))
-        map_y_offset = min(map_h-h, max(map_y-h/2, 0.0))
-        self.zoom_window_alllocation =  (0, 0, w, h)
-        self.map_window_alllocation =  (map_x_offset+x, map_y_offset+y, w, h)
-        cr.set_source_pixbuf(self.big_pixbuf, -map_x_offset, -map_y_offset)
-        cr.paint()
+        if not self.full_zoom:
+            self.draw_map()
+            self.draw_zoom_window()
+        else:
+            self.scroll_map()
 
     def draw_map(self):
         x, y, w, h = self.allocation
@@ -309,6 +425,29 @@ class ZoomMapWidget(gtk.Widget):
         cr.stroke_preserve()
         cr.clip()
 
+    def nearest_hotspot(self, cursor_x, cursor_y):
+        if not cursor_x or not cursor_y:
+            return None
+        x, y, w, h = self.allocation
+        map_w = self.big_pixbuf.get_width()
+        map_h = self.big_pixbuf.get_height()
+        min_x, min_y, max_w, max_h = self.map_window_alllocation
+        offset_x, offset_y, xx, yy = self.zoom_window_alllocation
+        best_hotspot = None
+        best_distance = None
+        for hotspot in self.hotspots:
+            x1 = map_w * hotspot.x
+            y1 = map_h * hotspot.y
+            x2 = offset_x + x1 - min_x
+            y2 = offset_y + y1 - min_y
+            if x1 < min_x or x1 > min_x + max_w or y1 < min_y or y1 > min_y + max_h: continue
+            if (abs(cursor_x - x2) < hotspot.width and abs(cursor_y - y2) < hotspot.height):
+                distance = ((cursor_x - x2) ** 2 + (cursor_y - y2) ** 2) ** 0.5
+                if best_distance is None or distance < best_distance:
+                    best_hotspot = hotspot
+                    best_distance = distance
+        return best_hotspot
+
     def draw_hotspots(self):
         if not self.cursor_x and not self.cursor_y: return
         x, y, w, h = self.allocation
@@ -317,7 +456,7 @@ class ZoomMapWidget(gtk.Widget):
         min_x, min_y, max_w, max_h = self.map_window_alllocation
         offset_x, offset_y, xx, yy = self.zoom_window_alllocation
         cr = self.context
-        selected = False
+        best_hotspot = self.nearest_hotspot(self.cursor_x, self.cursor_y)
         for hotspot in self.hotspots:
             x1 = map_w * hotspot.x
             y1 = map_h * hotspot.y
@@ -332,9 +471,8 @@ class ZoomMapWidget(gtk.Widget):
 
             if (self.location_selected and hotspot == self.location_selected):
                 cr.set_source_color(self.font_selected)
-            elif not selected or (abs(self.cursor_x - x2) < hotspot.width and abs(self.cursor_y - y2) < hotspot.height):
+            elif best_hotspot is not None and hotspot == best_hotspot:
                 cr.set_source_color(self.font_selected)
-                selected = True
             else:
                 cr.set_source_color(self.font_unselected)
             cr.arc(x2, y2, 1, 0, 2*pi)
@@ -342,26 +480,13 @@ class ZoomMapWidget(gtk.Widget):
             cr.stroke()
 
     def hit_test(self, cursor_x, cursor_y):
-        if not cursor_x or not cursor_y:
-            return
-        x, y, w, h = self.allocation
-        map_w = self.big_pixbuf.get_width()
-        map_h = self.big_pixbuf.get_height()
-        min_x, min_y, max_w, max_h = self.map_window_alllocation
-        offset_x, offset_y, xx, yy = self.zoom_window_alllocation
-        for hotspot in self.hotspots:
-            x1 = map_w * hotspot.x
-            y1 = map_h * hotspot.y
-            x2 = offset_x + x1 - min_x
-            y2 = offset_y + y1 - min_y
-            if x1 < min_x or x1 > min_x + max_w or y1 < min_y or y1 > min_y + max_h: continue
-            if (abs(cursor_x - x2) < hotspot.width and abs(cursor_y - y2) < hotspot.height):
-                if self.location_selected and hotspot == self.location_selected:
-                    continue
-                self.select_hotspot(hotspot)
-                self.set_city_text(hotspot.tz.zone)
-                self.set_zone_text(hotspot.tz)
-                break
+        best_hotspot = self.nearest_hotspot(cursor_x, cursor_y)
+        if best_hotspot is not None:
+            if (not self.location_selected or
+                best_hotspot != self.location_selected):
+                self.select_hotspot(best_hotspot)
+                self.set_city_text(best_hotspot.tz.zone)
+                self.set_zone_text(best_hotspot.tz)
 
     def select_hotspot(self, hotspot):
         if not isinstance(hotspot, HotSpot):

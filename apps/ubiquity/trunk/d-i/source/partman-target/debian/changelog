@@ -1,3 +1,17 @@
+partman-target (54ubuntu6) hardy; urgency=low
+
+  * Remove some mistakenly-placed po-debconf flags.
+  * Update translations of Ubuntu-specific strings from Launchpad.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 15 Apr 2008 01:12:54 +0100
+
+partman-target (54ubuntu5) hardy; urgency=low
+
+  * Backed out check.d/12partitions_formatted.  Moved the ubiquity version
+    into partman-target.
+
+ -- Evan Dandrea <evand@ubuntu.com>  Mon, 14 Apr 2008 16:20:45 -0400
+
 partman-target (54ubuntu4) hardy; urgency=low
 
   * Whitelist /usr/local in clear_partitions (LP: #200582).
