@@ -1,0 +1,4 @@
+desktop/ubiquity-kdeui.desktop usr/share/applications/kde
+ubiquity/frontend/kde_ui.py usr/lib/ubiquity/ubiquity/frontend
+ubiquity/frontend/PartitionsBarKde.py usr/lib/ubiquity/ubiquity/frontend
+gui/qt/*.ui usr/share/ubiquity/qt

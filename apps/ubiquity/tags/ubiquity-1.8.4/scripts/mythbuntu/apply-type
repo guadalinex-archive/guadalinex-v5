@@ -1,0 +1,365 @@
+#! /bin/sh -e
+#Passes on the information gathered in ubiquity
+#about mythtv package variable
+# Written by Mario Limonciello <superm1@ubuntu.com>
+# Copyright (C) 2007 Mario Limonciello
+# Copyright (C) 2007 Jared Greenwald
+
+. /usr/share/debconf/confmodule
+
+if [ "$1" ]; then
+    ROOT="$1"
+    chroot=chroot
+    log='log-output -t mythbuntu'
+else
+    ROOT=
+    chroot=
+    log=
+fi
+
+mythtv_common()
+{
+    # Prepare mythtv-common
+    # And copy over env as needed
+    db_get mythtv/mysql_mythtv_user
+    USER="$RET"
+    db_get mythtv/mysql_mythtv_password
+    PASSWORD="$RET"
+    if [ -z "$PASSWORD" ]; then
+        #in case the password screen isn't shown
+        #or if they forget to enter one
+        set +e
+        PASSWORD="$(pwgen -s 8)"
+        set -e
+    fi
+    db_get mythtv/mysql_mythtv_dbname
+    DB="$RET"
+    db_get mythtv/mysql_host
+    HOSTNAME="$RET"
+    if [ -z "$HOSTNAME" ]; then
+        HOSTNAME="localhost"
+    fi
+    cat <<EOF >$ROOT/tmp/myth_setup
+#! /bin/sh
+set -e
+
+. /usr/share/debconf/confmodule
+db_set mythtv/mysql_mythtv_user $USER
+db_set mythtv/mysql_mythtv_password $PASSWORD
+db_set mythtv/mysql_mythtv_dbname $DB
+db_set mythtv/mysql_host $HOSTNAME
+
+cat /etc/mythtv/mysql.txt | grep -v 'DBPassword=' | sed -e "
+s/^\(\(str  *\)\?DBHostName\)=.*$/\1=$HOSTNAME/g;
+s/^\(\(str  *\)\?DBUserName\)=.*$/\1=$USER/g;
+s/^\(\(str  *\)\?DBName\)=.*$/\1=$DB/g;" > /etc/mythtv/mysql.txt.dist
+cat <<EOF2 >> /etc/mythtv/mysql.txt.dist
+DBPassword=$PASSWORD
+EOF2
+mv /etc/mythtv/mysql.txt.dist /etc/mythtv/mysql.txt
+chmod ug+rw /etc/mythtv/mysql.txt
+chown mythtv:mythtv /etc/mythtv/mysql.txt
+exit 0
+EOF
+    chmod +x $ROOT/tmp/myth_setup
+    $log $chroot $ROOT /tmp/myth_setup
+    rm $ROOT/tmp/myth_setup
+}
+
+grabuser()
+{
+    db_get passwd/username
+    USER=$RET
+
+    #prep symbolic link to prevent mishaps from $ROOT/home/$USER/.mythtv/mysql.txt
+    if [ -e $HOME/.mythtv/mysql.txt ]; then
+        rm $ROOT/home/$USER/.mythtv/mysql.txt -f
+    fi
+    mkdir -p $ROOT/home/$USER/.mythtv
+    ln -s /etc/mythtv/mysql.txt $ROOT/home/$USER/.mythtv/mysql.txt
+
+    #Configure automatic login
+    sed '/AutomaticLogin=/ c\AutomaticLogin='$USER'
+    /AutomaticLoginEnable=/ c\AutomaticLoginEnable='true'
+    /TimedLoginEnable=/ c\TimedLoginEnable='true'
+    /TimedLogin=/ c\TimedLogin='$USER'' $ROOT/etc/gdm/gdm-cdd.conf | tee $ROOT/etc/gdm/gdm-cdd.conf.NEW > /dev/null
+    mv $ROOT/etc/gdm/gdm-cdd.conf.NEW $ROOT/etc/gdm/gdm-cdd.conf
+    mkdir $ROOT/home/$USER/.config/autostart -p
+
+    #Only setup autostart if it wasn't already setup (From a previous install's home directory)
+    ln -s /usr/share/applications/mythtv.desktop $ROOT/home/$USER/.config/autostart 2>/dev/null || true
+
+    #Fix up permissions as necessary
+    if db_get passwd/user-uid && [ "$RET" ]; then
+        UID=$RET
+    else
+        UID=1000
+    fi
+    if db_get passwd/user-gid && [ "$RET" ]; then
+        GID=$RET
+    else
+        GID=1000
+    fi
+    chown $UID:$GID $ROOT/home/$USER/.config -R
+    chown $UID:$GID $ROOT/home/$USER/.mythtv -R
+}
+
+mythtv_db()
+{
+    LOCALHOSTNAME=`cat $ROOT/etc/hostname`
+    MYSQL="/usr/share/mythtv/sql/mythtv_0.21.0.sql"
+    cat <<DBSETUP >$ROOT/tmp/db_setup
+#!/bin/sh
+#Sets up mythtv-database on a new mythbuntu
+#installation
+#Copyright (C) 2007 Mario Limonciello
+
+escape_quotes() {
+    cat <<EOF | sed -e "s/'/\\\\\\\\'/g"
+\$1
+EOF
+}
+
+DoSQL() {
+    local host="\$1"
+    local ADMINUSER="\$2"
+    local ADMINPASS="\$3"
+    local DB="\$4"
+    local statement="\`escape_quotes \"\$5\"\`"
+    local tmp=\`tempfile -m 600\`
+    cat <<EOF >\$tmp
+\$ADMINPASS
+EOF
+    perl -e "
+use DBI;
+chomp(\\\$password=<>);
+@statements=split(/;/, '\$statement');
+\\\$db = DBI->connect('dbi:mysql:host=\$host;database=\$DB',
+                    '\$ADMINUSER', \\\$password,
+                    { PrintError => 0 }) || die 'Failed to connect to DB: ' . \\\$DBI::errstr;
+for \\\$s (@statements) { \\\$db->do(\\\$s) || die 'Failed to execute SQL: ' . \\\$s . '\n' . \\\$DBI::errstr; }
+" < \$tmp
+    ret=\$?
+    rm -f \$tmp
+    return \$ret
+}
+
+#Start SQL
+/etc/init.d/mysql start
+
+#Set our new defaults that were determined to debconf
+. /usr/share/debconf/confmodule
+
+#Setup the mysql server with the new root password
+db_set mythtv/mysql_admin_user $ADMINUSER
+if [ ! -z "$ADMINPASS" ]; then
+    db_set mythtv/mysql_admin_password $ADMINPASS
+    DoSQL "$HOSTNAME" "$ADMINUSER" "" "" "SET PASSWORD FOR root@localhost=PASSWORD('$ADMINPASS')"
+fi
+
+#Setup the mysql server with the new mythtv db defaults
+DoSQL "$HOSTNAME" "$ADMINUSER" "$ADMINPASS" "" "CREATE DATABASE $DB"
+DoSQL "$HOSTNAME" "$ADMINUSER" "$ADMINPASS" "$DB" "GRANT ALL PRIVILEGES ON $DB.* TO $USER@localhost IDENTIFIED BY '$PASSWORD'"
+DoSQL "$HOSTNAME" "$ADMINUSER" "$ADMINPASS" "$DB" "GRANT ALL PRIVILEGES ON $DB.* TO $USER@'%' IDENTIFIED BY '$PASSWORD'"
+
+#Setup database
+if [ "$ADMINPASS" != "" ]; then
+    mysql -h $HOSTNAME -u $ADMINUSER -p$ADMINPASS $DB < $MYSQL
+else
+    mysql -h $HOSTNAME -u $ADMINUSER $DB < $MYSQL
+fi
+
+#Setup theme
+DoSQL "$HOSTNAME" "$ADMINUSER" "$ADMINPASS" "$DB" "INSERT INTO $DB.settings (data,hostname,value) VALUES ('Mythbuntu', '$HOSTNAME', 'Theme')"
+DoSQL "$HOSTNAME" "$ADMINUSER" "$ADMINPASS" "$DB" "INSERT INTO $DB.settings (data,hostname,value) VALUES ('Mythbuntu', '$LOCALHOSTNAME', 'Theme')"
+
+#Stop SQL
+/etc/init.d/mysql stop
+DBSETUP
+    chmod +x $ROOT/tmp/db_setup
+    mount -t proc none $ROOT/proc
+    $log $chroot $ROOT /tmp/db_setup
+    umount $ROOT/proc
+    rm $ROOT/tmp/db_setup
+}
+
+setup_mythweb()
+{
+    MYTHWEBCONF=$ROOT/usr/share/mythtv/mythweb/mythweb.conf.apache
+    NEW=$ROOT/etc/apache2/sites-available/mythweb.conf
+    cat $MYTHWEBCONF | sed -e "
+s/\(^[ \t]*setenv[ \t]\+db_server[ \t]\+\"\)[^\"]*\"/\1$HOSTNAME\"/g;
+s/\(^[ \t]*setenv[ \t]\+db_name[ \t]\+\"\)[^\"]*\"/\1$DB\"/g;
+s/\(^[ \t]*setenv[ \t]\+db_login[ \t]\+\"\)[^\"]*\"/\1$USER\"/g;
+s/\(^[ \t]*setenv[ \t]\+db_password[ \t]\+\"\)[^\"]*\"/\1$PASSWORD\"/g;
+    " > $NEW
+}
+
+secure_mythweb()
+{
+    DIGEST=$ROOT/etc/mythtv/mythweb-digest
+    NEW=${DIGEST}.new
+    cat $DIGEST | sed -e "
+s/\#    AuthType/AuthType/;
+s/^\#    AuthName/AuthName/;
+s/^\#    AuthUserFile/AuthUserFile/;
+s/^\#    Require/Require/;
+s/^\#    BrowserMatch/BrowserMatch/;
+s/^\#    Order/Order/;
+s/^\#    Satisfy/Satisfy/;
+s/\/var\/www\/htdigest/\/etc\/mythtv\/mythweb-digest/;
+    " > $NEW
+    mv $NEW $DIGEST
+
+    $log $chroot $ROOT a2enmod auth_digest
+
+    # create htdigest file create password hash thanks to
+    # http://trac.lighttpd.net/trac/wiki/Docs:ModAuth :)
+    HASH=`echo -n ${MYTHWEB_USER}:MythTV:${MYTHWEB_PASS} | md5sum | cut -b -32` || true
+    echo ${MYTHWEB_USER}:MythTV:${HASH} > $ROOT/etc/mythtv/mythweb-digest
+    chown mythtv:www-data $ROOT/etc/mythtv/mythweb-digest
+    chmod 640 $ROOT/etc/mythtv/mythweb-digest
+}
+
+add_groups()
+{
+    #Add the user to the mythtv group
+    db_get passwd/username
+    NORMALUSER="$RET"
+    $log $chroot $ROOT adduser "$NORMALUSER" mythtv >/dev/null 2>&1 || true
+}
+
+fix_init_scripts()
+{
+    cat <<FIXINIT > $ROOT/tmp/fix_init_scripts
+#!/bin/sh
+# Setup mysql services to start on boot - stop on halt/reboot
+update-rc.d ntp defaults
+update-rc.d mysql defaults
+update-rc.d samba defaults
+update-rc.d apache2 defaults
+update-rc.d mythtv-backend defaults
+update-rc.d ssh defaults
+FIXINIT
+    chmod +x $ROOT/tmp/fix_init_scripts
+    $log $chroot $ROOT /tmp/fix_init_scripts
+    rm $ROOT/tmp/fix_init_scripts
+}
+
+setup_theme()
+{
+    #Sets up the theme to be the Mythbuntu theme
+    #by default
+
+    #pull in username info for mysql db
+    db_get mythtv/mysql_mythtv_user
+    USER="$RET"
+    db_get mythtv/mysql_mythtv_password
+    PASSWORD="$RET"
+    if [ -z "$PASSWORD" ]; then
+        #in case the password screen isn't shown
+        #or if they forget to enter one
+        set +e
+        PASSWORD="$(pwgen -s 8)"
+        set -e
+    fi
+    db_get mythtv/mysql_mythtv_dbname
+    DB="$RET"
+    db_get mythtv/mysql_host
+    HOSTNAME="$RET"
+
+    #Figure out our local hostname
+    LOCALHOSTNAME=`cat $ROOT/etc/hostname`
+
+    cat <<THEME >$ROOT/tmp/theme
+#!/bin/sh
+#Prepares the theme to be the Mythbuntu theme
+#For non master be installs
+#Copyright (C) 2007 Mario Limonciello
+
+escape_quotes() {
+    cat <<EOF | sed -e "s/'/\\\\\\\\'/g"
+\$1
+EOF
+}
+
+DoSQL() {
+    local host="\$1"
+    local ADMINUSER="\$2"
+    local ADMINPASS="\$3"
+    local DB="\$4"
+    local statement="\`escape_quotes \"\$5\"\`"
+    local tmp=\`tempfile -m 600\`
+    cat <<EOF >\$tmp
+\$ADMINPASS
+EOF
+    perl -e "
+use DBI;
+chomp(\\\$password=<>);
+@statements=split(/;/, '\$statement');
+\\\$db = DBI->connect('dbi:mysql:host=\$host;database=\$DB',
+                    '\$ADMINUSER', \\\$password,
+                    { PrintError => 0 }) || die 'Failed to connect to DB: ' . \\\$DBI::errstr;
+for \\\$s (@statements) { \\\$db->do(\\\$s) || die 'Failed to execute SQL: ' . \\\$s . '\n' . \\\$DBI::errstr; }
+" < \$tmp
+    ret=\$?
+    rm -f \$tmp
+    return \$ret
+}
+
+#Setup theme
+DoSQL "$HOSTNAME" "$USER" "$PASSWORD" "$DB" "INSERT INTO $DB.settings (data,hostname,value) VALUES ('Mythbuntu', '$LOCALHOSTNAME', 'Theme')"
+THEME
+    chmod +x $ROOT/tmp/theme
+    mount -t proc none $ROOT/proc
+    $log $chroot $ROOT /tmp/theme
+    umount $ROOT/proc
+    rm $ROOT/tmp/theme
+}
+
+#Commonly used across any setup
+mythtv_common
+add_groups
+fix_init_scripts
+#Only used on backend
+db_get mythbuntu/install_type
+TYPE="$RET"
+if [ "$TYPE" = "Master Backend/Frontend" ] || [ "$TYPE" = "Master Backend" ] || [ "$TYPE" = "Slave Backend/Frontend" ] || [ "$TYPE" = "Slave Backend" ]; then
+    if [ "$TYPE" = "Master Backend/Frontend" ] || [ "$TYPE" = "Master Backend" ]; then
+        #Check for needing to set up a DB too
+        #If so - do it
+        db_get mythtv/mysql_admin_user
+        ADMINUSER="$RET"
+        db_get mythtv/mysql_admin_password
+        ADMINPASS="$RET"
+        db_get mythtv/mysql_mythtv_user
+        mythtv_db
+    else
+        setup_theme
+    fi
+    #Mythweb is actually enabled
+    db_get mythbuntu/mythweb
+    MYTHWEB="$RET"
+    if [ "$MYTHWEB" = true ]; then
+        setup_mythweb
+        #Check if we need security turned on
+        db_get mythweb/enable
+        AUTHENABLE="$RET"
+        if [ "$AUTHENABLE" = true ]; then
+            db_get mythweb/username
+            MYTHWEB_USER="$RET"
+            db_get mythweb/password
+            MYTHWEB_PASS="$RET"
+            secure_mythweb
+        fi
+    fi
+else
+    setup_theme
+fi
+
+if [ "$TYPE" = "Master Backend/Frontend" ] || [ "$TYPE" = "Slave Backend/Frontend" ] || [ "$TYPE" = "Frontend" ]; then
+    #Replace Auto-login with user specified at install time
+    grabuser
+fi
+
+exit 0

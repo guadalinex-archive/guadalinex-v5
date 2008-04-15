@@ -1,0 +1,22 @@
+#!/bin/sh -e
+#Provides all mythbuntu questions asked by
+#ubiquity during install process
+# Written by Mario Limonciello <superm1@ubuntu.com>
+# Copyright (C) 2007-2008 Mario Limonciello
+# Copyright (C) 2007 Jared Greenwald
+
+. /usr/share/debconf/confmodule
+
+#remote controls
+db_input high lirc/remote || true
+db_input high lirc/remote_lircd_conf || true
+db_input high lirc/remote_modules || true
+db_input high lirc/remote_driver || true
+db_input high lirc/remote_device || true
+
+#transmitter controls
+db_input high lirc/transmitter || true
+db_input high lirc/transmitter_lircd_conf || true
+db_input high lirc/transmitter_modules || true
+db_input high lirc/transmitter_driver || true
+db_input high lirc/transmitter_device || true

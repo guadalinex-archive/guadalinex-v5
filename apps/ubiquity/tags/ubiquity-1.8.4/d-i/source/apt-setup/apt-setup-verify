@@ -1,0 +1,102 @@
+#!/bin/sh
+# verify and optionally save out the file
+set -e
+
+ASV_TIMEOUT="${ASV_TIMEOUT:--o Acquire::http::Timeout=10}"
+
+NL="
+"
+
+NOTEST=""
+if [ "$1" = "--invalid" ]; then
+	NOTEST=1
+	shift
+fi
+
+file="$1"
+saveto="$2"
+
+logoutput=""
+if [ "$CATCHLOG" ]; then
+	logoutput="log-output -t apt-setup"
+fi
+
+chroot=
+if [ "$ROOT" ]; then
+	chroot=chroot
+fi
+
+saveline () {
+	if [ "$saveto" ]; then
+		echo "$*" >> $saveto
+	fi
+}
+
+valid () {
+	line="$1"
+
+	[ "${line%%:*}" != "deb cdrom" ] || return 0
+
+	# Ubuntu change: network sources are always valid; apt will cope
+	# gracefully later, even though the network may not be available
+	# now.
+	return 0
+
+	tmp=$($chroot $ROOT tempfile)
+	echo "$line" > $ROOT$tmp
+	
+	if $logoutput $chroot $ROOT apt-get -o APT::Get::List-Cleanup=false \
+		-o Dir::Etc::sourcelist=$tmp $ASV_TIMEOUT update
+	then
+		rm -f $ROOT$tmp
+	else
+		rm -f $ROOT$tmp
+		false
+	fi
+}
+
+# Ubuntu change: need to run apt-get update for everything in one go here,
+# since we've disabled the run in the valid function above. Doing everything
+# in one go also allows apt-get to cache resolver failures and connection
+# timeouts and so be significantly faster when the network is unavailable.
+tmp=$($chroot $ROOT tempfile)
+cat "$file" > $ROOT$tmp
+$logoutput $chroot $ROOT apt-get -o APT::Get::List-Cleanup=false \
+	-o Dir::Etc::sourcelist=$tmp $ASV_TIMEOUT update || true
+rm -f $ROOT$tmp
+
+items=0
+gooditems=0
+
+OLDIFS="$IFS"
+IFS="$NL"
+# Can't just iterate over $(cat $file) because that kills newlines, so
+# introduce a dummy colon.
+for line in $(sed 's/^/:/' $file); do
+	IFS="$OLDIFS"
+	line="${line#:}"
+	if expr "$line" : '.*[^ ].*' >/dev/null && [ "$(expr "$line" : "#")" != 1 ]; then
+		items=$(expr "$items" + 1)
+		# Write blank line between generators
+		if [ $items = 1 ] && [ -f "$saveto" ]; then
+			saveline ""
+		fi
+
+		if [ -z "$NOTEST" ] && valid "$line"; then
+			gooditems=$(expr "$gooditems" + 1)
+			saveline "$line"
+		else
+			saveline "# Line commented out by installer because it failed to verify:"
+			saveline "#$line"
+		fi
+	else
+		# Ignore leading empty lines
+		if [ $items != 0 ] || [ "$line" ]; then
+			saveline "$line"
+		fi
+	fi
+done
+
+if [ "$gooditems" != "$items" ]; then
+	exit 1
+fi
