@@ -18,7 +18,7 @@ Ubuntu 4.10. From Ubuntu 4.10 to Ubuntu 5.10, d-i was used as the primary
 installation program.
 
 d-i continues to provide flexibility and (for a certain significant class of
-users) ease of use that a simplified graphical installer will always be
+users) ease of use that a simplified graphical installer will always be 
 hard-pushed to provide. It is therefore important to continue to support it
 in Ubuntu. From a maintainability point of view, it follows that it is
 important for any graphical installer supported by Ubuntu to share
