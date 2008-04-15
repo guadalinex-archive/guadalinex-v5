@@ -1,20 +1,8 @@
 # Listado de paquetes. Enumerados con guiones
 packages:
-    - obexserver
-    - bluez-utils
-    - gnome-bluetooth
-    - bluez-passkey-gnome
-
+    - bluez-gnome
+    - obex-data-server
 
 # Listado de aplicaciones a lanzar cuando se conecte
 conn_commands:
-    - hciconfig hci0 inqmode 0 &
-    - gnome-obex-server &
-    - bt-applet &
-
-
-# Listado de comandos a lanzar cuando se desconecte
-disconn_commands:
-    - pkill -15 gnome-bluetooth
-    - pkill -15 bt-applet
-
+    - pidof bluetooth-applet || bluetooth-applet &
