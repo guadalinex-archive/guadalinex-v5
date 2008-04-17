@@ -1,0 +1,9 @@
+#!/bin/sh
+#DEBHELPER#
+
+rm -f /etc/firefox-3.0/pref/firefox.js
+dpkg-divert --package guadalinex-eadmin --rename --quiet --remove /etc/firefox-3.0/pref/firefox.js
+rm -f /usr/share/applications/gscriptor.desktop
+dpkg-divert --package guadalinex-eadmin --rename --quiet --remove /usr/share/applications/gscriptor.desktop
+
+/usr/share/guadalinex-eadmin/restore_default_session.py

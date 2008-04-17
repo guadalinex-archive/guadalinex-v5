@@ -1,0 +1,16 @@
+Source: guadalinex-eadmin
+Section: misc
+Priority: optional
+Maintainer: J. Félix Ontañón <fontanon@emergya.es>
+Build-Depends: debhelper (>> 3.0.0), libnspr4-dev, libnss3-dev
+Standards-Version: 3.7.3
+
+Package: guadalinex-eadmin
+Architecture: i386
+Pre-Depends: 
+Depends: ${shlibs:Depends}, libnss3-0d, libnss3-tools, opensc-dnie, opensc-ceres, mozilla-opensc, opensc, pinentry-gtk2, libssl-dev, pcscd, pcsc-tools, openct, libccid, firefox, getatr, guadalinex-hipath-sicurity-card-api, python
+Conflicts: 
+Description: E-Admin support for Guadalinex 
+ This package add support for different hardware and software systems
+ needed to communicate with the electronic administration systems 
+ of Andalucía.

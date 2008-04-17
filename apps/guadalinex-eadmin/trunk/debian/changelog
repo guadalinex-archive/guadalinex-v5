@@ -1,0 +1,25 @@
+guadalinex-eadmin (v5-0.1) hardy; urgency=low
+
+  * Initial gv5 release 
+  * Some source-package fixes 
+  * Removed libccid_Info.plist.gv4
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Wed, 16 Apr 2008 17:50:43 +0100
+
+
+guadalinex-eadmin (r1760-0.1) edgy; urgency=low
+
+  * Non-maintainer upload
+  * Added support for Siemens smartcards and multiple cards at same time
+  * Added python dependence 
+  * Source-Package not builded with gcs
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Fri, 21 Dec 2007 08:51:03 +0200
+
+
+guadalinex-eadmin (r1760) edgy; urgency=low 
+
+  * Added libnss3-0d and libnss3-tools dependencies
+  * Initial release
+
+ -- Lorenzo Gil Sanchez <lgs@yaco.es>  Mon, 15 Oct 2007 08:55:47 +0200
