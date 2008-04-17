@@ -89,7 +89,7 @@ function clean ()
     #read ret
     #case $ret in
     #    y|Y)
-            rm -vfr ${sources_dir}
+            rm -fr ${sources_dir}
     #        rm -vfr ${live_dir}
             echo "Dirs deleted."
     #        ;;
