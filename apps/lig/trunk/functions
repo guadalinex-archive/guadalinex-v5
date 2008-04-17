@@ -85,19 +85,19 @@ function clean ()
 
     echo "These dirs will be deleted:"
     echo "debootsrap dir and squashfs."
-    echo "Do you really want to do that? (Y/N)"
-    read ret
-    case $ret in
-        y|Y)
+    #echo "Do you really want to do that? (Y/N)"
+    #read ret
+    #case $ret in
+    #    y|Y)
             rm -vfr ${sources_dir}
-            rm -vfr ${live_dir}
+    #        rm -vfr ${live_dir}
             echo "Dirs deleted."
-            ;;
-        *)
-            echo "Operation canceled"
-            ;;
-    esac
-    exit 3
+    #        ;;
+    #    *)
+    #        echo "Operation canceled"
+    #        ;;
+    #esac
+    #exit 3
 
 }
 
@@ -544,6 +544,8 @@ function install_image ()
 {
 
     # prepare the system
+
+    clean
     
     check_dirs
 
