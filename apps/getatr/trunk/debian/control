@@ -1,0 +1,15 @@
+Source: getatr
+Section: utils
+Priority: extra
+Maintainer: J. Félix Ontañón <fontanon@emergya.es>
+Build-Depends: debhelper (>= 5), libpcsclite-dev (>= 1.4.99)
+Standards-Version: 3.7.3
+
+Package: getatr
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: pcsc-tool
+Description: PS/SC scanning of smartcards and readers
+ Scans and print aviable smartcard and readers
+ .
+ Totally based in pcsc_scan from pcsc-tools
