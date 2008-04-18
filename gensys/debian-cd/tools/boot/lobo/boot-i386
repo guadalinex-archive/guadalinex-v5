@@ -100,6 +100,9 @@ if [ "$NN" = "1" ]; then
 	then
 		echo "Patching language..."
 		cp usr/share/$GFXBOOT_PKG/lang boot$N/isolinux/lang
+		FECHA=`date +%d/%m/%Y`
+		sed -i 's/__FECHA__/'"$FECHA"'/g' boot$N/isolinux/es.hlp.live
+		sed -i 's/__FECHA__/'"$FECHA"'/g' boot$N/isolinux/es.hlp
 	fi
 	GFXBOOT=1
     fi
