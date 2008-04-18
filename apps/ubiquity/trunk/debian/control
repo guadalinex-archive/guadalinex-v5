@@ -61,6 +61,14 @@ Description: KDE frontend for Ubiquity live installer
  This package provides a KDE-based user interface frontend for the Ubiquity
  live CD installer.
 
+Package: ubiquity-guadalinex-lang
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, ubiquity
+Provides: ubiquity-frontend-${source:Version}
+XB-Python-Version: ${python:Versions}
+Description: Translations of ubiquity
+ Text translated in ubiquity installer.
+
 Package: ubiquity-frontend-mythbuntu
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, ubiquity, ubiquity-frontend-gtk, restricted-manager, mythtv-common, python-mysqldb, expect, guidance-backends, vnc4-common, lirc (>= 0.8.2-0ubuntu3), mythbuntu-common
