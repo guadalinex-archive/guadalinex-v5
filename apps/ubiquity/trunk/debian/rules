@@ -126,6 +126,9 @@ else
 	dh_install
 endif
 endif
+	# include Guadalinex ubiquity introduction message
+	mkdir -p $(CURDIR)/debian/ubiquity-guadalinex-lang/usr/share/ubiquity/
+	cp intro.txt.es_ES      $(CURDIR)/debian/ubiquity-guadalinex-lang/usr/share/ubiquity
 
 	# Bits of manual installation that can't be done by dh_install
 	
