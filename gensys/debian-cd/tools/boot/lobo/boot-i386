@@ -95,14 +95,12 @@ if [ "$NN" = "1" ]; then
     if THEMEDEB="$($BASEDIR/tools/apt-selection cache show $GFXBOOT_PKG)"; then
 	THEMEDEB="$(echo "$THEMEDEB" | grep ^Filename | awk '{print $2}')"
 	ar p "$MIRROR/$THEMEDEB" data.tar.gz | tar zxf - -C . ./usr/share/$GFXBOOT_PKG/bootlogo.tar.gz
+	ar p "$MIRROR/$THEMEDEB" data.tar.gz | tar zxf - -C . ./usr/share/$GFXBOOT_PKG/lang
 	tar zxf usr/share/$GFXBOOT_PKG/bootlogo.tar.gz -C boot$N/isolinux
 	if [ "$PROJECT" = guadalinex ]
 	then
 		echo "Patching language..."
 		cp usr/share/$GFXBOOT_PKG/lang boot$N/isolinux/lang
-		FECHA=`date +%d/%m/%Y`
-		sed -i 's/__FECHA__/'"$FECHA"'/g' boot$N/isolinux/es.hlp.live
-		sed -i 's/__FECHA__/'"$FECHA"'/g' boot$N/isolinux/es.hlp
 	fi
 	GFXBOOT=1
     fi
@@ -171,6 +169,11 @@ rm -rf $CDDIR/install/boot
 # Isolinux help files come from d-i.
 cat cdrom/debian-cd_info.tar.gz | (cd boot$N/isolinux/; tar zx)
 # Override splash screen.
+
+FECHA=`date +%d-%m-%Y`
+sed -i 's/__FECHA__/'"$FECHA"'/g' boot$N/isolinux/es.hlp.live
+sed -i 's/__FECHA__/'"$FECHA"'/g' boot$N/isolinux/es.hlp
+
 if [ "$SPLASHRLE" ] && [ -e "$SPLASHRLE" ]; then
     cp -p "$SPLASHRLE" boot$N/isolinux/splash.rle
 fi
