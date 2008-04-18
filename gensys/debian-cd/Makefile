@@ -141,6 +141,7 @@ add_live_filesystem=$(BASEDIR)/tools/add_live_filesystem
 add_winfoss=$(BASEDIR)/tools/add_winfoss
 find_newest_installer=$(BASEDIR)/tools/find-newest-installer
 verbose=$(BASEDIR)/tools/verbose_command
+guadalinex_sup=$(BASEDIR)/tools/guadalinex_sup
 
 BDIR=$(TDIR)/$(CODENAME)-$(FULLARCH)
 ADIR=$(APTTMP)/$(CODENAME)-$(FULLARCH)
@@ -350,9 +351,13 @@ correctstatus: status apt-update
 	$(Q)$(apt) check
 
 apt-update: status
-	@echo "Apt-get is updating his files ..."
+        @echo "Apt-get is updating his files ..."
 	$(Q)$(apt) update
 
+guadalinex_supplement: 
+# hack to add Guadalinex supplement
+        @echo "Adding supplement to Guadalinex CD ..."
+        $(Q)$(guadalinex_sup)
 
 ## GENERATING LISTS ##
 
@@ -1177,7 +1182,7 @@ update-popcon:
 
 # Little trick to simplify things
 official_images: bin-official_images src-official_images
-bin-official_images: ok bootable upgrade app-install bin-images
+bin-official_images: ok bootable upgrade app-install guadalinex_supplement bin-images
 src-official_images: ok src-doc src-images
 
 $(CODENAME)_status: ok init

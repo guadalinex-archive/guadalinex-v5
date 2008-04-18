@@ -1,0 +1,17 @@
+#!/bin/bash -x
+
+# guadalinex "supplement" generator
+
+BDIR=$TDIR/$CODENAME-$FULLARCH
+
+rm -fr $BDIR/CD1/pool/*
+rm -fr $BDIR/CD1/dist/*
+
+if [ "$SUPPLEMENT" != "" ]; then
+    if [ -d $CDIMAGE_ROOT/supplement/$SUPPLEMENT ]; then
+        cp -a $CDIMAGE_ROOT/supplement/$SUPPLEMENT/pool/* $BDIR/CD1/pool/
+        cp -a $CDIMAGE_ROOT/supplement/$SUPPLEMENT/dists/* $BDIR/CD1/dists/
+        cp -a $CDIMAGE_ROOT/supplement/$SUPPLEMENT/guadalinex-suplementos-apps $BDIR/CD1/
+        cp -a $CDIMAGE_ROOT/supplement/$SUPPLEMENT/README.diskdefines $BDIR/CD1/
+    fi
+fi
