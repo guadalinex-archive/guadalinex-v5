@@ -85,7 +85,7 @@ class GCSBuild(BuildPkg):
 class CheckBuildDeps(ShellCommand):
     """Run pbuilder-satisfydepends to supply the requiered build dependences"""
     name = "CheckBuildDeps"
-    command = ["sudo /usr/lib/pbuilder/pbuilder-satisfydepends"]
+    command = ["sudo", "/usr/lib/pbuilder/pbuilder-satisfydepends"]
     description = [name]
 
     def __init__(self, **kwargs):

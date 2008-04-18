@@ -35,18 +35,22 @@ gcs_dir = "gcs"
 #hace que buildbot la gestione automáticamente.
 apps=[
         "amigu",
+	"buildbotdummy",
         "casper-guada",
         "escritorio-movistar",
         "g3g",
         "gcs",
         "gfxboot-theme-guada",
+	"getatr",
 	"guadafox",
+	"guadalinex-eadmin",
         "guadalinex-keyring",
         "guadalinex-supplement-generator",
         "guadalinex-supplement-installer",
         "hermes",
         "lemurae",
         "lig",
+	"ubiquity",
         "usplash-theme-guadalinex",
         "vodafone-mobile-connect-card-driver-for-linux",
 ]
