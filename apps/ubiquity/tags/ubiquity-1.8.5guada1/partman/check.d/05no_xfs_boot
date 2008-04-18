@@ -1,0 +1,40 @@
+#! /bin/sh
+# grub does not work with /boot on xfs. Detect and warn.
+
+. /usr/share/debconf/confmodule
+
+ARCH="$(udpkg --print-architecture)"
+case $ARCH in
+	amd64|i386)
+		;;
+	*)
+		exit 0
+		;;
+esac
+
+get_xfs_root_boot () {
+	(for i in /lib/partman/fstab.d/*; do
+		[ -x "$i" ] || continue
+		$i
+	done) | 
+	while read fs mp type options dump pass; do
+		if [ "$mp" = / ]; then
+			echo root_type=$type
+		elif [ "$mp" = /boot ]; then
+			echo boot_type=$type
+		fi
+	done
+}
+eval "$(get_xfs_root_boot)"
+
+if [ "$boot_type" = xfs ] || \
+   ([ -z "$boot_type" ] && [ "$root_type" = xfs ]); then
+	db_input critical grub-installer/install_to_xfs || true
+	db_go || exit 1
+	db_get grub-installer/install_to_xfs
+	if [ "$RET" = false ]; then
+		exit 1
+	fi
+fi
+
+exit 0
