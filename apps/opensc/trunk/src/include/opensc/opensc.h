@@ -1,0 +1,1 @@
+../../../src/libopensc/opensc.h
