@@ -1,11 +1,14 @@
 guadalinex-eadmin (v5-0.1) hardy; urgency=low
 
   * Initial gv5 release 
-  * Some source-package fixes 
-  * Removed libccid_Info.plist.gv4
+  * Fixed new version of opensc-ceres and opensc-dnie as dependences
+  * Some source-package fixes
+  * Replacement of opensc package by our own bug-fixing NMU package
+  * Removed old libccid_Info.plist.gv4; libccid provides better plist now
+  * Moved to new libnss3-1d as dependence
+  * Marked firefox-3.0 as mandatory browser as dependence
 
- -- J. Félix Ontañón <fontanon@emergya.es>  Wed, 16 Apr 2008 17:50:43 +0100
-
+ -- J. Félix Ontañón <fontanon@emergya.es>  Mon, 21 Apr 2008 15:42:43 +0100
 
 guadalinex-eadmin (r1760-0.1) edgy; urgency=low
 
@@ -15,7 +18,6 @@ guadalinex-eadmin (r1760-0.1) edgy; urgency=low
   * Source-Package not builded with gcs
 
  -- J. Félix Ontañón <fontanon@emergya.es>  Fri, 21 Dec 2007 08:51:03 +0200
-
 
 guadalinex-eadmin (r1760) edgy; urgency=low 
 
