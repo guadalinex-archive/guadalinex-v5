@@ -1,0 +1,78 @@
+this document is copyrighted by:
+
+   (C)2000-2004 Markus Stephany, merkes_at_mirkes.de, BSD licensed
+   
+*****************************************************************************
+
+
+dumphive extracts keys and values of win9x and nt/w2k/xp registry files 
+(socalled hives) and writes them to a text file (by default in regedit
+compatible format).
+
+as dumphive can also be compiled under linux, it is possible to dump
+the contents of registry hives on a windows partition also from linux.
+
+================================================================================
+
+precompiled binaries for two platforms can be found in these directories:
+
+  bin/linux:	linux
+  bin/win32:	win32 (windows9x, nt, 2000, xp)
+
+the sources of dumphive for free pascal and borland delphi are in
+
+  src/
+
+================================================================================
+
+synopsis:
+
+dumphive -h
+  prints a help screen (in german)
+  
+dumphive -V
+  prints the version of dumphive
+  
+dumphive [-d] [-e [-S|-N]] <registry hive file> <output text file> [prefix]
+
+  options, switches and parameters:
+
+  -e: 
+      extended output (not regedit compatible):
+      - REG_EXPAND_SZ and REG_MULTI_SZ values are not hexdumped but written as
+        strings
+      - when dumping REGF(=NT) hives (registry files), key class names and security
+        descriptors are additionally dumped
+      
+      by not using the -e switch, <the output text file>  will contain data compatible
+      with regedit!
+
+    -S (win32+nt/w2k/xp only):
+        uses microsoft's sddl format to print key's security informations, see
+        msdn.microsoft.com/library/en-us/security/security/security_descriptor_string_format.asp
+
+    -N (win32 only):
+        tries to lookup names of SIDs (S-xyz-abc... -> DOMAIN\USER)
+      
+  -d (only available when compiled with "make debug"): 
+      shows information about the current key structures and internal hive
+      data during hive tree walking
+      
+  registry hive file:
+      the name of the registry hive to dump (on win9x usually system.dat
+      and user.dat in the windows directory, under nt/w2k/xp e. g. the
+      files under %systemroot%\system32\config)
+      
+  output text file:
+      the registry hive information is dumped into this text file. 
+      even on linux, the lines will end in dos line feeds  (<CR><LF>)
+      
+  prefix:
+      this optional parameter is used to prefix the key names in the
+      output file
+
+
+================================================================================
+
+Microsoft, Windows, Windows NT, MSDN are trademarks of Microsoft Corporation.
+NT is a trademark of Northern Telecom Limited.

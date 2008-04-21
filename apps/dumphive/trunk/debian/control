@@ -1,0 +1,19 @@
+Source: dumphive
+Section: utils
+Priority: optional
+Maintainer: Junta de Andalucía <packmaster@guadalinex.org>
+Build-Depends: debhelper (>= 5), fp-compiler
+Standards-Version: 3.7.2
+
+Package: dumphive
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: amigu
+Description: Extract keys and values of wind9x and nt/w2k/xp registry files
+ Dumphive extracts keys and values of win9x and nt/w2k/xp registry files 
+ (socalled hives) and writes them to a text file (by default in regedit
+ compatible format).
+ .
+ As dumphive can also be compiled under linux, it is possible to dump
+ the contents of registry hives on a windows partition also from linux.
+

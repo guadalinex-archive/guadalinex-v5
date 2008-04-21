@@ -1,0 +1,66 @@
+this document is copyrighted by:
+
+   (C)2000-2004 Markus Stephany, merkes_at_mirkes.de, BSD licensed
+   
+*****************************************************************************
+
+changes in dumphive:
+
+06-28-2004 -> 07-31-2004 (07/31/2004)
+
+- license changed from gpl to bsd
+
+- hex-data output in lower case
+
+- quoting of double quotes and backslashes in value names with a backslash
+
+- support for "lh" structures in nt hives
+
+- support for unicode value names
+
+- changed behaviour of inline data values (automtic conversion to REG_DWORD now only on unnamed data values)
+
+- REG_SZ output in hex format (hex(1)) is converted to unicode on nt hives
+
+- changed some integer variables to longint (for fpc compatibility)
+
+
+
+0.0.3 -> 06-28-2004 (06/28/2004)
+
+- win32 binary compiled with delphi 7
+
+
+
+0.0.2 -> 0.0.3 (03/02/04)
+
+- no dos binary included anymore
+
+- now also delphi 6 compatible
+
+- switches -S and -A (under win32) added, see README
+
+- native unicode->ansi conversion in the delphi(win32) version
+
+- faster output of large binary values
+
+
+
+0.01 -> 0.0.2 (08/31/01)
+
+- binaries for dos   (under bin/dos-ext),
+               win32 (under bin/win32) and
+	       linux (under bin/linux)
+  
+  are now included (debugmode aware (switch -d)).
+  
+- the sources are now under src/
+
+- can be compiled using delphi 4, fpc for dos (go32v2) and fpc for linux.
+  
+- all 32 bits integer values are now written using unsigned numbers
+  
+- ...
+
+
+

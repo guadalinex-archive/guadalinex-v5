@@ -1,0 +1,72 @@
+dieses dokument unterliegt folgendem copyright:
+
+   (C)2000-2004 Markus Stephany, merkes_at_mirkes.de, BSD-lizensiert
+   
+*****************************************************************************
+
+inhalt:
+*******
+
+1) kompilierung (fpc): kompilieren von dumphive mit free pascal 1.x
+2) kompilierung (delphi): kompilieren von dumphive mit borland delphi 6/7
+3) installation: installationshinweise
+
+
+
+
+1) kompilierung (fpc):
+======================
+
+zur kompilation von dumphive wird der free pascal compiler in der version 
+1.x benoetigt. zusaetzlich werden diverse GNU utilities 
+(wie rm, make ...) benoetigt (diese sollten auf jeder linux-maschine 
+vorhanden sein, unter microsoft-betriebssystemen werden sie bei einer 
+vollinstallation von free pascal mitgeliefert.
+
+free pascal kann unter http://www.freepascal.org bezogen werden.
+
+dumphive wird durch den aufruf von "make" im verzeichnis mit den quellen
+kompiliert.
+
+wird dem "make"-kommando der parameter "debug" mitgegeben ("make debug"),
+so wird der argumentschalter "-d" mit einkompiliert. wird dumphive mit
+dieser option aufgerufen, so wird auf stdout protokolliert, was dumphive
+an welcher position der registry-datei gerade einliest.
+
+
+
+
+2) kompilierung (delphi):
+=========================
+
+um dumphive mit delphi zu kompilieren, sollte die projektdatei dumphive.dpr
+in der delphi-entwicklungsumgebung geöffnet und erzeugt werden.
+
+wird unter dem menüpunkt projekt->optionen->verzeichnisse/bedingungen->
+bedingungen im feld definition der wert "_incdebug_" eingetragen, wird
+der argumentschalter "-d" mit einkompiliert (siehe auch unter kompilierung
+(fpc)).
+
+
+falls das makefile "Makefile.delphi" verwendet werden soll, so muss in der
+ersten zeile der korrekte pfad zu delphi eingetragen werden.
+durch den aufruf von "make -fmakefile.delphi" wird dumphive kompiliert.
+durch den aufruf von "make -fmakefile.delphi debug" wird wieder der
+argumentschalter "-d" einkompiliert.
+
+
+
+
+3) installation:
+================
+
+nach dem kompilieren sollte die datei dumphive(.exe) in ein verzeichnis, 
+das in der PATH-variablen enthalten ist, kopiert werden (z.b. unter linux
+nach /usr/bin, unter dos nach c:\dos oder unter win32 in das windows-
+verzeichnis. 
+
+
+*****************************************************************************
+Free Pascal Copyright (c) Florian Klaempfl
+Microsoft, Windows, Dos sind Marken der Microsoft Corporation.
+Delphi ist eine Marke von Borland, Inc.

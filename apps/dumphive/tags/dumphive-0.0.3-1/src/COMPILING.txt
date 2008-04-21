@@ -1,0 +1,45 @@
+this document is copyrighted by:
+
+   (C)2000-2004 Markus Stephany, merkes_at_mirkes.de, BSD licensed
+   
+*****************************************************************************
+
+contents:
+*********
+
+1) compiling (fpc): compilation of dumphive using free pascal 1.x
+2) compiling (delphi): compilation of dumphive using delphi 6/7
+3) installation: installation notes
+
+
+
+1) compiling (fpc):
+===================
+
+- make sure fpc 1.x (http://www.freepascal.org) is correctly installed
+- make sure gnu make is installed
+- cd into the src/ directory
+- type make (or make debug to add debugging output to dumphive)
+
+
+2) compiling (delphi):
+======================
+
+- open dumphive.dpr in borland delphi 4, 6 or 7
+- compile
+- if you define the condition "_incdebug_" in the project options,
+  debugging output capabilities are included in dumphive exe)
+
+
+3) installation:
+================
+
+copy dumphive (or dumphive.exe on windows) in a directory listed in the
+PATH environment variable (like /usr/bin on linux or the windows
+directory on windows).
+
+
+*****************************************************************************
+Free Pascal Copyright (c) Florian Klaempfl
+Microsoft, Windows, Dos are trademarks of the Microsoft Corporation.
+Delphi is a trademark of Borland, Inc.

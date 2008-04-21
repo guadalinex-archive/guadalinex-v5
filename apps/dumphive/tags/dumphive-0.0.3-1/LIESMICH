@@ -1,0 +1,116 @@
+dieses dokument unterliegt folgendem copyright:
+
+   (C)2000-2004  Markus Stephany, merkes_at_mirkes.de, BSD-lizensiert
+   
+********************************************************************************
+
+
+dumphive extrahiert die schluessel und werte aus windows9x- und 
+windows nt/2000/xp- registrierungsdateien und legt die daten in lesbarer form 
+in einer textdatei ab.
+
+da es auch unter linux kompiliert werden kann, lassen sich auch hier
+windows-registry-hives auslesen (dazu braucht man fuers nt-dateisystem
+noch den passenden treiber).
+
+================================================================================
+
+vorkompilierte binaries für verschiedene betriebssysteme finden sich in
+folgenden unterverzeichnissen:
+
+  bin/linux:	linux
+  bin/win32:	win32 (windows9x, nt, 2000, xp)
+
+die quellen für free pascal und borland delphi befinden sich im verzeichnis
+
+  src/
+
+================================================================================
+
+dumphive wird folgendermassen aufgerufen:
+
+dumphive -h
+  zeigt eine kurze hilfeseite an
+  
+dumphive -V
+  gibt nur die version von dumphive auf stdout aus
+  
+dumphive [-d] [-e [-S|-N]] <registrierungsdatei> <ausgabedatei> [praefix]
+
+  es bedeuten:
+
+  -e: 
+      schreibt erweiterte informationen in die ausgabedatei:
+      - REG_EXPAND_SZ- und REG_MULTI_SZ-werte werden nicht als hexdump,
+        sondern als zeichenketten ausgegeben
+      - bei REGF(=NT)-hives (registrierungsdateien) werden ausserdem
+        detaillierte informationen zu den sicherheitsinformationen* der
+        schluessel sowie die klassennamen ausgegeben
+        
+      wird dieser schalter weggelassen, so werden die daten kompatibel
+      zu regedit4 in die ausgabedatei geschrieben!
+
+    -S (nur win32+nt/w2k/xp):
+        verwendet für die ausgabe der sicherheitsinformationen das sddl-
+        format, siehe msdn.microsoft.com/library/en-us/security/security/security_descriptor_string_format.asp
+
+    -N (nur win32):
+        gibt, falls möglich den zu SIDs gehörenden namen aus 
+      
+  -d: 
+      gibt informationen zum aktuellen verlauf des einlesens an stdout 
+      aus (nur wenn mit "make debug" eincompiliert).
+      diese informationen zeigen an, an welcher stelle im aktuellen
+      hive dumphive welche typen von eintraegen findet sowie deren eigen-
+      schaften
+      
+  registrierungsdatei:
+      der name des hives, der eingelesen werden soll (unter win9x sind 
+      dies i. a. die dateien system.dat und user.dat im %windir%-
+      verzeichnis, unter windows nt/2000 die dateien in 
+      %systemroot%\system32\config (software, system...) sowie die 
+      benutzerspezifischen einstellungen unter %userprofile% (ntuser.dat)
+      
+  ausgabedatei:
+      in diese datei werden die informationen im hive in textform 
+      exportiert, die datei wird immer im dos-format angelegt (<CR><LF>
+      als zeilenende)
+      
+  praefix:
+      dieser optionale parameter gibt an, welcher schluesselname dem
+      tatsaechlich eingelesenen schluesselnamen in der ausgabedatei
+      vorangestellt wird:
+        wird z.b. als parameter "HKEY_CURRENT_USER\import" angegeben,
+        so wird ein unterschluessel, der den tatsaechlichen namen
+        "software\mirkes.de" hat, in der ausgabedatei als
+        [HKEY_CURRENT_USER\import\software\mirkes.de] eingetragen
+        (wird der schalter -e weggelassen, so kann die generierte
+        ausgabedatei nun an beliebiger stelle in die registrierung
+        importiert werden)
+        
+      REGF-system-hives scheinen des oefteren den wert "$$$ROOT.HIV" 
+      als namen des root-schluessels einzutragen, ist dies der fall, so
+      wird dieser wert automatisch durch den dateinamen des hives (ohne
+      pfad und erweiterung) ersetzt.
+
+
+*) sicherheitsinformationen in REGF-hives:
+
+jedem schluessel in einer winnt/2000-registrierungsdatei kann ein
+security-descriptor zugeordnet sein, der festlegt, wer welche zugriffs-
+moeglichkeiten auf den schluessel hat (dort werden ausserdem ueberwachungs-
+richtlinien festgelegt). viele verschiedene schluessel koennen auf den
+gleichen SK-eintrag (und somit security-descriptor) zeigen!
+
+zum aufbau und den eigenschaften dieser sicherheitsbeschreibungen finden sich
+informationen in der knowledge base des msdn unter
+  
+  http://search.microsoft.com/us/dev/default.asp
+
+
+
+================================================================================
+
+Microsoft, Windows, Windows NT, MSDN sind Markenzeichen der Microsoft 
+Corporation.
+NT ist eine Marke von Northern Telecom Limited.

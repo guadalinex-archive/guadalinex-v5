@@ -1,0 +1,17 @@
+DELPHI=C:\Programme\Borland\Delphi7
+
+all: clean
+	$(DELPHI)\bin\dcc32 /CC /U$(DELPHI)\LIB dumphive.dpr
+
+debug: clean
+	$(DELPHI)\bin\dcc32 /CC /U$(DELPHI)\LIB /D_incdebug_ dumphive.dpr
+
+clean:	
+	if exist *.o del *.o 
+	if exist *.ppu del *.ppu 
+	if exist *.dcu del *.dcu
+	if exist *.~?? del *.~??
+
+distclean: clean
+	if exist dumphive del dumphive 
+	if exist dumphive.exe del dumphive.exe
