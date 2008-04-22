@@ -1,10 +1,12 @@
-hermeshardware (0.4.4) lobo; urgency=low
+hermeshardware (0.4.4) hardy; urgency=low
 
   * Removed every #!/usr/bin/python from actors and other non-script python
     files
   * Fixed some bugs on debian package
   * Updated bluetooth devices associated actions: Use bluetooth-applet instead
     gnome-obex-server
+  * Modified volume::CertificateListener to seek certificates in other devices
+    than usbdisks 
 
  -- J. Félix Ontañón <fontanon@emergya.es>  Wed, 9 Apr 2008 12:48:10 +0100
 
