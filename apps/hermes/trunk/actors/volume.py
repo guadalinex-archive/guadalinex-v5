@@ -141,8 +141,8 @@ class CertificateListener(VolumeListener):
         self.mount_point = None
 
     def is_valid(self, properties):
-        if properties.get('volume.mount_point', None) == u'/media/usbdisk':
-            if glob.glob('/media/usbdisk/*.p12'):
+        if properties.get('volume.mount_point', None):
+            if glob.glob(properties.get('volume.mount_point', None)+'/*.p12'):
                 return True
         return False
 
@@ -150,7 +150,7 @@ class CertificateListener(VolumeListener):
         self.mount_point = mount_point
 
         if os.path.exists(CERTMANAGER_CMD):
-            os.system('%s -p %s' % (CERTMANAGER_CMD, self.mount_point))
+            os.system('%s -p "%s"' % (CERTMANAGER_CMD, self.mount_point))
 
     def volume_unmounted(self):
         if os.path.exists(CERTMANAGER_CMD):
