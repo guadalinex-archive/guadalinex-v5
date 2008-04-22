@@ -1,0 +1,9 @@
+En este directorio se incluyes los datos obtenidos con dbus-monitor al insertar
+dispositivos pertenecientes a los tipos de hardware indicados en los directorios
+(escaner, impresora, pendrive, etc)
+
+Los ficheros contienen la salida en bruto de dbus-monitor. Sus nombres indican
+la marca, el modelo.
+
+    marca-modelo
+

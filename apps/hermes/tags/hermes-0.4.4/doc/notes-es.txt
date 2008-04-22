@@ -1,0 +1,30 @@
+Notas sobre Hermes
+==================
+
+* Hermes intecepta los mensajes que emite HALD en el DBUS. Hermes corre como demonio: hermes_hardware
+* Cada actor trata uno o un conjunto de dispositivo, pero cada dispositivo sólo puede ser tratado por un sólo actor
+* los actores van de más especializados (VendorId:ProductId) a menos especializados (clase de dispositivo)
+* Los actores hermes:
+  * se escriben en Python
+  * tienen que derivar de DeviceActor 
+  * tienen que definir el atributo __required__ 
+  * tiene que definir métodos para:
+    * al agregar disp.
+    * quitar  disp.
+    * modificar  disp.
+* Los actores están normalmente en /usr/share/hermes/actors, se leen todos los archivos de 
+  este directorio al arrancar el demonio y se registran como actores.
+* Ver /usr/share/hermes/actors/deviceactor.py
+* para mostrar mensaje, usar objeto: self.message_render, métodos show, show_info, show_warning, show_error
+* Interesante: self.properties, self.logger
+* Si se requiere instalar un paquete al detectar un dispositivo: hay encapsulación synaptic.py
+  * check comprueba estado instalación de paquetes, devuelve True si todo instalado
+  * install: instala paquetes (a través de sudo)
+  * actualmente se usa siempre el mismo patrón (mirar), pero se prevee simplificación
+* para saber las propiedades de dispositivos ejecutar: hermes_hardware.py,
+  * vendorid y productid
+* iconos: actors/img: imágenes
+  * en actors, permite stockicons.
+
+
+

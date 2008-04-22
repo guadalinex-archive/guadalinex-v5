@@ -1,0 +1,228 @@
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_5e3_702_noserial
+
+info.bus:usb_device
+info.linux.driver:usb
+info.parent:/org/freedesktop/Hal/devices/usb_device_0_0_0000_00_1d_7
+info.product:USB 2.0 IDE Adapter
+info.udi:/org/freedesktop/Hal/devices/usb_device_5e3_702_noserial
+info.vendor:Genesys Logic, Inc.
+linux.hotplug_type:1
+linux.subsystem:usb
+linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.7/usb4/4-6
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.7/usb4/4-6
+usb_device.bus_number:4
+usb_device.can_wake_up:0
+usb_device.configuration_value:1
+usb_device.device_class:0
+usb_device.device_protocol:0
+usb_device.device_revision_bcd:2
+usb_device.device_subclass:0
+usb_device.is_self_powered:1
+usb_device.linux.device_number:10
+usb_device.linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.7/usb4/4-6
+usb_device.max_power:96
+usb_device.num_configurations:1
+usb_device.num_interfaces:1
+usb_device.num_ports:0
+usb_device.product:USB 2.0 IDE Adapter
+usb_device.product_id:1794
+usb_device.speed_bcd:294912
+usb_device.vendor:Genesys Logic, Inc.
+usb_device.vendor_id:1507
+usb_device.version_bcd:512
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0
+
+info.bus:usb
+info.linux.driver:usb-storage
+info.parent:/org/freedesktop/Hal/devices/usb_device_5e3_702_noserial
+info.product:USB Mass Storage Interface
+info.udi:/org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0
+linux.hotplug_type:1
+linux.subsystem:usb
+linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.7/usb4/4-6/4-6:1.0
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.7/usb4/4-6/4-6:1.0
+usb.bus_number:4
+usb.can_wake_up:0
+usb.configuration_value:1
+usb.device_class:0
+usb.device_protocol:0
+usb.device_revision_bcd:2
+usb.device_subclass:0
+usb.interface.class:8
+usb.interface.number:0
+usb.interface.protocol:80
+usb.interface.subclass:6
+usb.is_self_powered:1
+usb.linux.device_number:10
+usb.linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.7/usb4/4-6/4-6:1.0
+usb.max_power:96
+usb.num_configurations:1
+usb.num_interfaces:1
+usb.num_ports:0
+usb.product:USB Mass Storage Interface
+usb.product_id:1794
+usb.speed_bcd:294912
+usb.vendor:Genesys Logic, Inc.
+usb.vendor_id:1507
+usb.version_bcd:512
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0_scsi_host
+
+info.capabilities:['scsi_host']
+info.category:scsi_host
+info.parent:/org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0
+info.product:SCSI Host Adapter
+info.udi:/org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0_scsi_host
+linux.hotplug_type:2
+linux.subsystem:scsi_host
+linux.sysfs_path:/sys/class/scsi_host/host7
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.7/usb4/4-6/4-6:1.0/host7
+scsi_host.host:7
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0_scsi_host_scsi_device_lun0
+
+info.bus:scsi
+info.linux.driver:sd
+info.parent:/org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0_scsi_host
+info.product:SCSI Device
+info.udi:/org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0_scsi_host_scsi_device_lun0
+linux.hotplug_type:1
+linux.subsystem:scsi
+linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.7/usb4/4-6/4-6:1.0/host7/target7:0:0/7:0:0:0
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.7/usb4/4-6/4-6:1.0/host7/target7:0:0/7:0:0:0
+scsi.bus:0
+scsi.host:7
+scsi.lun:0
+scsi.target:0
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/storage_model_DK23FA_60
+
+block.device:/dev/sda
+block.is_volume:0
+block.major:8
+block.minor:0
+block.storage_device:/org/freedesktop/Hal/devices/storage_model_DK23FA_60
+info.capabilities:['storage', 'block']
+info.category:storage
+info.parent:/org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0_scsi_host_scsi_device_lun0
+info.product:DK23FA-60
+info.udi:/org/freedesktop/Hal/devices/storage_model_DK23FA_60
+info.vendor:HITACHI_
+linux.hotplug_type:3
+linux.sysfs_path:/sys/block/sda
+linux.sysfs_path_device:/sys/block/sda
+storage.automount_enabled_hint:1
+storage.bus:usb
+storage.drive_type:disk
+storage.hotpluggable:1
+storage.lun:0
+storage.media_check_enabled:0
+storage.model:DK23FA-60
+storage.no_partitions_hint:0
+storage.physical_device:/org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0
+storage.policy.should_mount:1
+storage.removable:0
+storage.requires_eject:0
+storage.vendor:HITACHI_
+
+
+#############################################
+DESCONEXIÓN  ################################
+#############################################
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0_scsi_host_scsi_device_lun0
+
+info.bus:scsi
+info.linux.driver:sd
+info.parent:/org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0_scsi_host
+info.product:SCSI Device
+info.udi:/org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0_scsi_host_scsi_device_lun0
+linux.hotplug_type:1
+linux.subsystem:scsi
+linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.7/usb4/4-6/4-6:1.0/host7/target7:0:0/7:0:0:0
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.7/usb4/4-6/4-6:1.0/host7/target7:0:0/7:0:0:0
+scsi.bus:0
+scsi.host:7
+scsi.lun:0
+scsi.target:0
+
+
+#############################################
+DESCONEXIÓN  ################################
+#############################################
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0_scsi_host_scsi_device_lun0
+
+info.bus:scsi
+info.linux.driver:sd
+info.parent:/org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0_scsi_host
+info.product:SCSI Device
+info.udi:/org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0_scsi_host_scsi_device_lun0
+linux.hotplug_type:1
+linux.subsystem:scsi
+linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.7/usb4/4-6/4-6:1.0/host7/target7:0:0/7:0:0:0
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.7/usb4/4-6/4-6:1.0/host7/target7:0:0/7:0:0:0
+scsi.bus:0
+scsi.host:7
+scsi.lun:0
+scsi.target:0
+
+
+#############################################
+DESCONEXIÓN  ################################
+#############################################
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0_scsi_host_scsi_device_lun0
+
+info.bus:scsi
+info.linux.driver:sd
+info.parent:/org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0_scsi_host
+info.product:SCSI Device
+info.udi:/org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0_scsi_host_scsi_device_lun0
+linux.hotplug_type:1
+linux.subsystem:scsi
+linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.7/usb4/4-6/4-6:1.0/host7/target7:0:0/7:0:0:0
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.7/usb4/4-6/4-6:1.0/host7/target7:0:0/7:0:0:0
+scsi.bus:0
+scsi.host:7
+scsi.lun:0
+scsi.target:0
+
+
+#############################################
+DESCONEXIÓN  ################################
+#############################################
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0_scsi_host_scsi_device_lun0
+
+info.bus:scsi
+info.linux.driver:sd
+info.parent:/org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0_scsi_host
+info.product:SCSI Device
+info.udi:/org/freedesktop/Hal/devices/usb_device_5e3_702_noserial_if0_scsi_host_scsi_device_lun0
+linux.hotplug_type:1
+linux.subsystem:scsi
+linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.7/usb4/4-6/4-6:1.0/host7/target7:0:0/7:0:0:0
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.7/usb4/4-6/4-6:1.0/host7/target7:0:0/7:0:0:0
+scsi.bus:0
+scsi.host:7
+scsi.lun:0
+scsi.target:0
