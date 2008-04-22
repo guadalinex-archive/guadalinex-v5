@@ -431,16 +431,16 @@ function install_pkgs ()
 
     apt_get upgrade
 
-    apt_get install $pre_base_pkgs
+    apt_get install $pre_base_pkgs || error "install_pkgs upgrade"
 
     apt_get install || error "install_pkgs upgrade"
 
     #FIXME: Check if more than one stage is needed
-    apt_get install $base_pkgs 
+    apt_get install $base_pkgs || error "install_pkgs base packages"
 
     apt_get install || error "install_pkgs base packages"
 
-    apt_get install $live_pkgs 
+    apt_get install $live_pkgs || error "install_pkgs live packages"
 
     apt_get install || error "install_pkgs live packages"
 
