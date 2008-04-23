@@ -1,0 +1,16 @@
+#!/bin/sh -e
+#Provides all mythbuntu questions asked by
+#ubiquity during install process
+# Written by Mario Limonciello <superm1@ubuntu.com>
+# Copyright (C) 2007 Mario Limonciello
+# Copyright (C) 2007 Jared Greenwald
+
+. /usr/share/debconf/confmodule
+
+#determine services
+db_input high mythbuntu/vncservice || true
+db_input high mythbuntu/vnc_password || true
+db_input high mythbuntu/sshservice || true
+db_input high mythbuntu/sambaservice || true
+db_input high mythbuntu/nfsservice || true
+db_input high mythbuntu/mysqlservice || true

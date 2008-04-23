@@ -1,0 +1,10 @@
+#!/bin/sh -e
+#Provides all mythbuntu questions asked by
+#ubiquity during install process
+# Written by Mario Limonciello <superm1@ubuntu.com>
+# Copyright (C) 2007 Mario Limonciello
+
+. /usr/share/debconf/confmodule
+
+# Determine install type
+db_input high mythbuntu/install_type || true

@@ -1,0 +1,245 @@
+#! /bin/sh -e
+#Passes on the information gathered in ubiquity
+#about additional drivers, firmware
+# Written by Mario Limonciello <superm1@ubuntu.com>
+# Copyright (C) 2007 Mario Limonciello
+
+. /usr/share/debconf/confmodule
+
+if [ "$1" ]; then
+    ROOT="$1"
+    chroot=chroot
+    log='log-output -t mythbuntu'
+fi
+
+pvr_350_xorg()
+{
+	cat > /tmp/xorg.conf <<EOF
+Section "Module"
+        Load "dbe"
+        Load "v4l"
+        Load "extmod"
+        Load "type1"
+        Load "freetype"
+EndSection
+
+Section "InputDevice"
+    Identifier     "Generic Keyboard"
+    Driver         "kbd"
+    Option         "CoreKeyboard"
+    Option         "XkbRules" "xorg"
+    Option         "XkbModel" "pc105"
+    Option         "XkbLayout" "us"
+EndSection
+
+Section "Screen"
+    Identifier     "Default Screen"
+    Device         "PVR-350"
+    Monitor        "Configured Monitor"
+    DefaultDepth 24
+    DefaultFbbpp 32
+    Subsection "Display"
+          Depth 24
+          FbBpp 32
+          Modes "720x480"
+    EndSubsection
+EndSection
+
+Section "InputDevice"
+    Identifier     "Configured Mouse"
+    Driver         "mouse"
+EndSection
+
+Section "Monitor"
+    Identifier     "Configured Monitor"
+    Option         "DPMS"
+    HorizSync 30-68
+    VertRefresh 50-120
+    DisplaySize 183 122
+    Mode "720x480"
+    DotClock 34.564
+    HTimings 720 752 840 928
+    VTimings 480 484 488 504
+    Flags "-HSync" "-VSync"
+    EndMode
+
+EndSection
+
+Section "Device"
+    Identifier     "PVR-350"
+    Driver         "ivtv"
+    Option "fbdev" "/dev/fb$1"
+    Option "TVStandard" "$3"
+    Option "XVideo" "1"
+    BusID "PCI:$2"
+    Screen 0
+EndSection
+EOF
+}
+
+ati_xorg()
+{
+	if [ -x /usr/bin/aticonfig ]; then
+		if [ "$1" = "Composite Video Output" ]; then
+			$log $chroot $ROOT /usr/bin/aticonfig --initial --tvs VIDEO --tvf $2
+		elif [ "$1" = "S-Video Video Output" ]; then
+			$log $chroot $ROOT /usr/bin/aticonfig --initial --tvs VIDEO --tvf $2
+		elif [ "$1" = "Component Video Output" ]; then
+			$log $chroot $ROOT /usr/bin/aticonfig --initial --tvs YUV --tvf $2
+		else
+			$log $chroot $ROOT /usr/bin/aticonfig --initial
+		fi
+	fi
+}
+
+nvidia_xorg()
+{
+    cat > /tmp/xorg.conf <<EOF
+Section "ServerLayout"
+    Identifier     "Default Layout"
+    Screen         "Default Screen" 0 0
+    InputDevice    "Generic Keyboard"
+    InputDevice    "Configured Mouse"
+EndSection
+
+Section "Module"
+    Load           "glx"
+EndSection
+
+Section "InputDevice"
+    Identifier     "Generic Keyboard"
+    Driver         "kbd"
+    Option         "CoreKeyboard"
+    Option         "XkbRules" "xorg"
+    Option         "XkbModel" "pc105"
+    Option         "XkbLayout" "us"
+EndSection
+
+Section "InputDevice"
+    Identifier     "Configured Mouse"
+    Driver         "mouse"
+    Option         "CorePointer"
+    Option         "Device" "/dev/input/mice"
+    Option         "Protocol" "ImPS/2"
+    Option         "ZAxisMapping" "4 5"
+    Option         "Emulate3Buttons" "true"
+EndSection
+
+Section "Monitor"
+    Identifier     "Generic Monitor"
+    Option         "DPMS"
+EndSection
+
+Section "Device"
+    Identifier     "Generic Video Card"
+    Driver         "nvidia"
+    Option         "DPI" "100x100"
+    Option         "UseEvents" "1"
+    Option         "AddARGBVisuals" "1"
+    Option         "AddARGBGLXVisuals" "1"
+    Option         "NoLogo" "1"
+EOF
+    if [ "$1" = "Composite Video Output" ]; then
+        cat >> /tmp/xorg.conf <<EOF
+    #Option         "UseDisplayDevice" "TV"
+    Option          "ConnectedMonitor"      "TV"
+    Option         "TVOutFormat" "COMPOSITE"
+    Option         "TVStandard" "$2"
+EOF
+    elif [ "$1" = "S-Video Video Output" ]; then
+        cat >> /tmp/xorg.conf <<EOF
+    #Option         "UseDisplayDevice" "TV"
+    Option          "ConnectedMonitor"      "TV"
+    Option         "TVOutFormat" "SVIDEO"
+    Option         "TVStandard" "$2"
+EOF
+    elif [ "$1" = "Component Video Output" ]; then
+        cat >> /tmp/xorg.conf <<EOF
+    #Option         "UseDisplayDevice" "TV"
+    Option          "ConnectedMonitor"      "TV"
+    Option         "TVOutFormat" "COMPONENT"
+    Option         "TVStandard" "$2"
+EOF
+    fi
+    cat >> /tmp/xorg.conf <<EOF
+EndSection
+
+Section "Screen"
+    Identifier     "Default Screen"
+    Device         "Generic Video Card"
+    Monitor        "Generic Monitor"
+    DefaultDepth    24
+    SubSection     "Display"
+        Depth       24
+EOF
+    if [ "$1" = "Component Video Output" ]; then
+        cat >> /tmp/xorg.conf <<EOF
+        Modes      "1920x1080" "1280x720" "1024x768" "720x480" "800x600" "640x480"
+    EndSubSection
+EndSection
+EOF
+    else
+        cat >> /tmp/xorg.conf <<EOF
+        Modes      "nvidia-auto-select" "1920x1080" "1280x720" "1024x768" "720x480" "800x600" "640x480"
+    EndSubSection
+EndSection
+EOF
+    fi
+}
+
+nvidia_xvmc()
+{
+    mv $ROOT/etc/X11/XvMCConfig $ROOT/etc/X11/XvMCConfig.livecd
+    cat > $ROOT/etc/X11/XvMCConfig <<EOF
+libXvMCNVIDIA_dynamic.so.1
+EOF
+}
+
+add_module()
+{
+    cat >> $ROOT/etc/modules <<EOF
+$1
+EOF
+}
+
+#Enable Proprietary Drivers as necessary
+db_get mythbuntu/video_driver
+PROP="$RET"
+if [ "$PROP" = "nvidia_new" ] || [ "$PROP" = "nvidia" ] || [ "$PROP" = "fglrx" ] || [ "$PROP" = "nvidia_legacy" ] || [ "$PROP" = "pvr_350" ]; then
+    #Due to bug 119562, restricted manager won't do this
+    #For us automatically.
+    #$log $chroot $ROOT /usr/bin/restricted-manager -e $PROP
+
+    #Work out a config that should be fairly generic
+    #Also, sort tv-out mess here
+    db_get mythbuntu/tvout
+    TVOUT="$RET"
+    db_get mythbuntu/tvstandard
+    TVSTANDARD="$RET"
+    if [ "$PROP" = "fglrx" ]; then
+        #$log $chroot $ROOT /usr/bin/aticonfig --initial
+        ati_xorg "$TVOUT" "$TVSTANDARD"
+    elif [ "$PROP" = "nvidia_new" ] || [ "$PROP" = "nvidia" ] || [ "$PROP" = "nvidia_legacy" ]; then
+        #$log $chroot $ROOT nvidia-xconfig
+        nvidia_xorg "$TVOUT" "$TVSTANDARD"
+        nvidia_xvmc
+        mv $ROOT/etc/X11/xorg.conf $ROOT/etc/X11/xorg.conf.livecd
+        mv /tmp/xorg.conf $1/etc/X11/xorg.conf
+    elif [ "$PROP" = "pvr_350" ]; then
+        #find our framebuffer device
+        FB=`cat /proc/fb | grep cx23415 | awk '{print $1}'`
+        #find our pci address
+        PCI=`lspci | grep "Internext Compression" | awk '{print $1}' | \
+            sed "s/a/10/; \
+                 s/b/11/; \
+                 s/c/12/; \
+                 s/d/13/; \
+                 s/e/14/; \
+                 s/f/15/; \
+                 s/\./\:/;" `
+        add_module ivtvfb
+        pvr_350_xorg "$FB" "$PCI" "$TVSTANDARD"
+    fi
+fi
+
+exit 0
