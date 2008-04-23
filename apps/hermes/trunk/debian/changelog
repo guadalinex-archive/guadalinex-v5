@@ -1,3 +1,11 @@
+hermeshardware (0.4.5) hardy; urgency=low
+
+  * Exceptions controlled on synaptic calls
+  * Usbwebcam actors now installs and runs cheese instead camorama
+  * Added gspca as detectable webcam driver by usbwebcam actor
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Wed, 23 Apr 2008 12:25:54 +0100
+
 hermeshardware (0.4.4) hardy; urgency=low
 
   * Removed every #!/usr/bin/python from actors and other non-script python

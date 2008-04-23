@@ -101,8 +101,8 @@ class UsbScannerActorHack(object):
             os.system('xsane & ')
 
         def install_packages():
-            synaptic.install(UsbScannerActorHack.PACKAGES)
-            run_xsane()
+            if synaptic.install(UsbScannerActorHack.PACKAGES):
+                run_xsane()
 
         synaptic = PkgInstaller()
 

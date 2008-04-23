@@ -62,7 +62,7 @@ class UsbWebcamActorHack(object):
     This class is a hack for usb_device.Actor
     """
     PACKAGES = PkgDeviceActor.get_packages('usbwebcam')
-    DRIVERS = ['quickcam', 'spca5xx', 'ibmcam', 'konicawc', 'ov511', 'pwc', 'se401', 'sn9c102', 'stv680', 'ultracam', 'vicam', 'w9968cf']
+    DRIVERS = ['quickcam', 'spca5xx', 'ibmcam', 'konicawc', 'ov511', 'pwc', 'se401', 'sn9c102', 'stv680', 'ultracam', 'vicam', 'w9968cf', 'gspca']
 
     def __init__(self):
         # Hacking usb.Actor class
@@ -100,18 +100,18 @@ class UsbWebcamActorHack(object):
         usb_actor.logger.debug("UsbWebcamActorHack: hack_on_added")
         assert(isinstance(usb_actor, Actor))
 
-        def run_camorama():
-            os.system('camorama & ')
+        def run_cheese():
+            os.system('cheese & ')
 
         def install_packages():
-            synaptic.install(UsbWebcamActorHack.PACKAGES)
-            run_camorama()
+            if synaptic.install(UsbWebcamActorHack.PACKAGES):
+	        run_cheese()
 
         synaptic = Synaptic()
 
         actions = {}
         if synaptic.check(UsbWebcamActorHack.PACKAGES):
-            actions = {_("Run capture program"): run_camorama}
+            actions = {_("Run capture program"): run_cheese}
         else:
             actions = {_("Install required packages"): install_packages}
 

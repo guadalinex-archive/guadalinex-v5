@@ -27,9 +27,13 @@ class Synaptic(object):
         print proc
         f = proc.stdin
 
-        for pkg in pkg_list:
-            f.write("%s\tinstall\n" % pkg)
-        f.close()
+	try:
+            for pkg in pkg_list:
+                f.write("%s\tinstall\n" % pkg)
+            f.close()
+	except:
+	    return False
+
         proc.wait()
         return True
 
