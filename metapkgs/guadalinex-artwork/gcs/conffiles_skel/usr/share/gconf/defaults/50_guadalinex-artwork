@@ -4,7 +4,7 @@
 /desktop/gnome/interface/gtk_theme		Guadalinex
 /desktop/gnome/interface/icon_theme		Guadalinex
 /apps/gnome-session/options/splash_image	splash/guadalinex-splash.png
-/apps/gnome-session/options/show_splash_screen	1
+/apps/gnome-session/options/show_splash_screen	true
 /apps/panel/toplevels/top_panel_screen0/background/type		color
 /apps/panel/toplevels/top_panel_screen0/background/color	#d4e5ff
 /apps/panel/toplevels/top_panel_screen0/background/opacity      39321
