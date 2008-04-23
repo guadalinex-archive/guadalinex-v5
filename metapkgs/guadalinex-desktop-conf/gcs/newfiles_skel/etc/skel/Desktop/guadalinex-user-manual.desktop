@@ -7,5 +7,5 @@ Comment=Te lleva a la página de ayuda de Guadalinex
 Exec=firefox %u /usr/share/guadalinex-user-manual/manual.html
 Terminal=false
 Type=Application
-Icon=ayuda
+Icon=/usr/share/icons/Guadalinex/scalable/places/start-here.svg
 GenericName[es_ES]=
