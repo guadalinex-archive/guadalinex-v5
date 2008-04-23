@@ -1,3 +1,17 @@
+ubiquity (1.8.5guada2) hardy; urgency=low
+
+  * Reencoded some 'es.po' files from iso-8859 to utf-8
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Mon, 14 Apr 2008 20:47:52 -0400
+
+ubiquity (1.8.5guada1) hardy; urgency=low
+
+  * Initial Gv5 version.
+  * Added some translations.
+  * Added Gv5 'intro.txt'.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Mon, 14 Apr 2008 20:47:52 -0400
+
 ubiquity (1.8.5) hardy; urgency=low
 
   [ Evan Dandrea ]
