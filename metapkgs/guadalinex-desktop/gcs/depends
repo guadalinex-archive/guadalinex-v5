@@ -132,6 +132,8 @@ nautilus
 nautilus-cd-burner
 nautilus-image-converter
 nautilus-sendto
+network-manager
+network-manager-gnome
 notification-daemon
 onboard
 openjdk-6-jre
