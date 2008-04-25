@@ -1,0 +1,12 @@
+Source: buildbotdummy
+Section: text
+Priority: optional
+Maintainer: J. Félix Ontañón <fontanon@emergya.es>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.3
+
+Package: buildbotdummy
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Buildbot Dummy Package 
+ A simple helloworld-like app for buildbot testing purposes
