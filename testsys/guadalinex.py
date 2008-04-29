@@ -9,7 +9,7 @@
 svn = "http://forja.guadalinex.org/guadalinexv5"
 
 # Tiempo de polling, en segundos, sobre el subversion para detectar cambios.
-polling_time = 5*60
+polling_time = 2*60
 
 # Nombre del directorio que contendrá las apps. 
 # Las apps son ramas de subversion con tags y trunk y que se construyen 
@@ -37,6 +37,7 @@ apps=[
         "amigu",
 	"buildbotdummy",
         "casper-guada",
+	"dumphive",
         "escritorio-movistar",
         "g3g",
         "gcs",
