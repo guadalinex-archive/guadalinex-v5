@@ -6,4 +6,14 @@ dpkg-divert --package guadalinex-eadmin --rename --quiet --remove /etc/firefox-3
 rm -f /usr/share/applications/gscriptor.desktop
 dpkg-divert --package guadalinex-eadmin --rename --quiet --remove /usr/share/applications/gscriptor.desktop
 
+rm -f /usr/share/opensc-ceres/inst_gnome_pkcs11_cert.pl
+dpkg-divert --package guadalinex-eadmin --rename --quiet --remove /usr/share/opensc-ceres/inst_gnome_pkcs11_cert.pl
+rm -f /usr/share/opensc-ceres/inst_kde_pkcs11_cert.pl
+dpkg-divert --package guadalinex-eadmin --rename --quiet --remove /usr/share/opensc-ceres/inst_kde_pkcs11_cert.pl
+
+rm -f /usr/share/opensc-dnie/inst_gnome_pkcs11_cert.pl
+dpkg-divert --package guadalinex-eadmin --rename --quiet --remove /usr/share/opensc-dnie/inst_gnome_pkcs11_cert.pl
+rm -f /usr/share/opensc-dnie/inst_kde_pkcs11_cert.pl
+dpkg-divert --package guadalinex-eadmin --rename --quiet --remove /usr/share/opensc-dnie/inst_kde_pkcs11_cert.pl
+
 /usr/share/guadalinex-eadmin/restore_default_session.py

@@ -21,6 +21,10 @@ install: build
 	dh_install  "FNMTClase2CA.crt" "usr/share/ca-certificates/fnmt"
 	dh_install  "firefox.js.gv5" "etc/firefox-3.0/pref"
 	dh_install  "gscriptor.desktop.gv5" "usr/share/applications"
+	dh_install  "ceres/inst_gnome_pkcs11_cert.pl.gv5" "usr/share/opensc-ceres"
+	dh_install  "ceres/inst_kde_pkcs11_cert.pl.gv5" "usr/share/opensc-ceres"
+	dh_install  "dnie/inst_gnome_pkcs11_cert.pl.gv5" "usr/share/opensc-dnie"
+	dh_install  "dnie/inst_kde_pkcs11_cert.pl.gv5" "usr/share/opensc-dnie"
 
 binary-indep:  build install
 
