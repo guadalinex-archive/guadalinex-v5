@@ -1,1 +1,1 @@
-SUBDIRS = frontend scripts DiskPreview
+SUBDIRS = frontend scripts DiskPreview ubiquity-init

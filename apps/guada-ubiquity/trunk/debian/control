@@ -7,7 +7,7 @@ Standards-Version: 3.7.2
 
 Package: guada-ubiquity
 Architecture: any
-Depends: ubiquity-frontend-gtk, python-gnome2, dbus-python
+Depends: ubiquity-frontend-gtk, python-gnome2, python-dbus
 Description: Custom installer of guadalinex 
  This is the new installer of guadalinex V5. It integrate the diskpreview
  and other wonderful features.
