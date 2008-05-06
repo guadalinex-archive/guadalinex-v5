@@ -1,0 +1,8 @@
+#! /bin/sh
+
+update-initramfs -u
+if [ -e /usr/share/casper-guada/casper.conf ]; then
+    cp -a /usr/share/casper-guada/casper.conf /etc/casper.conf
+fi
+
+#DEBHELPER#
