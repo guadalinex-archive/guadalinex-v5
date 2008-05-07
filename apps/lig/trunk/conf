@@ -54,13 +54,13 @@ excluded_pkgs="ubuntu-keyring"
 
 # final /etc/apt/sources.list for the live system
 
-final_sources_list="# junta's repository here
-deb ftp://gensys/ubuntu lobo main restricted universe multiverse"
-#deb http://archive.ubuntu.com/ubuntu hardy main restricted universe multiverse
-#deb http://archive.ubuntu.com/ubuntu hardy-updates main restricted universe multiverse
-#deb http://archive.ubuntu.com/ubuntu hardy-security main restricted universe multiverse
-#deb http://archive.ubuntu.com/ubuntu hardy-backports main restricted universe multiverse" 
-
+final_sources_list="
+deb http://v5.guadalinex.org/ubuntu hardy main restricted universe multiverse
+deb http://v5.guadalinex.org/guadalinex-lobo lobo main restricted universe multiverse
+deb http://v5.guadalinex.org/guadalinex-lobo lobo-updates main restricted universe multiverse
+deb http://v5.guadalinex.org/guadalinex-lobo lobo-security main restricted universe multiverse
+deb http://v5.guadalinex.org/guadalinex-lobo lobo-backports main restricted universe multiverse
+"
 
 #
 # SOME OLD STUFF 

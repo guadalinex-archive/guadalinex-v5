@@ -300,6 +300,8 @@ function umount_virtualfs ()
     umount sysfs-live
     umount proc-live
     umount devpts-live
+    echo "" > ${sources_dir}/etc/resolv.conf
+    echo "guadalinex" > ${sources_dir}/etc/hostname
 }
 
 function mount_mirror ()
