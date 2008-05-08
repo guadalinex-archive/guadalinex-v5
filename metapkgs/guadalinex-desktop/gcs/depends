@@ -104,6 +104,7 @@ gs-esp
 gstreamer0.10-alsa
 gstreamer0.10-plugins-base-apps
 gstreamer0.10-plugins-good
+gstreamer0.10-plugins-ugly-multiverse
 gstreamer0.10-pulseaudio
 gthumb
 gtk2-engines
