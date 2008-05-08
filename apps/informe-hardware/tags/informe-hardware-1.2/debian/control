@@ -1,0 +1,12 @@
+Source: informe-hardware 
+Section: gnome
+Priority: optional
+Maintainer: Junta de Andalucia <packmaster@guadalinex.org> 
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.2
+
+Package: informe-hardware 
+Architecture: any
+Depends: zenity, xresprobe 
+Description: Error reporting tool.
+ Utility to report information about the operating system.

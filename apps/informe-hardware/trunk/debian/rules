@@ -1,0 +1,40 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+build:
+	dh_testdir
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp install-stamp
+	dh_clean
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+	dh_installdirs
+	dh_install informe-hardware usr/sbin
+	dh_install informe-hardware.desktop usr/share/applications
+	dh_install informe-hardware.png usr/share/pixmaps
+	touch install-stamp
+
+binary: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs
+	dh_installdocs
+	dh_installmenu
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+.PHONY: build clean binary install

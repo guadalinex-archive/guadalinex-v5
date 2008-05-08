@@ -1,0 +1,23 @@
+informe-hardware (1.2) hardy; urgency=low
+
+  * Gv5 initial version.
+
+ -- Roberto C. Morano Vazquez <rcmorano@emergya.es>  Tue, 8 May 2008 12:54:09 +0100
+
+informe-hardware (1.1guada1) unstable; urgency=low
+
+  * Some dependecies fixed.
+
+ -- Antonio González Romero <agonzalez@emergya.es>  Tue, 13 Feb 2007 12:54:09 +0100
+
+informe-hardware (1.1) unstable; urgency=low
+
+  * Added ddcprobe command that retrieves VGA and monitor extended information.
+
+ -- Antonio González Romero <agonzalez@emergya.es>  Tue, 13 Feb 2007 12:16:51 +0100
+
+informe-hardware (1.0) unstable; urgency=low
+
+  * Initial release. 
+
+ -- Carlos Parra Camargo <cparra@emergya.info>  Wed, 31 May 2006 20:44:29 +0200

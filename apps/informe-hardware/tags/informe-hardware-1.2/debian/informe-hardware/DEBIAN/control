@@ -1,0 +1,10 @@
+Package: informe-hardware
+Version: 1.1guada2
+Architecture: i386
+Maintainer: Junta de Andalucia <packmaster@guadalinex.org>
+Installed-Size: 60
+Depends: xresprobe, zenity
+Section: gnome
+Priority: optional
+Description: Error reporting tool.
+ Utility to report information about the operating system.
