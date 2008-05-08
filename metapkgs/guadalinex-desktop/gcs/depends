@@ -64,7 +64,6 @@ foomatic-db-engine
 foomatic-db-hpijs
 foomatic-filters
 fortune-mod
-g3g
 gcalctool
 gcc
 gconf-editor
@@ -196,6 +195,7 @@ ubuntu-sounds
 unzip
 update-notifier
 usplash
+vodafone-mobile-connect-card-driver-for-linux
 xchat
 xdg-user-dirs
 xdg-user-dirs-gtk

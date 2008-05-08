@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Escritorio movistar
+Comment=Aplicación movistar que facilita la conexión a Internet a través de GPRS/3G
+Exec=/usr/bin/escritorio-movistar %F
+Icon=/usr/share/escritorio-movistar/icons/em.png
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Encoding=UTF-8
+StartupNotify=true
+MimeType=application/x-extension-emsc;
+Categories=Application;G3g;
+X-Desktop-File-Install-Version=0.4
