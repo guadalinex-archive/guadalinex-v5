@@ -1,3 +1,11 @@
+ubiquity (1.8.7ubuntu1) hardy; urgency=low
+
+  * Import for Guadalinex
+  * Change desktop icon
+  * Change installer background
+
+ -- Alfredo Matas <amatas@emergya.es>  Thu, 08 May 2008 14:51:36 +0200
+
 ubiquity (1.8.7) hardy; urgency=low
 
   * Update translations from Launchpad.

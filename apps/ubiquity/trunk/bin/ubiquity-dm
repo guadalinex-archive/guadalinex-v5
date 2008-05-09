@@ -16,7 +16,7 @@ import pwd
 
 from ubiquity import osextras
 
-background = '/usr/share/backgrounds/warty-final-ubuntu.png'
+background = '/usr/share/backgrounds/guadalinex_v5_bg.png'
 
 class XStartupError(EnvironmentError):
     pass
