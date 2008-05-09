@@ -1,0 +1,1596 @@
+# Dutch messages for debian-installer.
+# Copyright (C) 2003 Software in the Public Interest, Inc.
+# This file is distributed under the same license as debian-installer.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: debian-installer\n"
+"Report-Msgid-Bugs-To: Source: ubiquity@packages.debian.org\n"
+"POT-Creation-Date: 2008-04-14 20:32-0400\n"
+"PO-Revision-Date: 2008-04-08 13:37+0000\n"
+"Last-Translator: Frans Pop <Unknown>\n"
+"Language-Team: Dutch <debian-l10n-dutch@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2008-04-21 21:57+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#. Type: text
+#. Description
+#. This is used as a window title.
+#: ../ubiquity.templates:2001
+msgid "Install"
+msgstr "Installeren"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:3001
+msgid "Install (OEM mode, for manufacturers only)"
+msgstr "Installeren (OEM modus, alleen voor fabrikanten)"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:4001
+msgid "Welcome"
+msgstr "Welkom"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:5001
+msgid ""
+"Ready to install? Once you answer a few questions, the contents of the live "
+"CD can be installed on this computer so you can run the system at full speed "
+"and without the CD."
+msgstr ""
+"Klaar om te installeren? Zodra u een aantal vragen beantwoord hebt, kan de "
+"inhoud van de live CD op uw computer geïnstalleerd worden, zodat uw systeem "
+"op volle snelheid en zonder deze CD gebruikt kan worden."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:5001
+msgid "Answering the questions should only take a few minutes."
+msgstr "Het beantwoorden van de vragen neemt slechts enkele minuten in beslag."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:5001
+msgid ""
+"Please choose the language used for the installation process. This language "
+"will be the default language for the final system."
+msgstr ""
+"Kies de taal voor het installatieproces. De gekozen taal wordt ook de "
+"standaardtaal voor het geïnstalleerde systeem."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:6001
+msgid ""
+"You are installing in system manufacturer mode. Please enter a unique name "
+"for this batch of systems. This name will be saved on the installed system "
+"and can be used to help with bug reports."
+msgstr ""
+"U installeert in systeemfabrikant-modus. Voer een unieke naam in voor deze "
+"partij systemen. Deze naam zal op het geïnstalleerde systeem worden "
+"opgeslagen en kan worden gebruikt om bij foutenrapportages te helpen."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:7001
+msgid ""
+"If you have Internet access, read the release notes for information on "
+"problems that may affect you."
+msgstr ""
+"Indien u over internettoegang beschikt, lees dan de release notes voor meer "
+"info betreffende problemen die kunnen optreden."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:8001
+msgid "Release Notes"
+msgstr "Versie-informatie"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:9001
+msgid "Where are you?"
+msgstr "Waar bevindt u zich?"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:10001
+msgid ""
+"Select a city in your country and time zone. If the indicated current time "
+"is incorrect even after selecting the correct time zone, you can adjust it "
+"after rebooting into the installed system."
+msgstr ""
+"Selecteer een stad in uw land en tijdzone. Als de aangegeven huidige tijd "
+"niet de juiste is, ook niet na het selecteren van de correcte tijdzone, kunt "
+"u die aanpassen na het opnieuw opstarten."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:11001
+msgid "Selected city:"
+msgstr "Geselecteerde stad:"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:12001
+msgid "Time zone:"
+msgstr "Tijdzone:"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:13001
+msgid "Selected region:"
+msgstr "Geselecteerd gebied:"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:14001
+msgid "Current time:"
+msgstr "Huidige tijd:"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:15001
+msgid "Keyboard layout"
+msgstr "Toetsenbordindeling"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:16001
+msgid "Which layout is most similar to your keyboard?"
+msgstr "Welke indeling lijkt het meest op dat van uw toetsenbord?"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:17001
+msgid "You can type into this box to test your new keyboard layout."
+msgstr ""
+"U kan iets in dit veld intikken om de nieuwe toetsenbordindeling te testen."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:18001
+msgid "Who are you?"
+msgstr "Wie bent u?"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:19001
+msgid "What is your name?"
+msgstr "Wat is uw naam?"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:20001
+msgid "What name do you want to use to log in?"
+msgstr "Welke naam wil u gebruiken om u aan te melden?"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:21001
+msgid ""
+"If more than one person will use this computer, you can set up multiple "
+"accounts after installation."
+msgstr ""
+"Als meer dan één persoon deze computer gebruikt, kunt u na de installatie "
+"bijkomende gebruikers aanmaken."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:22001
+msgid "Choose a password to keep your account safe."
+msgstr "Kies een wachtwoord om uw account te beveiligen."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:23001
+msgid "You are running in debugging mode. Do not use a valuable password!"
+msgstr ""
+"U bevindt zich in de debugging mode. Gebruik geen waardevol wachtwoord!"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:24001
+msgid ""
+"Enter the same password twice, so that it can be checked for typing errors."
+msgstr ""
+"Voer het wachtwoord tweemaal in, zodat we op tikfouten kunnen controleren."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:25001
+msgid "What is the name of this computer?"
+msgstr "Wat is de naam van deze computer?"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:26001
+msgid ""
+"This name will be used if you make the computer visible to others on a "
+"network."
+msgstr ""
+"Deze naam zal gebruikt worden als u uw computer beschikbaar maakt voor "
+"anderen op een netwerk."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:27001
+msgid "Migrate Documents and Settings"
+msgstr "Documenten en Instellingen overnemen"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:28001
+msgid ""
+"Select any accounts you would like to import.  The documents and settings "
+"for these accounts will be available after the install completes."
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:28001
+msgid ""
+"If you do not wish to import any accounts, select nothing and go to the next "
+"page."
+msgstr ""
+"Als u geen gebruikersprofielen wilt importeren, selecteer dan niets en ga "
+"naar de volgende pagina."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:29001
+msgid "Prepare disk space"
+msgstr "Schijfruimte voorbereiden"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:30001
+msgid "How do you want to partition the disk?"
+msgstr "Hoe wilt u de schrijf verdelen?"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:31001
+msgid "Prepare partitions"
+msgstr "Partities voorbereiden"
+
+#. Type: text
+#. Description
+#. Type: note
+#. Description
+#: ../ubiquity.templates:32001 ../ubiquity.templates:79001
+#: ../ubiquity-frontend-mythbuntu.templates:1001
+msgid "Ready to install"
+msgstr "Klaar voor de installatie van"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:33001
+msgid ""
+"Your new operating system will now be installed with the following settings:"
+msgstr ""
+"Uw nieuwe besturingssysteem zal nu met de volgende instellingen "
+"geïnstalleerd worden:"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:34001
+msgid "Advanced..."
+msgstr "Geavanceerd…"
+
+#. Type: text
+#. Description
+#. This is used as a button label, and should be translated as an action.
+#. Omit the [ ... ] from the translation.
+#: ../ubiquity.templates:35001
+msgid "Install[ action ]"
+msgstr "Installeren"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:36001
+msgid "Step ${INDEX} of ${TOTAL}"
+msgstr "Stap ${INDEX} van ${TOTAL}"
+
+#. Type: title
+#. Description
+#: ../ubiquity.templates:37001
+msgid "Abort the installation?"
+msgstr "Wilt u de installatie afbreken?"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:38001
+msgid "Do you really want to abort the installation now?"
+msgstr "Weet u zeker dat u de installatie nu wilt afbreken?"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:39001
+msgid "Skip"
+msgstr "Overslaan"
+
+#. Type: title
+#. Description
+#: ../ubiquity.templates:40001
+msgid "Installation complete"
+msgstr "Installatie is voltooid"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:41001
+msgid "Continue using the live CD"
+msgstr "De live-cd verder blijven gebruiken"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:42001
+msgid "Restart now"
+msgstr "Nu herstarten"
+
+#. Type: text
+#. Description
+#. Type: text
+#. Description
+#: ../ubiquity.templates:43001 ../ubiquity.templates:44001
+msgid "Installer crashed"
+msgstr "Installatieprogramma is gecrashed"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:45001
+msgid ""
+"We're sorry; the installer crashed. Please file a new bug report at https://"
+"launchpad.net/ubuntu/+source/ubiquity/+filebug (do not attach your details "
+"to any existing bug) and a developer will attend to the problem as soon as "
+"possible. To help the developers understand what went wrong, include the "
+"following detail in your bug report, and attach the files /var/log/syslog "
+"and /var/log/partman:"
+msgstr ""
+"Het spijt ons, het installatieprogramma is gecrashed. Dien een bugreport in "
+"op https://launchpad.net/ubuntu/+source/ubiquity/+filebug (voeg niet uw "
+"gegevens toe aan een bestaande bug) en een ontwikkelaar zal zo snel mogelijk "
+"met het probleem aan de slag gaan. Om het ontwikkelaars te helpen begrijpen "
+"wat er fout ging, voeg onderstaande details aan uw bugreport toe, voeg ook "
+"de bestanden /var/log/syslog en /var/log/partman bij."
+
+#. Type: text
+#. Description
+#. An action, displayed on a button or as a menu item.
+#: ../ubiquity.templates:46001
+msgid "New partition table"
+msgstr ""
+
+#. Type: text
+#. Description
+#. An action, displayed on a button or as a menu item.
+#: ../ubiquity.templates:47001
+msgid "New partition"
+msgstr ""
+
+#. Type: text
+#. Description
+#. An action, displayed on a button or as a menu item.
+#. Type: text
+#. Description
+#: ../ubiquity.templates:48001 ../ubiquity.templates:64001
+msgid "Edit partition"
+msgstr "Partitie bewerken"
+
+#. Type: text
+#. Description
+#. An action, displayed on a button or as a menu item.
+#: ../ubiquity.templates:49001
+msgid "Delete partition"
+msgstr ""
+
+#. Type: text
+#. Description
+#. A column heading in the partitioner.
+#: ../ubiquity.templates:50001
+msgid "Device"
+msgstr ""
+
+#. Type: text
+#. Description
+#. A column heading in the partitioner. Indicates how the partition is to be
+#. used (ext2, swap, etc.).
+#: ../ubiquity.templates:51001
+msgid "Type"
+msgstr ""
+
+#. Type: text
+#. Description
+#. A column heading in the partitioner.
+#: ../ubiquity.templates:52001
+msgid "Mount point"
+msgstr ""
+
+#. Type: text
+#. Description
+#. A column heading in the partitioner.
+#: ../ubiquity.templates:53001
+msgid "Format?"
+msgstr ""
+
+#. Type: text
+#. Description
+#. A column heading in the partitioner.
+#: ../ubiquity.templates:54001
+msgid "Size"
+msgstr ""
+
+#. Type: text
+#. Description
+#. A column heading in the partitioner. Indicates how much of the space on
+#. this partition is used by data.
+#: ../ubiquity.templates:55001
+msgid "Used"
+msgstr ""
+
+#. Type: text
+#. Description
+#. Indicates unpartitioned free space on a disk.
+#: ../ubiquity.templates:56001
+msgid "free space"
+msgstr ""
+
+#. Type: text
+#. Description
+#. Indicates that we do not know how much space is used on this partition.
+#: ../ubiquity.templates:57001
+msgid "unknown"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:58001
+msgid "Create partition"
+msgstr "Partitie aanmaken"
+
+#. Type: text
+#. Description
+#. Type: text
+#. Description
+#: ../ubiquity.templates:59001 ../ubiquity.templates:66001
+msgid "New partition size in megabytes (1000000 bytes):"
+msgstr "Nieuwe partitiegrootte in megabytes (1000000 bytes):"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:60001
+msgid "Beginning"
+msgstr "Begin"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:61001
+msgid "End"
+msgstr "Einde"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:62001
+msgid "Primary"
+msgstr "Primair"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:63001
+msgid "Logical"
+msgstr "Logisch"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:65001
+msgid "Edit a partition"
+msgstr "Bewerk een partitie"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:67001
+msgid "Advanced Options"
+msgstr "Geavanceerde opties"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:68001
+msgid "Boot loader"
+msgstr "Opstartmenu"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:69001
+msgid "Install boot loader"
+msgstr "Opstartlader installeren"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:70001
+msgid "Popularity contest"
+msgstr "Popularity contest"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:71001
+msgid "Participate in the package usage survey"
+msgstr "Neem deel aan het pakketgebruik-onderzoek"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:72001
+msgid "Network proxy"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:73001
+msgid "HTTP proxy:"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:74001
+msgid "Port:"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:75001
+msgid ""
+"Installation is complete. You need to restart the computer in order to use "
+"the new installation. You can continue to use this live CD, although any "
+"changes you make or documents you save will not be preserved."
+msgstr ""
+"De installatie werd voltooid. U moet de computer opnieuw starten om de "
+"nieuwe installatie te kunnen gebruiken. U kunt ook de live-cd blijven "
+"gebruiken, wijzigingen die u van nu af maakt en documenten die u opslaat "
+"worden dan echter niet bewaard."
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#: ../ubiquity.templates:76001
+msgid "Go Back"
+msgstr "Terug"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#: ../ubiquity.templates:77001
+msgid "Continue"
+msgstr "Verder"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:78001
+#, fuzzy
+msgid ""
+"Installation is complete. You need to restart the computer in order to use "
+"the new installation."
+msgstr ""
+"De installatie werd voltooid. U moet de computer opnieuw starten om de "
+"nieuwe installatie te kunnen gebruiken. U kunt ook de live-cd blijven "
+"gebruiken, wijzigingen die u van nu af maakt en documenten die u opslaat "
+"worden dan echter niet bewaard."
+
+#. Type: note
+#. Description
+#: ../ubiquity.templates:79001
+msgid ""
+" Language: ${LANGUAGE}\n"
+" Keyboard layout: ${KEYMAP}\n"
+" Name: ${FULLNAME}\n"
+" Login name: ${USERNAME}\n"
+" Location: ${LOCATION}\n"
+" Migration Assistant:\n"
+" ${MIGRATE}"
+msgstr ""
+" Taal: ${LANGUAGE}\n"
+" Toetsenbordindeling: ${KEYMAP}\n"
+" Naam: ${FULLNAME}\n"
+" Gebruikersnaam: ${USERNAME}\n"
+" Locatie: ${LOCATION}\n"
+"Migratie assistent:\n"
+"${MIGRATE}"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:80001
+msgid "Checking the installation..."
+msgstr "De installatie wordt gecontroleerd..."
+
+#. Type: title
+#. Description
+#: ../ubiquity.templates:81001
+msgid "Installing system"
+msgstr "Het systeem wordt geïnstalleerd"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:82001
+msgid "Finding the distribution to copy..."
+msgstr "Vinden van de te kopiëren distributie..."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:84001
+msgid "Scanning files..."
+msgstr "Bestanden scannen..."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:85001
+msgid "Copying files..."
+msgstr "Bestanden aan het kopiëren..."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:86001
+msgid "Copying files (less than a minute remaining)..."
+msgstr "Bestanden worden gekopieerd (minder dan een minuut te gaan)..."
+
+#. Type: error
+#. Description
+#: ../ubiquity.templates:87001
+msgid "Failed to copy files; out of disk space."
+msgstr ""
+
+#. Type: error
+#. Description
+#. Type: error
+#. Description
+#. Type: error
+#. Description
+#. Type: error
+#. Description
+#: ../ubiquity.templates:87001 ../ubiquity.templates:88001
+#: ../ubiquity.templates:89001 ../ubiquity.templates:90001
+msgid "The installer encountered an error copying files to the hard disk:"
+msgstr ""
+"Fout geconstateerd tijdens het kopiëren van bestanden naar de harde schijf:"
+
+#. Type: error
+#. Description
+#: ../ubiquity.templates:87001
+msgid ""
+"This particular error is due to there being insufficient disk space for the "
+"install to complete on the target partition.  Please run the installer again "
+"and select a larger partition to install into."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../ubiquity.templates:88001
+msgid "Failed to copy files; faulty CD/DVD?"
+msgstr "Bestanden kopiëren mislukt; CD/DVD met fouten?"
+
+#. Type: error
+#. Description
+#: ../ubiquity.templates:88001
+msgid ""
+"This particular error is often due to a faulty CD/DVD disk or drive. It may "
+"help to clean the CD/DVD, to burn the CD/DVD at a lower speed, or to clean "
+"the CD/DVD drive lens (cleaning kits are often available from electronics "
+"suppliers)."
+msgstr ""
+"Deze fout is vaak een gevolg van een CD/DVD-schijf of -speler met fouten.  "
+"Mogelijk helpt het om de CD/DVD te reinigen, de CD/DVD aan een lagere "
+"snelheid te branden, of de lens van de CD/DVD-speler te reinigen "
+"(reinigingskits zijn bij veel computer- en electronica-winkels te koop)."
+
+#. Type: error
+#. Description
+#: ../ubiquity.templates:89001
+msgid "Failed to copy files; faulty hard disk?"
+msgstr "Bestanden kopiëren mislukt; fouten op de harde schijf?"
+
+#. Type: error
+#. Description
+#: ../ubiquity.templates:89001
+msgid ""
+"This particular error is often due to a faulty hard disk. It may help to "
+"check whether the hard disk is old and in need of replacement, or to move "
+"the system to a cooler environment."
+msgstr ""
+"Deze fout is vaak een gevolg van een harde schijf met fouten.  Mogelijk "
+"helpt het om na te kijken of de harde schijf niet oud en versleten is en "
+"vervangen dient te worden, of om het systeem in een koelere omgeving te "
+"plaatsen."
+
+#. Type: error
+#. Description
+#: ../ubiquity.templates:90001
+msgid "Failed to copy files; faulty CD/DVD or hard disk?"
+msgstr "Bestanden kopiëren mislukt; fouten op de CD/DVD of de harde schijf?"
+
+#. Type: error
+#. Description
+#. This is used when we don't know whether the CD/DVD or the hard disk is at
+#. fault.
+#. Type: select
+#. Description
+#. This is used when there was an md5 mismatch during copying, meaning that
+#. the source file and destination file are not equal.
+#: ../ubiquity.templates:90001 ../ubiquity.templates:91001
+msgid ""
+"This particular error is often due to a faulty CD/DVD disk or drive, or a "
+"faulty hard disk. It may help to clean the CD/DVD, to burn the CD/DVD at a "
+"lower speed, to clean the CD/DVD drive lens (cleaning kits are often "
+"available from electronics suppliers), to check whether the hard disk is old "
+"and in need of replacement, or to move the system to a cooler environment."
+msgstr ""
+"Deze fout is vaak een gevolg van een CD/DVD-schijf of -speler of een harde "
+"schijf met fouten.  Mogelijk helpt het om de CD/DVD te reinigen, de CD/DVD "
+"aan een lagere snelheid te branden, of de lens van de CD/DVD-speler te "
+"reinigen (reinigingskits zijn bij veel computer- en electronica-winkels te "
+"koop), om na te kijken of de harde schijf niet oud en versleten is en "
+"vervangen dient te worden, of om het systeem in een koelere omgeving te "
+"plaatsen."
+
+#. Type: select
+#. Description
+#: ../ubiquity.templates:91001
+msgid "Failed to copy file; faulty CD/DVD or hard disk?"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ubiquity.templates:91001
+msgid "The following file did not match its source copy on the CD/DVD:"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:92001
+msgid "Copying installation logs..."
+msgstr "De installatielogs worden gekopieerd..."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:93001
+msgid "Configuring target system..."
+msgstr "Configureer doel systeem..."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:94001
+msgid "Configuring system locales..."
+msgstr "Het systeem wordt gelocaliseerd..."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:95001
+msgid "Configuring apt..."
+msgstr "Apt wordt geconfigureerd..."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:96001
+msgid "Configuring time zone..."
+msgstr "De tijdzone wordt ingesteld..."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:97001
+msgid "Configuring keyboard..."
+msgstr "Het toetsenbord wordt geconfigureerd..."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:98001
+msgid "Creating user..."
+msgstr "Gebruikers worden aangemaakt..."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:99001
+msgid "Importing documents and settings..."
+msgstr "Bezig met importeren van documenten en instellingen..."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:100001
+msgid "Configuring hardware..."
+msgstr "De hardware wordt geconfigureerd..."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:101001
+msgid "Configuring network..."
+msgstr "Netwerk wordt geconfigureerd..."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:102001
+msgid "Setting computer name..."
+msgstr "De computernaam wordt ingesteld..."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:103001
+msgid "Configuring boot loader..."
+msgstr "Het opstartprogramma wordt geconfigureerd..."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:104001
+msgid "Installing additional packages..."
+msgstr "Installeren van aanvullende pakketten..."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:105001
+msgid "Checking for packages to install..."
+msgstr "Controleren op te installeren pakketten..."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:106001
+msgid "Removing extra packages..."
+msgstr "Extra pakketten worden verwijderd..."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:107001
+msgid "Checking for packages to remove..."
+msgstr "Controle op te verwijderen pakketten..."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:108001
+msgid "Downloading packages (${TIME} remaining)..."
+msgstr "Downloaden van pakketten (${TIME} te gaan)..."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:109001
+msgid "Downloading package lists..."
+msgstr "De pakketlijst wordt opgehaald..."
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:110001
+msgid "Downloading package lists (${TIME} remaining)..."
+msgstr "Downloaden van pakketlijsten (${TIME} te gaan)..."
+
+#. Type: error
+#. Description
+#: ../ubiquity.templates:112001
+msgid "Error installing ${PACKAGE}"
+msgstr "Foutmelding bij installatie van ${PACKAGE}"
+
+#. Type: error
+#. Description
+#: ../ubiquity.templates:113001
+msgid "Error removing ${PACKAGE}"
+msgstr "Foutmelding bij verwijderen van ${PACKAGE}"
+
+#. Type: error
+#. Description
+#: ../ubiquity.templates:114001
+msgid "Error while installing packages"
+msgstr "Fout tijdens het installeren van pakketten"
+
+#. Type: error
+#. Description
+#: ../ubiquity.templates:114001
+msgid "An error occurred while installing packages:"
+msgstr "Er is een fout opgetreden bij het installeren van pakketten:"
+
+#. Type: error
+#. Description
+#. Type: error
+#. Description
+#: ../ubiquity.templates:114001 ../ubiquity.templates:115001
+msgid "The following packages are in a broken state:"
+msgstr "De volgende pakketten zijn momenteel in een gebroken staat:"
+
+#. Type: error
+#. Description
+#. Type: error
+#. Description
+#: ../ubiquity.templates:114001 ../ubiquity.templates:115001
+msgid ""
+"This may be due to using an old installer image, or it may be due to a bug "
+"in some of the packages listed above. More details may be found in /var/log/"
+"syslog. The installer will try to continue anyway, but may fail at a later "
+"point, and will not be able to install or remove other packages (possibly "
+"including itself) from the installed system. You should first look for newer "
+"versions of your installer image, or failing that report the problem to your "
+"distributor."
+msgstr ""
+"Dit kan komen doordat u een oud installatieprogramma-image gebruikt, of het "
+"kan komen door een bug in enkele van de hierboven weergegeven pakketten. "
+"Meer details zijn te vinden in /var/log/syslog. Het installatieprogramma zal "
+"desondanks trachten door te gaan, maar de installatie kan op een later "
+"moment toch nog mislukken. Het zal dan niet in staat zijn om andere "
+"pakketten te installeren of te verwijderen (waaronder mogelijk zichzelf) "
+"vanaf het geïnstalleerde systeem. Probeer een nieuwere versies van uw "
+"installatieprogramma-image te vinden of, als dat niet lukt, rapporteer het "
+"probleem aan uw distributeur."
+
+#. Type: error
+#. Description
+#: ../ubiquity.templates:115001
+msgid "Error while removing packages"
+msgstr "Fout bij het verwijderen van pakketten"
+
+#. Type: error
+#. Description
+#: ../ubiquity.templates:115001
+msgid "An error occurred while removing packages:"
+msgstr "Er is een fout opgetreden bij het verwijderen van pakketten:"
+
+#. Type: title
+#. Description
+#: ../ubiquity.templates:117001
+msgid "Installing language packs"
+msgstr "Taalpakketten worden geïnstalleerd"
+
+#. Type: text
+#. Description
+#: ../ubiquity.templates:118001
+msgid "Downloading language packs (${TIME} remaining)..."
+msgstr "Downloaden van taalpakketten (${TIME} te gaan)..."
+
+#. Type: boolean
+#. Description
+#: ../ubiquity.templates:123001
+msgid "Failed to unmount partitions"
+msgstr "Ontkoppelen van de partities is mislukt"
+
+#. Type: boolean
+#. Description
+#: ../ubiquity.templates:123001
+msgid ""
+"The installer needs to commit changes to partition tables, but cannot do so "
+"because partitions on the following mount points could not be unmounted:"
+msgstr ""
+"Het installatie programma moet wijzigingen maken aan de partitie tabel, maar "
+"kan dit niet doen omdat de volgende aankoppel punten niet losgekoppeld "
+"konden worden:"
+
+#. Type: boolean
+#. Description
+#: ../ubiquity.templates:123001
+msgid "Please close any applications using these mount points."
+msgstr ""
+"Sluit alle programma's die deze aankoppel punten gebruiken, alstublieft."
+
+#. Type: boolean
+#. Description
+#: ../ubiquity.templates:123001
+msgid "Would you like the installer to try to unmount these partitions again?"
+msgstr ""
+"Wilt u dat het installatieprogramma probeert deze partities opnieuw te "
+"ontkoppelen?"
+
+#. Type: boolean
+#. Description
+#: ../ubiquity.templates:129001
+msgid "Do you want to return to the partitioner?"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../ubiquity.templates:129001
+msgid ""
+"Some of the partitions you created are too small.  Please make the following "
+"partitions at least this large (in bytes):"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../ubiquity.templates:129001
+msgid ""
+"If you do not go back to the partitioner and increase the size of these "
+"partitions, the installation may fail."
+msgstr ""
+
+#. Type: note
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:1001
+msgid ""
+" Install Type:           ${INSTALLTYPE}\n"
+" Drivers:\n"
+"     Add. Video Driver:  ${VIDEO_DRIVER}\n"
+"         TV-Out:             ${TVOUT}, ${TVSTANDARD}\n"
+" Additional Services:\n"
+"     VNC:                ${EN_VNC}\n"
+"     SSH:                ${EN_OPENSSH}\n"
+"     Samba:              ${EN_SAMBA}\n"
+"     NFS:                ${EN_NFS}\n"
+"     MythTV Service:     ${EN_MYSQL}\n"
+" Normal Ubuntu Install Questions:\n"
+"     Language:           ${LANGUAGE}\n"
+"     Keyboard layout:    ${KEYMAP}\n"
+"     Regular Name:       ${FULLNAME}\n"
+"     Regular Login name: ${USERNAME}\n"
+"     Location:           ${LOCATION}"
+msgstr ""
+" Installatie Type:       ${INSTALLTYPE}\n"
+" Drivers:\n"
+"     Aanv. Videodriver:  ${VIDEO_DRIVER}\n"
+"         TV-Out:             ${TVOUT}, ${TVSTANDARD}\n"
+" Aanvullende diensten:\n"
+"     VNC:                ${EN_VNC}\n"
+"     SSH:                ${EN_OPENSSH}\n"
+"     Samba:              ${EN_SAMBA}\n"
+"     NFS:                ${EN_NFS}\n"
+"     MythTV dienst:      ${EN_MYSQL}\n"
+" Normale Ubuntu-installatievragen:\n"
+"     Taal:               ${LANGUAGE}\n"
+"     Toetsenbordindeling:${KEYMAP}\n"
+"     Gewone naam:        ${FULLNAME}\n"
+"     Gewone inlognaam:   ${USERNAME}\n"
+"     Locatie:            ${LOCATION}"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:2001
+msgid "What Type of Installation?"
+msgstr "Welk installatietype?"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:3001
+msgid "Two installation types are available for Mythbuntu:"
+msgstr "Er zijn twee installatietypen voor Mythbuntu beschikbaar:"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:4001
+msgid "Standard Installation"
+msgstr "Standaardinstallatie"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:5001
+msgid ""
+"A standard installation will install and configure every option with minimal "
+"user interaction. This will install a backend, frontend, all plugins, and "
+"all themes."
+msgstr ""
+"Een standaardinstallatie installeert en configureert iedere optie met zo min "
+"mogelijk gebruikersinteractie. Dit omvat een backend, frontend, alle plugins "
+"en alle thema's"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:6001
+msgid "Advanced Installation"
+msgstr "Geavanceerde installatie"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:7001
+msgid ""
+"An advanced installation can be used to customize what is needed for this "
+"Mythbuntu install. NOTE: An advanced install is necessary to add a Mythbuntu "
+"machine to an existing MythTV based network."
+msgstr ""
+"Een geavanceerde installatie kan gebruikt worden om de benodigdheden voor "
+"deze Mythbuntu installatie aan te passen. Noot: Een geavanceerde installatie "
+"is vereist om een Mythbuntu machine aan een bestaand MythTV-gebaseerd "
+"netwerk toe te voegen."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:8001
+msgid "Advanced Installation Type"
+msgstr "Geavanceerd installatietype"
+
+#. Type: text
+#. Description
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:9001
+#: ../ubiquity-frontend-mythbuntu.templates:10001
+msgid "What type of system will this be?"
+msgstr "Wat voor soort systeem wordt dit?"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:11001
+msgid "Primary Backend w/ Frontend"
+msgstr "Primair backend met frontend"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:12001
+msgid ""
+"A Backend/frontend combo machine is the most common setup for people wanting "
+"MythTV for HTPC applications. This type of installation is intended for use "
+"as a component in your home theatre."
+msgstr ""
+"Een machine met een backend/frontend combinatie is de meest gebruikelijke "
+"installatie voor mensen die MythTV willen gebruiken voor HTPC applicaties. "
+"Dit installatietype is bedoeld voor gebruik als onderdeel van uw "
+"thuistheater."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:13001
+msgid "Secondary Backend w/ Frontend"
+msgstr "Secundair backend met frontend"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:14001
+msgid ""
+"This will set up a system similar to a Primary Backend w/ Frontend, however "
+"will be configured to connect to an existing backend on the network."
+msgstr ""
+"Dit zal een systeem installeren, vergelijkbaar met een primair frontend met "
+"backend, het zal echter worden geconfigureerd om op het netwerk verbinding "
+"te maken met een bestaand backend."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:15001
+msgid "Primary Backend"
+msgstr "Primaire backend"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:16001
+msgid ""
+"A backend only machine is typically designed to function like an appliance; "
+"requiring very little maintenance.  This is intended to be installed as the "
+"first backend on a network."
+msgstr ""
+"Een alleen-backend machine is gewoonlijk ontworpen om te werken als een "
+"apparaat dat weinig onderhoud nodig heeft. Dit is bedoeld om als het eerste "
+"backend op het netwerk geïnstalleerd te worden."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:17001
+msgid "Secondary Backend"
+msgstr "Secundaire backend"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:18001
+msgid ""
+"This will set up a system similar to a Primary Backend, however it will be "
+"configured to connect to an existing backend on the network."
+msgstr ""
+"Dit zal een systeem installeren, vergelijkbaar met een primair backend, het "
+"zal echter geconfigureerd worden om op het netwerk verbinding te maken met "
+"een bestaand backendk."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:19001
+msgid "Frontend"
+msgstr "Frontend"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:20001
+msgid ""
+"A frontend only machine's main function is to receive media content from the "
+"backend and distribute it.  This configuration requires an existing backend "
+"on the network."
+msgstr ""
+"De belangrijkste functie van een alleen-frontend machine is om media-inhoud "
+"te ontvangen van het backend en deze te verdelen. Deze configuratie vereist "
+"een bestaand backend op het netwerk."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:21001
+msgid "Choose Frontend / Backend Plugins"
+msgstr "Kies frontend / backend plugins"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:22001
+msgid ""
+"Plugins can be used to extend MythTV functionality beyond a time shifting TV "
+"solution."
+msgstr ""
+"Plugins kunnen worden gebruikt om de functionaliteit van MythTV verder uit "
+"te breiden dan alleen het opnemen van televisieprogramma's"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:23001
+msgid "Backend Plugins"
+msgstr "Backend plugins"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:24001
+msgid "Frontend Plugins"
+msgstr "Frontend plugins"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:25001
+msgid "Myth Web"
+msgstr "Myth Web"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:26001
+msgid ""
+"MythWeb provides a web interface which can be used to view listings, "
+"schedule recordings, delete recordings, and search for programs."
+msgstr ""
+"MyWeb biedt een webinterface dat gebruikt kan worden om online "
+"televisiegidsen te raadplegen, opnamen in te programmeren, opnamen te "
+"verwijderen en om naar programma's te zoeken"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:27001
+msgid "Myth Archive"
+msgstr "Myth Archief"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:28001
+msgid "Myth Browser"
+msgstr "Myth Browser"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:29001
+msgid "Myth Controls"
+msgstr "Myth Bediening"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:30001
+msgid "Myth Movies"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:31001
+msgid "Myth Flix"
+msgstr "Myth Flix"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:32001
+msgid "Myth Gallery"
+msgstr "Myth Gallerie"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:33001
+msgid "Myth Game"
+msgstr "Myth Spellen"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:34001
+msgid "Myth Music"
+msgstr "Myth Muziek"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:35001
+msgid "Myth News"
+msgstr "Myth Nieuws"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:36001
+msgid "Myth Phone"
+msgstr "Myth Telefoon"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:37001
+msgid "Myth Stream"
+msgstr "Myth Stream"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:38001
+msgid "Myth Video"
+msgstr "Myth Video"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:39001
+msgid "Myth Weather"
+msgstr "Myth Weer"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:40001
+msgid ""
+"A plugin for MythTV that lets you create DVDs from content on your MythTV "
+"Network."
+msgstr ""
+"Een plugin vor MythTV waarmee u DVD's kunt maken van de inhoud van uw MythTV-"
+"netwerk."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:41001
+msgid "An integrated web browser plugin for your MythTV system."
+msgstr "Een geïntegreerde webbrowser plugin voor uw MythTV-systeem."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:42001
+msgid ""
+"External controls for MythTV. This will allow you to modify button mappings "
+"and key bindings."
+msgstr ""
+"Externe bedoiening voor MythTV. Hiermee kunt u toets-instellingen en "
+"toetsbindingen wijzigen."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:43001
+msgid "Find movies playing in nearby local cinemas"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:44001
+msgid "Allows you to monitor your Netflix dvd rental queue."
+msgstr "Hiermee kunt u uw Netflix DVD-huurwachtrij in de gaten houden."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:45001
+msgid "Allows you to visually browse a directory tree containing image files."
+msgstr ""
+"Hiermee kunt u visueel door een mappenboom bladeren dat afbeeldingsbestanden "
+"bevat."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:46001
+msgid "A frontend to start any emulator or binary that Linux runs."
+msgstr ""
+"Een frontend om elke emulator en binair bestand te starten dat onder Linux "
+"draait."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:47001
+msgid "Provides a digital audio jukebox integrated with MythTV."
+msgstr "Geeft u een met MythTV geïntegreerde digitale audio-jukebox"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:48001
+msgid ""
+"An RSS feed news reader plugin for MythTV that keeps you up-to-date on your "
+"favorite news topics."
+msgstr ""
+"Een RSS-feed nieuwslezerplugin voor MythTV dat u bij de tijd houdt over uw "
+"favoriete nieuwsonderwerpen."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:49001
+msgid ""
+"A phone and videophone capability on MythTV using the standard SIP protocol."
+msgstr ""
+"Telefoon en videofoonfunctionaliteit onder MythTV dat gebruik maakt van het "
+"standaard SIP-protocol."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:50001
+msgid "Provides a method to listen to streaming internet radio stations."
+msgstr "Biedt de mogelijkheid om naar internetradiostations te luisteren."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:51001
+msgid ""
+"Allows you to browse and play video streams, using an external player, from "
+"within the MythTV interface."
+msgstr ""
+"Hiermee kunt u door videostreams bladeren en ze vanuit de MythTV interface "
+"met een externe speler afspelen."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:52001
+msgid "Displays current and forecast weather information within MythTV."
+msgstr "Geeft weersvoorspellingen en de huidige weerinformatie vanuit MythTV."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:53001
+msgid "Choose Extra Themes"
+msgstr "Kies extra thema's"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:54001
+msgid ""
+"Themes can greatly improve the aesthetic appeal of a MythTV setup, and "
+"display it to match your tastes much better."
+msgstr ""
+
+#. Type: text
+#. Description
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:55001
+#: ../ubiquity-frontend-mythbuntu.templates:56001
+msgid "Enable/Disable All"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:57001
+msgid "Additional Drivers/Firmware"
+msgstr "Aanvullende drivers/firmware"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:58001
+msgid ""
+"An open source graphics driver is already enabled and configured for your "
+"installation.  If you would like to use a different graphics driver, you can "
+"do so here.  Note that proprietary graphics drivers may be necessary for TV "
+"Output or OpenGL effects."
+msgstr ""
+"Er is al een open-source videodriver voor uw installatie ingeschakeld en "
+"geconfigureerd. Als u een andere videodriver wilt gebruiken, dan kunt u dat "
+"hier doen. Merk op dat u mogelijk niet-vrije videodrivers nodig hebt voor TV-"
+"uitvoer en OpenGL-effecten."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:59001
+msgid "Modify Video Driver & Settings"
+msgstr "Videodrivers & -instellingen wijzigen"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:60001
+msgid "If you would like to configure TV-out, choose an option here:"
+msgstr "Kies hier een optie als u TV-out wilt configureren:"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:61001
+msgid "If enabling TV Out, you will also need to choose a TV Standard:"
+msgstr "Als u TV-out aanzet, moet u ook een TV-standaard kiezen:"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:62001
+msgid ""
+"Warning: Do not set the TV standard to something higher than what your TV "
+"supports. PERMANENT damage may occur."
+msgstr ""
+"Waarschuwing: Stel de TV-standaard niet hoger in dan wat uw TV ondersteunt. "
+"Dit kan leiden tot PERMANENTE schade."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:63001
+msgid "Master Backend Info"
+msgstr "Hoofd-backend informatie"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:64001
+msgid "Please enter the information necessary to contact your master backend:"
+msgstr ""
+"Voer de vereiste informatie in om contact te leggen met het hoofd-backend."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:65001
+msgid "MySQL Password"
+msgstr "MySQL wachtwoord"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:66001
+msgid "MySQL User Name"
+msgstr "MySQL-gebruikersnaam"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:67001
+msgid "MySQL Database"
+msgstr "MySQL-database"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:68001
+msgid "MySQL Server"
+msgstr "MySQL-server"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:69001
+msgid "Configure Guide Data / Backend"
+msgstr "Configureer gidsgegevens / backend"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:70001
+msgid ""
+"The final steps of the installation require setting up your guide data and "
+"configuring the backend for the first time."
+msgstr ""
+"XDe laatste stappen van de installatie vereisen dat u uw gidsgegevens "
+"instelt en dat u het backend voor eerste gebruik configureert."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:71001
+msgid "Click to open the Schedules Direct website"
+msgstr "Klik om de Schedules Direct website te openen."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:72001
+msgid ""
+"Users in North America will need to setup an account with Schedules Direct "
+"(SD).  SD provides guide data for a nominal fee.  Without SD, North American "
+"users may lose many of the scheduling features in MythTV."
+msgstr ""
+"Gebruikers in Noord Amerika moeten een account bij Schedules Direct (SD) "
+"aanmaken. SD biedt gidsgegevens voor een nominaal bedrag. Zonder SD kunnen "
+"gebruikers in Noord Amerika veel programmeerfunctionaliteiten van MythTV "
+"verliezen."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:73001
+msgid "Launch MythTV Setup"
+msgstr "MythTV setup starten"
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:74001
+msgid ""
+"After setting up your guide data source, you will need to launch MythTV-"
+"Setup to run the backend configuration for the first time.  You will need to "
+"configure the first four sections, being sure to provide your guide data "
+"during the third."
+msgstr ""
+"Nadat u uw gidsgegevensbron hebt ingesteld, moet u MythTV-Setup starten om "
+"voor de eerste keer de backendconfiguratie te starten. U moet de eerste vier "
+"secties configureren en er daarbij zorg voor dragen dat u uw gidsgegevens in "
+"de derde sectie opgeeft."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:75001
+msgid "Configuring mythtv..."
+msgstr "Mythtv wordt geconfigureerd..."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:76001
+msgid "Configuring additional drivers..."
+msgstr "Extra drivers worden geconfigureerd..."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:77001
+msgid "Configuring additional services..."
+msgstr "Extra diensten worden geconfigureerd..."
+
+#. Type: text
+#. Description
+#: ../ubiquity-frontend-mythbuntu.templates:78001
+msgid "Configuring infrared devices..."
+msgstr ""
