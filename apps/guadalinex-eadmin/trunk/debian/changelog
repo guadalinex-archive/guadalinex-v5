@@ -8,8 +8,9 @@ guadalinex-eadmin (v5-0.1) hardy; urgency=low
   * Removed old libccid_Info.plist.gv4; libccid provides better plist now
   * Moved to new libnss3-1d as dependence
   * Marked firefox-3.0 as mandatory browser as dependence
+  * Updated new jss33.jar library
 
- -- J. Félix Ontañón <fontanon@emergya.es>  Mon, 28 Apr 2008 17:48:11 +0100
+ -- J. Félix Ontañón <fontanon@emergya.es>  Fri, 9 Apr 2008 14:41:11 +0100
 
 guadalinex-eadmin (r1760-0.1) edgy; urgency=low
 
