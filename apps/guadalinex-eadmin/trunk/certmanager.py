@@ -157,7 +157,7 @@ class FireFoxSecurityUtils(object):
         os.write(fd, password)
         os.close(fd)
 
-	cmd = '%s -i "%s" -d "%s" -w "%s" -K'
+	cmd = '%s -i "%s" -d "%s" -w "%s"'
         cmd = cmd % (PK12UTIL_CMD, certificate_file, profile, password_file)
 	status, output = commands.getstatusoutput(cmd)
 	os.unlink(password_file)
@@ -311,7 +311,6 @@ class Application(object):
 
 class FireFoxApp(Application):
 
-    
     def __init__(self, name='FireFox'):
         super(FireFoxApp, self).__init__(name)
         self._ff = FireFoxSecurityUtils()
@@ -337,14 +336,16 @@ class FireFoxApp(Application):
             if self._is_app_running():
                 abort = not self._wait_for_running_instances()
                 if abort:
-                    return False
+		    print "WE1"
+                    return False, ''
 
             if not has_fnmt_cert and (user_certificates or install_ceres):
                 if True == self._ask_permission():
                     self._ff.add_root_ca_certificate(FNMT_ROOT_CERT_NAME,
                                                      FNMT_ROOT_CERT_FILE)
                 else:
-                    return False
+		    print "WE2"
+                    return False, ''
 
             if not has_dnie_cert and install_dnie:
                 self._ff.add_root_ca_certificate(DNIE_ROOT_CERT_NAME,
@@ -353,35 +354,35 @@ class FireFoxApp(Application):
         if self._is_app_running():
             abort = not self._wait_for_running_instances()
             if abort:
-                return False
-	
-	try:
-	    card_types = self.check_smartcards()
-	except FireFoxAppError, e:
-	    print e.errno, e.desc
-	    return False
+                return False, ''
 
-	if SIEMENS_ATR in card_types:
-	    print "Detected Siemens Smartcard"
-            if self._ff.has_security_method('Tarjeta Inteligente'):
-		self._ff.remove_security_method('Tarjeta Inteligente')
+	if install_dnie or install_ceres:
+	    try:
+	        card_types = self.check_smartcards()
+	    except FireFoxAppError, e:
+	        print e.errno, e.desc
+	        return False, ''
 
-            if self._ff.has_security_method('DNIe'):
-		self._ff.remove_security_method('DNIe')
+	    if SIEMENS_ATR in card_types:
+	        print "Detected Siemens Smartcard"
+                if self._ff.has_security_method('Tarjeta Inteligente'):
+	   	    self._ff.remove_security_method('Tarjeta Inteligente')
 
-	    if install_ceres and not self._ff.has_security_method('Tarjeta Inteligente Siemens'):
-                self._ff.add_security_method('Tarjeta Inteligente Siemens', SIEMENS_PKCS11_LIB)
-	else:
-	    print "Detected FNMT-smartcard, DNIe or other"
-	    if self._ff.has_security_method('Tarjeta Inteligente Siemens'):
-		self._ff.remove_security_method('Tarjeta Inteligente Siemens')
+                if self._ff.has_security_method('DNIe'):
+		    self._ff.remove_security_method('DNIe')
 
-	    if install_dnie and not self._ff.has_security_method('DNIe'):
-               self._ff.add_security_method('DNIe', DNIE_PKCS11_LIB)
+	        if install_ceres and not self._ff.has_security_method('Tarjeta Inteligente Siemens'):
+                    self._ff.add_security_method('Tarjeta Inteligente Siemens', SIEMENS_PKCS11_LIB)
+	    else:
+	        print "Detected FNMT-smartcard, DNIe or other"
+	        if self._ff.has_security_method('Tarjeta Inteligente Siemens'):
+		    self._ff.remove_security_method('Tarjeta Inteligente Siemens')
 
-            if install_ceres and not self._ff.has_security_method('Tarjeta Inteligente'):
-                self._ff.add_security_method('Tarjeta Inteligente', CERES_PKCS11_LIB)
+	        if install_dnie and not self._ff.has_security_method('DNIe'):
+                    self._ff.add_security_method('DNIe', DNIE_PKCS11_LIB)
 
+                if install_ceres and not self._ff.has_security_method('Tarjeta Inteligente'):
+                    self._ff.add_security_method('Tarjeta Inteligente', CERES_PKCS11_LIB)
 
         # install the user certificates
         success = True
@@ -588,9 +589,9 @@ class CertManager(object):
 	success = True
         if options.install_dnie or options.install_ceres or certs:
             for app in self._applications:
-                status, new_certs = app.setup(certs,
-                                              options.install_dnie,
-                                              options.install_ceres)
+                status, new_certs = app.setup(certs, 
+					options.install_dnie, 
+					options.install_ceres)
                 success = success and status
                 new_certificates += new_certs
 
@@ -639,7 +640,7 @@ class CertManager(object):
         return ret
 
 class CertificatesDialog(gtk.Dialog):
-    """Dialog to ask the user which certicicates he/she wishes to add/remove"""
+    """Dialog to ask the user which certificates he/she wishes to add/remove"""
     def __init__(self, path, cert_list, add=True, parent=None):
         gtk.Dialog.__init__(self,
                             title="CertManager",
