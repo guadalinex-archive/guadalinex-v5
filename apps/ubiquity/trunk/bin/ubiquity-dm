@@ -61,7 +61,7 @@ class DM:
         # this lets us find out which window manager etc. to launch. Be
         # careful that importing this here will cause the underlying library
         # to try to talk to the X server, which won't go well.
-        frontend_names = ['mythbuntu_ui', 'gtk_ui', 'kde_ui']
+        frontend_names = ['mythbuntu_ui', 'guada_ui', 'gtk_ui', 'kde_ui']
         self.frontend = None
         for f in frontend_names:
             try:
@@ -115,7 +115,7 @@ class DM:
             timeout -= 1
 
         extras = []
-        if self.frontend == 'gtk_ui' or self.frontend == 'mythbuntu_ui':
+        if self.frontend == 'gtk_ui' or self.frontend == 'mythbuntu_ui' or self.frontend == 'guada_ui':
             # Accessibility infrastructure
             gconf_dir = ('xml:readwrite:%s' %
                 '/root/.gconf')
@@ -151,7 +151,7 @@ class DM:
                 gtk.gdk.flush()
             fp.close()
 
-        if self.frontend in ('gtk_ui', 'mythbuntu_ui'):
+        if self.frontend in ('gtk_ui', 'mythbuntu_ui', 'guada_ui'):
             if osextras.find_on_path('metacity'):
                 wm = subprocess.Popen(['metacity', '--sm-disable'],
                     stdin=null, stdout=logfile, stderr=logfile,
@@ -230,7 +230,7 @@ if len(sys.argv) < 3:
 vt, display = sys.argv[1:3]
 dm = DM(vt, display)
 proc = None
-if dm.frontend == 'gtk_ui' or dm.frontend == 'mythbuntu_ui':
+if dm.frontend == 'gtk_ui' or dm.frontend == 'mythbuntu_ui' or dm.frontend == 'guada_ui':
     proc = ['/etc/init.d/gdm', 'start']
 elif dm.frontend == 'kde_ui':
     proc = ['/etc/init.d/kdm', 'start']
