@@ -1,0 +1,488 @@
+Template: mythbuntu/summary
+Type: note
+#flag:translate!:3
+_Description: Ready to install
+  Install Type:           ${INSTALLTYPE}
+  Drivers:
+      Add. Video Driver:  ${VIDEO_DRIVER}
+          TV-Out:             ${TVOUT}, ${TVSTANDARD}
+  Additional Services:
+      VNC:                ${EN_VNC}
+      SSH:                ${EN_OPENSSH}
+      Samba:              ${EN_SAMBA}
+      NFS:                ${EN_NFS}
+      MythTV Service:     ${EN_MYSQL}
+  Normal Ubuntu Install Questions:
+      Language:           ${LANGUAGE}
+      Keyboard layout:    ${KEYMAP}
+      Regular Name:       ${FULLNAME}
+      Regular Login name: ${USERNAME}
+      Location:           ${LOCATION}
+ .
+ ${PARTMAN_CHANGES}
+
+Template: ubiquity/text/installtype_heading_label
+Type: text
+_Description: What Type of Installation?
+
+Template: ubiquity/text/installtypes_label
+Type: text
+_Description: Two installation types are available for Mythbuntu:
+
+Template: ubiquity/text/standardinstall
+Type: text
+_Description: Standard Installation
+
+Template: ubiquity/text/standard_label
+Type: text
+_Description:
+ A standard installation will install and configure every option with minimal user interaction.
+ This will install a backend, frontend, all plugins, and all themes.
+
+Template: ubiquity/text/custominstall
+Type: text
+_Description: Advanced Installation
+
+Template: ubiquity/text/custom_label
+Type: text
+_Description:
+ An advanced installation can be used to customize what is needed for this Mythbuntu install.
+ NOTE: An advanced install is necessary to add a Mythbuntu
+ machine to an existing MythTV based network.
+
+Template: ubiquity/text/installtype_heading_label
+Type: text
+_Description: Advanced Installation Type
+
+Template: ubiquity/text/custominstall_type_label
+Type: text
+_Description: What type of system will this be?
+
+Template: ubiquity/text/custominstall_type_label
+Type: text
+_Description: What type of system will this be?
+
+Template: ubiquity/text/master_be_fe
+Type: text
+_Description: Primary Backend w/ Frontend
+
+Template: ubiquity/text/master_be_fe_label
+Type: text
+_Description:
+ A Backend/frontend combo machine is the most common setup for people wanting
+ MythTV for HTPC applications. This type of installation is intended for use as a
+ component in your home theatre.
+
+Template: ubiquity/text/slave_be_fe
+Type: text
+_Description: Secondary Backend w/ Frontend
+
+Template: ubiquity/text/slave_be_fe_label
+Type: text
+_Description:
+ This will set up a system similar to a Primary Backend w/ Frontend, however will be
+ configured to connect to an existing backend on the network.
+
+Template: ubiquity/text/master_be
+Type: text
+_Description: Primary Backend
+
+Template: ubiquity/text/master_be_label
+Type: text
+_Description:
+ A backend only machine is typically designed to function like an appliance; requiring
+ very little maintenance.  This is intended to be installed as the first backend on a network.
+
+Template: ubiquity/text/slave_be
+Type: text
+_Description: Secondary Backend
+
+Template: ubiquity/text/slave_be_label
+Type: text
+_Description:
+ This will set up a system similar to a Primary Backend, however it will be configured to
+ connect to an existing backend on the network.
+
+Template: ubiquity/text/fe
+Type: text
+_Description: Frontend
+
+Template: ubiquity/text/fe_label
+Type: text
+_Description:
+ A frontend only machine's main function is to receive media content from the backend
+ and distribute it.  This configuration requires an existing backend on the network.
+
+Template: ubiquity/text/febe_heading_label
+Type: text
+_Description: Choose Frontend / Backend Plugins
+
+Template: ubiquity/text/plugin_description
+Type: text
+_Description: Plugins can be used to extend MythTV functionality beyond a time shifting TV solution.
+
+Template: ubiquity/text/backend_plugin_label
+Type: text
+_Description: Backend Plugins
+
+Template: ubiquity/text/frontend_plugin_label
+Type: text
+_Description: Frontend Plugins
+
+Template: ubiquity/text/mythweb
+Type: text
+_Description: Myth Web
+
+Template: ubiquity/text/mythweb_label
+Type: text
+_Description:
+ MythWeb provides a web interface which can be used to view listings,
+ schedule recordings, delete recordings, and search for programs.
+
+Template: ubiquity/text/mytharchive
+Type: text
+_Description: Myth Archive
+
+Template: ubiquity/text/mythbrowser
+Type: text
+_Description: Myth Browser
+
+Template: ubiquity/text/mythcontrols
+Type: text
+_Description: Myth Controls
+
+Template: ubiquity/text/mythmovies
+Type: text
+_Description: Myth Movies
+
+Template: ubiquity/text/mythflix
+Type: text
+_Description: Myth Flix
+
+Template: ubiquity/text/mythgallery
+Type: text
+_Description: Myth Gallery
+
+Template: ubiquity/text/mythgame
+Type: text
+_Description: Myth Game
+
+Template: ubiquity/text/mythmusic
+Type: text
+_Description: Myth Music
+
+Template: ubiquity/text/mythnews
+Type: text
+_Description: Myth News
+
+Template: ubiquity/text/mythphone
+Type: text
+_Description: Myth Phone
+
+Template: ubiquity/text/mythstream
+Type: text
+_Description: Myth Stream
+
+Template: ubiquity/text/mythvideo
+Type: text
+_Description: Myth Video
+
+Template: ubiquity/text/mythweather
+Type: text
+_Description: Myth Weather
+
+Template: ubiquity/text/mytharchive_label
+Type: text
+_Description: A plugin for MythTV that lets you create DVDs from content on your MythTV Network.
+
+Template: ubiquity/text/mythbrowser_label
+Type: text
+_Description: An integrated web browser plugin for your MythTV system.
+
+Template: ubiquity/text/mythcontrols_label
+Type: text
+_Description:
+ External controls for MythTV. This will allow you to modify button mappings and
+ key bindings.
+
+Template: ubiquity/text/mythmovies_label
+Type: text
+_Description: Find movies playing in nearby local cinemas
+
+Template: ubiquity/text/mythflix_label
+Type: text
+_Description: Allows you to monitor your Netflix dvd rental queue.
+
+Template: ubiquity/text/mythgallery_label
+Type: text
+_Description: Allows you to visually browse a directory tree containing image files.
+
+Template: ubiquity/text/mythgame_label
+Type: text
+_Description: A frontend to start any emulator or binary that Linux runs.
+
+Template: ubiquity/text/mythmusic_label
+Type: text
+_Description: Provides a digital audio jukebox integrated with MythTV.
+
+Template: ubiquity/text/mythnews_label
+Type: text
+_Description:
+ An RSS feed news reader plugin for MythTV that keeps you up-to-date on your
+ favorite news topics.
+
+Template: ubiquity/text/mythphone_label
+Type: text
+_Description: A phone and videophone capability on MythTV using the standard SIP protocol.
+
+Template: ubiquity/text/mythstream_label
+Type: text
+_Description: Provides a method to listen to streaming internet radio stations.
+
+Template: ubiquity/text/mythvideo_label
+Type: text
+_Description:
+ Allows you to browse and play video streams, using an external player, from within
+ the MythTV interface.
+
+Template: ubiquity/text/mythweather_label
+Type: text
+_Description: Displays current and forecast weather information within MythTV.
+
+Template: ubiquity/text/theme_heading_label
+Type: text
+_Description: Choose Extra Themes
+
+Template: ubiquity/text/theme_description
+Type: text
+_Description:
+ Themes can greatly improve the aesthetic appeal of a MythTV
+ setup, and display it to match your tastes much better.
+
+Template: ubiquity/text/officialthemes
+Type: text
+_Description: Enable/Disable All
+
+Template: ubiquity/text/communitythemes
+Type: text
+_Description: Enable/Disable All
+
+Template: ubiquity/text/driver_heading_label
+Type: text
+_Description: Additional Drivers/Firmware
+
+Template: ubiquity/text/driver_description
+Type: text
+_Description:
+ An open source graphics driver is already enabled and configured for your installation.  If you would like to use a different graphics driver, you can do so here.  Note that proprietary graphics drivers may be necessary for TV Output or OpenGL effects.
+
+Template: ubiquity/text/modifyvideodriver
+Type: text
+_Description: Modify Video Driver & Settings
+
+Template: ubiquity/text/tvout_label
+Type: text
+_Description: If you would like to configure TV-out, choose an option here:
+
+Template: ubiquity/text/tvstandard_label
+Type: text
+_Description: If enabling TV Out, you will also need to choose a TV Standard:
+
+Template: ubiquity/text/tvwarning
+Type: text
+_Description:
+ Warning: Do not set the TV standard to something higher than what your TV supports.
+ PERMANENT damage may occur.
+
+Template: ubiquity/text/masterinfo_heading_label
+Type: text
+_Description: Master Backend Info
+
+Template: ubiquity/text/masterinfo_description
+Type: text
+_Description: Please enter the information necessary to contact your master backend:
+
+Template: ubiquity/text/mysql_password_label
+Type: text
+_Description: MySQL Password
+
+Template: ubiquity/text/mysql_user_label
+Type: text
+_Description: MySQL User Name
+
+Template: ubiquity/text/mysql_database_label
+Type: text
+_Description: MySQL Database
+
+Template: ubiquity/text/mysql_server_label
+Type: text
+_Description: MySQL Server
+
+Template: ubiquity/text/setup_heading_label
+Type: text
+_Description: Configure Guide Data / Backend
+
+Template: ubiquity/text/setup_description
+Type: text
+_Description:
+ The final steps of the installation require setting up your guide
+ data and configuring the backend for the first time.
+
+Template: ubiquity/text/zap2itlink
+Type: text
+_Description: Click to open the Schedules Direct website
+
+Template: ubiquity/text/zap2it_description
+Type: text
+_Description:
+ Users in North America will need to setup an account with Schedules
+ Direct (SD).  SD provides guide data for a nominal fee.  Without SD,
+ North American users may lose many of the scheduling features in MythTV.
+
+Template: ubiquity/text/myth_button
+Type: text
+_Description: Launch MythTV Setup
+
+Template: ubiquity/text/myth_button_description
+Type: text
+_Description:
+ After setting up your guide data source, you will need to launch MythTV-Setup to
+ run the backend configuration for the first time.  You will need to configure the first
+ four sections, being sure to provide your guide data during the third.
+
+Template: ubiquity/install/mythbuntu
+Type: text
+_Description: Configuring mythtv...
+
+Template: ubiquity/install/drivers
+Type: text
+_Description: Configuring additional drivers...
+
+Template: ubiquity/install/services
+Type: text
+_Description: Configuring additional services...
+
+Template: ubiquity/install/ir
+Type: text
+_Description: Configuring infrared devices...
+
+Template: mythbuntu/advanced_install
+Type: boolean
+Description: for internal use; determines if this is an advanced install
+
+Template: mythbuntu/install_type
+Type: string
+Description: for internal use; determines install type
+
+Template: mythbuntu/mytharchive
+Type: boolean
+Description: for internal use; determines if plugin is installed
+
+Template: mythbuntu/mythbrowser
+Type: boolean
+Description: for internal use; determines if plugin is installed
+
+Template: mythbuntu/mythcontrols
+Type: boolean
+Description: for internal use; determines if plugin is installed
+
+Template: mythbuntu/mythmovies
+Type: boolean
+Description: for internal use; determines if plugin is installed
+
+Template: mythbuntu/mythflix
+Type: boolean
+Description: for internal use; determines if plugin is installed
+
+Template: mythbuntu/mythgallery
+Type: boolean
+Description: for internal use; determines if plugin is installed
+
+Template: mythbuntu/mythgame
+Type: boolean
+Description: for internal use; determines if plugin is installed
+
+Template: mythbuntu/mythmusic
+Type: boolean
+Description: for internal use; determines if plugin is installed
+
+Template: mythbuntu/mythnews
+Type: boolean
+Description: for internal use; determines if plugin is installed
+
+Template: mythbuntu/mythphone
+Type: boolean
+Description: for internal use; determines if plugin is installed
+
+Template: mythbuntu/mythstream
+Type: boolean
+Description: for internal use; determines if plugin is installed
+
+Template: mythbuntu/mythvideo
+Type: boolean
+Description: for internal use; determines if plugin is installed
+
+Template: mythbuntu/mythweather
+Type: boolean
+Description: for internal use; determines if plugin is installed
+
+Template: mythbuntu/mythweb
+Type: boolean
+Description: for internal use; determines if plugin is installed
+
+Template: mythbuntu/officialthemes
+Type: string
+Description: for internal use; determines if themes are installed
+
+Template: mythbuntu/communitythemes
+Type: string
+Description: for internal use; determines if themes are installed
+
+Template: mythbuntu/video_driver
+Type: string
+Default: none
+Description: for internal use; determines what video graphics driver to use
+
+Template: mythbuntu/tvout
+Type: string
+Description: for internal use; determines if tvout activated
+
+Template: mythbuntu/tvstandard
+Type: string
+Description: for internal use; determines tvstandard
+
+Template: mythbuntu/vncservice
+Type: boolean
+Description: for internal use; determines if vnc is enabled
+
+Template: mythbuntu/vnc_password
+Type: string
+Description: for internal use; stores the chosen vnc password
+
+Template: mythbuntu/sshservice
+Type: boolean
+Description: for internal use; determines if ssh is enabled
+
+Template: mythbuntu/sambaservice
+Type: boolean
+Description: for internal use; determines if samba is enabled
+
+Template: mythbuntu/nfsservice
+Type: boolean
+Description: for internal use; determines if nfs is enabled
+
+Template: mythbuntu/mysqlservice
+Type: boolean
+Description: for internal use; determines if mysql access is enabled
+
+Template: mythbuntu/hdhomerun
+Type: boolean
+Description: for internal use; determines if hdhomerun config is to be installed
+
+Template: mythbuntu/xmltv
+Type: boolean
+Description: for internal use; determines if xmltv is to be installed
+
+Template: mythbuntu/dvbutils
+Type: boolean
+Description: for internal use; determines if dvbutils is to be installed

@@ -1,0 +1,35 @@
+#!/bin/sh
+set -e
+
+. /usr/share/debconf/confmodule
+
+log() {
+	logger -t clock-setup "$@"
+}
+
+db_input medium clock-setup/ntp || true
+if ! db_go; then
+	exit 10 # back to main menu
+fi
+db_get clock-setup/ntp
+if [ "$RET" = true ]; then
+	db_input low clock-setup/ntp-server || true
+	if ! db_go; then
+		exit 10
+	fi
+	db_get clock-setup/ntp-server
+	server="$RET"
+
+	db_progress START 0 1 clock-setup/progress/title
+	db_progress INFO clock-setup/progress/ntp
+	if ! RDATE_OUT=`log-output -t clock-setup --pass-stdout rdate -o 123 -nv "$server"`; then
+		log "rdate failed ($?)"
+	fi
+	log "$RDATE_OUT"
+	# This is commented out as it can cause a hang as described in
+	# #436497.
+	#db_progress step 1
+	db_progress stop
+fi
+
+tzsetup
