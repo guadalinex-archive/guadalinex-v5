@@ -1,3 +1,9 @@
+guada-ubiquity (0.3-1) hardy; urgency=low
+
+  * Added desktop
+
+ -- Roberto Majadas <roberto.majadas@openshine.com>  Tue, 13 May 2008 12:14:47 +0200
+
 guada-ubiquity (0.2-1) hardy; urgency=low
 
   * Added repository guadalinex hook

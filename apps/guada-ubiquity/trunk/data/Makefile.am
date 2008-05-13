@@ -1,1 +1,1 @@
-SUBDIRS = glade pics 
+SUBDIRS = glade pics desktop 

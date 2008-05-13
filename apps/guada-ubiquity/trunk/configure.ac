@@ -1,7 +1,7 @@
 AC_INIT(src/frontend/guada_ui.py)
 
 PACKAGE=guada-ubiquity
-VERSION=0.2
+VERSION=0.3
 
 AC_SUBST(PACKAGE)
 AC_SUBST(VERSION)
@@ -56,6 +56,7 @@ Makefile
 data/Makefile
 data/glade/Makefile
 data/pics/Makefile
+data/desktop/Makefile
 src/Makefile
 src/frontend/Makefile
 src/DiskPreview/Makefile

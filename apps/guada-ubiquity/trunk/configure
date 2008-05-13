@@ -1951,7 +1951,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
 
 
 PACKAGE=guada-ubiquity
-VERSION=0.2
+VERSION=0.3
 
 
 
@@ -21161,7 +21161,7 @@ echo "$as_me: error: You need to have python libglade bindings installed" >&2;}
    { (exit 1); exit 1; }; }
 fi
 
-ac_config_files="$ac_config_files Makefile data/Makefile data/glade/Makefile data/pics/Makefile src/Makefile src/frontend/Makefile src/DiskPreview/Makefile src/scripts/Makefile src/ubiquity-init/Makefile"
+ac_config_files="$ac_config_files Makefile data/Makefile data/glade/Makefile data/pics/Makefile data/desktop/Makefile src/Makefile src/frontend/Makefile src/DiskPreview/Makefile src/scripts/Makefile src/ubiquity-init/Makefile"
 
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
@@ -21766,6 +21766,7 @@ do
     "data/Makefile") CONFIG_FILES="$CONFIG_FILES data/Makefile" ;;
     "data/glade/Makefile") CONFIG_FILES="$CONFIG_FILES data/glade/Makefile" ;;
     "data/pics/Makefile") CONFIG_FILES="$CONFIG_FILES data/pics/Makefile" ;;
+    "data/desktop/Makefile") CONFIG_FILES="$CONFIG_FILES data/desktop/Makefile" ;;
     "src/Makefile") CONFIG_FILES="$CONFIG_FILES src/Makefile" ;;
     "src/frontend/Makefile") CONFIG_FILES="$CONFIG_FILES src/frontend/Makefile" ;;
     "src/DiskPreview/Makefile") CONFIG_FILES="$CONFIG_FILES src/DiskPreview/Makefile" ;;
