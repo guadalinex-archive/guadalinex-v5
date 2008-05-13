@@ -102,6 +102,9 @@ gpaint
 gs-esp
 gstreamer0.10-alsa
 gstreamer0.10-ffmpeg
+gstreamer0.10-fluendo-mp3
+gstreamer0.10-fluendo-mpegdemux
+gstreamer0.10-fluendo-mpegmux
 gstreamer0.10-pitfdll
 gstreamer0.10-plugins-bad
 gstreamer0.10-plugins-bad-multiverse
