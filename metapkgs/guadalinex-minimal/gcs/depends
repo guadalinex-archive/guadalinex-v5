@@ -5,6 +5,7 @@ aptitude
 base-files
 base-passwd
 bash
+bash-completion
 bsdutils
 bzip2
 console-setup
