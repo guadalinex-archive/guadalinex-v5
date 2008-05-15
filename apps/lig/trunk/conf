@@ -17,7 +17,7 @@ sources_dir="/tmp/sources"
 ## generation repository vars
 
 #mirror="file://${mirror_dir}" 
-mirror="ftp://192.168.1.208/ubuntu" 
+mirror="ftp://localhost/ubuntu" 
 
 # this var is used for debootstrap and for the temporal /etc/apt/sources.list
 # during the generation.
