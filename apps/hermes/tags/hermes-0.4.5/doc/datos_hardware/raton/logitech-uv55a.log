@@ -1,0 +1,159 @@
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_46d_c016_noserial
+
+info.bus:usb_device
+info.linux.driver:usb
+info.parent:/org/freedesktop/Hal/devices/usb_device_0_0_0001_10_1b_0
+info.product:Optical Mouse
+info.udi:/org/freedesktop/Hal/devices/usb_device_46d_c016_noserial
+info.vendor:Logitech, Inc.
+linux.hotplug_type:1
+linux.subsystem:usb
+linux.sysfs_path:/sys/devices/pci0001:10/0001:10:1b.0/usb2/2-1
+linux.sysfs_path_device:/sys/devices/pci0001:10/0001:10:1b.0/usb2/2-1
+usb_device.bus_number:2
+usb_device.can_wake_up:1
+usb_device.configuration_value:1
+usb_device.device_class:0
+usb_device.device_protocol:0
+usb_device.device_revision_bcd:832
+usb_device.device_subclass:0
+usb_device.is_self_powered:0
+usb_device.linux.device_number:8
+usb_device.linux.sysfs_path:/sys/devices/pci0001:10/0001:10:1b.0/usb2/2-1
+usb_device.max_power:100
+usb_device.num_configurations:1
+usb_device.num_interfaces:1
+usb_device.num_ports:0
+usb_device.product:Optical Mouse
+usb_device.product_id:49174
+usb_device.speed_bcd:336
+usb_device.vendor:Logitech, Inc.
+usb_device.vendor_id:1133
+usb_device.version_bcd:512
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_46d_c016_noserial_if0
+
+info.bus:usb
+info.linux.driver:usbhid
+info.parent:/org/freedesktop/Hal/devices/usb_device_46d_c016_noserial
+info.product:USB HID Interface
+info.udi:/org/freedesktop/Hal/devices/usb_device_46d_c016_noserial_if0
+linux.hotplug_type:1
+linux.subsystem:usb
+linux.sysfs_path:/sys/devices/pci0001:10/0001:10:1b.0/usb2/2-1/2-1:1.0
+linux.sysfs_path_device:/sys/devices/pci0001:10/0001:10:1b.0/usb2/2-1/2-1:1.0
+usb.bus_number:2
+usb.can_wake_up:1
+usb.configuration_value:1
+usb.device_class:0
+usb.device_protocol:0
+usb.device_revision_bcd:832
+usb.device_subclass:0
+usb.interface.class:3
+usb.interface.number:0
+usb.interface.protocol:2
+usb.interface.subclass:1
+usb.is_self_powered:0
+usb.linux.device_number:8
+usb.linux.sysfs_path:/sys/devices/pci0001:10/0001:10:1b.0/usb2/2-1/2-1:1.0
+usb.max_power:100
+usb.num_configurations:1
+usb.num_interfaces:1
+usb.num_ports:0
+usb.product:USB HID Interface
+usb.product_id:49174
+usb.speed_bcd:336
+usb.vendor:Logitech, Inc.
+usb.vendor_id:1133
+usb.version_bcd:512
+
+
+#############################################
+DESCONEXIÓN  ################################
+#############################################
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_46d_c016_noserial_if0
+
+info.bus:usb
+info.linux.driver:usbhid
+info.parent:/org/freedesktop/Hal/devices/usb_device_46d_c016_noserial
+info.product:USB HID Interface
+info.udi:/org/freedesktop/Hal/devices/usb_device_46d_c016_noserial_if0
+linux.hotplug_type:1
+linux.subsystem:usb
+linux.sysfs_path:/sys/devices/pci0001:10/0001:10:1b.0/usb2/2-1/2-1:1.0
+linux.sysfs_path_device:/sys/devices/pci0001:10/0001:10:1b.0/usb2/2-1/2-1:1.0
+usb.bus_number:2
+usb.can_wake_up:1
+usb.configuration_value:1
+usb.device_class:0
+usb.device_protocol:0
+usb.device_revision_bcd:832
+usb.device_subclass:0
+usb.interface.class:3
+usb.interface.number:0
+usb.interface.protocol:2
+usb.interface.subclass:1
+usb.is_self_powered:0
+usb.linux.device_number:8
+usb.linux.sysfs_path:/sys/devices/pci0001:10/0001:10:1b.0/usb2/2-1/2-1:1.0
+usb.max_power:100
+usb.num_configurations:1
+usb.num_interfaces:1
+usb.num_ports:0
+usb.product:USB HID Interface
+usb.product_id:49174
+usb.speed_bcd:336
+usb.vendor:Logitech, Inc.
+usb.vendor_id:1133
+usb.version_bcd:512
+
+
+#############################################
+DESCONEXIÓN  ################################
+#############################################
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_46d_c016_noserial_if0
+
+info.bus:usb
+info.linux.driver:usbhid
+info.parent:/org/freedesktop/Hal/devices/usb_device_46d_c016_noserial
+info.product:USB HID Interface
+info.udi:/org/freedesktop/Hal/devices/usb_device_46d_c016_noserial_if0
+linux.hotplug_type:1
+linux.subsystem:usb
+linux.sysfs_path:/sys/devices/pci0001:10/0001:10:1b.0/usb2/2-1/2-1:1.0
+linux.sysfs_path_device:/sys/devices/pci0001:10/0001:10:1b.0/usb2/2-1/2-1:1.0
+usb.bus_number:2
+usb.can_wake_up:1
+usb.configuration_value:1
+usb.device_class:0
+usb.device_protocol:0
+usb.device_revision_bcd:832
+usb.device_subclass:0
+usb.interface.class:3
+usb.interface.number:0
+usb.interface.protocol:2
+usb.interface.subclass:1
+usb.is_self_powered:0
+usb.linux.device_number:8
+usb.linux.sysfs_path:/sys/devices/pci0001:10/0001:10:1b.0/usb2/2-1/2-1:1.0
+usb.max_power:100
+usb.num_configurations:1
+usb.num_interfaces:1
+usb.num_ports:0
+usb.product:USB HID Interface
+usb.product_id:49174
+usb.speed_bcd:336
+usb.vendor:Logitech, Inc.
+usb.vendor_id:1133
+usb.version_bcd:512

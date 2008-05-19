@@ -1,0 +1,231 @@
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000
+
+info.bus:usb_device
+info.linux.driver:usb
+info.parent:/org/freedesktop/Hal/devices/usb_device_0_0_0000_00_1d_2
+info.product:Jumpdrive Secure 64MB
+info.udi:/org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000
+info.vendor:Lexar Media, Inc.
+linux.hotplug_type:1
+linux.subsystem:usb
+linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.2/usb3/3-2
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.2/usb3/3-2
+usb_device.bus_number:3
+usb_device.can_wake_up:0
+usb_device.configuration_value:1
+usb_device.device_class:0
+usb_device.device_protocol:0
+usb_device.device_revision_bcd:1
+usb_device.device_subclass:0
+usb_device.is_self_powered:0
+usb_device.linux.device_number:3
+usb_device.linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.2/usb3/3-2
+usb_device.max_power:90
+usb_device.num_configurations:1
+usb_device.num_interfaces:1
+usb_device.num_ports:0
+usb_device.product:Jumpdrive Secure 64MB
+usb_device.product_id:128
+usb_device.serial:K100100824030314AA  0000000000000000000000000
+usb_device.speed_bcd:4608
+usb_device.vendor:Lexar Media, Inc.
+usb_device.vendor_id:1500
+usb_device.version_bcd:272
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0
+
+info.bus:usb
+info.linux.driver:usb-storage
+info.parent:/org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000
+info.product:USB Mass Storage Interface
+info.udi:/org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0
+linux.hotplug_type:1
+linux.subsystem:usb
+linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.2/usb3/3-2/3-2:1.0
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.2/usb3/3-2/3-2:1.0
+usb.bus_number:3
+usb.can_wake_up:0
+usb.configuration_value:1
+usb.device_class:0
+usb.device_protocol:0
+usb.device_revision_bcd:1
+usb.device_subclass:0
+usb.interface.class:8
+usb.interface.number:0
+usb.interface.protocol:80
+usb.interface.subclass:6
+usb.is_self_powered:0
+usb.linux.device_number:3
+usb.linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.2/usb3/3-2/3-2:1.0
+usb.max_power:90
+usb.num_configurations:1
+usb.num_interfaces:1
+usb.num_ports:0
+usb.product:USB Mass Storage Interface
+usb.product_id:128
+usb.serial:K100100824030314AA  0000000000000000000000000
+usb.speed_bcd:4608
+usb.vendor:Lexar Media, Inc.
+usb.vendor_id:1500
+usb.version_bcd:272
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0_scsi_host
+
+info.capabilities:['scsi_host']
+info.category:scsi_host
+info.parent:/org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0
+info.product:SCSI Host Adapter
+info.udi:/org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0_scsi_host
+linux.hotplug_type:2
+linux.subsystem:scsi_host
+linux.sysfs_path:/sys/class/scsi_host/host8
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.2/usb3/3-2/3-2:1.0/host8
+scsi_host.host:8
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0_scsi_host_scsi_device_lun0
+
+info.bus:scsi
+info.linux.driver:sd
+info.parent:/org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0_scsi_host
+info.product:SCSI Device
+info.udi:/org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0_scsi_host_scsi_device_lun0
+linux.hotplug_type:1
+linux.subsystem:scsi
+linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.2/usb3/3-2/3-2:1.0/host8/target8:0:0/8:0:0:0
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.2/usb3/3-2/3-2:1.0/host8/target8:0:0/8:0:0:0
+scsi.bus:0
+scsi.host:8
+scsi.lun:0
+scsi.target:0
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/storage_model_DIGITAL_FILM
+
+block.device:/dev/sda
+block.is_volume:0
+block.major:8
+block.minor:0
+block.storage_device:/org/freedesktop/Hal/devices/storage_model_DIGITAL_FILM
+info.addons:['hald-addon-storage']
+info.capabilities:['storage', 'block']
+info.category:storage
+info.parent:/org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0_scsi_host_scsi_device_lun0
+info.product:DIGITAL FILM
+info.udi:/org/freedesktop/Hal/devices/storage_model_DIGITAL_FILM
+info.vendor:LEXAR
+linux.hotplug_type:3
+linux.sysfs_path:/sys/block/sda
+linux.sysfs_path_device:/sys/block/sda
+storage.automount_enabled_hint:1
+storage.bus:usb
+storage.drive_type:disk
+storage.hotpluggable:1
+storage.lun:0
+storage.media_check_enabled:1
+storage.model:DIGITAL FILM
+storage.no_partitions_hint:0
+storage.physical_device:/org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0
+storage.policy.should_mount:1
+storage.removable:1
+storage.requires_eject:0
+storage.vendor:LEXAR
+
+
+#############################################
+DESCONEXIÓN  ################################
+#############################################
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0_scsi_host_scsi_device_lun0
+
+info.bus:scsi
+info.linux.driver:sd
+info.parent:/org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0_scsi_host
+info.product:SCSI Device
+info.udi:/org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0_scsi_host_scsi_device_lun0
+linux.hotplug_type:1
+linux.subsystem:scsi
+linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.2/usb3/3-2/3-2:1.0/host8/target8:0:0/8:0:0:0
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.2/usb3/3-2/3-2:1.0/host8/target8:0:0/8:0:0:0
+scsi.bus:0
+scsi.host:8
+scsi.lun:0
+scsi.target:0
+
+
+#############################################
+DESCONEXIÓN  ################################
+#############################################
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0_scsi_host_scsi_device_lun0
+
+info.bus:scsi
+info.linux.driver:sd
+info.parent:/org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0_scsi_host
+info.product:SCSI Device
+info.udi:/org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0_scsi_host_scsi_device_lun0
+linux.hotplug_type:1
+linux.subsystem:scsi
+linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.2/usb3/3-2/3-2:1.0/host8/target8:0:0/8:0:0:0
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.2/usb3/3-2/3-2:1.0/host8/target8:0:0/8:0:0:0
+scsi.bus:0
+scsi.host:8
+scsi.lun:0
+scsi.target:0
+
+
+#############################################
+DESCONEXIÓN  ################################
+#############################################
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0_scsi_host_scsi_device_lun0
+
+info.bus:scsi
+info.linux.driver:sd
+info.parent:/org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0_scsi_host
+info.product:SCSI Device
+info.udi:/org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0_scsi_host_scsi_device_lun0
+linux.hotplug_type:1
+linux.subsystem:scsi
+linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.2/usb3/3-2/3-2:1.0/host8/target8:0:0/8:0:0:0
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.2/usb3/3-2/3-2:1.0/host8/target8:0:0/8:0:0:0
+scsi.bus:0
+scsi.host:8
+scsi.lun:0
+scsi.target:0
+
+
+#############################################
+DESCONEXIÓN  ################################
+#############################################
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0_scsi_host_scsi_device_lun0
+
+info.bus:scsi
+info.linux.driver:sd
+info.parent:/org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0_scsi_host
+info.product:SCSI Device
+info.udi:/org/freedesktop/Hal/devices/usb_device_5dc_80_K100100824030314AA__0000000000000000000000000_if0_scsi_host_scsi_device_lun0
+linux.hotplug_type:1
+linux.subsystem:scsi
+linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.2/usb3/3-2/3-2:1.0/host8/target8:0:0/8:0:0:0
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.2/usb3/3-2/3-2:1.0/host8/target8:0:0/8:0:0:0
+scsi.bus:0
+scsi.host:8
+scsi.lun:0
+scsi.target:0

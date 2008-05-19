@@ -1,0 +1,500 @@
+# translation of es.po to
+# Copyright (C) 2006 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#  <>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: es\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-03-19 12:31+0100\n"
+"PO-Revision-Date: 2007-03-19 12:32+0100\n"
+"Last-Translator:  <(null)>\n"
+"Language-Team:  <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#: ../actors/deviceactor.py:264
+msgid "Use device"
+msgstr "Utilizar dispositivo"
+
+#: ../actors/deviceactor.py:268 ../actors/usbscanner.py:114
+#: ../actors/usbwebcam.py:117
+msgid "Install required packages"
+msgstr "Instalar paquetes requeridos"
+
+#: ../actors/bluetooth.py:65
+msgid "Bluetooth device connected"
+msgstr "Interfaz Bluetooth conectado"
+
+#: ../actors/bluetooth.py:66
+msgid "Bluetooth device disconnected"
+msgstr "Interfaz Bluetooth desconectado"
+
+#: ../actors/c3pocardreader.py:68
+msgid "C3PO"
+msgstr "C3PO"
+
+#: ../actors/c3pocardreader.py:69
+msgid "Card reader detected"
+msgstr "Se ha detectado un lector de tarjetas"
+
+#: ../actors/c3pocardreader.py:70
+msgid "Card reader disconnected"
+msgstr "Lector de tarjetas desconectado"
+
+#: ../actors/c3pocardreader.py:81
+msgid "Configure DNIe"
+msgstr "Configurando DNIe"
+
+#: ../actors/c3pocardreader.py:82
+msgid "Configure FNMT-Ceres card"
+msgstr "Configurar tarjeta FNMT-Ceres"
+
+#: ../actors/c3pocardreader.py:90
+msgid "Session restart needed"
+msgstr "Es necesario reiniciar la sesión"
+
+#: ../actors/c3pocardreader.py:91
+msgid "You must restart your session to apply the changes"
+msgstr "Debe reiniciar su sesión para aplicar los cambios"
+
+#: ../actors/c3pocardreader.py:95
+msgid "Add user to scard group"
+msgstr "Añadir usuario al grupo scard"
+
+#: ../actors/camera.py:61
+msgid "CAMERA"
+msgstr "CÁMARA"
+
+#: ../actors/camera.py:62
+msgid "Digital camera connected."
+msgstr "Cámara digital conectada."
+
+#: ../actors/camera.py:63
+msgid "Digital camera disconnected"
+msgstr "Cámara digital desconectada"
+
+#: ../actors/network.py:21 ../actors/network.py:28
+msgid "Network"
+msgstr "Red"
+
+#: ../actors/network.py:22
+#, python-format
+msgid "Connected network interface %s"
+msgstr "Se ha conectado el interfaz de red %s"
+
+#: ../actors/network.py:29
+#, python-format
+msgid "Disconnected network interface %s"
+msgstr "Se ha desconectado el interfaz de red %s"
+
+#: ../actors/ipod.py:61
+msgid "iPod"
+msgstr "iPod"
+
+#: ../actors/ipod.py:62
+msgid "iPod device detected"
+msgstr "Se ha detectado un dispositivo iPod"
+
+#: ../actors/ipod.py:63
+msgid "iPod device disconnected."
+msgstr "Dispositivo iPod desconectado."
+
+#: ../actors/pcmcia.py:62 ../actors/pcmcia.py:66
+msgid "PCMCIA"
+msgstr "PCMCIA"
+
+#: ../actors/pcmcia.py:62
+msgid "PCMCIA device connected"
+msgstr "Dispositivo PCMCIA conectado"
+
+#: ../actors/pcmcia.py:66
+msgid "PCMCIA device disconnected"
+msgstr "Dispositivo PCMCIA desconectado"
+
+#: ../actors/usbdevice.py:67 ../actors/usbdevice.py:72
+#: ../actors/usbdevice.py:78 ../actors/usbdevice.py:81
+msgid "USB"
+msgstr "USB"
+
+#: ../actors/usbdevice.py:67
+msgid "USB device detected:\n"
+msgstr "Se ha detectado un dispositivo USB:\n"
+
+#: ../actors/usbdevice.py:72
+msgid "USB device detected"
+msgstr "Se ha detectado un dispositivo USB"
+
+#: ../actors/usbdevice.py:78
+msgid "USB device disconnected:\n"
+msgstr "Dispositivo USB desconectado:\n"
+
+#: ../actors/usbdevice.py:81
+msgid "USB device disconnected"
+msgstr "Dispositivo USB desconectado"
+
+#: ../actors/usbmouse.py:61
+msgid "Mouse"
+msgstr "Ratón"
+
+#: ../actors/usbmouse.py:61
+msgid "USB mouse configured"
+msgstr "Ratón USB configurado"
+
+#: ../actors/usbprinter.py:68
+msgid "PRINTER"
+msgstr "IMPRESORA"
+
+#: ../actors/usbprinter.py:69
+msgid "Printer detected"
+msgstr "Se ha detectado una impresora"
+
+#: ../actors/usbprinter.py:70
+msgid "Printer disconnected"
+msgstr "Impresora desconectada"
+
+#: ../actors/usbscanner.py:112
+msgid "Run rendering program"
+msgstr "Ejecutar programa de renderizado"
+
+#: ../actors/usbscanner.py:116 ../actors/usbscanner.py:124
+msgid "SCANNER"
+msgstr "ESCÁNER"
+
+#: ../actors/usbscanner.py:116
+msgid "Scanner device detected"
+msgstr "Se ha detectado un dispositivo escáner"
+
+#: ../actors/usbscanner.py:124
+msgid "Scanner device disconnected"
+msgstr "Dispositivo escáner desconectado"
+
+#: ../actors/usbwebcam.py:115
+msgid "Run capture program"
+msgstr "Ejecutar programa de captura"
+
+#: ../actors/usbwebcam.py:119 ../actors/usbwebcam.py:128
+msgid "WEBCAM"
+msgstr "CÁMARA WEB"
+
+#: ../actors/usbwebcam.py:119
+msgid "Webcam detected"
+msgstr "Se ha detectado una cámara web"
+
+#: ../actors/usbwebcam.py:128
+msgid "Webcam disconnected"
+msgstr "Cámara web desconectada"
+
+#: ../actors/volume.py:81 ../actors/volume.py:90
+msgid "Storage"
+msgstr "Almacenamiento"
+
+#: ../actors/volume.py:82
+msgid "Device mounted on"
+msgstr "Dispositivo montado en"
+
+#: ../actors/volume.py:91
+msgid "Device unmounted"
+msgstr "Dispositivo desmontado"
+
+#: ../actors/volume.py:98
+msgid "Error:"
+msgstr "Error:"
+
+#: ../actors/g3gpcmcia.py:107
+msgid "3G device connected"
+msgstr "Dispositivo 3G conectado"
+
+#: ../actors/g3gpcmcia.py:108
+msgid "3G device disconnected"
+msgstr "Dispositivo 3G desconectado"
+
+#: ../actors/wifinetwork.py:24 ../actors/wifinetwork.py:31
+msgid "Wifi"
+msgstr "Wifi"
+
+#: ../actors/wifinetwork.py:25
+#, python-format
+msgid "Wifi network interface conected: %s"
+msgstr "Interfaz Wifi conectada: %s"
+
+#: ../actors/wifinetwork.py:32
+#, python-format
+msgid "Wifi network interface disconected: %s"
+msgstr "Interfaz de red Wifi desconectada: %s"
+
+#: ../actors/dvb.py:76
+msgid "Digital television device connected"
+msgstr "Dispositivo de televisión digital conectado"
+
+#: ../actors/dvb.py:77
+msgid "Digital television device disconnected"
+msgstr "Dispositivo de televisión digital desconectado"
+
+#: ../actors/dvbfw.py:122
+msgid "TDT device without firmware!!"
+msgstr "Dispositivo TDT sin firmware"
+
+#: ../actors/dvbfw.py:123 ../coldassistant/ui.glade.h:3
+msgid "More info..."
+msgstr "Más información..."
+
+#: ../coldassistant/devicelist.py:58
+msgid "Searching for devices..."
+msgstr "Buscando dispositivos..."
+
+#: ../coldassistant/devicelist.py:80
+msgid "Sorry, can't find any device with actions."
+msgstr "No se ha encontrado ningún dispositivo con acciones asociadas."
+
+#: ../coldassistant/ui.glade.h:1
+msgid "<b>Action list</b> for supported devices."
+msgstr "<b>Lista de acciones</b> para los dispositivos soportados."
+
+#: ../coldassistant/ui.glade.h:2
+msgid "Hermes: Device list"
+msgstr "Hermes: Listado de dispositivos"
+
+#: ../coldassistant/ui.glade.h:4
+msgid ""
+"This is the list of actions associated to new detected devices.  In this "
+"context, <b>an action is anything the system should do to make the device "
+"work propertly</b>.\n"
+"\n"
+"For example, an action might be <i>install software</i>, <i>configure "
+"something</i> in the system, or even <i>run programs</i>  to set up or use "
+"the device."
+msgstr ""
+"Este es el listado de acciones asociadas a los nuevos dispositivos "
+"detectados. En este contexto, <b>una acción es cualquier cosa que el sistema "
+"debería realizar para hacer que un dispositivo funcione correctamente</b>.\n"
+"\n"
+"Por ejemplo, una acción podría ser <i>instalar software</i>, <i>configurar "
+"algo</i> en el sistema, o incluso <i>ejecutar programas</i> para usar el "
+"dispositivo, o hacer que funcione."
+
+#: ../tests/test_bluetooth.py:18
+msgid "Configuring:"
+msgstr "Configurando:"
+
+#: ../tests/test_bluetooth.py:29
+msgid "Adding:"
+msgstr "Añadir:"
+
+#. Test stock icons
+#: ../tests/test_notify.py:28 ../tests/test_notify.py:41
+msgid "Test"
+msgstr "Probar"
+
+#: ../tests/test_notify.py:28 ../tests/test_notify.py:41
+#: ../tests/test_notify.py:52 ../tests/test_notify.py:62
+#: ../tests/test_notify.py:71
+msgid "Test message"
+msgstr "Mensaje de prueba"
+
+#: ../tests/test_notify.py:52
+msgid "Information"
+msgstr "Información"
+
+#: ../tests/test_notify.py:62 ../hermes_hardware.py:187
+msgid "Warning"
+msgstr "Advertencia"
+
+#: ../tests/test_notify.py:71
+msgid "Error"
+msgstr "Error"
+
+#: ../utils/captureloggui.glade.h:1
+msgid "Data harvesting"
+msgstr "Recolección de datos"
+
+#: ../utils/captureloggui.glade.h:2
+msgid "Device Name:"
+msgstr "Nombre del dispositivo:"
+
+#: ../utils/captureloggui.glade.h:3
+msgid ""
+"Harvesting correct data about a device\n"
+"requires to follow the next steps:\n"
+"\n"
+"<b>1)</b> Attach the device.\n"
+"\n"
+"<b>2)</b> Wait about 10 seconds.\n"
+"\n"
+"<b>3)</b> Detach the device.\n"
+msgstr ""
+"La recolección de datos correctos de un dispositivo\n"
+"requiere que siga los pasos siguientes:\n"
+"\n"
+"<b>1)</b> Conecte el dispositivo.\n"
+"\n"
+"<b>2)</b> Espere unos 10 segundos.\n"
+"\n"
+"<b>3)</b> Desconecte el dispositivo.\n"
+
+#: ../utils/captureloggui.glade.h:12
+msgid "Hermes Information"
+msgstr "Información de Hermes"
+
+#: ../utils/captureloggui.glade.h:13
+msgid ""
+"On your Desktop it is located a file with the required information about "
+"your device:\n"
+"\n"
+"     <DEVICENAME>.log\n"
+"\n"
+"Please, send us that file so we can improve hardware changes notification in "
+"Hermes.\n"
+"\n"
+"For more information, click Help.\n"
+"\n"
+"Thank you."
+msgstr ""
+"En su escritorio se encuentra un archivo con la información requerida acerca "
+"de su dispositivo:\n"
+"\n"
+" <Nombre de dispositivo>.log\n"
+"\n"
+"Por favor, envíenos ese archivo para que podamos mejorar la notificación de "
+"cambios de hardware en Hermes.\n"
+"\n"
+"Gracias."
+
+#: ../utils/captureloggui.glade.h:22
+msgid "Thanks!"
+msgstr "Gracias"
+
+#: ../utils/captureloggui.glade.h:23
+msgid "Welcome"
+msgstr "Bienvenido"
+
+#: ../utils/captureloggui.glade.h:24
+msgid "Welcome to the data harvester wizard about Hermes devices."
+msgstr ""
+"Bienvenido al asistente de recolección de datos sobre dispositivos Hermes."
+
+#: ../utils/captureloggui.glade.h:25
+msgid "newdevice"
+msgstr "dispositivo nuevo"
+
+#: ../utils/hermes_notifier.py:169
+msgid "Input"
+msgstr "Entrada"
+
+#: ../utils/hermes_notifier.py:283
+msgid "Close message"
+msgstr "Cerrar mensaje"
+
+#: ../utils/hermes_notifier.py:293
+msgid "Run action message"
+msgstr "Ejecutar mensaje de acción"
+
+#: ../utils/hermes_notifier.py:435
+msgid "start in debug mode"
+msgstr "iniciar en modo de depuración"
+
+#: ../utils/synaptic.py:24
+msgid "Installing packages"
+msgstr "Instalando paquetes"
+
+#: ../utils/synaptic.py:26
+msgid "Installed packages"
+msgstr "Paquetes instalados"
+
+#. FIXME: i18n
+#: ../utils/sudo.py:19
+msgid "Type password"
+msgstr "Introduzca contraseña"
+
+#: ../hermes_hardware.py:188
+msgid "Device REMOVED."
+msgstr "Dispositivo DESCONECTADO."
+
+#: ../hermesdruid.desktop.in.h:1
+#: ../debian/hermeshardware/usr/share/applications/hermesdruid.desktop.in.h:1
+msgid "Druid for capture hardware data"
+msgstr "Asistente para la recogida de datos sobre dispositivos para Hermes"
+
+#: ../hermesdruid.desktop.in.h:2
+#: ../debian/hermeshardware/usr/share/applications/hermesdruid.desktop.in.h:2
+msgid "Hermes druid"
+msgstr "Informe sobre nuevos dispositivos (Hermes)"
+
+#: ../hermesdruid.desktop.in.h:3
+#: ../debian/hermeshardware/usr/share/applications/hermesdruid.desktop.in.h:3
+msgid "hermesdruid"
+msgstr "Informe sobre nuevos dispositivos (Hermes)"
+
+#: ../hcoldassistant.desktop.in.h:1
+#: ../debian/hermeshardware/usr/share/applications/hcoldassistant.desktop.in.h:1
+msgid "Hermes ColdAssistant"
+msgstr "Asistente de acciones sobre dispositivos"
+
+#: ../hcoldassistant.desktop.in.h:2
+#: ../debian/hermeshardware/usr/share/applications/hcoldassistant.desktop.in.h:2
+msgid "Hermes wizard for device actions"
+msgstr ""
+"Asistente para ejecutar acciones sobre dispositivos ya conectados al sistema"
+
+#: ../hcoldassistant.desktop.in.h:3
+#: ../debian/hermeshardware/usr/share/applications/hcoldassistant.desktop.in.h:3
+msgid "Wizard for device actions"
+msgstr ""
+"Asistente para ejecutar acciones sobre dispositivos ya conectados al sistema"
+
+#~ msgid ""
+#~ "The following list shows the <b>already installed  devices</b>, which are "
+#~ "<b>supported by Hermes</b> and have some associated action."
+#~ msgstr "Listado de <b>acciones</b> asociadas a los dispositivos soportados."
+
+#~ msgid "Wizard for device actions."
+#~ msgstr ""
+#~ "Asistente para ejecutar acciones sobre dispositivos ya conectados al "
+#~ "sistema."
+
+#~ msgid "hcoldassistant"
+#~ msgstr "Asistente de acciones sobre dispositivos."
+
+#~ msgid "Open iPod Manager"
+#~ msgstr "Abrir gestor iPod"
+
+#~ msgid "Add"
+#~ msgstr "Añadir"
+
+#, fuzzy
+#~ msgid " connected"
+#~ msgstr " conectado"
+
+#, fuzzy
+#~ msgid " disconnected"
+#~ msgstr " desconectado"
+
+#~ msgid "Open Bluetooth manager"
+#~ msgstr "Abrir gestor Bluetooth"
+
+#~ msgid "BLUETOOTH"
+#~ msgstr "BLUETOOTH"
+
+#~ msgid "New Bluetooth interface configured "
+#~ msgstr "Se ha configurado un interfaz Bluetooth nuevo"
+
+#, fuzzy
+#~ msgid "Device CONNECTED:"
+#~ msgstr "Nombre del dispositivo:"
+
+#~ msgid "Device detected, but unidentificated"
+#~ msgstr "Dispositivo detectado, pero no identificado"
+
+#~ msgid "Device DISCONNECTED:"
+#~ msgstr "Dispositivo DESCONECTADO:"
+
+#~ msgid "Install required software"
+#~ msgstr "Instalar paquetes requeridos"
+
+#~ msgid "Usb device disconnected:\n"
+#~ msgstr "Dispositivo USB desconectado:\n"
+
+#~ msgid "Detected card reader"
+#~ msgstr "Se ha detectado un lector de tarjetas"

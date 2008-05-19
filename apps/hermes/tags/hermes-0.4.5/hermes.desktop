@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=hermeshardware
+GenericName=Hermes Assistant
+Name[es]=Asistente sobre nuevos dispositivos (Hermes)
+Comment=System notification asisstant 
+Comment[es]=Asistente para actuación de notificaciones de sistema Hermes.
+Exec=hermeshardware
+Icon=/usr/share/hermes/img/logo.svg
+Terminal=false
+Type=Application
+Categories=
+OnlyShowIn=GNOME;
