@@ -283,7 +283,7 @@ function mount_virtualfs ()
     if [ ! -d ${sources_dir}/sys ]; then
         mkdir -p ${sources_dir}/sys
     fi
-    mount sysfs-live -t sysfs ${sources_dir}/sys
+#    mount sysfs-live -t sysfs ${sources_dir}/sys
 
     if [ ! -d ${sources_dir}/dev/pts ]; then
         mkdir -p ${sources_dir}/dev/pts
@@ -297,7 +297,7 @@ function umount_virtualfs ()
 {
 #    grep -q ${sources_dir} /proc/mounts && \
 #    awk "/${sources_dir_escaped}// {print \$2};" /proc/mounts | sort -r | xargs umount
-    umount sysfs-live
+#    umount sysfs-live
     umount proc-live
     umount devpts-live
     echo "" > ${sources_dir}/etc/resolv.conf
