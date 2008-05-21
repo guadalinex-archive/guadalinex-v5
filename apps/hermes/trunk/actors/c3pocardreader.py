@@ -81,10 +81,13 @@ class Actor(PkgDeviceActor):
             actions[_("Configure FNMT-Ceres card")] = configure_ceres
 
         def add_user_to_scard():
-            user = os.getlogin()
+            import pwd
+	    # The os.getlogin() raises OSError: [Errno 25]
+            # Moved to getpwuid
+	    user = pwd.getpwuid(os.geteuid())[0]
             # get root access
             if get_sudo():
-                cmd = '/usr/bin/sudo /usr/sbin/adduser %s scard' % user
+                cmd = '/usr/bin/gksudo /usr/sbin/adduser %s scard' % user
                 status, output = commands.getstatusoutput(cmd)
                 self.msg_render.show_info(_('Session restart needed'),
                                           _('You must restart your session to apply the changes'))
