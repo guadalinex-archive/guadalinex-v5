@@ -1,0 +1,13 @@
+Source: guada-ubiquity
+Section: admin 
+Priority: optional
+Maintainer: Roberto Majadas <roberto.majadas@openshine.com>
+Build-Depends: cdbs, debhelper (>= 5), debconf (>= 0.5.0), debhelper (>= 5.0.37.3ubuntu2), dpkg-dev (>= 1.9.0), intltool-debian (>= 0.30+20040212), iso-codes (>= 0.35-1), locales, po-debconf (>= 1.0), python (>= 2.4), python-all-dev (>= 2.3.5-11), python-central (>= 0.5), python-gtk2-dev, tzdata, wget, xkb-data (>= 0.9), python-dbus, python-gnome2-dev
+Standards-Version: 3.7.2
+
+Package: guada-ubiquity
+Architecture: any
+Depends: ubiquity-frontend-gtk, python-gnome2, python-dbus
+Description: Custom installer of guadalinex 
+ This is the new installer of guadalinex V5. It integrate the diskpreview
+ and other wonderful features.
