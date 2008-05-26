@@ -6,6 +6,9 @@ Build-Depends: debhelper (>= 4.0.0)
 Standards-Version: 3.6.2
 
 Package: informe-diagnostico
+Replaces: informe-hardware
+Provides: informe-hardware
+Conflicts: informe-hardware
 Architecture: any
 Depends: zenity, xresprobe 
 Description: Error reporting tool.
