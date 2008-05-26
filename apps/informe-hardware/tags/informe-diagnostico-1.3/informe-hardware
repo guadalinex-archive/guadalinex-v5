@@ -1,0 +1,147 @@
+#!/bin/bash
+
+# Name:
+#
+# Version:
+#
+# Use:
+#
+# Description:
+#
+# Dependencies:
+#
+# TODO:
+# - Añadir identificador al fichero generado
+# - Parsear el /etc/passwd para obtener únicamente los UID y nombres de usuarios.
+
+if [ "$(whoami)" != "root" ]; then
+  zenity --error --title "Error" --text \
+"Esta aplicación requiere
+permisos de administración"
+
+  exit 1
+fi
+
+# Constants
+FICHERO_FINAL='informe_hardware'
+if [ -n "$SUDO_USER" ]; then
+        DIRECTORIO_FINAL=/home/$SUDO_USER/Desktop
+	REAL_USER=$SUDO_USER
+else
+	DIRECTORIO_FINAL=$HOME/Desktop
+	REAL_USER=$USER
+fi
+[ ! -d $DIRECTORIO_FINAL ] && mkdir -p $DIRECTORIO_FINAL
+FICHERO_SALIDA=$(mktemp)
+NOMBRE_PROGRAMA='Informe de hardware'
+
+> $FICHERO_SALIDA
+
+# Signal handlers
+
+# Functions
+show_file () {
+  fichero_a_mostrar=$1
+  echo '----------------------------------------------------------------------' >> $FICHERO_SALIDA
+  echo "FICHERO: $fichero_a_mostrar" >> $FICHERO_SALIDA
+
+  if [ -r $fichero_a_mostrar ]; then
+    cat $fichero_a_mostrar >> $FICHERO_SALIDA
+    return
+  fi
+
+  if [ ! -a $fichero_a_mostrar ]; then
+    echo "ERROR: El fichero no existe" >> $FICHERO_SALIDA
+    return
+  fi
+
+}
+
+
+show_binary_exit () {
+  binario_a_mostrar="$*"
+  echo '----------------------------------------------------------------------' >> $FICHERO_SALIDA
+  echo "COMANDO: $binario_a_mostrar" >> $FICHERO_SALIDA
+
+  eval "$binario_a_mostrar" >> $FICHERO_SALIDA
+}
+
+
+# main
+
+zenity --question --title "$NOMBRE_PROGRAMA" --text \
+"Este programa generará un informe con información de su ordenador que puede enviar voluntariamente al Servicio de Asistencia al Usuario para ayudar a la resolución de su problema. Este informe recoge únicamente información técnica y, en ningún caso, se recopila información personal como contraseñas, correo, etc. Una vez que se haya generado, se le dará la oportunidad de revisar su contenido.
+
+A continuación se procederá a generar el informe"
+
+if [ $? == 1 ]; then
+  exit
+fi
+
+show_file /etc/lsb-release
+show_binary_exit 'whoami'
+show_binary_exit 'date'
+
+# show_file '/etc/passwd'
+# show_binary_exit "cat /etc/passwd | awk -F \":\" \'{print \$1\":\"\$3\":\"\$4}"
+show_binary_exit cat /etc/passwd | awk -F ":" '{print $1":"$3":"$4}'
+show_file '/etc/group'
+
+show_file '/etc/X11/xorg.conf'
+show_file '/var/log/Xorg.0.log'
+show_binary_exit 'ddcprobe'
+show_binary_exit 'mount'
+show_binary_exit 'dmesg'
+show_binary_exit 'df -h'
+show_binary_exit 'ls -lR /dev'
+show_binary_exit 'lsusb'
+show_binary_exit 'lsusb -v'
+show_binary_exit '/sbin/ifconfig'
+show_binary_exit '/sbin/route -n'
+show_file '/etc/network/interfaces'
+
+show_file '/etc/fstab'
+show_file '/etc/mtab'
+show_file '/etc/modules'
+show_binary_exit '/sbin/lsmod'
+
+show_file '/boot/grub/menu.lst'
+
+# Ficheros del /proc
+for i in /proc/{apm,cmdline,cpuinfo,crypto,devices,dma,execdomains,fb,filesystems,interrupts,iomem,ioports,loadavg,locks,meminfo,misc,modules,mounts,mtrr,partitions,bus/pci/devices,slabinfo,stat,swaps,uptime,version} ; do
+   show_file $i
+done
+
+# Información del lspci en formato para informe de discover
+show_binary_exit "(lspci -n ; lspci) | sort"
+
+zenity --question --title "$NOMBRE_PROGRAMA" --text \
+"El informe se ha generado correctamente.
+
+¿Desea revisar el informe?"
+
+if [ $? == 0 ]; then
+  zenity  --text-info --title "$NOMBRE_PROGRAMA" --width=700 --height=500 --filename $FICHERO_SALIDA
+fi
+
+if [ ! -f "$DIRECTORIO_FINAL/$FICHERO_FINAL.bz2" ]; then
+  mv $FICHERO_SALIDA $DIRECTORIO_FINAL/$FICHERO_FINAL
+  bzip2 $DIRECTORIO_FINAL/$FICHERO_FINAL
+  chown $REAL_USER:users "$DIRECTORIO_FINAL/$FICHERO_FINAL.bz2"
+  rm -f $DIRECTORIO_FINAL/$FICHERO_FINAL
+  zenity --info --title "$NOMBRE_PROGRAMA" --text "El informe se ha guardado comprimido en su escritorio con el nombre $FICHERO_FINAL.bz2" 
+else
+  zenity --warning --title "$NOMBRE_PROGRAMA" --text \
+"Ya existe un informe en $DIRECTORIO_FINAL/$FICHERO_FINAL.bz2 de una ejecución anterior.
+
+¿Desea sobreescribir su contenido con la nueva información?" 
+
+  if [ $? == 0 ]; then
+    rm -f $DIRECTORIO_FINAL/$FICHERO_FINAL.bz2
+    mv $FICHERO_SALIDA $DIRECTORIO_FINAL/$FICHERO_FINAL
+    bzip2 $DIRECTORIO_FINAL/$FICHERO_FINAL
+    chown $REAL_USER:users "$DIRECTORIO_FINAL/$FICHERO_FINAL.bz2"
+    rm -f $DIRECTORIO_FINAL/$FICHERO_FINAL
+    zenity --info --title "$NOMBRE_PROGRAMA" --text "El informe se ha guardado comprimido en su escritorio con el nombre $FICHERO_FINAL.bz2"
+  fi
+fi

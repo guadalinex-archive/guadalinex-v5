@@ -1,9 +1,9 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Hardware Form generator
-Name[es]=Generador de informes de diagnóstico
+Name[es]=Generador de informes de Hardware
 Comment=Collect info of your system
-Comment[es]=Realice un informe de diagnóstico de su sistema
+Comment[es]=Recoja información de su sistema en un informe
 Exec=gksudo /usr/sbin/informe-hardware
 Icon=/usr/share/pixmaps/informe-hardware.png
 Terminal=false
