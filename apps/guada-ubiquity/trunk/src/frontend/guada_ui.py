@@ -119,7 +119,7 @@ except:
 
 ## Ubiquity preseed ##
 PRESEED = ["debconf debconf/language string es",
-"d-i debian-installer/locale string es_ES",
+"d-i debian-installer/locale string es_ES.UTF-8",
 "d-i clock-setup/utc boolean false",
 "d-i time/zone string Europe/Madrid",
 "d-i console-setup/modelcode string pc105",
