@@ -1,0 +1,156 @@
+# translation of es.po to spanish
+# Copyright (C) 2007 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Roberto Majadas <telemaco@openshine.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: es\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-07-02 16:23+0200\n"
+"PO-Revision-Date: 2007-06-11 13:50+0200\n"
+"Last-Translator: Roberto Majadas <telemaco@openshine.com>\n"
+"Language-Team: spanish <telemaco@openshine.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../data/mount-systray.schemas.in.h:1
+msgid "Blink all the time when some device is mounted"
+msgstr "Parpadear todo el tiempo cuando exista algún dispositivo montado"
+
+#: ../data/mount-systray.schemas.in.h:2
+msgid "Hide system tray icon when no devices mounted"
+msgstr ""
+"Oculta el icono de la barra de estado cuando no haya dispositivos montados"
+
+#: ../data/mount-systray.schemas.in.h:3
+msgid "If any device is mounted, blink all the time warning to unmount."
+msgstr "Si algún dispositivo está montado, el icono papadeará todo el tiempo."
+
+#: ../data/mount-systray.schemas.in.h:4
+msgid "If haven't devices mounted detected, hide the system tray icon."
+msgstr ""
+"Si no tienes dispositivos montados detectados, oculta el icono de la barra "
+"de estado"
+
+#: ../data/mount-systray.schemas.in.h:5
+msgid "Notify when a new device is detected"
+msgstr "Notifica cuando un nuevo dispositivo es detectado"
+
+#: ../data/mount-systray.schemas.in.h:6
+msgid "Show a notification too when the warning happens."
+msgstr "Muestra una notificación cuando el aviso suceda"
+
+#: ../data/mount-systray.schemas.in.h:7
+msgid ""
+"Show a notification when a new device is detected warning about the volume "
+"umount importance."
+msgstr ""
+"Muestra una notificación cuando un nuevo dispositivo es detectado avisando "
+"sobre la importancia de desmontar el volumen"
+
+#: ../data/mount-systray.schemas.in.h:8
+msgid "Show a notification when warning"
+msgstr "Muestra notificación cuando avise"
+
+#: ../data/mount-systray.schemas.in.h:9
+msgid "Show a warning to the user every selected minutes."
+msgstr "Muestra un aviso al usuario cada tiempo en minutos seleccionado"
+
+#: ../data/mount-systray.schemas.in.h:10
+msgid "Warning every selected minutes"
+msgstr "Avisa cada tiempo seleccionado en minutos"
+
+#: ../data/mount-systray.desktop.in.in.h:1
+msgid "Control your removable devices"
+msgstr "Controla tu dispositivos extraibles"
+
+#: ../data/mount-systray.desktop.in.in.h:2
+msgid "Devices control"
+msgstr "Control de dispositivos"
+
+#: ../src/mount-systray.py:58
+msgid ""
+"You need to install pyGTK or GTKv2,\n"
+"or set your PYTHONPATH correctly.\n"
+"try: export PYTHONPATH= "
+msgstr ""
+"Usted necestia instalar pyGTK or GTKv2,\n"
+"o colocar la variable PYTHONPATH correctamente\n"
+"intenta: export PYTHONPATH= "
+
+#. No devices
+#: ../src/MSSystray.py:61
+msgid "No devices mounted"
+msgstr "No hay dispositivos montados"
+
+#: ../src/MSSystray.py:104
+msgid "Removable devices control"
+msgstr "Control de dispositivos extraibles"
+
+#: ../src/MSSystray.py:139
+msgid ""
+"Remember umount it when you finish your work if you wan't to lose your "
+"information"
+msgstr ""
+"Recuerde desmontarlo cuando termine su trabajo si no quiere perder su "
+"información."
+
+#: ../src/MSSystray.py:143
+#, python-format
+msgid ""
+"New device detected\n"
+"<small>(%s)</small>"
+msgstr ""
+"Nuevo dispositivo detectado\n"
+"<small>( %s )</small>"
+
+#: ../src/MSSystray.py:267
+msgid "Remember that ..."
+msgstr "Recuerde que ..."
+
+#: ../src/MSSystray.py:268
+msgid ""
+"You must unmount every removable device before extract it, if you wan't to "
+"lose your information"
+msgstr ""
+"Debe desmontar todos los dispositivos extraibles antes de extraerlos, si "
+"usted no quiere perder información."
+
+#: ../data/preferences.glade.h:1
+msgid "<b>General options</b>"
+msgstr "<b>Opciones generales</b>"
+
+#: ../data/preferences.glade.h:2
+msgid "<b>Warnings options</b>"
+msgstr "<b>Opciones de aviso</b>"
+
+#: ../data/preferences.glade.h:3
+msgid "Devices notification - Preferences"
+msgstr "Notificación de dispositivos - Preferencias"
+
+#: ../data/preferences.glade.h:4
+msgid "Warn every"
+msgstr "Avisa cada"
+
+#: ../data/preferences.glade.h:5
+msgid "_Blink all time when some device is mounted."
+msgstr "_Parpadea todo el tiempo cuando haya algún dispositivo montado"
+
+#: ../data/preferences.glade.h:6
+msgid "_Hide system tray icon when no devices mounted."
+msgstr ""
+"_Oculta el icono de la barra de estado cuando no haya dispositivos montados."
+
+#: ../data/preferences.glade.h:7
+msgid "_Notify when new device detected."
+msgstr "_Notifica cuando un nuevo dispositivo es detectado."
+
+#: ../data/preferences.glade.h:8
+msgid "_Show a notification."
+msgstr "_Muestra una notificación"
+
+#: ../data/preferences.glade.h:9
+msgid "minutes."
+msgstr "minutos."

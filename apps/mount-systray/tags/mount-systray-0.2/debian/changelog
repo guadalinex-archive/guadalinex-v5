@@ -1,0 +1,31 @@
+mount-systray (0.2) unstable; urgency=low
+
+  * New upstream release
+
+ -- Álvaro Peña <apg@openshine.com>  Tue,  3 Jul 2007 13:20:11 +0200
+
+mount-systray (0.1-4) unstable; urgency=low
+
+  * New software update 
+
+ -- Roberto Majadas <telemaco@openshine.com>  Mon,  2 Jul 2007 16:24:14 +0200
+
+mount-systray (0.1-3) unstable; urgency=low
+
+  * New software psudo-release
+
+ -- Álvaro Peña <apg@openshine.com>  Mon, 18 Jun 2007 13:27:44 +0200
+
+mount-systray (0.1-2) unstable; urgency=low
+
+  * Added section in control file.
+  * New mount-systray code
+
+ -- Álvaro Peña <apg@openshine.com>  Mon, 11 Jun 2007 14:09:11 +0200
+
+mount-systray (0.1-1) unstable; urgency=low
+
+  * Initial release 
+
+ -- Roberto Majadas <telemaco@openshine.com>  Mon, 28 May 2007 12:43:14 +0200
+
