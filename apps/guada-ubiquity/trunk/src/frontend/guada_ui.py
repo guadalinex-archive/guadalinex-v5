@@ -126,13 +126,17 @@ PRESEED = ["debconf debconf/language string es",
 "d-i console-setup/layoutcode string es",
 "ubiquity languagechooser/language-name-fb select Spanish",
 "ubiquity languagechooser/language-name select Spanish",
+"ubiquity languagechooser/language-name-ascii select Spanish",
 "ubiquity countrychooser/shortlist select ES",
 "ubiquity countrychooser/countryname select Spain",
 "ubiquity countrychooser/country-name string Spain",
 "ubiquity console-keymaps-at/keymap select es",
 "ubiquity localechooser/supported-locales multiselect es_ES.UTF-8",
 "ubiquity tzconfig/gmt boolean false",
-"ubiquity time/zone select Europe/Madrid"]
+"ubiquity time/zone select Europe/Madrid",
+"console-setup console-setup/variant select Spain",
+"console-setup console-setup/layout select Spain"
+]
 
 class GuadaPrePartition(FilteredCommand):
     def prepare(self):
