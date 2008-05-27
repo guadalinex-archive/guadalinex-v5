@@ -1,0 +1,128 @@
+#!/usr/bin/python
+# -*- coding: iso-8859-1 -*-
+
+# gru 1.1
+# GRUB RECOVER UTILITY
+# Reinstall grub menu after another impolite "operative system" overwrites MBR
+# author: Alfonso E.M. alfonso@el-magnifico.org
+# date: 16/Mar/2007
+# changelog:
+# 21/Mar/2007 chroot is not needed anymore
+
+import os,commands,sys,re
+cmd="/usr/bin/zenity --title 'Recuperador del menú de arranque'"
+
+
+# Some useful functions:
+
+# menu: Shows a dialog with options
+def menu(text,header1,header2,options):
+  params=cmd+" --height 250 --width 350 --list --text '"+text+"' --column '"+header1+"' --column '"+header2+"' "+options
+  out=""
+  while len(out) == 0:
+    st,out=commands.getstatusoutput(params)
+    if st != 0:
+      sys.exit()
+  return st,out
+
+# info: Shows a simple message
+def info(text):
+  params=cmd+" --width 350 --info --text '"+text+"'" 
+  st,out=commands.getstatusoutput(params)
+  return
+
+# get_partitions: grabs disks and partitions info from /proc
+def get_partitions():
+  disks=[]
+  partitions=""
+  try:
+    list=open("/proc/partitions")
+  except:
+    print ("ERROR: opening /proc/partitions")
+  else:  
+    while 1:
+      line=list.readline()
+      if line == "":
+        break
+      items=re.split("\s+",line)
+      if len(items) == 6:
+        if len(items[4]) == 3:
+          disks.append(items[4])
+        if len(items[4]) == 4:
+          partitions+="'"+items[4]+"' '"+translate(items[4])+"' "
+    list.close 
+    return disks,partitions
+
+# tranlate: Converts from hda, sda.. format to human readable (likely)
+def translate(item):
+    name=""
+    if item[:1] == 's':
+       name="Disco SCSI "
+    if item[:1] == "h":
+       name="Disco IDE "
+    name+=(item[2])
+    name+=(", particion ")
+    name+=(item[3])       
+    return name
+
+# MAIN
+disks,partitions=get_partitions()
+status,output=menu("¿Donde ha instalado Guadalinex?","Disco","Descripción",partitions)
+
+origin="/dev/"+output
+
+options="'A' 'En el sector de arranque' 'B' 'En la partición de Guadalinex'"
+
+info("""Normalmente el menú se instala al principio del primer disco, 
+en el sector de arranque. 
+Pero si ya tiene un gestor de arranque y desea conservarlo, puede instalar el nuevo en la partición de Guadalinex.
+
+En caso de duda, seleccione la primera opción.""")
+
+status,output=menu("¿Donde desea el menú?","Opción","Descripción",options)
+if output == "A":
+  target="/dev/"+disks[0]
+else:
+  target=origin
+
+status,output=commands.getstatusoutput("mkdir /mnt/gru")
+if status > 0:
+  info("No es posible crear un directorio temporal")
+  sys.exit(status)
+
+status,output=commands.getstatusoutput("mount "+origin+" /mnt/gru")
+if status > 0:
+  info("No es posible acceder a la particion seleccionada")
+  status,output=commands.getstatusoutput("rmdir /mnt/gru")
+  sys.exit(status)
+
+
+try:
+    list=open("/mnt/gru/boot/grub/menu.lst")
+except:
+    info("En esta partición no hay datos de menú instalables")
+    status,output=commands.getstatusoutput("umount /mnt/gru")
+    status,output=commands.getstatusoutput("rmdir /mnt/gru")
+    sys.exit(status)
+
+menupoints=""
+
+while 1:
+      line=list.readline()
+      if line == "":
+        break
+      if re.search("^title\s+",line):
+        key,value=re.split("title\s+",line,1)
+        menupoints+=value
+list.close() 
+
+info("Este es el menú que se instalará:\n\n"+menupoints)
+
+#status,output=commands.getstatusoutput("chroot /mnt/gru grub-install "+target)
+status,output=commands.getstatusoutput("/sbin/grub-install --root-directory=/mnt/gru "+target)
+if status > 0:
+  info("No es posible instalar el menú en "+target)
+  print output
+
+status,output=commands.getstatusoutput("umount /mnt/gru")
+status,output=commands.getstatusoutput("rmdir /mnt/gru")

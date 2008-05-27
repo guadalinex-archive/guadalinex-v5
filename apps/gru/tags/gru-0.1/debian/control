@@ -1,0 +1,13 @@
+Source: gru
+Section: utils
+Priority: optional
+Maintainer: Junta de Andalucía <packmaster@guadalinex.org>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.2
+
+Package: gru
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, zenity, python, grub
+Description: The Grub Recovery Utility
+ A python utility for recovering grub, created for
+ Guadalinex V4 Livecd.
