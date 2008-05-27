@@ -44,7 +44,7 @@ pre_base_pkgs="language-support-es"
 base_pkgs="linux-image-generic language-pack-gnome-es language-pack-es meta-guadalinex-v5 guadalinex-minimal-conf" 
 
 # and these the last ones
-live_pkgs="casper casper-guada ubiquity-frontend-gtk ubiquity-ubuntu-artwork ubiquity-guadalinex-lang xfsprogs jfsutils ntfsprogs discover1 xresprobe laptop-detect gparted ubiquity guada-ubiquity" 
+live_pkgs="gru casper casper-guada ubiquity-frontend-gtk ubiquity-ubuntu-artwork ubiquity-guadalinex-lang xfsprogs jfsutils ntfsprogs discover1 xresprobe laptop-detect gparted ubiquity guada-ubiquity" 
 
 # packages (if any) that will be installed on "lig --update" 
 update_pkgs="" 
