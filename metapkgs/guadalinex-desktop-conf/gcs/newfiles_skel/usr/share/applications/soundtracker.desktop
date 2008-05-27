@@ -1,0 +1,16 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=SoundTracker
+Name[es]=Editor de música (Soundtracker)
+Name[pl]=SoundTracker
+Name[de]=SoundTracker
+Comment=Module Player / Editor
+Comment[es]=Edite sus propias canciones
+Comment[pl]=Odtwarzacz i edytor modułów
+Comment[de]=Modul-Player / -Editor
+Exec=soundtracker
+Terminal=false
+Type=Application
+GenericName[es_ES]=
+Icon=/usr/share/pixmaps/gnome-grecord.xpm
