@@ -179,7 +179,6 @@ seahorse
 serpentine
 slocate
 smbclient
-software-properties-gtk
 sound-juicer
 soundtracker
 ssh-askpass-gnome
@@ -200,6 +199,7 @@ unzip
 update-notifier
 usplash
 vodafone-mobile-connect-card-driver-for-linux
+watermain
 xchat
 xdg-user-dirs
 xdg-user-dirs-gtk
