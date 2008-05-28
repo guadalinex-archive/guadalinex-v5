@@ -1,9 +1,10 @@
 hermeshardware (0.4.6) hardy; urgency=low
 
   * Added hermes.desktop to launch the application at session start.
-  * Modified getlogin way on smartcard-reader actors 
+  * Modified get-username-way on smartcard-reader actors
+  * Bugfix installing cheese instead camorama
 
- -- Alfredo Matas <amatas@emergya.es>  Wed, 28 May 2008 13:44:01 +0100
+ -- J. Félix Ontañón <fontanon@emergya.es>  Wed, 28 May 2008 15:59:01 +0100
 
 hermeshardware (0.4.5) hardy; urgency=low
 
