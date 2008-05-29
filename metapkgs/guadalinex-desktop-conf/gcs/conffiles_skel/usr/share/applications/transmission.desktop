@@ -1,0 +1,25 @@
+[Desktop Entry]
+Name=Cliente bitTorrent (transmission)
+Name[es]=Cliente bitTorrent (transmission)
+Name[sv]=BitTorrent-klienten Transmission
+GenericName=BitTorrent Client
+GenericName[de]=BitTorrent-Client
+GenericName[es]=Cliente BitTorrent
+GenericName[fr]=Client BitTorrent
+GenericName[hu]=BitTorrent kliens
+GenericName[it]=Client BitTorrent
+GenericName[nl]=BitTorrentclient
+GenericName[pt_BR]=Cliente BitTorrent
+GenericName[ru]=BitTorrent клиент
+GenericName[sv]=BitTorrent-klient
+GenericName[tr]=BitTorrent İstemcisi
+GenericName[zh_CN]=BitTorrent 客户端
+Comment=Download and share files over BitTorrent
+Exec=transmission %F
+Icon=transmission
+Terminal=false
+TryExec=transmission
+Type=Application
+MimeType=application/x-bittorrent;
+Categories=Network;FileTransfer;P2P;GTK;
+X-Ubuntu-Gettext-Domain=transmission
