@@ -1,3 +1,9 @@
+guadalinex-eadmin (v5-0.2) hardy; urgency=low
+
+  * Use of the bugfixing opensc 0.11.4-2ubuntu2
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Sat, 31 May 2008 00:41:21 +0100
+
 guadalinex-eadmin (v5-0.1) hardy; urgency=low
 
   * Initial gv5 release 
