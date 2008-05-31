@@ -53,11 +53,16 @@ MOUSEICON = os.path.abspath('actors/img/mouse.png')
 class Actor (DeviceActor):
 
     __required__ = {'info.bus':'usb',
-                    'linux.hotplug_type':1,
+                    'linux.hotplug_type':2,
                     'usb.product':'USB HID Interface'}
+
+    # Important for compatibility with usbjoystick.py
+    __priority__ = 4
 
     def on_added(self):
         self.msg_render.show(_("Mouse"), _("USB mouse configured"),
                 icon = MOUSEICON)
 
-
+    def on_removed(self):
+        self.msg_render.show(_("Mouse"), _("USB mouse disconnected"),
+                icon = MOUSEICON)

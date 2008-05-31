@@ -1,3 +1,12 @@
+hermeshardware (0.4.7) hardy; urgency=low
+
+  * Adapted docs to v5
+  * Added new USB Joystick actor
+  * Improved USB Mouse actor
+  * Several debian-package bugfixes
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Sat, 31 May 2008 11:26:23 +0100
+
 hermeshardware (0.4.6) hardy; urgency=low
 
   * Added hermes.desktop to launch the application at session start.

@@ -16,6 +16,7 @@ actors/g3gpcmcia.py
 actors/wifinetwork.py
 actors/dvb.py
 actors/dvbfw.py
+actors/usbjoystick.py
 coldassistant/app.py
 coldassistant/devicelist.py
 coldassistant/ui.glade

@@ -135,13 +135,17 @@ msgstr "Dispositivo USB desconectado:\n"
 msgid "USB device disconnected"
 msgstr "Dispositivo USB desconectado"
 
-#: ../actors/usbmouse.py:61
+#: ../actors/usbmouse.py:61 ../actors/usbmouse.py:64
 msgid "Mouse"
 msgstr "Ratón"
 
 #: ../actors/usbmouse.py:61
 msgid "USB mouse configured"
 msgstr "Ratón USB configurado"
+
+#: ../actors/usbmouse.py:64
+msgid "USB mouse disconnected"
+msgstr "Ratón USB desconectado"
 
 #: ../actors/usbprinter.py:68
 msgid "PRINTER"
@@ -240,6 +244,14 @@ msgstr "Dispositivo TDT sin firmware"
 #: ../actors/dvbfw.py:123 ../coldassistant/ui.glade.h:3
 msgid "More info..."
 msgstr "Más información..."
+
+#: ../actors/usbjoystick.py:69
+msgid "Joystick/Gamepad connected"
+msgstr "Joystick/Gamepad conectado"
+
+#: ../actors/usbjoystick.py:70
+msgid "Joystick/Gamepad disconnected"
+msgstr "Joystick/Gamepad desconectado"
 
 #: ../coldassistant/devicelist.py:58
 msgid "Searching for devices..."
