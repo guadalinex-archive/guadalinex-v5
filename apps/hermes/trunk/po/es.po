@@ -281,6 +281,18 @@ msgstr "Tarjeta SD extraída"
 msgid "Import photos"
 msgstr "Importar fotografías"
 
+#: ../actors/usbtablet.py:61 ../actors/usbtablet.py:65
+msgid "Graphics Tablet"
+msgstr "Tableta Digitalizadora"
+
+#: ../actors/usbtablet.py:61
+msgid "Tablet configured"
+msgstr "Tableta configurada"
+
+#: ../actors/usbtablet.py:65
+msgid "Tablet disconnected"
+msgstr "Tableta desconectada"
+
 #: ../coldassistant/devicelist.py:58
 msgid "Searching for devices..."
 msgstr "Buscando dispositivos..."

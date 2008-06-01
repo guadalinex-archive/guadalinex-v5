@@ -18,6 +18,7 @@ actors/dvb.py
 actors/dvbfw.py
 actors/usbjoystick.py
 actors/sdcard.py
+actors/usbtablet.py
 coldassistant/app.py
 coldassistant/devicelist.py
 coldassistant/ui.glade

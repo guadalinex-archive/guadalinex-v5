@@ -9,6 +9,7 @@
 #Autor/es (Author/s):
 #
 #- Gumersindo Coronel Pérez <gcoronel@emergya.info>
+#- J. Félix Ontañón <fontanon@emergya.es>
 #
 #Este fichero es parte de Detección de Hardware de Guadalinex 2005 
 #
@@ -50,9 +51,13 @@ from utils.pkginstaller import PkgInstaller
 from deviceactor import PkgDeviceActor
 from gettext import gettext as _
 
+def is_valid(value):
+    valid_list = ['ipod','generic'] 
+    if (value.lower() in valid_list):
+        return True
 
 class Actor(PkgDeviceActor):
-    __required__ = {'portable_audio_player.type': 'ipod',
+    __required__ = {'portable_audio_player.type': is_valid,
                     'info.product': 'iPod'}
 
     __icon_path__  =  os.path.abspath('actors/img/ipod.png')

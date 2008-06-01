@@ -2,8 +2,8 @@ hermeshardware (0.4.7) hardy; urgency=low
 
   * Adapted docs to v5
   * New variable on DeviceActor for easily change "Use device" button title
-  * Added new actors: USB Joystick, SD Card
-  * Improved USB Mouse actor
+  * Added new actors: USB Joystick, SD Card, Graphics Tablet
+  * Improved USB Mouse and iPod actor
   * Fixed dvbfw to avoid some errors
   * DVB-actor require to run kaffeine in DVB mode
   * Bluetooth actor runs bluetooth-properties
