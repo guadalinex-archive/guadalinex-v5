@@ -1,2 +1,5 @@
 packages:
     - kaffeine
+
+conn_commands:
+    - kaffeine DVB

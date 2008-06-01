@@ -164,6 +164,7 @@ class PkgDeviceActor(DeviceActor):
     __device_title__ = ''
     __device_conn_description__ = ''
     __device_disconn_description__ = ''
+    __device_use_title__ = _('Use device')
 
     __packages__ = []
 
@@ -260,7 +261,7 @@ class PkgDeviceActor(DeviceActor):
 
         if s.check(self.__packages__):
             if self.__conn_commands__:
-                actions = {_("Use device"): execute_conn_commands}
+                actions = {self.__device_use_title__: execute_conn_commands}
             else:
                 actions = {}
         else:

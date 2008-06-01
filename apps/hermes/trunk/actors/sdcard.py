@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 
-#Módulo usbmouse- Módulo que implementa el "actor hardware" para los
-#ratones usb. 
+#Módulo sdcard - Módulo que implementa el "actor hardware" para los
+#dispositivos Tarjeta SD
 #
 #Copyright (C) 2008 Junta de Andalucía
 #
 #Autor/es (Author/s):
 #
-#- Gumersindo Coronel Pérez <gcoronel@emergya.info>
 #- J. Félix Ontañón <fontanon@emergya.es>
 #
 #Este fichero es parte de Detección de Hardware de Guadalinex 2005 
@@ -46,23 +45,18 @@
 
 import os.path
 
-from deviceactor import DeviceActor
+from utils.pkginstaller import PkgInstaller
+from deviceactor import PkgDeviceActor
 from gettext import gettext as _
 
-MOUSEICON = os.path.abspath('actors/img/mouse.png')
+class Actor(PkgDeviceActor):
 
-def is_valid(value):
-	return 'mouse' in value.lower()
+    __required__ = {'mmc.type':'SD'}
 
-class Actor (DeviceActor):
+    __icon_path__  = os.path.abspath('actors/img/mediaflash.png')
+    __iconoff_path__ = os.path.abspath('actors/img/mediaflashoff.png')
 
-    __required__ = {'info.bus':'usb_device', 
-		    'info.product':is_valid}
-
-    def on_added(self):
-        self.msg_render.show(_("Mouse"), _("USB mouse configured"),
-                icon = MOUSEICON)
-
-    def on_removed(self):
-        self.msg_render.show(_("Mouse"), _("USB mouse disconnected"),
-                icon = MOUSEICON)
+    __device_title__ = _('SD Card')
+    __device_conn_description__ = _('SD Card inserted')
+    __device_disconn_description__ = _('SD Card extracted')
+    __device_use_title__ = _('Import photos')

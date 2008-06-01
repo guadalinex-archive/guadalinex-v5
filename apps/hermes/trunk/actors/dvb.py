@@ -9,6 +9,7 @@
 #Autor/es (Author/s):
 #
 #- Gumersindo Coronel Pérez <gcoronel@emergya.info>
+#- J. Félix Ontañón <fontanon@emergya.es>
 #
 #Este fichero es parte de Detección de Hardware de Guadalinex 
 #
@@ -74,3 +75,4 @@ class Actor(PkgDeviceActor):
     __device_title__ = 'DVB'
     __device_conn_description__ = _('Digital television device connected')
     __device_disconn_description__ = _('Digital television device disconnected')
+    __device_use_title__ = _('Run TV-Player')

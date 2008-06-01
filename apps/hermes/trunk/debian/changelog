@@ -1,11 +1,15 @@
 hermeshardware (0.4.7) hardy; urgency=low
 
   * Adapted docs to v5
-  * Added new USB Joystick actor
+  * New variable on DeviceActor for easily change "Use device" button title
+  * Added new actors: USB Joystick, SD Card
   * Improved USB Mouse actor
+  * Fixed dvbfw to avoid some errors
+  * DVB-actor require to run kaffeine in DVB mode
+  * Bluetooth actor runs bluetooth-properties
   * Several debian-package bugfixes
 
- -- J. Félix Ontañón <fontanon@emergya.es>  Sat, 31 May 2008 11:26:23 +0100
+ -- J. Félix Ontañón <fontanon@emergya.es>  Sat, 31 May 2008 22:12:23 +0100
 
 hermeshardware (0.4.6) hardy; urgency=low
 

@@ -3,7 +3,7 @@
 #Módulo omnikeycardreader- Módulo que implementa el "actor hardware" para los
 #lectores de tarjetas Omnikey Cardman 3121
 #
-#Copyright (C) 2005 Junta de Andalucía
+#Copyright (C) 2007 Junta de Andalucía
 #
 #Autor/es (Author/s):
 #

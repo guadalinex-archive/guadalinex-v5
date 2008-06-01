@@ -9,6 +9,7 @@
 #Autor/es (Author/s):
 #
 #- Gumersindo Coronel Pérez <gcoronel@emergya.info>
+#- J. Félix Ontañón <fontanon@emergya.es>
 #
 #Este fichero es parte de Detección de Hardware de Guadalinex 2005 
 #
@@ -60,4 +61,4 @@ class Actor(PkgDeviceActor):
     __device_title__ = 'BLUETOOTH'
     __device_conn_description__ = _('Bluetooth device connected')
     __device_disconn_description__ = _('Bluetooth device disconnected')
-
+    __device_use_title__ = _('Setup bluetooth preferences')

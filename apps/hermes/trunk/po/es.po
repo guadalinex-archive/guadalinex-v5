@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit"
 
-#: ../actors/deviceactor.py:264
+#: ../actors/deviceactor.py:167
 msgid "Use device"
 msgstr "Utilizar dispositivo"
 
@@ -24,13 +24,17 @@ msgstr "Utilizar dispositivo"
 msgid "Install required packages"
 msgstr "Instalar paquetes requeridos"
 
-#: ../actors/bluetooth.py:65
+#: ../actors/bluetooth.py:62
 msgid "Bluetooth device connected"
 msgstr "Interfaz Bluetooth conectado"
 
-#: ../actors/bluetooth.py:66
+#: ../actors/bluetooth.py:63
 msgid "Bluetooth device disconnected"
 msgstr "Interfaz Bluetooth desconectado"
+
+#: ../actors/bluetooth.py:64
+msgid "Setup bluetooth preferences"
+msgstr "Configurar preferencias de bluetooth"
 
 #: ../actors/c3pocardreader.py:68
 msgid "C3PO"
@@ -237,6 +241,10 @@ msgstr "Dispositivo de televisión digital conectado"
 msgid "Digital television device disconnected"
 msgstr "Dispositivo de televisión digital desconectado"
 
+#: ../actors/dvb.py:78
+msgid "Run TV-Player"
+msgstr "Ejecutar reproductor de TV"
+
 #: ../actors/dvbfw.py:122
 msgid "TDT device without firmware!!"
 msgstr "Dispositivo TDT sin firmware"
@@ -252,6 +260,26 @@ msgstr "Joystick/Gamepad conectado"
 #: ../actors/usbjoystick.py:70
 msgid "Joystick/Gamepad disconnected"
 msgstr "Joystick/Gamepad desconectado"
+
+#: ../actors/usbjoystick.py:71
+msgid "Calibrate joystick"
+msgstr "Calibrar el joystick"
+
+#: ../actors/sdcard.py:59
+msgid "SD Card"
+msgstr "Tarjeta SD"
+
+#: ../actors/sdcard.py:60
+msgid "SD Card inserted"
+msgstr "Tarjeta SD insertada"
+
+#: ../actors/sdcard.py:61
+msgid "SD Card extracted"
+msgstr "Tarjeta SD extraída"
+
+#: ../actors/sdcard.py:62
+msgid "Import photos"
+msgstr "Importar fotografías"
 
 #: ../coldassistant/devicelist.py:58
 msgid "Searching for devices..."

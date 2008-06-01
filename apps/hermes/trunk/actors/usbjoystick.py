@@ -4,7 +4,7 @@
 #Módulo usbjoystick - Módulo que implementa el "actor hardware" para los
 #dispositivos USB Joystick/Gamepad
 #
-#Copyright (C) 2007 Junta de Andalucía
+#Copyright (C) 2008 Junta de Andalucía
 #
 #Autor/es (Author/s):
 #
@@ -62,12 +62,10 @@ class Actor(PkgDeviceActor):
 	    'info.product': is_valid,
             }
 
-    # Important for compatibility with usbmouse.py
-    __priority__ = 5
+    __icon_path__  = os.path.abspath('actors/img/joystick.png')
+    __iconoff_path__ = os.path.abspath('actors/img/joystickoff.png')
 
-    __icon_path__  = os.path.abspath('actors/img/usb.png')
-    __iconoff_path__ = os.path.abspath('actors/img/usboff.png')
-
-    __device_title__ = 'USB Joystick'
+    __device_title__ = 'Joystick'
     __device_conn_description__ = _('Joystick/Gamepad connected')
     __device_disconn_description__ = _('Joystick/Gamepad disconnected')
+    __device_use_title__ = _('Calibrate joystick')
