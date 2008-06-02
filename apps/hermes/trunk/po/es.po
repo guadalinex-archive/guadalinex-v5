@@ -151,6 +151,18 @@ msgstr "Ratón USB configurado"
 msgid "USB mouse disconnected"
 msgstr "Ratón USB desconectado"
 
+#: ../actors/usbkeyboard.py:63 ../actors/usbkeyboard.py:67
+msgid "Keyboard"
+msgstr "Teclado"
+
+#: ../actors/usbkeyboard.py:63
+msgid "USB keyboard configured"
+msgstr "Teclado USB configurado"
+
+#: ../actors/usbkeyboard.py:67
+msgid "USB keyboard disconnected"
+msgstr "Teclado USB desconectado"
+
 #: ../actors/usbprinter.py:68
 msgid "PRINTER"
 msgstr "IMPRESORA"
