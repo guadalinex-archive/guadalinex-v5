@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="48px"
+   height="48px"
+   id="svg1306"
+   sodipodi:version="0.32"
+   inkscape:version="0.42"
+   sodipodi:docbase="/home/gcoronel/gx2005/guadalinex2005/hardware_detection/user_level/hermes/tests"
+   sodipodi:docname="test_icon.svg">
+  <defs
+     id="defs1308" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.0000000"
+     inkscape:cx="22.571429"
+     inkscape:cy="13.767203"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:grid-bbox="true"
+     inkscape:document-units="px"
+     inkscape:window-width="1280"
+     inkscape:window-height="951"
+     inkscape:window-x="0"
+     inkscape:window-y="26" />
+  <metadata
+     id="metadata1311">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <text
+       xml:space="preserve"
+       style="font-size:39.566391px;font-style:normal;font-weight:normal;line-height:125.00000%;fill:#2f1010;fill-opacity:0.32618025;stroke:none;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans"
+       x="-0.88750947"
+       y="50.148819"
+       id="text2054"
+       sodipodi:linespacing="125.00000%"
+       transform="scale(1.075458,0.929836)"><tspan
+         sodipodi:role="line"
+         id="tspan2056"
+         x="-0.88750947"
+         y="50.148819"
+         style="font-size:65.943924px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125.00000%;writing-mode:lr-tb;text-anchor:start;fill:#2f1010;fill-opacity:0.32618025;font-family:Bitstream Vera Sans">U</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:39.566582px;font-style:normal;font-weight:normal;line-height:125.00000%;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans"
+       x="-2.0121405"
+       y="48.537292"
+       id="text2050"
+       sodipodi:linespacing="125.00000%"
+       transform="scale(1.075458,0.929836)"><tspan
+         sodipodi:role="line"
+         id="tspan2052"
+         x="-2.0121405"
+         y="48.537292"
+         style="font-size:65.944305px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125.00000%;writing-mode:lr-tb;text-anchor:start;fill:#f50f0f;fill-opacity:1.0000000;font-family:Bitstream Vera Sans">U</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.000000px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans"
+       x="11.644531"
+       y="29.748047"
+       id="text1316"><tspan
+         sodipodi:role="line"
+         id="tspan1318"
+         x="11.644531"
+         y="29.748047">Test</tspan></text>
+  </g>
+</svg>

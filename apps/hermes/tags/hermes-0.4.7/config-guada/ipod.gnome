@@ -1,0 +1,6 @@
+packages:
+    - rhythmbox
+
+
+conn_commands:
+    - rhythmbox &
