@@ -1,0 +1,18 @@
+grubaker (0.1.2) unstable; urgency=low
+
+  * New version. It fixes a problem about the partition order. 
+
+ -- Carlos Parra Camargo <cparra@emergya.es>  Thu, 15 Mar 2007 18:26:52 +0100
+
+grubaker (0.1.1) unstable; urgency=low
+
+  * Improving error messages (just in case menu.lst doesn't exist)
+
+ --  <rmartin@emergya.es>  Tue, 20 Feb 2007 21:20:18 +0100
+
+grubaker (0.1) unstable; urgency=low
+
+  * Initial release  
+
+ -- Carlos Parra Camargo <cparra@emergya.info>  Thu, 20 Apr 2006 12:32:14 +0200
+ 

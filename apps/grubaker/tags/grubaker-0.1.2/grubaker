@@ -1,0 +1,488 @@
+#!/usr/bin/python
+# -*- coding: iso-8859-1 -*-
+
+# grubaker 1.1.0
+# author: Alfonso E.M. alfonso@el-magnifico.org
+# date: 15/Apr/2006
+# last update: 24/Mar/2008 by Alfonso E.M.
+# Patches by JuanJe Ojeda
+
+import re
+import pygtk
+pygtk.require ('2.0')
+import gtk
+import gtk.glade
+import os,commands,sys
+import getopt
+
+# DEBIAN MARKERS FOR AUTOMAGICALLY GENERATED KERNELS SECTION
+AUTOMAGIC_START="### BEGIN AUTOMAGIC KERNELS LIST"
+AUTOMAGIC_END="### END DEBIAN AUTOMAGIC KERNELS LIST"
+
+
+class Menu:
+	filename=""
+	def __init__(self,filename):
+		"""
+		Grub menu file
+
+		"""
+
+		self.filename=filename
+        	self.liststore = gtk.ListStore(str,str,int)
+                self.item=[]
+		self.error=''
+		
+		self.parsefile()
+
+
+	def parsefile(self):
+
+        	self.liststore.clear()
+
+		try:
+			file=open(self.filename)
+		except:
+			self.error="No se puede editar el menu.\nNo tiene permiso para modificar "+self.filename+". Posiblemente se encuentre en un sistema Live donde no se puede modificar el gestor de arranque. Pruebe en el sistema una vez instalado."
+			print self.error
+		else:
+			options=""
+			id=-1
+                        self.comments=""
+                        self.timeout="3"
+                        self.splashimage=""
+                        self.fallback=""
+                        self.default=""
+			mustreadoptions=False
+			mustreadcomments=True
+			while 1:
+				line=file.readline()
+				if line == "": 
+                                       break
+                                if line == "\n":
+                                       continue
+# As menu.lst says:
+# "lines between the AUTOMAGIC KERNELS LIST markers will be modified
+# by the debian update-grub script except for the default options below"
+
+# So Grubaker must check (and keep) these odd markers 
+                                  
+				if line.find(AUTOMAGIC_START) != -1:
+					i=self.liststore.append([gtk.STOCK_GOTO_BOTTOM,"ATENCION: el sistema puede modificar las siguientes líneas automáticamente",-1])
+                                        self.item.append({})
+					continue
+				if line.find(AUTOMAGIC_END) != -1:
+					i=self.liststore.append([gtk.STOCK_GOTO_TOP,"Aquí termina la sección que se actualiza automáticamente",-2])
+                                        self.item.append({})
+					continue
+				if line[:1] == "#":
+	                                if line.find("Grubaker") != -1:	
+						continue
+				        if mustreadcomments:
+				          self.comments=self.comments+line  
+                                        continue
+
+				line = line.replace("\n","")
+                                if re.search("[=\s]+",line):
+                                  key,value=re.split("[=\s]+",line,1)
+                                else:
+                                  key=line
+				  value=''
+                                  
+				if key == "timeout":
+  				    self.timeout = value
+				elif key == "default":
+				    self.default = value
+				elif key == "splashimage":
+				    self.splashimage = value
+				elif key == "fallback":
+				    self.fallback = value
+
+				elif key == "title":
+				        mustreadcomments=False
+                                        id = id + 1   
+					if self.default == str(id):
+						icon=gtk.STOCK_YES
+					else:
+						icon=gtk.STOCK_NO
+					i=self.liststore.append([icon,value,id])
+                                        self.item.append({})
+					mustreadoptions=True
+				else:
+					if mustreadoptions:
+                                          self.item[id][key]=value
+	
+			file.close
+
+	def write_key(self,i,k,wfile):
+		 if self.item[i].has_key(k):
+		   wfile.write(k+" \t"+self.item[i][k]+"\n")
+	   	   del self.item[i][k]			
+
+	def write(self):
+
+		tmpfilename=self.filename+".tmp"
+		backupfilename=self.filename+".bak"
+		automagic=0
+
+		try:
+			newfile=open(tmpfilename,"w")
+		except:
+			sys.exit("ERROR: "+self.filename+".tmp not writable")
+			return
+
+		newfile.write("# menu.lst edited with Grubaker\n\n")
+		newfile.write(self.comments)
+		
+		if self.default:
+			newfile.write("default	"+str(self.default)+"\n")
+
+		if self.timeout:
+	                newfile.write("timeout	"+self.timeout+"\n")
+
+		if self.fallback:
+	                newfile.write("fallback	"+self.fallback+"\n")
+
+		if self.splashimage:
+	                newfile.write("splashimage="+self.splashimage+"\n")
+
+
+                newfile.write("\n\n")
+
+                iter=self.liststore.get_iter_first()
+		while iter != None:
+		      title=self.liststore.get_value(iter,1)
+                      id=self.liststore.get_value(iter,2)
+                      
+# Dummy items for DEBIAN AUTOMAGIC KERNEL LIST
+		      if id == -1 and automagic == 0:
+		      	 newfile.write(AUTOMAGIC_START+"\n")
+		      	 automagic = 1
+		      elif id == -2:
+		         if automagic == 0:
+   		      	    newfile.write(AUTOMAGIC_START+"\n")
+		      	 newfile.write(AUTOMAGIC_END+"\n")
+		      	 automagic == 2
+		      else:                      
+   		         newfile.write("title \t"+title+"\n")
+# Order is important !
+# First we'll write Linux options (ordered)
+		         self.write_key(id,'root',newfile)
+		         self.write_key(id,'kernel',newfile)
+		         self.write_key(id,'module',newfile)
+		         self.write_key(id,'initrd',newfile)
+# Second, Windows options (ordered)
+		         self.write_key(id,'rootnoverify',newfile)
+		         self.write_key(id,'kernel',newfile)
+		         self.write_key(id,'chainloader',newfile)
+# Then, whatever left (but "boot")
+		         for key in self.item[id].keys():
+			   if key != 'boot':
+       		             newfile.write(key+" \t"+self.item[id][key]+"\n")
+# "Boot", if exists, must be the latest (not needed, indeed!)
+		         self.write_key(id,'boot',newfile)
+
+                      newfile.write("\n")
+		      iter=self.liststore.iter_next(iter)
+
+		newfile.close
+
+                os.rename(self.filename,backupfilename)
+		os.rename(tmpfilename,self.filename)
+
+		return
+
+class Appgui:
+	def __init__(self, menu):
+		"""
+		In this init the main window is displayed
+		"""
+		dic = {
+			 "on_bt_quit_clicked" : (self.quit),
+		         "on_window_main_delete" : (self.quit), 
+		         "on_window_preferences_delete_event" : self.bt_preferences_cancel_clicked, 
+		         "on_treeview1_cursor_changed" : self.treeview1_cursor_changed, 
+		         "on_treeview1_row_activated" : self.edit_item, 
+		         "on_bt_ok_clicked" : self.bt_ok_clicked, 
+		         "on_bt_preferences_clicked" : self.bt_preferences_clicked, 
+		         "on_bt_edit_ok_clicked" : self.bt_edit_ok_clicked, 
+		         "on_bt_edit_cancel_clicked" : self.bt_edit_cancel_clicked, 
+		         "on_window_edit_delete_event" : self.bt_edit_cancel_clicked, 
+		         "on_bt_preferences_ok_clicked" : self.bt_preferences_ok_clicked, 
+		         "on_bt_preferences_cancel_clicked" : self.bt_preferences_cancel_clicked, 
+		         "on_treeview1_drag_end" : self.treeview1_drag_end, 
+		         "on_bt_delete_clicked" : self.bt_delete_clicked, 
+		         "on_bt_new_clicked" : self.bt_new_clicked, 
+			 "on_dialog_error_response" : self.dialog_error_response,
+		}
+
+		self.menu = menu
+#		self.xml = gtk.glade.XML("grubaker.glade")
+		self.xml = gtk.glade.XML("/usr/share/grubaker/grubaker.glade")
+		self.xml.signal_autoconnect (dic)
+		self.treeview = self.xml.get_widget('treeview1')
+		self.window_main = self.xml.get_widget('window_main')
+		self.window_main.set_size_request(600,320)
+		self.window_edit=self.xml.get_widget('window_edit')
+		self.window_preferences=self.xml.get_widget('window_preferences')
+		self.treeview.set_rules_hint(True)
+
+		self.treeview.set_model(model=self.menu.liststore)
+
+	        # create the TreeViewColumn to display the data
+	        self.column = gtk.TreeViewColumn('Systems')
+
+	        # add tvcolumn to treeview
+       		self.treeview.append_column(self.column)
+
+	        # create a CellRendererText to render the data
+	        self.cellicon = gtk.CellRendererPixbuf()
+	        self.cell = gtk.CellRendererText()
+		self.cell.set_property('single-paragraph-mode',True)
+
+        	# add the cell to the column
+        	self.column.pack_start(self.cellicon, False)
+        	self.column.pack_start(self.cell, True)
+
+       		self.column.set_attributes(self.cellicon, stock_id=0)
+       		self.column.add_attribute(self.cell, 'markup',1)
+
+		if self.menu.error:
+			dialog=self.xml.get_widget('dialog_error')
+			errortext=self.window_edit=self.xml.get_widget('text_error')
+			errortext.set_text(self.menu.error)
+		        dialog.show()
+
+	def dialog_error_response(self,dialog,response,*args):
+		sys.exit('Error!')
+
+	def run(self):
+		gtk.main()
+
+	def quit(*args):
+		if hasattr(gtk, 'main_quit'):
+	            gtk.main_quit()
+	        else:
+	            gtk.mainquit()
+
+
+	            
+        def bt_delete_clicked(self,widget):
+                (iter,id,title)=self.get_selected_item()
+# Dummy items are not deleteable
+                if id > 0:
+                   self.menu.liststore.remove(iter)
+   	           self.change_item_buttons_state(False)
+		   self.menu_has_changed()
+                return
+                
+        def bt_new_clicked(self,widget):
+		self.set_text('hidden_id','')
+		self.set_text('entry_title','(Nuevo)')
+                self.window_edit.show()
+		self.menu_has_changed()
+                return
+                
+        def get_selected_item(self):
+                selection=self.treeview.get_selection()
+		(model,iter)=selection.get_selected()
+		title=self.menu.liststore.get_value(iter,1)
+		id=self.menu.liststore.get_value(iter,2)
+                return (iter,id,title)
+
+	def bt_ok_clicked(self,widget):
+		widget.set_sensitive(False)
+		self.menu.write()
+		self.quit()
+
+	def treeview1_cursor_changed(self,treeview):
+	        self.change_item_buttons_state(True)
+	        return
+	        
+	def treeview1_drag_end(self,*args):
+	        self.menu_has_changed()
+	        return
+
+        def change_item_buttons_state(self,value):
+                widget=self.xml.get_widget('bt_delete')
+        	widget.set_sensitive(value)
+		return
+
+        def menu_has_changed(self):
+                widget=self.xml.get_widget('bt_ok')
+        	widget.set_sensitive(True)
+                return
+
+        def bt_preferences_clicked(self,widget):
+		self.set_text('entry_timeout',self.menu.timeout)
+		self.set_text('entry_splashimage',self.menu.splashimage)
+                self.window_preferences.show()
+	        return
+
+        def bt_preferences_ok_clicked(self,widget):
+  	        self.menu.timeout=self.get_value('entry_timeout')
+	        self.menu.splashimage=self.get_value('entry_splashimage')
+	        self.menu_has_changed()
+	        self.window_preferences.hide()  
+	        return  
+
+        def bt_preferences_cancel_clicked(self,widget,*args):
+	        self.window_preferences.hide()  
+		return True
+
+	def edit_item(self,treeview,TreePath,TreeViewColumn):
+                (iter,id,title)=self.get_selected_item()
+# Dummy items are not editable
+                if id < 0:
+		   return
+		self.set_text('entry_title',title)
+		self.set_text('hidden_id',str(id))
+		
+		if self.menu.item[id].has_key('root'):
+		   rootkey='root'
+		if self.menu.item[id].has_key('rootnoverify'):
+		   rootkey='rootnoverify'
+        	matches=re.search('.*hd(\d),(\d).*',self.menu.item[id][rootkey])
+                if matches:
+                        hd=int(matches.group(1))
+                        partition=int(matches.group(2))
+         		self.set_spin('spin_hd',hd)
+        		self.set_spin('spin_partition',partition)
+
+		if self.menu.item[id].has_key('kernel'):
+		    if re.search("\s+",self.menu.item[id]['kernel']):
+                       kernel,options=re.split("\s+",self.menu.item[id]['kernel'],1)         
+                       self.set_text('entry_kernel',kernel)
+                       self.set_text('entry_options',options)
+                    else:
+                       self.set_text('entry_kernel',self.menu.item[id]['kernel'])
+                else:
+                    self.set_text('entry_kernel','')
+                    self.set_text('entry_options','')
+        		
+		if self.menu.item[id].has_key('initrd'):
+        		self.set_text('entry_initrd',self.menu.item[id]['initrd'])
+                else:
+                        self.set_text('entry_initrd','')
+
+
+		if self.menu.item[id].has_key('chainloader'):
+        		self.set_text('entry_chainloader',self.menu.item[id]['chainloader'])
+                else:
+                        self.set_text('entry_chainloader','')
+
+		if self.menu.item[id].has_key('makeactive'):
+                    self.set_active('check_makeactive',True)
+                else:
+                    self.set_active('check_makeactive',False)
+                
+                self.window_edit.show()
+
+		  
+		return
+
+	def bt_edit_ok_clicked(self,widget):
+
+		old_id=self.get_value('hidden_id')
+		title=self.get_value('entry_title')
+
+#old_id is a hidden input, empty for new menu items (tricky)
+		if old_id != '':
+	                (iter,id,oldtitle)=self.get_selected_item()
+        	        self.menu.liststore.set_value(iter,1,title)
+	                del self.menu.item[id]
+	                self.menu.item.insert(id,{})
+		else:
+	                self.menu.item.append({})
+			id=len(self.menu.item)-1
+			icon=gtk.STOCK_NO
+			i=self.menu.liststore.append([icon,title,id])
+                
+	        hd=self.get_spin('spin_hd')
+	        partition=self.get_spin('spin_partition')
+
+	        kernel=self.get_value('entry_kernel')
+	        options=self.get_value('entry_options')
+	        if kernel:
+	            self.menu.item[id]['kernel']=kernel+' '+options
+
+	        initrd=self.get_value('entry_initrd')
+	        if initrd:
+	            self.menu.item[id]['initrd']=initrd
+	            
+	        chainloader=self.get_value('entry_chainloader')
+
+#if chainloader field is not empty, 'rootnoverify' is used instead of 'root' (tricky)
+	        if chainloader:
+	            self.menu.item[id]['chainloader']=chainloader
+    		    rootkey='rootnoverify'
+		else:
+		    rootkey='root'
+
+                self.menu.item[id][rootkey]='(hd'+str(hd)+','+str(partition)+')'
+
+	        
+	        widget=self.xml.get_widget('check_makeactive')
+	        makeactive=widget.get_active()
+	        if makeactive:
+	            self.menu.item[id]['makeactive']=''
+    
+	        self.window_edit.hide()
+	        self.menu_has_changed()
+                return
+
+        def set_text(self,widgetname,text):
+                widget=self.xml.get_widget(widgetname)
+	        widget.set_text(text)
+        def get_value(self,widgetname):
+                widget=self.xml.get_widget(widgetname)
+	        return widget.get_text()
+        def set_spin(self,widgetname,number):
+                widget=self.xml.get_widget(widgetname)
+	        widget.set_value(number)
+        def get_spin(self,widgetname):
+                widget=self.xml.get_widget(widgetname)
+	        return widget.get_value_as_int()
+
+        def set_active(self,widgetname,value):
+                widget=self.xml.get_widget(widgetname)
+	        widget.set_active(value)
+
+
+        def bt_edit_cancel_clicked(self,widget,*args):
+	        self.window_edit.hide()  
+		return True
+
+
+		
+def usage():
+	print """
+Usage:
+   -h	--help		This simple help
+   -f	--file=xxx	Menu file to edit (default is /boot/grub/menu.lst)
+	"""
+
+
+def main():
+	try:
+		opts, args = getopt.getopt(sys.argv[1:],"hf:",["help","file="])
+	except getopt.GetoptError:
+		usage()
+		sys.exit(2)
+
+	menufile="/boot/grub/menu.lst"
+	for opt, arg in opts:     
+	    if opt in ("-h", "--help"):
+		usage()
+		sys.exit()                  
+	    elif opt in ("-f", "--file"):
+		menufile = arg
+	
+	menu=Menu(menufile)
+	app=Appgui(menu)
+	app.run()
+	  
+
+if __name__ == '__main__':
+	main()
+

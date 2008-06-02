@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Boot Menu Editor (Grubaker)
+Name[es]=Editor del Menu de Arranque (Grubaker)
+Comment=Change boot options easily 
+Comment[es]=Cambia las opciones de arranque facilmente
+Exec=gksudo /usr/sbin/grubaker
+Icon=/usr/share/icons/grubaker/grubaker.svg
+Terminal=false
+Type=Application
+Categories=GNOME;Application;System;Settings;
+StartupNotify=true

@@ -1,0 +1,12 @@
+Source: grubaker
+Section: admin
+Priority: optional
+Maintainer: Junta de andalucia <packmaster@guadalinex.org>
+Build-Depends: debhelper
+Standards-Version: 3.6.2
+
+Package: grubaker
+Architecture: any
+Depends: python, python-gtk2
+Description: utility to configurate grub
+ useful to config boot in a graphical way.
