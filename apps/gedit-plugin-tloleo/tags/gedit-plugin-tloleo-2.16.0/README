@@ -1,0 +1,21 @@
+General Information
+===================
+
+This is the 2.16.0 version of gedit-plugin-TLoleo. gedit-plugin-TLoleo are a set of plugins
+for gedit.
+
+Installation
+============
+
+You have to ./configure with --prefix=same prefix as you
+configured gedit with.
+
+How to choose which plugins to build:
+
+./configure --with-plugins=pl1,pl2,...
+
+where pl1, pl2 ... are one of the following:
+
+TLoleo			Synthesizes the selected text with Festival using the Spanish male voice from Hispavoces project.
+
+all			All of the above plugins
