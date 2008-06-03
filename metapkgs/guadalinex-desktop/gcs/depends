@@ -125,6 +125,7 @@ lemurae
 lftp
 libbluetooth2
 libgl1-mesa-glx
+libgl1-mesa-dri
 libglut3
 libgnome2-perl
 libgnomevfs2-bin
