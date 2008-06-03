@@ -19,6 +19,7 @@ bc
 bluefish
 bluetooth
 bluez-cups
+bluez-gnome
 bluez-pcmcia-support
 bluez-utils
 brasero
@@ -41,10 +42,10 @@ cupsys
 cupsys-bsd
 cupsys-client
 cupsys-driver-gutenprint
-d4x
 dasher
 dcraw
 desktop-file-utils
+devede
 doc-base
 dvd+rw-tools
 eciadsl
@@ -59,6 +60,7 @@ fast-user-switch-applet
 file-roller
 firefox
 firefox-gnome-support
+firestarter
 foomatic-db
 foomatic-db-engine
 foomatic-db-hpijs
@@ -70,6 +72,7 @@ gconf-editor
 gdebi
 gdm
 gedit
+gedit-plugin-TLoleo
 genisoimage
 gimp
 gnochm
@@ -78,7 +81,6 @@ gnome-about
 gnome-accessibility-themes
 gnome-app-install
 gnome-applets
-gnome-bluetooth
 gnome-control-center
 gnome-icon-theme
 gnome-media
@@ -99,6 +101,7 @@ gnome-themes
 gnome-utils
 gnome-volume-manager
 gpaint
+grubaker
 gs-esp
 gstreamer0.10-alsa
 gstreamer0.10-plugins-base-apps
@@ -109,11 +112,12 @@ gthumb
 gtk2-engines
 guadafox
 gucharmap
+gwget
 hal
 hermeshardware-guada
 hotkey-setup
 informe-diagnostico
-inkscape
+jockey-gtk
 language-pack-es
 language-pack-es-base
 language-support-es
@@ -127,9 +131,9 @@ libgnomevfs2-bin
 libgnomevfs2-extra
 libsasl2-modules
 libxp6
-liferea
 metacity
 mount-systray
+mplayer-nogui
 multisync
 nautilus
 nautilus-cd-burner
@@ -147,7 +151,6 @@ openoffice.org-calc
 openoffice.org-common
 openoffice.org-core
 openoffice.org-draw
-openoffice.org-evolution
 openoffice.org-filter-binfilter
 openoffice.org-filter-mobiledev
 openoffice.org-gnome
@@ -187,20 +190,18 @@ system-config-printer-gnome
 tangerine-icon-theme
 tango-icon-theme
 tango-icon-theme-common
-totem
 transmission-gtk
 tsclient
 ttf-bitstream-vera
 ttf-dejavu-core
 ttf-freefont
-tvtime
 ubuntu-sounds
 unzip
 update-notifier
 usplash
+vlc
 vodafone-mobile-connect-card-driver-for-linux
 watermain
-xchat
 xdg-user-dirs
 xdg-user-dirs-gtk
 xkb-data
@@ -210,4 +211,3 @@ x-ttcidfont-conf
 yelp
 zenity
 zip
-jockey-gtk
