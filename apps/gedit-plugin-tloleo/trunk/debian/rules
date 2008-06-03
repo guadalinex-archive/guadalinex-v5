@@ -26,6 +26,9 @@ build-stamp: configure-stamp
 	dh_testdir
 
 	# Add here commands to compile the package.
+	automake
+	autoconf
+	./configure
 	$(MAKE)
 	#docbook-to-man debian/gedit-plugin-tloleo.sgml > gedit-plugin-tloleo.1
 
