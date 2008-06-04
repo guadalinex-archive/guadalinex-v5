@@ -1,3 +1,9 @@
+mount-systray (0.3-1) hardy; urgency=low
+
+  * Upstream new version
+
+ -- Roberto Majadas <roberto.majadas@openshine.com>  Wed, 04 Jun 2008 10:00:05 +0200
+
 mount-systray (0.2) unstable; urgency=low
 
   * New upstream release

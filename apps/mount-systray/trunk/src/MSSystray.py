@@ -40,6 +40,9 @@ class MSSystray:
                             "floppy": "gnome-dev-floppy",
                             "media-player": "multimedia-player"}
 
+        self.click_actions = {"umount": _("Unmount device"),
+                              "open": _("Browse in filemanager")}
+
         # Menu
         self.menu = gtk.Menu()
         self.menu_volumes = []
@@ -187,7 +190,11 @@ class MSSystray:
         self.menu.popup(None, None, gtk.status_icon_position_menu, 1, gtk.get_current_event_time(), status_icon)
 
     def __device_activate_cb(self, menu_item, uid):
-        self.device_manager.volume_unmount(uid)
+        _saved_action = self.conf.get_click_on_device_action()
+        if _saved_action == "umount":
+            self.device_manager.volume_unmount(uid)
+        elif _saved_action == "open":
+            self.device_manager.volume_open(uid)
 
     def __show_preferences_cb(self, menu_item, user_data):
         if self.xml == None:
@@ -208,12 +215,13 @@ class MSSystray:
             self.notification.close()
         gtk.main_quit()
 
-    def __populate_preferences(self):
+    def __reload_config(self, config, key, user_data=None):
         minutes_spinbutton = self.xml.get_widget("minutes_spinbutton")
         show_notify_checkbutton = self.xml.get_widget("show_notify_checkbutton")
         new_device_checkbutton = self.xml.get_widget("new_device_checkbutton")
         hide_systray_checkbutton = self.xml.get_widget("hide_systray_checkbutton")
-        blink_checkbutton = self.xml.get_widget("blink_checkbutton")
+        blink_checkbutton = self.xml.get_widget("blink_checkbutton")        
+        action_combobox = self.xml.get_widget("click_action_combobox")
 
         # Saved conf
         minutes_spinbutton.set_value(self.conf.get_minutes_warning())
@@ -221,6 +229,41 @@ class MSSystray:
         new_device_checkbutton.set_active(self.conf.get_show_notify_detected())
         hide_systray_checkbutton.set_active(self.conf.get_hide_systray())
         blink_checkbutton.set_active(self.conf.get_blink_all_time())
+        _saved_action = self.conf.get_click_on_device_action()
+        _sel_num = 0
+        for _action in self.click_actions.keys():
+            if _saved_action == _action:
+                action_combobox.set_active(_sel_num)
+            _sel_num = _sel_num + 1
+
+    def __populate_preferences(self):
+        minutes_spinbutton = self.xml.get_widget("minutes_spinbutton")
+        show_notify_checkbutton = self.xml.get_widget("show_notify_checkbutton")
+        new_device_checkbutton = self.xml.get_widget("new_device_checkbutton")
+        hide_systray_checkbutton = self.xml.get_widget("hide_systray_checkbutton")
+        blink_checkbutton = self.xml.get_widget("blink_checkbutton")        
+        action_combobox = self.xml.get_widget("click_action_combobox")
+
+        # Actions combobox
+        model = gtk.ListStore(gobject.TYPE_STRING, gobject.TYPE_STRING)
+        action_combobox.set_model(model)
+        cell = gtk.CellRendererText()
+        action_combobox.pack_start(cell, True)
+        action_combobox.add_attribute(cell, 'text', 1)
+
+        # Saved conf
+        minutes_spinbutton.set_value(self.conf.get_minutes_warning())
+        show_notify_checkbutton.set_active(self.conf.get_show_notify())
+        new_device_checkbutton.set_active(self.conf.get_show_notify_detected())
+        hide_systray_checkbutton.set_active(self.conf.get_hide_systray())
+        blink_checkbutton.set_active(self.conf.get_blink_all_time())
+        _saved_action = self.conf.get_click_on_device_action()
+        _sel_num = 0
+        for _action in self.click_actions.keys():
+            model.append([_action, self.click_actions[_action]])
+            if _saved_action == _action:
+                action_combobox.set_active(_sel_num)
+            _sel_num = _sel_num + 1
 
         # Signals
         minutes_spinbutton.connect("value_changed", self.__minutes_changed_cb, None)
@@ -228,6 +271,13 @@ class MSSystray:
         new_device_checkbutton.connect("toggled", self.__new_device_cb, None)
         hide_systray_checkbutton.connect("toggled", self.__hide_systray_cb, None)
         blink_checkbutton.connect("toggled", self.__blink_all_time_cb, None)
+        action_combobox.connect("changed", self.__click_action_cb, None)
+        self.conf.connect("config_changed", self.__reload_config, None)
+
+    def __click_action_cb(self, combobox, data_user):
+        if combobox.get_active_iter():
+            _selected_action = combobox.get_model().get(combobox.get_active_iter(), 0)[0]
+            self.conf.set_click_on_device_action(_selected_action)
 
     def __blink_all_time_cb(self, checkbutton, data_user):
         self.conf.set_blink_all_time (checkbutton.get_active())

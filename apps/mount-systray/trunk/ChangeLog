@@ -1,3 +1,20 @@
+2008-06-02  Álvaro Peña  <apg@openshine.com>
+
+	* configure.ac: Updated to 0.3
+	* debian/changelog: New upstream release
+	* src/MSConfig.py: Now connect with gconf signal
+	* src/MSSystray.py: Update preferences when config is changed
+
+2008-06-01  Álvaro Peña  <apg@openshine.com>
+
+	* data/mount-systray.schemas.in: Append action persistent config y
+	gconf 
+	* data/preferences.glade: Append combobox for click on device
+	action 
+	* src/MSConfig.py: Append get/set click on device action 
+	* src/MSDeviceManager.py: Manage open action, only with gnome-open 
+	* src/MSSystray.py: Configure the click action on device
+
 2007-07-03  Álvaro Peña  <apg@openshine.com>
 
 	* debian/control: Added gnome-common

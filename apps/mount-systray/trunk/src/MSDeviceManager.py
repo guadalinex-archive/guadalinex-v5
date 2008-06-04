@@ -215,5 +215,12 @@ class MSDeviceManager(gobject.GObject):
                 #device_dbus_obj = self.dbus.get_object("org.freedesktop.Hal", uid)
                 #volume_device = dbus.Interface(device_dbus_obj, "org.freedesktop.Hal.Device")
                 #volume_device.Unmount() # tampoco con Umount o UnMount
+
+    def volume_open(self, uid):
+        for volume in self.volumes:
+            if volume["uid"] == uid:
+                if (os.path.exists ("/usr/bin/gnome-open") == True):
+                    cmdline = "gnome-open " + volume["mount_point"]
+                    os.system (cmdline)
     
 gobject.type_register(MSDeviceManager)

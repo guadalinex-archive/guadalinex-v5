@@ -1,5 +1,5 @@
 AC_INIT(src/mount-systray.py)
-AM_INIT_AUTOMAKE(mount-systray, 0.2)
+AM_INIT_AUTOMAKE(mount-systray, 0.3)
 
 dnl check for python
 dnl AM_PATH_PYTHON

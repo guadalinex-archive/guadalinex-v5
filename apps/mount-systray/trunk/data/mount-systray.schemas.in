@@ -1,5 +1,15 @@
 <gconfschemafile>
 	<schemalist>
+		<schema>
+			<key>/schemas/apps/mount-systray/click_on_device_action</key>
+			<applyto>/apps/mount-systray/click_on_device_action</applyto>
+			<type>string</type>
+			<default>unmount</default>
+			<locale name="C">
+				<short>Action when user click on device</short>
+				<long>Action to do when the user click over one mounted device.</long>
+			</locale>
+		</schema>
       		<schema>
 			<key>/schemas/apps/mount-systray/minutes_warning</key>
 			<applyto>/apps/mount-systray/minutes_warning</applyto>

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-02 16:23+0200\n"
+"POT-Creation-Date: 2008-06-02 10:44+0200\n"
 "PO-Revision-Date: 2007-06-11 13:50+0200\n"
 "Last-Translator: Roberto Majadas <telemaco@openshine.com>\n"
 "Language-Team: spanish <telemaco@openshine.com>\n"
@@ -16,33 +16,42 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../data/mount-systray.schemas.in.h:1
+msgid "Action to do when the user click over one mounted device."
+msgstr ""
+"Acción a realizar cuando el usuario clicka sobre un dispositivo montado"
+
+#: ../data/mount-systray.schemas.in.h:2
+msgid "Action when user click on device"
+msgstr "Acción cuando el usuario pulsa sobre un dispositivo"
+
+#: ../data/mount-systray.schemas.in.h:3
 msgid "Blink all the time when some device is mounted"
 msgstr "Parpadear todo el tiempo cuando exista algún dispositivo montado"
 
-#: ../data/mount-systray.schemas.in.h:2
+#: ../data/mount-systray.schemas.in.h:4
 msgid "Hide system tray icon when no devices mounted"
 msgstr ""
 "Oculta el icono de la barra de estado cuando no haya dispositivos montados"
 
-#: ../data/mount-systray.schemas.in.h:3
+#: ../data/mount-systray.schemas.in.h:5
 msgid "If any device is mounted, blink all the time warning to unmount."
 msgstr "Si algún dispositivo está montado, el icono papadeará todo el tiempo."
 
-#: ../data/mount-systray.schemas.in.h:4
+#: ../data/mount-systray.schemas.in.h:6
 msgid "If haven't devices mounted detected, hide the system tray icon."
 msgstr ""
 "Si no tienes dispositivos montados detectados, oculta el icono de la barra "
 "de estado"
 
-#: ../data/mount-systray.schemas.in.h:5
+#: ../data/mount-systray.schemas.in.h:7
 msgid "Notify when a new device is detected"
 msgstr "Notifica cuando un nuevo dispositivo es detectado"
 
-#: ../data/mount-systray.schemas.in.h:6
+#: ../data/mount-systray.schemas.in.h:8
 msgid "Show a notification too when the warning happens."
 msgstr "Muestra una notificación cuando el aviso suceda"
 
-#: ../data/mount-systray.schemas.in.h:7
+#: ../data/mount-systray.schemas.in.h:9
 msgid ""
 "Show a notification when a new device is detected warning about the volume "
 "umount importance."
@@ -50,15 +59,15 @@ msgstr ""
 "Muestra una notificación cuando un nuevo dispositivo es detectado avisando "
 "sobre la importancia de desmontar el volumen"
 
-#: ../data/mount-systray.schemas.in.h:8
+#: ../data/mount-systray.schemas.in.h:10
 msgid "Show a notification when warning"
 msgstr "Muestra notificación cuando avise"
 
-#: ../data/mount-systray.schemas.in.h:9
+#: ../data/mount-systray.schemas.in.h:11
 msgid "Show a warning to the user every selected minutes."
 msgstr "Muestra un aviso al usuario cada tiempo en minutos seleccionado"
 
-#: ../data/mount-systray.schemas.in.h:10
+#: ../data/mount-systray.schemas.in.h:12
 msgid "Warning every selected minutes"
 msgstr "Avisa cada tiempo seleccionado en minutos"
 
@@ -80,16 +89,24 @@ msgstr ""
 "o colocar la variable PYTHONPATH correctamente\n"
 "intenta: export PYTHONPATH= "
 
+#: ../src/MSSystray.py:43
+msgid "Unmount device"
+msgstr "Desmontar el dispositivo"
+
+#: ../src/MSSystray.py:44
+msgid "Browse in filemanager"
+msgstr "Navegar en el gestor de ficheros"
+
 #. No devices
-#: ../src/MSSystray.py:61
+#: ../src/MSSystray.py:64
 msgid "No devices mounted"
 msgstr "No hay dispositivos montados"
 
-#: ../src/MSSystray.py:104
+#: ../src/MSSystray.py:107
 msgid "Removable devices control"
 msgstr "Control de dispositivos extraibles"
 
-#: ../src/MSSystray.py:139
+#: ../src/MSSystray.py:142
 msgid ""
 "Remember umount it when you finish your work if you wan't to lose your "
 "information"
@@ -97,7 +114,7 @@ msgstr ""
 "Recuerde desmontarlo cuando termine su trabajo si no quiere perder su "
 "información."
 
-#: ../src/MSSystray.py:143
+#: ../src/MSSystray.py:146
 #, python-format
 msgid ""
 "New device detected\n"
@@ -106,11 +123,11 @@ msgstr ""
 "Nuevo dispositivo detectado\n"
 "<small>( %s )</small>"
 
-#: ../src/MSSystray.py:267
+#: ../src/MSSystray.py:317
 msgid "Remember that ..."
 msgstr "Recuerde que ..."
 
-#: ../src/MSSystray.py:268
+#: ../src/MSSystray.py:318
 msgid ""
 "You must unmount every removable device before extract it, if you wan't to "
 "lose your information"
@@ -135,22 +152,26 @@ msgid "Warn every"
 msgstr "Avisa cada"
 
 #: ../data/preferences.glade.h:5
+msgid "When click in device:"
+msgstr "Cuando clicke en un dispositivo:"
+
+#: ../data/preferences.glade.h:6
 msgid "_Blink all time when some device is mounted."
 msgstr "_Parpadea todo el tiempo cuando haya algún dispositivo montado"
 
-#: ../data/preferences.glade.h:6
+#: ../data/preferences.glade.h:7
 msgid "_Hide system tray icon when no devices mounted."
 msgstr ""
 "_Oculta el icono de la barra de estado cuando no haya dispositivos montados."
 
-#: ../data/preferences.glade.h:7
+#: ../data/preferences.glade.h:8
 msgid "_Notify when new device detected."
 msgstr "_Notifica cuando un nuevo dispositivo es detectado."
 
-#: ../data/preferences.glade.h:8
+#: ../data/preferences.glade.h:9
 msgid "_Show a notification."
 msgstr "_Muestra una notificación"
 
-#: ../data/preferences.glade.h:9
+#: ../data/preferences.glade.h:10
 msgid "minutes."
 msgstr "minutos."
