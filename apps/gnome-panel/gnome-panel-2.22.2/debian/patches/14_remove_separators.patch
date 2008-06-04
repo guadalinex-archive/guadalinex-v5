@@ -1,0 +1,55 @@
+--- gnome-panel-2.14.1.orig/gnome-panel/menu.c
++++ gnome-panel-2.14.1/gnome-panel/menu.c
+@@ -1681,6 +1681,7 @@
+ 	GSList   *l;
+ 	GSList   *items;
+ 	gboolean  add_separator;
++	gboolean  pending_separator = FALSE;
+ 
+ 	add_separator = (GTK_MENU_SHELL (menu)->children != NULL);
+ 
+@@ -1691,16 +1692,24 @@
+ 
+ 		if (add_separator ||
+ 		    gmenu_tree_item_get_type (item) == GMENU_TREE_ITEM_SEPARATOR) {
+-			add_menu_separator (menu);
++			pending_separator = TRUE;
+ 			add_separator = FALSE;
+ 		}
+ 
+ 		switch (gmenu_tree_item_get_type (item)) {
+ 		case GMENU_TREE_ITEM_DIRECTORY:
++			if (pending_separator) {
++				add_menu_separator (menu);
++				pending_separator = FALSE;
++			}
+ 			create_submenu (menu, GMENU_TREE_DIRECTORY (item), NULL);
+ 			break;
+ 
+ 		case GMENU_TREE_ITEM_ENTRY:
++			if (pending_separator) {
++				add_menu_separator (menu);
++				pending_separator = FALSE;
++			}
+ 			create_menuitem (menu, GMENU_TREE_ENTRY (item), NULL);
+ 			break;
+ 
+@@ -1709,10 +1718,18 @@
+ 			break;
+ 
+ 		case GMENU_TREE_ITEM_ALIAS:
++			if (pending_separator) {
++				add_menu_separator (menu);
++				pending_separator = FALSE;
++			}
+ 			create_menuitem_from_alias (menu, GMENU_TREE_ALIAS (item));
+ 			break;
+ 
+ 		case GMENU_TREE_ITEM_HEADER:
++			if (pending_separator) {
++				add_menu_separator (menu);
++				pending_separator = FALSE;
++			}
+ 			create_header (menu, GMENU_TREE_HEADER (item));
+ 			break;
+ 

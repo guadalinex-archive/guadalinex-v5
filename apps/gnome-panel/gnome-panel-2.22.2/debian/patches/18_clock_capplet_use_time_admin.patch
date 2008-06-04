@@ -1,0 +1,51 @@
+diff -ur gnome-panel-2.22.0/applets/clock/clock.c mine/applets/clock/clock.c
+--- gnome-panel-2.22.0/applets/clock/clock.c	2008-03-10 21:45:01.000000000 +0100
++++ mine/applets/clock/clock.c	2008-03-30 15:02:38.000000000 +0200
+@@ -1845,23 +1845,16 @@
+ }
+ 
+ static void
+-run_time_settings (GtkWidget *unused, ClockData *cd)
++show_time_settings (ClockData *cd)
+ {
++#ifdef USE_INTEGRATED_TIME_SETTINGS
+ 	ensure_time_settings_window_is_created (cd);
+ 	fill_time_settings_window (cd);
+ 
+ 	gtk_window_present (GTK_WINDOW (cd->set_time_window));
+ 
+         refresh_clock_timeout (cd);
+-}
+-
+-static void
+-config_date (BonoboUIComponent *uic,
+-             ClockData         *cd,
+-             const char        *verbname)
+-{
+-	run_time_settings (NULL, cd);
+-#if 0
++#else
+         /* FMQ: this was from the old clock; it's replaced with our PolicyKit stuff */
+ 	GtkWidget *dialog;
+ 	GdkScreen *screen;
+@@ -1894,6 +1887,20 @@
+ #endif
+ }
+ 
++static void
++run_time_settings (GtkWidget *unused, ClockData *cd)
++{
++        show_time_settings (cd);
++}
++
++static void
++config_date (BonoboUIComponent *uic,
++             ClockData         *cd,
++             const char        *verbname)
++{
++        show_time_settings (cd);
++}
++
+ /* current timestamp */
+ static const BonoboUIVerb clock_menu_verbs [] = {
+ 	BONOBO_UI_UNSAFE_VERB ("ClockPreferences", verb_display_properties_dialog),
