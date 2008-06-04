@@ -1,0 +1,6 @@
+[encoding: UTF-8]
+data/mount-systray.schemas.in
+data/mount-systray.desktop.in.in
+src/mount-systray.py
+src/MSSystray.py
+data/preferences.glade
