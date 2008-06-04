@@ -1,0 +1,42 @@
+#!/usr/bin/make -f
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/rules/simple-patchsys.mk
+include /usr/share/cdbs/1/class/gnome.mk
+include /usr/share/gnome-pkg-tools/1/rules/uploaders.mk
+include /usr/share/gnome-pkg-tools/1/rules/gnome-version.mk
+include /usr/share/gnome-pkg-tools/1/rules/clean-la.mk
+-include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
+
+LDFLAGS += -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
+
+DEB_CONFIGURE_EXTRA_FLAGS += --disable-scrollkeeper --with-in-process-applets=all --with-clock-time-utility="time-admin"
+ifneq ($(DEB_BUILD_GNU_SYSTEM),gnu)
+	DEB_CONFIGURE_EXTRA_FLAGS += --enable-eds
+endif
+
+# debug lib
+DEB_DH_STRIP_ARGS += --dbg-package=gnome-panel-dbg
+
+DEB_DH_MAKESHLIBS_ARGS_libpanel-applet2-0 += -V"libpanel-applet2-0 (>= 2.19.3)"
+
+binary-install/gnome-panel::
+	chmod a+x debian/gnome-panel/usr/lib/gnome-panel/*
+	cd po; intltool-update -p --verbose
+
+binary-install/gnome-panel-data::
+	chmod a+x debian/gnome-panel-data/etc/menu-methods/gnome-panel-data
+	find debian/gnome-panel-data/usr/share -type f -exec chmod -R a-x {} \;
+	cd debian/gnome-panel-data/usr/share/gconf && \
+		mkdir defaults && \
+		mv schemas/panel-default-setup.entries \
+		   defaults/05_panel-default-setup.entries
+	uudecode debian/application-default-icon.png.uue -o debian/application-default-icon.png
+	mkdir -p debian/gnome-panel-data/usr/share/icons
+	cp debian/application-default-icon.png debian/gnome-panel-data/usr/share/icons/
+
+binary-install/libpanel-applet2-doc::
+	find debian/libpanel-applet2-doc/usr/share/doc/libpanel-applet2-doc/ -name ".arch-ids" -depth -exec rm -rf {} \;
+
+clean::
+	-rm -f debian/application-default-icon.png
