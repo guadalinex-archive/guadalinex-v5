@@ -32,7 +32,6 @@ cdrecord
 compiz
 compizconfig-backend-gconf
 compiz-core
-compiz-fusion-plugins-extra
 compiz-fusion-plugins-main
 compiz-gnome
 compiz-plugins
@@ -74,9 +73,7 @@ gdm
 gedit
 gedit-plugin-tloleo
 genisoimage
-gimp
 gnochm
-gnome2-user-guide
 gnome-about
 gnome-accessibility-themes
 gnome-app-install
