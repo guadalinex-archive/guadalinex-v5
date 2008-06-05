@@ -326,7 +326,7 @@ msgstr "^Intentar Xubuntu sin cambios en su equipo"
 #. Boot menu item; a ^ prefix indicates a unique accelerator key.
 #. txt_menuitem_live_guada
 msgid "^Try Guadalinex without any change to your computer"
-msgstr "^Probar Guadalinex sin hacer cambios en su equipo"
+msgstr "^Demostración de Guadalinex"
 
 #. Installation mode.
 #. txt_menuitem_xforcevesa
