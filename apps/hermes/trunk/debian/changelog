@@ -1,3 +1,9 @@
+hermeshardware (0.4.8) hardy; urgency=low
+
+  * Added joystick product_id to usbjoystick actor
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Thu, 05 Jun 2008 14:56:11 +0100
+
 hermeshardware (0.4.7) hardy; urgency=low
 
   * Adapted docs to v5

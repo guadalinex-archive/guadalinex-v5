@@ -52,7 +52,7 @@ from gettext import gettext as _
 
 
 def is_valid(value):
-    valid_list = ['usb joystick', 'usb  joystick'] 
+    valid_list = ['usb joystick', 'usb  joystick', 'unknown (0x1009)'] 
     if (value.lower() in valid_list):
         return True
 
