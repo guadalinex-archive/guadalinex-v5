@@ -1,4 +1,4 @@
-gnome-panel (2.16.1-0ubuntu4guada1) edgy-updates; urgency=low
+gnome-panel (1:2.22.2-0ubuntu1guada1) edgy-updates; urgency=low
 
   * Guadalinex panel modifications
     - Added guadalinex help icons.
