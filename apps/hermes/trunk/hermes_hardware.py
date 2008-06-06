@@ -238,8 +238,11 @@ class DeviceListener:
                 priority_actors[kpriority] = klass
 
         for i in  (4, 3, 2, 1, 0):
-            if  priority_actors[i]:
-                actor_klass = priority_actors[i]
+	    if  priority_actors[i]: 
+		if priority_actors[i].__enabled__:
+                    actor_klass = priority_actors[i]
+		else: # Enable the actor again for check it in next polling
+		   priority_actors[i].__enabled__ = True	
                 break
 
         actor = None 

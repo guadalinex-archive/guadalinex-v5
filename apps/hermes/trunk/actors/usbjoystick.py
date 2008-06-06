@@ -50,10 +50,14 @@ from utils.pkginstaller import PkgInstaller
 from deviceactor import PkgDeviceActor
 from gettext import gettext as _
 
+def disable_mouse_actor():
+    from actors.usbmouse import Actor as MouseActor
+    MouseActor.__enabled__ = False
 
 def is_valid(value):
     valid_list = ['usb joystick', 'usb  joystick', 'unknown (0x1009)'] 
     if (value.lower() in valid_list):
+	disable_mouse_actor()
         return True
 
 class Actor(PkgDeviceActor):

@@ -45,6 +45,7 @@
 #Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 import os.path
+import dbus
 
 from deviceactor import DeviceActor
 from gettext import gettext as _
@@ -52,12 +53,13 @@ from gettext import gettext as _
 MOUSEICON = os.path.abspath('actors/img/mouse.png')
 
 def is_valid(value):
-	return 'mouse' in value.lower()
+	return 'input' in value and 'input.mouse' in value 
 
 class Actor (DeviceActor):
 
-    __required__ = {'info.bus':'usb_device', 
-		    'info.product':is_valid}
+    __required__ = {'linux.subsystem':'input', 
+		    'info.capabilities': is_valid
+	}
 
     def on_added(self):
         self.msg_render.show(_("Mouse"), _("USB mouse configured"),

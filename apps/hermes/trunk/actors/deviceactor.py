@@ -118,6 +118,7 @@ class DeviceActor(object):
     """
     __required__ = {} 
     __priority__ = 3 # Values: 1, 2, 3, 4, 5. The higher value, the more priority.
+    __enabled__ = True # This can be used by an actor to disable another actor.
 
     def __init__(self, message_render, device_properties):
         self.message_render = self.msg_render = message_render
@@ -138,17 +139,14 @@ class DeviceActor(object):
 
             self.on_modified(key)
 
-
     def on_added(self):
         pass
-
 
     def on_removed(self):
         pass
     
     def on_modified(self, prop_name):
         pass
-
 
 
 class PkgDeviceActor(DeviceActor):

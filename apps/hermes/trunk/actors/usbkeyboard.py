@@ -52,12 +52,12 @@ KEYBICONON = os.path.abspath('actors/img/keyboard.png')
 KEYBICONOFF = os.path.abspath('actors/img/keyboardoff.png')
 
 def is_valid(value):
-	return 'keyboard' in value.lower()
+	return 'input' in value and 'input.keyboard' in value
 
 class Actor (DeviceActor):
 
-    __required__ = {'info.bus':'usb_device', 
-		    'info.product':is_valid}
+    __required__ = {'linux.subsystem':'input', 
+		    'info.capabilities':is_valid}
 
     def on_added(self):
         self.msg_render.show(_("Keyboard"), _("USB keyboard configured"),
