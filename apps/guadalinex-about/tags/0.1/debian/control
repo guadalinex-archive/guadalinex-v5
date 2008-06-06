@@ -1,0 +1,12 @@
+Source: guadalinex-about
+Section: base
+Priority: optional
+Maintainer: Junta de Andalucía <packmaster@juntadeandalucia.es>
+Build-Depends: debhelper (>> 3.0.0)
+Standards-Version: 3.7.2
+
+Package: guadalinex-about
+Architecture: i386
+Depends: 
+Description: About Guadalinex 
+ Some information about Guadalinex distribution

@@ -1,0 +1,49 @@
+#!/usr/bin/make -f
+
+build:
+
+clean:
+	dh_testdir
+	dh_testroot
+	dh_clean
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+
+	dh_install  gcs/newfiles_skel/usr/share/applications/guadalinex-about.desktop usr/share/applications
+	dh_install  gcs/newfiles_skel/usr/share/guadalinex-about/index.html usr/share/guadalinex-about
+	dh_install  gcs/newfiles_skel/usr/share/guadalinex-about/guadalinex-about.png usr/share/guadalinex-about
+	dh_install  gcs/newfiles_skel/usr/share/guadalinex-about/css/estilos.css usr/share/guadalinex-about/css
+	dh_install  gcs/newfiles_skel/usr/share/guadalinex-about/img/Thumbs.db usr/share/guadalinex-about/img
+	dh_install  gcs/newfiles_skel/usr/share/guadalinex-about/img/logo.jpg usr/share/guadalinex-about/img
+	dh_install  gcs/newfiles_skel/usr/share/guadalinex-about/img/pie.gif usr/share/guadalinex-about/img
+	dh_install  gcs/newfiles_skel/usr/share/guadalinex-about/img/backgroundp.gif usr/share/guadalinex-about/img
+	dh_install  gcs/newfiles_skel/usr/share/guadalinex-about/img/background.gif usr/share/guadalinex-about/img
+	dh_install  gcs/newfiles_skel/usr/share/guadalinex-about/img/cice.gif usr/share/guadalinex-about/img
+
+binary-indep:  build install
+
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installdebconf
+	dh_installdocs
+	dh_installcron
+	dh_installchangelogs
+	dh_installdirs
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_builddeb
+
+binary: binary-indep binary-arch
+
+.PHONY: build clean install binary binary-indep binary-arch
+
+

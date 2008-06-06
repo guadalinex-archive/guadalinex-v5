@@ -1,0 +1,19 @@
+guadalinex-about (0.3) edgy; urgency=low
+
+  * Fixed some gramatical problems
+
+ --  <rmartin@emergya.es>  Wed, 28 Mar 2007 10:42:50 +0200
+
+guadalinex-about (0.2) edgy; urgency=low
+
+  * changing to more standard default fonts in css 
+
+ --  <rmartin@emergya.es>  Wed, 14 Mar 2007 15:14:23 +0100
+
+guadalinex-about (0.1) edgy; urgency=low
+
+  * Initial package
+
+ -- Junta de Andalucía <packmaster@juntadeandalucia.es>  Tue, 27 Feb 2007 01:53:03 -0000
+
+
