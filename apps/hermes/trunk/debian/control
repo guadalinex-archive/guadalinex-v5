@@ -2,12 +2,12 @@ Source: hermeshardware
 Section: utils
 Priority: optional
 Maintainer: J. Félix Ontañón <fontanon@emergya.es>
-Build-Depends: debhelper (>= 4.0.0), python-gnome2-dev, python-gtk2-dev, python-all-dev, gnome-common
+Build-Depends: debhelper (>= 4.0.0), python-gnome2-dev, python-gtk2-dev, python-all-dev, gnome-common, xsltproc
 Standards-Version: 3.7.3
 
 Package: hermeshardware
 Architecture: any
-Depends: hal, dbus, python-dbus, python2.5, notification-daemon, libsane, grepmap, python-syck, hermeshardware-descriptors, hermeshardware-actors, python-gnome2-extras, python-glade2, xsltproc ${shlibs:Depends}, ${misc:Depends}
+Depends: hal, dbus, python-dbus, python2.5, notification-daemon, libsane, grepmap, python-syck, hermeshardware-descriptors, hermeshardware-actors, python-gnome2-extras, python-glade2, xsltproc, python-apt ${shlibs:Depends}, ${misc:Depends}
 Description: Detección y soporte de dispositivos
  Engloba tanto las tareas de detección y soporte de dispositivos, 
  como aquellas que tienen que ver con la  configuración de los mismos 
