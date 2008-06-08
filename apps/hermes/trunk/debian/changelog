@@ -3,9 +3,9 @@ hermeshardware (0.4.8) hardy; urgency=low
   * New hermes feature: an actor can disable other actors on polling phase
   * Added joystick product_id to usbjoystick actor
   * Improved usbjoystick, usbmouse, usbkeyboard actors
-  * Added python-apt as dependence and xsltproc as build-dependence
+  * Added python-apt, synaptic as dependences and xsltproc as build-dependence
 
- -- J. Félix Ontañón <fontanon@emergya.es>  Sun, 08 Jun 2008 01:58:40 +0100
+ -- J. Félix Ontañón <fontanon@emergya.es>  Sun, 08 Jun 2008 02:20:40 +0100
 
 hermeshardware (0.4.7) hardy; urgency=low
 
