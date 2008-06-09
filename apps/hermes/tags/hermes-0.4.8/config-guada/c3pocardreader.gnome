@@ -1,0 +1,4 @@
+packages:
+    - pcscd 
+    - pcsc-tools
+    - libccid
