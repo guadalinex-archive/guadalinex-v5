@@ -9,7 +9,7 @@ diff -Nur -x '*.orig' -x '*~' gnome-panel-2.21.91/gnome-panel/panel-menu-items.c
  	char      *uri;
  	GFile     *file;
  
-@@ -1124,9 +1125,29 @@
+@@ -1124,9 +1125,25 @@
  	if (add_separator)
  		add_menu_separator (menu);
  
@@ -32,10 +32,6 @@ diff -Nur -x '*.orig' -x '*~' gnome-panel-2.21.91/gnome-panel/panel-menu-items.c
 +	if (g_file_test (DATADIR"/omf/about-edubuntu/about-edubuntu-C.omf",
 +			 G_FILE_TEST_IS_REGULAR))
 +	  panel_menu_items_append_from_desktop (menu, "edubuntu-about.desktop", NULL);
-+
-+	if (g_file_test (DATADIR"/omf/about-guadalinex/about-guadalinex-es.omf",
-+			 G_FILE_TEST_IS_REGULAR))
-+	  panel_menu_items_append_from_desktop (menu, "guadalinex-about.desktop", NULL);
 +
  	if (parent->priv->append_lock_logout)
  		panel_menu_items_append_lock_logout (menu);

@@ -1,0 +1,13 @@
+--- gnome-panel/panel-menu-items.c	2008-06-09 17:10:21.000000000 +0200
++++ gnome-panel/panel-menu-items.c.new	2008-06-09 17:10:45.000000000 +0200
+@@ -1127,8 +1127,8 @@
+ 
+ 	g_list_free (children);
+ 
+-	if (add_separator)
+-		add_menu_separator (menu);
++//	if (add_separator)
++//		add_menu_separator (menu);
+ 
+ 	panel_menu_items_append_from_desktop (menu, "yelp.desktop", _("Help and Support"));
+ 
