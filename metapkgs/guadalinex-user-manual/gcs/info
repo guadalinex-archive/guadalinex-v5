@@ -1,0 +1,27 @@
+# YAML 1.1
+# Fichero de configuración de paquetes de personalización de Guadalinex v4
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: guadalinex-user-manual
+
+# Autor 
+author: David Teyssiere Rubio <dteyssiere@emergya.es>
+
+# Priority
+priority: optional
+
+# Section
+section: help
+
+# Descripción corta
+shortdesc: "Guía de usuario de Guadalinex v4"
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "Esta guía hace un repaso y una breve introducción a Guadalinex,\n el sistema operativo de la Junta de Andalucía."
+
+# Versión del paquete
+version: 0.1
+
+# Cambios en esta versión
+changes:
+    - Primera versión del paquete.
