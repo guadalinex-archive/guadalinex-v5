@@ -9,5 +9,5 @@ Exec=hermesdruid
 Icon=/usr/share/hermes/img/logo.svg
 Terminal=false
 Type=Application
-Categories=GNOME;Application;System;Settings;
+Categories=GNOME;Application;System;Settings;Help;
 StartupNotify=true
