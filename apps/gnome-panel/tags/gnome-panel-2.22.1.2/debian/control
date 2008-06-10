@@ -1,0 +1,129 @@
+Source: gnome-panel
+Section: gnome
+Priority: optional
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+XSBC-Original-Maintainer: Guilherme de S. Pastore <gpastore@debian.org>
+Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Standards-Version: 3.7.2
+Build-Depends: cdbs (>= 0.4.41),
+               debhelper (>= 5),
+               intltool (>= 0.35.0),
+               gnome-pkg-tools (>= 0.10),
+               dpkg-dev (>= 1.13.19),
+               scrollkeeper (>= 0.3.14-9.1),
+               libxmu-dev,
+               libxres-dev,
+               gnome-doc-utils,
+               libxau-dev,
+               libglib2.0-dev (>= 2.15.6),
+               libgtk2.0-dev (>= 2.11.3),
+               libgnomeui-dev (>= 2.16.0-2),
+               libgnome-desktop-dev (>= 2.11.1),
+               libglade2-dev (>= 1:2.5.0),
+               libgnome2-dev (>= 2.13.0),
+               libbonoboui2-dev (>= 2.1.1),
+               liborbit2-dev (>= 1:2.12.1-1),
+               libwnck-dev (>= 2.19.5),
+               libgconf2-dev (>= 2.6.1),
+               libecal1.2-dev (>= 1.6.0) [!hurd-i386],
+               libedataserverui1.2-dev (>= 1.2.0) [!hurd-i386],
+               libcairo2-dev (>= 1.0.0),
+               libdbus-glib-1-dev (>= 0.60),
+               gtk-doc-tools,
+               libgnome-menu-dev (>= 2.16.1-1),
+               libpango1.0-dev (>= 1.15.4),
+               libedataserver1.2-dev (>= 1.2.0),
+               liblpint-bonobo-dev, 
+               liblaunchpad-integration-dev,
+               sharutils,
+               policykit,
+               libpolkit-gnome-dev (>= 0.7),
+               libgweather-dev (>= 2.22.1),
+               network-manager-dev,
+               librsvg2-dev,
+               libdbus-glib-1-dev (>= 0.71)
+
+Package: gnome-panel
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         gnome-panel-data (>= ${gnome:Version}),
+         gnome-panel-data (<< ${gnome:NextVersion}),
+         gnome-desktop-data (>= 2.10.0-1),
+         gnome-control-center (>= 1:2.8.2-3),
+         gnome-menus (>= 2.11.1-1),
+         gnome-about (>= 2.10.0-1)
+Recommends: gnome-applets (>= 2.12.1-1),
+            gnome-session,
+            evolution-data-server,
+            menu-xdg (>= 0.2),
+            alacarte
+Suggests: yelp,
+          fortunes-mod,
+          gnome2-user-guide,
+          gnome-terminal | x-terminal-emulator,
+          gnome-system-tools,
+          nautilus
+Description: launcher and docking facility for GNOME
+ The GNOME Panel is an essential part of the GNOME Desktop, providing
+ toolbar-like “panels” which can be attached to the sides of your desktop.
+ They are used to launch applications and embed a number of other
+ functions, such as quick launch icons, the clock, the notification area,
+ volume controls and the battery charge indicator, and utilities ranging
+ from weather forecast to system monitoring.
+
+Package: libpanel-applet2-0
+Section: libs
+Architecture: any
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Description: library for GNOME Panel applets
+ This library is used by GNOME Panel applets.
+
+Package: gnome-panel-dbg
+Section: libdevel
+Priority: extra
+Architecture: any
+Depends: ${misc:Depends},
+         gnome-panel (= ${binary:Version}),
+         libpanel-applet2-0 (= ${binary:Version})
+Description: GNOME Panel and library for panel applets - debugging symbols
+ This package contains debugging symbols for gnome-panel and the 
+ libpanel-applet library. It is provided to help debugging problem in 
+ the panel itself or in the library. The debugging symbols are installed 
+ in /usr/lib/debug and will automatically be used by gdb.
+
+Package: libpanel-applet2-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends},
+         libpanel-applet2-0 (= ${binary:Version}),
+         liborbit2-dev (>= 1:2.12.4-1),
+         libglib2.0-dev (>= 2.15.6),
+         libgtk2.0-dev (>= 2.11.3),
+         libgnomeui-dev (>= 2.5.4),
+         libglade2-dev (>= 1:2.5.0),
+         libbonoboui2-dev (>= 2.1.1)
+Description: library for GNOME Panel applets - development files
+ This packages provides the include files and static library for the GNOME
+ Panel applet library functions.
+
+Package: libpanel-applet2-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}
+Suggests: doc-base
+Description: library for GNOME Panel applets - documentation files
+ This packages provides the documentation files for the GNOME Panel applet
+ library functions.
+
+Package: gnome-panel-data
+Section: gnome
+Architecture: all
+Depends: ${misc:Depends},
+         scrollkeeper,
+         gconf2 (>= 2.14.0-2)
+Recommends: gnome-panel
+Description: common files for the GNOME Panel
+ This package includes some files that are needed by the GNOME Panel
+ (Pixmaps, .desktop files and internationalization files).

@@ -1,0 +1,13 @@
+debian/tmp/etc/gconf/ usr/share/
+debian/tmp/etc/
+debian/tmp/usr/lib/bonobo/ usr/lib/
+debian/tmp/usr/share/dbus-1
+debian/tmp/usr/share/gnome-panelrc usr/share/gnome/
+debian/tmp/usr/share/gnome-panel
+debian/tmp/usr/share/gnome
+debian/tmp/usr/share/PolicyKit
+debian/tmp/usr/share/applications
+debian/tmp/usr/share/gnome-2.0/ debian/tmp/usr/share/locale/ debian/tmp/usr/share/omf/ debian/tmp/usr/share/icons/ debian/tmp/usr/share/gnome-panel usr/share/
+debian/applications.template etc/gnome-vfs-2.0/vfolders/
+debian/gnome-vfolder-user etc/menu-methods/
+debian/ubuntu-about.desktop usr/share/applications/

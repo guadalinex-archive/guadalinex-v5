@@ -1,0 +1,2 @@
+    + modified gnomezilla patch to fix opening evolution at the selected
+      date (also partially fix opening tasks) (Closes: #272777).
