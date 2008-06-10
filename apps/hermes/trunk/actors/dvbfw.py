@@ -115,7 +115,7 @@ class Actor(DvbActor):
     def on_added(self):
 
         def open_browser():
-            webbrowser.open('http://www.guadalinex.org/distro/V4/hermes/tdt')
+            webbrowser.open('http://www.guadalinex.org/distro/V5/hermes/tdt')
 
         self.msg_render.show_warning('TDT', 
                 _('TDT device without firmware!!'),
