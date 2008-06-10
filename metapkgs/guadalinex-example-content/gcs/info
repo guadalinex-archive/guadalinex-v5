@@ -1,0 +1,27 @@
+# YAML 1.1
+# Fichero de configuración de paquetes de personalización de Guadalinex v4
+
+# Nombre del paquete (minúsculas-separado-con-guiones)
+name: guadalinex-example-content
+
+# Autor 
+author: Gabriel Rodriguez Alberich <grodriguez@yaco.es>
+
+# Priority
+priority: optional
+
+# Section
+section: base
+
+# Descripción corta
+shortdesc: "Example content for Guadalinex"
+
+# Descipción larga, las lineas han de estar separadas por "\n "
+longdesc: "This package contains some multimedia example files."
+
+# Versión del paquete
+version: 0.1
+
+# Cambios en esta versión
+changes:
+    - Initial package
