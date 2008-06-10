@@ -5,5 +5,5 @@ Exec=/usr/bin/firefox /usr/share/guadalinex-about/index.html
 StartupNotify=true
 Terminal=false
 Type=Application
-Categories=Help;
+Categories=GNOME;GTK;Core;Help;
 Icon=/usr/share/guadalinex-about/guadalinex-about.png
