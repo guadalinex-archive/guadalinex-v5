@@ -8,5 +8,5 @@ Exec=firefox %u /usr/share/guadalinex-user-manual/manual.html
 Terminal=false
 Type=Application
 Icon=ayuda
-Categories=Help;
+Categories=GNOME;GTK;Core;Help;
 GenericName[es_ES]=
