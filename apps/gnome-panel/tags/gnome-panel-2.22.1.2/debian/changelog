@@ -1,3 +1,11 @@
+gnome-panel (1:2.22.1.2-0ubuntu3guada1) hardy; urgency=low
+
+  * debian/patches/01_layout.patch:
+    - change yelp.desktop by yelp.directory for guadalinex help submenu
+  * debian/patches/90_guadalinex-help-separator.patch:
+    - added patch for delete unneccesary separator
+
+ -- David Teyssiere Rubio <dteyssiere@emergya.es>  Tue, 10 Jun 2008 16:49:04 +0200
 gnome-panel (1:2.22.1.2-0ubuntu3) hardy; urgency=low
 
   * debian/patches/91_from_svn_fix_type_use.patch:
