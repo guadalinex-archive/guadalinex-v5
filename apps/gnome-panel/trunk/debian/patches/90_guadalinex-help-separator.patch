@@ -9,5 +9,5 @@
 +//	if (add_separator)
 +//		add_menu_separator (menu);
  
- 	panel_menu_items_append_from_desktop (menu, "yelp.desktop", _("Help and Support"));
+ 	panel_menu_items_append_from_desktop (menu, "yelp.directory", _("Help and Support"));
  
