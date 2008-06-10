@@ -14,7 +14,7 @@ diff -Nur -x '*.orig' -x '*~' gnome-panel-2.21.91/gnome-panel/panel-menu-items.c
  		add_menu_separator (menu);
  
 -	panel_menu_items_append_from_desktop (menu, "yelp.desktop", NULL);
-+	panel_menu_items_append_from_desktop (menu, "yelp.desktop", _("Help and Support"));
++	panel_menu_items_append_from_desktop (menu, "yelp.directory", _("Help and Support"));
 +
 +	if (g_file_test (DATADIR"/applications/apport-gtk.desktop",
 +			 G_FILE_TEST_IS_REGULAR)) {
