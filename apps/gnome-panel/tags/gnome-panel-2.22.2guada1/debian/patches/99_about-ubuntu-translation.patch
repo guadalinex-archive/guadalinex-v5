@@ -1,8 +1,0 @@
-diff -Nur gnome-panel-2.14.0/po/POTFILES.in gnome-panel-2.14.0.new/po/POTFILES.in
---- gnome-panel-2.14.0/po/POTFILES.in	2006-01-16 18:42:56.000000000 +0100
-+++ gnome-panel-2.14.0.new/po/POTFILES.in	2006-03-14 12:44:27.000000000 +0100
-@@ -73,3 +73,4 @@
- libpanel-applet/panel-applet.c
- libpanel-applet/panel-test-applets.c
- libpanel-applet/panel-test-applets.glade
-+debian/ubuntu-about.desktop.in
