@@ -1,0 +1,24 @@
+diff -Nur gnome-panel-2.11.1.orig/gnome-panel/menu.c gnome-panel-2.11.1/gnome-panel/menu.c
+--- gnome-panel-2.11.1.orig/gnome-panel/menu.c	2005-04-27 11:56:04.000000000 +0200
++++ gnome-panel-2.11.1/gnome-panel/menu.c	2005-05-19 19:59:02.220319600 +0200
+@@ -1360,7 +1360,7 @@
+ 					NULL,
+ 					alias_directory ? gmenu_tree_directory_get_icon (alias_directory) :
+ 							  gmenu_tree_entry_get_icon (entry),
+-					NULL);
++					PANEL_STOCK_DEFAULT_ICON);
+ 
+ 	setup_menuitem (menuitem,
+ 			panel_menu_icon_get_size (),
+diff -Nur gnome-panel-2.11.1.orig/gnome-panel/panel-stock-icons.h gnome-panel-2.11.1/gnome-panel/panel-stock-icons.h
+--- gnome-panel-2.11.1.orig/gnome-panel/panel-stock-icons.h	2005-02-02 08:49:08.000000000 +0100
++++ gnome-panel-2.11.1/gnome-panel/panel-stock-icons.h	2005-05-19 19:56:16.416525608 +0200
+@@ -43,6 +43,8 @@
+ #define PANEL_STOCK_EXECUTE             "panel-execute"
+ #define PANEL_STOCK_CLEAR               "panel-clear"
+ #define PANEL_STOCK_DONT_DELETE         "panel-dont-delete"
++/* FIXME: put a more representative icon here */
++#define PANEL_STOCK_DEFAULT_ICON		"application-default-icon"
+ 
+ void        panel_init_stock_icons_and_items (void);
+ GtkIconSize panel_menu_icon_get_size         (void);

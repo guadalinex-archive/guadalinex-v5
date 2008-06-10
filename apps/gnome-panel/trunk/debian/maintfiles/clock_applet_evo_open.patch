@@ -1,0 +1,200 @@
+diff -u -r1.10 calendar-client.c
+--- applets/clock/calendar-client.c	31 Aug 2004 08:18:34 -0000	1.10
++++ applets/clock/calendar-client.c	27 Dec 2004 09:07:15 -0000
+@@ -529,18 +529,6 @@
+   return g_strdup (icalproperty_get_description (prop));
+ }
+ 
+-static char *
+-get_ical_url (icalcomponent *ical)
+-{
+-  icalproperty *prop;
+-
+-  prop = icalcomponent_get_first_property (ical, ICAL_URL_PROPERTY);
+-  if (!prop)
+-    return NULL;
+-
+-  return g_strdup (icalproperty_get_url (prop));
+-}
+-
+ static inline GTime
+ get_ical_start_time (icalcomponent *ical,
+                      icaltimezone  *default_zone)
+@@ -832,7 +820,6 @@
+     null_safe_strcmp (a->summary,      b->summary)      == 0 &&
+     null_safe_strcmp (a->description,  b->description)  == 0 &&
+     null_safe_strcmp (a->color_string, b->color_string) == 0 &&
+-    null_safe_strcmp (a->url,          b->url)          == 0 &&
+     a->start_time       == b->start_time                   &&
+     a->due_time         == b->due_time                     &&
+     a->percent_complete == b->percent_complete             &&
+@@ -850,7 +837,6 @@
+   task_copy->summary          = g_strdup (task->summary);
+   task_copy->description      = g_strdup (task->description);
+   task_copy->color_string     = g_strdup (task->color_string);
+-  task_copy->url              = g_strdup (task->url);
+   task_copy->start_time       = task->start_time;
+   task_copy->due_time         = task->due_time;
+   task_copy->percent_complete = task->percent_complete;
+@@ -872,9 +858,6 @@
+   g_free (task->color_string);
+   task->color_string = NULL;
+ 
+-  g_free (task->url);
+-  task->url = NULL;
+-
+   task->percent_complete = 0;
+ }
+ 
+@@ -888,7 +871,6 @@
+   task->summary          = get_ical_summary (ical);
+   task->description      = get_ical_description (ical);
+   task->color_string     = get_source_color (source->source);
+-  task->url              = get_ical_url (ical);
+   task->start_time       = get_ical_start_time (ical, default_zone);
+   task->due_time         = get_ical_due_time (ical, default_zone);
+   task->percent_complete = get_ical_percent_complete (ical);
+@@ -1980,25 +1962,3 @@
+   e_cal_modify_object (esource, ical, CALOBJ_MOD_ALL, NULL);
+ }
+ 
+-gboolean
+-calendar_client_launch_editor (CalendarClient     *client,
+-			       CalendarEventType   event_type,
+-			       GdkScreen          *screen,
+-			       GError            **error)
+-{
+-  char     *command_line;
+-  gboolean  retval;
+-
+-  g_return_val_if_fail (CALENDAR_IS_CLIENT (client), FALSE);
+-  g_return_val_if_fail (event_type == CALENDAR_EVENT_APPOINTMENT ||
+-			event_type == CALENDAR_EVENT_TASK, FALSE);
+-
+-  command_line = g_strdup_printf ("evolution -c %s",
+-				  event_type == CALENDAR_EVENT_APPOINTMENT ? "calendar" : "tasks");
+-
+-  retval = gdk_spawn_command_line_on_screen (screen, command_line, error);
+-
+-  g_free (command_line);
+-
+-  return retval;
+-}
+diff -u -r1.4 calendar-client.h
+--- applets/clock/calendar-client.h	19 Jul 2004 19:11:14 -0000	1.4
++++ applets/clock/calendar-client.h	27 Dec 2004 09:07:15 -0000
+@@ -27,7 +27,6 @@
+ #define __CALENDAR_CLIENT_H__
+ 
+ #include <glib-object.h>
+-#include <gdk/gdk.h>
+ 
+ G_BEGIN_DECLS
+ 
+@@ -90,7 +89,6 @@
+   char  *summary;
+   char  *description;
+   char  *color_string;
+-  char  *url;
+   GTime  start_time;
+   GTime  due_time;
+   guint  percent_complete;
+@@ -139,10 +137,6 @@
+ 							  char               *task_uid,
+ 							  gboolean            task_completed,
+ 							  guint               percent_complete);
+-gboolean        calendar_client_launch_editor            (CalendarClient     *client,
+-							  CalendarEventType   event_type,
+-							  GdkScreen          *screen,
+-							  GError            **error);
+ 
+ void calendar_event_free (CalendarEvent *event);
+ 
+--- applets/clock/clock.c	2005-01-25 01:37:50.000000000 +0100
++++ applets/clock/clock.c.mod	2005-01-25 01:42:25.000000000 +0100
+@@ -545,7 +545,6 @@
+         TASK_COLUMN_COMPLETED_TIME,
+         TASK_COLUMN_OVERDUE_ATTR,
+         TASK_COLUMN_COLOR,
+-        TASK_COLUMN_URL,
+         N_TASK_COLUMNS
+ };
+ 
+@@ -625,7 +624,6 @@
+                                     TASK_COLUMN_COMPLETED,             task->percent_complete == 100,
+                                     TASK_COLUMN_COMPLETED_TIME,        task->completed_time,
+                                     TASK_COLUMN_COLOR,                 task->color_string,
+-                                    TASK_COLUMN_URL,                   task->url,
+                                     -1);
+ 
+                 g_free (percent_complete_text);
+@@ -808,17 +806,21 @@
+                    GtkTreeViewColumn *column,
+                    ClockData         *cd)
+ {
+-        GError     *err = NULL;
+         GtkTreeIter iter;
+-        char       *uri;
+-
++ 	gchar       *command_line;
++ 	gchar       *uid;
++  
+         gtk_tree_model_get_iter (GTK_TREE_MODEL (cd->tasks_model), &iter, path);
+         gtk_tree_model_get (GTK_TREE_MODEL (cd->tasks_model), &iter,
+-                            TASK_COLUMN_URL, &uri, -1);
+-
+-        if (uri)
+-                gnome_url_show (uri, &err);
+-
++                             TASK_COLUMN_UID, &uid, -1);
++  
++ 	command_line = g_strdup_printf ("evolution task:%s", uid);
++ 
++ 	gdk_spawn_command_line_on_screen (gtk_widget_get_screen (cd->calendar), command_line, NULL);
++ 
++ 	g_free (command_line);
++ 	g_free (uid);
++  
+         return TRUE;
+ }
+ 
+@@ -909,7 +911,6 @@
+                         G_TYPE_LONG,           /* completed time          */
+                         PANGO_TYPE_ATTR_LIST,  /* summary text attributes */
+                         G_TYPE_STRING,         /* color                   */
+-                        G_TYPE_STRING          /* url                     */
+                 };
+ 
+                 cd->tasks_model = gtk_list_store_newv (N_TASK_COLUMNS, column_types);
+@@ -1137,14 +1138,23 @@
+ 
+ static void
+ calendar_day_activated (ClockData *cd)
+-{
+-        /* FIXME: should be able to launch the editor for
+-         *        the specific day
+-         */
+-        calendar_client_launch_editor (cd->client,
+-                                       CALENDAR_EVENT_APPOINTMENT,
+-                                       gtk_widget_get_screen (cd->calendar),
+-                                       NULL);
++{  
++   guint day; 
++   guint year;
++   guint month;
++   
++   GDate *date;
++   gchar command_line[40];
++      
++   gtk_calendar_get_date (GTK_CALENDAR(cd->calendar), &year, &month, &day);
++   date = g_date_new ();
++   g_date_set_dmy (date, day, month + 1, year);
++
++   g_date_strftime (command_line, sizeof (command_line), "evolution -c calendar date:%x", date);
++   gdk_spawn_command_line_on_screen (gtk_widget_get_screen (cd->calendar), command_line, NULL);
++   g_date_free (date);
++   
++   return;
+ }
+ 
+ static void

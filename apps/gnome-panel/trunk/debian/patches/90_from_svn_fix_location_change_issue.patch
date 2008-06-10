@@ -1,0 +1,109 @@
+--- trunk/applets/clock/clock-location.h	2008/04/10 13:05:02	11046
++++ trunk/applets/clock/clock-location.h	2008/04/10 16:25:30	11047
+@@ -38,6 +38,13 @@
+ 				   const gchar *code,
+ 				   WeatherPrefs *prefs);
+ 
++ClockLocation *clock_location_find_and_ref (GList       *locations,
++                                            const gchar *name,
++                                            const gchar *timezone,
++                                            gfloat       latitude,
++                                            gfloat       longitude,
++                                            const gchar *code);
++
+ gchar *clock_location_get_tzname (ClockLocation *loc);
+ 
+ const gchar *clock_location_get_name (ClockLocation *loc);
+--- trunk/applets/clock/clock-location.c	2008/04/10 13:05:02	11046
++++ trunk/applets/clock/clock-location.c	2008/04/10 16:25:30	11047
+@@ -67,6 +67,34 @@
+ #define PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), CLOCK_LOCATION_TYPE, ClockLocationPrivate))
+ 
+ ClockLocation *
++clock_location_find_and_ref (GList       *locations,
++                             const gchar *name,
++                             const gchar *timezone,
++                             gfloat       latitude,
++                             gfloat       longitude,
++                             const gchar *code)
++{
++        GList *l;
++        ClockLocationPrivate *priv;
++
++        for (l = locations; l != NULL; l = l->next) {
++                priv = PRIVATE (l->data);
++
++                if (priv->latitude == latitude &&
++                    priv->longitude == longitude &&
++                    g_strcmp0 (priv->weather_code, code) == 0 &&
++                    g_strcmp0 (priv->timezone, timezone) == 0 &&
++                    g_strcmp0 (priv->name, name) == 0)
++                        break;
++        }
++
++        if (l != NULL)
++                return g_object_ref (CLOCK_LOCATION (l->data));
++        else
++                return NULL;
++}
++
++ClockLocation *
+ clock_location_new (const gchar *name, const gchar *timezone,
+ 		    gfloat latitude, gfloat longitude,
+ 		    const gchar *code, WeatherPrefs *prefs)
+@@ -467,6 +495,12 @@
+         gchar *filename;
+ 	MakeCurrentData *mcdata;
+ 
++        if (loc == current_location) {
++                if (destroy)
++                        destroy (data);
++                return;
++        }
++
+ 	if (clock_location_is_current_timezone (loc)) {
+ 		if (current_location)
+ 			g_object_remove_weak_pointer (G_OBJECT (current_location), 
+--- trunk/applets/clock/clock.c	2008/04/10 13:05:02	11046
++++ trunk/applets/clock/clock.c	2008/04/10 16:25:30	11047
+@@ -2208,7 +2208,11 @@
+                 return;
+         }
+ 
+-        loc = clock_location_new (name, timezone, latitude, longitude, code, &prefs);
++	loc = clock_location_find_and_ref (cd->locations, name, timezone,
++					   latitude, longitude, code);
++	if (!loc)
++		loc = clock_location_new (name, timezone,
++					  latitude, longitude, code, &prefs);
+ 
+ 	if (current && clock_location_is_current_timezone (loc))
+ 		clock_location_make_current (loc, NULL, NULL, NULL);
+@@ -3087,9 +3091,10 @@
+ 		clock_location_is_current (loc);
+ 
+                 cd->locations = g_list_append (cd->locations, loc);
+-                locations_changed (cd);
+         }
+ 
++	/* This will update everything related to locations to take into
++	 * account the new location (via the gconf notification) */
+         save_cities_store (cd);
+ 
+         edit_hide (edit_window, cd);
+@@ -3828,12 +3833,11 @@
+         ClockLocation *loc = NULL;
+ 
+         gtk_tree_model_get (model, iter, COL_CITY_LOC, &loc, -1);
+-
+-        gtk_list_store_remove (cd->cities_store, iter);
+ 	cd->locations = g_list_remove (cd->locations, loc);
+-	locations_changed (cd);
+ 	g_object_unref (loc);
+ 
++	/* This will update everything related to locations to take into
++	 * account the removed location (via the gconf notification) */
+         save_cities_store (cd);
+ }
+ 
+
