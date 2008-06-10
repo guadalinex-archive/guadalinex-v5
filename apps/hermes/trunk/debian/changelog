@@ -1,8 +1,18 @@
 hermeshardware (0.4.9) hardy; urgency=low
 
-  * Fixed DVB-T USB actor for link to V5 URL help webpage
+  * Fixed USB DVB-T actor for link to V5 URL help webpage
 
- -- J. Félix Ontañón <fontanon@emergya.es>  Mon, 10 Jun 2008 17:56:11 +0100
+ -- J. Félix Ontañón <fontanon@emergya.es>  Mon, 10 Jun 2008 18:02:11 +0100
+
+hermeshardware (0.4.8) hardy; urgency=low
+
+  * New hermes feature: an actor can disable other actors on polling phase
+  * Added joystick product_id to usbjoystick actor
+  * Improved usbjoystick, usbmouse, usbkeyboard actors
+  * Added python-apt, synaptic as dependences and xsltproc as build-dependence
+  * HermesDruid uses xdg-user-dirs to fetch the right Desktop user directory
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Mon, 09 Jun 2008 13:10:22 +0100
 
 hermeshardware (0.4.7) hardy; urgency=low
 
