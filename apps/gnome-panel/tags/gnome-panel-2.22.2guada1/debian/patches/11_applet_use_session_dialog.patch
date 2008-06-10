@@ -1,0 +1,150 @@
+diff -Nur -x '*.orig' -x '*~' gnome-panel-2.21.91/gnome-panel/panel-action-button.c gnome-panel-2.21.91.new/gnome-panel/panel-action-button.c
+--- gnome-panel-2.21.91/gnome-panel/panel-action-button.c	2008-02-11 22:15:47.000000000 +0100
++++ gnome-panel-2.21.91.new/gnome-panel/panel-action-button.c	2008-02-18 13:19:51.000000000 +0100
+@@ -165,10 +165,15 @@
+ 
+ 	if (not_prompt)
+ 		panel_session_request_logout ();
+-	else
+-		panel_logout_new (PANEL_LOGOUT_DIALOG_LOGOUT,
+-				  gtk_widget_get_screen (widget),
+-				  gtk_get_current_event_time ());
++	else {		
++		if (!gconf_client_get_bool (panel_gconf_get_client (), "/apps/panel/global/upstream_session", NULL))
++			panel_session_request_logout ();
++		else {
++			panel_logout_new (PANEL_LOGOUT_DIALOG_LOGOUT,
++					  gtk_widget_get_screen (widget),
++					  gtk_get_current_event_time ());
++		}
++	}
+ }
+ 
+ static void
+@@ -182,7 +187,8 @@
+ static gboolean
+ panel_action_shutdown_reboot_is_disabled (void)
+ {
+-	return (panel_lockdown_get_disable_log_out() ||
++	return (!gconf_client_get_bool (panel_gconf_get_client (), "/apps/panel/global/upstream_session", NULL) ||
++		panel_lockdown_get_disable_log_out() ||
+ 	(!gdm_supports_logout_action (GDM_LOGOUT_ACTION_SHUTDOWN) &&
+ 	 !gdm_supports_logout_action (GDM_LOGOUT_ACTION_REBOOT)));
+ }
+@@ -296,8 +302,8 @@
+ 		/* when changing one of those two strings, don't forget to
+ 		 * update the ones in panel-menu-items.c (look for
+ 		 * panel:showusername|1) */
+-		N_("Log Out..."),
+-		N_("Log out of this session to log in as a different user"),
++		N_("Quit..."),
++		N_("Log off, switch user, lock screen or power down the computer"),
+ 		"gospanel-20",
+ 		"ACTION:logout:NEW",
+ 		panel_action_logout, NULL, NULL,
+diff -Nur -x '*.orig' -x '*~' gnome-panel-2.21.91/gnome-panel/panel-global.schemas.in gnome-panel-2.21.91.new/gnome-panel/panel-global.schemas.in
+--- gnome-panel-2.21.91/gnome-panel/panel-global.schemas.in	2008-02-11 22:15:47.000000000 +0100
++++ gnome-panel-2.21.91.new/gnome-panel/panel-global.schemas.in	2008-02-18 13:19:22.000000000 +0100
+@@ -195,6 +195,19 @@
+       </schema>
+ 
+       <schema>
++        <key>/schemas/apps/panel/global/upstream_session</key>
++        <applyto>/apps/panel/global/upstream_session</applyto>
++        <owner>panel</owner>
++        <type>bool</type>
++        <default>false</default>
++        <locale name="C">
++          <short>Use the upstream session dialogs instead of the Ubuntu one</short>
++          <long>If true, the panel will use the upstream dialogs instead of the Ubuntu one. The panel must be restarted for this to take effect.
++          </long>
++        </locale>
++      </schema>
++
++      <schema>
+         <key>/schemas/apps/panel/global/locked_down</key>
+         <applyto>/apps/panel/global/locked_down</applyto>
+         <owner>panel</owner>
+diff -Nur -x '*.orig' -x '*~' gnome-panel-2.21.91/gnome-panel/panel-menu-items.c gnome-panel-2.21.91.new/gnome-panel/panel-menu-items.c
+--- gnome-panel-2.21.91/gnome-panel/panel-menu-items.c	2008-02-18 13:19:20.000000000 +0100
++++ gnome-panel-2.21.91.new/gnome-panel/panel-menu-items.c	2008-02-18 13:19:22.000000000 +0100
+@@ -1488,7 +1488,7 @@
+ 	}
+ 	g_list_free (children);
+ 
+-	if (panel_lock_screen_action_available ("lock")) {
++	if (gconf_client_get_bool (panel_gconf_get_client (), "/apps/panel/global/upstream_session", NULL) && panel_lock_screen_action_available ("lock")) {
+ 		item = panel_menu_items_create_action_item (PANEL_ACTION_LOCK);
+ 		if (item != NULL) {
+ 			if (!separator_inserted) {
+@@ -1504,30 +1504,38 @@
+ 	 * but "1" if "Log Out %s" doesn't make any sense in your
+ 	 * language (where %s is a username).
+ 	 */
++
+ 	translate = Q_("panel:showusername|1");
+-	if (strcmp (translate, "1") == 0) {
+-		const char *user_name;
+ 
+-		user_name = g_get_real_name ();
+-		if (!user_name || !user_name [0])
+-			user_name = g_get_user_name ();
+-
+-		/* keep those strings in sync with the ones in
+-		 * panel-action-button.c */
+-		/* Translators: this string is used ONLY if you translated
+-		 * "panel:showusername|1" to "1" */
+-		label = g_strdup_printf (_("Log Out %s..."),
+-					 g_get_user_name ());
+-		/* Translators: this string is used ONLY if you translated
+-		 * "panel:showusername|1" to "1" */
+-		tooltip = g_strdup_printf (_("Log out %s of this session to "
+-					     "log in as a different user"),
+-					   user_name);
+-	} else {
+-		label   = NULL;
++	if (gconf_client_get_bool (panel_gconf_get_client (), "/apps/panel/global/upstream_session", NULL)) {
++		if (strcmp (translate, "1") == 0) {
++			const char *user_name;
++			
++			user_name = g_get_real_name ();
++			if (!user_name || !user_name [0])
++				user_name = g_get_user_name ();
++			
++			/* keep those strings in sync with the ones in
++			 * panel-action-button.c */
++			/* Translators: this string is used ONLY if you translated
++			 * "panel:showusername|1" to "1" */
++			label = g_strdup_printf (_("Log Out %s..."),
++						 g_get_user_name ());
++			/* Translators: this string is used ONLY if you translated
++			 * "panel:showusername|1" to "1" */
++			tooltip = g_strdup_printf (_("Log out %s of this session to "
++						     "log in as a different user"),
++						   user_name);
++		} else {
++			label   = g_strdup_printf (_("Log Out..."));
++			tooltip = g_strdup_printf (_("Log out of this session to log in as a different user"));
++		}
++	}
++	else {
++		label = NULL;
+ 		tooltip = NULL;
+ 	}
+-
++	
+ 	item = panel_menu_items_create_action_item_full (PANEL_ACTION_LOGOUT,
+ 							 label, tooltip);
+ 	g_free (label);
+diff -Nur -x '*.orig' -x '*~' gnome-panel-2.21.91/gnome-panel/panel-session.c gnome-panel-2.21.91.new/gnome-panel/panel-session.c
+--- gnome-panel-2.21.91/gnome-panel/panel-session.c	2008-02-11 22:15:47.000000000 +0100
++++ gnome-panel-2.21.91.new/gnome-panel/panel-session.c	2008-02-18 13:19:22.000000000 +0100
+@@ -54,7 +54,7 @@
+ 				   GNOME_SAVE_GLOBAL,
+ 				   TRUE,
+ 				   GNOME_INTERACT_ANY,
+-				   TRUE, /* do not use the gnome-session gui */
++				   gconf_client_get_bool (panel_gconf_get_client (), "/apps/panel/global/upstream_session", NULL), /* use the gnome-session gui */
+ 				   TRUE);
+ 
+ 	recursion_guard--;

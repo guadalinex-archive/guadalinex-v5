@@ -1,0 +1,12 @@
+diff -Nur gnome-panel-2.19.3/applets/clock/calendar-client.c gnome-panel-2.19.3.new/applets/clock/calendar-client.c
+--- gnome-panel-2.19.3/applets/clock/calendar-client.c	2007-06-03 18:05:28.000000000 -0300
++++ gnome-panel-2.19.3.new/applets/clock/calendar-client.c	2007-06-04 12:32:48.000000000 -0300
+@@ -1963,6 +1963,8 @@
+                 {
+                   GTime day_time = appointment->start_time + day_offset * 86400;
+ 
++                  if (duration == day_offset * 86400)
++                    continue;
+                   if (day_time > month_end)
+                     break;
+                   if (day_time >= month_begin)

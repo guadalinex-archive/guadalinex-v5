@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<VFolderInfo>
+  <Folder>
+    <Name>Root</Name>
+    <Parent>applications-all-users:///</Parent>
+      <!-- Debian -->
+include-menu-defs
+  </Folder>
+</VFolderInfo>
