@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [ remove = "$1" ]; then
+    rm -f /etc/firefox-3.0/profile/bookmarks.html
+    dpkg-divert --package guadafox --remove --rename \
+             --divert /etc/firefox-3.0/profile/bookmarks.html.real /etc/firefox-3.0/profile/bookmarks.html
+fi
+
+
+
