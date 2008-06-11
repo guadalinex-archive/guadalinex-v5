@@ -1,3 +1,9 @@
+guadafox (0.1-1guada1) unstable; urgency=low
+
+  * Add ed2k setup
+
+ -- Alfredo Matas <amatas@emergya.es>  Wed, 11 Jun 2008 17:41:05 +0200
+
 guadafox (0.1-1) unstable; urgency=low
 
   * Initial release. Sync with ubufox version ubufox-0.5~rc1 
