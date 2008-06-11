@@ -1,0 +1,32 @@
+#! /usr/bin/perl -w
+use strict;
+
+my $iso3166xml = shift;
+
+# Get mapping of country names to country codes (i.e. reverse of
+# iso3166tab.py output).
+my %iso3166rev;
+open ISO3166TAB, '-|:utf8', './iso3166tab.py', "$iso3166xml"
+    or die "open iso3166tab.py $iso3166xml: $!";
+while (<ISO3166TAB>) {
+    /^([A-Z]+)\t(.*)$/ or next;
+    $iso3166rev{$2} = $1;
+}
+close ISO3166TAB;
+
+# Stringtable output is easier to handle.
+open SOURCESTRINGS, '-|:utf8', 'msgcat', '--stringtable-output', '-'
+    or die "open msgcat for source: $!";
+open TARGETSTRINGS, '|-:utf8', 'msgcat', '--stringtable-input', '-s', '-'
+    or die "open msgcat for target: $!";
+while (<SOURCESTRINGS>) {
+    if (/^"(.+?)" = "(.*?)";$/) {
+	if (exists $iso3166rev{$1}) {
+	    print TARGETSTRINGS qq{"$iso3166rev{$1}" = "$2";\n};
+	}
+    } else {
+	print TARGETSTRINGS;
+    }
+}
+close SOURCESTRINGS;
+close TARGETSTRINGS or die "close msgcat for target: $!";
