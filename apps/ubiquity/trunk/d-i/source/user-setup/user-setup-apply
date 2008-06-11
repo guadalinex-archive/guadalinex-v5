@@ -191,4 +191,44 @@ else
 	db_set passwd/user-password-again ''
 fi
 
+#Accesibility stuff 
+
+for x in $(cat /proc/cmdline); do
+    case $x in
+        # Lesser Visual Impairment
+        access=v1)
+        $log $chroot $ROOT /usr/bin/adp-admin.sh "$USER" Visual_Leve -f >/dev/null 2>&1 || true
+
+        $log $chroot $ROOT kderc_addtoprefixes /usr/share/kubuntu-default-settings/kde-profile/lesser-visual-impairment/ >/dev/null 2>&1 || true
+        ;;
+                        
+        # Moderate Visual Impairment
+        access=v2)
+        $log $chroot $ROOT /usr/bin/adp-admin.sh "$USER" Visual_Moderada -f >/dev/null 2>&1 || true
+
+	$log $chroot $ROOT kderc_addtoprefixes /usr/share/kubuntu-default-settings/kde-profile/lesser-visual-impairment/,/usr/share/kubuntu-default-settings/kde-profile/moderate-visual-impairment/ >/dev/null 2>&1 || true
+        ;;
+
+        # Blindness
+        access=v3)
+        $log $chroot $ROOT /usr/bin/adp-admin.sh "$USER" Visual_Total -f >/dev/null 2>&1 || true
+        ;;
+                        
+        # Minor Motor Difficulties
+        access=m1)
+        $log $chroot $ROOT /usr/bin/adp-admin.sh "$USER" Motriz -f >/dev/null 2>&1 || true
+	
+        $log $chroot $ROOT kderc_addtoprefixes /usr/share/kubuntu-default-settings/kde-profile/minor-motor-difficulties/ >/dev/null 2>&1 || true
+        ;;
+                        
+        # Motor Difficulties - pointing devices
+        access=m2)
+        # FIXME: We are applying the same to both "m1" & "m2"; we have to distinguish both cases
+        $log $chroot $ROOT /usr/bin/adp-admin.sh "$USER" Motriz -f >/dev/null 2>&1 || true
+
+        $log $chroot $ROOT kderc_addtoprefixes /usr/share/kubuntu-default-settings/kde-profile/minor-motor-difficulties/,/usr/share/kubuntu-default-settings/kde-profile/motor-difficulties-pointing-devices/ >/dev/null 2>&1 || true
+        ;;
+    esac
+done
+
 exit 0
