@@ -1,0 +1,143 @@
+2008-06-02  Álvaro Peña  <apg@openshine.com>
+
+	* configure.ac: Updated to 0.3
+	* debian/changelog: New upstream release
+	* src/MSConfig.py: Now connect with gconf signal
+	* src/MSSystray.py: Update preferences when config is changed
+
+2008-06-01  Álvaro Peña  <apg@openshine.com>
+
+	* data/mount-systray.schemas.in: Append action persistent config y
+	gconf 
+	* data/preferences.glade: Append combobox for click on device
+	action 
+	* src/MSConfig.py: Append get/set click on device action 
+	* src/MSDeviceManager.py: Manage open action, only with gnome-open 
+	* src/MSSystray.py: Configure the click action on device
+
+2007-07-03  Álvaro Peña  <apg@openshine.com>
+
+	* debian/control: Added gnome-common
+
+2007-07-02  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/MSDeviceManager.py: Added GPL License
+
+	* src/MSSystray.py: Added GPL License
+
+	* src/MSConfig.py: Added GPL License
+
+	* debian/control (Build-Depends): Added build depends libgconf2-dev
+
+2007-07-02  Álvaro Peña  <apg@openshine.com>
+
+	* src/MSSystray.py: Removed a conceptual error for blinking
+	option.
+	* src/MSDeviceManager.py: Removed debug prints
+
+2007-06-12  Álvaro Peña  <apg@openshine.com>
+
+	* src/MSSystray.py: Using diferent systray icon when exists some
+	device mounted
+	* po/es.po: Added accel.
+
+2007-06-11  Álvaro Peña  <apg@openshine.com>
+
+	* data/preferences.glade, src/MSConfig.py, src/MSSystray.py: Added
+	blink option
+
+2007-06-04  Álvaro Peña  <apg@openshine.com>
+
+	* src/MSDeviceManager.py: Update mount point path when the volume
+	is mounted
+
+2007-06-04  Álvaro Peña  <apg@openshine.com>
+
+	* src/MSDeviceManager.py: Check if a volume is mounted after emit
+	"mounted" signal.
+	* src/MSSystray.py: Check if hermes is running with diferences
+
+2007-06-03  Álvaro Peña  <apg@openshine.com>
+
+	* src/MSSystray.py: Now only control mount/unmount
+
+2007-06-01  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/MSSystray.py (MSSystray.__volume_mounted_cb): Fix msg error 
+
+2007-06-01  Álvaro Peña  <apg@openshine.com>
+
+	* src/MSDeviceManager.py: Control mount/unmount
+	* src/MSSystray.py: using mount/unmount signals
+
+2007-05-31  Álvaro Peña  <apg@openshine.com>
+
+	* src/MSDeviceManager.py: Use volume label if exists
+	* src/MSSystray.py: Don't warning to unmount if it's
+	a CD. And restart timeout when new device is plugged on.
+
+2007-05-31  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/MSDeviceManager.py (MSDeviceManager.volume_unmount): eject support for cdroms
+
+	* src/MSSystray.py (MSSystray.__init__): Added icon them icons
+
+	* src/mount-systray.py: Added gettext full support !
+
+	* src/MSSystray.py: Added icons from icontheme
+	(MSSystray.__is_hermes_running): Added hermes detection support
+	(MSSystray.__volume_added_cb): if hermes is working ... blink!
+
+	* debian/rules : Autogen stuff --prefix=/usr
+
+2007-05-30  Álvaro Peña  <apg@openshine.com>
+
+	* src/MSDeviceManager.py: Detect portable audio players
+	* src/MSSystray.py: Now using icon themes
+
+2007-05-30  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/MSSystray.py (MSSystray.show_notification): Added "status-icon" property to notification instead the x,y code
+	(MSSystray.show_notification): Added icon parameter to show_notification
+
+2007-05-30  Álvaro Peña  <apg@openshine.com>
+
+	* data/mount-systray.schemas.in: Change warning to 20
+	minutes
+	* src/MSDeviceManager.py: Check umount application,
+	gnome-mount or pumount
+
+2007-05-30  Álvaro Peña  <apg@openshine.com>
+
+	* src/Makefile.in: This file isn't needed
+	* src/MSSystray.py: Remove attach to status icon (not in
+	Guadalinex). Now using the x,y coordinates
+	* src/MSDeviceManager.py: Umounting using "pumount" (not
+	gnome-mount in Guadalinex)
+
+2007-05-11  Álvaro Peña  <apg@openshine.com>
+
+	* data/mount-systray.schemas.in: Added hide system tray option
+	* data/preferences.glade: Added hide system tray option
+	* src/MSConfig.py: Added hide system tray option
+	* src/MSSystray.py: Added hide system tray option and an empty
+	menu item when no devices mounted
+
+2007-05-05  Álvaro Peña  <apg@openshine.com>
+
+	* data/Makefile.am: Added cdrom.png
+	* src/MSDeviceManager.py: Now detect CDROMS
+
+2007-05-04  Álvaro Peña  <apg@openshine.com>
+
+	* src/MSDeviceManager.py: Now unmount, and genertae signals
+	* src/MSSystray.py: unmount when click and update when produce
+	changes 
+
+2007-05-04  Álvaro Peña  <apg@openshine.com>
+
+	* po/POTFILES.in: new files to translate
+	* po/es.po: update
+	* src/MSSystray.py: now with notification
+	* src/mount-systray.py: using pynotify
+
