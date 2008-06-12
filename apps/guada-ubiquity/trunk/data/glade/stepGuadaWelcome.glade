@@ -52,12 +52,21 @@
 	      <property name="visible">True</property>
 	      <property name="label" translatable="yes">&lt;b&gt;&lt;big&gt;Bienvenido al instalador Live de Guadalinex&lt;/big&gt;&lt;/b&gt;
 
-Se dispone a instalar el sistema de Guadalinex que esta probando.
+Este disco contiene un &lt;b&gt;sistema operativo&lt;/b&gt; y una selección de
+&lt;b&gt;aplicaciones&lt;/b&gt; de uso común. Puede utilizarse como demostración o instalarse y usarse normalmente sin ningún tipo de límites.
 
-Es un proceso sencillo de 3 pasos, se realiza en unos 15 minutos y precisa un mínimo de &lt;b&gt;3 Gb&lt;/b&gt; de espacio libre en su disco y &lt;b&gt;128 Mb&lt;/b&gt; de RAM, si bien es recomendable llegar a 5 Gb de espacio en disco si va a instalar muchos programas adicionales.</property>
+Además:
+
+El proceso de instalación &lt;b&gt;no elimina ni modifica&lt;/b&gt; otros sistemas operativos que pudieran existir en el mismo disco duro.
+
+Se incluye &lt;b&gt;OpenOffice.org&lt;/b&gt; que puede leer y grabar los formatos de documento más populares. Recomendamos utilizar el &lt;b&gt;estándar OpenDocument&lt;/b&gt;, reconocido internacionalmente.
+
+&lt;b&gt;Guadalinex&lt;/b&gt; no contiene virus y es inmune a las infecciones típicas quecirculan por Internet.
+
+Todas las aplicaciones incluidas tienen una &lt;b&gt;licencia libre&lt;/b&gt; que permite su uso, copia, estudio y modificación sin coste alguno.</property>
 	      <property name="use_underline">False</property>
 	      <property name="use_markup">True</property>
-	      <property name="justify">GTK_JUSTIFY_LEFT</property>
+	      <property name="justify">GTK_JUSTIFY_FILL</property>
 	      <property name="wrap">True</property>
 	      <property name="selectable">False</property>
 	      <property name="xalign">0.5</property>

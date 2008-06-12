@@ -61,14 +61,23 @@
 	      <child>
 		<widget class="GtkLabel" id="label12">
 		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">&lt;b&gt;Información sobre la instalación&lt;/b&gt;
+		  <property name="label" translatable="yes">&lt;b&gt;&lt;big&gt;Información sobre la instalación&lt;/big&gt;&lt;/b&gt;
 
-&lt;b&gt;-&lt;/b&gt; El instalador de Guadalinex le ofrecerá opciones para hacer espacio en el disco en el disco duro. La opciones van desde lo mas simple, que es hacer espacio automáticamente en su disco duro para realizar la instalación, hasta lo mas complicado que seria la creación/selección manual de las particiones.
+&lt;b&gt;Guadalinex&lt;/b&gt; puede usar todo el disco o compartir espacio con otros sistemas operativos ya instalados.
 
-&lt;b&gt;-&lt;/b&gt; Si tiene dudas sobre la posición, nombre o tamaño de sus particiones. En la pestaña &lt;i&gt;&quot;Previsualización de discos duros&quot;&lt;/i&gt; podrá consultar antes de realizar las particiones la configuración actual de sus discos duros. </property>
+&lt;u&gt;Recomendaciones:&lt;/u&gt;
+
+Otros sistemas puede que no sean tan respetuosos. Instale primero los demás, y por último Guadalinex.
+
+Al menos una división o partición del disco es necesaria para Guadalinex. Si es posible, Guadalinex usará tres particiones: una para el sistema y los programas, otra para sus datos, documentos, fotos, etc, y otra como ampliación virtual de la memoria RAM (swap).
+
+&lt;b&gt;Guadalinex&lt;/b&gt; creará un menú con todos los sistemas operativos que tenga en su ordenador y le permitirá elegir con cual quiere trabajar cada vez que arranque el ordenador.
+
+Los datos del menú de arranque residen en la partición de &lt;b&gt;Guadalinex&lt;/b&gt;, así que si la borra dejará de funcionar. Para arrancar sin el menú necesitará reinstalar el sector de arranque usando un disco de otro sistema operativo. Hay más información en la web de guadalinex &lt;b&gt;www.guadalinex.org&lt;/b&gt;
+</property>
 		  <property name="use_underline">False</property>
 		  <property name="use_markup">True</property>
-		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="justify">GTK_JUSTIFY_FILL</property>
 		  <property name="wrap">True</property>
 		  <property name="selectable">False</property>
 		  <property name="xalign">0.5</property>
