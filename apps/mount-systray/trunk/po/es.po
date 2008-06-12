@@ -18,7 +18,7 @@ msgstr ""
 #: ../data/mount-systray.schemas.in.h:1
 msgid "Action to do when the user click over one mounted device."
 msgstr ""
-"Acción a realizar cuando el usuario clicka sobre un dispositivo montado"
+"Acción a realizar cuando el usuario pulsa sobre un dispositivo montado"
 
 #: ../data/mount-systray.schemas.in.h:2
 msgid "Action when user click on device"
@@ -153,7 +153,7 @@ msgstr "Avisa cada"
 
 #: ../data/preferences.glade.h:5
 msgid "When click in device:"
-msgstr "Cuando clicke en un dispositivo:"
+msgstr "Cuando pulse en un dispositivo:"
 
 #: ../data/preferences.glade.h:6
 msgid "_Blink all time when some device is mounted."

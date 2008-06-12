@@ -40,7 +40,7 @@ class MSSystray:
                             "floppy": "gnome-dev-floppy",
                             "media-player": "multimedia-player"}
 
-        self.click_actions = {"umount": _("Unmount device"),
+        self.click_actions = {"umount": _("Umount device"),
                               "open": _("Browse in filemanager")}
 
         # Menu
