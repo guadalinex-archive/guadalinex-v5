@@ -1,3 +1,10 @@
+guada-ubiquity (0.6-1) hardy; urgency=low
+
+  * Add reuse partitions option
+  * Corp texts to welcome page and preparted page
+
+ -- Roberto Majadas <roberto.majadas@openshine.com>  Thu, 12 Jun 2008 15:10:03 +0200
+
 guada-ubiquity (0.5-1) hardy; urgency=low
 
   * 92guadalinexrepos

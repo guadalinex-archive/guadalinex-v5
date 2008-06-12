@@ -1,1 +1,1 @@
-SUBDIRS = frontend scripts DiskPreview ubiquity-init
+SUBDIRS = frontend scripts DiskPreview ubiquity-init automatically_partition
