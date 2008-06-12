@@ -72,7 +72,7 @@ pref("intl.locale.matchOS", true);
 // kerberos-for-https
 pref("network.negotiate-auth.trusted-uris", "https://");
 
-// ed2k
+//ed2k support
 pref("network.protocol-handler.external.ed2k",true);
-pref("network.protocol-handler.app.ed2k","/usr/bin/ed2k");
+pref("network.protocol-handler.warn-external.ed2k", false);
 
