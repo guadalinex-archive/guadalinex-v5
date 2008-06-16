@@ -21,6 +21,6 @@ any_linux_on_dev() {
 any_linux_on_dev
 
 if [ $has_linux_part = "yes" ] && [ $has_swap_part = "yes" ]; then
-    db_metaget partman-auto/text/do_nothing_partitioning description
+    RET="Reutilizar particiones"
     printf "custom\t$RET"
 fi
