@@ -501,6 +501,32 @@ function create_manifests() {
     rm -f $filter
 }
 
+function set_debconf(){
+    cat > ${sources_dir}/tmp/debconf-set << EOF
+    . /usr/share/debconf/confmodule
+    db_set debconf/priority critical
+    db_set debconf/frontend noninteractive
+EOF
+
+    chmod +x ${sources_dir}/tmp/debconf-set
+    chroot ${sources_dir} /tmp/debconf-set
+    ret="$?"
+    return ret
+}
+
+function unset_debconf(){
+    cat > ${sources_dir}/tmp/debconf-unset << EOF
+    . /usr/share/debconf/confmodule
+    db_set debconf/priority high
+    db_set debconf/frontend noninteractive
+EOF
+
+    chmod +x ${sources_dir}/tmp/debconf-unset
+    chroot ${sources_dir} /tmp/debconf-unset
+    ret="$?"
+    return ret
+}
+
 function create_squashfs() {
     
     if [ -f "${live_dir}livecd.${project}.squashfs" ]; then
@@ -562,7 +588,7 @@ function install_image ()
     setup_tmp_sources || error "setup_tmp_sources"
 
     fake_daemons || error "fake_daemons"
-    
+   
     # install packages for this image
     install_pkgs || error "install_pkgs"
 
@@ -600,7 +626,9 @@ function update_chroot ()
     setup_tmp_sources || error "setup_tmp_sources" 128
 
     fake_daemons || error "fake_daemons" 129
-    
+
+    set_debconf || error "set_debconf" 141
+
     apt_get update || error "apt_get install" 130
 
     apt_get install || error "apt_get install" 131
@@ -614,6 +642,8 @@ function update_chroot ()
 	    apt_get install ${update_pkgs} || error "apt_get install update_pkgs" 134
 	    apt_get install || error "apt_get install" 135
     fi
+
+    unset_debconf || error "unset_debconf" 141
 
     setup_final_sources || error "setup_final_sources" 136
 
