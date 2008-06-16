@@ -1,0 +1,778 @@
+# MALAGASY TRANSLATION OF GNOME-VOLUME-MANAGER.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Thierry Randrianiriana <randrianiriana@gmail.com>, 2006.
+# Fano Rajaonarisoa <rajfanhar@yahoo.fr>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: GNOME-VOLUME-MANAGER VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-14 04:57+0200\n"
+"PO-Revision-Date: 2006-08-12 22:20+0300\n"
+"Last-Translator: Thierry Randrianiriana <randrianiriana@gmail.com>\n"
+"Language-Team: MALAGASY <i18n-malagasy-gnome@gna.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../gnome-volume-manager.schemas.in.h:1
+msgid "\"Always take this action\" checkbox for Autorun"
+msgstr "Efamira famaritra \"Ity asa ity foana no atao\" ho an'ny Autorun"
+
+#: ../gnome-volume-manager.schemas.in.h:2
+msgid "\"Always take this action\" checkbox for iPod Photos"
+msgstr "Efamira famaritra \"Ity asa ity foana no atao\" ho an'ny sarin'iPod"
+
+#: ../gnome-volume-manager.schemas.in.h:3
+msgid "\"Always take this action\" checkbox for mixed Audio and Data CDs"
+msgstr "Efamira famaritra \"Ity asa ity foana no atao\" ho an'ny kapila Audio sy Data mifangaro"
+
+#: ../gnome-volume-manager.schemas.in.h:4
+msgid "\"Always take this action\" checkbox for photo import from a camera"
+msgstr "Efamira famaritra \"Ity asa ity foana no atao\" ho an'ny fanafarana sary avy amina fakantsary"
+
+#: ../gnome-volume-manager.schemas.in.h:5
+msgid "\"Always take this action\" checkbox for photo import from a device"
+msgstr "Efamira famaritra \"Ity asa ity foana no atao\" ho an'ny fanafarana sary avy amina periferika"
+
+#: ../gnome-volume-manager.schemas.in.h:6
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr "Lisi-tsori-dàlana voafaritry ny ':' hizahana binaries sy baiko soratra."
+
+#: ../gnome-volume-manager.schemas.in.h:7
+msgid "Action to take when a camera is plugged in."
+msgstr "Asa atao rehefa misy fakantsary mipetaka."
+
+#: ../gnome-volume-manager.schemas.in.h:8
+msgid "Action to take when a device containing photos is encountered."
+msgstr "Asa atao rehefa misy periferika misy sary mipetaka."
+
+#: ../gnome-volume-manager.schemas.in.h:9
+msgid "Action to take when a device contains an autorun program/script."
+msgstr "Asa atao rehefa misy periferika misy rindranasa/baiko soratra mandeha hoazy."
+
+#: ../gnome-volume-manager.schemas.in.h:10
+msgid "Action to take when a mixed Audio and Data CD is encountered."
+msgstr "Asa atao rehefa tojo kapila Audio sy Data mifangaro."
+
+#: ../gnome-volume-manager.schemas.in.h:11
+msgid "Action to take when an iPod Photo is encountered."
+msgstr "Asa atao rehefa tojo sarin'iPod."
+
+#: ../gnome-volume-manager.schemas.in.h:12
+msgid "Audio CD burn command"
+msgstr "Baikon'ny fisokirana kapila Audio"
+
+#: ../gnome-volume-manager.schemas.in.h:13
+msgid "Automount removable drives"
+msgstr "Avy dia akaro ny mpanodina mahaleotena"
+
+#: ../gnome-volume-manager.schemas.in.h:14
+msgid "Automount removable media"
+msgstr "Avy dia akaro ny kapila mahaleotena"
+
+#: ../gnome-volume-manager.schemas.in.h:15
+msgid "Autorun nautilus"
+msgstr "Avy dia alefaso nautilus"
+
+#: ../gnome-volume-manager.schemas.in.h:16
+msgid "Autorun path"
+msgstr "Sori-dàlan'ny autorun"
+
+#: ../gnome-volume-manager.schemas.in.h:17
+msgid "CD play command"
+msgstr "Baikon'ny famakiana CD"
+
+#: ../gnome-volume-manager.schemas.in.h:18
+msgid "Command to run when a Palm is connected."
+msgstr "Baiko alefa rehefa misy Palm mipetaka."
+
+#: ../gnome-volume-manager.schemas.in.h:19
+msgid "Command to run when a PocketPC is connected."
+msgstr "Baiko alefa rehefa misy PocketPC mipetaka."
+
+#: ../gnome-volume-manager.schemas.in.h:20
+msgid "Command to run when a digital camera is connected or media from a digital camera is inserted."
+msgstr "Baiko alefa rehefa misy fakantsary numérique mipetaka na misy ari-pakantsary numérique mipetaka."
+
+#: ../gnome-volume-manager.schemas.in.h:21
+msgid "Command to run when a keyboard is connected."
+msgstr "Baiko alefa rehefa misy fafan-teny mipetaka"
+
+#: ../gnome-volume-manager.schemas.in.h:22
+msgid "Command to run when a mouse is connected."
+msgstr "Baiko alefa rehefa misy totozy mipetaka."
+
+#: ../gnome-volume-manager.schemas.in.h:23
+msgid "Command to run when a printer is connected."
+msgstr "Baiko alefa rehefa misy mpanonta printy mipetaka."
+
+#: ../gnome-volume-manager.schemas.in.h:24
+msgid "Command to run when a scanner is connected."
+msgstr "Baiko alefa rehefa misy scanner mipetaka."
+
+#: ../gnome-volume-manager.schemas.in.h:25
+msgid "Command to run when a tablet is connected."
+msgstr "Baiko alefa rehefa misy tablet mipetaka."
+
+#: ../gnome-volume-manager.schemas.in.h:26
+msgid "Command to run when a video DVD is inserted."
+msgstr "Baiko alefa rehefa misy DVDn-tsarimihetsika tafatsofoka."
+
+#: ../gnome-volume-manager.schemas.in.h:27
+msgid "Command to run when a video VCD is inserted."
+msgstr "Baiko alefa rehefa misy VCDn-tsarimihetsika mitsofoka."
+
+#: ../gnome-volume-manager.schemas.in.h:28
+msgid "Command to run when a video camera is connected."
+msgstr "Baiko alefa rehefa misy fakan-tsarimihetsika mipetaka."
+
+#: ../gnome-volume-manager.schemas.in.h:29
+msgid "Command to run when an audio CD is inserted."
+msgstr "Baiko alefa rehefa misy kapila audio mipetaka."
+
+#: ../gnome-volume-manager.schemas.in.h:30
+msgid "Command to run when an iPod is connected."
+msgstr "Baiko alefa rehefa misy iPod mipetaka."
+
+#: ../gnome-volume-manager.schemas.in.h:31
+msgid "Command to run when the user wishes to burn a Data CD."
+msgstr "Baiko alefa rehefa maniry ny hisokitra kapila ny mpampiasa."
+
+#: ../gnome-volume-manager.schemas.in.h:32
+msgid "Command to run when the user wishes to burn an Audio CD."
+msgstr "Baiko alefa rehefa maniry hisokitra kapila Audio ny mpampiasa."
+
+#: ../gnome-volume-manager.schemas.in.h:33
+msgid "DVD play command"
+msgstr "Baikon'ny famakiana DVD"
+
+#: ../gnome-volume-manager.schemas.in.h:34
+msgid "Data CD burn command"
+msgstr "Baikon'ny fisokirana kapia Dara"
+
+#: ../gnome-volume-manager.schemas.in.h:35
+msgid "Low Disk Space notification threshold"
+msgstr "Fetran'ny filazana ny fahateren'ny kapila"
+
+#: ../gnome-volume-manager.schemas.in.h:36
+msgid "Open nautilus on removeable media insert."
+msgstr "Sokafy ny nautilus rehefa misy kapila mahaleotena mitsofoka."
+
+#: ../gnome-volume-manager.schemas.in.h:37
+msgid "Perform autorun"
+msgstr "Hanatanteraka autorun"
+
+#: ../gnome-volume-manager.schemas.in.h:38
+msgid "Photo management command"
+msgstr "Baikon'ny fandrindrana sary"
+
+#: ../gnome-volume-manager.schemas.in.h:39
+msgid "Play inserted audio CD's"
+msgstr "Mamaky ny kapila audio mitsofoka"
+
+#: ../gnome-volume-manager.schemas.in.h:40
+msgid "Play inserted video DVDs"
+msgstr "Mamaky ny DVDn-tsarimihetsika mitsofoka"
+
+#: ../gnome-volume-manager.schemas.in.h:41
+msgid "Play inserted video VCDs"
+msgstr "Mamaky ny VCDn-tsarimihetsika mitsofoka"
+
+#: ../gnome-volume-manager.schemas.in.h:42
+msgid "Run Palm-sync program"
+msgstr "Alefaso ny rindranasa Palm-sync"
+
+#: ../gnome-volume-manager.schemas.in.h:43
+msgid "Run PocketPC-sync program"
+msgstr "Mandefasa ny rindranasa PocketPC-sync"
+
+#: ../gnome-volume-manager.schemas.in.h:44
+msgid "Run a program to burn CDs/DVDs"
+msgstr "Mandefasa rindranasa fisokirana CD/DVD"
+
+#: ../gnome-volume-manager.schemas.in.h:45
+msgid "Run iPod program"
+msgstr "Alefaso ny rindranan'ny iPod"
+
+#: ../gnome-volume-manager.schemas.in.h:46
+msgid "Run keyboard program"
+msgstr "Alefaso ny rindranasan'ny fafan-teny"
+
+#: ../gnome-volume-manager.schemas.in.h:47
+msgid "Run mouse program"
+msgstr "Alefaso ny rindranasan'ny totozy"
+
+#: ../gnome-volume-manager.schemas.in.h:48
+msgid "Run photo management command"
+msgstr "Alefaso ny baikon'ny fandrindrana sary"
+
+#: ../gnome-volume-manager.schemas.in.h:49
+msgid "Run printer program"
+msgstr "aAlefaso ny rindranasan'ny mpanonta printy"
+
+#: ../gnome-volume-manager.schemas.in.h:50
+msgid "Run scanner program"
+msgstr "Alefaso ny rindranasan'ny scanner"
+
+#: ../gnome-volume-manager.schemas.in.h:51
+msgid "Run tablet program"
+msgstr "Alefaso ny rindranasan'ny tablet"
+
+#: ../gnome-volume-manager.schemas.in.h:52
+msgid "Run video editing program"
+msgstr "Alefaso ny rindranasan'ny fanovana sarimihetsika"
+
+#: ../gnome-volume-manager.schemas.in.h:53
+msgid "The threshold value for whether or not to toggle the notification on, based on the amount of additional space used since the last check."
+msgstr "Ny sanda fetra hamaritana ny fampiasana ny fampahafantarana, miankina amin'ny habetsaky ny toerana fanampiny nampiasaina hatramin'ny fizahana farany."
+
+#: ../gnome-volume-manager.schemas.in.h:54
+msgid "Threshold for notification of increased disk usage"
+msgstr "Fetra ho an'ny fampahafantarana ny fitomboan'ny fampiasa kapila"
+
+#: ../gnome-volume-manager.schemas.in.h:55
+msgid "Threshold percentage for notifying the user of low disk space."
+msgstr "Isan-jaton'ny fetra ho an'ny fampahafantarana ny mpampiasa ny fahateren'ny toerana anaty kapila."
+
+#: ../gnome-volume-manager.schemas.in.h:56
+msgid "VCD play command"
+msgstr "Baikon'ny famakiana VCD"
+
+#: ../gnome-volume-manager.schemas.in.h:57
+msgid "Whether autorun programs (binaries and scripts located in 'autorun_path') are run on newly mounted media."
+msgstr "Raha andefasana rindranasa mandeha hoazy (binaries sy baiko soratra anatin'ny 'autorun_path') ny kapila vao nakarina."
+
+#: ../gnome-volume-manager.schemas.in.h:58
+msgid "Whether gnome-volume-manager should automatically mount removable storage drives when they are inserted."
+msgstr "Raha tokony avy dia mampakatra ny kapila mahaleotena mitsofoka ny gnome-volume-manager."
+
+#: ../gnome-volume-manager.schemas.in.h:59
+msgid "Whether gnome-volume-manager should automatically mount removable storage media when they are inserted."
+msgstr "Raha tokony avy dia mampakatra ny kapila mahaleotena mitsofoka ny gnome-volume-manager."
+
+#: ../gnome-volume-manager.schemas.in.h:60
+msgid "Whether, when a Palm is connected, gnome-volume-manager should run 'autopalmsync_command'."
+msgstr "Raha handefa ny 'autopalmsync_command' ny gnome-volume-manager rehefa misy Palm mipetaka."
+
+#: ../gnome-volume-manager.schemas.in.h:61
+msgid "Whether, when a PocketPC is connected, gnome-volume-manager should run 'autopocketpc_command'."
+msgstr "Raha tokony handefa ny 'autopocketpc_command' ny gnome-volume-manager rehefa misy PocketPC mipetaka."
+
+#: ../gnome-volume-manager.schemas.in.h:62
+msgid "Whether, when a blank CD or DVD is inserted, gnome-volume-manager should run one of the autoburn commands."
+msgstr "Raha tokony handefa ny iray amin'ireo baiko fisokirana hoazy ny gnome-volume-manager rehefa misy CD na DVD foana mitsofoka."
+
+#: ../gnome-volume-manager.schemas.in.h:63
+msgid "Whether, when a digital camera is connected or media from a digital camera is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr "RaAha tokony handefa ny 'autophoto_command' ny gnome-volume-manager rehefa misy fakantsary numérique mipetaka na misy ari-pakantsary numérique mitsofoka."
+
+#: ../gnome-volume-manager.schemas.in.h:64
+msgid "Whether, when a digital video camera is connected, gnome-volume-manager should run 'autovideocam_command'."
+msgstr "Raha tokony handefa ny 'autovideocam_command' ny gnome-volume-manager rehefa misy fakan-tsarimihetsika mipetaka."
+
+#: ../gnome-volume-manager.schemas.in.h:65
+msgid "Whether, when a keyboard is connected, gnome-volume-manager should run 'autokeyboard_command'."
+msgstr "Raha tokony handefa ny 'autokeyboard_command' ny gnome-volume-manager rehefa misy fafan-teny mipetaka."
+
+#: ../gnome-volume-manager.schemas.in.h:66
+msgid "Whether, when a mouse is connected, gnome-volume-manager should run 'automouse_command'."
+msgstr "Raha tokony handefa ny 'automouse_command' ny gnome-volume-manager rehefa misy totozy mipetaka."
+
+#: ../gnome-volume-manager.schemas.in.h:67
+msgid "Whether, when a printer is connected, gnome-volume-manager should run 'autoprinter_command'."
+msgstr "Raha tokony handefa ny 'autoprinter_command' ny gnome-volume-manager rehefa misy mpanonta printy mipetaka."
+
+#: ../gnome-volume-manager.schemas.in.h:68
+msgid "Whether, when a scanner is connected, gnome-volume-manager should run 'autoscanner_command'."
+msgstr "Raha tokony  handefa ny 'autoscanner_command' ny gnome-volume-manager rehefa misy scanner mipetaka."
+
+#: ../gnome-volume-manager.schemas.in.h:69
+msgid "Whether, when a tablet is connected, gnome-volume-manager should run 'autotablet_command'."
+msgstr "Raha tokony handefa ny 'autotablet_command' ny gnome-volume-manager rehefa misy tablet mipetaka.s"
+
+#: ../gnome-volume-manager.schemas.in.h:70
+msgid "Whether, when a video DVD is inserted, gnome-volume-manager should run 'autoplay_dvd_command'."
+msgstr "Raha tokony handefa ny 'autoplay_dvd_command' ny gnome-volume-manager rehefa misy DVDn-tsarimihetsika mitsofoka."
+
+#: ../gnome-volume-manager.schemas.in.h:71
+msgid "Whether, when a video VCD is inserted, gnome-volume-manager should run 'autoplay_vcd_command'."
+msgstr "Raha tokony handefa ny 'autoplay_vcd_command' ny gnome-volume-manager rehefa misy VCDn-tsarimihetsika mitsofoka."
+
+#: ../gnome-volume-manager.schemas.in.h:72
+msgid "Whether, when an audio CD is inserted, gnome-volume-manager should run 'autoplay_cda_command'."
+msgstr "Raha tokony handefa ny 'autoplay_cda_command' ny gnome-volume-manager rehefa misy kapila audio mitsofoka."
+
+#: ../gnome-volume-manager.schemas.in.h:73
+msgid "Whether, when an iPod is connected, gnome-volume-manager should run 'autoipod_command'."
+msgstr "Raha tokony handefa ny 'autoipod_command' ny gnome-volume-manager rehefa misy iPod mipetaka."
+
+#: ../gnome-volume-manager.schemas.in.h:74
+msgid "iPod sync command"
+msgstr "Baikon'ny fandasirana iPod"
+
+#: ../gnome-volume-manager.schemas.in.h:75
+msgid "keyboard command"
+msgstr "baikon'ny fafan-teny"
+
+#: ../gnome-volume-manager.schemas.in.h:76
+msgid "mouse command"
+msgstr "baikon'ny totozy"
+
+#: ../gnome-volume-manager.schemas.in.h:77
+msgid "palm sync command"
+msgstr "baikon'ny fandasirana palm"
+
+#: ../gnome-volume-manager.schemas.in.h:78
+msgid "printer command"
+msgstr "baikon'ny mpanonta printy"
+
+#: ../gnome-volume-manager.schemas.in.h:79
+msgid "scanner command"
+msgstr "baikon'ny scanner"
+
+#: ../gnome-volume-manager.schemas.in.h:80
+msgid "tablet command"
+msgstr "baikon'ny tablet"
+
+#: ../gnome-volume-manager.schemas.in.h:81
+msgid "video camera command"
+msgstr "baikon'ny fakan-tsarimihetsika"
+
+#: ../gnome-volume-manager.desktop.in.h:1
+msgid "Volume Manager"
+msgstr "Mpandrindra kapila"
+
+#: ../gnome-volume-manager.desktop.in.h:2
+msgid "Volume manager for removable drives and media"
+msgstr "Mpandrindra kapila mahaleotena"
+
+#: ../gnome-volume-properties.desktop.in.h:1
+msgid "Configure management of removable drives and media"
+msgstr "Mikirakira ny fandrindrana kapila mahaleotena"
+
+#: ../gnome-volume-properties.desktop.in.h:2
+msgid "Removable Drives and Media"
+msgstr "Kapila mahaleotena"
+
+#: ../gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: ../gnome-volume-properties.glade.h:2
+msgid "<b>Audio CD Discs</b>"
+msgstr "<b>Kapila CD Audio</b>"
+
+#: ../gnome-volume-properties.glade.h:3
+msgid "<b>Blank CD and DVD Discs</b>"
+msgstr "<b>Kapila CD sy DVD foana</b>"
+
+#: ../gnome-volume-properties.glade.h:4
+msgid "<b>Digital Camera</b>"
+msgstr "<b>Fakantsary numérique</b>"
+
+#: ../gnome-volume-properties.glade.h:5
+msgid "<b>Digital Video Camera</b>"
+msgstr "<b>Fakan-tsarimihetsika numérique</b>"
+
+#: ../gnome-volume-properties.glade.h:6
+msgid "<b>Keyboards</b>"
+msgstr "<b>Fafan-teny</b>"
+
+#: ../gnome-volume-properties.glade.h:7
+msgid "<b>Mice</b>"
+msgstr "<b>Totozy</b>"
+
+#: ../gnome-volume-properties.glade.h:8
+msgid "<b>Palm™</b>"
+msgstr "<b>Palm™</b>"
+
+#: ../gnome-volume-properties.glade.h:9
+msgid "<b>PocketPC</b>"
+msgstr "<b>PocketPC</b>"
+
+#: ../gnome-volume-properties.glade.h:10
+msgid "<b>Portable Music Players</b>"
+msgstr "<b>Fihainoana hira finday</b>"
+
+#: ../gnome-volume-properties.glade.h:11
+msgid "<b>Printers</b>"
+msgstr "<b>Mpanonta printy</b>"
+
+#: ../gnome-volume-properties.glade.h:12
+msgid "<b>Removable Storage</b>"
+msgstr "<b>Arika mahaleotena</b>"
+
+#: ../gnome-volume-properties.glade.h:13
+msgid "<b>Scanners</b>"
+msgstr "<b>Scanner</b>"
+
+#: ../gnome-volume-properties.glade.h:14
+msgid "<b>Tablets</b>"
+msgstr "<b>Tablet</b>"
+
+#: ../gnome-volume-properties.glade.h:15
+msgid "<b>Video DVD Discs</b>"
+msgstr "<b>Kapila DVDn-tsarimihetsika</b>"
+
+#: ../gnome-volume-properties.glade.h:16
+msgid "Automatically run a program when a USB _keyboard is connected"
+msgstr "Avy dia mandefasa rindranasa rehefa misy _fafan-teny USB mipetaka"
+
+#: ../gnome-volume-properties.glade.h:17
+msgid "Automatically run a program when a USB _mouse is connected"
+msgstr "Avy dia mandefasa rindranasa rehefa misy _totozy USB mipetaka"
+
+#: ../gnome-volume-properties.glade.h:18
+msgid "Automatically run a program when a _printer is connected"
+msgstr "Avy dia mandefasa rindranasa rehefa misy _mpanonta printy mipetaka"
+
+#: ../gnome-volume-properties.glade.h:19
+msgid "Automatically run a program when a _scanner is connected"
+msgstr "Avy dia mandefasa rindranasa rehefa misy _scanner mipetaka"
+
+#: ../gnome-volume-properties.glade.h:20
+msgid "Automatically run a program when a _tablet is connected"
+msgstr "Avy dia mandefasa rindranasa rehefa misy _tablet mipetaka"
+
+#: ../gnome-volume-properties.glade.h:21
+msgid "Browse _removable media when inserted"
+msgstr "Velaro ny kapila _mahaleotena rehefa tafatsofoka"
+
+#: ../gnome-volume-properties.glade.h:22
+msgid "C_ommand:"
+msgstr "_Baiko:"
+
+#: ../gnome-volume-properties.glade.h:23
+msgid "Cameras"
+msgstr "Fakantsary"
+
+#: ../gnome-volume-properties.glade.h:24
+msgid "Comman_d:"
+msgstr "Bai_ko:"
+
+#: ../gnome-volume-properties.glade.h:25
+msgid "Command for A_udio CDs:"
+msgstr "Baiko ho an'ny kapila A_udio:"
+
+#: ../gnome-volume-properties.glade.h:26
+msgid "Command for _Data CDs: "
+msgstr "Baiko ho an'ny kapila _Data:"
+
+#: ../gnome-volume-properties.glade.h:27
+msgid "Drives and Media Preferences"
+msgstr "Safidy manokan'ny kapila"
+
+#: ../gnome-volume-properties.glade.h:28
+msgid "Input Devices"
+msgstr "Mpampiditra"
+
+#: ../gnome-volume-properties.glade.h:29
+msgid "Mount removable media when _inserted"
+msgstr "Akaro ny kapila mahaleotena rehefa _tafatsofoka"
+
+#: ../gnome-volume-properties.glade.h:30
+msgid "Multimedia"
+msgstr "Haino aman-jery"
+
+#: ../gnome-volume-properties.glade.h:31
+msgid "PDAs"
+msgstr "PDA"
+
+#: ../gnome-volume-properties.glade.h:32
+msgid "Play _audio CD discs when inserted"
+msgstr "Vakio ny kapila CD _audio rehefa tafatsofoka"
+
+#: ../gnome-volume-properties.glade.h:33
+msgid "Play _music files when connected"
+msgstr "Vakio ny _hira rehefa voasokatra"
+
+#: ../gnome-volume-properties.glade.h:34
+msgid "Play _video DVD disks when inserted"
+msgstr "Vakio ny kapila _DVDn-tsarimihetsika rehefa tafatsofoka"
+
+#: ../gnome-volume-properties.glade.h:35
+msgid "Printers & Scanners"
+msgstr "Mpanonta printy sy Scanner"
+
+#: ../gnome-volume-properties.glade.h:36
+msgid "Removable Drives and Media Preferences"
+msgstr "Safidy manokan'ny kapila mahaleotena"
+
+#: ../gnome-volume-properties.glade.h:37
+msgid "Select program to burn audio CDs"
+msgstr "Safidio ny rindranasa hisokirana kapila audio"
+
+#: ../gnome-volume-properties.glade.h:38
+msgid "Select program to burn data CDs"
+msgstr "Safidio ny rindranasa hisokirana kapila data"
+
+#: ../gnome-volume-properties.glade.h:39
+msgid "Select program to edit videos"
+msgstr "Safidio ny rindranasa hanovana sarimihetsika"
+
+#: ../gnome-volume-properties.glade.h:40
+msgid "Select program to import photos"
+msgstr "Safidio ny rindranasa hanafarana sary"
+
+#: ../gnome-volume-properties.glade.h:41
+msgid "Select program to play DVDs"
+msgstr "Safidio ny rindranasa hamakiana DVD"
+
+#: ../gnome-volume-properties.glade.h:42
+msgid "Select program to play audio CDs"
+msgstr "Safidio ny rindranasa hamakiana kapila audio"
+
+#: ../gnome-volume-properties.glade.h:43
+msgid "Select program to play music files"
+msgstr "Sadidio ny rindranasa hamakiana hira"
+
+#: ../gnome-volume-properties.glade.h:44
+msgid "Select program to run when a keyboard is plugged in"
+msgstr "Safidio ny rindranasa alefa rehefa misy fafan-teny mipetaka"
+
+#: ../gnome-volume-properties.glade.h:45
+msgid "Select program to run when a mouse is plugged in"
+msgstr "Safidio ny rindranasa alefa rehefa misy totozy mipetaka"
+
+#: ../gnome-volume-properties.glade.h:46
+msgid "Select program to run when a printer is plugged in"
+msgstr "Safidio ny rindranasa alefa rehefa misy mpanonta printy mipetaka"
+
+#: ../gnome-volume-properties.glade.h:47
+msgid "Select program to run when a scanner is plugged in"
+msgstr "Safidio ny rindranasa alefa rehefa misy scanner mipetaka"
+
+#: ../gnome-volume-properties.glade.h:48
+msgid "Select program to run when a tablet is plugged in"
+msgstr "Safidio ny rindranasa alefa rehefa misy tablet mipetaka"
+
+#: ../gnome-volume-properties.glade.h:49
+msgid "Select program to sync Palm devices"
+msgstr "Safidio ny rindranasa handasirana periferika Palm"
+
+#: ../gnome-volume-properties.glade.h:50
+msgid "Storage"
+msgstr "Arika"
+
+#: ../gnome-volume-properties.glade.h:51
+msgid "Sync PocketP_C devices when connected"
+msgstr "Lasiro ny periferika PocketP_C rehefa tafapetaka"
+
+#: ../gnome-volume-properties.glade.h:52
+msgid "Sync _Palm™ devices when connected"
+msgstr "Lasiro ny periferika _Palm™ rehefa tafapetaka"
+
+#: ../gnome-volume-properties.glade.h:53
+msgid "_Auto-run programs on new drives and media"
+msgstr "_Avy dia alefaso ireo rindranasa anaty kapila vaovavo"
+
+#: ../gnome-volume-properties.glade.h:54
+msgid "_Burn a CD or DVD when a blank disc is inserted"
+msgstr "_Misokira CD na DVD rehefa misy kapila foana mitsofoka"
+
+#: ../gnome-volume-properties.glade.h:55
+msgid "_Command:"
+msgstr "_Baiko:"
+
+#: ../gnome-volume-properties.glade.h:56
+msgid "_Edit video when connected"
+msgstr "_Ovay ilay sarimihetsika rehefa voasokatra"
+
+#: ../gnome-volume-properties.glade.h:57
+msgid "_Import digital photographs when connected"
+msgstr "_Afaro ireo sary numérique rehefa azo"
+
+#: ../gnome-volume-properties.glade.h:58
+msgid "_Mount removable drives when hot-plugged"
+msgstr "_Akaro ny kapila mahaleotena rehefa mitsofoka am-pandehanana"
+
+#: ../src/manager.c:205
+#: ../src/manager.c:210
+#: ../src/manager.c:215
+#: ../src/manager.c:221
+#: ../src/manager.c:227
+#: ../src/manager.c:233
+#: ../src/manager.c:239
+msgid "Ig_nore"
+msgstr "Aza _raharahaina"
+
+#: ../src/manager.c:206
+msgid "_Allow Auto-Run"
+msgstr "_Ekeo ny Auto-run"
+
+#: ../src/manager.c:211
+#: ../src/manager.c:217
+#: ../src/manager.c:222
+msgid "Import _Photos"
+msgstr "Hanafatra _sary"
+
+#: ../src/manager.c:216
+msgid "_Open Folder"
+msgstr "_Hanokatra lahatahiry"
+
+#: ../src/manager.c:223
+msgid "Manage _Music"
+msgstr "Handrindra _hira"
+
+#: ../src/manager.c:228
+msgid "_Browse Files"
+msgstr "_Hizaha rakitra"
+
+#: ../src/manager.c:229
+msgid "_Play CD"
+msgstr "_Hamaky CD"
+
+#: ../src/manager.c:234
+msgid "Make _Audio CD"
+msgstr "Hamorona CD _Audio"
+
+#: ../src/manager.c:235
+msgid "Make _Data CD"
+msgstr "Hnamorona CD _Data"
+
+#: ../src/manager.c:240
+msgid "Make _DVD"
+msgstr "Hamorona _DVD"
+
+#: ../src/manager.c:292
+msgid "Auto-Run Confirmation"
+msgstr "Fanamarinana Auto-run"
+
+#: ../src/manager.c:293
+msgid "Auto-run capability detected."
+msgstr "Fahafahana mandefa hoazy tsikaritra."
+
+#: ../src/manager.c:294
+msgid "Would you like to allow <b>'${0}'</b> to run?"
+msgstr "Tianao avela handeha ny <b>'${0}'</b>?"
+
+#: ../src/manager.c:299
+#: ../src/manager.c:306
+msgid "Camera Import"
+msgstr "Fanafarana avy amina fakantsary"
+
+#: ../src/manager.c:300
+#: ../src/manager.c:307
+msgid "A camera has been detected."
+msgstr "Misy fakantsary hita."
+
+#: ../src/manager.c:301
+#: ../src/manager.c:308
+msgid "There are photos on the camera. Would you like to add these pictures to your album?"
+msgstr "Misy sary anatin'ilay fakantsary. Tianao atao ao anatin'ny tahirin-tsarinao ve izy ireo?"
+
+#: ../src/manager.c:302
+#: ../src/manager.c:309
+#: ../src/manager.c:316
+#: ../src/manager.c:323
+#: ../src/manager.c:330
+msgid "_Always perform this action"
+msgstr "_Ity asa ity foana no atao"
+
+#: ../src/manager.c:313
+msgid "Photo Import"
+msgstr "Fanafarana sary"
+
+#: ../src/manager.c:314
+msgid "A photo card has been detected."
+msgstr "Misy ari-tsary hita."
+
+#: ../src/manager.c:315
+msgid "There are photos on the card. Would you like to add these pictures to your album?"
+msgstr "Misy sary ao anatin'ilay arika. Tianao atao ao anatin'ny tahirin-tsarinao ve izy ireo?"
+
+#: ../src/manager.c:320
+msgid "Photos and Music"
+msgstr "Sary sy Hira"
+
+#: ../src/manager.c:321
+msgid "Photos were found on your music device."
+msgstr "Nahitana sary ny periferikanao."
+
+#: ../src/manager.c:322
+msgid "Would you like to import the photos or manage its music?"
+msgstr "Te hanafatra ireo sary ireo ve ianao sa handrindra ny feon-kira miaraka aminy?"
+
+#: ../src/manager.c:327
+msgid "Audio / Data CD"
+msgstr "CD Audio/Data"
+
+#: ../src/manager.c:328
+msgid "The CD in the drive contains both music and files."
+msgstr "Sady misy hira no misy rakitra anatin'io mpanodina io."
+
+#: ../src/manager.c:329
+msgid "Would you like to listen to music or browse the files?"
+msgstr "Te hihaino ilay hira ve ianao sa hizaha ireo rakitra?"
+
+#: ../src/manager.c:334
+#: ../src/manager.c:341
+msgid "Choose Disc Type"
+msgstr "Hisafidy ny karazan-kapila"
+
+#: ../src/manager.c:335
+#: ../src/manager.c:342
+msgid "You have inserted a blank disc."
+msgstr "Kapila foana no nampidirinao."
+
+#: ../src/manager.c:336
+#: ../src/manager.c:343
+msgid "What would you like to do?"
+msgstr "Inona no tianao atao?"
+
+#: ../src/manager.c:2871
+#, c-format
+msgid "%d%% of the disk space on %s is in use"
+msgstr "Toeran-kapila %d%% amin'ny %s no miasa"
+
+#: ../src/manager.c:2973
+msgid "Print version and exit"
+msgstr "Asehoy ny kinova dia ajanony"
+
+#: ../src/manager.c:2975
+msgid "Run as a daemon"
+msgstr "Alefaso toy ny daemon"
+
+#: ../src/manager.c:2977
+msgid "Don't run as a daemon"
+msgstr "Aza alefa toy ny daemon"
+
+#: ../src/manager.c:2979
+msgid "Run in secret mode"
+msgstr "Alefaso manaraka fomba miafinafina"
+
+#: ../src/manager.c:3011
+#, c-format
+msgid "Unrecognized --daemon argument: %s\n"
+msgstr "Tondriky --daemon tsy fantatra: %s\n"
+
+#: ../src/properties.c:305
+msgid "Could not load the main interface"
+msgstr "Tsy afaka naka ny mpanera fototra"
+
+#: ../src/properties.c:307
+msgid "Please make sure that the volume manager is properly installed"
+msgstr "Amarino tsara hoe voapetraka raka ny tokony ho izy ny mpnadrindra kapila"
+
+#: ../src/properties.c:466
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr ""
+"Nisy olana teo am-panombohana ny daemon'ny gnome-volume-manager:\n"
+"%s"
+
+#: ../src/properties.c:497
+msgid "Volume management not supported"
+msgstr "Tsy raisina an-tànana ny fandrindrana kapila"
+
+#: ../src/properties.c:499
+msgid ""
+"The \"hald\" service is required but not currently running. Enable the service and rerun this application, or contact your system administrator.\n"
+"\n"
+"Note: You need Linux kernel 2.6 for volume management to work."
+msgstr ""
+"Ilaina ny sampan'asa \"hald\" nefa tsy mandeha izy izao. Ampiasao io sampan'asa io dia avereno alefa ity rindranasa ity na antsoy ny mpitantana ny rafitrao.\n"
+"Fanamarihana: Mila ny noyau Linux 2.6 vao afaka mampiasa ny fandrindrana kapila."

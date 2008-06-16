@@ -1,0 +1,1067 @@
+# Catalan translation of gnome-volume-manager.
+# Copyright © 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the
+#   gnome-volume-manager package.
+# Jordi Mallach <jordi@sindominio.net>, 2004, 2005, 2006, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-volume-manager 2.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-09-16 21:39+0200\n"
+"PO-Revision-Date: 2007-04-20 07:24+0200\n"
+"Last-Translator: Jordi Mallach <jordi@sindominio.net>\n"
+"Language-Team: Catalan <tradgnome@softcatala.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../gnome-volume-manager.schemas.in.h:1
+msgid "\"Always take this action\" checkbox for Autorun"
+msgstr ""
+"Caixa de comprovació «Realitza aquesta acció sempre» per a l'execució "
+"automàtica"
+
+#: ../gnome-volume-manager.schemas.in.h:2
+msgid "\"Always take this action\" checkbox for iPod Photos"
+msgstr ""
+"Caixa de comprovació «Realitza aquesta acció sempre» per a les fotos de "
+"l'iPod"
+
+#: ../gnome-volume-manager.schemas.in.h:3
+msgid "\"Always take this action\" checkbox for mixed Audio and Data CDs"
+msgstr ""
+"Caixa de comprovació «Realitza aquesta acció sempre» per als CD híbrid "
+"d'àudio i dades."
+
+#: ../gnome-volume-manager.schemas.in.h:4
+msgid "\"Always take this action\" checkbox for photo import from a camera"
+msgstr ""
+"Caixa de comprovació «Realitza aquesta acció sempre» per a la importació de "
+"fotos des d'una càmera"
+
+#: ../gnome-volume-manager.schemas.in.h:5
+msgid "\"Always take this action\" checkbox for photo import from a device"
+msgstr ""
+"Caixa de comprovació «Realitza aquesta acció sempre» per a la importació de "
+"fotos des d'un dispositiu"
+
+#: ../gnome-volume-manager.schemas.in.h:6
+msgid "':' delimited list of paths to check for autoopen files."
+msgstr ""
+"Llista de camins delimitats per «:» on cercar fitxers a obrir automàticament."
+
+#: ../gnome-volume-manager.schemas.in.h:7
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr ""
+"Llista de camins delimitats per «:» on cercar binaris i seqüències "
+"d'autoexecució."
+
+#: ../gnome-volume-manager.schemas.in.h:8
+msgid "Action to take when a camera is plugged in."
+msgstr "Acció a realitzar quan es connecti una càmera."
+
+#: ../gnome-volume-manager.schemas.in.h:9
+msgid "Action to take when a device containing photos is encountered."
+msgstr "Acció a realitzar quan es trobi un dispositiu que contingui fotos."
+
+#: ../gnome-volume-manager.schemas.in.h:10
+msgid "Action to take when a device contains an autorun program/script."
+msgstr ""
+"Acció a realitzar quan un dispositiu contingui un programa/seqüència "
+"d'autoexecució."
+
+#: ../gnome-volume-manager.schemas.in.h:11
+msgid "Action to take when a mixed Audio and Data CD is encountered."
+msgstr "Acció a realitzar quan es trobi un CD híbrid d'àudio i dades."
+
+#: ../gnome-volume-manager.schemas.in.h:12
+msgid "Action to take when an iPod Photo is encountered."
+msgstr "Acció a realitzar quan es trobi un iPod Photo."
+
+#: ../gnome-volume-manager.schemas.in.h:13
+msgid "Audio CD burn command"
+msgstr "Ordre de gravació de CD d'àudio"
+
+#: ../gnome-volume-manager.schemas.in.h:14
+msgid "Automount removable drives"
+msgstr "Munta automàticament les unitats extraïbles"
+
+#: ../gnome-volume-manager.schemas.in.h:15
+msgid "Automount removable media"
+msgstr "Munta automàticament els medis extraïbles"
+
+# FIXME FIXME FIXME (josep)
+#: ../gnome-volume-manager.schemas.in.h:16
+msgid "Autoopen path"
+msgstr "Camí per obrir automàticament"
+
+#: ../gnome-volume-manager.schemas.in.h:17
+msgid "Autorun nautilus"
+msgstr "Executa automàticament el nautilus"
+
+#: ../gnome-volume-manager.schemas.in.h:18
+msgid "Autorun path"
+msgstr "Camí d'autoexecució"
+
+#: ../gnome-volume-manager.schemas.in.h:19
+msgid "CD play command"
+msgstr "Ordre per a reproduir un CD"
+
+#: ../gnome-volume-manager.schemas.in.h:20
+msgid "Command to run when a Palm is connected."
+msgstr "Ordre a executar quan es connecti una palm."
+
+#: ../gnome-volume-manager.schemas.in.h:21
+msgid "Command to run when a PocketPC is connected."
+msgstr "Ordre a executar quan es connecti un PocketPc."
+
+#: ../gnome-volume-manager.schemas.in.h:22
+msgid ""
+"Command to run when a digital camera is connected or media from a digital "
+"camera is inserted."
+msgstr ""
+"Ordre a executar quan s'insereixi una càmera digital o s'insereixi un medi "
+"d'una càmera digital."
+
+#: ../gnome-volume-manager.schemas.in.h:23
+msgid "Command to run when a keyboard is connected."
+msgstr "Ordre a executar quan es connecti un teclat."
+
+#: ../gnome-volume-manager.schemas.in.h:24
+msgid "Command to run when a mouse is connected."
+msgstr "Ordre a executar quan es connecti un ratolí."
+
+#: ../gnome-volume-manager.schemas.in.h:25
+msgid "Command to run when a printer is connected."
+msgstr "Ordre a executar quan es connecti una impressora."
+
+#: ../gnome-volume-manager.schemas.in.h:26
+msgid "Command to run when a scanner is connected."
+msgstr "Ordre a executar quan es connecti un escàner."
+
+#: ../gnome-volume-manager.schemas.in.h:27
+msgid "Command to run when a tablet is connected."
+msgstr "Ordre a executar quan es connecti una tauleta gràfica."
+
+#: ../gnome-volume-manager.schemas.in.h:28
+msgid "Command to run when a video DVD is inserted."
+msgstr "Ordre a executar quan s'insereixi un DVD de vídeo."
+
+#: ../gnome-volume-manager.schemas.in.h:29
+msgid "Command to run when a video VCD is inserted."
+msgstr "Ordre a executar quan s'insereixi un VCD de vídeo."
+
+#: ../gnome-volume-manager.schemas.in.h:30
+msgid "Command to run when a video camera is connected."
+msgstr "Ordre a executar quan es connecti una càmera de vídeo."
+
+#: ../gnome-volume-manager.schemas.in.h:31
+msgid "Command to run when a web camera is connected."
+msgstr "Ordre a executar quan es connecti una càmera web."
+
+#: ../gnome-volume-manager.schemas.in.h:32
+msgid "Command to run when an audio CD is inserted."
+msgstr "Ordre a executar quan s'insereixi un CD d'àudio."
+
+#: ../gnome-volume-manager.schemas.in.h:33
+msgid "Command to run when an iPod is connected."
+msgstr "Ordre a executar quan es connecti un iPod."
+
+#: ../gnome-volume-manager.schemas.in.h:34
+msgid "Command to run when the user wishes to burn a Data CD."
+msgstr "Ordre a executar quan l'usuari vulgui gravar un CD de dades."
+
+#: ../gnome-volume-manager.schemas.in.h:35
+msgid "Command to run when the user wishes to burn an Audio CD."
+msgstr "Ordre a executar quan l'usuari vulgui gravar un CD d'àudio."
+
+#: ../gnome-volume-manager.schemas.in.h:36
+msgid "DVD play command"
+msgstr "Ordre per a reproduir un DVD"
+
+#: ../gnome-volume-manager.schemas.in.h:37
+msgid "Data CD burn command"
+msgstr "Ordre per a gravar un CD de dades"
+
+#: ../gnome-volume-manager.schemas.in.h:38
+msgid "Low Disk Space notification threshold"
+msgstr "Llindar per a la notificació de poc espai de disc"
+
+#: ../gnome-volume-manager.schemas.in.h:39
+msgid "Open nautilus on removeable media insert."
+msgstr "Obre el nautilus quan s'insereixin medis extraïbles."
+
+#: ../gnome-volume-manager.schemas.in.h:40
+msgid "Perform autoopen"
+msgstr "Obre automaticament"
+
+#: ../gnome-volume-manager.schemas.in.h:41
+msgid "Perform autorun"
+msgstr "Realitza l'execució automàtica"
+
+#: ../gnome-volume-manager.schemas.in.h:42
+msgid "Photo management command"
+msgstr "Ordre per a gestionar fotografies"
+
+#: ../gnome-volume-manager.schemas.in.h:43
+msgid "Play inserted audio CD's"
+msgstr "Reprodueix els CD d'àudio inserits"
+
+#: ../gnome-volume-manager.schemas.in.h:44
+msgid "Play inserted video DVDs"
+msgstr "Reprodueix els DVD de vídeo inserits"
+
+#: ../gnome-volume-manager.schemas.in.h:45
+msgid "Play inserted video VCDs"
+msgstr "Reprodueix els VCD de vídeo inserits"
+
+#: ../gnome-volume-manager.schemas.in.h:46
+msgid "Run Palm-sync program"
+msgstr "Executa un programa de sincronització de Palms"
+
+#: ../gnome-volume-manager.schemas.in.h:47
+msgid "Run PocketPC-sync program"
+msgstr "Executa el programa PocketPC-sync"
+
+#: ../gnome-volume-manager.schemas.in.h:48
+msgid "Run a program to burn CDs/DVDs"
+msgstr "Executa un programa per a gravar CD/DVD"
+
+#: ../gnome-volume-manager.schemas.in.h:49
+msgid "Run iPod program"
+msgstr "Executa un programa per a l'iPod"
+
+#: ../gnome-volume-manager.schemas.in.h:50
+msgid "Run keyboard program"
+msgstr "Executa un programa per al teclat"
+
+#: ../gnome-volume-manager.schemas.in.h:51
+msgid "Run mouse program"
+msgstr "Executa un programa per al ratolí"
+
+#: ../gnome-volume-manager.schemas.in.h:52
+msgid "Run photo management command"
+msgstr "Executa l'ordre de gestió de fotografies"
+
+#: ../gnome-volume-manager.schemas.in.h:53
+msgid "Run printer program"
+msgstr "Executa un programa per a la impressora"
+
+#: ../gnome-volume-manager.schemas.in.h:54
+msgid "Run scanner program"
+msgstr "Executa un programa per a l'escàner"
+
+#: ../gnome-volume-manager.schemas.in.h:55
+msgid "Run tablet program"
+msgstr "Executa un programa per a la tauleta gràfica"
+
+#: ../gnome-volume-manager.schemas.in.h:56
+msgid "Run video editing program"
+msgstr "Executa un programa d'edició de vídeo"
+
+#: ../gnome-volume-manager.schemas.in.h:57
+msgid "Run webcam stream display program"
+msgstr "Executa el programa de visualització de flux de càmera web"
+
+#: ../gnome-volume-manager.schemas.in.h:58
+msgid ""
+"The threshold value for whether or not to toggle the notification on, based "
+"on the amount of additional space used since the last check."
+msgstr ""
+"El valor del llindar per si s'ha de posar la notificació, basat en l'espai "
+"de disc addicional utilitzat des de l'última comprovació."
+
+#: ../gnome-volume-manager.schemas.in.h:59
+msgid "Threshold for notification of increased disk usage"
+msgstr "Llindar per a la notificació si s'incrementa l'ús del disc"
+
+#: ../gnome-volume-manager.schemas.in.h:60
+msgid "Threshold percentage for notifying the user of low disk space."
+msgstr ""
+"Llindar (en tant per cent) per notificar a l'usuari de que hi ha poc espai "
+"de disc."
+
+#: ../gnome-volume-manager.schemas.in.h:61
+msgid "VCD play command"
+msgstr "Ordre per a reproduir un VCD"
+
+#: ../gnome-volume-manager.schemas.in.h:62
+msgid "Whether autoopen files should be opened on newly mounted media."
+msgstr "Si s'han d'obrir fitxers automàticament en muntar medis nous."
+
+#: ../gnome-volume-manager.schemas.in.h:63
+msgid ""
+"Whether autorun programs (binaries and scripts located in 'autorun_path') "
+"are run on newly mounted media."
+msgstr ""
+"Si s'han d'executar els programes d'execució automàtica (binaris i scripts "
+"ubicats en «autorun_path») en muntar medis nous."
+
+#: ../gnome-volume-manager.schemas.in.h:64
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"drives when they are inserted."
+msgstr ""
+"Si el gnome-volume-manager hauria de muntar automàticament les unitats "
+"d'emmagatzemament extraïble quan s'insereixin."
+
+#: ../gnome-volume-manager.schemas.in.h:65
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"media when they are inserted."
+msgstr ""
+"Si el gnome-volume-manager hauria de muntar automàticament els medis "
+"d'emmagatzemament extraïble quan s'insereixin"
+
+#: ../gnome-volume-manager.schemas.in.h:66
+msgid ""
+"Whether, when a Palm is connected, gnome-volume-manager should run "
+"'autopalmsync_command'."
+msgstr ""
+"Si el gnome-volume-manager hauria d'executar «autopalmsync_command» quan es "
+"connecti una Palm."
+
+#: ../gnome-volume-manager.schemas.in.h:67
+msgid ""
+"Whether, when a PocketPC is connected, gnome-volume-manager should run "
+"'autopocketpc_command'."
+msgstr ""
+"Si el gnome-volume-manager hauria d'executar «autopocketpc_command» quan es "
+"connecti un PocketPC."
+
+#: ../gnome-volume-manager.schemas.in.h:68
+msgid ""
+"Whether, when a blank CD or DVD is inserted, gnome-volume-manager should run "
+"one of the autoburn commands."
+msgstr ""
+"Si el gnome-volume-manager hauria d'executar una de les ordres de gravació "
+"automàtica quan s'insereixi un CD o DVD buit."
+
+#: ../gnome-volume-manager.schemas.in.h:69
+msgid ""
+"Whether, when a digital camera is connected or media from a digital camera "
+"is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr ""
+"Si el gnome-volume-manager hauria d'executar «autophoto_command» quan "
+"s'insereixi una càmera digital o medis d'una càmera digital."
+
+#: ../gnome-volume-manager.schemas.in.h:70
+msgid ""
+"Whether, when a digital video camera is connected, gnome-volume-manager "
+"should run 'autovideocam_command'."
+msgstr ""
+"Si el gnome-volume-manager hauria d'executar «autovideocam_command» quan es "
+"connecti una càmera de vídeo digital."
+
+#: ../gnome-volume-manager.schemas.in.h:71
+msgid ""
+"Whether, when a keyboard is connected, gnome-volume-manager should run "
+"'autokeyboard_command'."
+msgstr ""
+"Si el gnome-volume-manager hauria d'executar «autokeyboard_command» quan es "
+"connecti un teclat."
+
+#: ../gnome-volume-manager.schemas.in.h:72
+msgid ""
+"Whether, when a mouse is connected, gnome-volume-manager should run "
+"'automouse_command'."
+msgstr ""
+"Si el gnome-volume-manager hauria d'executar «automouse_command» quan es "
+"connecti un ratolí."
+
+#: ../gnome-volume-manager.schemas.in.h:73
+msgid ""
+"Whether, when a printer is connected, gnome-volume-manager should run "
+"'autoprinter_command'."
+msgstr ""
+"Si el gnome-volume-manager hauria d'executar «autoprinter_command» quan es "
+"connecti una impressora."
+
+#: ../gnome-volume-manager.schemas.in.h:74
+msgid ""
+"Whether, when a scanner is connected, gnome-volume-manager should run "
+"'autoscanner_command'."
+msgstr ""
+"Si el gnome-volume-manager hauria d'executar «autoscanner_command» quan es "
+"connecti un escàner."
+
+#: ../gnome-volume-manager.schemas.in.h:75
+msgid ""
+"Whether, when a tablet is connected, gnome-volume-manager should run "
+"'autotablet_command'."
+msgstr ""
+"Si el gnome-volume-manager hauria d'executar «autotablet_command» quan es "
+"connecti una tauleta gràfica."
+
+#: ../gnome-volume-manager.schemas.in.h:76
+msgid ""
+"Whether, when a video DVD is inserted, gnome-volume-manager should run "
+"'autoplay_dvd_command'."
+msgstr ""
+"Si el gnome-volume-manager hauria d'executar «autoplay_dvd_command» quan "
+"s'insereixi un DVD de vídeo."
+
+#: ../gnome-volume-manager.schemas.in.h:77
+msgid ""
+"Whether, when a video VCD is inserted, gnome-volume-manager should run "
+"'autoplay_vcd_command'."
+msgstr ""
+"Si el gnome-volume-manager hauria d'executar «autoplay_vcd_command» quan "
+"s'insereixi un VCD de vídeo."
+
+#: ../gnome-volume-manager.schemas.in.h:78
+msgid ""
+"Whether, when a web camera is connected, gnome-volume-manager should run "
+"'autowebcam_command'."
+msgstr ""
+"Si el gnome-volume-manager hauria d'executar «autowebcam_command» quan es "
+"connecti una càmera web."
+
+#: ../gnome-volume-manager.schemas.in.h:79
+msgid ""
+"Whether, when an audio CD is inserted, gnome-volume-manager should run "
+"'autoplay_cda_command'."
+msgstr ""
+"Si el gnome-volume-manager hauria d'executar «autoplay_cda_command» quan "
+"s'insereixi un CD d'àudio."
+
+#: ../gnome-volume-manager.schemas.in.h:80
+msgid ""
+"Whether, when an iPod is connected, gnome-volume-manager should run "
+"'autoipod_command'."
+msgstr ""
+"Si el gnome-volume-manager hauria d'executar «autipod_command» quan es "
+"connecti un iPod."
+
+#: ../gnome-volume-manager.schemas.in.h:81
+msgid "iPod sync command"
+msgstr "ordre per a sincronitzar l'iPod"
+
+#: ../gnome-volume-manager.schemas.in.h:82
+msgid "keyboard command"
+msgstr "ordre per al teclat"
+
+#: ../gnome-volume-manager.schemas.in.h:83
+msgid "mouse command"
+msgstr "ordre per al ratolí"
+
+#: ../gnome-volume-manager.schemas.in.h:84
+msgid "palm sync command"
+msgstr "ordre per a sincronitzar la palm"
+
+#: ../gnome-volume-manager.schemas.in.h:85
+msgid "printer command"
+msgstr "ordre per a la impressora"
+
+#: ../gnome-volume-manager.schemas.in.h:86
+msgid "scanner command"
+msgstr "ordre per a l'escàner"
+
+#: ../gnome-volume-manager.schemas.in.h:87
+msgid "tablet command"
+msgstr "ordre per a la tauleta gràfica"
+
+#: ../gnome-volume-manager.schemas.in.h:88
+msgid "video camera command"
+msgstr "ordre per a la càmera de vídeo"
+
+#: ../gnome-volume-manager.schemas.in.h:89
+msgid "web camera command"
+msgstr "ordre per a la càmera web"
+
+#: ../gnome-volume-manager.desktop.in.in.h:1
+msgid "Volume Manager"
+msgstr "Gestor de volums"
+
+#: ../gnome-volume-manager.desktop.in.in.h:2
+msgid "Volume manager for removable drives and media"
+msgstr "Gestor de volums per a unitats i medis extraïbles"
+
+#: ../gnome-volume-properties.desktop.in.h:1
+msgid "Configure management of removable drives and media"
+msgstr "Configureu la gestió d'unitats i medis extraïbles"
+
+#: ../gnome-volume-properties.desktop.in.h:2
+msgid "Removable Drives and Media"
+msgstr "Unitats i medis extraïbles"
+
+#: ../gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: ../gnome-volume-properties.glade.h:2
+msgid "<b>Audio CD Discs</b>"
+msgstr "<b>Discs CD d'àudio</b>"
+
+#: ../gnome-volume-properties.glade.h:3
+msgid "<b>Blank CD and DVD Discs</b>"
+msgstr "<b>CD o DVD buits</b>"
+
+#: ../gnome-volume-properties.glade.h:4
+msgid "<b>Digital Camera</b>"
+msgstr "<b>Càmera digital</b>"
+
+#: ../gnome-volume-properties.glade.h:5
+msgid "<b>Digital Video Camera</b>"
+msgstr "<b>Càmera de vídeo digital</b>"
+
+#: ../gnome-volume-properties.glade.h:6
+msgid "<b>Keyboards</b>"
+msgstr "<b>Teclats</b>"
+
+#: ../gnome-volume-properties.glade.h:7
+msgid "<b>Mice</b>"
+msgstr "<b>Ratolins</b>"
+
+#: ../gnome-volume-properties.glade.h:8
+msgid "<b>Palm™</b>"
+msgstr "<b>Palm™</b>"
+
+#: ../gnome-volume-properties.glade.h:9
+msgid "<b>PocketPC</b>"
+msgstr "<b>PocketPC</b>"
+
+#: ../gnome-volume-properties.glade.h:10
+msgid "<b>Portable Music Players</b>"
+msgstr "<b>Reproductors portàtils de música</b>"
+
+#: ../gnome-volume-properties.glade.h:11
+msgid "<b>Printers</b>"
+msgstr "<b>Impressores</b>"
+
+#: ../gnome-volume-properties.glade.h:12
+msgid "<b>Removable Storage</b>"
+msgstr "<b>Emmagatzemament extraïble</b>"
+
+#: ../gnome-volume-properties.glade.h:13
+msgid "<b>Scanners</b>"
+msgstr "<b>Escàners</b>"
+
+#: ../gnome-volume-properties.glade.h:14
+msgid "<b>Tablets</b>"
+msgstr "<b>Tablets</b>"
+
+#: ../gnome-volume-properties.glade.h:15
+msgid "<b>Video DVD Discs</b>"
+msgstr "<b>Discs DVD de vídeo</b>"
+
+#: ../gnome-volume-properties.glade.h:16
+msgid "<b>Web Camera</b>"
+msgstr "<b>Càmera web</b>"
+
+#: ../gnome-volume-properties.glade.h:17
+msgid "Auto-_open files on new drives and media"
+msgstr "_Obre automàticament fitxers en unitats i medis nous"
+
+#: ../gnome-volume-properties.glade.h:18
+msgid "Automatically run a program when a USB _keyboard is connected"
+msgstr "Executa un programa automàticament quan es connecti un te_clat USB"
+
+#: ../gnome-volume-properties.glade.h:19
+msgid "Automatically run a program when a USB _mouse is connected"
+msgstr "Executa un progra_ma automàticament quan es connecti un ratolí USB"
+
+#: ../gnome-volume-properties.glade.h:20
+msgid "Automatically run a program when a _printer is connected"
+msgstr "Executa un programa automàticament quan es connecti una im_pressora"
+
+#: ../gnome-volume-properties.glade.h:21
+msgid "Automatically run a program when a _scanner is connected"
+msgstr "Executa un programa automàticament quan es connecti un e_scàner"
+
+#: ../gnome-volume-properties.glade.h:22
+msgid "Automatically run a program when a _tablet is connected"
+msgstr ""
+"Executa un programa automàticament quan es connecti un _tauleta gràfica"
+
+#: ../gnome-volume-properties.glade.h:23
+msgid "Browse _removable media when inserted"
+msgstr "Navega els medis ext_raïbles quan s'insereixin"
+
+#: ../gnome-volume-properties.glade.h:24
+msgid "C_ommand:"
+msgstr "_Ordre:"
+
+#: ../gnome-volume-properties.glade.h:25
+msgid "Cameras"
+msgstr "Càmeres"
+
+#: ../gnome-volume-properties.glade.h:26
+msgid "Comman_d:"
+msgstr "Or_dre:"
+
+#: ../gnome-volume-properties.glade.h:27
+msgid "Command for A_udio CDs:"
+msgstr "Ordre per als CD d'à_udio:"
+
+#: ../gnome-volume-properties.glade.h:28
+msgid "Command for _Data CDs: "
+msgstr "Ordre per als CD de _dades: "
+
+#: ../gnome-volume-properties.glade.h:29
+msgid "Drives and Media Preferences"
+msgstr "Preferències de les unitats i medis"
+
+#: ../gnome-volume-properties.glade.h:30
+msgid "Input Devices"
+msgstr "Dispositius d'entrada"
+
+#: ../gnome-volume-properties.glade.h:31
+msgid "Mount removable media when _inserted"
+msgstr "Munta els medis extraïbles quan s'_insereixin"
+
+#: ../gnome-volume-properties.glade.h:32
+msgid "Multimedia"
+msgstr "Multimèdia"
+
+#: ../gnome-volume-properties.glade.h:33
+msgid "PDAs"
+msgstr "PDA"
+
+#: ../gnome-volume-properties.glade.h:34
+msgid "Play _audio CD discs when inserted"
+msgstr "Reprodueix els discs CD d'àudio quan s'insereixin"
+
+#: ../gnome-volume-properties.glade.h:35
+msgid "Play _music files when connected"
+msgstr "Reprodueix els fitxers de _música quan es connecti"
+
+#: ../gnome-volume-properties.glade.h:36
+msgid "Play _video DVD discs when inserted"
+msgstr "Reprodueix els discs DVD de _vídeo quan s'insereixin"
+
+#: ../gnome-volume-properties.glade.h:37
+msgid "Printers & Scanners"
+msgstr "Impressores i escàners"
+
+#: ../gnome-volume-properties.glade.h:38
+msgid "Removable Drives and Media Preferences"
+msgstr "Preferències de les unitats i medis extraïbles"
+
+#: ../gnome-volume-properties.glade.h:39
+msgid "Select program to burn audio CDs"
+msgstr "Seleccioneu un programa per a gravar CD d'àudio"
+
+#: ../gnome-volume-properties.glade.h:40
+msgid "Select program to burn data CDs"
+msgstr "Seleccioneu un programa per a gravar CD de dades"
+
+#: ../gnome-volume-properties.glade.h:41
+msgid "Select program to edit videos"
+msgstr "Seleccioneu un programa per a editar vídeos"
+
+#: ../gnome-volume-properties.glade.h:42
+msgid "Select program to import photos"
+msgstr "Seleccioneu un programa per a importar fotografies"
+
+#: ../gnome-volume-properties.glade.h:43
+msgid "Select program to play DVDs"
+msgstr "Seleccioneu un programa per a reproduir DVD"
+
+#: ../gnome-volume-properties.glade.h:44
+msgid "Select program to play audio CDs"
+msgstr "Seleccioneu un programa per a reproduir CD d'àudio"
+
+#: ../gnome-volume-properties.glade.h:45
+msgid "Select program to play music files"
+msgstr "Seleccioneu un programa per a reproduir fitxers de música"
+
+#: ../gnome-volume-properties.glade.h:46
+msgid "Select program to run when a keyboard is plugged in"
+msgstr "Seleccioneu un programa a executar quan es connecti un teclat"
+
+#: ../gnome-volume-properties.glade.h:47
+msgid "Select program to run when a mouse is plugged in"
+msgstr "Seleccioneu un programa a executar quan es connecti un ratolí"
+
+#: ../gnome-volume-properties.glade.h:48
+msgid "Select program to run when a printer is plugged in"
+msgstr "Seleccioneu un programa a executar quan es connecti una impressora"
+
+#: ../gnome-volume-properties.glade.h:49
+msgid "Select program to run when a scanner is plugged in"
+msgstr "Seleccioneu un programa a executar quan es connecti un escàner"
+
+#: ../gnome-volume-properties.glade.h:50
+msgid "Select program to run when a tablet is plugged in"
+msgstr ""
+"Seleccioneu un programa a executar quan es connecti una tauleta gràfica"
+
+#: ../gnome-volume-properties.glade.h:51
+msgid "Select program to sync Palm devices"
+msgstr "Seleccioneu un programa per a sincronitzar la Palm"
+
+#: ../gnome-volume-properties.glade.h:52
+msgid "Storage"
+msgstr "Emmagatzemament"
+
+#: ../gnome-volume-properties.glade.h:53
+msgid "Sync PocketP_C devices when connected"
+msgstr "Sincronitza els dispositius PocketP_C quan es connectin"
+
+#: ../gnome-volume-properties.glade.h:54
+msgid "Sync _Palm™ devices when connected"
+msgstr "Sincronitza els dispositius Palm™ quan es connectin"
+
+#: ../gnome-volume-properties.glade.h:55
+msgid "_Auto-run programs on new drives and media"
+msgstr "Executa _automàticament programes a les unitats i medis noves"
+
+#: ../gnome-volume-properties.glade.h:56
+msgid "_Burn a CD or DVD when a blank disc is inserted"
+msgstr "_Grava un CD o DVD quan s'insereixi un disc en blanc"
+
+#: ../gnome-volume-properties.glade.h:57
+msgid "_Command:"
+msgstr "_Ordre:"
+
+#: ../gnome-volume-properties.glade.h:58
+msgid "_Edit video when connected"
+msgstr "_Edita el vídeo quan es connecti"
+
+#: ../gnome-volume-properties.glade.h:59
+msgid "_Import digital photographs when connected"
+msgstr "_Importa les fotografies digitals quan es connecti"
+
+#: ../gnome-volume-properties.glade.h:60
+msgid "_Mount removable drives when hot-plugged"
+msgstr "_Munta les unitats extraïbles quan es connectin en calent"
+
+#: ../src/manager.c:221 ../src/manager.c:226 ../src/manager.c:231
+#: ../src/manager.c:236 ../src/manager.c:242 ../src/manager.c:248
+#: ../src/manager.c:254 ../src/manager.c:260
+msgid "Ig_nore"
+msgstr "_Ignora-ho"
+
+#: ../src/manager.c:222
+msgid "_Allow Auto-Run"
+msgstr "Permet l'_autoexecució"
+
+#: ../src/manager.c:227
+msgid "_Open"
+msgstr "_Obre"
+
+#: ../src/manager.c:232 ../src/manager.c:238 ../src/manager.c:243
+msgid "Import _Photos"
+msgstr "_Importa les fotos"
+
+#: ../src/manager.c:237
+msgid "_Open Folder"
+msgstr "_Obre la carpeta"
+
+#: ../src/manager.c:244
+msgid "Manage _Music"
+msgstr "Gestiona la _música"
+
+#: ../src/manager.c:249
+msgid "_Browse Files"
+msgstr "_Navega els fitxers"
+
+#: ../src/manager.c:250
+msgid "_Play CD"
+msgstr "Re_produeix el CD"
+
+#: ../src/manager.c:255
+msgid "Make _Audio CD"
+msgstr "Cre_a un CD d'àudio"
+
+#: ../src/manager.c:256
+msgid "Make _Data CD"
+msgstr "Crea un C_D de dades"
+
+#: ../src/manager.c:261
+msgid "Make _DVD"
+msgstr "Crea un _DVD"
+
+#: ../src/manager.c:314
+msgid "Auto-Run Confirmation"
+msgstr "Confirmació de l'autoexecució"
+
+#: ../src/manager.c:315
+msgid "Auto-run capability detected."
+msgstr "S'ha detectat la capacitat d'autoexecució."
+
+#: ../src/manager.c:316
+msgid "Would you like to allow <b>'${0}'</b> to run?"
+msgstr "Voleu permetre que s'executi <b>«${0}»</b>?"
+
+#: ../src/manager.c:321
+msgid "Auto-Open Confirmation"
+msgstr "Confirmació d'obrir automàticament"
+
+#: ../src/manager.c:322
+msgid "Auto-Open capability detected."
+msgstr "S'ha detectat la capacitat d'obrir automàticament."
+
+#: ../src/manager.c:323
+msgid "Would you like to open <b>'${0}'</b>?"
+msgstr "Voleu obrir <b>«${0}»</b>?"
+
+#: ../src/manager.c:328 ../src/manager.c:335
+msgid "Camera Import"
+msgstr "Importació de càmera"
+
+#: ../src/manager.c:329 ../src/manager.c:336
+msgid "A camera has been detected."
+msgstr "S'ha detectat una càmera"
+
+#: ../src/manager.c:330 ../src/manager.c:337
+msgid ""
+"There are photos on the camera. Would you like to add these pictures to your "
+"album?"
+msgstr ""
+"Hi ha fotografies a la càmera connectada. Voleu afegir aquestes fotografies "
+"al vostre àlbum?"
+
+#: ../src/manager.c:331 ../src/manager.c:338 ../src/manager.c:345
+#: ../src/manager.c:352 ../src/manager.c:359
+msgid "_Always perform this action"
+msgstr "Re_alitza sempre aquesta acció"
+
+#: ../src/manager.c:342
+msgid "Photo Import"
+msgstr "Importació de fotos"
+
+#: ../src/manager.c:343
+msgid "A photo card has been detected."
+msgstr "S'ha detectat una targeta de fotografies"
+
+#: ../src/manager.c:344
+msgid ""
+"There are photos on the card. Would you like to add these pictures to your "
+"album?"
+msgstr ""
+"Hi ha fotografies a la targeta. Voleu afegir aquestes fotografies al vostre "
+"àlbum?"
+
+#: ../src/manager.c:349
+msgid "Photos and Music"
+msgstr "Fotos i música"
+
+#: ../src/manager.c:350
+msgid "Photos were found on your music device."
+msgstr "S'han trobat fotos al vostre dispositiu de música."
+
+#: ../src/manager.c:351
+msgid "Would you like to import the photos or manage its music?"
+msgstr "Voleu importar les fotos o gestionar la música?"
+
+#: ../src/manager.c:356
+msgid "Mixed Audio and Data CD"
+msgstr "CD mixte d'àudio i dades"
+
+#: ../src/manager.c:357
+msgid "The CD in the drive contains both music and files."
+msgstr "El CD a la unitat conté música i fitxers."
+
+#: ../src/manager.c:358
+msgid "Would you like to listen to music or browse the files?"
+msgstr "Voleu escoltar la música o navegar pels fitxers?"
+
+#: ../src/manager.c:363
+msgid "Blank CD Inserted"
+msgstr "S'ha inserit un CD en blanc"
+
+#: ../src/manager.c:364 ../src/manager.c:371
+msgid "You have inserted a blank disc."
+msgstr "Heu inserit un disc buit."
+
+#: ../src/manager.c:365 ../src/manager.c:372
+msgid "What would you like to do?"
+msgstr "Què voleu fer?"
+
+#: ../src/manager.c:370
+msgid "Blank DVD Inserted"
+msgstr "S'ha inserit un DVD en blanc"
+
+#: ../src/manager.c:3566
+#, c-format
+msgid "%d%% of the disk space on %s is in use"
+msgstr "S'utilitza el %d%% d'espai de disc de %s"
+
+#: ../src/manager.c:3569
+msgid "Low Disk Space"
+msgstr "Poc espai al disc"
+
+#: ../src/manager.c:3690
+msgid "Print version and exit"
+msgstr "Mostra la versió i surt"
+
+#: ../src/manager.c:3692
+msgid "Run as a daemon"
+msgstr "Executa com a dimoni"
+
+#: ../src/manager.c:3694
+msgid "Don't run as a daemon"
+msgstr "No executis com a dimoni"
+
+#: ../src/manager.c:3696
+msgid "Run in secret mode"
+msgstr "Executa en mode secret"
+
+#: ../src/manager.c:3728
+#, c-format
+msgid "Unrecognized --daemon argument: %s\n"
+msgstr "No s'ha reconegut l'argument de --daemon: %s\n"
+
+#: ../src/properties.c:318
+msgid "Could not load the main interface"
+msgstr "No s'ha pogut carregar la interfície principal"
+
+#: ../src/properties.c:320
+msgid "Please make sure that the volume manager is properly installed"
+msgstr "Assegureu-vos que el gestor de volums està instal·lat correctament"
+
+#: ../src/properties.c:479
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr ""
+"S'ha produït un error en iniciar el dimoni gnome-volume-manager:\n"
+"%s"
+
+#: ../src/properties.c:510
+msgid "Volume management not supported"
+msgstr "La gestió de volums no està implementada"
+
+#: ../src/properties.c:512
+msgid ""
+"The \"hald\" service is required but not currently running. Enable the "
+"service and rerun this application, or contact your system administrator."
+msgstr ""
+"Es requereix el servei «hald» però no s'està executant actualment. Habiliteu "
+"el servei i torneu a executar aquesta aplicació, o contacteu amb el vostre "
+"administrador de sistemes."
+
+#~ msgid "Choose Disc Type"
+#~ msgstr "Seleccioneu el tipus de disc"
+
+#~ msgid ""
+#~ "The threshold value for whether or not to toggle the notification off, "
+#~ "based on the amount of space freed up by the user since the last check."
+#~ msgstr ""
+#~ "El valor del llindar per si s'ha de treure la notificació, basat en "
+#~ "l'espai de disc que s'hagi alliberat des de l'última comprovació."
+
+#~ msgid "Threshold for disk space being freed up, to toggle notification"
+#~ msgstr ""
+#~ "El valor del llindar en alliberar espai de disc, per treure la notificació"
+
+#~ msgid "<b>iPod™</b>"
+#~ msgstr "<b>iPod™</b>"
+
+#~ msgid "Select program to sync iPod"
+#~ msgstr "Seleccioneu un programa per a sincronitzar l'iPod"
+
+#~ msgid "Command to run when the eject button on a optical drive is pressed."
+#~ msgstr ""
+#~ "Ordre a executar quan es prem el botó d'expulsió d'una unitat òptica."
+
+#~ msgid "Comma_nd:"
+#~ msgstr "O_rdre:"
+
+#~ msgid "Command:"
+#~ msgstr "Ordre:"
+
+#~ msgid ""
+#~ "Action to take when an iPod Photo is encountered (syncronise music or "
+#~ "import photos)."
+#~ msgstr ""
+#~ "Acció a realitzar quan es troba un iPod Photo (sincronitza la música o "
+#~ "importa les fotografies)."
+
+#~ msgid "Command to run when the user wishes to burn a Photo CD."
+#~ msgstr "Ordre a executar quan l'usuari vol gravar un CD de fotografies."
+
+#~ msgid "Photo CD burn command"
+#~ msgstr "Ordre per a gravar un CD de fotografies"
+
+#~ msgid "Command for _Photo CDs:"
+#~ msgstr "Ordre per als CD de _fotografies:"
+
+#~ msgid "Select program to burn photo CDs"
+#~ msgstr "Seleccioneu un programa per a gravar CD de fotografies"
+
+#~ msgid "_Run Command"
+#~ msgstr "_Executa l'ordre"
+
+#~ msgid "_Sync Music"
+#~ msgstr "_Sincronitza la música"
+
+#~ msgid "_Play Tracks"
+#~ msgstr "Re_produeix les peces"
+
+#~ msgid "Burn _Photo CD"
+#~ msgstr "Grava un CD de fotografies"
+
+#~ msgid "Burn _Photo DVD"
+#~ msgstr "Grava un _Photo DVD"
+
+#~ msgid "Burn _Data DVD"
+#~ msgstr "Grava un _DVD de dades"
+
+#~ msgid "Run command from inserted media?"
+#~ msgstr "Voleu executar l'ordre del medi inserit?"
+
+#~ msgid "Do you want to run the file \"%s\"?"
+#~ msgstr "Voleu executar el fitxer «%s»?"
+
+#~ msgid "Import photos from camera?"
+#~ msgstr "Voleu importar les fotos de la càmera?"
+
+#~ msgid "Import photos from device?"
+#~ msgstr "Voleu importar les fotografies del dispositiu?"
+
+#~ msgid "Import photos or music?"
+#~ msgstr "Voleu importar les fotografies o la música"
+
+#~ msgid ""
+#~ "There are both photos and music on the plugged-in iPod. Would you like to "
+#~ "import the photos or would you prefer to sync your music?"
+#~ msgstr ""
+#~ "Hi ha fotografies i música a l'iPod connectat. Voleu importar aquestes "
+#~ "fotografies o preferiu sincronitzar la vostra música?"
+
+#~ msgid "Browse files or play tracks from disc?"
+#~ msgstr "Voleu navegar pels fitxers o reproduir les peces del disc?"
+
+#~ msgid "This CD contains both music and data. What would you like to do?"
+#~ msgstr "Aquest CD conté música i dades. Què voleu fer?"
+
+#~ msgid "Burn audio, photo, or data CD?"
+#~ msgstr "Voleu escriure un CD d'àudio, fotos o dades?"
+
+#~ msgid "Would you like to burn an audio, photo, or data CD?"
+#~ msgstr "Voleu escriure un CD d'àudio, fotos o dades?"
+
+#~ msgid "Burn photo or data DVD?"
+#~ msgstr "Voleu escriure un DVD de fotos o dades?"
+
+#~ msgid "*"
+#~ msgstr "*"
+
+#~ msgid "Co_mmand:"
+#~ msgstr "_Ordre:"
+
+#~ msgid "Perform action on _blank discs when inserted"
+#~ msgstr "Realitza una acció sobre els discs _buits quan s'insereixen"
+
+#~ msgid "The file \"%s\" on the inserted media is an auto-runfile."
+#~ msgstr "El fitxer «%s» al medi inserit és un fitxer d'execució automàtica."
+
+#~ msgid ""
+#~ "There are both audio tracks and data files on the inserted disc. Choose "
+#~ "if you want to play the audio tracks to listen to music or browse the "
+#~ "files to manage the stored data."
+#~ msgstr ""
+#~ "Hi ha peces d'àudio i fitxers de dades al disc inserit. Seleccioneu si "
+#~ "voleu reproduir les peces d'àudio per a escoltar música o navegar pels "
+#~ "fitxers per gestionar les dades emmagatzemades."
+
+#~ msgid "Play DVD Videos when inserted"
+#~ msgstr "Reprodueix els DVD de vídeo quan s'insereixen"
+
+#~ msgid "Play a_udio CDs when inserted"
+#~ msgstr "Reprodueix els CD d'à_udio quan s'insereixen"

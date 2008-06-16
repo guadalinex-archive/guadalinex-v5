@@ -1,0 +1,1071 @@
+# Serbian translation of gnome-volume-manager
+# Courtesy of Prevod.org team (http://prevod.org/) -- 2003, 2004, 2005, 2006, 2007.
+#
+# This file is distributed under the same license as the gnome-volume-manager package.
+#
+# Maintainer: Данило Шеган <dsegan@gmx.net>
+# Reviewed on 2005-09-03 by Андрија Зарић <andrija@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-volume-manager\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-09-12 04:43+0200\n"
+"PO-Revision-Date: 2006-03-11 17:15+0100\n"
+"Last-Translator: Слободан Д. Средојевић <slobo@akrep.be>\n"
+"Language-Team: Serbian (sr) <gnom@prevod.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3;    plural=n%10==1 && n%100!=11 ? 0 :    n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+# andrija: „Увек уради ово“ и „Ово уради...“ изазивају мучнину.
+# andrija: Молим добре људе да промене у нешто што боље звучи 
+# andrija: Трудио сам се да смислим безлично, можда нешто са
+# andrija: „предузимањем“ (ближе је take this acition), али је мени стао мозак :(
+# andrija: „Увек уради ово“ се јавља још једном тамо негде доле
+#: ../gnome-volume-manager.schemas.in.h:1
+msgid "\"Always take this action\" checkbox for Autorun"
+msgstr "„Увек уради ово“ поље за потврду за самопокретање"
+
+#: ../gnome-volume-manager.schemas.in.h:2
+msgid "\"Always take this action\" checkbox for iPod Photos"
+msgstr "„Увек уради ово“ поље за потврду за iPod Photo"
+
+#: ../gnome-volume-manager.schemas.in.h:3
+msgid "\"Always take this action\" checkbox for mixed Audio and Data CDs"
+msgstr "„Увек уради ово“ поље за потврду за ЦД са музиком и подацима"
+
+#: ../gnome-volume-manager.schemas.in.h:4
+msgid "\"Always take this action\" checkbox for photo import from a camera"
+msgstr "„Увек уради ово“ поље за потврду за увоз фотографија са апарата"
+
+#: ../gnome-volume-manager.schemas.in.h:5
+msgid "\"Always take this action\" checkbox for photo import from a device"
+msgstr "„Увек уради ово“ поље за потврду за увоз фотографија са уређаја"
+
+#: ../gnome-volume-manager.schemas.in.h:6
+msgid "':' delimited list of paths to check for autoopen files."
+msgstr ""
+"Списак путања раздвојених са „:“ у којима се траже датотеке за самостално "
+"отварање."
+
+#: ../gnome-volume-manager.schemas.in.h:7
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr ""
+"Списак путања раздвојених са „:“ у којима се траже програми и скрипте за "
+"самопокретање."
+
+#: ../gnome-volume-manager.schemas.in.h:8
+msgid "Action to take when a camera is plugged in."
+msgstr "Ово урадити када се прикључи фотоапарат."
+
+#: ../gnome-volume-manager.schemas.in.h:9
+msgid "Action to take when a device containing photos is encountered."
+msgstr "Ово урадити када се наиђе на уређај који садржи слике."
+
+#: ../gnome-volume-manager.schemas.in.h:10
+msgid "Action to take when a device contains an autorun program/script."
+msgstr "Ово урадити када се наиђе на уређај који програм за самопокретање."
+
+#: ../gnome-volume-manager.schemas.in.h:11
+msgid "Action to take when a mixed Audio and Data CD is encountered."
+msgstr "Ово урадити када се наиђе на ЦД са музиком и подацима."
+
+#: ../gnome-volume-manager.schemas.in.h:12
+msgid "Action to take when an iPod Photo is encountered."
+msgstr "Ово урадити када се наиђе на уређај који садржи iPod слике."
+
+#: ../gnome-volume-manager.schemas.in.h:13
+msgid "Audio CD burn command"
+msgstr "Наредба за уписивање музичких дискова"
+
+#: ../gnome-volume-manager.schemas.in.h:14
+msgid "Automount removable drives"
+msgstr "Сам прикључи измењиве дискове"
+
+#: ../gnome-volume-manager.schemas.in.h:15
+msgid "Automount removable media"
+msgstr "Сам прикључи измењиве медије"
+
+#: ../gnome-volume-manager.schemas.in.h:16
+msgid "Autoopen path"
+msgstr "Путања за самостално отварање"
+
+#: ../gnome-volume-manager.schemas.in.h:17
+msgid "Autorun nautilus"
+msgstr "Сам покрени Наутилуса"
+
+#: ../gnome-volume-manager.schemas.in.h:18
+msgid "Autorun path"
+msgstr "Путања за самопокретање"
+
+#: ../gnome-volume-manager.schemas.in.h:19
+msgid "CD play command"
+msgstr "Наредба за пуштање ЦД-а"
+
+#: ../gnome-volume-manager.schemas.in.h:20
+msgid "Command to run when a Palm is connected."
+msgstr "Наредба која се покреће када се прикључи Палм."
+
+#: ../gnome-volume-manager.schemas.in.h:21
+msgid "Command to run when a PocketPC is connected."
+msgstr "Наредба која се покреће када се прикључи џепни рачунар."
+
+#: ../gnome-volume-manager.schemas.in.h:22
+msgid ""
+"Command to run when a digital camera is connected or media from a digital "
+"camera is inserted."
+msgstr ""
+"Наредба која се покреће када се прикључи дигитална камера или картица са "
+"дигиталне камере."
+
+#: ../gnome-volume-manager.schemas.in.h:23
+msgid "Command to run when a keyboard is connected."
+msgstr "Наредба која се покреће када се прикључи тастатура."
+
+#: ../gnome-volume-manager.schemas.in.h:24
+msgid "Command to run when a mouse is connected."
+msgstr "Наредба која се покреће када се прикључи миш."
+
+#: ../gnome-volume-manager.schemas.in.h:25
+msgid "Command to run when a printer is connected."
+msgstr "Наредба која се покреће када се прикључи штампач."
+
+#: ../gnome-volume-manager.schemas.in.h:26
+msgid "Command to run when a scanner is connected."
+msgstr "Наредба која се покреће када се прикључи скенер."
+
+#: ../gnome-volume-manager.schemas.in.h:27
+msgid "Command to run when a tablet is connected."
+msgstr "Наредба која се покреће када се прикључи цртаћа табла."
+
+#: ../gnome-volume-manager.schemas.in.h:28
+msgid "Command to run when a video DVD is inserted."
+msgstr "Наредба која се покреће када се убаци ДВД."
+
+#: ../gnome-volume-manager.schemas.in.h:29
+msgid "Command to run when a video VCD is inserted."
+msgstr "Наредба која се покреће када се убаци видео ЦД."
+
+#: ../gnome-volume-manager.schemas.in.h:30
+msgid "Command to run when a video camera is connected."
+msgstr "Наредба која се покреће када се прикључи видео камера."
+
+#: ../gnome-volume-manager.schemas.in.h:31
+msgid "Command to run when a web camera is connected."
+msgstr "Наредба која се покреће када се прикључи веб камера."
+
+#: ../gnome-volume-manager.schemas.in.h:32
+msgid "Command to run when an audio CD is inserted."
+msgstr "Наредба која се покреће када се убаци звучни ЦД."
+
+#: ../gnome-volume-manager.schemas.in.h:33
+msgid "Command to run when an iPod is connected."
+msgstr "Наредба која се покреће када се прикључи iPod уређај."
+
+#: ../gnome-volume-manager.schemas.in.h:34
+msgid "Command to run when the user wishes to burn a Data CD."
+msgstr "Наредба која се покреће када корисник жели да сними диск са подацима."
+
+#: ../gnome-volume-manager.schemas.in.h:35
+msgid "Command to run when the user wishes to burn an Audio CD."
+msgstr "Наредба која се покреће када корисник жели да сними аудио ЦД."
+
+#: ../gnome-volume-manager.schemas.in.h:36
+msgid "DVD play command"
+msgstr "Наредба за пуштање ДВД-а"
+
+#: ../gnome-volume-manager.schemas.in.h:37
+msgid "Data CD burn command"
+msgstr "Наредба за резање ЦД-а са подацима"
+
+#: ../gnome-volume-manager.schemas.in.h:38
+msgid "Low Disk Space notification threshold"
+msgstr "Праг за слање обавештења о малом слободном простору на диску"
+
+#: ../gnome-volume-manager.schemas.in.h:39
+msgid "Open nautilus on removeable media insert."
+msgstr "Отвори Наутилуса по убацивању медија."
+
+#: ../gnome-volume-manager.schemas.in.h:40
+msgid "Perform autoopen"
+msgstr "Изврши самостално отварање"
+
+#: ../gnome-volume-manager.schemas.in.h:41
+msgid "Perform autorun"
+msgstr "Изврши самопокретање"
+
+#: ../gnome-volume-manager.schemas.in.h:42
+msgid "Photo management command"
+msgstr "Наредба за управљање фотографијама"
+
+#: ../gnome-volume-manager.schemas.in.h:43
+msgid "Play inserted audio CD's"
+msgstr "Пусти убачене аудио ЦД-е"
+
+#: ../gnome-volume-manager.schemas.in.h:44
+msgid "Play inserted video DVDs"
+msgstr "Пусти убачене видео ДВД-е"
+
+#: ../gnome-volume-manager.schemas.in.h:45
+msgid "Play inserted video VCDs"
+msgstr "Пусти убачене видео ЦД-е"
+
+#: ../gnome-volume-manager.schemas.in.h:46
+msgid "Run Palm-sync program"
+msgstr "Покрени програм за усклађивање података на Палму"
+
+#: ../gnome-volume-manager.schemas.in.h:47
+msgid "Run PocketPC-sync program"
+msgstr "Покрени програм за усклађивање података на џепном рачунару"
+
+#: ../gnome-volume-manager.schemas.in.h:48
+msgid "Run a program to burn CDs/DVDs"
+msgstr "Покрени програм за резање ЦД/ДВД-ова"
+
+#: ../gnome-volume-manager.schemas.in.h:49
+msgid "Run iPod program"
+msgstr "Порени програм за iPod"
+
+#: ../gnome-volume-manager.schemas.in.h:50
+msgid "Run keyboard program"
+msgstr "Покрени програм за тастатуру"
+
+#: ../gnome-volume-manager.schemas.in.h:51
+msgid "Run mouse program"
+msgstr "Покрени програм за миша"
+
+#: ../gnome-volume-manager.schemas.in.h:52
+msgid "Run photo management command"
+msgstr "Покрени наредбу за управљање фотографијама"
+
+#: ../gnome-volume-manager.schemas.in.h:53
+msgid "Run printer program"
+msgstr "Покрени програм за штампач"
+
+#: ../gnome-volume-manager.schemas.in.h:54
+msgid "Run scanner program"
+msgstr "Покрени програм за скенер"
+
+#: ../gnome-volume-manager.schemas.in.h:55
+msgid "Run tablet program"
+msgstr "Покрени програм за цртаћу таблу"
+
+#: ../gnome-volume-manager.schemas.in.h:56
+msgid "Run video editing program"
+msgstr "Покрени програм за видео монтажу"
+
+#: ../gnome-volume-manager.schemas.in.h:57
+msgid "Run webcam stream display program"
+msgstr "Покрени програм за приказ са веб камере"
+
+#: ../gnome-volume-manager.schemas.in.h:58
+msgid ""
+"The threshold value for whether or not to toggle the notification on, based "
+"on the amount of additional space used since the last check."
+msgstr ""
+"Вредност прага за одлуку о томе да ли треба укључити обавештење засновано на "
+"количини додатног простора коју је корисник заузео од времена последње "
+"провере."
+
+#: ../gnome-volume-manager.schemas.in.h:59
+msgid "Threshold for notification of increased disk usage"
+msgstr "Праг за обавештење о повећању заузећа диск простора"
+
+#: ../gnome-volume-manager.schemas.in.h:60
+msgid "Threshold percentage for notifying the user of low disk space."
+msgstr ""
+"Праг у процентима за обавештавање корисника о малом преосталом месту на "
+"диску."
+
+#: ../gnome-volume-manager.schemas.in.h:61
+msgid "VCD play command"
+msgstr "Наредба за пуштање видео ЦД-а"
+
+#: ../gnome-volume-manager.schemas.in.h:62
+msgid "Whether autoopen files should be opened on newly mounted media."
+msgstr ""
+"Да ли се програми за самопоотварање требају бити отворени са новоприкључених "
+"медија."
+
+#: ../gnome-volume-manager.schemas.in.h:63
+msgid ""
+"Whether autorun programs (binaries and scripts located in 'autorun_path') "
+"are run on newly mounted media."
+msgstr ""
+"Да ли се програми за самопокретање (из „autorun_path“) покрећу на "
+"новоприкљученим медијима."
+
+#: ../gnome-volume-manager.schemas.in.h:64
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"drives when they are inserted."
+msgstr ""
+"Да ли Гномов управљач дисковима сам прикључује измењиве дискове када се "
+"убаце."
+
+#: ../gnome-volume-manager.schemas.in.h:65
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"media when they are inserted."
+msgstr ""
+"Да ли Гномов управљач дисковима сам прикључује измењиве медије када се убаце."
+
+#: ../gnome-volume-manager.schemas.in.h:66
+msgid ""
+"Whether, when a Palm is connected, gnome-volume-manager should run "
+"'autopalmsync_command'."
+msgstr ""
+"Да ли Гномов управљач дисковима покреће „autopalmsync_command“ када се "
+"прикључи Палм."
+
+#: ../gnome-volume-manager.schemas.in.h:67
+msgid ""
+"Whether, when a PocketPC is connected, gnome-volume-manager should run "
+"'autopocketpc_command'."
+msgstr ""
+"Да ли Гномов управљач дисковима покреће „autopocketpc_command“ када се "
+"прикључи џепни рачунар."
+
+#: ../gnome-volume-manager.schemas.in.h:68
+msgid ""
+"Whether, when a blank CD or DVD is inserted, gnome-volume-manager should run "
+"one of the autoburn commands."
+msgstr ""
+"Да ли Гномов управљач дисковима покреће наредбе за само-упис када се убаци "
+"празан ЦД или ДВД."
+
+#: ../gnome-volume-manager.schemas.in.h:69
+msgid ""
+"Whether, when a digital camera is connected or media from a digital camera "
+"is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr ""
+"Да ли Гномов управљач дисковима покреће „autophoto_command“ када се прикључи "
+"дигитална камера или се убаци медиј из дигиталне картице."
+
+#: ../gnome-volume-manager.schemas.in.h:70
+msgid ""
+"Whether, when a digital video camera is connected, gnome-volume-manager "
+"should run 'autovideocam_command'."
+msgstr ""
+"Да ли Гномов управљач дисковима покреће „autovideocam_command“ када се убаци "
+"дигитална видео камера."
+
+#: ../gnome-volume-manager.schemas.in.h:71
+msgid ""
+"Whether, when a keyboard is connected, gnome-volume-manager should run "
+"'autokeyboard_command'."
+msgstr ""
+"Да ли Гномов управљач дисковима покреће „autokeyboard_command“ када се "
+"прикључи тастатура."
+
+#: ../gnome-volume-manager.schemas.in.h:72
+msgid ""
+"Whether, when a mouse is connected, gnome-volume-manager should run "
+"'automouse_command'."
+msgstr ""
+"Да ли Гномов управљач дисковима покреће „automouse_command“ када се прикључи "
+"миш."
+
+#: ../gnome-volume-manager.schemas.in.h:73
+msgid ""
+"Whether, when a printer is connected, gnome-volume-manager should run "
+"'autoprinter_command'."
+msgstr ""
+"Да ли Гномов управљач дисковима покреће „autoprinter_command“ када се "
+"прикључи штампач."
+
+#: ../gnome-volume-manager.schemas.in.h:74
+msgid ""
+"Whether, when a scanner is connected, gnome-volume-manager should run "
+"'autoscanner_command'."
+msgstr ""
+"Да ли Гномов управљач дисковима покреће „autoscanner_command“ када се "
+"прикључи скенер."
+
+#: ../gnome-volume-manager.schemas.in.h:75
+msgid ""
+"Whether, when a tablet is connected, gnome-volume-manager should run "
+"'autotablet_command'."
+msgstr ""
+"Да ли Гномов управљач дисковима покреће „autotablet_command“ када се "
+"прикључи цртаћа табла."
+
+#: ../gnome-volume-manager.schemas.in.h:76
+msgid ""
+"Whether, when a video DVD is inserted, gnome-volume-manager should run "
+"'autoplay_dvd_command'."
+msgstr ""
+"Да ли Гномов управљач дисковима покреће „autoplay_dvd_command“ када се убаци "
+"видео ДВД."
+
+#: ../gnome-volume-manager.schemas.in.h:77
+msgid ""
+"Whether, when a video VCD is inserted, gnome-volume-manager should run "
+"'autoplay_vcd_command'."
+msgstr ""
+"Да ли Гномов управљач дисковима покреће „autoplay_vcd_command“ када се убаци "
+"видео ЦД."
+
+#: ../gnome-volume-manager.schemas.in.h:78
+msgid ""
+"Whether, when a web camera is connected, gnome-volume-manager should run "
+"'autowebcam_command'."
+msgstr ""
+"Да ли Гномов управљач дисковима покреће „autowebcam_command“ када се "
+"прикључи веб камера."
+
+#: ../gnome-volume-manager.schemas.in.h:79
+msgid ""
+"Whether, when an audio CD is inserted, gnome-volume-manager should run "
+"'autoplay_cda_command'."
+msgstr ""
+"Да ли Гномов управљач дисковима покреће „autoplay_cda_command“ када се убаци "
+"аудио ЦД."
+
+#: ../gnome-volume-manager.schemas.in.h:80
+msgid ""
+"Whether, when an iPod is connected, gnome-volume-manager should run "
+"'autoipod_command'."
+msgstr ""
+"Да ли Гномов управљач дисковима покреће „autoipod_command“ када се прикључи "
+"iPod."
+
+#: ../gnome-volume-manager.schemas.in.h:81
+msgid "iPod sync command"
+msgstr "Наредба за синхронизацију iPod-а"
+
+#: ../gnome-volume-manager.schemas.in.h:82
+msgid "keyboard command"
+msgstr "Наредба за тастатуру"
+
+#: ../gnome-volume-manager.schemas.in.h:83
+msgid "mouse command"
+msgstr "Наредба за миша"
+
+#: ../gnome-volume-manager.schemas.in.h:84
+msgid "palm sync command"
+msgstr "Наредба за синхронизацију Палма"
+
+#: ../gnome-volume-manager.schemas.in.h:85
+msgid "printer command"
+msgstr "Наредба за штампач"
+
+#: ../gnome-volume-manager.schemas.in.h:86
+msgid "scanner command"
+msgstr "Наредба за скенер"
+
+#: ../gnome-volume-manager.schemas.in.h:87
+msgid "tablet command"
+msgstr "Наредба за цртаћу таблу"
+
+#: ../gnome-volume-manager.schemas.in.h:88
+msgid "video camera command"
+msgstr "Наредба за видео камеру"
+
+#: ../gnome-volume-manager.schemas.in.h:89
+msgid "web camera command"
+msgstr "Наредба за веб камеру"
+
+#: ../gnome-volume-manager.desktop.in.in.h:1
+msgid "Volume Manager"
+msgstr "Управљач дисковима"
+
+#: ../gnome-volume-manager.desktop.in.in.h:2
+msgid "Volume manager for removable drives and media"
+msgstr "Подесите управљање измењивим дисковима и медијима"
+
+#: ../gnome-volume-properties.desktop.in.h:1
+msgid "Configure management of removable drives and media"
+msgstr "Подесите управљање измењивим уређајима и дисковима"
+
+#: ../gnome-volume-properties.desktop.in.h:2
+msgid "Removable Drives and Media"
+msgstr "Измењиви дискови и медији"
+
+#: ../gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: ../gnome-volume-properties.glade.h:2
+msgid "<b>Audio CD Discs</b>"
+msgstr "<b>Звучни ЦД дискови</b>"
+
+#: ../gnome-volume-properties.glade.h:3
+msgid "<b>Blank CD and DVD Discs</b>"
+msgstr "<b>Празни ЦД и ДВД дискови</b>"
+
+#: ../gnome-volume-properties.glade.h:4
+msgid "<b>Digital Camera</b>"
+msgstr "<b>Дигитални фотоапарат</b>"
+
+#: ../gnome-volume-properties.glade.h:5
+msgid "<b>Digital Video Camera</b>"
+msgstr "<b>Дигитална видео камера</b>"
+
+#: ../gnome-volume-properties.glade.h:6
+msgid "<b>Keyboards</b>"
+msgstr "<b>Тастатуре</b>"
+
+#: ../gnome-volume-properties.glade.h:7
+msgid "<b>Mice</b>"
+msgstr "<b>Мишеви</b>"
+
+#: ../gnome-volume-properties.glade.h:8
+msgid "<b>Palm™</b>"
+msgstr "<b>Палм</b>"
+
+#: ../gnome-volume-properties.glade.h:9
+msgid "<b>PocketPC</b>"
+msgstr "<b>Џепни рачунар</b>"
+
+#: ../gnome-volume-properties.glade.h:10
+msgid "<b>Portable Music Players</b>"
+msgstr "<b>Џепне музичке справице</b>"
+
+#: ../gnome-volume-properties.glade.h:11
+msgid "<b>Printers</b>"
+msgstr "<b>Штампачи</b>"
+
+#: ../gnome-volume-properties.glade.h:12
+msgid "<b>Removable Storage</b>"
+msgstr "<b>Измењиви дискови</b>"
+
+#: ../gnome-volume-properties.glade.h:13
+msgid "<b>Scanners</b>"
+msgstr "<b>Скенери</b>"
+
+# andrija: Микрософт свој производ зове „Таблет ПЦ“
+#: ../gnome-volume-properties.glade.h:14
+msgid "<b>Tablets</b>"
+msgstr "<b>Таблети</b>"
+
+#: ../gnome-volume-properties.glade.h:15
+msgid "<b>Video DVD Discs</b>"
+msgstr "<b>Видео ДВД дискови</b>"
+
+#: ../gnome-volume-properties.glade.h:16
+msgid "<b>Web Camera</b>"
+msgstr "<b>Веб камера</b>"
+
+#: ../gnome-volume-properties.glade.h:17
+msgid "Auto-_open files on new drives and media"
+msgstr "Аутоматски отвори датотеке са нових дискова и медија"
+
+#: ../gnome-volume-properties.glade.h:18
+msgid "Automatically run a program when a USB _keyboard is connected"
+msgstr "Аутоматски покрени програм по прикључивању USB тастатуре"
+
+#: ../gnome-volume-properties.glade.h:19
+msgid "Automatically run a program when a USB _mouse is connected"
+msgstr "Аутоматски покрени програм по прикључивању USB миша"
+
+#: ../gnome-volume-properties.glade.h:20
+msgid "Automatically run a program when a _printer is connected"
+msgstr "Аутоматски покрени програм по прикључивању штампача"
+
+#: ../gnome-volume-properties.glade.h:21
+msgid "Automatically run a program when a _scanner is connected"
+msgstr "Аутоматски покрени програм по прикључивању скенера"
+
+#: ../gnome-volume-properties.glade.h:22
+msgid "Automatically run a program when a _tablet is connected"
+msgstr "Аутоматски покрени програм по прикључивању таблета"
+
+#: ../gnome-volume-properties.glade.h:23
+msgid "Browse _removable media when inserted"
+msgstr "Разгледај _медије по убацивању"
+
+#: ../gnome-volume-properties.glade.h:24
+msgid "C_ommand:"
+msgstr "_Наредба:"
+
+#: ../gnome-volume-properties.glade.h:25
+msgid "Cameras"
+msgstr "Фотоапарати"
+
+#: ../gnome-volume-properties.glade.h:26
+msgid "Comman_d:"
+msgstr "На_редба:"
+
+#: ../gnome-volume-properties.glade.h:27
+msgid "Command for A_udio CDs:"
+msgstr "Наредба за аудио ЦД-е:"
+
+#: ../gnome-volume-properties.glade.h:28
+msgid "Command for _Data CDs: "
+msgstr "Наредба за ЦД-е са подацима:"
+
+#: ../gnome-volume-properties.glade.h:29
+msgid "Drives and Media Preferences"
+msgstr "Поставке дискова и медија"
+
+#: ../gnome-volume-properties.glade.h:30
+msgid "Input Devices"
+msgstr "Улазни уређаји"
+
+#: ../gnome-volume-properties.glade.h:31
+msgid "Mount removable media when _inserted"
+msgstr "Прикључи изменљиве медије по _убацивању"
+
+#: ../gnome-volume-properties.glade.h:32
+msgid "Multimedia"
+msgstr "Мултимедија"
+
+#: ../gnome-volume-properties.glade.h:33
+msgid "PDAs"
+msgstr "Преносни диг. помоћници"
+
+#: ../gnome-volume-properties.glade.h:34
+msgid "Play _audio CD discs when inserted"
+msgstr "Пусти _аудио ЦД-е по убацивању"
+
+#: ../gnome-volume-properties.glade.h:35
+msgid "Play _music files when connected"
+msgstr "Пусти музику по прикључењу"
+
+#: ../gnome-volume-properties.glade.h:36
+msgid "Play _video DVD discs when inserted"
+msgstr "Пусти _видео ДВД дискове по убацивању"
+
+#: ../gnome-volume-properties.glade.h:37
+msgid "Printers & Scanners"
+msgstr "Штампачи и скенери"
+
+#: ../gnome-volume-properties.glade.h:38
+msgid "Removable Drives and Media Preferences"
+msgstr "Поставке уклоњивих дискова и медија"
+
+#: ../gnome-volume-properties.glade.h:39
+msgid "Select program to burn audio CDs"
+msgstr "Изаберите програм за резање аудио ЦД-а"
+
+#: ../gnome-volume-properties.glade.h:40
+msgid "Select program to burn data CDs"
+msgstr "Изаберите програм за резање ЦД-а са подацима"
+
+#: ../gnome-volume-properties.glade.h:41
+msgid "Select program to edit videos"
+msgstr "Изаберите програм за видео монтажу"
+
+#: ../gnome-volume-properties.glade.h:42
+msgid "Select program to import photos"
+msgstr "Изаберите програм за увоз фотографија"
+
+#: ../gnome-volume-properties.glade.h:43
+msgid "Select program to play DVDs"
+msgstr "Изаберите програм за пуштање ДВД-а"
+
+#: ../gnome-volume-properties.glade.h:44
+msgid "Select program to play audio CDs"
+msgstr "Изаберите програм за пуштање ЦД-а"
+
+#: ../gnome-volume-properties.glade.h:45
+msgid "Select program to play music files"
+msgstr "Изаберите програм за пуштање музичких нумера"
+
+#: ../gnome-volume-properties.glade.h:46
+msgid "Select program to run when a keyboard is plugged in"
+msgstr "Који програм да покрене када се прикључи тастатура"
+
+#: ../gnome-volume-properties.glade.h:47
+msgid "Select program to run when a mouse is plugged in"
+msgstr "Који програм да покрене када се прикључи миш"
+
+#: ../gnome-volume-properties.glade.h:48
+msgid "Select program to run when a printer is plugged in"
+msgstr "Који програм да покрене када се прикључи штампач"
+
+#: ../gnome-volume-properties.glade.h:49
+msgid "Select program to run when a scanner is plugged in"
+msgstr "Који програм да покрене када се прикључи скенер"
+
+#: ../gnome-volume-properties.glade.h:50
+msgid "Select program to run when a tablet is plugged in"
+msgstr "Који програм да покрене када се прикључи таблет"
+
+#: ../gnome-volume-properties.glade.h:51
+msgid "Select program to sync Palm devices"
+msgstr "Изаберите програм за синхронизацију Палм уређаја"
+
+#: ../gnome-volume-properties.glade.h:52
+msgid "Storage"
+msgstr "Смештај"
+
+#: ../gnome-volume-properties.glade.h:53
+msgid "Sync PocketP_C devices when connected"
+msgstr "Синхронизуј џепне уређаје по повезивању"
+
+#: ../gnome-volume-properties.glade.h:54
+msgid "Sync _Palm™ devices when connected"
+msgstr "Синхронизуј Палм уређаје по повезивању"
+
+#: ../gnome-volume-properties.glade.h:55
+msgid "_Auto-run programs on new drives and media"
+msgstr "_Самопокрени програме за нове дискове и медије"
+
+# andrija: није дословце, проверити смисао
+#: ../gnome-volume-properties.glade.h:56
+msgid "_Burn a CD or DVD when a blank disc is inserted"
+msgstr "Када се убаци празан диск покрени упис на њега"
+
+#: ../gnome-volume-properties.glade.h:57
+msgid "_Command:"
+msgstr "Наредба:"
+
+#: ../gnome-volume-properties.glade.h:58
+msgid "_Edit video when connected"
+msgstr "Монтирај видео по повезивању"
+
+#: ../gnome-volume-properties.glade.h:59
+msgid "_Import digital photographs when connected"
+msgstr "Увези _дигиталне фотографије по повезивању"
+
+#: ../gnome-volume-properties.glade.h:60
+msgid "_Mount removable drives when hot-plugged"
+msgstr "При_кључи измењиве дискове у току рада"
+
+#: ../src/manager.c:221 ../src/manager.c:226 ../src/manager.c:231
+#: ../src/manager.c:236 ../src/manager.c:242 ../src/manager.c:248
+#: ../src/manager.c:254 ../src/manager.c:260
+msgid "Ig_nore"
+msgstr "Занема_ри"
+
+#: ../src/manager.c:222
+msgid "_Allow Auto-Run"
+msgstr "Дозво_ли само-покретање"
+
+#: ../src/manager.c:227
+msgid "_Open"
+msgstr "_Отвори"
+
+#: ../src/manager.c:232 ../src/manager.c:238 ../src/manager.c:243
+msgid "Import _Photos"
+msgstr "_Увези слике"
+
+#: ../src/manager.c:237
+msgid "_Open Folder"
+msgstr "Отвори фасциклу"
+
+#: ../src/manager.c:244
+msgid "Manage _Music"
+msgstr "Среди м_узику"
+
+#: ../src/manager.c:249
+msgid "_Browse Files"
+msgstr "_Разгледај датотеке"
+
+#: ../src/manager.c:250
+msgid "_Play CD"
+msgstr "_Пусти ЦД"
+
+#: ../src/manager.c:255
+msgid "Make _Audio CD"
+msgstr "Направа _музички диск"
+
+#: ../src/manager.c:256
+msgid "Make _Data CD"
+msgstr "Направ_и ЦД са подацима"
+
+#: ../src/manager.c:261
+msgid "Make _DVD"
+msgstr "На_прави ДВД"
+
+#: ../src/manager.c:314
+msgid "Auto-Run Confirmation"
+msgstr "Потврда за само-покретање"
+
+#: ../src/manager.c:315
+msgid "Auto-run capability detected."
+msgstr "Откривена је способност само-покретања"
+
+#: ../src/manager.c:316
+msgid "Would you like to allow <b>'${0}'</b> to run?"
+msgstr "ДА ли ћете дозволити да се <b>'${0}'</b> покрене?"
+
+#: ../src/manager.c:321
+msgid "Auto-Open Confirmation"
+msgstr "Потврда за самостално отварање"
+
+#: ../src/manager.c:322
+msgid "Auto-Open capability detected."
+msgstr "Откривена је способност за самостално отварање"
+
+#: ../src/manager.c:323
+msgid "Would you like to open <b>'${0}'</b>?"
+msgstr "Да ли желите да отворите <b>„${0}“</b>?"
+
+#: ../src/manager.c:328 ../src/manager.c:335
+msgid "Camera Import"
+msgstr "Увоз са камере"
+
+#: ../src/manager.c:329 ../src/manager.c:336
+msgid "A camera has been detected."
+msgstr "Откривена је камера"
+
+#: ../src/manager.c:330 ../src/manager.c:337
+msgid ""
+"There are photos on the camera. Would you like to add these pictures to your "
+"album?"
+msgstr ""
+"Постоје слике на прикљученом фотоапарату. Желите ли да их увезете у ваш "
+"фотоалбум?"
+
+#: ../src/manager.c:331 ../src/manager.c:338 ../src/manager.c:345
+#: ../src/manager.c:352 ../src/manager.c:359
+msgid "_Always perform this action"
+msgstr "_Увек изведи ову радњу"
+
+#: ../src/manager.c:342
+msgid "Photo Import"
+msgstr "Увоз слика"
+
+#: ../src/manager.c:343
+msgid "A photo card has been detected."
+msgstr "Откривена је картица са сликама."
+
+#: ../src/manager.c:344
+msgid ""
+"There are photos on the card. Would you like to add these pictures to your "
+"album?"
+msgstr ""
+"Постоје слике на убаченој картици. Желите ли да их увезете у ваш фотоалбум?"
+
+#: ../src/manager.c:349
+msgid "Photos and Music"
+msgstr "Слике и музика"
+
+#: ../src/manager.c:350
+msgid "Photos were found on your music device."
+msgstr "Пронађене су слике на вашем музичком уређају."
+
+#: ../src/manager.c:351
+msgid "Would you like to import the photos or manage its music?"
+msgstr "Да ли би желели да увезете слике или да средите музику?"
+
+#: ../src/manager.c:356
+msgid "Mixed Audio and Data CD"
+msgstr "Цд са музиком и подацима"
+
+#: ../src/manager.c:357
+msgid "The CD in the drive contains both music and files."
+msgstr "Диск у фиоци садржи и музику и податке."
+
+#: ../src/manager.c:358
+msgid "Would you like to listen to music or browse the files?"
+msgstr "Да ли желите да слушате ту музику или разгледате податке?"
+
+#: ../src/manager.c:363
+msgid "Blank CD Inserted"
+msgstr "Убачен је празан Цд"
+
+#: ../src/manager.c:364 ../src/manager.c:371
+msgid "You have inserted a blank disc."
+msgstr "Убацили сте један празан диск"
+
+#: ../src/manager.c:365 ../src/manager.c:372
+msgid "What would you like to do?"
+msgstr "Шта желите да урадите"
+
+#: ../src/manager.c:370
+msgid "Blank DVD Inserted"
+msgstr "Убачне је празан ДВД"
+
+#: ../src/manager.c:3576
+#, c-format
+msgid "%d%% of the disk space on %s is in use"
+msgstr "%d%% простора на диску %s је искоришћено"
+
+#: ../src/manager.c:3579
+msgid "Low Disk Space"
+msgstr "Преостало је мало простора на диску"
+
+#: ../src/manager.c:3700
+msgid "Print version and exit"
+msgstr "Штампај верзију и изађи"
+
+#: ../src/manager.c:3702
+msgid "Run as a daemon"
+msgstr "Покрени као позадински процес"
+
+#: ../src/manager.c:3704
+msgid "Don't run as a daemon"
+msgstr "Немој покренути у позадини"
+
+#: ../src/manager.c:3706
+msgid "Run in secret mode"
+msgstr "Покрени тајно"
+
+#: ../src/manager.c:3738
+#, c-format
+msgid "Unrecognized --daemon argument: %s\n"
+msgstr "Непрепознат --daemon аргумент; %s\n"
+
+#: ../src/properties.c:318
+msgid "Could not load the main interface"
+msgstr "Не могу да учитам основно сучеље"
+
+#: ../src/properties.c:320
+msgid "Please make sure that the volume manager is properly installed"
+msgstr "Проверите да ли је управљач дисковима исправно постављен"
+
+#: ../src/properties.c:479
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr ""
+"Грешка при покретању услуге gnome-volume-manager:\n"
+"%s"
+
+#: ../src/properties.c:510
+msgid "Volume management not supported"
+msgstr "Није подржано управљање дисковима"
+
+#: ../src/properties.c:512
+msgid ""
+"The \"hald\" service is required but not currently running. Enable the "
+"service and rerun this application, or contact your system administrator."
+msgstr ""
+"Неопходна је услуга „hald“ која тренутно није покренута. Омогућите ову "
+"услугу и поново покрените програмче, или ступите у везу са администратором "
+"вашег система."
+
+#~ msgid "Choose Disc Type"
+#~ msgstr "Изаберите врсту диска"
+
+#~ msgid ""
+#~ "The threshold value for whether or not to toggle the notification off, "
+#~ "based on the amount of space freed up by the user since the last check."
+#~ msgstr ""
+#~ "Вредност прага за одлуку о томе да ли треба искључити обавештење "
+#~ "засновано на количини простора коју је корисник ослободио од времена "
+#~ "последње провере."
+
+#~ msgid "Threshold for disk space being freed up, to toggle notification"
+#~ msgstr "Праг за обавештење када се ослободи диск простор"
+
+#~ msgid "Command to run when the eject button on a optical drive is pressed."
+#~ msgstr ""
+#~ "Наредба која се покреће када се притисне дугме за избацивање на оптичком "
+#~ "уређају."
+
+#~ msgid "<b>iPod™</b>"
+#~ msgstr "<b>iPod</b>"
+
+#~ msgid "Comma_nd:"
+#~ msgstr "Наредба:"
+
+#~ msgid "Command:"
+#~ msgstr "Наредба:"
+
+#~ msgid "Select program to sync iPod"
+#~ msgstr "Изаберите програм за синхронизацију iPod-а"
+
+#~ msgid ""
+#~ "Action to take when an iPod Photo is encountered (syncronise music or "
+#~ "import photos)."
+#~ msgstr ""
+#~ "Ово урадити када се наиђе на iPod Photo (синхронизуј музику или увези "
+#~ "фотографије)."
+
+#~ msgid "Command to run when the user wishes to burn a Photo CD."
+#~ msgstr ""
+#~ "Наредба која се покреће када корисник жели да нареже диск са "
+#~ "фотографијама."
+
+#~ msgid "Photo CD burn command"
+#~ msgstr "Наредба за резање ЦД-а са фотографијама"
+
+#~ msgid "Command for _Photo CDs:"
+#~ msgstr "Наредба за ЦД-е са фотографијама:"
+
+#~ msgid "Select program to burn photo CDs"
+#~ msgstr "Изаберите програм за резање ЦД-а са фотографијама"
+
+#~ msgid "_Run Command"
+#~ msgstr "_Покрени наредбу"
+
+#~ msgid "_Sync Music"
+#~ msgstr "_Синхронизуј музику"
+
+#~ msgid "_Play Tracks"
+#~ msgstr "_Пусти песме"
+
+#~ msgid "Burn _Photo CD"
+#~ msgstr "Нарежи ЦД са _фотографијама"
+
+#~ msgid "Burn _Photo DVD"
+#~ msgstr "Нарежи ДВД са _фотографијама"
+
+#~ msgid "Burn _Data DVD"
+#~ msgstr "Нарежи _ДВД са подацима"
+
+#~ msgid "Run command from inserted media?"
+#~ msgstr "Покрени наредбу са убаченог медија?"
+
+#~ msgid "Do you want to run the file \"%s\"?"
+#~ msgstr "Желите ли да покренете датотеку %s?"
+
+#~ msgid "Import photos from camera?"
+#~ msgstr "Увести слике са фотоапарата?"
+
+#~ msgid "Import photos from device?"
+#~ msgstr "Увести фотографије са уређаја?"
+
+#~ msgid "Import photos or music?"
+#~ msgstr "Увести слике са уређаја?"
+
+#~ msgid ""
+#~ "There are both photos and music on the plugged-in iPod. Would you like to "
+#~ "import the photos or would you prefer to sync your music?"
+#~ msgstr ""
+#~ "Постоје слике и музика на прикљученом iPod-у. Желите ли да увезете слике "
+#~ "у ваш фотоалбум или да синхронизујете вашу музику?"
+
+#~ msgid "Browse files or play tracks from disc?"
+#~ msgstr "Разгледати датотеке или пустити песме са диска?"
+
+#~ msgid "This CD contains both music and data. What would you like to do?"
+#~ msgstr "Овај ЦД садржи и музику и податке. Шта желите да урадите?"
+
+#~ msgid "Burn audio, photo, or data CD?"
+#~ msgstr "Нарезати ЦД са музиком, фотографијама или подацима?"
+
+#~ msgid "Would you like to burn an audio, photo, or data CD?"
+#~ msgstr "Да ли желите да нарежете ЦД са музиком, фотографијама или подацима?"
+
+#~ msgid "Burn photo or data DVD?"
+#~ msgstr "Нарезати ДВД са фотографијама или подацима?"
+
+#~ msgid "*"
+#~ msgstr "*"
+
+#~ msgid "Co_mmand:"
+#~ msgstr "Н_аредба:"
+
+#~ msgid "Perform action on _blank discs when inserted"
+#~ msgstr "Изврши следеће када се убаци празан _диск"
+
+#~ msgid "The file \"%s\" on the inserted media is an auto-runfile."
+#~ msgstr "Датотека „%s“ на убаченом медију је датотека за самопокретање."
+
+#~ msgid ""
+#~ "There are both audio tracks and data files on the inserted disc. Choose "
+#~ "if you want to play the audio tracks to listen to music or browse the "
+#~ "files to manage the stored data."
+#~ msgstr ""
+#~ "Има и песама и података на убаченом диску. Изаберите да ли желите да "
+#~ "пустите песме ради слушања музике, или да разгледате датотеке да "
+#~ "управљате подацима."
+
+#~ msgid "Play DVD Videos when inserted"
+#~ msgstr "Пусти ДВД видео по убацивању"
+
+#~ msgid "Play a_udio CDs when inserted"
+#~ msgstr "Пусти звучне ЦД-е по убацивању"
+
+#~ msgid "Removable Storage Preferences"
+#~ msgstr "Поставке измењивих дискова"

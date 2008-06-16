@@ -1,0 +1,1030 @@
+# Dzongkha translation of gnome-volume-manager
+# Copyright @ 2006 Free Software Foundation, Inc.
+# Mindu Dorji
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-volume-manager.gnome-2-14.dz\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-04-17 03:30+0100\n"
+"PO-Revision-Date: 2007-03-20 15:25+0530\n"
+"Last-Translator: sonam pelden <sonaa_peldn@yahoo.com>\n"
+"Language-Team: DZONGKHA <pgeyleg@dit.gov.bt>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2;plural=(n!=1);\n"
+"X-Poedit-Language: Dzongkha\n"
+"X-Poedit-Country: BHUTAN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../gnome-volume-manager.schemas.in.h:1
+msgid "\"Always take this action\" checkbox for Autorun"
+msgstr "\"ཨ་རྟག་ར་ བྱ་བ་འདི་བརྩམ་ \" རང་བཞིན་གཡོག་བཀོལ་གྱི་དོན་ལུ་དཔྱད་སྒྲོམ།"
+
+#: ../gnome-volume-manager.schemas.in.h:2
+msgid "\"Always take this action\" checkbox for iPod Photos"
+msgstr "\"ཨ་རྟག་ར་ བྱ་བ་འདི་བརྩམ་ \" ཨའི་པོཌི་པར་གྱི་དོན་ལུ་དཔྱད་སྒྲོམ།"
+
+#: ../gnome-volume-manager.schemas.in.h:3
+msgid "\"Always take this action\" checkbox for mixed Audio and Data CDs"
+msgstr "\"ཨ་རྟག་ར་ བྱ བ་འདི་བརྩམ་ \" རྣར་ཉན་དང་ གནད་སྡུད་སི་ཌི་གི་ སླ་བསྲེ་གི་དོན་ལུ་དཔྱད་སྒྲོམ།"
+
+#: ../gnome-volume-manager.schemas.in.h:4
+msgid "\"Always take this action\" checkbox for photo import from a camera"
+msgstr "\"ཨ་རྟག་ར་ བྱ བ་འདི་བརྩམ་ \" པར་ཆས་ཅིག་ནང་ལས་ པར་ནང་འདྲེན་གྱི་དོན་ལུ་དཔྱད་སྒྲོམ།"
+
+#: ../gnome-volume-manager.schemas.in.h:5
+msgid "\"Always take this action\" checkbox for photo import from a device"
+msgstr "\"ཨ་རྟག་ར་ བྱ བ་འདི་བརྩམ་ \" ཐབས་འཕྲུལ་ཅིག་ནང་ལས་ པར་ནང་འདྲེན་གྱི་དོན་ལུ་དཔྱད་སྒྲོམ།"
+
+#: ../gnome-volume-manager.schemas.in.h:6
+msgid "':' delimited list of paths to check for autoopen files."
+msgstr ""
+"རང་བཞིན་གྱིས་ཁ་ཕྱེ་བའི་ཡིག་སྣོད་ཚུ་ ཞིབ་དཔྱད་བརྐྱབ་ནིའི་དོན་ལུ་ དབྱེ་རྟགས་':' ཅན་གྱི་འགྲུལ་ལམ་ཐོ་ཡིག།"
+
+#: ../gnome-volume-manager.schemas.in.h:7
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr ""
+"རང་བཞིན་གཡོག་བཀོལ་གྱི་ བའི་ན་རིསི་དང་ ཡིག་ཚུགས་ཞིབ་དཔྱད་བརྐྱབ་ནིའི་འགྲུལ་ལམ་གྱི་  དབྱེ་རྟགས་':'ཅན་གྱི་"
+"ཐོ་ཡིག།"
+
+#: ../gnome-volume-manager.schemas.in.h:8
+msgid "Action to take when a camera is plugged in."
+msgstr "པར་ཆས་ཅིག་ ནང་ན་བཙུགསཔ་དང་ ངོས་ལེན་འབད་དགོ་པའི་བྱ་བ།"
+
+#: ../gnome-volume-manager.schemas.in.h:9
+msgid "Action to take when a device containing photos is encountered."
+msgstr "ནང་ན་པར་ཡོད་པའི་ ཐབས་འཕྲུལ་ཅིག་དང་ཕྱདཔ་དང་ ངོས་ལེན་འབད་ནིའི་བྱ་བ།"
+
+#: ../gnome-volume-manager.schemas.in.h:10
+msgid "Action to take when a device contains an autorun program/script."
+msgstr "ཐབས་འཕྲུལ་ནང་ རང་བཞིན་གཡོག་བཀོལ་ལས་རིམ་/ཡིག་ཚུགས་ཡོད་པའི་སྐབས་ ངོས་ལེན་འབད་ནིའི་བྱ་བ།"
+
+#: ../gnome-volume-manager.schemas.in.h:11
+msgid "Action to take when a mixed Audio and Data CD is encountered."
+msgstr "རྣར་ཉན་དང་ གནད་སྡུད་སི་ཌི་སླ་བསྲེ་ཡོད་མི་དང་ཕྱད་པའི་སྐབས་ ངོས་ལེན་འབད་ནིའི་བྱ་བ།"
+
+#: ../gnome-volume-manager.schemas.in.h:12
+msgid "Action to take when an iPod Photo is encountered."
+msgstr "ཨའི་པོཌི་ པར་ཅིག་དང་ཕྱད་པའི་སྐབས་ ངོས་ལན་འབད་ནིའི་བྱ་བ།"
+
+#: ../gnome-volume-manager.schemas.in.h:13
+msgid "Audio CD burn command"
+msgstr "རྣར་ཉན་སི་ཌི་བཙུགས་སྤྱོད་ཀྱི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:14
+msgid "Automount removable drives"
+msgstr "རང་བཞིན་སྦྱར་བརྩེགས་ཀྱིས་ རྩ་བསྐྲད་གཏང་བཏུབ་པའི་འདྲེན་འཕྲུལ།"
+
+#: ../gnome-volume-manager.schemas.in.h:15
+msgid "Automount removable media"
+msgstr "རང་བཞིན་སྦྱར་བརྩེགས་ཀྱི་ རྩ་བསྐྲད་གཏང་བཏུབ་པའི་བརྡ་ལམ།"
+
+#: ../gnome-volume-manager.schemas.in.h:16
+msgid "Autoopen path"
+msgstr "རང་བཞིན་གྱིས་ཁ་ཕྱེ་བའི་འགྲུལ་ལམ།"
+
+#: ../gnome-volume-manager.schemas.in.h:17
+msgid "Autorun nautilus"
+msgstr "རང་བཞིན་གཡོག་བཀོལ་ ནའུ་ཊི་ལཱསི།"
+
+#: ../gnome-volume-manager.schemas.in.h:18
+msgid "Autorun path"
+msgstr "རང་བཞིན་གཡོག་བཀོལ་འགྲུལ་ལམ།"
+
+#: ../gnome-volume-manager.schemas.in.h:19
+msgid "CD play command"
+msgstr "སི་ཌི་གཏང་ནིའི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:20
+msgid "Command to run when a Palm is connected."
+msgstr "པཱམ་ཅིག་མཐུད་ཡོད་པའི་སྐབས་ གཡོག་བཀོལ་ནིའི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:21
+msgid "Command to run when a PocketPC is connected."
+msgstr "པོ་ཀེཊི་པི་སི་ཅིག་མཐུད་ཡོད་པའི་སྐབས་ གཡོག་བཀོལ་ནིའི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:22
+msgid ""
+"Command to run when a digital camera is connected or media from a digital "
+"camera is inserted."
+msgstr ""
+"ཌི་ཇི་ཊལ་པར་ཆས་ཅིག་ མཐུད་པའི་སྐབས་ལུའམ་ ཌི་ཇི་ཊལ་པར་ཆས་ཅིག་ནང་ལས་ བརྡ་ལམ་བཙུགས་པའི་སྐབས་ལུ་ "
+"གཡོག་བཀོལ་ནིའི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:23
+msgid "Command to run when a keyboard is connected."
+msgstr "ལྡེ་སྒྲོམ་ཅིག་མཐུད་པའི་སྐབས་ གཡོག་བཀོལ་ནིའི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:24
+msgid "Command to run when a mouse is connected."
+msgstr "མཱའུསི་ཅིག་མཐུད་པའི་སྐབས་ གཡོག་བཀོལ་ནིའི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:25
+msgid "Command to run when a printer is connected."
+msgstr "དཔར་འཕྲུལ་ཅིག་མཐུད་པའི་སྐབས་ གཡོག་བཀོལ་ནིའི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:26
+msgid "Command to run when a scanner is connected."
+msgstr "པར་ལེན་འཕྲུལ་ཆས་ཅིག་མཐུད་པའི་སྐབས་ གཡོག་བཀོལ་ནིའི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:27
+msgid "Command to run when a tablet is connected."
+msgstr "ཊེབ་ལེཊི་ཅིག་མཐུད་ཡོད་པའི་སྐབས་ གཡོག་བཀོལ་ནིའི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:28
+msgid "Command to run when a video DVD is inserted."
+msgstr "ཝི་ཌིའོ་གི་ ཌི་བི་ཌི་བཙུགསཔ་ད་ གཡོག་བཀོལ་ནིའི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:29
+msgid "Command to run when a video VCD is inserted."
+msgstr "ཝི་སི་ཌི་ཅིག་བཙུགས་པའི་སྐབས་ གཡོག་བཀོལ་ནིའི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:30
+msgid "Command to run when a video camera is connected."
+msgstr "ཝི་ཌིའོ་པར་ཆས་ཅིག་མཐུད་པའི་སྐབས་ གཡོག་བཀོལ་ནིའི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:31
+#, fuzzy
+msgid "Command to run when a web camera is connected."
+msgstr "ཝི་ཌིའོ་པར་ཆས་ཅིག་མཐུད་པའི་སྐབས་ གཡོག་བཀོལ་ནིའི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:32
+msgid "Command to run when an audio CD is inserted."
+msgstr "རྣར་ཉན་གྱི་ སི་ཌི་བཙུགསཔ་ད་ གཡོག་བཀོལ་ནིའི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:33
+msgid "Command to run when an iPod is connected."
+msgstr "ཨའི་པོཌི་ཅིག་མཐུད་པའི་སྐབས་ གཡོག་བཀོལ་ནིའི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:34
+msgid "Command to run when the user wishes to burn a Data CD."
+msgstr ""
+"ལག་ལེན་པ་དེ་གིས་ གནད་སྡུད་སི་ཌི་ཅིག་ བཙུགས་སྤྱོད་འབད་འདོད་ཡོད་པའི་སྐབས་ གཡོག་བཀོལ་ནིའི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:35
+msgid "Command to run when the user wishes to burn an Audio CD."
+msgstr ""
+"ལག་ལེན་པ་དེ་གིས་ རྣར་ཉན་་སི་ཌི་ཅིག་ བཙུགས་སྤྱོད་འབད་འདོད་ཡོད་པའི་སྐབས་ གཡོག་བཀོལ་ནིའི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:36
+msgid "DVD play command"
+msgstr "ཌི་བི་ཌི་ གཏང་ནིའི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:37
+msgid "Data CD burn command"
+msgstr "གནད་སྡུད་སི་ཌི་ བཙུགས་སྤྱོད་ཀྱི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:38
+msgid "Low Disk Space notification threshold"
+msgstr "ཌིཀསི་གི་བར་སྟོང་ཉུང་བའི་བརྡ་བསྐུལ་ཐེརེཤ་ཧཱོལ།"
+
+#: ../gnome-volume-manager.schemas.in.h:39
+msgid "Open nautilus on removeable media insert."
+msgstr "རྩ་བསྐྲད་གཏང་བཏུབ་པའི་ བརྡ་ལམ་བཙུགས་ཏེ་ཡོད་མིའི་གུ་ ནའུ་ཊི་ལཱསི་ཁ་ཕྱེ།"
+
+#: ../gnome-volume-manager.schemas.in.h:40
+msgid "Perform autoopen"
+msgstr "རང་བཞིན་གྱི་ཁ་ཕྱེ་ནི་ ལག་ལེན་འཐབ།"
+
+#: ../gnome-volume-manager.schemas.in.h:41
+msgid "Perform autorun"
+msgstr "རང་གཞིན་གཡོག་བཀོལ་ ལག་ལེན་འཐབ།"
+
+#: ../gnome-volume-manager.schemas.in.h:42
+msgid "Photo management command"
+msgstr "པར་གྱི་འཛིན་སྐྱོང་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:43
+msgid "Play inserted audio CD's"
+msgstr "བཙུགས་ཏེ་ཡོད་པའི་ རྣར་ཉན་སི་ཌི་གཏང་།"
+
+#: ../gnome-volume-manager.schemas.in.h:44
+msgid "Play inserted video DVDs"
+msgstr "བཙུགས་ཏེ་ཡོད་པའི་ ཝི་ཌིའོ་གི་ ཌི་བི་ཌི་གཏང་།"
+
+#: ../gnome-volume-manager.schemas.in.h:45
+msgid "Play inserted video VCDs"
+msgstr "བཙུགས་ཏེ་ཡོད་པའི་ ཝི་ཌིའོ་སི་ཌི་ཚུ་གཏང་།"
+
+#: ../gnome-volume-manager.schemas.in.h:46
+msgid "Run Palm-sync program"
+msgstr "པཱམ་-མཉམ་འབྱུང་ལས་རིམ་གཡོག་བཀོལ།"
+
+#: ../gnome-volume-manager.schemas.in.h:47
+msgid "Run PocketPC-sync program"
+msgstr "པོ་ཀེཊི་པི་སི་མཉམ་འབྱུང་ལས་རིམ་གཡོག་བཀོལ།"
+
+#: ../gnome-volume-manager.schemas.in.h:48
+msgid "Run a program to burn CDs/DVDs"
+msgstr "སི་ཌི་/ཌི་བི་ཌི་ཚུ་ལུ་ བཙུགས་སྤྱོད་འབད་ནིའི་ ལས་རིམ་ཅིག་གཡོག་བཀོལ།"
+
+#: ../gnome-volume-manager.schemas.in.h:49
+msgid "Run iPod program"
+msgstr "ཨའི་པོཌི་ལས་རིམ་གཡོག་བཀོལ།"
+
+#: ../gnome-volume-manager.schemas.in.h:50
+msgid "Run keyboard program"
+msgstr "ལྡེ་སྒྲོམ་ལས་རིམ་གཡོག་བཀོལ།"
+
+#: ../gnome-volume-manager.schemas.in.h:51
+msgid "Run mouse program"
+msgstr "མཱའུསི་ལས་རིམ་གཡོག་བཀོལ།"
+
+#: ../gnome-volume-manager.schemas.in.h:52
+msgid "Run photo management command"
+msgstr "པར་གྱི་འཛིན་སྐྱོང་བརྡ་བཀོད་ གཡོག་བཀོལ།"
+
+#: ../gnome-volume-manager.schemas.in.h:53
+msgid "Run printer program"
+msgstr "དཔར་འཕྲུལ་ལས་རིམ་གཡོག་བཀོལ།"
+
+#: ../gnome-volume-manager.schemas.in.h:54
+msgid "Run scanner program"
+msgstr "པར་ལེན་འཕྲུལ་ཆས་ལས་རིམ་གཡོག་བཀོལ།"
+
+#: ../gnome-volume-manager.schemas.in.h:55
+msgid "Run tablet program"
+msgstr "ཊེབ་ལེཊི་ལས་རིམ་གཡོག་བཀོལ།"
+
+#: ../gnome-volume-manager.schemas.in.h:56
+msgid "Run video editing program"
+msgstr "ཝི་ཌིའོ་ཞུན་དག་ལས་རིམ་གཡོག་བཀོལ།"
+
+#: ../gnome-volume-manager.schemas.in.h:57
+#, fuzzy
+msgid "Run webcam stream display program"
+msgstr "ལྡེ་སྒྲོམ་ལས་རིམ་གཡོག་བཀོལ།"
+
+#: ../gnome-volume-manager.schemas.in.h:58
+msgid ""
+"The threshold value for whether or not to toggle the notification on, based "
+"on the amount of additional space used since the last check."
+msgstr ""
+"མཐའ་མཇུག་ཞིབ་དཔྱད་འབད་ཞིནམ་ལས་ཚུར་ བར་སྟོང་ཐེབས་ག་དེ་ཅིག་ ལག་ལེན་འཐབ་མི་ལུ་གཞི་བཞག་སྟེ་ བརྡ་"
+"བསྐུལདེ་སོར་སྟོན་འབད་དགོ་ག་མིན་དགོ་གི་དོན་ལུ་ ཐེརེཤི་ཧཱོལ་གྱི་བེ་ལུ།"
+
+#: ../gnome-volume-manager.schemas.in.h:59
+msgid "Threshold for notification of increased disk usage"
+msgstr "ཌིཀསི་གི་ལག་ལེན་ཡར་འཕར་འབད་ཡོད་པའི་བརྡ་བསྐུལ་དོན་ལུ་ཐེརེཤ་ཧཱོལ།"
+
+#: ../gnome-volume-manager.schemas.in.h:60
+msgid "Threshold percentage for notifying the user of low disk space."
+msgstr "ལག་ལེན་པ་ལུ་ ཌིཀསི་གི་བར་སྟོང་ཇུང་བའི་སྐོར་ བརྡ་བསྐུར་འབད་ནིའི་ཐེརེཤ་ཧཱོལ་བརྒྱ་ཆ།"
+
+#: ../gnome-volume-manager.schemas.in.h:61
+msgid "VCD play command"
+msgstr "ཝི་སི་ཌི་གཏང་ནིའི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:62
+msgid "Whether autoopen files should be opened on newly mounted media."
+msgstr "རང་བཞིན་གྱིས་ཁ་ཕྱེ་བའི་ཡིག་སྣོད་ཚུ་ གསརཔ་སྦྱར་བརྩེགས་འབད་མི་ བརྡ་རྒྱུད་གུ་ཁ་ཕྱེ་དགོཔ་ཨིན་ན་མེན།"
+
+#: ../gnome-volume-manager.schemas.in.h:63
+msgid ""
+"Whether autorun programs (binaries and scripts located in 'autorun_path') "
+"are run on newly mounted media."
+msgstr ""
+"རང་བཞིན་གཡོག་བཀོལ་ལས་རིམ་ཚུ་(རང་བཞིན་གཡོག་བཀོལ་འགྲུལ་ལམ་ནང་ཡོད་མི་ བའི་ན་རིསི་དང་ཡིག་ཚུགས་) "
+"གསརཔ་སྦྱར་བརྩེགས་འབད་མི་ བརྡ་ལམ་གུ་གཡོག་བཀོལ་མ་བཀོལ།(_p)"
+
+#: ../gnome-volume-manager.schemas.in.h:64
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"drives when they are inserted."
+msgstr ""
+"རྩ་བསྐྲད་གཏང་བཏུབ་པའི་ བསག་མཛོད་འདྲེན་འཕྲུལ་ཚུ་ ནང་ན་བཙུགསཔ་ད་ ཇི་ནོམ་-སྐད་ཤུགས་-འཛིན་སྐྱོང་པ་"
+"གིས་ དེ་ཚུ་རང་བཞིན་གྱིས་ སྦྱར་བརྩེགས་་འབད་ག་མི་འབད།"
+
+#: ../gnome-volume-manager.schemas.in.h:65
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"media when they are inserted."
+msgstr ""
+"རྩ་བསྐྲད་གཏང་བཏུབ་པའི་ བསག་མཛོད་བརྡ་ལམ་ཚུ་ ནང་ན་བཙུགསཔ་ད་ ཇི་ནོམ་-སྐད་ཤུགས་-འཛིན་སྐྱོང་པ་གིས་ "
+"དེ་ཚུ་རང་བཞིན་གྱིས་ སྦྱར་བརྩེགས་འབད་དགོཔ་ཨིན་ན་མེན།"
+
+#: ../gnome-volume-manager.schemas.in.h:66
+msgid ""
+"Whether, when a Palm is connected, gnome-volume-manager should run "
+"'autopalmsync_command'."
+msgstr ""
+"པཱམ་ཅིག་མཐུད་པའི་སྐབས་ ཇི་ནོམ་སྐད་ཤུགས་འཛིན་སྐྱོང་པ་གིས་ 'automouse_command'གཡོག་བཀོལ་དགོ་ག་"
+"མིན་དགོ"
+
+#: ../gnome-volume-manager.schemas.in.h:67
+msgid ""
+"Whether, when a PocketPC is connected, gnome-volume-manager should run "
+"'autopocketpc_command'."
+msgstr ""
+"པོ་ཀེཊི་པི་སི་ཅིག་མཐུད་ཡོད་པའི་སྐབས་ ཇི་ནོམ་སྐད་ཤུགས་འཛིན་སྐྱོང་པ་གིས་ "
+"'autopocketpc_command'གཡོག་བཀོལ་དགོ་ག་མིན་དགོ"
+
+#: ../gnome-volume-manager.schemas.in.h:68
+msgid ""
+"Whether, when a blank CD or DVD is inserted, gnome-volume-manager should run "
+"one of the autoburn commands."
+msgstr ""
+"སི་ཌི་ ཡང་ན་ ཌི་བི་ཌི་སྟོངམ་ཅིག་བཙུགསཔ་ད་ ཇི་ནོམ་-སྐད་ཤུགས་-འཛིན་སྐྱོང་པ་གིས་ རང་བཞིན་བཙུགས་སྤྱོད་ཀྱི་"
+"བརྡ་བཀོད་ཅིག་ གཡོག་བཀོལ་དགོ་ག་མིན་དགོ"
+
+#: ../gnome-volume-manager.schemas.in.h:69
+msgid ""
+"Whether, when a digital camera is connected or media from a digital camera "
+"is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr ""
+"ཌི་ཇི་ཊལ་པར་ཆས་ཅིག་ མཐུད་པའི་སྐབས་ལུའམ་ ཌི་ཇི་ཊལ་པར་ཆས་ནང་ལས བརྡ་ལམ་ཅིག་བཙུགས་པའི་སྐབས་ ཇི་"
+"ནོམ་-སྐད་ཤུགས་-འཛིན་སྐྱོང་པ་གིས autophoto_command' བརྡ་བཀོད་དེ་ གཡོག་བཀོལ་དགོ་ག་མིན་དགོ"
+
+#: ../gnome-volume-manager.schemas.in.h:70
+msgid ""
+"Whether, when a digital video camera is connected, gnome-volume-manager "
+"should run 'autovideocam_command'."
+msgstr ""
+"་ཌི་ཇི་ཊཱལ་ ཝི་ཌིའོ་པར་ཆས་ཅིག་མཐུད་པའི་སྐབས་ ཇི་ནོམ་-སྐད་ཤུགས་-འཛིན་སྐྱོང་པ་གིས་ "
+"'autovideocam_command' གཡོག་བཀོལ་དགོ་ག་མིན་དགོ"
+
+#: ../gnome-volume-manager.schemas.in.h:71
+msgid ""
+"Whether, when a keyboard is connected, gnome-volume-manager should run "
+"'autokeyboard_command'."
+msgstr ""
+"'ལྡེ་སྒྲོམ་ཅིག་ མཐུད་པའི་སྐབས་ ཇི་ནོམ་-སྐད་ཤུགས་-འཛིན་སྐྱོང་པ་གིས 'autokeyboard_command'དེ་ གཡོག་"
+"བཀོལ་དགོ་ག་མིན་དགོ"
+
+#: ../gnome-volume-manager.schemas.in.h:72
+msgid ""
+"Whether, when a mouse is connected, gnome-volume-manager should run "
+"'automouse_command'."
+msgstr ""
+"མཱའུསི་ཅིག་མཐུད་པའི་སྐབས་ ཇི་ནོམ་-སྐད་ཤུགས་-འཛིན་སྐྱོང་པ་གིས་ 'automouse_command' དེ་ གཡོག་བཀོལ་"
+"དགོ་ག་མིན་དགོ"
+
+#: ../gnome-volume-manager.schemas.in.h:73
+msgid ""
+"Whether, when a printer is connected, gnome-volume-manager should run "
+"'autoprinter_command'."
+msgstr ""
+"དཔར་འཕྲུལ་ཅིག་མཐུད་པའི་སྐབས་ ཇི་ནོམ་-སྐད་ཤུགས་-འཛིན་སྐྱོང་པ་གིས་ 'autoprinter_command'དེ་ "
+"གཡོག་བཀོལ་དགོ་ག་མིན་དགོ"
+
+#: ../gnome-volume-manager.schemas.in.h:74
+msgid ""
+"Whether, when a scanner is connected, gnome-volume-manager should run "
+"'autoscanner_command'."
+msgstr ""
+"པར་ལེན་འཕྲུལ་ཆས་ཅིག་མཐུད་པའི་སྐབས་ ཇི་ནོམ་-སྐད་ཤུགས་-འཛིན་སྐྱོང་པ་གིས་ "
+"'autoscanner_command'དེ་ གཡོག་བཀོལ་དགོ་ག་མིན་དགོ"
+
+#: ../gnome-volume-manager.schemas.in.h:75
+msgid ""
+"Whether, when a tablet is connected, gnome-volume-manager should run "
+"'autotablet_command'."
+msgstr ""
+"ཊེབ་ལེཊི་ཅིག་མཐུད་པའི་སྐབས་ ཇི་ནོམ་སྐད་ཤུགས་འཛིན་སྐྱོང་པ་གིས་ 'autotablet_command'གཡོག་བཀོལ་དགོ་"
+"ག་མིན་དགོ"
+
+#: ../gnome-volume-manager.schemas.in.h:76
+msgid ""
+"Whether, when a video DVD is inserted, gnome-volume-manager should run "
+"'autoplay_dvd_command'."
+msgstr ""
+"ཝི་ཌིའོ་གི་ ཌི་བི་ཌི་ཅིག་བཙུགསཔ་ད་ ཇི་ནོམ་-སྐད་ཤུགས་-འཛིན་སྐྱོང་པ་གིས 'autoplay_dvd_command བརྡ་"
+"བཀོད་དེ་ གཡོག་བཀོལ་དགོ་ག་མིན་དགོ།"
+
+#: ../gnome-volume-manager.schemas.in.h:77
+msgid ""
+"Whether, when a video VCD is inserted, gnome-volume-manager should run "
+"'autoplay_vcd_command'."
+msgstr ""
+"ཝི་ཌིའོ་ བི་སི་ཌི་ཅིག་བཙུགས་པའི་སྐབས་ ཇི་ནོམ་-སྐད་ཤུགས་-འཛིན་སྐྱོང་པ་གིས་ "
+"'autoplay_vcd_command'དེ་ གཡོག་བཀོལ་དགོ་ག་མིན་དགོ"
+
+#: ../gnome-volume-manager.schemas.in.h:78
+#, fuzzy
+msgid ""
+"Whether, when a web camera is connected, gnome-volume-manager should run "
+"'autowebcam_command'."
+msgstr ""
+"'ལྡེ་སྒྲོམ་ཅིག་ མཐུད་པའི་སྐབས་ ཇི་ནོམ་-སྐད་ཤུགས་-འཛིན་སྐྱོང་པ་གིས 'autokeyboard_command'དེ་ གཡོག་"
+"བཀོལ་དགོ་ག་མིན་དགོ"
+
+#: ../gnome-volume-manager.schemas.in.h:79
+msgid ""
+"Whether, when an audio CD is inserted, gnome-volume-manager should run "
+"'autoplay_cda_command'."
+msgstr ""
+"རྣར་ཉན་སི་ཌི་ཅིག་བཙུགསཔ་ད་ ཇི་ནོམ་-སྐད་ཤུགས་-འཛིན་སྐྱོང་པ་གིས 'autoplay_cda_command' བརྡ་"
+"བཀོད་དེ་ གཡོག་བཀོལ་དགོ་ག་མིན་དགོ།"
+
+#: ../gnome-volume-manager.schemas.in.h:80
+msgid ""
+"Whether, when an iPod is connected, gnome-volume-manager should run "
+"'autoipod_command'."
+msgstr ""
+"ཨའི་པོཌི་ཅིག་བཙུགས་པའི་སྐབས་ ཇི་ནོམ་-སྐད་ཤུགས་-འཛིན་སྐྱོང་པ་གིས་ 'autoipod_command'དེ་ གཡོག་"
+"བཀོལ་དགོ་ག་མིན་དགོ"
+
+#: ../gnome-volume-manager.schemas.in.h:81
+msgid "iPod sync command"
+msgstr "ཨའི་པོཌི་མཉམ་འབྱུང་གི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:82
+msgid "keyboard command"
+msgstr "ལྡེ་སྒྲོམ་གྱི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:83
+msgid "mouse command"
+msgstr "མཱའུསི་གི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:84
+msgid "palm sync command"
+msgstr "པཱམ་མཉམ་འབྱུང་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:85
+msgid "printer command"
+msgstr "དཔར་འཕྲུལ་གྱི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:86
+msgid "scanner command"
+msgstr "པར་ལེན་འཕྲུལ་ཆས་ཀྱི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:87
+msgid "tablet command"
+msgstr "ཊེབ་ལེཊི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:88
+msgid "video camera command"
+msgstr "ཝི་ཌིའོ་པར་ཆས་ཀྱི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.schemas.in.h:89
+#, fuzzy
+msgid "web camera command"
+msgstr "ཝི་ཌིའོ་པར་ཆས་ཀྱི་བརྡ་བཀོད།"
+
+#: ../gnome-volume-manager.desktop.in.in.h:1
+msgid "Volume Manager"
+msgstr "སྐད་ཤུགས་འཛིན་སྐྱོང་པ།"
+
+#: ../gnome-volume-manager.desktop.in.in.h:2
+msgid "Volume manager for removable drives and media"
+msgstr "རྩ་བསྐྲད་གཏང་བཏུབ་པའི་ འདྲེན་འཕྲུལ་དང་བརྡ་ལམ་གྱི་སྐད་ཤུགས་འཛིན་སྐྱོང་པ།"
+
+#: ../gnome-volume-properties.desktop.in.h:1
+msgid "Configure management of removable drives and media"
+msgstr "རྩ་བསྐྲད་གཏང་བཏུབ་པའི་ འདྲེན་འཕྲུལ་དང་བརྡ་ལམ་གྱི་འཛིན་སྐྱོང་ རིམ་སྒྲིག་འབད།"
+
+#: ../gnome-volume-properties.desktop.in.h:2
+msgid "Removable Drives and Media"
+msgstr "རྩ་བསྐྲད་གཏང་བཏུབ་པའི་ འདྲེན་འཕྲུལ་དང་བརྡ་ལམ།"
+
+#: ../gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr "   "
+
+#: ../gnome-volume-properties.glade.h:2
+msgid "<b>Audio CD Discs</b>"
+msgstr "<b>རྣར་ཉན་སི་ཌི་ཌིཀསི་</b>"
+
+#: ../gnome-volume-properties.glade.h:3
+msgid "<b>Blank CD and DVD Discs</b>"
+msgstr "<b>སི་ཌི་དང་ཌི་བིཌི་ ཌིཀསི་སྟོངམ</b>"
+
+#: ../gnome-volume-properties.glade.h:4
+msgid "<b>Digital Camera</b>"
+msgstr "<b>ཌི་ཇི་ཊལ་ པར་ཆས་</b>"
+
+#: ../gnome-volume-properties.glade.h:5
+msgid "<b>Digital Video Camera</b>"
+msgstr "<b>ཌི་ཇི་ཊལ་ ཝི་ཌིའོ་པར་ཆས་</b>"
+
+#: ../gnome-volume-properties.glade.h:6
+msgid "<b>Keyboards</b>"
+msgstr "<b>ལྡེ་སྒྲོམ་ཚུ་</b>"
+
+#: ../gnome-volume-properties.glade.h:7
+msgid "<b>Mice</b>"
+msgstr "\"<b>མཱའུསི་ཚུ་</b>\""
+
+#: ../gnome-volume-properties.glade.h:8
+msgid "<b>Palm™</b>"
+msgstr "<b>པཱམ་</b>"
+
+#: ../gnome-volume-properties.glade.h:9
+msgid "<b>PocketPC</b>"
+msgstr "\"<b>པོ་ཀེཊི་པི་སི་</b>\""
+
+#: ../gnome-volume-properties.glade.h:10
+msgid "<b>Portable Music Players</b>"
+msgstr "<b>འབག་བཏུབ་པའི་སྙན་ཆ་གཏང་འཕྲུལ་ཚུ།</b>"
+
+#: ../gnome-volume-properties.glade.h:11
+msgid "<b>Printers</b>"
+msgstr "<b>དཔར་འཕྲུལ་ཚུ་</b>"
+
+#: ../gnome-volume-properties.glade.h:12
+msgid "<b>Removable Storage</b>"
+msgstr "<b>རྩ་བསྐྲད་གཏང་བཏུབ་པའི་བསག་མཛོད་</b>"
+
+#: ../gnome-volume-properties.glade.h:13
+msgid "<b>Scanners</b>"
+msgstr "<b>པར་ལེན་འཕྲུལ་ཆས་ཚུ་</b>"
+
+#: ../gnome-volume-properties.glade.h:14
+msgid "<b>Tablets</b>"
+msgstr "<b>དྲན་བྱང་ཚུ་</b>"
+
+#: ../gnome-volume-properties.glade.h:15
+msgid "<b>Video DVD Discs</b>"
+msgstr "<b>ཝི་ཌིའོ་གིང་ ཌི་བི་ཌི་ ཌིཀསི་</b>"
+
+#: ../gnome-volume-properties.glade.h:16
+#, fuzzy
+msgid "<b>Web Camera</b>"
+msgstr "<b>ཌི་ཇི་ཊལ་ པར་ཆས་</b>"
+
+#: ../gnome-volume-properties.glade.h:17
+msgid "Auto-_open files on new drives and media"
+msgstr "འདྲེན་འཕྲུལ་དང་ བརྡ་རྒྱུད་གསརཔ་ཚུ་གུ་ རང་བཞིན་གྱིས་ཁ་ཕྱེ་བའི་ཡིག་སྣོད་ཚུ།(_o)"
+
+#: ../gnome-volume-properties.glade.h:18
+msgid "Automatically run a program when a USB _keyboard is connected"
+msgstr "ཡུ་ཨེསི་བི་ལྡེ་སྒྲོམ་ཅིག་མཐུད་པའི་སྐབས་ རང་བཞིན་གྱིས་ལས་རིམ་ཅིག་གཡོག་བཀོལ།(_K)"
+
+#: ../gnome-volume-properties.glade.h:19
+msgid "Automatically run a program when a USB _mouse is connected"
+msgstr "ཡུ་ཨེསི་བི་མཱའུསི་ཅིག་མཐུད་པའི་སྐབས་ རང་བཞིན་གྱིས་ལས་རིམ་ཅིག་གཡོག་བཀོལ།(_m)"
+
+#: ../gnome-volume-properties.glade.h:20
+msgid "Automatically run a program when a _printer is connected"
+msgstr "དཔར་འཕྲུལ་ཅིག་མཐུད་པའི་སྐབས་ རང་བཞིན་གྱིས་ལས་རིམ་ཅིག་གཡོག་བཀོལ།(_p)"
+
+#: ../gnome-volume-properties.glade.h:21
+msgid "Automatically run a program when a _scanner is connected"
+msgstr "པར་ལེན་འཕྲུལ་ཆས་ཅིག་མཐུད་པའི་སྐབས་ རང་བཞིན་གྱིས་ལས་རིམ་ཅིག་གཡོག་བཀོལ།(_s)"
+
+#: ../gnome-volume-properties.glade.h:22
+msgid "Automatically run a program when a _tablet is connected"
+msgstr "དྲན་བྱང་ཅིག་མཐུད་པའི་སྐབས་ རང་བཞིན་གྱིས་ལས་རིམ་ཅིག་གཡོག་བཀོལ།(_t)"
+
+#: ../gnome-volume-properties.glade.h:23
+msgid "Browse _removable media when inserted"
+msgstr "རྩ་བསྐྲད་གཏང་བཏུབ་པའི་ བརྡ་ལམ་བཙུགསཔ་དང་བརྡ་འཚོལ་འབད།(_r)"
+
+#: ../gnome-volume-properties.glade.h:24
+msgid "C_ommand:"
+msgstr "བརྡ་བཀོད་:(_o)"
+
+#: ../gnome-volume-properties.glade.h:25
+msgid "Cameras"
+msgstr "པར་ཆས།"
+
+#: ../gnome-volume-properties.glade.h:26
+msgid "Comman_d:"
+msgstr "བརྡ་བཀོད་:(_d)"
+
+#: ../gnome-volume-properties.glade.h:27
+msgid "Command for A_udio CDs:"
+msgstr "རྣར་ཉན་སི་ཌི་ཚུ་གི་དོན་ལུ་བརྡ་བཀོད།(_u)"
+
+#: ../gnome-volume-properties.glade.h:28
+msgid "Command for _Data CDs: "
+msgstr "གནད་སྡུད་་སི་ཌི་ཚུ་གི་དོན་ལུ་བརྡ་བཀོད།(_D)"
+
+#: ../gnome-volume-properties.glade.h:29
+msgid "Drives and Media Preferences"
+msgstr "འདྲེན་འཕྲུལ་དང་ བརྡ་ལམ་གྱི་དགའ་གདམ་ཚུ།"
+
+#: ../gnome-volume-properties.glade.h:30
+msgid "Input Devices"
+msgstr "ཨིན་པུཊི་ཐབས་འཕྲུལ་ཚུ།"
+
+#: ../gnome-volume-properties.glade.h:31
+msgid "Mount removable media when _inserted"
+msgstr "ནང་ན་བཙུགསཔ་ད་ རྩ་བསྐྲད་གཏང་བཏུབ་པའི་བརྡ་ལམ་ སྦྱར་བརྩེགས་འབད།(_i)"
+
+#: ../gnome-volume-properties.glade.h:32
+msgid "Multimedia"
+msgstr "སྣ་མང་བརྡ་ལམ།"
+
+#: ../gnome-volume-properties.glade.h:33
+msgid "PDAs"
+msgstr "པི་ཌི་ཨེ་ཚུ།"
+
+#: ../gnome-volume-properties.glade.h:34
+msgid "Play _audio CD discs when inserted"
+msgstr "ནང་ན་བཙུགསཔ་ད་ རྣར་ཉན་སི་ཌི་གཏང་།(_a)"
+
+#: ../gnome-volume-properties.glade.h:35
+msgid "Play _music files when connected"
+msgstr "མཐུད་ཚརཝ་དང་ སྙན་ཆའི་ཡིག་སྣོད་ཚུ་གཏང་།(_m)"
+
+#: ../gnome-volume-properties.glade.h:36
+msgid "Play _video DVD discs when inserted"
+msgstr "ནང་ན་བཙུགསཔ་ད་ ཝི་ཌིའོ་གི་ ཌི་བི་ཌི་ ཌིཀསི་གཏང་།(_v)"
+
+#: ../gnome-volume-properties.glade.h:37
+msgid "Printers & Scanners"
+msgstr "དཔར་འཕྲུལ་དང་ པར་ལེན་འཕྲུལ་ཆས་ཚུ།"
+
+#: ../gnome-volume-properties.glade.h:38
+msgid "Removable Drives and Media Preferences"
+msgstr "རྩ་བསྐྲད་གཏང་བཏུབ་པའི་འདྲེན་འཕྲུལ་དང་ བརྡ་ལམ་གྱི་དགའ་གདམ་ཚུ།"
+
+#: ../gnome-volume-properties.glade.h:39
+msgid "Select program to burn audio CDs"
+msgstr "རྣར་ཉན་སི་ཌི་ཚུ་ བཙུགས་སྤྱོད་འབད་ནིའི་ ལས་རིམ་སེལ་འཐུ་འབད།"
+
+#: ../gnome-volume-properties.glade.h:40
+msgid "Select program to burn data CDs"
+msgstr "གནད་སྡུད་སི་ཌི་ཚུ་ བཙུགས་སྤྱོད་འབད་ནིའི་ ལས་རིམ་སེལ་འཐུ་འབད།"
+
+#: ../gnome-volume-properties.glade.h:41
+msgid "Select program to edit videos"
+msgstr "ཝི་ཌིའོ་ཞུན་དག་བརྐྱབ་ནིའི་ལས་རིམ་ སེལ་འཐུ་འབད།"
+
+#: ../gnome-volume-properties.glade.h:42
+msgid "Select program to import photos"
+msgstr "པར་ཚུ་ནང་འདྲེན་འབད་ནིའི་ལས་རིམ་ སེལ་འཐུ་འབད།"
+
+#: ../gnome-volume-properties.glade.h:43
+msgid "Select program to play DVDs"
+msgstr "ཌི་བི་ཌི་ཚུ་ གཏང་ནིའི་ལས་རིམ་ སེལ་འཐུ་འབད།"
+
+#: ../gnome-volume-properties.glade.h:44
+msgid "Select program to play audio CDs"
+msgstr "རྣར་ཉན་སི་ཌི་ཚུ་གཏང་ནིའི་ལས་རིམ་ སེལ་འཐུ་འབད།"
+
+#: ../gnome-volume-properties.glade.h:45
+msgid "Select program to play music files"
+msgstr "སྙན་ཆའི་ཡིག་སྣོད་ཚུ་གཏང་ནིའི་ལས་རིམ་ སེལ་འཐུ་འབད།"
+
+#: ../gnome-volume-properties.glade.h:46
+msgid "Select program to run when a keyboard is plugged in"
+msgstr "ལྡེ་སྒྲོམ་ཅིག་བཙུགས་པའི་སྐབས་ གཡོག་བཀོལ་ནིའི་ལས་རིམ་ སེལ་འཐུ་འབད།"
+
+#: ../gnome-volume-properties.glade.h:47
+msgid "Select program to run when a mouse is plugged in"
+msgstr "མཱའུསི་ཅིག་བཙུགས་པའི་སྐབས་ གཡོག་བཀོལ་ནིའི་ལས་རིམ་ སེལ་འཐུ་འབད།"
+
+#: ../gnome-volume-properties.glade.h:48
+msgid "Select program to run when a printer is plugged in"
+msgstr "དཔར་འཕྲུལ་ཅིག་བཙུགས་པའི་སྐབས་ གཡོག་བཀོལ་ནིའི་ལས་རིམ་ སེལ་འཐུ་འབད།"
+
+#: ../gnome-volume-properties.glade.h:49
+msgid "Select program to run when a scanner is plugged in"
+msgstr "པར་ལེན་འཕྲུལ་ཆས་ཅིག་བཙུགས་པའི་སྐབས་ གཡོག་བཀོལ་ནིའི་ལས་རིམ་ སེལ་འཐུ་འབད།"
+
+#: ../gnome-volume-properties.glade.h:50
+msgid "Select program to run when a tablet is plugged in"
+msgstr "དྲན་བྱང་ཅིག་བཙུགས་པའི་སྐབས་ གཡོག་བཀོལ་ནིའི་ལས་རིམ་ སེལ་འཐུ་འབད།"
+
+#: ../gnome-volume-properties.glade.h:51
+msgid "Select program to sync Palm devices"
+msgstr "པཱམ་ཐབས་འཕྲུལ་ཚུ་གཏང་ནིའི་ལས་རིམ་ སེལ་འཐུ་འབད།"
+
+#: ../gnome-volume-properties.glade.h:52
+msgid "Storage"
+msgstr "བསག་མཛོད།"
+
+#: ../gnome-volume-properties.glade.h:53
+msgid "Sync PocketP_C devices when connected"
+msgstr "མཐུད་ཚརཝ་དང་ པོ་ཀེཊི་པི་སི་ཐབས་འཕྲུལ་ཚུ་ མཉམ་འབྱུང་འབད།(_C)"
+
+#: ../gnome-volume-properties.glade.h:54
+msgid "Sync _Palm™ devices when connected"
+msgstr "མཐུད་ཚརཝ་དང་ པཱམ་ཐབས་འཕྲུལ་ཚུ་ མཉམ་འབྱུང་འབད།(_P)"
+
+#: ../gnome-volume-properties.glade.h:55
+msgid "_Auto-run programs on new drives and media"
+msgstr "འདྲེན་འཕྲུལ་དང་ བརྡ་ལམགསརཔ་ཚུ་ལུ་ རང་བཞིན་གཡོག་བཀོལ་ལས་རིམ་ཚུ།(_A)"
+
+#: ../gnome-volume-properties.glade.h:56
+msgid "_Burn a CD or DVD when a blank disc is inserted"
+msgstr "ཌིཀསི་སྟོངམ་ཅིག་བཙུགས་པའི་སྐབས་ སི་ཌི་ ཡང་ན་ ཌི་བི་ཌི་ བཙུགས་སྤྱོད་འབད། (_B)"
+
+#: ../gnome-volume-properties.glade.h:57
+msgid "_Command:"
+msgstr "བརྡ་བཀོད་:།(_C)"
+
+#: ../gnome-volume-properties.glade.h:58
+msgid "_Edit video when connected"
+msgstr "མཐུད་ཚརཝ་དང་ ཝི་ཌིའོ་ཞུན་དག་རྐྱབས།(_E)"
+
+#: ../gnome-volume-properties.glade.h:59
+msgid "_Import digital photographs when connected"
+msgstr "མཐུད་པའི་སྐབས་ ཌི་ཇི་ཊལ་པར་ཚུ་ ནང་འདྲེན་འབད།(_I)"
+
+#: ../gnome-volume-properties.glade.h:60
+msgid "_Mount removable drives when hot-plugged"
+msgstr "ཧོཊི་-པ་ལག་འབདཝ་ད་ རྩ་བསྐྲད་གཏང་བཏུབ་པའི་འདྲེན་འཕྲུལ་ཚུ་ སྦྱར་བརྩེགས་འབད།(_M)"
+
+#: ../src/manager.c:220 ../src/manager.c:225 ../src/manager.c:230
+#: ../src/manager.c:235 ../src/manager.c:241 ../src/manager.c:247
+#: ../src/manager.c:253 ../src/manager.c:259
+msgid "Ig_nore"
+msgstr "སྣང་མེད་བཞག(_n)"
+
+#: ../src/manager.c:221
+msgid "_Allow Auto-Run"
+msgstr "རང་བཞིན་གཡོག་བཀོལ་འབད་བཅུག(_A)"
+
+#: ../src/manager.c:226
+msgid "_Open"
+msgstr "ཁ་ཕྱེ། (_O)"
+
+#: ../src/manager.c:231 ../src/manager.c:237 ../src/manager.c:242
+msgid "Import _Photos"
+msgstr "པར་ཚུ་ནང་འདྲེན་འབད།(_P)"
+
+#: ../src/manager.c:236
+msgid "_Open Folder"
+msgstr "སྣོད་འཛིན་ཁ་ཕྱེ།(_O)"
+
+#: ../src/manager.c:243
+msgid "Manage _Music"
+msgstr "སྙན་ཆ་འཛིན་སྐྱོང་འཐབ།(_M)"
+
+#: ../src/manager.c:248
+msgid "_Browse Files"
+msgstr "ཡིག་སྣོད་ཚུ་ བརྡ་འཚོལ་འབད།(_B)"
+
+#: ../src/manager.c:249
+msgid "_Play CD"
+msgstr ",སི་ཌི་གཏང་།(_P)"
+
+#: ../src/manager.c:254
+msgid "Make _Audio CD"
+msgstr "རྣར་ཉན་སི་ཌི་བཟོ།(_A)"
+
+#: ../src/manager.c:255
+msgid "Make _Data CD"
+msgstr "གནད་སྡུད་སི་ཌི་བཟོ།(_D)"
+
+#: ../src/manager.c:260
+msgid "Make _DVD"
+msgstr "ཌི་བི་ཌི་བཟོ།(_D)"
+
+#: ../src/manager.c:313
+msgid "Auto-Run Confirmation"
+msgstr "རང་བཞིན་གཡོག་བཀོལ་ངེས་དཔྱད།"
+
+#: ../src/manager.c:314
+msgid "Auto-run capability detected."
+msgstr "རང་བཞིན་གཡོག་བཀོལ་གྱི་ལྕོགས་གྲུབ་ངོས་འཛིན་འབད་ཡི།"
+
+#: ../src/manager.c:315
+msgid "Would you like to allow <b>'${0}'</b> to run?"
+msgstr "ཁྱོད་ཀྱིས་<b>'${0}'</b>གཡོག་བཀོལ་བཅུག་ནི་ཨིན་ན?"
+
+#: ../src/manager.c:320
+msgid "Auto-Open Confirmation"
+msgstr "རང་བཞིན་གྱིས་ཁ་ཕྱེ་བའི་ངེས་དཔྱད།"
+
+#: ../src/manager.c:321
+msgid "Auto-Open capability detected."
+msgstr "རང་བཞིན་གྱིས་ཁ་ཕྱེ་བའི་ལྕོགས་གྲུབ་ངོས་འཛིན་བྱུང་ཡི།"
+
+#: ../src/manager.c:322
+msgid "Would you like to open <b>'${0}'</b>?"
+msgstr "ཁྱོད་ཀྱིས་<b>'${0}'</b>ཁ་ཕྱེ་ནི་ཨིན་ན?"
+
+#: ../src/manager.c:327 ../src/manager.c:334
+msgid "Camera Import"
+msgstr "པར་ཆས་ནང་འདྲེན།"
+
+#: ../src/manager.c:328 ../src/manager.c:335
+msgid "A camera has been detected."
+msgstr "པར་ཤས་ཅིག་ངོས་འཛིན་འབད་ཡི།"
+
+#: ../src/manager.c:329 ../src/manager.c:336
+msgid ""
+"There are photos on the camera. Would you like to add these pictures to your "
+"album?"
+msgstr "པར་ཆས་དེ་ནང་པར་ཚུ་འདུག ཁྱོད་ཀྱིས་པར་དེ་ཚུ་ ཁྱོད་རའི་པར་དེབ་ནང་ ཁ་སྐོང་བརྐྱབ་ནི་ཨིན་ན?"
+
+#: ../src/manager.c:330 ../src/manager.c:337 ../src/manager.c:344
+#: ../src/manager.c:351 ../src/manager.c:358
+msgid "_Always perform this action"
+msgstr "ཨ་རྟག་ར་ ངོས་ལན་འདི་འབད།(_A)"
+
+#: ../src/manager.c:341
+msgid "Photo Import"
+msgstr "པར་ནང་འདྲེན།"
+
+#: ../src/manager.c:342
+msgid "A photo card has been detected."
+msgstr "པར་བྱང་ཅིག་ངོས་འཛིན་འབད་ཡི།"
+
+#: ../src/manager.c:343
+msgid ""
+"There are photos on the card. Would you like to add these pictures to your "
+"album?"
+msgstr "པར་བྱང་གུ་པར་ཚུ་འདུག ཁྱོད་ཀྱིས་པར་དེ་ཚུ་ ཁྱོད་རའི་པར་དེབ་ནང་ ཁ་སྐོང་བརྐྱབ་ནི་ཨིན་ན?"
+
+#: ../src/manager.c:348
+msgid "Photos and Music"
+msgstr "པར་དང་སྙན་ཆ།"
+
+#: ../src/manager.c:349
+msgid "Photos were found on your music device."
+msgstr "ཁྱོད་ཀྱི་སྙན་ཆའི་ཐབས་འཕྲུལ་གུ་པར་དེ་ཚུ་འདུག"
+
+#: ../src/manager.c:350
+msgid "Would you like to import the photos or manage its music?"
+msgstr "ཁྱོད་ཀྱིས་པར་དེ་ཚུ་ནང་འདྲེན་འདབ་ནི་ཨིན་ན་ ཡང་ན་ དེ་གི་སྙན་ཆ་འཛིན་སྐྱོང་འཐབ་ནི་ཨིན་ན?"
+
+#: ../src/manager.c:355
+msgid "Mixed Audio and Data CD"
+msgstr "རྣར་ཉན་སྦྱོར་འཕྲུལ་དང་གནས་སྡུད་སི་ཌི་"
+
+#: ../src/manager.c:356
+msgid "The CD in the drive contains both music and files."
+msgstr "འདྲེན་འཕྲུལ་ནང་ཡོད་མི་ སི་ཌི་དེ་ནང་ སྙན་ཆ་དང་ཡིག་སྣོད་གཉིས་ཆ་རང་འདུག"
+
+#: ../src/manager.c:357
+msgid "Would you like to listen to music or browse the files?"
+msgstr "ཁྱོད་ཀྱིས་སྙན་ཆ་ཉན་ནི་ཨིན་ན་ ཡིག་སྣོད་ཚུ་ལུ་བརྡ་འཚོལ་འབད་ནི་ཨིན་ན?"
+
+#: ../src/manager.c:362
+msgid "Blank CD Inserted"
+msgstr "སི་ཌི་སྟོངམ་བཙུགས་ཡོདཔ་"
+
+#: ../src/manager.c:363 ../src/manager.c:370
+msgid "You have inserted a blank disc."
+msgstr "ཁྱོད་ཀྱིས་ཌིཀསི་སྟོངམ་ཅིག་བཙུགས་ནུག"
+
+#: ../src/manager.c:364 ../src/manager.c:371
+msgid "What would you like to do?"
+msgstr "ཁྱོད་ཀྱིས་ག་ཅི་འབད་དགོ་མནོཝ་སྨོ?"
+
+#: ../src/manager.c:369
+msgid "Blank DVD Inserted"
+msgstr "ཌི་ཝི་ཌི་སྟོངམ་བཙུགས་ཡོདཔ་"
+
+#: ../src/manager.c:3251
+#, c-format
+msgid "%d%% of the disk space on %s is in use"
+msgstr "ཌིཀསི་གི་བར་སྟོང་%d%%ལག་ལེན་འཐབ་དོ་%s གུ"
+
+#: ../src/manager.c:3254
+msgid "Low Disk Space"
+msgstr "ཌིཀསི་ནང་བར་སྟོང་ཉུང་བ།"
+
+#: ../src/manager.c:3372
+msgid "Print version and exit"
+msgstr "ཐོན་རིམ་དཔར་བསྐྲུན་འབད་དེ་ཕྱི་འཐོན་འབད།"
+
+#: ../src/manager.c:3374
+msgid "Run as a daemon"
+msgstr "ཌེ་ཤཱོན་སྦེ་གཡོད་བཀོལ།"
+
+#: ../src/manager.c:3376
+msgid "Don't run as a daemon"
+msgstr "ཌེ་མཱོན་སྦེ་གཡོག་མ་བཀོལ།"
+
+#: ../src/manager.c:3378
+msgid "Run in secret mode"
+msgstr "གསང་བའི་ཐབས་ལམ་ནང་གཡོག་བཀོལ།"
+
+#: ../src/manager.c:3410
+#, c-format
+msgid "Unrecognized --daemon argument: %s\n"
+msgstr "ངོས་འཛིན་འབད་མ་ཚུགས་ -- ཌེ་མཱོན་གྱི་གྲུབ་རྟགས་:%s\n"
+
+#: ../src/properties.c:318
+msgid "Could not load the main interface"
+msgstr "ངོས་འདྲ་བ་གཙོ་བོ་དེ་ མངོན་གསལ་འབད་མ་ཚུགས།"
+
+#: ../src/properties.c:320
+msgid "Please make sure that the volume manager is properly installed"
+msgstr "སྐད་ཤུགས་འཛིན་སྐྱོང་པ་དེ་ ངེས་བདེན་སྦེ་ གཞི་བཙུགས་འབདཡོདཔ་ ངེས་གཏན་བཟོ་གནང་།"
+
+#: ../src/properties.c:479
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr ""
+"ཇི་ནོམ་-སྐད་ཤུགས་-འཛིན་སྐྱོང་པའི་ཌེ་མཱོན་ འགོ་བཙུགས་ནི་ལུ་འཛོལ་བ། \n"
+"%s"
+
+#: ../src/properties.c:510
+msgid "Volume management not supported"
+msgstr "སྐད་ཤུགས་འཛིན་སྐྱོང་ལུ་ རྒྱབ་སྐྱོར་མིན་འདུག།"
+
+#: ../src/properties.c:512
+msgid ""
+"The \"hald\" service is required but not currently running. Enable the "
+"service and rerun this application, or contact your system administrator."
+msgstr ""
+"\"hald\" ཟེར་མི་ ཞབས་ཏོག་དེ་དགོཔ་ཨིནམ་དང་  ད་ལྟོ་གཡོག་བཀོལ་མི་བཏུབ་པས།  ཞབས་ཏོག་དེ་ལྕོགསཅན་"
+"བཟོ་སྟེ་ གློག་རིམ་འདི་ ལོག་གཡོག་བཀོལ་ ཡང་ན་ ཁྱོད་རའི་རིམ་ལུགས་འཛིན་སྐྱོང་པ་ལུ་ འབྲེལ་བ་འཐབ།"
+
+#~ msgid "Choose Disc Type"
+#~ msgstr "ཌིཀསི་གི་དབྱེ་བ་གདམ་ཁ་རྐྱབས།"
+
+#~ msgid ""
+#~ "Action to take when an iPod Photo is encountered (syncronise music or "
+#~ "import photos)."
+#~ msgstr ""
+#~ "ཨའི་པོཌི་པར་དང་ཕྱད་པའི་སྐབས་ ངོས་ལེན་འབད་ནིའི་བྱ་བ།(སྙན་ཆ་མཉམ་འབྱུང་འབད་ ཡང་ན་ པར་ནང་"
+#~ "འདྲེན་འབད)"
+
+#~ msgid "Command to run when the eject button on a optical drive is pressed."
+#~ msgstr "ཨོཔ་ཊི་ཀཱལ་འདྲེན་འཕྲུལ་གུ་ ཕྱིར་བཏོན་ཨེབ་རྟ་ལུ་ཨེབ་ད་ གཡོག་བཀོལ་ནིའི་བརྡ་བཀོད།"
+
+#~ msgid "Command to run when the user wishes to burn a Photo CD."
+#~ msgstr ""
+#~ "ལག་ལེན་པ་དེ་གིས་ པར་གྱི་སི་ཌི་ཅིག་ བཙུགས་སྤྱོད་འབད་འདོད་ཡོད་པའི་སྐབས་ གཡོག་བཀོལ་ནིའི་བརྡ་བཀོད།"
+
+#~ msgid "Photo CD burn command"
+#~ msgstr "པར་གྱི་སི་ཌི་ བཙུགས་སྤྱོད་ཀྱི་བརྡ་བཀོད།"
+
+#~ msgid "Comma_nd:"
+#~ msgstr "བརྡ་བཀོད་:།(_n)"
+
+#~ msgid "Command for _Photo CDs:"
+#~ msgstr "པར་གྱི་སི་ཌི་ཚུ་གི་དོན་ལུ་བརྡ་བཀོད་:(_P)"
+
+#~ msgid "Command:"
+#~ msgstr "བརྡ་བཀོད་:།"
+
+#~ msgid "Select program to burn photo CDs"
+#~ msgstr "པར་གྱི་སི་ཌི་ཚུ་ བཙུགས་སྤྱོད་འབད་ནིའི་ ལས་རིམ་སེལ་འཐུ་འབད།"
+
+#~ msgid "_Run Command"
+#~ msgstr "བརྡ་བཀོད་གཡོག་བཀོལ།(_R)"
+
+#~ msgid "_Sync Music"
+#~ msgstr "སྙན་ཆ་མཉམ་འབྱུང་འབད།(_S)"
+
+#~ msgid "Burn _Photo CD"
+#~ msgstr "པར་གྱི་སི་ཌི་ བཙུགས་སྤྱོད་འབད།(_P)"
+
+#~ msgid "Burn _Photo DVD"
+#~ msgstr "པར་གྱི་ཌི་བི་ཌི་ བཙུགས་སྤྱོད་འབད།(_P)"
+
+#~ msgid "Burn _Data DVD"
+#~ msgstr "གནད་སྡུད་ཌི་བི་ཌི་ བཙུགས་སྤྱོད་འབད།(_D)"
+
+#~ msgid "Run command from inserted media?"
+#~ msgstr "ནང་ན་བཙུགས་ཏེ་ཡོད་པའི་བརྡ་ལམནང་ལས་ བརྡ་བཀོད་གཡོག་བཀོལ།"
+
+#~ msgid "Do you want to run the file \"%s\"?"
+#~ msgstr "ཡིག་སྣོད་\"%s\"གཡོག་བཀོལ་ནི་ཨིན་ན?"
+
+#~ msgid "Import photos from camera?"
+#~ msgstr "པར་ཆས་ནང་ལས་ པར་ཚུ་ནང་འདྲེན་འབད་ག?།"
+
+#~ msgid "Import photos from device?"
+#~ msgstr "ཐབས་འཕྲུལ་ནང་ལས་ པར་ཚུ་ནང་འདྲེན་འབད་ག?"
+
+#~ msgid "Import photos or music?"
+#~ msgstr "པར་ ཡང་ན་ སྙན་ཆ་ ནང་འདྲེན་འབད་ག?"
+
+#~ msgid ""
+#~ "There are both photos and music on the plugged-in iPod. Would you like to "
+#~ "import the photos or would you prefer to sync your music?"
+#~ msgstr ""
+#~ "བཙུགས་ཏེ་ཡོད་ཡོད་པའི་ པར་ཆས་དེ་ནང་ པར་དང་སྙན་ཆ་ གཉིས་ཆ་རའདུག། ཁྱོད་ཀྱིས་པར་དེ་ཚུ་ ནང་འདྲེན་"
+#~ "འབད་ནི་ཨིན་ན་ ཡང་ན་ ཁྱོད་རའི་སྙན་ཆ་ མཉམ་འབྱུང་འབད་ནི་ཨིན་ན?"
+
+#~ msgid "Browse files or play tracks from disc?"
+#~ msgstr "ཡིག་སྣོད་ཚུ་གི་བརྡ་འཚོལ་འབད་ ཡང་ན་ ཌིཀསི་ནང་ལས་ གླུ་རིམ་གཏང་།"
+
+#~ msgid "This CD contains both music and data. What would you like to do?"
+#~ msgstr "སི་ཌི་འདི་ནང་ སྙན་ཆ་དང་ གནད་སྡུད་གཉིས་ཆ་རང་འདུག ག་ཅི་འབད་ནི་སྨོ?"
+
+#~ msgid "Burn audio, photo, or data CD?"
+#~ msgstr "རྣར་ཉན་སི་ཌི་དང་ པར་གྱི་སི་ཌི་ གནད་སྡུད་སི་ཌི་ ག་དེ་བཙུགས་སྤྱོད་འབད་ནི?"
+
+#~ msgid "Would you like to burn an audio, photo, or data CD?"
+#~ msgstr "རྣར་ཉན་སི་ཌི་དང་ པར་གྱི་སི་ཌི་ གནད་སྡུད་སི་ཌི་ ག་དེ་བཙུགས་སྤྱོད་འབད་ནི?"
+
+#~ msgid "Burn photo or data DVD?"
+#~ msgstr "པར་གྱི་སི་ཌི་དང་ གནད་སྡུད་སི་ཌི་ ག་དེ་བཙུགས་སྤྱོད་འབད་ནི?"
+
+#~ msgid "*"
+#~ msgstr "*"
+
+#~ msgid "Co_mmand:"
+#~ msgstr "བརྡ་བཀོད་:(_m)"
+
+#~ msgid "Perform action on _blank discs when inserted"
+#~ msgstr "ཌིཀསི་སྟོངམ་ནང་ན་བཙུགསཔ་ད་ བྱ་བ་ལག་ལེན་འཐབ།(_b)"
+
+#~ msgid "The file \"%s\" on the inserted media is an auto-runfile."
+#~ msgstr ""
+#~ "ནང་ན་བཙུགས་ཏེ་ཡོད་པའི་བརྡ་ལམ་ནང་ ཡིག་སྣོད་\"%s\" དེ་ རང་བཞིན་-གཡོག་བཀོལ་ཡིག་སྣོད་ཅིག་ཨིན་"
+#~ "པས།"
+
+#~ msgid ""
+#~ "There are both audio tracks and data files on the inserted disc. Choose "
+#~ "if you want to play the audio tracks to listen to music or browse the "
+#~ "files to manage the stored data."
+#~ msgstr ""
+#~ "ནང་ན་བཙུགས་ཏེ་ཡོད་མི་ ཌིཀསི་དེ་ནང་ རྣར་ཉན་གླུ་གཞས་དང་ གནད་སྡུད་ཡིག་སྣོད་ཚུ་ གཉིས་ཆ་ར་འདུག། "
+#~ "ཉན་ནིའི་དོན་ལུ་ གླུ་གཞས་གཏང་ནི་ཨིན་ན་ བསགས་ཏེ་ཡོད་པའི་གནད་སྡུད་ ལག་ལེན་གྱི་དོན་ལུ་ བརྡ་འཚོལ་"
+#~ "འབད་ནི་ཨིན་ན་ གདམ་ཁ་རྐྱབས།"

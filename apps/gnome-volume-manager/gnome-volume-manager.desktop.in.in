@@ -1,0 +1,14 @@
+[Desktop Entry]
+Encoding=UTF-8
+_Name=Volume Manager
+_Comment=Volume manager for removable drives and media
+Icon=gnome-dev-cdrom
+Exec=@libexecdir@/gnome-volume-manager --sm-disable
+Terminal=false
+Type=Application
+Categories=
+OnlyShowIn=GNOME;XFCE;
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=gnome-volume-manager
+X-GNOME-Bugzilla-Component=general
+X-GNOME-Autostart-enabled=true

@@ -1,0 +1,25 @@
+			      gnome-volume-manager
+			   A Volume Manager for GNOME
+
+gnome-volume-manager is a desktop-level daemon that enforces volume-related
+policy in response to events received from HAL.  Its goal is to implement all
+functionality as a state-machine in response to asynchronous events from HAL.
+
+It is one component in a larger plan to fully integrate all levels of the Linux
+system, from the kernel on up through the desktop and its applications.
+
+gnome-volume-manager comes in two parts:
+
+	- gnome-volume-manager:	   the manager daemon itself
+	- gnome-volume-properties: the control panel applet, for configuration
+
+To build, gnome-volume-manager requires
+
+	- libgnomeui-2.0
+	- libglade-2.0
+	- libhal-0 (from HAL 0.5.0 or later)
+	- libdbus-1 (from D-BUS 0.31 or later)
+	- libdbus-glib-1 (from D-BUS 0.31 or later)
+
+To run, gnome-volume-manager requires hald to be running.
+

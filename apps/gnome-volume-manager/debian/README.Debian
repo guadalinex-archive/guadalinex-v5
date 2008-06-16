@@ -1,0 +1,52 @@
+gnome-volume-manager for Debian
+--------------------------------
+
+gnome-volume-manager (gvm) listens on dbus for hal events and takes actions 
+based on those events. gvm gets (almost) all information about devices on your
+system from hal, so a functional hal is very important!  One can use 
+hal-device-manager to view the properties of various devices on 
+the system. 
+
+For all sections below the corresponding gvm options have to be enabled
+otherwise the actions are not performed.
+
+Mounting devices
+================
+
+When mounting a device gnome-volume-manager runs gnome-mount on the device
+node. This means that the corresponding device must have either be removable or
+have an entry in /etc/fstab which is mountable by the user running gvm. 
+
+Also to be able to use gnome-mount the user running gvm must be part of the 
+plugdev group. For more information about gnome-mount and its policy see the
+gnome-mount manpage.
+
+Audio, Data and Blank Cd's
+===========================
+
+gvm uses the hal storage.cdrom.media_type property to detect whether an
+inserted cdrom is either audio, data of a blank Cd. With audio or blank Cd's
+the device node is given as argument to the configured program. Data cdroms are
+considered mountable removable media.
+
+Auto-run programs
+=================
+When a volume is mounted, gvm checks if some configured files exists on the
+media and are executable. The default files are .autorun, autorun and
+autorun.sh, these can be changed by setting the
+'/desktop/gnome/volume_manager/autorun_path' gconf variable.
+
+DVD 
+===
+When a volume is mounted gvm checks if the video_ts or VIDEO_TS directories
+exists on the media to check if it's a DVD video. For a DVD video the 
+mountpoint is given as the argument to the configured command.
+
+Digital Camera
+==============
+When a volume is mounted gvm checks if the dcim directory exists on the media
+to check if it's a camera volume. When this is the case the user is asked if he
+wants to import the photos, if so the configured command is run
+with the path to dcim directory as argument.
+
+-- Sjoerd Simons <sjoerd@debian.org>, Fri, 09 Apr 2004 17:18:43 +0200
