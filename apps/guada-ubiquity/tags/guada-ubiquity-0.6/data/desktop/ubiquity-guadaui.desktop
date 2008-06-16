@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Encoding=UTF-8
+Name=Instalar
+Comment=Instala permanentemente en tu disco duro
+Exec=ubiquity --desktop %k guada_ui
+Icon=ubiquity
+Terminal=false
+Categories=GTK;System;Settings;
+OnlyShowIn=GNOME;XFCE;
+#X-Ubuntu-Gettext-Domain=ubiquity
