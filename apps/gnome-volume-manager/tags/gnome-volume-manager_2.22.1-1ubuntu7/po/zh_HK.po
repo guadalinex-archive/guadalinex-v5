@@ -1,0 +1,850 @@
+# Chinese (Hong Kong) translation of gnome-volume-manager.
+# Copyright (C) 2004-07 Free Software Foundation, Inc.
+# Chao-Hsiung Liao <pesder.liao@msa.hinet.net>, 2004.
+# Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>, 2007.
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-volume-manager 1.5.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-02-21 21:53+0800\n"
+"PO-Revision-Date: 2007-02-21 21:53+0800\n"
+"Last-Translator: Woodman Tuen <wmtuen@gmail.com>\n"
+"Language-Team: Chinese (Hong Kong) <community@linuxhall.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../gnome-volume-manager.schemas.in.h:1
+msgid "\"Always take this action\" checkbox for Autorun"
+msgstr "「永遠進行這個動作」─自動執行 (Autorun) 的核取方塊"
+
+#: ../gnome-volume-manager.schemas.in.h:2
+msgid "\"Always take this action\" checkbox for iPod Photos"
+msgstr "「永遠進行這個動作」─ iPod Photo 的核取方塊"
+
+#: ../gnome-volume-manager.schemas.in.h:3
+msgid "\"Always take this action\" checkbox for mixed Audio and Data CDs"
+msgstr "「永遠進行這個動作」─音訊與資料混合式光碟的核取方塊"
+
+#: ../gnome-volume-manager.schemas.in.h:4
+msgid "\"Always take this action\" checkbox for photo import from a camera"
+msgstr "「永遠進行這個動作」─從相機匯入相片的核取方塊"
+
+#: ../gnome-volume-manager.schemas.in.h:5
+msgid "\"Always take this action\" checkbox for photo import from a device"
+msgstr "「永遠進行這個動作」─從裝置匯入相片的核取方塊"
+
+#: ../gnome-volume-manager.schemas.in.h:6
+msgid "':' delimited list of paths to check for autoopen files."
+msgstr "自動開啟的檔案會在這個路徑清單中搜尋（以‘:’隔開）。"
+
+#: ../gnome-volume-manager.schemas.in.h:7
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr "自動執行的可執行檔與命令稿會在這個路徑清單中搜尋（以‘:’隔開）"
+
+#: ../gnome-volume-manager.schemas.in.h:8
+msgid "Action to take when a camera is plugged in."
+msgstr "當連接相機時要進行的動作。"
+
+#: ../gnome-volume-manager.schemas.in.h:9
+msgid "Action to take when a device containing photos is encountered."
+msgstr "當遇到載有相片的裝置時要進行的動作。"
+
+#: ../gnome-volume-manager.schemas.in.h:10
+msgid "Action to take when a device contains an autorun program/script."
+msgstr "當裝置載有自動執行的程式/命令稿時要進行的動作。"
+
+#: ../gnome-volume-manager.schemas.in.h:11
+msgid "Action to take when a mixed Audio and Data CD is encountered."
+msgstr "當遇到音訊與資料混合式光碟時要進行的動作。"
+
+#: ../gnome-volume-manager.schemas.in.h:12
+msgid "Action to take when an iPod Photo is encountered."
+msgstr "當遇到載有 iPod 相片時要進行的動作。"
+
+#: ../gnome-volume-manager.schemas.in.h:13
+msgid "Audio CD burn command"
+msgstr "音樂 CD 燒錄指令"
+
+#: ../gnome-volume-manager.schemas.in.h:14
+msgid "Automount removable drives"
+msgstr "自動掛載抽取式裝置"
+
+#: ../gnome-volume-manager.schemas.in.h:15
+msgid "Automount removable media"
+msgstr "自動掛載抽取式媒體"
+
+#: ../gnome-volume-manager.schemas.in.h:16
+msgid "Autoopen path"
+msgstr "自動開啟的路徑"
+
+#: ../gnome-volume-manager.schemas.in.h:17
+msgid "Autorun nautilus"
+msgstr "自動執行 nautilus"
+
+#: ../gnome-volume-manager.schemas.in.h:18
+msgid "Autorun path"
+msgstr "自動執行的路徑"
+
+#: ../gnome-volume-manager.schemas.in.h:19
+msgid "CD play command"
+msgstr "CD 播放指令"
+
+#: ../gnome-volume-manager.schemas.in.h:20
+msgid "Command to run when a Palm is connected."
+msgstr "連接 Palm 後執行的指令。"
+
+#: ../gnome-volume-manager.schemas.in.h:21
+msgid "Command to run when a PocketPC is connected."
+msgstr "連接 PocketPC 後執行的指令。"
+
+#: ../gnome-volume-manager.schemas.in.h:22
+msgid ""
+"Command to run when a digital camera is connected or media from a digital "
+"camera is inserted."
+msgstr "連接數碼相機或儲存媒體插入數碼相機後執行的指令。"
+
+#: ../gnome-volume-manager.schemas.in.h:23
+msgid "Command to run when a keyboard is connected."
+msgstr "連接鍵盤後執行的指令。"
+
+#: ../gnome-volume-manager.schemas.in.h:24
+msgid "Command to run when a mouse is connected."
+msgstr "連接滑鼠後執行的指令。"
+
+#: ../gnome-volume-manager.schemas.in.h:25
+msgid "Command to run when a printer is connected."
+msgstr "連接打印機後執行的指令。"
+
+#: ../gnome-volume-manager.schemas.in.h:26
+msgid "Command to run when a scanner is connected."
+msgstr "連接掃描器後執行的指令。"
+
+#: ../gnome-volume-manager.schemas.in.h:27
+msgid "Command to run when a tablet is connected."
+msgstr "連接手寫板後執行的指令。"
+
+#: ../gnome-volume-manager.schemas.in.h:28
+msgid "Command to run when a video DVD is inserted."
+msgstr "插入 DVD 後執行的指令。"
+
+#: ../gnome-volume-manager.schemas.in.h:29
+msgid "Command to run when a video VCD is inserted."
+msgstr "插入 VCD 後執行的指令。"
+
+#: ../gnome-volume-manager.schemas.in.h:30
+msgid "Command to run when a video camera is connected."
+msgstr "連接攝影機後執行的指令。"
+
+#: ../gnome-volume-manager.schemas.in.h:31
+msgid "Command to run when an audio CD is inserted."
+msgstr "插入音樂 CD 後執行的指令。"
+
+#: ../gnome-volume-manager.schemas.in.h:32
+msgid "Command to run when an iPod is connected."
+msgstr "連接 iPod 後執行的指令。"
+
+#: ../gnome-volume-manager.schemas.in.h:33
+msgid "Command to run when the user wishes to burn a Data CD."
+msgstr "使用者希望燒錄資料光碟時要執行的指令。"
+
+#: ../gnome-volume-manager.schemas.in.h:34
+msgid "Command to run when the user wishes to burn an Audio CD."
+msgstr "使用者希望燒錄音樂 CD 時要執行的指令。"
+
+#: ../gnome-volume-manager.schemas.in.h:35
+msgid "DVD play command"
+msgstr "DVD 播放指令"
+
+#: ../gnome-volume-manager.schemas.in.h:36
+msgid "Data CD burn command"
+msgstr "資料光碟燒錄指令"
+
+#: ../gnome-volume-manager.schemas.in.h:37
+msgid "Low Disk Space notification threshold"
+msgstr "磁碟空間不足提示的臨界值"
+
+#: ../gnome-volume-manager.schemas.in.h:38
+msgid "Open nautilus on removeable media insert."
+msgstr "插入抽取式媒體後開啟 nautilus。"
+
+#: ../gnome-volume-manager.schemas.in.h:39
+msgid "Perform autoopen"
+msgstr "使用自動開啟"
+
+#: ../gnome-volume-manager.schemas.in.h:40
+msgid "Perform autorun"
+msgstr "使用自動執行"
+
+#: ../gnome-volume-manager.schemas.in.h:41
+msgid "Photo management command"
+msgstr "相片管理指令"
+
+#: ../gnome-volume-manager.schemas.in.h:42
+msgid "Play inserted audio CD's"
+msgstr "播放插入的音樂 CD"
+
+#: ../gnome-volume-manager.schemas.in.h:43
+msgid "Play inserted video DVDs"
+msgstr "播放插入的 DVD 影碟"
+
+#: ../gnome-volume-manager.schemas.in.h:44
+msgid "Play inserted video VCDs"
+msgstr "播放插入的 VCD 影碟"
+
+#: ../gnome-volume-manager.schemas.in.h:45
+msgid "Run Palm-sync program"
+msgstr "執行 Palm 同步化程式"
+
+#: ../gnome-volume-manager.schemas.in.h:46
+msgid "Run PocketPC-sync program"
+msgstr "執行 PocketPC 同步化程式"
+
+#: ../gnome-volume-manager.schemas.in.h:47
+msgid "Run a program to burn CDs/DVDs"
+msgstr "執行程式以燒錄 CD/DVD"
+
+#: ../gnome-volume-manager.schemas.in.h:48
+msgid "Run iPod program"
+msgstr "執行 iPod 程式"
+
+#: ../gnome-volume-manager.schemas.in.h:49
+msgid "Run keyboard program"
+msgstr "執行鍵盤程式"
+
+#: ../gnome-volume-manager.schemas.in.h:50
+msgid "Run mouse program"
+msgstr "執行滑鼠程式"
+
+#: ../gnome-volume-manager.schemas.in.h:51
+msgid "Run photo management command"
+msgstr "執行相片管理指令"
+
+#: ../gnome-volume-manager.schemas.in.h:52
+msgid "Run printer program"
+msgstr "執行打印機程式"
+
+#: ../gnome-volume-manager.schemas.in.h:53
+msgid "Run scanner program"
+msgstr "執行掃描器程式"
+
+#: ../gnome-volume-manager.schemas.in.h:54
+msgid "Run tablet program"
+msgstr "執行手寫板程式"
+
+#: ../gnome-volume-manager.schemas.in.h:55
+msgid "Run video editing program"
+msgstr "執行視像編輯程式"
+
+#: ../gnome-volume-manager.schemas.in.h:56
+msgid ""
+"The threshold value for whether or not to toggle the notification on, based "
+"on the amount of additional space used since the last check."
+msgstr "臨界值是在檢查後，以使用了多少空間來決定的應否作出提示。"
+
+#: ../gnome-volume-manager.schemas.in.h:57
+msgid "Threshold for notification of increased disk usage"
+msgstr "增加磁碟用量時提示使用者的臨界值"
+
+#: ../gnome-volume-manager.schemas.in.h:58
+msgid "Threshold percentage for notifying the user of low disk space."
+msgstr "磁碟空間不足時提示使用者的臨界值的百份比"
+
+#: ../gnome-volume-manager.schemas.in.h:59
+msgid "VCD play command"
+msgstr "VCD 播放指令"
+
+#: ../gnome-volume-manager.schemas.in.h:60
+msgid "Whether autoopen files should be opened on newly mounted media."
+msgstr "是否要在新掛載的媒體上開啟自動開啟的檔案。"
+
+#: ../gnome-volume-manager.schemas.in.h:61
+msgid ""
+"Whether autorun programs (binaries and scripts located in 'autorun_path') "
+"are run on newly mounted media."
+msgstr "是否要在新掛載的媒體上使用自動執行的程式（位於‘autorun_path’中的二元碼檔和命令稿）。"
+
+#: ../gnome-volume-manager.schemas.in.h:62
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"drives when they are inserted."
+msgstr "插入抽取式儲存裝置後 gnome-volume-manager 是否應該自動掛載它們。"
+
+#: ../gnome-volume-manager.schemas.in.h:63
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"media when they are inserted."
+msgstr "插入抽取式儲存媒體後 gnome-volume-manager 是否應該自動掛載它們。"
+
+#: ../gnome-volume-manager.schemas.in.h:64
+msgid ""
+"Whether, when a Palm is connected, gnome-volume-manager should run "
+"'autopalmsync_command'."
+msgstr "當連接 Palm 後，gnome-volume-manager 是否應該執行‘autopalmsync_command’。"
+
+#: ../gnome-volume-manager.schemas.in.h:65
+msgid ""
+"Whether, when a PocketPC is connected, gnome-volume-manager should run "
+"'autopocketpc_command'."
+msgstr "當連接 PocketPC 後，gnome-volume-manager 是否應該執行‘autopocketpc_command’。"
+
+#: ../gnome-volume-manager.schemas.in.h:66
+msgid ""
+"Whether, when a blank CD or DVD is inserted, gnome-volume-manager should run "
+"one of the autoburn commands."
+msgstr "插入空白 CD 或 DVD 後，gnome-volume-manager 是否應該執行其中一個 autoburn 指令。"
+
+#: ../gnome-volume-manager.schemas.in.h:67
+msgid ""
+"Whether, when a digital camera is connected or media from a digital camera "
+"is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr "連接數碼相機或儲存媒體插入數碼相機時，gnome-volume-manager 是否應該執行‘autophoto_command’。"
+
+#: ../gnome-volume-manager.schemas.in.h:68
+msgid ""
+"Whether, when a digital video camera is connected, gnome-volume-manager "
+"should run 'autovideocam_command'."
+msgstr "連接數碼攝影機後，gnome-volume-manager 是否應該執行‘autovideocam_command’。"
+
+#: ../gnome-volume-manager.schemas.in.h:69
+msgid ""
+"Whether, when a keyboard is connected, gnome-volume-manager should run "
+"'autokeyboard_command'."
+msgstr "連接鍵盤後，gnome-volume-manager 是否應該執行‘autokeyboard_command’。"
+
+#: ../gnome-volume-manager.schemas.in.h:70
+msgid ""
+"Whether, when a mouse is connected, gnome-volume-manager should run "
+"'automouse_command'."
+msgstr "連接滑鼠後，gnome-volume-manager 是否應該執行‘automouse_command’。"
+
+#: ../gnome-volume-manager.schemas.in.h:71
+msgid ""
+"Whether, when a printer is connected, gnome-volume-manager should run "
+"'autoprinter_command'."
+msgstr "連接打印機後，gnome-volume-manager 是否應該執行‘autoprinter_command’。"
+
+#: ../gnome-volume-manager.schemas.in.h:72
+msgid ""
+"Whether, when a scanner is connected, gnome-volume-manager should run "
+"'autoscanner_command'."
+msgstr "連接掃描器後，gnome-volume-manager 是否應該執行‘autoscanner_command’。"
+
+#: ../gnome-volume-manager.schemas.in.h:73
+msgid ""
+"Whether, when a tablet is connected, gnome-volume-manager should run "
+"'autotablet_command'."
+msgstr "連接手寫板後，gnome-volume-manager 是否應該執行‘autotablet_command’。"
+
+#: ../gnome-volume-manager.schemas.in.h:74
+msgid ""
+"Whether, when a video DVD is inserted, gnome-volume-manager should run "
+"'autoplay_dvd_command'."
+msgstr "插入 DVD 影碟後，gnome-volume-manager 是否應該執行‘autoplay_dvd_command’。"
+
+#: ../gnome-volume-manager.schemas.in.h:75
+msgid ""
+"Whether, when a video VCD is inserted, gnome-volume-manager should run "
+"'autoplay_vcd_command'."
+msgstr "插入 VCD 影碟後，gnome-volume-manager 是否應該執行‘autoplay_vcd_command’。"
+
+#: ../gnome-volume-manager.schemas.in.h:76
+msgid ""
+"Whether, when an audio CD is inserted, gnome-volume-manager should run "
+"'autoplay_cda_command'."
+msgstr "插入音樂 CD 後，gnome-volume-manager 是否應該執行‘autoplay_cda_command’。"
+
+#: ../gnome-volume-manager.schemas.in.h:77
+msgid ""
+"Whether, when an iPod is connected, gnome-volume-manager should run "
+"'autoipod_command'."
+msgstr "連接 iPod 後，gnome-volume-manager 是否應該執行‘autoipod_command’。"
+
+#: ../gnome-volume-manager.schemas.in.h:78
+msgid "iPod sync command"
+msgstr "iPod 同步指令"
+
+#: ../gnome-volume-manager.schemas.in.h:79
+msgid "keyboard command"
+msgstr "鍵盤指令"
+
+#: ../gnome-volume-manager.schemas.in.h:80
+msgid "mouse command"
+msgstr "滑鼠指令"
+
+#: ../gnome-volume-manager.schemas.in.h:81
+msgid "palm sync command"
+msgstr "Palm 同步指令"
+
+#: ../gnome-volume-manager.schemas.in.h:82
+msgid "printer command"
+msgstr "打印機指令"
+
+#: ../gnome-volume-manager.schemas.in.h:83
+msgid "scanner command"
+msgstr "掃描器指令"
+
+#: ../gnome-volume-manager.schemas.in.h:84
+msgid "tablet command"
+msgstr "手寫板指令"
+
+#: ../gnome-volume-manager.schemas.in.h:85
+msgid "video camera command"
+msgstr "攝影機指令"
+
+#: ../gnome-volume-manager.desktop.in.h:1
+msgid "Volume Manager"
+msgstr "儲存裝置管理程式"
+
+#: ../gnome-volume-manager.desktop.in.h:2
+msgid "Volume manager for removable drives and media"
+msgstr "抽取式裝置與媒體的儲存裝置管理程式"
+
+#: ../gnome-volume-properties.desktop.in.h:1
+msgid "Configure management of removable drives and media"
+msgstr "設定抽取式裝置與媒體的管理方式"
+
+#: ../gnome-volume-properties.desktop.in.h:2
+msgid "Removable Drives and Media"
+msgstr "抽取式儲存裝置與媒體"
+
+#: ../gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: ../gnome-volume-properties.glade.h:2
+msgid "<b>Audio CD Discs</b>"
+msgstr "<b>音樂 CD 光碟</b>"
+
+#: ../gnome-volume-properties.glade.h:3
+msgid "<b>Blank CD and DVD Discs</b>"
+msgstr "<b>空白 CD 與 DVD 光碟</b>"
+
+#: ../gnome-volume-properties.glade.h:4
+msgid "<b>Digital Camera</b>"
+msgstr "<b>數碼相機</b>"
+
+#: ../gnome-volume-properties.glade.h:5
+msgid "<b>Digital Video Camera</b>"
+msgstr "<b>數碼攝影機</b>"
+
+#: ../gnome-volume-properties.glade.h:6
+msgid "<b>Keyboards</b>"
+msgstr "<b>鍵盤</b>"
+
+#: ../gnome-volume-properties.glade.h:7
+msgid "<b>Mice</b>"
+msgstr "<b>滑鼠</b>"
+
+#: ../gnome-volume-properties.glade.h:8
+msgid "<b>Palm™</b>"
+msgstr "<b>Palm™</b>"
+
+#: ../gnome-volume-properties.glade.h:9
+msgid "<b>PocketPC</b>"
+msgstr "<b>PocketPC</b>"
+
+#: ../gnome-volume-properties.glade.h:10
+msgid "<b>Portable Music Players</b>"
+msgstr "<b>可攜式音樂播放器</b>"
+
+#: ../gnome-volume-properties.glade.h:11
+msgid "<b>Printers</b>"
+msgstr "<b>打印機</b>"
+
+#: ../gnome-volume-properties.glade.h:12
+msgid "<b>Removable Storage</b>"
+msgstr "<b>抽取式儲存裝置</b>"
+
+#: ../gnome-volume-properties.glade.h:13
+msgid "<b>Scanners</b>"
+msgstr "<b>掃描器</b>"
+
+#: ../gnome-volume-properties.glade.h:14
+msgid "<b>Tablets</b>"
+msgstr "<b>手寫板</b>"
+
+#: ../gnome-volume-properties.glade.h:15
+msgid "<b>Video DVD Discs</b>"
+msgstr "<b>DVD 影碟</b>"
+
+#: ../gnome-volume-properties.glade.h:16
+msgid "Auto-_open files on new drives and media"
+msgstr "新裝置和媒體上自動開啟的檔案(_O)"
+
+#: ../gnome-volume-properties.glade.h:17
+msgid "Automatically run a program when a USB _keyboard is connected"
+msgstr "連接 USB 鍵盤後自動執行的程式(_K)"
+
+#: ../gnome-volume-properties.glade.h:18
+msgid "Automatically run a program when a USB _mouse is connected"
+msgstr "連接 USB 滑鼠後自動執行的程式(_M)"
+
+#: ../gnome-volume-properties.glade.h:19
+msgid "Automatically run a program when a _printer is connected"
+msgstr "連接打印機後自動執行的程式(_P)"
+
+#: ../gnome-volume-properties.glade.h:20
+msgid "Automatically run a program when a _scanner is connected"
+msgstr "連接掃描器後自動執行的程式(_S)"
+
+#: ../gnome-volume-properties.glade.h:21
+msgid "Automatically run a program when a _tablet is connected"
+msgstr "連接手寫板後自動執行的程式(_T)"
+
+#: ../gnome-volume-properties.glade.h:22
+msgid "Browse _removable media when inserted"
+msgstr "插入抽取式媒體後瀏覽內容(_R)"
+
+#: ../gnome-volume-properties.glade.h:23
+msgid "C_ommand:"
+msgstr "指令(_O)："
+
+#: ../gnome-volume-properties.glade.h:24
+msgid "Cameras"
+msgstr "攝影機"
+
+#: ../gnome-volume-properties.glade.h:25
+msgid "Comman_d:"
+msgstr "指令(_D)："
+
+#: ../gnome-volume-properties.glade.h:26
+msgid "Command for A_udio CDs:"
+msgstr "音樂 CD 指令(_U)："
+
+#: ../gnome-volume-properties.glade.h:27
+msgid "Command for _Data CDs: "
+msgstr "資料光碟指令(_D)："
+
+#: ../gnome-volume-properties.glade.h:28
+msgid "Drives and Media Preferences"
+msgstr "裝置與媒體偏好設定"
+
+#: ../gnome-volume-properties.glade.h:29
+msgid "Input Devices"
+msgstr "輸入裝置"
+
+#: ../gnome-volume-properties.glade.h:30
+msgid "Mount removable media when _inserted"
+msgstr "插入抽取式媒體後掛載(_I)"
+
+#: ../gnome-volume-properties.glade.h:31
+msgid "Multimedia"
+msgstr "多媒體"
+
+#: ../gnome-volume-properties.glade.h:32
+msgid "PDAs"
+msgstr "PDA"
+
+#: ../gnome-volume-properties.glade.h:33
+msgid "Play _audio CD discs when inserted"
+msgstr "插入音樂 CD 時立即播放(_A)"
+
+#: ../gnome-volume-properties.glade.h:34
+msgid "Play _music files when connected"
+msgstr "連接後播放音樂檔案(_M)"
+
+#: ../gnome-volume-properties.glade.h:35
+msgid "Play _video DVD discs when inserted"
+msgstr "插入 DVD 影碟時立即播放(_V)"
+
+#: ../gnome-volume-properties.glade.h:36
+msgid "Printers & Scanners"
+msgstr "打印機及掃描器"
+
+#: ../gnome-volume-properties.glade.h:37
+msgid "Removable Drives and Media Preferences"
+msgstr "插取式裝置與媒體偏好設定"
+
+#: ../gnome-volume-properties.glade.h:38
+msgid "Select program to burn audio CDs"
+msgstr "選擇用來燒錄音樂 CD 的程式"
+
+#: ../gnome-volume-properties.glade.h:39
+msgid "Select program to burn data CDs"
+msgstr "選擇用來燒錄資料光碟的程式"
+
+#: ../gnome-volume-properties.glade.h:40
+msgid "Select program to edit videos"
+msgstr "選擇用來編輯影片的程式"
+
+#: ../gnome-volume-properties.glade.h:41
+msgid "Select program to import photos"
+msgstr "選擇用來匯入相片的程式"
+
+#: ../gnome-volume-properties.glade.h:42
+msgid "Select program to play DVDs"
+msgstr "選擇用來播放 DVD 的程式"
+
+#: ../gnome-volume-properties.glade.h:43
+msgid "Select program to play audio CDs"
+msgstr "選擇用來播放音樂 CD 的程式"
+
+#: ../gnome-volume-properties.glade.h:44
+msgid "Select program to play music files"
+msgstr "選擇用來播放音樂檔案的程式"
+
+#: ../gnome-volume-properties.glade.h:45
+msgid "Select program to run when a keyboard is plugged in"
+msgstr "選擇當連接鍵盤時要執行的程式。"
+
+#: ../gnome-volume-properties.glade.h:46
+msgid "Select program to run when a mouse is plugged in"
+msgstr "選擇當連接滑鼠時要執行的程式。"
+
+#: ../gnome-volume-properties.glade.h:47
+msgid "Select program to run when a printer is plugged in"
+msgstr "選擇當連接打印機時要執行的程式。"
+
+#: ../gnome-volume-properties.glade.h:48
+msgid "Select program to run when a scanner is plugged in"
+msgstr "選擇當連接掃描器時要執行的程式。"
+
+#: ../gnome-volume-properties.glade.h:49
+msgid "Select program to run when a tablet is plugged in"
+msgstr "選擇當連接手寫板時要執行的程式。"
+
+#: ../gnome-volume-properties.glade.h:50
+msgid "Select program to sync Palm devices"
+msgstr "選擇用來同步 Palm 裝置的程式"
+
+#: ../gnome-volume-properties.glade.h:51
+msgid "Storage"
+msgstr "儲存區"
+
+#: ../gnome-volume-properties.glade.h:52
+msgid "Sync PocketP_C devices when connected"
+msgstr "連接後同步 PocketP_C 裝置"
+
+#: ../gnome-volume-properties.glade.h:53
+msgid "Sync _Palm™ devices when connected"
+msgstr "連接後同步 _Palm™ 裝置"
+
+#: ../gnome-volume-properties.glade.h:54
+msgid "_Auto-run programs on new drives and media"
+msgstr "新裝置和媒體上自動執行的程式(_A)"
+
+#: ../gnome-volume-properties.glade.h:55
+msgid "_Burn a CD or DVD when a blank disc is inserted"
+msgstr "當放入空白光碟時燒錄 CD 或 DVD(_B)"
+
+#: ../gnome-volume-properties.glade.h:56
+msgid "_Command:"
+msgstr "指令(_C)："
+
+#: ../gnome-volume-properties.glade.h:57
+msgid "_Edit video when connected"
+msgstr "連接後編輯影片(_E)"
+
+#: ../gnome-volume-properties.glade.h:58
+msgid "_Import digital photographs when connected"
+msgstr "連接後匯入數碼相片(_I)"
+
+#: ../gnome-volume-properties.glade.h:59
+msgid "_Mount removable drives when hot-plugged"
+msgstr "當熱插拔時掛載抽取式裝置(_M)"
+
+#: ../src/manager.c:212 ../src/manager.c:217 ../src/manager.c:222
+#: ../src/manager.c:227 ../src/manager.c:233 ../src/manager.c:239
+#: ../src/manager.c:245 ../src/manager.c:251
+msgid "Ig_nore"
+msgstr "忽略(_I)"
+
+#: ../src/manager.c:213
+msgid "_Allow Auto-Run"
+msgstr "允許自動執行(_A)"
+
+#: ../src/manager.c:218
+msgid "_Open"
+msgstr "開啟(_O)"
+
+#: ../src/manager.c:223 ../src/manager.c:229 ../src/manager.c:234
+msgid "Import _Photos"
+msgstr "匯入相片(_P)"
+
+#: ../src/manager.c:228
+msgid "_Open Folder"
+msgstr "開啟資料夾(_O)"
+
+#: ../src/manager.c:235
+msgid "Manage _Music"
+msgstr "管理音樂(_M)"
+
+#: ../src/manager.c:240
+msgid "_Browse Files"
+msgstr "瀏覽檔案(_B)"
+
+#: ../src/manager.c:241
+msgid "_Play CD"
+msgstr "播放光碟(_P)"
+
+#: ../src/manager.c:246
+msgid "Make _Audio CD"
+msgstr "製作音樂 CD(_A)"
+
+#: ../src/manager.c:247
+msgid "Make _Data CD"
+msgstr "製作資料 C_D"
+
+#: ../src/manager.c:252
+msgid "Make _DVD"
+msgstr "製作 _DVD"
+
+#: ../src/manager.c:305
+msgid "Auto-Run Confirmation"
+msgstr "自動執行確認"
+
+#: ../src/manager.c:306
+msgid "Auto-run capability detected."
+msgstr "偵測到有自動執行的能力。"
+
+#: ../src/manager.c:307
+msgid "Would you like to allow <b>'${0}'</b> to run?"
+msgstr "要執行 <b>‘${0}’</b> 嗎？"
+
+#: ../src/manager.c:312
+msgid "Auto-Open Confirmation"
+msgstr "自動開啟確認"
+
+#: ../src/manager.c:313
+msgid "Auto-Open capability detected."
+msgstr "偵測到有自動開啟的能力。"
+
+#: ../src/manager.c:314
+msgid "Would you like to open <b>'${0}'</b>?"
+msgstr "要開啟 <b>‘${0}’</b> 嗎？"
+
+#: ../src/manager.c:319 ../src/manager.c:326
+msgid "Camera Import"
+msgstr "相機匯入"
+
+#: ../src/manager.c:320 ../src/manager.c:327
+msgid "A camera has been detected."
+msgstr "已偵測到相機。"
+
+#: ../src/manager.c:321 ../src/manager.c:328
+msgid ""
+"There are photos on the camera. Would you like to add these pictures to your "
+"album?"
+msgstr "所連接的相機中含有相片。要將這些相片加入到相簿中嗎？"
+
+#: ../src/manager.c:322 ../src/manager.c:329 ../src/manager.c:336
+#: ../src/manager.c:343 ../src/manager.c:350
+msgid "_Always perform this action"
+msgstr "永遠進行這個動作(_A)"
+
+#: ../src/manager.c:333
+msgid "Photo Import"
+msgstr "相片匯入"
+
+#: ../src/manager.c:334
+msgid "A photo card has been detected."
+msgstr "已偵測到相片記憶卡。"
+
+#: ../src/manager.c:335
+msgid ""
+"There are photos on the card. Would you like to add these pictures to your "
+"album?"
+msgstr "插入的記憶卡中含有相片。要將這些相片加入到相簿中嗎？"
+
+#: ../src/manager.c:340
+msgid "Photos and Music"
+msgstr "相片與音樂"
+
+#: ../src/manager.c:341
+msgid "Photos were found on your music device."
+msgstr "在音樂裝置上找到相片資料。"
+
+#: ../src/manager.c:342
+msgid "Would you like to import the photos or manage its music?"
+msgstr "要匯入相片還是管理它的音樂？"
+
+#: ../src/manager.c:347
+msgid "Mixed Audio and Data CD"
+msgstr "音樂及資料混合 CD"
+
+#: ../src/manager.c:348
+msgid "The CD in the drive contains both music and files."
+msgstr "光碟機中的 CD 包含了音軌與檔案。"
+
+#: ../src/manager.c:349
+msgid "Would you like to listen to music or browse the files?"
+msgstr "要聽音樂還是瀏覽檔案？"
+
+#: ../src/manager.c:354
+msgid "Blank CD Inserted"
+msgstr "已放入空白 CD"
+
+#: ../src/manager.c:355 ../src/manager.c:362
+msgid "You have inserted a blank disc."
+msgstr "你剛放入一片空白光碟。"
+
+#: ../src/manager.c:356 ../src/manager.c:363
+msgid "What would you like to do?"
+msgstr "想要做什麼？"
+
+#: ../src/manager.c:361
+msgid "Blank DVD Inserted"
+msgstr "已放入空白 DVD"
+
+#: ../src/manager.c:3132
+#, c-format
+msgid "%d%% of the disk space on %s is in use"
+msgstr "在 %2$s 上使用了 %1$d%% 的磁碟空間"
+
+#: ../src/manager.c:3135
+msgid "Low Disk Space"
+msgstr "磁碟空間不足"
+
+#: ../src/manager.c:3253
+msgid "Print version and exit"
+msgstr "顯示版本號碼及離開"
+
+#: ../src/manager.c:3255
+msgid "Run as a daemon"
+msgstr "以服務程式執行"
+
+#: ../src/manager.c:3257
+msgid "Don't run as a daemon"
+msgstr "不要以服務程式型式執行"
+
+#: ../src/manager.c:3259
+msgid "Run in secret mode"
+msgstr "以寂靜模式執行"
+
+#: ../src/manager.c:3291
+#, c-format
+msgid "Unrecognized --daemon argument: %s\n"
+msgstr "無法確認 --daemon 參數：%s\n"
+
+#: ../src/properties.c:310
+msgid "Could not load the main interface"
+msgstr "無法載入主要介面"
+
+#: ../src/properties.c:312
+msgid "Please make sure that the volume manager is properly installed"
+msgstr "請確定儲存裝置管理程式已正確地安裝"
+
+#: ../src/properties.c:471
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr ""
+"啟動 gnome-volume-manager 伺服程式時發生錯誤：\n"
+"%s"
+
+#: ../src/properties.c:502
+msgid "Volume management not supported"
+msgstr "不支援儲存裝置管理"
+
+#: ../src/properties.c:504
+msgid ""
+"The \"hald\" service is required but not currently running. Enable the "
+"service and rerun this application, or contact your system administrator."
+msgstr "此應用程式要求的“hald”服務目前並沒有啟動。啟用該服務後再執行此程式，或聯絡系統管理員。"
+
+#~ msgid "Choose Disc Type"
+#~ msgstr "選擇光碟類型"

@@ -1,0 +1,941 @@
+# Georgian translation for Gnome Volume Manager.
+# Copyright © 2006 Ubuntu Georgian Translators.
+# This file is distributed under the same license as the gnome-volume-manager package.
+# Vladimer SIchinava <alinux@siena.linux.it>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-volume-manager HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-02-20 08:21+0100\n"
+"PO-Revision-Date: 2006-02-20 19:09+0100\n"
+"Last-Translator: Vladimer SIchinava <alinux@siena.linux.it>\n"
+"Language-Team:  <ka@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"X-Generator: KBabel 1.11.2\n"
+
+#: ../gnome-volume-manager.schemas.in.h:1
+#, fuzzy
+msgid "\"Always take this action\" checkbox for Autorun"
+msgstr "ყოველთვის მოქმედება Autorun"
+
+#: ../gnome-volume-manager.schemas.in.h:2
+#, fuzzy
+msgid "\"Always take this action\" checkbox for iPod Photos"
+msgstr "ყოველთვის"
+
+#: ../gnome-volume-manager.schemas.in.h:3
+#, fuzzy
+msgid "\"Always take this action\" checkbox for mixed Audio and Data CDs"
+msgstr "ყოველთვის აუდიო და მონაცემი"
+
+#: ../gnome-volume-manager.schemas.in.h:4
+#, fuzzy
+msgid "\"Always take this action\" checkbox for photo import from a camera"
+msgstr "ყოველთვის a"
+
+#: ../gnome-volume-manager.schemas.in.h:5
+#, fuzzy
+msgid "\"Always take this action\" checkbox for photo import from a device"
+msgstr "ყოველთვის a"
+
+#: ../gnome-volume-manager.schemas.in.h:6
+#, fuzzy
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr "-სკენ და."
+
+#: ../gnome-volume-manager.schemas.in.h:7
+#, fuzzy
+msgid "Action to take when a camera is plugged in."
+msgstr "მოქმედება -სკენ a."
+
+#: ../gnome-volume-manager.schemas.in.h:8
+#, fuzzy
+msgid "Action to take when a device containing photos is encountered."
+msgstr "მოქმედება -სკენ a."
+
+#: ../gnome-volume-manager.schemas.in.h:9
+#, fuzzy
+msgid "Action to take when a device contains an autorun program/script."
+msgstr "მოქმედება -სკენ a პროგრამა."
+
+#: ../gnome-volume-manager.schemas.in.h:10
+#, fuzzy
+msgid "Action to take when a mixed Audio and Data CD is encountered."
+msgstr "მოქმედება -სკენ a აუდიო და მონაცემი."
+
+#: ../gnome-volume-manager.schemas.in.h:11
+#, fuzzy
+msgid "Action to take when an iPod Photo is encountered."
+msgstr "მოქმედება -სკენ სურათი."
+
+#: ../gnome-volume-manager.schemas.in.h:12
+#, fuzzy
+msgid "Audio CD burn command"
+msgstr "აუდიო"
+
+#: ../gnome-volume-manager.schemas.in.h:13
+msgid "Automount removable drives"
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:14
+msgid "Automount removable media"
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:15
+#, fuzzy
+msgid "Autorun nautilus"
+msgstr "Autorun"
+
+#: ../gnome-volume-manager.schemas.in.h:16
+#, fuzzy
+msgid "Autorun path"
+msgstr "Autorun"
+
+#: ../gnome-volume-manager.schemas.in.h:17
+msgid "CD play command"
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:18
+#, fuzzy
+msgid "Command to run when a Palm is connected."
+msgstr "ბრძანება -სკენ a."
+
+#: ../gnome-volume-manager.schemas.in.h:19
+#, fuzzy
+msgid "Command to run when a PocketPC is connected."
+msgstr "ბრძანება -სკენ a."
+
+#: ../gnome-volume-manager.schemas.in.h:20
+#, fuzzy
+msgid ""
+"Command to run when a digital camera is connected or media from a digital "
+"camera is inserted."
+msgstr "ბრძანება -სკენ a a."
+
+#: ../gnome-volume-manager.schemas.in.h:21
+#, fuzzy
+msgid "Command to run when a keyboard is connected."
+msgstr "ბრძანება -სკენ a."
+
+#: ../gnome-volume-manager.schemas.in.h:22
+#, fuzzy
+msgid "Command to run when a mouse is connected."
+msgstr "ბრძანება -სკენ a."
+
+#: ../gnome-volume-manager.schemas.in.h:23
+#, fuzzy
+msgid "Command to run when a printer is connected."
+msgstr "ბრძანება -სკენ a."
+
+#: ../gnome-volume-manager.schemas.in.h:24
+#, fuzzy
+msgid "Command to run when a scanner is connected."
+msgstr "ბრძანება -სკენ a."
+
+#: ../gnome-volume-manager.schemas.in.h:25
+#, fuzzy
+msgid "Command to run when a tablet is connected."
+msgstr "ბრძანება -სკენ a."
+
+#: ../gnome-volume-manager.schemas.in.h:26
+#, fuzzy
+msgid "Command to run when a video DVD is inserted."
+msgstr "ბრძანება -სკენ a DVD."
+
+#: ../gnome-volume-manager.schemas.in.h:27
+#, fuzzy
+msgid "Command to run when a video VCD is inserted."
+msgstr "ბრძანება -სკენ a VCD."
+
+#: ../gnome-volume-manager.schemas.in.h:28
+#, fuzzy
+msgid "Command to run when a video camera is connected."
+msgstr "ბრძანება -სკენ a."
+
+#: ../gnome-volume-manager.schemas.in.h:29
+#, fuzzy
+msgid "Command to run when an audio CD is inserted."
+msgstr "ბრძანება -სკენ აუდიო."
+
+#: ../gnome-volume-manager.schemas.in.h:30
+#, fuzzy
+msgid "Command to run when an iPod is connected."
+msgstr "ბრძანება -სკენ."
+
+#: ../gnome-volume-manager.schemas.in.h:31
+#, fuzzy
+msgid "Command to run when the user wishes to burn a Data CD."
+msgstr "ბრძანება -სკენ -სკენ a მონაცემი."
+
+#: ../gnome-volume-manager.schemas.in.h:32
+#, fuzzy
+msgid "Command to run when the user wishes to burn an Audio CD."
+msgstr "ბრძანება -სკენ -სკენ აუდიო."
+
+#: ../gnome-volume-manager.schemas.in.h:33
+msgid "DVD play command"
+msgstr "DVD-ს დაკვრის ბრძანება"
+
+#: ../gnome-volume-manager.schemas.in.h:34
+#, fuzzy
+msgid "Data CD burn command"
+msgstr "მონაცემი"
+
+#: ../gnome-volume-manager.schemas.in.h:35
+#, fuzzy
+msgid "Low Disk Space notification threshold"
+msgstr "დაბალი"
+
+#: ../gnome-volume-manager.schemas.in.h:36
+#, fuzzy
+msgid "Open nautilus on removeable media insert."
+msgstr "გახსენი."
+
+#: ../gnome-volume-manager.schemas.in.h:37
+msgid "Perform autorun"
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:38
+#, fuzzy
+msgid "Photo management command"
+msgstr "სურათი"
+
+#: ../gnome-volume-manager.schemas.in.h:39
+#, fuzzy
+msgid "Play inserted audio CD's"
+msgstr "დაკვრა აუდიო"
+
+#: ../gnome-volume-manager.schemas.in.h:40
+#, fuzzy
+msgid "Play inserted video DVDs"
+msgstr "დაკვრა"
+
+#: ../gnome-volume-manager.schemas.in.h:41
+#, fuzzy
+msgid "Play inserted video VCDs"
+msgstr "დაკვრა"
+
+#: ../gnome-volume-manager.schemas.in.h:42
+#, fuzzy
+msgid "Run Palm-sync program"
+msgstr "პროგრამა"
+
+#: ../gnome-volume-manager.schemas.in.h:43
+#, fuzzy
+msgid "Run PocketPC-sync program"
+msgstr "პროგრამა"
+
+#: ../gnome-volume-manager.schemas.in.h:44
+#, fuzzy
+msgid "Run a program to burn CDs/DVDs"
+msgstr "a პროგრამა -სკენ"
+
+#: ../gnome-volume-manager.schemas.in.h:45
+msgid "Run iPod program"
+msgstr "ჩართე iPod პროგრამა"
+
+#: ../gnome-volume-manager.schemas.in.h:46
+#, fuzzy
+msgid "Run keyboard program"
+msgstr "პროგრამა"
+
+#: ../gnome-volume-manager.schemas.in.h:47
+#, fuzzy
+msgid "Run mouse program"
+msgstr "პროგრამა"
+
+#: ../gnome-volume-manager.schemas.in.h:48
+#, fuzzy
+msgid "Run photo management command"
+msgstr "გაშვება"
+
+#: ../gnome-volume-manager.schemas.in.h:49
+#, fuzzy
+msgid "Run printer program"
+msgstr "პროგრამა"
+
+#: ../gnome-volume-manager.schemas.in.h:50
+#, fuzzy
+msgid "Run scanner program"
+msgstr "პროგრამა"
+
+#: ../gnome-volume-manager.schemas.in.h:51
+#, fuzzy
+msgid "Run tablet program"
+msgstr "პროგრამა"
+
+#: ../gnome-volume-manager.schemas.in.h:52
+#, fuzzy
+msgid "Run video editing program"
+msgstr "პროგრამა"
+
+#: ../gnome-volume-manager.schemas.in.h:53
+#, fuzzy
+msgid ""
+"The threshold value for whether or not to toggle the notification off, based "
+"on the amount of space freed up by the user since the last check."
+msgstr "-სკენ."
+
+#: ../gnome-volume-manager.schemas.in.h:54
+#, fuzzy
+msgid ""
+"The threshold value for whether or not to toggle the notification on, based "
+"on the amount of additional space used since the last check."
+msgstr "-სკენ."
+
+#: ../gnome-volume-manager.schemas.in.h:55
+#, fuzzy
+msgid "Threshold for disk space being freed up, to toggle notification"
+msgstr "-სკენ"
+
+#: ../gnome-volume-manager.schemas.in.h:56
+#, fuzzy
+msgid "Threshold for notification of increased disk usage"
+msgstr "-"
+
+#: ../gnome-volume-manager.schemas.in.h:57
+#, fuzzy
+msgid "Threshold percentage for notifying the user of low disk space."
+msgstr "- დაბალი."
+
+#: ../gnome-volume-manager.schemas.in.h:58
+#, fuzzy
+msgid "VCD play command"
+msgstr "VCD"
+
+#: ../gnome-volume-manager.schemas.in.h:59
+#, fuzzy
+msgid ""
+"Whether autorun programs (binaries and scripts located in 'autorun_path') "
+"are run on newly mounted media."
+msgstr "და მონტირებულია."
+
+#: ../gnome-volume-manager.schemas.in.h:60
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"drives when they are inserted."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:61
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"media when they are inserted."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:62
+#, fuzzy
+msgid ""
+"Whether, when a Palm is connected, gnome-volume-manager should run "
+"'autopalmsync_command'."
+msgstr "a."
+
+#: ../gnome-volume-manager.schemas.in.h:63
+#, fuzzy
+msgid ""
+"Whether, when a PocketPC is connected, gnome-volume-manager should run "
+"'autopocketpc_command'."
+msgstr "a."
+
+#: ../gnome-volume-manager.schemas.in.h:64
+#, fuzzy
+msgid ""
+"Whether, when a blank CD or DVD is inserted, gnome-volume-manager should run "
+"one of the autoburn commands."
+msgstr "a DVD."
+
+#: ../gnome-volume-manager.schemas.in.h:65
+#, fuzzy
+msgid ""
+"Whether, when a digital camera is connected or media from a digital camera "
+"is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr "a a."
+
+#: ../gnome-volume-manager.schemas.in.h:66
+#, fuzzy
+msgid ""
+"Whether, when a digital video camera is connected, gnome-volume-manager "
+"should run 'autovideocam_command'."
+msgstr "a."
+
+#: ../gnome-volume-manager.schemas.in.h:67
+#, fuzzy
+msgid ""
+"Whether, when a keyboard is connected, gnome-volume-manager should run "
+"'autokeyboard_command'."
+msgstr "a."
+
+#: ../gnome-volume-manager.schemas.in.h:68
+#, fuzzy
+msgid ""
+"Whether, when a mouse is connected, gnome-volume-manager should run "
+"'automouse_command'."
+msgstr "a."
+
+#: ../gnome-volume-manager.schemas.in.h:69
+#, fuzzy
+msgid ""
+"Whether, when a printer is connected, gnome-volume-manager should run "
+"'autoprinter_command'."
+msgstr "a."
+
+#: ../gnome-volume-manager.schemas.in.h:70
+#, fuzzy
+msgid ""
+"Whether, when a scanner is connected, gnome-volume-manager should run "
+"'autoscanner_command'."
+msgstr "a."
+
+#: ../gnome-volume-manager.schemas.in.h:71
+#, fuzzy
+msgid ""
+"Whether, when a tablet is connected, gnome-volume-manager should run "
+"'autotablet_command'."
+msgstr "a."
+
+#: ../gnome-volume-manager.schemas.in.h:72
+#, fuzzy
+msgid ""
+"Whether, when a video DVD is inserted, gnome-volume-manager should run "
+"'autoplay_dvd_command'."
+msgstr "a DVD."
+
+#: ../gnome-volume-manager.schemas.in.h:73
+#, fuzzy
+msgid ""
+"Whether, when a video VCD is inserted, gnome-volume-manager should run "
+"'autoplay_vcd_command'."
+msgstr "a VCD."
+
+#: ../gnome-volume-manager.schemas.in.h:74
+#, fuzzy
+msgid ""
+"Whether, when an audio CD is inserted, gnome-volume-manager should run "
+"'autoplay_cda_command'."
+msgstr "აუდიო."
+
+#: ../gnome-volume-manager.schemas.in.h:75
+#, fuzzy
+msgid ""
+"Whether, when an iPod is connected, gnome-volume-manager should run "
+"'autoipod_command'."
+msgstr "დაკავშირებული."
+
+#: ../gnome-volume-manager.schemas.in.h:76
+msgid "iPod sync command"
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:77
+msgid "keyboard command"
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:78
+msgid "mouse command"
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:79
+msgid "palm sync command"
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:80
+msgid "printer command"
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:81
+msgid "scanner command"
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:82
+msgid "tablet command"
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:83
+msgid "video camera command"
+msgstr ""
+
+#: ../gnome-volume-properties.desktop.in.h:1
+msgid "Configure management of removable drives and media"
+msgstr "გარე მოწყობილობების, მედიის მართვა და რეგულირება"
+
+#: ../gnome-volume-properties.desktop.in.h:2
+msgid "Removable Drives and Media"
+msgstr "მოწყობილობები და მედია"
+
+#: ../gnome-volume-properties.glade.h:1
+#, fuzzy
+msgid "    "
+msgstr "    "
+
+#: ../gnome-volume-properties.glade.h:2
+#, fuzzy
+msgid "<b>Audio CD Discs</b>"
+msgstr "<b> აუდიო</b>"
+
+#: ../gnome-volume-properties.glade.h:3
+#, fuzzy
+msgid "<b>Blank CD and DVD Discs</b>"
+msgstr "<b> და DVD</b>"
+
+#: ../gnome-volume-properties.glade.h:4
+#, fuzzy
+msgid "<b>Digital Camera</b>"
+msgstr "<b> კამერა</b>"
+
+#: ../gnome-volume-properties.glade.h:5
+#, fuzzy
+msgid "<b>Digital Video Camera</b>"
+msgstr "<b> ვიდეო კამერა</b>"
+
+#: ../gnome-volume-properties.glade.h:6
+msgid "<b>Keyboards</b>"
+msgstr "<b>კლავიატურა</b>"
+
+#: ../gnome-volume-properties.glade.h:7
+msgid "<b>Mice</b>"
+msgstr "<b>თაგვი</b>"
+
+#: ../gnome-volume-properties.glade.h:8
+msgid "<b>Palm™</b>"
+msgstr ""
+
+#: ../gnome-volume-properties.glade.h:9
+msgid "<b>PocketPC</b>"
+msgstr ""
+
+#: ../gnome-volume-properties.glade.h:10
+#, fuzzy
+msgid "<b>Portable Music Players</b>"
+msgstr "<b> მუსიკა</b>"
+
+#: ../gnome-volume-properties.glade.h:11
+msgid "<b>Printers</b>"
+msgstr "<b>პრინტერები</b>"
+
+#: ../gnome-volume-properties.glade.h:12
+msgid "<b>Removable Storage</b>"
+msgstr ""
+
+#: ../gnome-volume-properties.glade.h:13
+msgid "<b>Scanners</b>"
+msgstr ""
+
+#: ../gnome-volume-properties.glade.h:14
+msgid "<b>Tablets</b>"
+msgstr ""
+
+#: ../gnome-volume-properties.glade.h:15
+#, fuzzy
+msgid "<b>Video DVD Discs</b>"
+msgstr "<b> ვიდეო DVD</b>"
+
+#: ../gnome-volume-properties.glade.h:16
+#, fuzzy
+msgid "Automatically run a program when a USB _keyboard is connected"
+msgstr "a პროგრამა a"
+
+#: ../gnome-volume-properties.glade.h:17
+#, fuzzy
+msgid "Automatically run a program when a USB _mouse is connected"
+msgstr "a პროგრამა a"
+
+#: ../gnome-volume-properties.glade.h:18
+#, fuzzy
+msgid "Automatically run a program when a _printer is connected"
+msgstr "a პროგრამა a"
+
+#: ../gnome-volume-properties.glade.h:19
+#, fuzzy
+msgid "Automatically run a program when a _scanner is connected"
+msgstr "a პროგრამა a"
+
+#: ../gnome-volume-properties.glade.h:20
+#, fuzzy
+msgid "Automatically run a program when a _tablet is connected"
+msgstr "a პროგრამა a"
+
+#: ../gnome-volume-properties.glade.h:21
+#, fuzzy
+msgid "Browse _removable media when inserted"
+msgstr "ნუსხა"
+
+#: ../gnome-volume-properties.glade.h:22
+msgid "C_ommand:"
+msgstr "_ბრძანება:"
+
+#: ../gnome-volume-properties.glade.h:23
+msgid "Cameras"
+msgstr "კამერები"
+
+#: ../gnome-volume-properties.glade.h:24
+msgid "Comman_d:"
+msgstr "ბრძა_ნება:"
+
+#: ../gnome-volume-properties.glade.h:25
+#, fuzzy
+msgid "Command for A_udio CDs:"
+msgstr "ბრძანება A:"
+
+#: ../gnome-volume-properties.glade.h:26
+#, fuzzy
+msgid "Command for _Data CDs: "
+msgstr "ბრძანება მონაცემი "
+
+#: ../gnome-volume-properties.glade.h:27
+#, fuzzy
+msgid "Drives and Media Preferences"
+msgstr "და პარამეტრები"
+
+#: ../gnome-volume-properties.glade.h:28
+#, fuzzy
+msgid "Input Devices"
+msgstr "შესავალი მოწყობილობები"
+
+#: ../gnome-volume-properties.glade.h:29
+#, fuzzy
+msgid "Mount removable media when _inserted"
+msgstr "მონტირება"
+
+#: ../gnome-volume-properties.glade.h:30
+msgid "Multimedia"
+msgstr "მულტიმედია"
+
+#: ../gnome-volume-properties.glade.h:31
+msgid "PDAs"
+msgstr ""
+
+#: ../gnome-volume-properties.glade.h:32
+#, fuzzy
+msgid "Play _audio CD discs when inserted"
+msgstr "დაკვრა აუდიო"
+
+#: ../gnome-volume-properties.glade.h:33
+#, fuzzy
+msgid "Play _music files when connected"
+msgstr "დაკვრა"
+
+#: ../gnome-volume-properties.glade.h:34
+#, fuzzy
+msgid "Play _video DVD disks when inserted"
+msgstr "დაკვრა DVD"
+
+#: ../gnome-volume-properties.glade.h:35
+msgid "Printers & Scanners"
+msgstr "პრინტერები & სკანერები"
+
+#: ../gnome-volume-properties.glade.h:36
+#, fuzzy
+msgid "Removable Drives and Media Preferences"
+msgstr "და პარამეტრები"
+
+#: ../gnome-volume-properties.glade.h:37
+#, fuzzy
+msgid "Select program to burn audio CDs"
+msgstr "პროგრამა -სკენ აუდიო"
+
+#: ../gnome-volume-properties.glade.h:38
+#, fuzzy
+msgid "Select program to burn data CDs"
+msgstr "პროგრამა -სკენ"
+
+#: ../gnome-volume-properties.glade.h:39
+#, fuzzy
+msgid "Select program to edit videos"
+msgstr "პროგრამა -სკენ"
+
+#: ../gnome-volume-properties.glade.h:40
+#, fuzzy
+msgid "Select program to import photos"
+msgstr "პროგრამა -სკენ"
+
+#: ../gnome-volume-properties.glade.h:41
+#, fuzzy
+msgid "Select program to play DVDs"
+msgstr "პროგრამა -სკენ"
+
+#: ../gnome-volume-properties.glade.h:42
+#, fuzzy
+msgid "Select program to play audio CDs"
+msgstr "პროგრამა -სკენ აუდიო"
+
+#: ../gnome-volume-properties.glade.h:43
+#, fuzzy
+msgid "Select program to play music files"
+msgstr "პროგრამა -სკენ"
+
+#: ../gnome-volume-properties.glade.h:44
+#, fuzzy
+msgid "Select program to run when a keyboard is plugged in"
+msgstr "პროგრამა -სკენ a"
+
+#: ../gnome-volume-properties.glade.h:45
+#, fuzzy
+msgid "Select program to run when a mouse is plugged in"
+msgstr "პროგრამა -სკენ a"
+
+#: ../gnome-volume-properties.glade.h:46
+#, fuzzy
+msgid "Select program to run when a printer is plugged in"
+msgstr "პროგრამა -სკენ a"
+
+#: ../gnome-volume-properties.glade.h:47
+#, fuzzy
+msgid "Select program to run when a scanner is plugged in"
+msgstr "პროგრამა -სკენ a"
+
+#: ../gnome-volume-properties.glade.h:48
+#, fuzzy
+msgid "Select program to run when a tablet is plugged in"
+msgstr "პროგრამა -სკენ a"
+
+#: ../gnome-volume-properties.glade.h:49
+#, fuzzy
+msgid "Select program to sync Palm devices"
+msgstr "პროგრამა -სკენ"
+
+#: ../gnome-volume-properties.glade.h:50
+msgid "Storage"
+msgstr ""
+
+#: ../gnome-volume-properties.glade.h:51
+#, fuzzy
+msgid "Sync PocketP_C devices when connected"
+msgstr "C"
+
+#: ../gnome-volume-properties.glade.h:52
+#, fuzzy
+msgid "Sync _Palm™ devices when connected"
+msgstr "დაკავშირებული"
+
+#: ../gnome-volume-properties.glade.h:53
+#, fuzzy
+msgid "_Auto-run programs on new drives and media"
+msgstr "ავტო და"
+
+#: ../gnome-volume-properties.glade.h:54
+#, fuzzy
+msgid "_Burn a CD or DVD when a blank disc is inserted"
+msgstr "a DVD a"
+
+#: ../gnome-volume-properties.glade.h:55
+msgid "_Command:"
+msgstr "_ბრძანება:"
+
+#: ../gnome-volume-properties.glade.h:56
+#, fuzzy
+msgid "_Edit video when connected"
+msgstr "რედაქტირება"
+
+#: ../gnome-volume-properties.glade.h:57
+#, fuzzy
+msgid "_Import digital photographs when connected"
+msgstr "იმპორტი"
+
+#: ../gnome-volume-properties.glade.h:58
+#, fuzzy
+msgid "_Mount removable drives when hot-plugged"
+msgstr "მონტირება"
+
+#: ../src/manager.c:201 ../src/manager.c:206 ../src/manager.c:211
+#: ../src/manager.c:217 ../src/manager.c:223 ../src/manager.c:229
+#: ../src/manager.c:235
+msgid "Ig_nore"
+msgstr "_იგნორირება"
+
+#: ../src/manager.c:202
+#, fuzzy
+msgid "_Allow Auto-Run"
+msgstr "დაუშვი ავტო"
+
+#: ../src/manager.c:207 ../src/manager.c:213 ../src/manager.c:218
+msgid "Import _Photos"
+msgstr "_სურათების იმპორტი"
+
+#: ../src/manager.c:212
+#, fuzzy
+msgid "_Open Folder"
+msgstr "გახსენი საქაღალდე"
+
+#: ../src/manager.c:219
+#, fuzzy
+msgid "Manage _Music"
+msgstr "მუსიკა"
+
+#: ../src/manager.c:224
+#, fuzzy
+msgid "_Browse Files"
+msgstr "ნუსხა ფაილები"
+
+#: ../src/manager.c:225
+msgid "_Play CD"
+msgstr "CD-ს _დაკვრა"
+
+#: ../src/manager.c:230
+#, fuzzy
+msgid "Make _Audio CD"
+msgstr "აუდიო"
+
+#: ../src/manager.c:231
+#, fuzzy
+msgid "Make _Data CD"
+msgstr "მონაცემი"
+
+#: ../src/manager.c:236
+#, fuzzy
+msgid "Make _DVD"
+msgstr "DVD"
+
+#: ../src/manager.c:288
+#, fuzzy
+msgid "Auto-Run Confirmation"
+msgstr "ავტო დადასტურება"
+
+#: ../src/manager.c:289
+#, fuzzy
+msgid "Auto-run capability detected."
+msgstr "ავტო."
+
+#: ../src/manager.c:290
+#, fuzzy
+msgid "Would you like to allow <b>'${0}'</b> to run?"
+msgstr "-სკენ<b></b> -სკენ?"
+
+#: ../src/manager.c:295 ../src/manager.c:302
+#, fuzzy
+msgid "Camera Import"
+msgstr "კამერა იმპორტი"
+
+#: ../src/manager.c:296 ../src/manager.c:303
+msgid "A camera has been detected."
+msgstr ""
+
+#: ../src/manager.c:297 ../src/manager.c:304
+msgid ""
+"There are photos on the camera. Would you like to add these pictures to your "
+"album?"
+msgstr ""
+
+#: ../src/manager.c:298 ../src/manager.c:305 ../src/manager.c:312
+#: ../src/manager.c:319 ../src/manager.c:326
+#, fuzzy
+msgid "_Always perform this action"
+msgstr "ყოველთვის"
+
+#: ../src/manager.c:309
+#, fuzzy
+msgid "Photo Import"
+msgstr "სურათი იმპორტი"
+
+#: ../src/manager.c:310
+msgid "A photo card has been detected."
+msgstr ""
+
+#: ../src/manager.c:311
+#, fuzzy
+msgid ""
+"There are photos on the card. Would you like to add these pictures to your "
+"album?"
+msgstr "-სკენ -სკენ?"
+
+#: ../src/manager.c:316
+msgid "Photos and Music"
+msgstr "სურათები და მუსიკა"
+
+#: ../src/manager.c:317
+#, fuzzy
+msgid "Photos were found on your music device."
+msgstr "ჩართულია."
+
+#: ../src/manager.c:318
+msgid "Would you like to import the photos or manage its music?"
+msgstr ""
+
+#: ../src/manager.c:323
+#, fuzzy
+msgid "Audio / Data CD"
+msgstr "აუდიო მონაცემი"
+
+#: ../src/manager.c:324
+msgid "The CD in the drive contains both music and files."
+msgstr ""
+
+#: ../src/manager.c:325
+msgid "Would you like to listen to music or browse the files?"
+msgstr ""
+
+#: ../src/manager.c:330 ../src/manager.c:337
+#, fuzzy
+msgid "Choose Disc Type"
+msgstr "არჩევა დისკი ტიპი"
+
+#: ../src/manager.c:331 ../src/manager.c:338
+#, fuzzy
+msgid "You have inserted a blank disc."
+msgstr "თქვენ a."
+
+#: ../src/manager.c:332 ../src/manager.c:339
+#, fuzzy
+msgid "What would you like to do?"
+msgstr "-სკენ?"
+
+#: ../src/manager.c:2835
+#, c-format
+#, fuzzy
+msgid "%d%% of the disk space on %s is in use"
+msgstr "- ჩართულია წმ -"
+
+#: ../src/manager.c:2927
+#, fuzzy
+msgid "Print version and exit"
+msgstr "ბეჭდვა ვერსია და"
+
+#: ../src/manager.c:2929
+msgid "Run as a daemon"
+msgstr ""
+
+#: ../src/manager.c:2931
+msgid "Don't run as a daemon"
+msgstr ""
+
+#: ../src/manager.c:2933
+#, fuzzy
+msgid "Run in secret mode"
+msgstr "გაშვება - რეჟიმი"
+
+#: ../src/manager.c:2965
+#, c-format
+#, fuzzy
+msgid "Unrecognized --daemon argument: %s\n"
+msgstr "n"
+
+#: ../src/properties.c:305
+msgid "Could not load the main interface"
+msgstr ""
+
+#: ../src/properties.c:307
+msgid "Please make sure that the volume manager is properly installed"
+msgstr ""
+
+#: ../src/properties.c:466
+#, c-format
+#, fuzzy
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr "შეცდომა n"
+
+#: ../src/properties.c:497
+#, fuzzy
+msgid "Volume management not supported"
+msgstr "ხმის რეგულაცია"
+
+#: ../src/properties.c:499
+msgid ""
+"The \"hald\" service is required but not currently running. Enable the "
+"service and rerun this application, or contact your system administrator.\n"
+"\n"
+"Note: You need Linux kernel 2.6 for volume management to work."
+msgstr ""
+

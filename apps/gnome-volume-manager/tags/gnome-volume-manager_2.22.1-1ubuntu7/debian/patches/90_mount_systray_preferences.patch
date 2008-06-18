@@ -1,0 +1,547 @@
+diff -Nur -x '*.orig' -x '*~' gnome-volume-manager-2.22.1/gnome-volume-properties.glade gnome-volume-manager-2.22.1.new/gnome-volume-properties.glade
+--- gnome-volume-manager-2.22.1/gnome-volume-properties.glade	2008-06-05 11:17:56.000000000 +0200
++++ gnome-volume-manager-2.22.1.new/gnome-volume-properties.glade	2008-06-05 11:18:35.000000000 +0200
+@@ -2270,6 +2270,381 @@
+ 	      <property name="type">tab</property>
+ 	    </packing>
+ 	  </child>
++
++	  <child>
++	    <widget class="GtkVBox" id="vbox35">
++	      <property name="border_width">12</property>
++	      <property name="visible">True</property>
++	      <property name="homogeneous">False</property>
++	      <property name="spacing">18</property>
++
++	      <child>
++		<widget class="GtkVBox" id="vbox36">
++		  <property name="visible">True</property>
++		  <property name="homogeneous">False</property>
++		  <property name="spacing">6</property>
++
++		  <child>
++		    <widget class="GtkLabel" id="label64">
++		      <property name="visible">True</property>
++		      <property name="label" translatable="yes">&lt;b&gt;General options&lt;/b&gt;</property>
++		      <property name="use_underline">False</property>
++		      <property name="use_markup">True</property>
++		      <property name="justify">GTK_JUSTIFY_LEFT</property>
++		      <property name="wrap">False</property>
++		      <property name="selectable">False</property>
++		      <property name="xalign">0</property>
++		      <property name="yalign">0</property>
++		      <property name="xpad">0</property>
++		      <property name="ypad">0</property>
++		      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
++		      <property name="width_chars">-1</property>
++		      <property name="single_line_mode">False</property>
++		      <property name="angle">0</property>
++		    </widget>
++		    <packing>
++		      <property name="padding">0</property>
++		      <property name="expand">False</property>
++		      <property name="fill">False</property>
++		    </packing>
++		  </child>
++
++		  <child>
++		    <widget class="GtkAlignment" id="alignment2">
++		      <property name="visible">True</property>
++		      <property name="xalign">0.5</property>
++		      <property name="yalign">0.5</property>
++		      <property name="xscale">1</property>
++		      <property name="yscale">1</property>
++		      <property name="top_padding">0</property>
++		      <property name="bottom_padding">0</property>
++		      <property name="left_padding">24</property>
++		      <property name="right_padding">0</property>
++
++		      <child>
++			<widget class="GtkVBox" id="vbox37">
++			  <property name="visible">True</property>
++			  <property name="homogeneous">False</property>
++			  <property name="spacing">6</property>
++
++			  <child>
++			    <widget class="GtkHBox" id="hbox101">
++			      <property name="visible">True</property>
++			      <property name="homogeneous">False</property>
++			      <property name="spacing">6</property>
++
++			      <child>
++				<widget class="GtkLabel" id="label66">
++				  <property name="visible">True</property>
++				  <property name="label" translatable="yes">When click on device:</property>
++				  <property name="use_underline">False</property>
++				  <property name="use_markup">False</property>
++				  <property name="justify">GTK_JUSTIFY_LEFT</property>
++				  <property name="wrap">False</property>
++				  <property name="selectable">False</property>
++				  <property name="xalign">0.5</property>
++				  <property name="yalign">0.5</property>
++				  <property name="xpad">0</property>
++				  <property name="ypad">0</property>
++				  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
++				  <property name="width_chars">-1</property>
++				  <property name="single_line_mode">False</property>
++				  <property name="angle">0</property>
++				</widget>
++				<packing>
++				  <property name="padding">0</property>
++				  <property name="expand">False</property>
++				  <property name="fill">False</property>
++				</packing>
++			      </child>
++
++			      <child>
++				<widget class="GtkComboBox" id="click_on_device_action">
++				  <property name="visible">True</property>
++				  <property name="add_tearoffs">False</property>
++				  <property name="focus_on_click">True</property>
++				</widget>
++				<packing>
++				  <property name="padding">0</property>
++				  <property name="expand">True</property>
++				  <property name="fill">True</property>
++				</packing>
++			      </child>
++			    </widget>
++			    <packing>
++			      <property name="padding">0</property>
++			      <property name="expand">True</property>
++			      <property name="fill">True</property>
++			    </packing>
++			  </child>
++
++			  <child>
++			    <widget class="GtkCheckButton" id="hide_systray">
++			      <property name="visible">True</property>
++			      <property name="can_focus">True</property>
++			      <property name="label" translatable="yes">_Hide system try icon when no devices mounted.</property>
++			      <property name="use_underline">True</property>
++			      <property name="relief">GTK_RELIEF_NORMAL</property>
++			      <property name="focus_on_click">True</property>
++			      <property name="active">False</property>
++			      <property name="inconsistent">False</property>
++			      <property name="draw_indicator">True</property>
++			    </widget>
++			    <packing>
++			      <property name="padding">0</property>
++			      <property name="expand">False</property>
++			      <property name="fill">False</property>
++			    </packing>
++			  </child>
++
++			  <child>
++			    <widget class="GtkCheckButton" id="blink_all_time">
++			      <property name="visible">True</property>
++			      <property name="can_focus">True</property>
++			      <property name="label" translatable="yes">_Blink all time when some device is mounted.</property>
++			      <property name="use_underline">True</property>
++			      <property name="relief">GTK_RELIEF_NORMAL</property>
++			      <property name="focus_on_click">True</property>
++			      <property name="active">False</property>
++			      <property name="inconsistent">False</property>
++			      <property name="draw_indicator">True</property>
++			    </widget>
++			    <packing>
++			      <property name="padding">0</property>
++			      <property name="expand">False</property>
++			      <property name="fill">False</property>
++			    </packing>
++			  </child>
++			</widget>
++		      </child>
++		    </widget>
++		    <packing>
++		      <property name="padding">0</property>
++		      <property name="expand">True</property>
++		      <property name="fill">True</property>
++		    </packing>
++		  </child>
++		</widget>
++		<packing>
++		  <property name="padding">0</property>
++		  <property name="expand">False</property>
++		  <property name="fill">True</property>
++		</packing>
++	      </child>
++
++	      <child>
++		<widget class="GtkVBox" id="vbox38">
++		  <property name="visible">True</property>
++		  <property name="homogeneous">False</property>
++		  <property name="spacing">6</property>
++
++		  <child>
++		    <widget class="GtkLabel" id="label65">
++		      <property name="visible">True</property>
++		      <property name="label" translatable="yes">&lt;b&gt;Warnings options&lt;/b&gt;</property>
++		      <property name="use_underline">False</property>
++		      <property name="use_markup">True</property>
++		      <property name="justify">GTK_JUSTIFY_LEFT</property>
++		      <property name="wrap">False</property>
++		      <property name="selectable">False</property>
++		      <property name="xalign">0</property>
++		      <property name="yalign">0</property>
++		      <property name="xpad">0</property>
++		      <property name="ypad">0</property>
++		      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
++		      <property name="width_chars">-1</property>
++		      <property name="single_line_mode">False</property>
++		      <property name="angle">0</property>
++		    </widget>
++		    <packing>
++		      <property name="padding">0</property>
++		      <property name="expand">False</property>
++		      <property name="fill">False</property>
++		    </packing>
++		  </child>
++
++		  <child>
++		    <widget class="GtkAlignment" id="alignment3">
++		      <property name="visible">True</property>
++		      <property name="xalign">0.5</property>
++		      <property name="yalign">0.5</property>
++		      <property name="xscale">1</property>
++		      <property name="yscale">1</property>
++		      <property name="top_padding">0</property>
++		      <property name="bottom_padding">0</property>
++		      <property name="left_padding">24</property>
++		      <property name="right_padding">0</property>
++
++		      <child>
++			<widget class="GtkVBox" id="vbox39">
++			  <property name="visible">True</property>
++			  <property name="homogeneous">False</property>
++			  <property name="spacing">6</property>
++
++			  <child>
++			    <widget class="GtkHBox" id="hbox102">
++			      <property name="visible">True</property>
++			      <property name="homogeneous">False</property>
++			      <property name="spacing">6</property>
++
++			      <child>
++				<widget class="GtkLabel" id="label67">
++				  <property name="visible">True</property>
++				  <property name="label" translatable="yes">Warn every</property>
++				  <property name="use_underline">False</property>
++				  <property name="use_markup">False</property>
++				  <property name="justify">GTK_JUSTIFY_LEFT</property>
++				  <property name="wrap">False</property>
++				  <property name="selectable">False</property>
++				  <property name="xalign">0.5</property>
++				  <property name="yalign">0.5</property>
++				  <property name="xpad">0</property>
++				  <property name="ypad">0</property>
++				  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
++				  <property name="width_chars">-1</property>
++				  <property name="single_line_mode">False</property>
++				  <property name="angle">0</property>
++				</widget>
++				<packing>
++				  <property name="padding">0</property>
++				  <property name="expand">False</property>
++				  <property name="fill">False</property>
++				</packing>
++			      </child>
++
++			      <child>
++				<widget class="GtkSpinButton" id="minutes_warning">
++				  <property name="visible">True</property>
++				  <property name="can_focus">True</property>
++				  <property name="climb_rate">1</property>
++				  <property name="digits">0</property>
++				  <property name="numeric">False</property>
++				  <property name="update_policy">GTK_UPDATE_ALWAYS</property>
++				  <property name="snap_to_ticks">False</property>
++				  <property name="wrap">False</property>
++				  <property name="adjustment">1 1 100 1 10 10</property>
++				</widget>
++				<packing>
++				  <property name="padding">0</property>
++				  <property name="expand">False</property>
++				  <property name="fill">True</property>
++				</packing>
++			      </child>
++
++			      <child>
++				<widget class="GtkLabel" id="label68">
++				  <property name="visible">True</property>
++				  <property name="label" translatable="yes">minutes.</property>
++				  <property name="use_underline">False</property>
++				  <property name="use_markup">False</property>
++				  <property name="justify">GTK_JUSTIFY_LEFT</property>
++				  <property name="wrap">False</property>
++				  <property name="selectable">False</property>
++				  <property name="xalign">0.5</property>
++				  <property name="yalign">0.5</property>
++				  <property name="xpad">0</property>
++				  <property name="ypad">0</property>
++				  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
++				  <property name="width_chars">-1</property>
++				  <property name="single_line_mode">False</property>
++				  <property name="angle">0</property>
++				</widget>
++				<packing>
++				  <property name="padding">0</property>
++				  <property name="expand">False</property>
++				  <property name="fill">False</property>
++				</packing>
++			      </child>
++			    </widget>
++			    <packing>
++			      <property name="padding">0</property>
++			      <property name="expand">True</property>
++			      <property name="fill">True</property>
++			    </packing>
++			  </child>
++
++			  <child>
++			    <widget class="GtkCheckButton" id="show_notify">
++			      <property name="visible">True</property>
++			      <property name="can_focus">True</property>
++			      <property name="label" translatable="yes">_Show a notification.</property>
++			      <property name="use_underline">True</property>
++			      <property name="relief">GTK_RELIEF_NORMAL</property>
++			      <property name="focus_on_click">True</property>
++			      <property name="active">False</property>
++			      <property name="inconsistent">False</property>
++			      <property name="draw_indicator">True</property>
++			    </widget>
++			    <packing>
++			      <property name="padding">0</property>
++			      <property name="expand">False</property>
++			      <property name="fill">False</property>
++			    </packing>
++			  </child>
++
++			  <child>
++			    <widget class="GtkCheckButton" id="show_notify_detected">
++			      <property name="visible">True</property>
++			      <property name="can_focus">True</property>
++			      <property name="label" translatable="yes">_Notify when new device detected.</property>
++			      <property name="use_underline">True</property>
++			      <property name="relief">GTK_RELIEF_NORMAL</property>
++			      <property name="focus_on_click">True</property>
++			      <property name="active">False</property>
++			      <property name="inconsistent">False</property>
++			      <property name="draw_indicator">True</property>
++			    </widget>
++			    <packing>
++			      <property name="padding">0</property>
++			      <property name="expand">False</property>
++			      <property name="fill">False</property>
++			    </packing>
++			  </child>
++			</widget>
++		      </child>
++		    </widget>
++		    <packing>
++		      <property name="padding">0</property>
++		      <property name="expand">True</property>
++		      <property name="fill">True</property>
++		    </packing>
++		  </child>
++		</widget>
++		<packing>
++		  <property name="padding">0</property>
++		  <property name="expand">False</property>
++		  <property name="fill">True</property>
++		</packing>
++	      </child>
++	    </widget>
++	    <packing>
++	      <property name="tab_expand">False</property>
++	      <property name="tab_fill">True</property>
++	    </packing>
++	  </child>
++
++	  <child>
++	    <widget class="GtkLabel" id="label63">
++	      <property name="visible">True</property>
++	      <property name="label" translatable="yes">Systray icon</property>
++	      <property name="use_underline">False</property>
++	      <property name="use_markup">False</property>
++	      <property name="justify">GTK_JUSTIFY_LEFT</property>
++	      <property name="wrap">False</property>
++	      <property name="selectable">False</property>
++	      <property name="xalign">0.5</property>
++	      <property name="yalign">0.5</property>
++	      <property name="xpad">0</property>
++	      <property name="ypad">0</property>
++	      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
++	      <property name="width_chars">-1</property>
++	      <property name="single_line_mode">False</property>
++	      <property name="angle">0</property>
++	    </widget>
++	    <packing>
++	      <property name="type">tab</property>
++	    </packing>
++	  </child>
+ 	</widget>
+ 	<packing>
+ 	  <property name="padding">0</property>
+diff -Nur -x '*.orig' -x '*~' gnome-volume-manager-2.22.1/src/gvm.h gnome-volume-manager-2.22.1.new/src/gvm.h
+--- gnome-volume-manager-2.22.1/src/gvm.h	2007-12-07 18:55:46.000000000 +0100
++++ gnome-volume-manager-2.22.1.new/src/gvm.h	2008-06-05 11:18:43.000000000 +0200
+@@ -77,6 +77,10 @@
+ #define GCONF_ROOT_SANS_SLASH	"/desktop/gnome/volume_manager"
+ #define GCONF_ROOT		GCONF_ROOT_SANS_SLASH "/"
+ 
++/* mount-systray settings */
++#define GCONF_ROOT_MS_SANS_SLASH	"/apps/mount-systray"
++#define GCONF_ROOT_MS			GCONF_ROOT_MS_SANS_SLASH "/"
++
+ #define CLIPBOARD_NAME		"GVM_SELECTION"
+ 
+ extern gboolean gvm_get_clipboard (void);
+diff -Nur -x '*.orig' -x '*~' gnome-volume-manager-2.22.1/src/properties.c gnome-volume-manager-2.22.1.new/src/properties.c
+--- gnome-volume-manager-2.22.1/src/properties.c	2008-06-05 11:17:56.000000000 +0200
++++ gnome-volume-manager-2.22.1.new/src/properties.c	2008-06-05 11:18:46.000000000 +0200
+@@ -34,6 +34,8 @@
+ typedef enum {
+ 	TYPE_BOOL,
+ 	TYPE_STRING,
++	TYPE_COMBO,
++	TYPE_SPIN
+ } type_t;
+ 
+ static struct {
+@@ -42,26 +44,32 @@
+ 	GtkWidget *widget;
+ 	gboolean need_daemon;
+ } gvm_settings[] = {
+-	{ GCONF_ROOT "autokeyboard",              TYPE_BOOL,   NULL, TRUE  },
+-	{ GCONF_ROOT "autokeyboard_command",      TYPE_STRING, NULL, FALSE },
+-	{ GCONF_ROOT "automouse",                 TYPE_BOOL,   NULL, TRUE  },
+-	{ GCONF_ROOT "automouse_command",         TYPE_STRING, NULL, FALSE },
+-	{ GCONF_ROOT "autophoto",                 TYPE_BOOL,   NULL, TRUE  },
+-	{ GCONF_ROOT "autophoto_command",         TYPE_STRING, NULL, FALSE },
+-	{ GCONF_ROOT "autopalmsync",              TYPE_BOOL,   NULL, TRUE  },
+-	{ GCONF_ROOT "autopalmsync_command",      TYPE_STRING, NULL, FALSE },
+-	{ GCONF_ROOT "autopocketpc",              TYPE_BOOL,   NULL, TRUE  },
+-	{ GCONF_ROOT "autopocketpc_command",      TYPE_STRING, NULL, FALSE },
+-	{ GCONF_ROOT "autoprinter",               TYPE_BOOL,   NULL, TRUE  },
+-	{ GCONF_ROOT "autoprinter_command",       TYPE_STRING, NULL, FALSE },
+-	{ GCONF_ROOT "autoscanner",               TYPE_BOOL,   NULL, TRUE  },
+-	{ GCONF_ROOT "autoscanner_command",       TYPE_STRING, NULL, FALSE },
+-	{ GCONF_ROOT "autotablet",                TYPE_BOOL,   NULL, TRUE  },
+-	{ GCONF_ROOT "autotablet_command",        TYPE_STRING, NULL, FALSE },
+-	{ GCONF_ROOT "autovideocam",              TYPE_BOOL,   NULL, TRUE  },
+-	{ GCONF_ROOT "autovideocam_command",      TYPE_STRING, NULL, FALSE },
+-	{ GCONF_ROOT "autowebcam",                TYPE_BOOL,   NULL, TRUE  },
+-	{ GCONF_ROOT "autowebcam_command",        TYPE_STRING, NULL, FALSE },
++	{ GCONF_ROOT    "autokeyboard",              TYPE_BOOL,   NULL, TRUE  },
++	{ GCONF_ROOT    "autokeyboard_command",      TYPE_STRING, NULL, FALSE },
++	{ GCONF_ROOT    "automouse",                 TYPE_BOOL,   NULL, TRUE  },
++	{ GCONF_ROOT    "automouse_command",         TYPE_STRING, NULL, FALSE },
++	{ GCONF_ROOT    "autophoto",                 TYPE_BOOL,   NULL, TRUE  },
++	{ GCONF_ROOT    "autophoto_command",         TYPE_STRING, NULL, FALSE },
++	{ GCONF_ROOT    "autopalmsync",              TYPE_BOOL,   NULL, TRUE  },
++	{ GCONF_ROOT    "autopalmsync_command",      TYPE_STRING, NULL, FALSE },
++	{ GCONF_ROOT    "autopocketpc",              TYPE_BOOL,   NULL, TRUE  },
++	{ GCONF_ROOT    "autopocketpc_command",      TYPE_STRING, NULL, FALSE },
++	{ GCONF_ROOT    "autoprinter",               TYPE_BOOL,   NULL, TRUE  },
++	{ GCONF_ROOT    "autoprinter_command",       TYPE_STRING, NULL, FALSE },
++	{ GCONF_ROOT    "autoscanner",               TYPE_BOOL,   NULL, TRUE  },
++	{ GCONF_ROOT    "autoscanner_command",       TYPE_STRING, NULL, FALSE },
++	{ GCONF_ROOT    "autotablet",                TYPE_BOOL,   NULL, TRUE  },
++	{ GCONF_ROOT    "autotablet_command",        TYPE_STRING, NULL, FALSE },
++	{ GCONF_ROOT    "autovideocam",              TYPE_BOOL,   NULL, TRUE  },
++	{ GCONF_ROOT    "autovideocam_command",      TYPE_STRING, NULL, FALSE },
++	{ GCONF_ROOT    "autowebcam",                TYPE_BOOL,   NULL, TRUE  },
++	{ GCONF_ROOT    "autowebcam_command",        TYPE_STRING, NULL, FALSE },
++	{ GCONF_ROOT_MS "click_on_device_action",    TYPE_COMBO,  NULL, FALSE },
++	{ GCONF_ROOT_MS "hide_systray",              TYPE_BOOL,   NULL, FALSE },
++	{ GCONF_ROOT_MS "blink_all_time",            TYPE_BOOL,   NULL, FALSE },
++	{ GCONF_ROOT_MS "minutes_warning",           TYPE_SPIN,   NULL, FALSE },
++	{ GCONF_ROOT_MS "show_notify",               TYPE_BOOL,   NULL, FALSE },
++	{ GCONF_ROOT_MS "show_notify_detected",      TYPE_BOOL,   NULL, FALSE },
+ };
+ 
+ static GHashTable *gvm_settings_hash = NULL;
+@@ -102,6 +110,36 @@
+ }
+ 
+ static void
++change_value_cb (GtkSpinButton *spinbutton, const char *key)
++{
++	int value;
++
++	if (updating)
++		return;
++
++	value = gtk_spin_button_get_value_as_int (spinbutton);
++	gconf_client_set_int (gconf, key, value, NULL);
++}
++
++static void
++changed_combo_cb (GtkComboBox *combo, const char *key)
++{
++	const char *str;
++	GtkTreeIter iter;
++	GtkTreeModel *model;
++
++	if (updating)
++		return;
++
++	model = gtk_combo_box_get_model (combo);
++	gtk_combo_box_get_active_iter (combo, &iter);
++	gtk_tree_model_get (model, &iter,
++			    0, &str,
++			    -1);
++	gconf_client_set_string (gconf, key, str ? str : "", NULL);
++}
++
++static void
+ gconf_changed_cb (GConfClient *client GNUC_UNUSED,
+ 		  guint id GNUC_UNUSED,
+ 		  GConfEntry *entry,
+@@ -300,6 +338,45 @@
+ 			bool = gconf_client_get_bool (gconf, gvm_settings[i].key, NULL);
+ 			gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (gvm_settings[i].widget), bool);
+ 			g_signal_connect (gvm_settings[i].widget, "toggled", G_CALLBACK (toggled_cb), (void *) gvm_settings[i].key);
++		} else if (gvm_settings[i].type == TYPE_COMBO) {
++			GtkListStore *model;
++			GtkTreeIter iter;
++			GtkCellRenderer *cell;
++			char *str;
++
++			model = gtk_list_store_new (2, G_TYPE_STRING, G_TYPE_STRING);
++			gtk_list_store_append (model, &iter);
++			gtk_list_store_set (model, &iter,
++					    0, "umount",
++					    1, _("Umount device"),
++					    -1);
++			gtk_list_store_append (model, &iter);
++			gtk_list_store_set (model, &iter,
++					    0, "open",
++					    1, _("Browse in filemanager"),
++					    -1);
++
++			gtk_combo_box_set_model (GTK_COMBO_BOX (gvm_settings[i].widget), GTK_TREE_MODEL (model));
++
++			cell = gtk_cell_renderer_text_new ();
++			gtk_cell_layout_pack_start (GTK_CELL_LAYOUT(gvm_settings[i].widget), cell, FALSE);
++			gtk_cell_layout_add_attribute (GTK_CELL_LAYOUT(gvm_settings[i].widget), cell, "text", 1);
++
++			str = gconf_client_get_string (gconf, gvm_settings[i].key, NULL);
++			if (strcmp(str, "umount") == 0) {
++				gtk_combo_box_set_active (GTK_COMBO_BOX (gvm_settings[i].widget), 0);
++			} else {
++				gtk_combo_box_set_active (GTK_COMBO_BOX (gvm_settings[i].widget), 1);
++			}
++
++			g_signal_connect (gvm_settings[i].widget, "changed", G_CALLBACK (changed_combo_cb), (void *) gvm_settings[i].key);
++			g_free (str);
++		} else if (gvm_settings[i].type == TYPE_SPIN) {
++			int value;
++
++			value = gconf_client_get_int (gconf, gvm_settings[i].key, NULL);
++			gtk_spin_button_set_value (GTK_SPIN_BUTTON(gvm_settings[i].widget), value);
++			g_signal_connect (gvm_settings[i].widget, "value-changed", G_CALLBACK (change_value_cb), (void *) gvm_settings[i].key);
+ 		} else {
+ 			g_assert_not_reached ();
+ 		}

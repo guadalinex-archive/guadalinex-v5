@@ -1,0 +1,254 @@
+# Translation of gnome-volume-manager to Croatiann
+# Copyright (C) Croatiann team
+# Translators: Automatski Prijevod <>,Denis Lackovic <delacko@fly.srk.fer.hr>,
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-volume-manager 0\n"
+"POT-Creation-Date: 2004-03-20 14:55+0100\n"
+"PO-Revision-Date: 2004-03-20 14:55+CET\n"
+"Last-Translator: auto\n"
+"Language-Team: Croatian <lokalizacija@linux.hr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: TransDict server\n"
+
+#: gnome-volume-manager.schemas.in.h:1
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr "popis putanja odvoje ':' u kojima se provjeravaju skripte ili programi za automatsko pokretanje."
+
+#: gnome-volume-manager.schemas.in.h:2
+msgid "Automount Removable Drives"
+msgstr "Automatsko mountanje pokretnih uređaja"
+
+#: gnome-volume-manager.schemas.in.h:3
+msgid "Automount Removable Media"
+msgstr "Automatsko mountanje pokretnih uređaja"
+
+#: gnome-volume-manager.schemas.in.h:4
+msgid "Autorun path"
+msgstr "Putanja za automatsko pokretanje"
+
+#: gnome-volume-manager.schemas.in.h:5
+msgid "CD Burn Command"
+msgstr "Naredba za prženje CD-a"
+
+#: gnome-volume-manager.schemas.in.h:6
+msgid "CD Play Command"
+msgstr "Naredba za sviranje CD-a"
+
+#: gnome-volume-manager.schemas.in.h:7
+msgid ""
+"Command to run when a digital camera or media from a a digital camera is "
+"inserted."
+msgstr ""
+"Naredba koju treba pokrenuti kada se ubaci digitalna kamera ili medij iz "
+"digitalne kamere."
+
+#: gnome-volume-manager.schemas.in.h:8
+msgid "Command to run when a video DVD is inserted."
+msgstr "Naredba za pokrenuti kada se ubaci video DVD."
+
+#: gnome-volume-manager.schemas.in.h:9
+msgid "Command to run when an audio CD is inserted."
+msgstr "Naredba za pokrenuti kada se ubaci audio CD."
+
+#: gnome-volume-manager.schemas.in.h:10
+msgid "Command to run when an empty CD is inserted."
+msgstr "Naredba za pokrenuti kada se ubaci prazni CD."
+
+#: gnome-volume-manager.schemas.in.h:11
+msgid "DVD Play Command"
+msgstr "Naredba za puštanje DVD-ova"
+
+#: gnome-volume-manager.schemas.in.h:12
+msgid "Perform Autorun"
+msgstr "Izvedi automatsko pokretanje"
+
+#: gnome-volume-manager.schemas.in.h:13
+msgid "Photo Management Command"
+msgstr "Naredba za upravljanje fotografijama"
+
+#: gnome-volume-manager.schemas.in.h:14
+msgid "Play inserted audio CD's"
+msgstr "Sviranje ubačenih CD-ova"
+
+#: gnome-volume-manager.schemas.in.h:15
+msgid "Play inserted video DVDs"
+msgstr "Puštanje ubačenih DVD-ova"
+
+#: gnome-volume-manager.schemas.in.h:16
+msgid "Run CD burn command"
+msgstr "Pokreni naredbu za prženje CD-a"
+
+#: gnome-volume-manager.schemas.in.h:17
+msgid ""
+"Whether autorun programs (binaries and scripts located in 'autorun_path') "
+"are run on newly mounted media."
+msgstr ""
+"Trebaju li programi za automatsko pokretanje (binarne datoteke i skripte koje "
+"se nalaze u popisu za automatsko pokretanje) pokretati na novo mountanim "
+"medijima."
+
+#: gnome-volume-manager.schemas.in.h:18
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"drives when they are inserted."
+msgstr ""
+"Treba li gnome-volume-manager automatski mountati prenosive uređaje za pohranu "
+"kada se ubace."
+
+#: gnome-volume-manager.schemas.in.h:19
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"media when they are inserted."
+msgstr ""
+"Treba li gnome-volume-manager automatski mountati prenosive uređaje za pohranu "
+"kada se ubace."
+
+#: gnome-volume-manager.schemas.in.h:20
+msgid ""
+"Whether, when a blank CD is inserted, gnome-volume-manager should run "
+"'autoburn_cdr_command'"
+msgstr ""
+"Treba li, kada je CD prazan,  gnome-volume-manager pokrenuti "
+"'autoburn_cdr_command'"
+
+#: gnome-volume-manager.schemas.in.h:21
+msgid ""
+"Whether, when a digital camera is connected or media from a a digital camera "
+"is inserted, gnome-volume-manager should run 'autophoto_command'"
+msgstr ""
+"Treba li, kada je spojena digitalna kamera ili medij iz digitalne kamere,"
+"gnome-volume-manager pokrenuti 'autophoto_command'"
+
+#: gnome-volume-manager.schemas.in.h:22
+msgid ""
+"Whether, when a video DVD is inserted, gnome-volume-manager should run "
+"'autoplay_dvd_command'"
+msgstr "Treba li, kada je ubačen video DVD, gnome-volume-manager pokrenuti 'autoplay_dvd_command'."
+
+#: gnome-volume-manager.schemas.in.h:23
+msgid ""
+"Whether, when an audio CD is inserted, gnome-volume-manager should run "
+"'autoplay_cda'."
+msgstr "Treba li, kada je ubačen audio CD, gnome-volume-manager pokrenuti 'autophoto_cda'."
+
+#: gnome-volume-properties.desktop.in.h:1
+msgid "Configure Management of Removable Devices"
+msgstr "Podešavanje upravaljanja pokretnim uređajima"
+
+#: gnome-volume-properties.desktop.in.h:2
+msgid "Removable Storage"
+msgstr "Prenosivi uređaji za pohranu"
+
+#: gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: gnome-volume-properties.glade.h:2
+msgid " Perform action on _blank CDs when inserted"
+msgstr "Izvođenje akcije na _praznim CD-ovima kada se ubace"
+
+#: gnome-volume-properties.glade.h:3
+msgid "*"
+msgstr "*"
+
+#: gnome-volume-properties.glade.h:4
+msgid "<b>Audio CDs</b>"
+msgstr "<b>Audio CD-i</b>"
+
+#: gnome-volume-properties.glade.h:5
+msgid "<b>Blank CDs</b>"
+msgstr "<b>Prazni CD-i</b>"
+
+#: gnome-volume-properties.glade.h:6
+msgid "<b>DVD Videos</b>"
+msgstr "<b>DVD video</b>"
+
+#: gnome-volume-properties.glade.h:7
+msgid "<b>Digital Camera</b>"
+msgstr "<b>Digitalna kamera</b>"
+
+#: gnome-volume-properties.glade.h:8
+msgid "<b>Removable Storage</b>"
+msgstr "<b>Pokretni uređaj za pohranu</b>"
+
+#: gnome-volume-properties.glade.h:9
+msgid "Auto-run programs on new drives and media"
+msgstr "_Automatsko pokretanje programa na novim diskovima i medijima"
+
+#: gnome-volume-properties.glade.h:10
+msgid "Command:"
+msgstr "Naredba:"
+
+#: gnome-volume-properties.glade.h:11
+msgid "Drives and Media Preferences"
+msgstr "Postavke diskova i medija"
+
+#: gnome-volume-properties.glade.h:12
+msgid "Import digital _photo albums when connected"
+msgstr "Uvoz digitalnih _foto albuma kada smo spojeni"
+
+#: gnome-volume-properties.glade.h:13
+msgid "Mount removable media when _inserted"
+msgstr "_Mountanje pokretnih diskova kada se spoje"
+
+#: gnome-volume-properties.glade.h:14
+msgid "Play DVD Videos when inserted"
+msgstr "Puštenje DVD videa kada je ubačen"
+
+#: gnome-volume-properties.glade.h:15
+msgid "Play _DVD Videos when inserted"
+msgstr "Puštenje _DVD videa kada je ubačen"
+
+#: gnome-volume-properties.glade.h:16
+msgid "Play a_udio CDs when inserted"
+msgstr "Sviranje a_udio CD-ova kada se ubace"
+
+#: gnome-volume-properties.glade.h:17
+msgid "Play audio CDs when inserted"
+msgstr "Sviranje audio CD-ova kada se ubace"
+
+#: gnome-volume-properties.glade.h:18
+msgid "_Auto-run programs on new drives and media"
+msgstr "_Automatsko pokretanje programa na novim diskovima i medijima"
+
+#: gnome-volume-properties.glade.h:19
+msgid "_Mount removable drives when hot-plugged"
+msgstr "_Mountanje pokretnih diskova kada su spojeni"
+
+#: src/manager.c:258
+#, c-format
+msgid "Do you want to run %s?"
+msgstr "Želite li pokrenuti %s?"
+
+#: src/manager.c:343
+msgid "_Import"
+msgstr "_Uvoz"
+
+#: src/manager.c:491
+msgid "_Play"
+msgstr "_Sviraj"
+
+#: src/manager.c:492
+msgid "_Browse"
+msgstr "_Potraži"
+
+#: src/properties.c:177
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr ""
+"Greška prilikom pokretanja gnome-volume-manager daemona:\n"
+"%s"
+
+#: src/properties.c:339
+msgid "Could not load the main interface"
+msgstr "Ne mogu učitati glavno sučelje"
+
+#: src/properties.c:341
+msgid "Please make sure that the volume manager is properly installed"
+msgstr "Uvjerite se da je volume manager ispravno instaliran"
+

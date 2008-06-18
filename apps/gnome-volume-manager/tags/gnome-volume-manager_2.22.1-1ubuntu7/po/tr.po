@@ -1,0 +1,778 @@
+# translation of gnome-volume-manager to Turkish
+# This file is distributed under the same license as the gnome-volume-manager package.
+# Copyright (C) 2004.
+# Baris Cicek <baris@teamforce.name.tr>, 2004, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-volume-manager\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-09-02 23:24+0300\n"
+"PO-Revision-Date: 2005-09-02 23:24+0300\n"
+"Last-Translator: Tolga Günkut <hardheart@gmail.com>\n"
+"Language-Team: Turkish <gnome-turk@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms:  nplurals=1; plural=0;\n"
+"X-Generator: KBabel 1.10.2\n"
+
+#: ../gnome-volume-manager.schemas.in.h:1
+msgid "\"Always take this action\" checkbox for Autorun"
+msgstr "\"Bunu her zaman yap\" Kendiliğinden çalıştırma için onay kutusu"
+
+#: ../gnome-volume-manager.schemas.in.h:2
+msgid "\"Always take this action\" checkbox for iPod Photos"
+msgstr "\"Always take this action\" iPod Photo için onay kutusu"
+
+#: ../gnome-volume-manager.schemas.in.h:3
+msgid "\"Always take this action\" checkbox for mixed Audio and Data CDs"
+msgstr "\"Always take this action\" karma Ses ve Veri CD'leri için onay kutusu"
+
+#: ../gnome-volume-manager.schemas.in.h:4
+msgid "\"Always take this action\" checkbox for photo import from a camera"
+msgstr ""
+"\"Always take this action\" bir fotoğraf makinesinden aktarılan fotoğraflar "
+"için onay kutusu"
+
+#: ../gnome-volume-manager.schemas.in.h:5
+msgid "\"Always take this action\" checkbox for photo import from a device"
+msgstr ""
+"\"Always take this action\" bir aygıttan aktarılan fotoğraflar için onay "
+"kutusu"
+
+#: ../gnome-volume-manager.schemas.in.h:6
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr ""
+"Otomatik çalıştırma için aranacak ikili dosyarın ve betiklerin yollarının "
+"':' ile ayırlmış listesi."
+
+#: ../gnome-volume-manager.schemas.in.h:7
+msgid "Action to take when a camera is plugged in."
+msgstr "Bir fotoğraf makinesi takıldığında yapılacak eylem."
+
+#: ../gnome-volume-manager.schemas.in.h:8
+msgid "Action to take when a device containing photos is encountered."
+msgstr "Fotoğraf içeren bir aygıtla karşılaşıldığında yapılacak eylem."
+
+#: ../gnome-volume-manager.schemas.in.h:9
+msgid "Action to take when a device contains an autorun program/script."
+msgstr ""
+"Bir aygıt otomatik çalıştırma/betik programı içerdiği zaman yapılacak eylem."
+
+#: ../gnome-volume-manager.schemas.in.h:10
+msgid "Action to take when a mixed Audio and Data CD is encountered."
+msgstr "Karma bir Ses ve Veri CD ile karşılaşıldığında yapılacak eylem."
+
+#: ../gnome-volume-manager.schemas.in.h:11
+msgid "Action to take when an iPod Photo is encountered."
+msgstr "iPod Photo ile karşılaşıldığında yapılacak eylem."
+
+#: ../gnome-volume-manager.schemas.in.h:12
+msgid "Audio CD burn command"
+msgstr "Ses CD'si yazma komutunu"
+
+#: ../gnome-volume-manager.schemas.in.h:13
+msgid "Automount removable drives"
+msgstr "Ayrılabilir sürücüleri kendiliğinden bağla"
+
+#: ../gnome-volume-manager.schemas.in.h:14
+msgid "Automount removable media"
+msgstr "Ayrılabilir araçları kendiliğinden bağla"
+
+#: ../gnome-volume-manager.schemas.in.h:15
+msgid "Autorun nautilus"
+msgstr "Nautilus'u kendiliğinden çalıştır"
+
+#: ../gnome-volume-manager.schemas.in.h:16
+msgid "Autorun path"
+msgstr "Yolu kendiliğinden çalıştır"
+
+#: ../gnome-volume-manager.schemas.in.h:17
+msgid "CD play command"
+msgstr "CD çalma komutu"
+
+#: ../gnome-volume-manager.schemas.in.h:18
+msgid ""
+"Command to run when a digital camera is connected or media from a digital "
+"camera is inserted."
+msgstr ""
+"Dijital fotoğraf makinesi bağlandığında ya da dijital fotoğraf makinesinden "
+"bir araç eklendiğinde çalıştırılacak komut."
+
+#: ../gnome-volume-manager.schemas.in.h:19
+msgid "Command to run when a keyboard is connected."
+msgstr "Bir klavye bağlandığında çalıştırılacak komut."
+
+#: ../gnome-volume-manager.schemas.in.h:20
+msgid "Command to run when a mouse is connected."
+msgstr "Fare bağlandığında çalıştırılacak komut."
+
+#: ../gnome-volume-manager.schemas.in.h:21
+msgid "Command to run when a palm is connected."
+msgstr "Bir Palm bağlandığında çalıştırılacak komut."
+
+#: ../gnome-volume-manager.schemas.in.h:22
+msgid "Command to run when a printer is connected."
+msgstr "Bir yazıcı bağlandığında çalıştırılacak komut."
+
+#: ../gnome-volume-manager.schemas.in.h:23
+msgid "Command to run when a scanner is connected."
+msgstr "Bir tarayıcı bağlandığında çalıştırılacak komut."
+
+#: ../gnome-volume-manager.schemas.in.h:24
+msgid "Command to run when a video DVD is inserted."
+msgstr "Video DVD'si konulduğunda çalıştırılacak komut."
+
+#: ../gnome-volume-manager.schemas.in.h:25
+msgid "Command to run when a video VCD is inserted."
+msgstr "Video VCD'si konulduğunda çalıştırılacak komut."
+
+#: ../gnome-volume-manager.schemas.in.h:26
+msgid "Command to run when a video camera is connected."
+msgstr "Bir video kamera bağlandığında çalıştırılacak komut."
+
+#: ../gnome-volume-manager.schemas.in.h:27
+msgid "Command to run when an audio CD is inserted."
+msgstr "Ses CD'si konulduğunda çalıştırılacak komut."
+
+#: ../gnome-volume-manager.schemas.in.h:28
+msgid "Command to run when an iPod is connected."
+msgstr "Bir iPod bağlandığında çalıştırılacak komut."
+
+#: ../gnome-volume-manager.schemas.in.h:29
+msgid "Command to run when the eject button on a optical drive is pressed."
+msgstr "Optik sürücüdeki çıkartma düğmesi basıldığında çalıştırılacak komut."
+
+#: ../gnome-volume-manager.schemas.in.h:30
+msgid "Command to run when the user wishes to burn a Data CD."
+msgstr "Kullanıcı bir Veri CD'si yazmak istediğinde çalıştırılacak komut."
+
+#: ../gnome-volume-manager.schemas.in.h:31
+msgid "Command to run when the user wishes to burn an Audio CD."
+msgstr "Kullanıcı bir Ses CD'si yazmak istediğinde çalıştırılacak komut."
+
+#: ../gnome-volume-manager.schemas.in.h:32
+msgid "DVD play command"
+msgstr "DVD çalma komutu"
+
+#: ../gnome-volume-manager.schemas.in.h:33
+msgid "Data CD burn command"
+msgstr "Veri CD'si yazma komutu"
+
+#: ../gnome-volume-manager.schemas.in.h:34
+msgid "Eject command"
+msgstr "Çıkartma komutu"
+
+#: ../gnome-volume-manager.schemas.in.h:35
+msgid "Open nautilus on removeable media insert."
+msgstr "Ayrılabilir disk kullanıldığında nautilus'u aç."
+
+#: ../gnome-volume-manager.schemas.in.h:36
+msgid "Perform autorun"
+msgstr "Kendiliğinde çalıştır uygula"
+
+#: ../gnome-volume-manager.schemas.in.h:37
+msgid "Photo management command"
+msgstr "Fotoğraf yönetim komutu"
+
+#: ../gnome-volume-manager.schemas.in.h:38
+msgid "Play inserted audio CD's"
+msgstr "Ses CD'si konuduğunda çaldır"
+
+#: ../gnome-volume-manager.schemas.in.h:39
+msgid "Play inserted video DVDs"
+msgstr "Video DVD'si konulduğunda oynat"
+
+#: ../gnome-volume-manager.schemas.in.h:40
+msgid "Play inserted video VCDs"
+msgstr "Takılan video VCD'lerini oynat"
+
+#: ../gnome-volume-manager.schemas.in.h:41
+msgid "Run Palm-sync program"
+msgstr "Palm eşzamanlandırma programını çalıştır"
+
+#: ../gnome-volume-manager.schemas.in.h:42
+msgid "Run a program to burn CDs/DVDs"
+msgstr "CD'leri/DVD'leri yazmak için bir program çalıştır"
+
+#: ../gnome-volume-manager.schemas.in.h:43
+msgid "Run iPod program"
+msgstr "iPod programı çalıştır"
+
+#: ../gnome-volume-manager.schemas.in.h:44
+msgid "Run keyboard program"
+msgstr "Klavye programı çalıştır"
+
+#: ../gnome-volume-manager.schemas.in.h:45
+msgid "Run mouse program"
+msgstr "Fare programı çalıştır"
+
+#: ../gnome-volume-manager.schemas.in.h:46
+msgid "Run photo management command"
+msgstr "Fotoğraf yönetim komutunu çalıştır"
+
+#: ../gnome-volume-manager.schemas.in.h:47
+msgid "Run printer program"
+msgstr "Yazıcı programı çalıştır"
+
+#: ../gnome-volume-manager.schemas.in.h:48
+msgid "Run scanner program"
+msgstr "Tarayıcı programı çalıştır"
+
+#: ../gnome-volume-manager.schemas.in.h:49
+msgid "Run video editing program"
+msgstr "Video düzenleme programı çalıştır"
+
+#: ../gnome-volume-manager.schemas.in.h:50
+msgid "VCD play command"
+msgstr "VCD çalma komutu"
+
+#: ../gnome-volume-manager.schemas.in.h:51
+msgid ""
+"Whether autorun programs (binaries and scripts located in 'autorun_path') "
+"are run on newly mounted media."
+msgstr ""
+"Kendiliğinden çalıştırma programlarının ('autorun_path' içindeki ikili "
+"dosyalar ve betikler) yeni bağlanan araçlar için çalıştırılması."
+
+#: ../gnome-volume-manager.schemas.in.h:52
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"drives when they are inserted."
+msgstr ""
+"Ayrılabilir depo sürücüleri kullanıldığında gnome-volume-manager'ın "
+"kendiliğinden bağlaması."
+
+#: ../gnome-volume-manager.schemas.in.h:53
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"media when they are inserted."
+msgstr ""
+"Ayrılabilir depo araçları kullanıldığında gnome-volume-manager'ın "
+"kendiliğinden bağlaması."
+
+#: ../gnome-volume-manager.schemas.in.h:54
+msgid ""
+"Whether, when a blank CD or DVD is inserted, gnome-volume-manager should run "
+"one of the autoburn commands."
+msgstr ""
+"Boş bir CD kullanıldığında, gnome-volume-manager'ın kendiliğinden yazma "
+"komutlarından birini çalıştırması."
+
+#: ../gnome-volume-manager.schemas.in.h:55
+msgid ""
+"Whether, when a digital camera is connected or media from a digital camera "
+"is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr ""
+"Dijital fotoğraf makinesi bağlandığında ya da dijital fotoğraf makinesinden "
+"bir araç kullanıldığında, gnome-volume-manager'ın 'autophoto_command'ı "
+"çalıştırması."
+
+#: ../gnome-volume-manager.schemas.in.h:56
+msgid ""
+"Whether, when a digital video camera is connected, gnome-volume-manager "
+"should run 'autovideocam_command'."
+msgstr ""
+"Bir dijital kamera bağlandığında, gnome-volume-"
+"manager'ın'autovideocam_command'ı çalıştırması."
+
+#: ../gnome-volume-manager.schemas.in.h:57
+msgid ""
+"Whether, when a keyboard is connected, gnome-volume-manager should run "
+"'autokeyboard_command'."
+msgstr ""
+"Bir klavye bağlandığında, gnome-volume-manager'in 'autokeyboard_command'ı "
+"çalıştırması."
+
+#: ../gnome-volume-manager.schemas.in.h:58
+msgid ""
+"Whether, when a mouse is connected, gnome-volume-manager should run "
+"'automouse_command'."
+msgstr ""
+"Bir fare bağlandığında, gnome-volume-manager'in 'automouse_command'ı "
+"çalıştırması."
+
+#: ../gnome-volume-manager.schemas.in.h:59
+msgid ""
+"Whether, when a mouse is connected, gnome-volume-manager should run "
+"'autopalmsync_command'."
+msgstr ""
+"Bir Palm bağlandığında, gnome-volume-manager'in 'autopalmsync_command'ı "
+"çalıştırması."
+
+#: ../gnome-volume-manager.schemas.in.h:60
+msgid ""
+"Whether, when a printer is connected, gnome-volume-manager should run "
+"'autoprinter_command'."
+msgstr ""
+"Bir yazıcı bağlandığında, gnome-volume-manager'in 'autoprinter_command'ı "
+"çalıştırması."
+
+#: ../gnome-volume-manager.schemas.in.h:61
+msgid ""
+"Whether, when a scanner is connected, gnome-volume-manager should run "
+"'autoscanner_command'."
+msgstr ""
+"Bir tarayıcıya bağlanıldığında, gnome-volume-manager'in "
+"'autoscanner_command'ı çalıştırması."
+
+#: ../gnome-volume-manager.schemas.in.h:62
+msgid ""
+"Whether, when a video DVD is inserted, gnome-volume-manager should run "
+"'autoplay_dvd_command'."
+msgstr ""
+"Bir video DVD'si kullanıldığında, gnome-volume-manager'ın "
+"'autoplay_dvd_command'ı çalıştırması."
+
+#: ../gnome-volume-manager.schemas.in.h:63
+msgid ""
+"Whether, when a video VCD is inserted, gnome-volume-manager should run "
+"'autoplay_vcd_command'."
+msgstr ""
+"Bir video VCD'si takıldığında, gnome-volume-manager'ın "
+"'autoplay_vcd_command'ı çalıştırması."
+
+#: ../gnome-volume-manager.schemas.in.h:64
+msgid ""
+"Whether, when an audio CD is inserted, gnome-volume-manager should run "
+"'autoplay_cda_command'."
+msgstr ""
+"Bir ses CD'si takıldığında, gnome-volume-manager'ın 'autoplay_cda_command'ı "
+"çalıştırması."
+
+#: ../gnome-volume-manager.schemas.in.h:65
+msgid ""
+"Whether, when an iPod is connected, gnome-volume-manager should run "
+"'autoipod_command'."
+msgstr ""
+"Bir iPod'a bağlanıldığında, gnome-volume-manager'in 'autoipod_command'ı "
+"çalıştırması."
+
+#: ../gnome-volume-manager.schemas.in.h:66
+msgid "iPod sync command"
+msgstr "iPod eş zamanlandırma komutu"
+
+#: ../gnome-volume-manager.schemas.in.h:67
+msgid "keyboard command"
+msgstr "klavye komutu"
+
+#: ../gnome-volume-manager.schemas.in.h:68
+msgid "mouse command"
+msgstr "fare komutu"
+
+#: ../gnome-volume-manager.schemas.in.h:69
+msgid "palm sync command"
+msgstr "Palm eş zamanlandırma komutu"
+
+#: ../gnome-volume-manager.schemas.in.h:70
+msgid "printer command"
+msgstr "yazıcı komutu"
+
+#: ../gnome-volume-manager.schemas.in.h:71
+msgid "scanner command"
+msgstr "yarayıcı komutu"
+
+#: ../gnome-volume-manager.schemas.in.h:72
+msgid "video camera command"
+msgstr "video kamera komutu"
+
+#: ../gnome-volume-properties.desktop.in.h:1
+msgid "Configure management of removable drives and media"
+msgstr "Ayrılabilir sürücülerin ve araçların yönetimini yapılandırın"
+
+#: ../gnome-volume-properties.desktop.in.h:2
+msgid "Removable Drives and Media"
+msgstr "Ayrılabilir Sürücüler ve Araçlar"
+
+#: ../gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: ../gnome-volume-properties.glade.h:2
+msgid "<b>Audio CD Discs</b>"
+msgstr "<b>Ses CD'leri</b>"
+
+#: ../gnome-volume-properties.glade.h:3
+msgid "<b>Blank CD and DVD Discs</b>"
+msgstr "<b>Boş CD ve DVD'ler</b>"
+
+#: ../gnome-volume-properties.glade.h:4
+msgid "<b>Digital Camera</b>"
+msgstr "<b>Dijital Fotoğraf Makinesi</b>"
+
+#: ../gnome-volume-properties.glade.h:5
+msgid "<b>Digital Video Camera</b>"
+msgstr "<b>Dijital Video Kamera</b>"
+
+#: ../gnome-volume-properties.glade.h:6
+msgid "<b>Keyboards</b>"
+msgstr "<b>Klavyeler</b>"
+
+#: ../gnome-volume-properties.glade.h:7
+msgid "<b>Mice</b>"
+msgstr "<b>Fareler</b>"
+
+#: ../gnome-volume-properties.glade.h:8
+msgid "<b>Palm™</b>"
+msgstr "<b>Palm™</b>"
+
+#: ../gnome-volume-properties.glade.h:9
+msgid "<b>Printers</b>"
+msgstr "<b>Yazıcılar</b>"
+
+#: ../gnome-volume-properties.glade.h:10
+msgid "<b>Removable Storage</b>"
+msgstr "<b>Ayrılabilir Depo</b>"
+
+#: ../gnome-volume-properties.glade.h:11
+msgid "<b>Scanners</b>"
+msgstr "<b>Tarayıcılar</b>"
+
+#: ../gnome-volume-properties.glade.h:12
+msgid "<b>Tablets</b>"
+msgstr "<b>Tabletler</b>"
+
+#: ../gnome-volume-properties.glade.h:13
+msgid "<b>Video DVD Discs</b>"
+msgstr "<b>Video DVD'leri</b>"
+
+#: ../gnome-volume-properties.glade.h:14
+msgid "<b>iPod™</b>"
+msgstr "<b>iPod™</b>"
+
+#: ../gnome-volume-properties.glade.h:15
+msgid "Automatically run a program when a USB _keyboard is connected"
+msgstr "Bir USB _klavyesi bağlandığında kendiliğinden bir program çalıştır"
+
+#: ../gnome-volume-properties.glade.h:16
+msgid "Automatically run a program when a USB _mouse is connected"
+msgstr "Bir USB _fare bağlandığında kendiliğinden bir program çalıştır"
+
+#: ../gnome-volume-properties.glade.h:17
+msgid "Automatically run a program when a _printer is connected"
+msgstr "Bir _yazıcı bağlandığında kendiliğinden bir program çalıştır"
+
+#: ../gnome-volume-properties.glade.h:18
+msgid "Automatically run a program when a _scanner is connected"
+msgstr "Bir _tarayıcı bağlandığında kendiliğinden bir program çalıştır"
+
+#: ../gnome-volume-properties.glade.h:19
+msgid "Automatically run a program when a _tablet is connected"
+msgstr "Bir _tablet bağlandığında kendiliğinden bir program çalıştır"
+
+#: ../gnome-volume-properties.glade.h:20
+msgid "Browse _removable media when inserted"
+msgstr "_Ayrılabilir araç kullanıldığında göz at"
+
+#: ../gnome-volume-properties.glade.h:21
+msgid "C_ommand:"
+msgstr "K_omut:"
+
+#: ../gnome-volume-properties.glade.h:22
+msgid "Cameras"
+msgstr "Fotoğraf Makineleri"
+
+#: ../gnome-volume-properties.glade.h:23
+msgid "Comma_nd:"
+msgstr "Kom_ut:"
+
+#: ../gnome-volume-properties.glade.h:24
+msgid "Comman_d:"
+msgstr "Komu_t:"
+
+#: ../gnome-volume-properties.glade.h:25
+msgid "Command for A_udio CDs:"
+msgstr "S_es CD'leri için komut:"
+
+#: ../gnome-volume-properties.glade.h:26
+msgid "Command for _Data CDs: "
+msgstr "_Veri CD'leri için komut: "
+
+#: ../gnome-volume-properties.glade.h:27
+msgid "Command:"
+msgstr "Komut:"
+
+#: ../gnome-volume-properties.glade.h:28
+msgid "Drives and Media Preferences"
+msgstr "Sürücüler ve Araç Tercihleri"
+
+#: ../gnome-volume-properties.glade.h:29
+msgid "Input Devices"
+msgstr "Giriş Aygıtları"
+
+#: ../gnome-volume-properties.glade.h:30
+msgid "Mount removable media when _inserted"
+msgstr "Ayrılabilir araçları _kullanıdıklarında bağla"
+
+#: ../gnome-volume-properties.glade.h:31
+msgid "Multimedia"
+msgstr "Çokluortam"
+
+#: ../gnome-volume-properties.glade.h:32
+msgid "PDAs"
+msgstr "PDA'lar"
+
+#: ../gnome-volume-properties.glade.h:33
+msgid "Play _audio CD discs when inserted"
+msgstr "_Ses CD'leri takıldığında çal"
+
+#: ../gnome-volume-properties.glade.h:34
+msgid "Play _video DVD disks when inserted"
+msgstr "_Video DVD takıldığında oynat"
+
+#: ../gnome-volume-properties.glade.h:35
+msgid "Printers & Scanners"
+msgstr "Yazıcılar ve Tarayıcılar"
+
+#: ../gnome-volume-properties.glade.h:36
+msgid "Removable Drives and Media Preferences"
+msgstr "Ayrılabilir Sürücüler ve Araç Tercihleri"
+
+#: ../gnome-volume-properties.glade.h:37
+msgid "Select program to burn audio CDs"
+msgstr "Ses CD'lerini yazmak için program seç"
+
+#: ../gnome-volume-properties.glade.h:38
+msgid "Select program to burn data CDs"
+msgstr "Veri CD'lerini yazmak için program seç"
+
+#: ../gnome-volume-properties.glade.h:39
+msgid "Select program to edit videos"
+msgstr "Videoları düzenlemek için program seç"
+
+#: ../gnome-volume-properties.glade.h:40
+msgid "Select program to import photos"
+msgstr "Fotoğrafları aktarmak için program seç"
+
+#: ../gnome-volume-properties.glade.h:41
+msgid "Select program to play DVDs"
+msgstr "DVD'leri oynatmak için program seç"
+
+#: ../gnome-volume-properties.glade.h:42
+msgid "Select program to play audio CDs"
+msgstr "Ses CD'lerini çalmak için program seç"
+
+#: ../gnome-volume-properties.glade.h:43
+msgid "Select program to run when a keyboard is plugged in"
+msgstr "Bir klavye takıldığında çalıştırmak için program seç"
+
+#: ../gnome-volume-properties.glade.h:44
+msgid "Select program to run when a mouse is plugged in"
+msgstr "Bir fare takıldığında çalıştırmak için program seç"
+
+#: ../gnome-volume-properties.glade.h:45
+msgid "Select program to run when a printer is plugged in"
+msgstr "Bir yazıcı takıldığında çalıştırmak için program seç"
+
+#: ../gnome-volume-properties.glade.h:46
+msgid "Select program to run when a scanner is plugged in"
+msgstr "Bir tarayıcı takıldığında çalıştırmak için program seç"
+
+#: ../gnome-volume-properties.glade.h:47
+msgid "Select program to run when a tablet is plugged in"
+msgstr "Bir tablet takıldığında çalıştırmak için program seç"
+
+#: ../gnome-volume-properties.glade.h:48
+msgid "Select program to sync Palm devices"
+msgstr "Palm araçlarını eşzamanlayacak uygulamayı seç"
+
+#: ../gnome-volume-properties.glade.h:49
+msgid "Select program to sync iPod"
+msgstr "iPod'u eşzamanlayacak uygulamayı seç"
+
+#: ../gnome-volume-properties.glade.h:50
+msgid "Storage"
+msgstr "Depo"
+
+#: ../gnome-volume-properties.glade.h:51
+msgid "Sync _music files when connected"
+msgstr "Bağlandığında _müzik dosyalarını eşzamanlandır"
+
+#: ../gnome-volume-properties.glade.h:52
+msgid "_Auto-run programs on new drives and media"
+msgstr "_Yeni sürücüler ve araçlarda otomatik çalıştır programları"
+
+#: ../gnome-volume-properties.glade.h:53
+msgid "_Burn a CD or DVD when a blank disc is inserted"
+msgstr "Boş bir CD veya DVD takıldığında _yaz"
+
+#: ../gnome-volume-properties.glade.h:54
+msgid "_Command:"
+msgstr "_Komut:"
+
+#: ../gnome-volume-properties.glade.h:55
+msgid "_Edit video when connected"
+msgstr "_Bağlandığında videoyu düzenle"
+
+#: ../gnome-volume-properties.glade.h:56
+msgid "_Import digital photographs when connected"
+msgstr "Dijital fotoğrafları bağlandığında _aktar"
+
+#: ../gnome-volume-properties.glade.h:57
+msgid "_Mount removable drives when hot-plugged"
+msgstr "Ayrılabilir _sürücüleri çalışma anında takıldığında bağla"
+
+#: ../gnome-volume-properties.glade.h:58
+msgid "_Sync Palm™ devices when connected"
+msgstr "Bağlandığında _Palm™ aygıtlarını eşzamanlandır"
+
+#: ../src/manager.c:142 ../src/manager.c:147 ../src/manager.c:153
+#: ../src/manager.c:158 ../src/manager.c:164 ../src/manager.c:170
+#: ../src/manager.c:176
+msgid "Ig_nore"
+msgstr "_Yok Say"
+
+#: ../src/manager.c:143
+msgid "_Allow Auto-Run"
+msgstr "_Kendiliğinden Çalıştıra İzin Ver"
+
+#: ../src/manager.c:148
+msgid "_Open Folder"
+msgstr "_Klasör Aç"
+
+#: ../src/manager.c:149 ../src/manager.c:154 ../src/manager.c:159
+msgid "Import _Photos"
+msgstr "Fotoğrafları _Aktar"
+
+#: ../src/manager.c:160
+msgid "Manage _Music"
+msgstr "_Müzik Düzenle"
+
+#: ../src/manager.c:165
+msgid "_Browse Files"
+msgstr "Dosyalara _Göz At"
+
+#: ../src/manager.c:166
+msgid "_Play CD"
+msgstr "CD'yi Ç_al"
+
+#: ../src/manager.c:171
+msgid "Make _Audio CD"
+msgstr "_Ses CD'si Yap"
+
+#: ../src/manager.c:172
+msgid "Make _Data CD"
+msgstr "_Veri CD'si Yap"
+
+#: ../src/manager.c:177
+msgid "Make _DVD"
+msgstr "_DVD Yap"
+
+#: ../src/manager.c:229
+msgid "Auto-Run Confirmation"
+msgstr "Kendiliğinden Çalıştırma Onayı"
+
+#: ../src/manager.c:230
+msgid "Auto-run capability detected."
+msgstr "Kendiliğinden çalışma yeteneği tespit edildi."
+
+#: ../src/manager.c:231
+msgid "Would you like to allow <b>'${0}'</b> to run?"
+msgstr "<b>'${0}'</b> çalışmasına izin veriyor musunuz?"
+
+#: ../src/manager.c:236 ../src/manager.c:243
+msgid "Camera Import"
+msgstr "Fotoğraf Makinesi Aktarma"
+
+#: ../src/manager.c:237 ../src/manager.c:244
+msgid "A camera has been detected."
+msgstr "Bir fotoğraf makinesi tespit edildi."
+
+#: ../src/manager.c:238 ../src/manager.c:245
+msgid ""
+"There are photos on the camera. Would you like to add these pictures to your "
+"album?"
+msgstr ""
+"Takılan fotoğraf makinesinde fotoğraflar var. Bu resimlerin albümünüze "
+"aktarılmasını istiyor musunuz?"
+
+#: ../src/manager.c:239 ../src/manager.c:246 ../src/manager.c:253
+#: ../src/manager.c:260 ../src/manager.c:267
+msgid "_Always perform this action"
+msgstr "_Her zaman bu eylemi yap"
+
+#: ../src/manager.c:250
+msgid "Photo Import"
+msgstr "Fotoğraf Aktarma"
+
+#: ../src/manager.c:251
+msgid "A photo card has been detected."
+msgstr "Bir fotoğraf kartı tespit edildi."
+
+#: ../src/manager.c:252
+msgid ""
+"There are photos on the card. Would you like to add these pictures to your "
+"album?"
+msgstr ""
+"Yerleştirilen kartta fotoğraflar var. Bu resimlerin albümünüze aktarılmasını "
+"ister misiniz?"
+
+#: ../src/manager.c:257
+msgid "Photos and Music"
+msgstr "Resimler ve Müzikler"
+
+#: ../src/manager.c:258
+msgid "Photos were found on your music device."
+msgstr "Müzik aygıtında fotoğraflar bulundu."
+
+#: ../src/manager.c:259
+msgid "Would you like to import the photos or manage its music?"
+msgstr "Resimleri aktarmak mı istersiniz yoksa müzikleri düzenlemeyi mi?"
+
+#: ../src/manager.c:264
+msgid "Audio / Data CD"
+msgstr "Ses / Veri CD'si"
+
+#: ../src/manager.c:265
+msgid "The CD in the drive contains both music and files."
+msgstr "Sürücüdeki CD hem müzik hem de dosya içeriyor."
+
+#: ../src/manager.c:266
+msgid "Would you like to listen to music or browse the files?"
+msgstr "Müzik mi dinlemek istersiniz yoksa dosyalara göz atmak mı?"
+
+#: ../src/manager.c:271 ../src/manager.c:278
+msgid "Choose Disc Type"
+msgstr "Disk Türü Seç"
+
+#: ../src/manager.c:272 ../src/manager.c:279
+msgid "You have inserted an empty disc."
+msgstr "Boş bir disk koydunuz."
+
+#: ../src/manager.c:273 ../src/manager.c:280
+msgid "What would you like to do?"
+msgstr "Ne yapmak istersiniz?"
+
+#: ../src/properties.c:257
+msgid "Could not load the main interface"
+msgstr "Ana arayüz yüklenemedi"
+
+#: ../src/properties.c:259
+msgid "Please make sure that the volume manager is properly installed"
+msgstr "Lütfen sistem yöneticisinin doğru yüklendiğinden emin olun"
+
+#: ../src/properties.c:447
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr ""
+"gnome-volume-manager servisi başlatılırken hata:\n"
+"%s"
+
+#: ../src/properties.c:478
+msgid "Volume management not supported"
+msgstr "Sistem yönetimi desteklenmiyor"
+
+#: ../src/properties.c:480
+msgid ""
+"The \"hald\" service is required but not currently running. Enable the "
+"service and rerun this application, or contact your system administrator.\n"
+"\n"
+"Note: You need Linux kernel 2.6 for volume management to work."
+msgstr ""
+"\"hald\" servisi gerekiyor fakat şu an çalışmıyor. Servisi etkinleştirin ve "
+"bu uygulamacığı tekrar çalıştırın ya da sistem yöneticiniz ile bağlantıya \n"
+"geçin.\n"
+"Not: Sistem yöneticisinin çalışması için Linux kernel 2.6'ya ihtiyacınız var."

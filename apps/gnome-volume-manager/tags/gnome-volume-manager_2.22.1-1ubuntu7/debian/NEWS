@@ -1,0 +1,10 @@
+gnome-volume-manager (1.1.2-3) unstable; urgency=low
+
+  As of this version gnome-volume-manager uses pmount for mounting and
+  unmounting devices. To be able to use pmount, the user must be a 
+  member of the plugdev group. If a user isn't part of this group,
+  gnome-volume-manager will be unable to mount devices!
+
+  For more information about pmount and its policy see the pmount manpage.
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Wed, 24 Nov 2004 11:21:31 +0100
