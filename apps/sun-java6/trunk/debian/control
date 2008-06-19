@@ -1,0 +1,186 @@
+Source: sun-java6
+Section: non-free/devel
+Priority: optional
+Maintainer: Matthias Klose <doko@ubuntu.com>
+Uploaders: Juergen Kreileder <jk@blackdown.de>, Barry Hawkins <barry@alltc.com>, Jeroen van Wolffelaar <jeroen@wolffelaar.nl>
+Build-Depends: debhelper (>> 4.1), lsb-release, po-debconf, defoma, unzip, bzip2, patch, libasound2, unixodbc, libx11-6, libxext6, libxi6, libxp6, libxt6, libxtst6, lib32asound2 [amd64], ia32-libs [amd64 ia64]
+Standards-Version: 3.7.2
+XS-Vcs-Svn: https://jdk-distros.dev.java.net/svn/jdk-distros/trunk/linux/ubuntu/sun-java5
+XS-Vcs-Browser: https://jdk-distros.dev.java.net/svn/jdk-distros/trunk/linux/ubuntu/sun-java5
+XS-Autobuild: yes
+
+Package: sun-java6-jre
+Section: non-free/libs
+Architecture: all
+Provides: java-virtual-machine, java-runtime, java2-runtime, java5-runtime, java6-runtime, java-runtime-headless, java2-runtime-headless, java5-runtime-headless, java6-runtime-headless
+Pre-Depends: debconf (>= 0.5) | debconf-2.0
+Depends: java-common (>= 0.24), locales, sun-java6-bin (= ${Source-Version}) | ia32-sun-java6-bin (= ${Source-Version}), ${misc:Depends}
+Recommends: gsfonts-x11
+Suggests: sun-java6-plugin | ia32-sun-java6-plugin, sun-java6-fonts, ttf-baekmuk | ttf-unfonts | ttf-unfonts-core, ttf-kochi-gothic | ttf-sazanami-gothic, ttf-kochi-mincho | ttf-sazanami-mincho, ttf-wqy-zenhei,
+Replaces: sun-java6-bin, ia32-sun-java6-bin
+Conflicts: j2se-common
+Description: Sun Java(TM) Runtime Environment (JRE) 6 (architecture independent files)
+ The Sun Java Platform Standard Edition Runtime Environment (JRE) 6
+ contains the Java virtual machine, runtime class libraries, and 
+ Java application launcher that are necessary to run programs written 
+ in the Java progamming language. It is not a development environment and
+ doesn't contain development tools such as compilers or debuggers.
+ For development tools, see the Java Development Kit JDK(TM) 6
+ (package sun-java6-jdk).
+ .
+ NOTE: You must accept Sun's EULA prior to successfully installing
+ this package
+ .
+ This package contains architecture independent files.
+
+Package: sun-java6-bin
+Section: non-free/libs
+Architecture: amd64 i386 lpia
+Depends: sun-java6-jre (= ${Source-Version}), ${odbc:Depends}, ${shlibs:Depends}, ${misc:Depends}
+Recommends: ${shlibs:Recommends}, ${mdns:Depends}
+Suggests: binfmt-support
+Conflicts: binfmt-support (<< 1.1.2)
+Description: Sun Java(TM) Runtime Environment (JRE) 6 (architecture dependent files)
+ The Sun Java Platform Standard Edition Runtime Environment (JRE) 6
+ contains the Java virtual machine, runtime class libraries, and 
+ Java application launcher that are necessary to run programs written 
+ in the Java progamming language. It is not a development environment and
+ doesn't contain development tools such as compilers or debuggers.
+ For development tools, see the Java Development Kit JDK(TM) 6
+ (package sun-java6-jdk).
+ .
+ This package contains architecture dependent files.
+
+Package: sun-java6-plugin
+Architecture: i386 lpia
+Section: non-free/web
+Priority: optional
+Depends: ${shlibs:Depends}, sun-java6-bin (= ${Source-Version}), xulrunner-1.9
+Xb-Npp-Applications: ec8030f7-c20a-464f-9b0e-13a3a9e97384, 92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a 
+Xb-Npp-Name: The Java(TM) Plug-in, Java SE 6
+Xb-Npp-MimeType: application/x-java-vm, application/x-java-applet, application/x-java-applet;version=1.1, application/x-java-applet;version=1.1.1, application/x-java-applet;version=1.1.2, application/x-java-applet;version=1.1.3, application/x-java-applet;version=1.2, application/x-java-applet;version=1.2.1, application/x-java-applet;version=1.2.2, application/x-java-applet;version=1.3, application/x-java-applet;version=1.3.1, application/x-java-applet;version=1.4, application/x-java-applet;version=1.4.1, application/x-java-applet;version=1.4.2, application/x-java-applet;version=1.5, application/x-java-applet;version=1.6, application/x-java-applet;jpi-version=1.6.0_01, application/x-java-bean, application/x-java-bean;version=1.1, application/x-java-bean;version=1.1.1, application/x-java-bean;version=1.1.2, application/x-java-bean;version=1.1.3, application/x-java-bean;version=1.2, application/x-java-bean;version=1.2.1, application/x-java-bean;version=1.2.2, application/x-java-bean;version=1.3, application/x-java-bean;version=1.3.1, application/x-java-bean;version=1.4, application/x-java-bean;version=1.4.1, application/x-java-bean;version=1.4.2, application/x-java-bean;version=1.5, application/x-java-bean;version=1.6, application/x-java-bean;jpi-version=1.6.0_01 
+Description: The Java(TM) Plug-in, Java SE 6
+ Java Plug-in enables applets written to the Java Platform 6 
+ specification to be run in Mozilla and other web browsers. 
+ Java Plug-in comes with the Java Runtime Environment (JRE).
+ .
+ This is a metapackage containing dependencies for running Java in 
+ various browsers.
+
+Package: ia32-sun-java6-bin
+Section: non-free/libs
+Architecture: amd64 ia64
+Depends: sun-java6-jre (= ${Source-Version}), ia32-libs, ${shlibs:Depends}, ${odbc:Depends}, ${misc:Depends}
+Recommends: ${shlibs:Recommends}, ${mdns:Depends}
+Description: Sun Java(TM) Runtime Environment (JRE) 6 (32-bit)
+ The Sun Java Platform Standard Edition Runtime Environment (JRE) 6
+ contains the Java virtual machine, runtime class libraries, and 
+ Java application launcher that are necessary to run programs written 
+ in the Java progamming language. It is not a development environment and
+ doesn't contain development tools such as compilers or debuggers.
+ For development tools, see the Java Development Kit JDK(TM) 6
+ (package sun-java6-jdk).
+ .
+ This package contains architecture dependent files for ia32.
+
+Package: ia32-sun-java6-plugin
+Architecture: amd64 ia64
+Section: non-free/web
+Priority: optional
+Depends: ${shlibs:Depends}, ia32-sun-java6-bin (= ${Source-Version}), firefox | mozilla-firefox | mozilla-browser | epiphany-browser | galeon | konqueror
+Description: The Java(TM) Plug-in, Java SE 6 (32-bit)
+ Java Plug-in enables applets written to the Java Platform 6 
+ specification to be run in Mozilla and other web browsers. 
+ Java Plug-in comes with the Java Runtime Environment (JRE).
+ .
+ This is a metapackage containing dependencies for running Java in 
+ various browsers.
+
+Package: sun-java6-fonts
+Section: non-free/x11
+Architecture: all
+Depends: sun-java6-jre (>= ${Source-Version}), defoma
+Provides: ttf-lucida
+Conflicts: ttf-lucida
+Description: Lucida TrueType fonts (from the Sun JRE)
+ The Lucida fonts are included in the sun-java6-jre package.
+ This package makes the fonts available to defoma.
+
+Package: sun-java6-jdk
+Architecture: amd64 i386 lpia
+Pre-Depends: debconf (>= 0.5) | debconf-2.0
+Depends: sun-java6-bin (= ${Source-Version}), ${shlibs:Depends}
+Suggests: sun-java6-demo, sun-java6-doc, sun-java6-source
+Provides: java-compiler, java2-compiler, java-sdk, java2-sdk, java5-sdk, java6-sdk
+Description: Sun Java(TM) Development Kit (JDK) 6
+ The JDK(TM) is a development environment for building applications, 
+ applets, and components using the Java programming language.
+ .
+ The JDK includes tools useful for developing and testing programs 
+ written in the Java programming language and running on the Java 
+ Platform.
+ .
+ NOTE: You must accept Sun's EULA prior to successfully installing
+ this package
+
+Package: sun-java6-demo
+Architecture: amd64 i386 lpia
+Depends: sun-java6-jre (= ${Source-Version}), sun-java6-jdk (= ${Source-Version})
+Replaces: sun-java6-jdk
+Enhances: sun-java6-jdk
+Suggests: sun-java6-doc
+Description: Sun Java(TM) Development Kit (JDK) 6 demos and examples
+ The JDK(TM) is a development environment for building applications, 
+ applets, and components using the Java programming language.
+ .
+ This package contains the examples and demonstration files.
+
+Package: sun-java6-source
+Architecture: all
+Depends: sun-java6-jdk (>= ${Source-Version})
+Conflicts: sun-java6-src
+Replaces: sun-java6-src
+Description: Sun Java(TM) Development Kit (JDK) 6 source files
+ The JDK(TM) is a development environment for building applications, 
+ applets, and components using the Java programming language.
+ .
+ This package contains the Java programming language source 
+ files (src.zip) for all classes that make up the Java core API.
+
+Package: sun-java6-doc
+Architecture: all
+Section: non-free/doc
+Depends: unzip
+Enhances: sun-java6-jdk | java-compiler
+Description: Sun JDK(TM) Documention -- integration installer
+ The JDK(TM) is a development environment for building applications, 
+ applets, and components using the Java programming language.
+ .
+ This package does not contain the Java Documentation
+ for the Java(TM) Development Kit (JDK).  The Java Documentation
+ (jdk-6-doc.zip) may be downloaded from
+ http://java.sun.com/javase/downloads/ and, if placed
+ in /tmp (with root.root ownership), this package will 
+ install the Java Documentation with the corresponding JDK.
+ .
+ Note that the Japanese version of the documentation
+ (jdk-6-doc-ja.zip) may alternately be used.
+ .
+ NOTE: you cannot currently use this package to have both English &
+ Japanese documentation installed simultaneously
+
+Package: sun-java6-javadb
+Architecture: all
+Section: non-free/libs
+Depends: sun-java6-jdk (= ${Source-Version})
+Enhances: sun-java6-jdk
+Description: Java(TM) DB, Sun Microsystems' distribution of Apache Derby
+ Java DB is Sun's supported distribution of the open source Apache 
+ Derby 100% Java technology database. It is fully transactional, secure, 
+ easy-to-use, standards-based -- SQL, JDBC API, and Java EE -- yet small, 
+ only 2MB.
+ .
+ This package adds the optional Java DB to your JDK 6 installation.
+ .
+ For more information, check out the Java DB website:
+ http://developers.sun.com/prodtech/javadb/

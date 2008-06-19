@@ -1,0 +1,2 @@
+@basename@-doc: possibly-insecure-handling-of-tmp-files-in-maintainer-script postinst:5
+@basename@-doc: copyright-should-refer-to-common-license-file-for-gpl
