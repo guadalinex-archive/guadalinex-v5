@@ -7,7 +7,7 @@ db_version 2.0
 license=sun-dlj-v1-1
 db_get shared/accepted-$license
 if [ "$RET" != "true" ]; then
-    db_fset shared/accepted-$license seen false
+    db_fset shared/accepted-$license seen true
 fi
 
 exit 0
