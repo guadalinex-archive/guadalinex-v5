@@ -141,7 +141,7 @@ network-manager
 network-manager-gnome
 notification-daemon
 onboard
-openjdk-6-jre
+sun-java6-jre
 openoffice.org-base-core
 openoffice.org-calc
 openoffice.org-common
