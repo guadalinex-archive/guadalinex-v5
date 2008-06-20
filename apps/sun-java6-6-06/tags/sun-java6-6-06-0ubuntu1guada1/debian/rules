@@ -22,7 +22,7 @@ archdir		:= $(strip $(patsubst $(DEB_HOST_ARCH)=%, %, \
 			$(filter $(DEB_HOST_ARCH)=%, $(archdir_map))))
 
 TOP		:= usr/lib/jvm
-dirparts	:= $(shell basename $(CURDIR) | tr '-' ' ')
+dirparts	:= $(shell basename sun-java6-6-06 | tr '-' ' ')
 VENDOR		:= $(word 1, $(dirparts))
 Vendor		:= $(shell perl -e 'print ucfirst("$(VENDOR)");')
 javaname	:= $(shell echo $(word 2, $(dirparts)) | sed 's/[0-9.]*$$//')
@@ -32,8 +32,8 @@ relstring	:= 6
 PRODUCT		:= $(javaname)$(RELEASE)
 srcname		= $(VENDOR)-$(PRODUCT)
 basename	= $(ia32_prefix)$(VENDOR)-$(PRODUCT)
-version		:= 6
-releng_ver	:= 06
+version		:= $(word 3, $(dirparts))
+releng_ver	:= $(word 4, $(dirparts))
 jdkversion	:= 1.6.0
 #unpackdir	:= jdk$(version)_$(releng_ver)
 #unpackdir	:= jdk$(jdkversion)
