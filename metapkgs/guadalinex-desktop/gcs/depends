@@ -11,7 +11,6 @@ amule
 amule-utils
 anacron
 apmd
-apport-gtk
 aspell-es
 audacity
 avahi-daemon
@@ -70,7 +69,6 @@ gconf-editor
 gdebi
 gdm
 gedit
-gedit-plugin-tloleo
 genisoimage
 gnochm
 gnome-about
@@ -107,6 +105,7 @@ gstreamer0.10-pulseaudio
 gthumb
 gtk2-engines
 guadafox
+guadalinex-eadmin
 gucharmap
 gwget
 hal
