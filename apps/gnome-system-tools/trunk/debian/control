@@ -1,0 +1,61 @@
+Source: gnome-system-tools
+Section: gnome
+Priority: optional
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+XSBC-Original-Maintainer: Jose Carlos Garcia Sogo <jsogo@debian.org>
+Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>,
+           Niv Sardi <xaiki@debian.org>
+Build-Depends: cdbs (>= 0.4.41),
+               autotools-dev,
+               dpatch,
+               patchutils,
+               debhelper (>= 5),
+               zlib1g-dev,
+               libpopt-dev,
+               gettext,
+               python,
+               libxml2-dev,
+               libgconf2-dev (>= 2.10.0-1),
+               libxml-parser-perl,
+               gnome-pkg-tools,
+               scrollkeeper (>= 0.3.14-9.1),
+               libnautilus-extension-dev (>= 2.10.0-1),
+               gnome-doc-utils (>= 0.3.2),
+               libgtk2.0-dev (>= 2.9.0),
+               pkg-config,
+               liboobs-1-dev (>= 2.21.3),
+               libiw-dev,
+               libpolkit-dbus-dev (>= 0.5),
+               libglib2.0-dev (>= 2.15.2)
+Standards-Version: 3.7.2
+
+Package: gnome-system-tools
+Architecture: any
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+         perl
+Recommends: policykit-gnome
+Conflicts: system-tools-backends (<< 2.2)
+Suggests: ntp,
+          samba-common,
+          wvdial
+Provides: ximian-setup-tools
+Replaces: ximian-setup-tools
+Description: Cross-platform configuration utilities for GNOME
+ The GNOME System Tools are a fully integrated set of tools aimed to make easy
+ the job that means the computer administration on an UNIX or Linux system.
+ They're thought to help from the new Linux or UNIX user to the system
+ administrators.
+ .
+ Its main advantages are:
+  * Full integration with the new GNOME Control Center.
+  * An user-friendly interface to carry out the main administration tasks.
+  * The use of a common user interface in every system.
+  * A common structure that makes easy the development of new system tools. 
+ Nowadays there are tools for managing: 
+  - Date and time
+  - Network configuration
+  - Services
+  - Shares
+  - Users and groups
+

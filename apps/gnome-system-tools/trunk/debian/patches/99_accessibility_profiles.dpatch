@@ -1,0 +1,2049 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 99_accessibility_profiles.dpatch by Álvaro Peña <apg@openshine.com>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: Accessibility Profiles
+
+@DPATCH@
+
+diff -Nrc gnome-system-tools-2.22.0-origdeb/interfaces/users.ui gnome-system-tools-2.22.0/interfaces/users.ui
+*** gnome-system-tools-2.22.0-origdeb/interfaces/users.ui	2008-03-09 17:07:02.000000000 +0100
+--- gnome-system-tools-2.22.0/interfaces/users.ui	2008-06-23 11:11:31.000000000 +0200
+***************
+*** 2214,2219 ****
+--- 2214,2348 ----
+                  <property name="angle">0</property>
+                </object>
+              </child>
++             <child>
++               <object class="GtkVBox" id="vbox488">
++                 <property name="border_width">12</property>
++                 <property name="visible">True</property>
++                 <property name="homogeneous">False</property>
++                 <property name="spacing">18</property>
++                 <child>
++                   <object class="GtkTable" id="table61">
++                     <property name="visible">True</property>
++                     <property name="n_rows">2</property>
++                     <property name="n_columns">2</property>
++                     <property name="homogeneous">False</property>
++                     <property name="row_spacing">6</property>
++                     <property name="column_spacing">12</property>
++                     <child>
++                       <object class="GtkLabel" id="label319">
++                         <property name="visible">True</property>
++                         <property name="label" translatable="yes">&lt;span weight="bold"&gt;Accessibility profiles&lt;/span&gt;</property>
++                         <property name="use_underline">False</property>
++                         <property name="use_markup">True</property>
++                         <property name="justify">GTK_JUSTIFY_LEFT</property>
++                         <property name="wrap">False</property>
++                         <property name="selectable">False</property>
++                         <property name="xalign">0</property>
++                         <property name="yalign">0.5</property>
++                         <property name="xpad">0</property>
++                         <property name="ypad">0</property>
++                         <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
++                         <property name="width_chars">-1</property>
++                         <property name="single_line_mode">False</property>
++                         <property name="angle">0</property>
++                       </object>
++                       <packing>
++                         <property name="left_attach">0</property>
++                         <property name="right_attach">2</property>
++                         <property name="top_attach">0</property>
++                         <property name="bottom_attach">1</property>
++                         <property name="x_options">fill</property>
++                         <property name="y_options"/>
++                       </packing>
++                     </child>
++                     <child>
++                       <object class="GtkLabel" id="label323">
++                         <property name="visible">True</property>
++                         <property name="label" translatable="yes"/>
++                         <property name="use_underline">False</property>
++                         <property name="use_markup">False</property>
++                         <property name="justify">GTK_JUSTIFY_LEFT</property>
++                         <property name="wrap">False</property>
++                         <property name="selectable">False</property>
++                         <property name="xalign">0</property>
++                         <property name="yalign">0.5</property>
++                         <property name="xpad">0</property>
++                         <property name="ypad">0</property>
++                         <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
++                         <property name="width_chars">-1</property>
++                         <property name="single_line_mode">False</property>
++                         <property name="angle">0</property>
++                       </object>
++                       <packing>
++                         <property name="left_attach">0</property>
++                         <property name="right_attach">1</property>
++                         <property name="top_attach">1</property>
++                         <property name="bottom_attach">2</property>
++                         <property name="x_options">fill</property>
++                         <property name="y_options"/>
++                       </packing>
++                     </child>
++                     <child>
++                       <object class="GtkScrolledWindow" id="scrolledwindow7">
++                         <property name="visible">True</property>
++                         <property name="can_focus">True</property>
++                         <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
++                         <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
++                         <property name="shadow_type">GTK_SHADOW_IN</property>
++                         <property name="window_placement">GTK_CORNER_TOP_LEFT</property>
++                         <child>
++                           <object class="GtkTreeView" id="user_accessibility">
++                             <property name="visible">True</property>
++                             <property name="can_focus">True</property>
++                             <property name="headers_visible">False</property>
++                             <property name="rules_hint">False</property>
++                             <property name="reorderable">False</property>
++                             <property name="enable_search">True</property>
++                             <property name="fixed_height_mode">False</property>
++                             <property name="hover_selection">False</property>
++                             <property name="hover_expand">False</property>
++                           </object>
++                         </child>
++                       </object>
++                       <packing>
++                         <property name="left_attach">1</property>
++                         <property name="right_attach">2</property>
++                         <property name="top_attach">1</property>
++                         <property name="bottom_attach">2</property>
++                       </packing>
++                     </child>
++                   </object>
++                   <packing>
++                     <property name="padding">0</property>
++                     <property name="expand">True</property>
++                     <property name="fill">True</property>
++                   </packing>
++                 </child>
++               </object>
++               <packing>
++                 <property name="tab_expand">False</property>
++                 <property name="tab_fill">True</property>
++               </packing>
++             </child>
++             <child type="tab">
++               <object class="GtkLabel" id="label318">
++                 <property name="visible">True</property>
++                 <property name="label" translatable="yes">Accessibility</property>
++                 <property name="use_underline">False</property>
++                 <property name="use_markup">False</property>
++                 <property name="justify">GTK_JUSTIFY_LEFT</property>
++                 <property name="wrap">False</property>
++                 <property name="selectable">False</property>
++                 <property name="xalign">0.5</property>
++                 <property name="yalign">0.5</property>
++                 <property name="xpad">0</property>
++                 <property name="ypad">0</property>
++                 <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
++                 <property name="width_chars">-1</property>
++                 <property name="single_line_mode">False</property>
++                 <property name="angle">0</property>
++               </object>
++             </child>
+            </object>
+            <packing>
+              <property name="padding">0</property>
+diff -Nrc gnome-system-tools-2.22.0-origdeb/po/es.po gnome-system-tools-2.22.0/po/es.po
+*** gnome-system-tools-2.22.0-origdeb/po/es.po	2008-03-09 17:07:02.000000000 +0100
+--- gnome-system-tools-2.22.0/po/es.po	2008-06-23 11:11:38.000000000 +0200
+***************
+*** 15,29 ****
+  msgstr ""
+  "Project-Id-Version: gnome-system-tools.HEAD\n"
+  "Report-Msgid-Bugs-To: \n"
+! "POT-Creation-Date: 2008-02-16 16:01+0000\n"
+! "PO-Revision-Date: 2008-03-03 23:01+0100\n"
+  "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
+! "Language-Team: Español <gnome-es-list@gnome.org>\n"
+  "MIME-Version: 1.0\n"
+  "Content-Type: text/plain; charset=UTF-8\n"
+  "Content-Transfer-Encoding: 8bit\n"
+! "X-Generator: KBabel 1.11.4\n"
+! "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+  
+  #: ../gnome-system-tools.schemas.in.h:1
+  msgid "Whether the users-admin tool should show all users and groups or not"
+--- 15,28 ----
+  msgstr ""
+  "Project-Id-Version: gnome-system-tools.HEAD\n"
+  "Report-Msgid-Bugs-To: \n"
+! "POT-Creation-Date: 2008-06-23 10:32+0200\n"
+! "PO-Revision-Date: 2008-06-23 10:34+0200\n"
+  "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
+! "Language-Team: Spanish <gnome-es-list@gnome.org>\n"
+  "MIME-Version: 1.0\n"
+  "Content-Type: text/plain; charset=UTF-8\n"
+  "Content-Transfer-Encoding: 8bit\n"
+! "Plural-Forms:  nplurals=2; plural=(n != 1);"
+  
+  #: ../gnome-system-tools.schemas.in.h:1
+  msgid "Whether the users-admin tool should show all users and groups or not"
+***************
+*** 32,38 ****
+  "los usuarios y grupos o no"
+  
+  #: ../interfaces/common.ui.h:1
+! msgid "<span weight=\"bold\" size=\"larger\">Please enter your root password</span>"
+  msgstr ""
+  "<span weight=\"bold\" size=\"larger\">Introduzca su contraseña de "
+  "superusuario</span>"
+--- 31,38 ----
+  "los usuarios y grupos o no"
+  
+  #: ../interfaces/common.ui.h:1
+! msgid ""
+! "<span weight=\"bold\" size=\"larger\">Please enter your root password</span>"
+  msgstr ""
+  "<span weight=\"bold\" size=\"larger\">Introduzca su contraseña de "
+  "superusuario</span>"
+***************
+*** 96,249 ****
+  msgstr "Alias:"
+  
+  #: ../interfaces/network.ui.h:11
+  msgid "Con_figuration:"
+  msgstr "Con_figuración:"
+  
+! #: ../interfaces/network.ui.h:12
+  msgid "Connection type:"
+  msgstr "Tipo de conexión:"
+  
+! #: ../interfaces/network.ui.h:13
+  msgid "Connections"
+  msgstr "Conexiones"
+  
+! #: ../interfaces/network.ui.h:14
+  msgid "DNS"
+  msgstr "DNS"
+  
+! #: ../interfaces/network.ui.h:15
+  msgid "D_omain name:"
+  msgstr "Nombre del d_ominio:"
+  
+! #: ../interfaces/network.ui.h:16
+  msgid "Delete current location"
+  msgstr "Borrar la ubicación actual"
+  
+! #: ../interfaces/network.ui.h:17
+  msgid "E_nable roaming mode"
+  msgstr "Ac_tivar el modo itinerante"
+  
+! #: ../interfaces/network.ui.h:18
+  msgid "E_nable this connection"
+  msgstr "Ac_tivar esta conexión"
+  
+! #: ../interfaces/network.ui.h:19
+  msgid "Ethernet interface:"
+  msgstr "Interfaz ethernet:"
+  
+! #: ../interfaces/network.ui.h:20 ../interfaces/users.ui.h:19
+  msgid "General"
+  msgstr "General"
+  
+! #: ../interfaces/network.ui.h:21
+  msgid "Host Alias Properties"
+  msgstr "Propiedades de alias de equipos remotos"
+  
+! #: ../interfaces/network.ui.h:22
+  msgid "Hosts"
+  msgstr "Equipos"
+  
+! #: ../interfaces/network.ui.h:23 ../interfaces/shares.ui.h:14
+  msgid "IP address:"
+  msgstr "Dirección IP:"
+  
+! #: ../interfaces/network.ui.h:24
+  msgid "Interface properties"
+  msgstr "Propiedades del interfaz"
+  
+! #: ../interfaces/network.ui.h:25
+  msgid "Location:"
+  msgstr "Ubicación:"
+  
+! #: ../interfaces/network.ui.h:26
+  msgid "Modem"
+  msgstr "Módem"
+  
+! #: ../interfaces/network.ui.h:27
+  msgid "Network _password:"
+  msgstr "Contrase_ña de red:"
+  
+! #: ../interfaces/network.ui.h:28
+  msgid "Network name (_ESSID):"
+  msgstr "Nombre de la red (_ESSID):"
+  
+! #: ../interfaces/network.ui.h:29
+  msgid "Options"
+  msgstr "Opciones"
+  
+! #: ../interfaces/network.ui.h:30
+  msgid "P_assword"
+  msgstr "C_ontraseña"
+  
+! #: ../interfaces/network.ui.h:31
+  msgid "Password _type:"
+  msgstr "_Tipo de contraseña:"
+  
+! #: ../interfaces/network.ui.h:32
+  msgid "Save current network configuration as a location"
+  msgstr "Guardar la configuración de red actual como una ubicación"
+  
+! #: ../interfaces/network.ui.h:33
+  msgid "Use the Internet service provider nameservers"
+  msgstr "Usar los servidores de nombres del proveedor de servicios de Internet"
+  
+! #: ../interfaces/network.ui.h:34
+  msgid "_Autodetect"
+  msgstr "_Autodetectar"
+  
+! #: ../interfaces/network.ui.h:35
+  msgid "_Dial prefix:"
+  msgstr "Prefijo de _marcación:"
+  
+! #: ../interfaces/network.ui.h:36
+  msgid "_Dial type:"
+  msgstr "Tipo de _marcación:"
+  
+! #: ../interfaces/network.ui.h:37
+  msgid "_Gateway address:"
+  msgstr "Dirección de la p_uerta de enlace:"
+  
+! #: ../interfaces/network.ui.h:38
+  msgid "_Host name:"
+  msgstr "Nombre del _servidor:"
+  
+! #: ../interfaces/network.ui.h:39
+  msgid "_IP address:"
+  msgstr "Dirección _IP:"
+  
+! #: ../interfaces/network.ui.h:40
+  msgid "_Local IP:"
+  msgstr "IP _local:"
+  
+! #: ../interfaces/network.ui.h:41
+  msgid "_Modem port:"
+  msgstr "Puerto del _módem:"
+  
+! #: ../interfaces/network.ui.h:42
+  msgid "_Phone number:"
+  msgstr "Número de telé_fono:"
+  
+! #: ../interfaces/network.ui.h:43
+  msgid "_Remote IP:"
+  msgstr "IP _remota:"
+  
+! #: ../interfaces/network.ui.h:44
+  msgid "_Retry if the connection breaks or fails to start"
+  msgstr "_Reintentar si se corta la conexión o falla al iniciar"
+  
+! #: ../interfaces/network.ui.h:45
+  msgid "_Set modem as default route to internet"
+  msgstr "_Establecer el módem como ruta predeterminada a Internet"
+  
+! #: ../interfaces/network.ui.h:46
+  msgid "_Subnet mask:"
+  msgstr "Máscara de _subred:"
+  
+! #: ../interfaces/network.ui.h:47 ../interfaces/users.ui.h:55
+  msgid "_Username:"
+  msgstr "_Usuario:"
+  
+! #: ../interfaces/network.ui.h:48
+  msgid "_Volume:"
+  msgstr "_Volumen:"
+  
+--- 96,253 ----
+  msgstr "Alias:"
+  
+  #: ../interfaces/network.ui.h:11
++ msgid "Apply location as the current configuration"
++ msgstr ""
++ 
++ #: ../interfaces/network.ui.h:12
+  msgid "Con_figuration:"
+  msgstr "Con_figuración:"
+  
+! #: ../interfaces/network.ui.h:13
+  msgid "Connection type:"
+  msgstr "Tipo de conexión:"
+  
+! #: ../interfaces/network.ui.h:14
+  msgid "Connections"
+  msgstr "Conexiones"
+  
+! #: ../interfaces/network.ui.h:15
+  msgid "DNS"
+  msgstr "DNS"
+  
+! #: ../interfaces/network.ui.h:16
+  msgid "D_omain name:"
+  msgstr "Nombre del d_ominio:"
+  
+! #: ../interfaces/network.ui.h:17
+  msgid "Delete current location"
+  msgstr "Borrar la ubicación actual"
+  
+! #: ../interfaces/network.ui.h:18
+  msgid "E_nable roaming mode"
+  msgstr "Ac_tivar el modo itinerante"
+  
+! #: ../interfaces/network.ui.h:19
+  msgid "E_nable this connection"
+  msgstr "Ac_tivar esta conexión"
+  
+! #: ../interfaces/network.ui.h:20
+  msgid "Ethernet interface:"
+  msgstr "Interfaz ethernet:"
+  
+! #: ../interfaces/network.ui.h:21 ../interfaces/users.ui.h:21
+  msgid "General"
+  msgstr "General"
+  
+! #: ../interfaces/network.ui.h:22
+  msgid "Host Alias Properties"
+  msgstr "Propiedades de alias de equipos remotos"
+  
+! #: ../interfaces/network.ui.h:23
+  msgid "Hosts"
+  msgstr "Equipos"
+  
+! #: ../interfaces/network.ui.h:24 ../interfaces/shares.ui.h:14
+  msgid "IP address:"
+  msgstr "Dirección IP:"
+  
+! #: ../interfaces/network.ui.h:25
+  msgid "Interface properties"
+  msgstr "Propiedades del interfaz"
+  
+! #: ../interfaces/network.ui.h:26
+  msgid "Location:"
+  msgstr "Ubicación:"
+  
+! #: ../interfaces/network.ui.h:27
+  msgid "Modem"
+  msgstr "Módem"
+  
+! #: ../interfaces/network.ui.h:28
+  msgid "Network _password:"
+  msgstr "Contrase_ña de red:"
+  
+! #: ../interfaces/network.ui.h:29
+  msgid "Network name (_ESSID):"
+  msgstr "Nombre de la red (_ESSID):"
+  
+! #: ../interfaces/network.ui.h:30
+  msgid "Options"
+  msgstr "Opciones"
+  
+! #: ../interfaces/network.ui.h:31
+  msgid "P_assword"
+  msgstr "C_ontraseña"
+  
+! #: ../interfaces/network.ui.h:32
+  msgid "Password _type:"
+  msgstr "_Tipo de contraseña:"
+  
+! #: ../interfaces/network.ui.h:33
+  msgid "Save current network configuration as a location"
+  msgstr "Guardar la configuración de red actual como una ubicación"
+  
+! #: ../interfaces/network.ui.h:34
+  msgid "Use the Internet service provider nameservers"
+  msgstr "Usar los servidores de nombres del proveedor de servicios de Internet"
+  
+! #: ../interfaces/network.ui.h:35
+  msgid "_Autodetect"
+  msgstr "_Autodetectar"
+  
+! #: ../interfaces/network.ui.h:36
+  msgid "_Dial prefix:"
+  msgstr "Prefijo de _marcación:"
+  
+! #: ../interfaces/network.ui.h:37
+  msgid "_Dial type:"
+  msgstr "Tipo de _marcación:"
+  
+! #: ../interfaces/network.ui.h:38
+  msgid "_Gateway address:"
+  msgstr "Dirección de la p_uerta de enlace:"
+  
+! #: ../interfaces/network.ui.h:39
+  msgid "_Host name:"
+  msgstr "Nombre del _servidor:"
+  
+! #: ../interfaces/network.ui.h:40
+  msgid "_IP address:"
+  msgstr "Dirección _IP:"
+  
+! #: ../interfaces/network.ui.h:41
+  msgid "_Local IP:"
+  msgstr "IP _local:"
+  
+! #: ../interfaces/network.ui.h:42
+  msgid "_Modem port:"
+  msgstr "Puerto del _módem:"
+  
+! #: ../interfaces/network.ui.h:43
+  msgid "_Phone number:"
+  msgstr "Número de telé_fono:"
+  
+! #: ../interfaces/network.ui.h:44
+  msgid "_Remote IP:"
+  msgstr "IP _remota:"
+  
+! #: ../interfaces/network.ui.h:45
+  msgid "_Retry if the connection breaks or fails to start"
+  msgstr "_Reintentar si se corta la conexión o falla al iniciar"
+  
+! #: ../interfaces/network.ui.h:46
+  msgid "_Set modem as default route to internet"
+  msgstr "_Establecer el módem como ruta predeterminada a Internet"
+  
+! #: ../interfaces/network.ui.h:47
+  msgid "_Subnet mask:"
+  msgstr "Máscara de _subred:"
+  
+! #: ../interfaces/network.ui.h:48 ../interfaces/users.ui.h:57
+  msgid "_Username:"
+  msgstr "_Usuario:"
+  
+! #: ../interfaces/network.ui.h:49
+  msgid "_Volume:"
+  msgstr "_Volumen:"
+  
+***************
+*** 326,356 ****
+  msgstr "Sólo lectura"
+  
+  #: ../interfaces/shares.ui.h:19
+  msgid "Share through:"
+  msgstr "Compartir a través de:"
+  
+! #: ../interfaces/shares.ui.h:20 ../src/shares/shares.desktop.in.in.h:2
+! #: ../src/shares/shares-tool.c:239
+  msgid "Shared Folders"
+  msgstr "Carpetas compartidas"
+  
+! #: ../interfaces/shares.ui.h:21
+  msgid "This computer is a _WINS server"
+  msgstr "Este equipo es un servidor _WINS"
+  
+! #: ../interfaces/shares.ui.h:22
+  msgid "Users"
+  msgstr "Usuarios"
+  
+! #: ../interfaces/shares.ui.h:23
+  msgid "WINS _server:"
+  msgstr "_Servidor WINS:"
+  
+! #: ../interfaces/shares.ui.h:24
+  msgid "_Path:"
+  msgstr "R_uta:"
+  
+! #: ../interfaces/shares.ui.h:25
+  msgid "_Read only"
+  msgstr "Sólo _lectura"
+  
+--- 330,364 ----
+  msgstr "Sólo lectura"
+  
+  #: ../interfaces/shares.ui.h:19
++ msgid "Share"
++ msgstr "Compartir"
++ 
++ #: ../interfaces/shares.ui.h:20
+  msgid "Share through:"
+  msgstr "Compartir a través de:"
+  
+! #: ../interfaces/shares.ui.h:21 ../src/shares/shares.desktop.in.in.h:2
+! #: ../src/shares/shares-tool.c:292
+  msgid "Shared Folders"
+  msgstr "Carpetas compartidas"
+  
+! #: ../interfaces/shares.ui.h:22
+  msgid "This computer is a _WINS server"
+  msgstr "Este equipo es un servidor _WINS"
+  
+! #: ../interfaces/shares.ui.h:23
+  msgid "Users"
+  msgstr "Usuarios"
+  
+! #: ../interfaces/shares.ui.h:24
+  msgid "WINS _server:"
+  msgstr "_Servidor WINS:"
+  
+! #: ../interfaces/shares.ui.h:25
+  msgid "_Path:"
+  msgstr "R_uta:"
+  
+! #: ../interfaces/shares.ui.h:26
+  msgid "_Read only"
+  msgstr "Sólo _lectura"
+  
+***************
+*** 411,629 ****
+  msgstr "_Hora:"
+  
+  #: ../interfaces/users.ui.h:1
+  msgid "<span weight=\"bold\">Advanced Settings</span>"
+  msgstr "<span weight=\"bold\">Configuración avanzada</span>"
+  
+! #: ../interfaces/users.ui.h:2
+  msgid "<span weight=\"bold\">Automatic UID/GID</span>"
+  msgstr "<span weight=\"bold\">UID/GID automático</span>"
+  
+! #: ../interfaces/users.ui.h:3
+  msgid "<span weight=\"bold\">Basic Settings</span>"
+  msgstr "<span weight=\"bold\">Configuración básica</span>"
+  
+! #: ../interfaces/users.ui.h:4
+  msgid "<span weight=\"bold\">Contact Information</span>"
+  msgstr "<span weight=\"bold\">Información de contacto</span>"
+  
+! #: ../interfaces/users.ui.h:5
+  msgid "<span weight=\"bold\">Group Members</span>"
+  msgstr "<span weight=\"bold\">Miembros del grupo</span>"
+  
+! #: ../interfaces/users.ui.h:6
+  msgid "<span weight=\"bold\">Optional Settings</span>"
+  msgstr "<span weight=\"bold\">Ajustes opcionales</span>"
+  
+! #: ../interfaces/users.ui.h:7
+  msgid "<span weight=\"bold\">Password Settings</span>"
+  msgstr "<span weight=\"bold\">Configuración de contraseñas</span>"
+  
+! #: ../interfaces/users.ui.h:8
+  msgid "<span weight=\"bold\">Password</span>"
+  msgstr "<span weight=\"bold\">Contraseña</span>"
+  
+! #: ../interfaces/users.ui.h:9
+  msgid "<span weight=\"bold\">Profile Settings</span>"
+  msgstr "<span weight=\"bold\">Configuración de perfiles</span>"
+  
+! #: ../interfaces/users.ui.h:10
+  msgid "<span weight=\"bold\">System Defaults</span>"
+  msgstr "<span weight=\"bold\">Configuración predeterminada del sistema</span>"
+  
+! #: ../interfaces/users.ui.h:11
+  msgid "Account"
+  msgstr "Cuenta"
+  
+! #: ../interfaces/users.ui.h:12
+  msgid "Advanced"
+  msgstr "Avanzado"
+  
+! #: ../interfaces/users.ui.h:13
+  msgid "Assign a random password by default"
+  msgstr "Asignar una contraseña aleatora de forma predeterminada"
+  
+! #: ../interfaces/users.ui.h:14
+  msgid "Check password _quality"
+  msgstr "Comprobar la cali_dad de la contraseña"
+  
+! #: ../interfaces/users.ui.h:15
+  msgid "Con_firmation:"
+  msgstr "Con_firmación:"
+  
+! #: ../interfaces/users.ui.h:16
+  msgid "Days between warning and password expiration:"
+  msgstr "Número de días entre el aviso y la expiración de la contraseña:"
+  
+! #: ../interfaces/users.ui.h:17
+  msgid "Default _group:"
+  msgstr "_Grupo predeterminado:"
+  
+! #: ../interfaces/users.ui.h:18
+  msgid "Default _shell:"
+  msgstr "_Shell predeterminada:"
+  
+! #: ../interfaces/users.ui.h:20
+  msgid "Generate _random password"
+  msgstr "Generar contraseña _aleatoria"
+  
+! #: ../interfaces/users.ui.h:21
+  msgid "Group _ID:"
+  msgstr "_ID del grupo:"
+  
+! #: ../interfaces/users.ui.h:22
+  msgid "Group _name:"
+  msgstr "_Nombre del grupo:"
+  
+! #: ../interfaces/users.ui.h:23
+  msgid "Group properties"
+  msgstr "Propiedades del grupo"
+  
+! #: ../interfaces/users.ui.h:24
+  msgid "Groups settings"
+  msgstr "Ajustes del grupo"
+  
+! #: ../interfaces/users.ui.h:25
+  msgid "Ma_ximum days a password may be used:"
+  msgstr "Má_ximo número de días que se puede usar una contraseña:"
+  
+! #: ../interfaces/users.ui.h:26
+  msgid "Maximum UID:"
+  msgstr "UID máximo:"
+  
+! #: ../interfaces/users.ui.h:27
+  msgid "Mi_nimum days between password changes:"
+  msgstr "Mí_nimo número de días entre cambio de contraseñas:"
+  
+! #: ../interfaces/users.ui.h:28
+  msgid "Minimum GID:"
+  msgstr "GID mínimo:"
+  
+! #: ../interfaces/users.ui.h:29
+  msgid "Minimum UID:"
+  msgstr "UID mínimo:"
+  
+! #: ../interfaces/users.ui.h:30
+  msgid "Minimum days allowed between password changes:"
+  msgstr "Mínimo número de días permitidos entre cambios de contraseñas:"
+  
+! #: ../interfaces/users.ui.h:31
+  msgid "Number of days that a password may be used:"
+  msgstr "Número de días que se puede usar una contraseña:"
+  
+! #: ../interfaces/users.ui.h:32
+  msgid "O_ffice location:"
+  msgstr "Ubicación en la o_ficina:"
+  
+! #: ../interfaces/users.ui.h:33
+  msgid "Password set to: "
+  msgstr "Contraseña establecida a: "
+  
+! #: ../interfaces/users.ui.h:34
+  msgid "Privileges"
+  msgstr "Privilegios"
+  
+! #: ../interfaces/users.ui.h:35
+  msgid "Profile _name:"
+  msgstr "_Nombre del perfil:"
+  
+! #: ../interfaces/users.ui.h:36
+  msgid "Set password b_y hand"
+  msgstr "Establecer la contraseña _a mano"
+  
+! #: ../interfaces/users.ui.h:37
+  msgid "User ID:"
+  msgstr "ID del usuario:"
+  
+! #: ../interfaces/users.ui.h:38
+  msgid "User Privileges"
+  msgstr "Privilegios del usuario"
+  
+! #: ../interfaces/users.ui.h:39
+  msgid "User _password:"
+  msgstr "Con_traseña del usuario:"
+  
+! #: ../interfaces/users.ui.h:40
+  msgid "User profiles"
+  msgstr "Perfiles del usuario"
+  
+! #: ../interfaces/users.ui.h:41
+  msgid "_Add Group"
+  msgstr "_Añadir grupo"
+  
+! #: ../interfaces/users.ui.h:42
+  msgid "_Add Profile"
+  msgstr "_Añadir perfil"
+  
+! #: ../interfaces/users.ui.h:43
+  msgid "_Add User"
+  msgstr "_Añadir usuario"
+  
+! #: ../interfaces/users.ui.h:44
+  msgid "_Comments"
+  msgstr "_Comentarios"
+  
+! #: ../interfaces/users.ui.h:45
+  msgid "_Days between warning and password expiration:"
+  msgstr "_Días entre la advertencia y la expiración de la contraseña:"
+  
+! #: ../interfaces/users.ui.h:46 ../src/network/address-list.c:77
+! #: ../src/network/hosts.c:33 ../src/shares/table.c:40 ../src/users/table.c:40
+  msgid "_Delete"
+  msgstr "_Borrar"
+  
+! #: ../interfaces/users.ui.h:47
+  msgid "_Generate"
+  msgstr "_Generar"
+  
+! #: ../interfaces/users.ui.h:48
+  msgid "_Home directory:"
+  msgstr "Directorio per_sonal:"
+  
+! #: ../interfaces/users.ui.h:49
+  msgid "_Home phone:"
+  msgstr "Teléfono del _domicilio:"
+  
+! #: ../interfaces/users.ui.h:50
+  msgid "_Main group:"
+  msgstr "Grupo pri_ncipal:"
+  
+! #: ../interfaces/users.ui.h:51
+  msgid "_Manage Groups"
+  msgstr "Gestionar g_rupos"
+  
+! #: ../interfaces/users.ui.h:52
+  msgid "_Profile:"
+  msgstr "_Perfil:"
+  
+! #: ../interfaces/users.ui.h:53
+  msgid "_Real name:"
+  msgstr "Nombre _real:"
+  
+! #: ../interfaces/users.ui.h:54
+  msgid "_Shell:"
+  msgstr "_Shell:"
+  
+! #: ../interfaces/users.ui.h:56
+  msgid "_Work phone:"
+  msgstr "Teléfono del _trabajo:"
+  
+--- 419,645 ----
+  msgstr "_Hora:"
+  
+  #: ../interfaces/users.ui.h:1
++ msgid "<span weight=\"bold\">Accessibility profiles</span>"
++ msgstr "<span weight=\"bold\">Configuración de perfiles</span>"
++ 
++ #: ../interfaces/users.ui.h:2
+  msgid "<span weight=\"bold\">Advanced Settings</span>"
+  msgstr "<span weight=\"bold\">Configuración avanzada</span>"
+  
+! #: ../interfaces/users.ui.h:3
+  msgid "<span weight=\"bold\">Automatic UID/GID</span>"
+  msgstr "<span weight=\"bold\">UID/GID automático</span>"
+  
+! #: ../interfaces/users.ui.h:4
+  msgid "<span weight=\"bold\">Basic Settings</span>"
+  msgstr "<span weight=\"bold\">Configuración básica</span>"
+  
+! #: ../interfaces/users.ui.h:5
+  msgid "<span weight=\"bold\">Contact Information</span>"
+  msgstr "<span weight=\"bold\">Información de contacto</span>"
+  
+! #: ../interfaces/users.ui.h:6
+  msgid "<span weight=\"bold\">Group Members</span>"
+  msgstr "<span weight=\"bold\">Miembros del grupo</span>"
+  
+! #: ../interfaces/users.ui.h:7
+  msgid "<span weight=\"bold\">Optional Settings</span>"
+  msgstr "<span weight=\"bold\">Ajustes opcionales</span>"
+  
+! #: ../interfaces/users.ui.h:8
+  msgid "<span weight=\"bold\">Password Settings</span>"
+  msgstr "<span weight=\"bold\">Configuración de contraseñas</span>"
+  
+! #: ../interfaces/users.ui.h:9
+  msgid "<span weight=\"bold\">Password</span>"
+  msgstr "<span weight=\"bold\">Contraseña</span>"
+  
+! #: ../interfaces/users.ui.h:10
+  msgid "<span weight=\"bold\">Profile Settings</span>"
+  msgstr "<span weight=\"bold\">Configuración de perfiles</span>"
+  
+! #: ../interfaces/users.ui.h:11
+  msgid "<span weight=\"bold\">System Defaults</span>"
+  msgstr "<span weight=\"bold\">Configuración predeterminada del sistema</span>"
+  
+! #: ../interfaces/users.ui.h:12
+! msgid "Accessibility"
+! msgstr "Accesibilidad"
+! 
+! #: ../interfaces/users.ui.h:13
+  msgid "Account"
+  msgstr "Cuenta"
+  
+! #: ../interfaces/users.ui.h:14
+  msgid "Advanced"
+  msgstr "Avanzado"
+  
+! #: ../interfaces/users.ui.h:15
+  msgid "Assign a random password by default"
+  msgstr "Asignar una contraseña aleatora de forma predeterminada"
+  
+! #: ../interfaces/users.ui.h:16
+  msgid "Check password _quality"
+  msgstr "Comprobar la cali_dad de la contraseña"
+  
+! #: ../interfaces/users.ui.h:17
+  msgid "Con_firmation:"
+  msgstr "Con_firmación:"
+  
+! #: ../interfaces/users.ui.h:18
+  msgid "Days between warning and password expiration:"
+  msgstr "Número de días entre el aviso y la expiración de la contraseña:"
+  
+! #: ../interfaces/users.ui.h:19
+  msgid "Default _group:"
+  msgstr "_Grupo predeterminado:"
+  
+! #: ../interfaces/users.ui.h:20
+  msgid "Default _shell:"
+  msgstr "_Shell predeterminada:"
+  
+! #: ../interfaces/users.ui.h:22
+  msgid "Generate _random password"
+  msgstr "Generar contraseña _aleatoria"
+  
+! #: ../interfaces/users.ui.h:23
+  msgid "Group _ID:"
+  msgstr "_ID del grupo:"
+  
+! #: ../interfaces/users.ui.h:24
+  msgid "Group _name:"
+  msgstr "_Nombre del grupo:"
+  
+! #: ../interfaces/users.ui.h:25
+  msgid "Group properties"
+  msgstr "Propiedades del grupo"
+  
+! #: ../interfaces/users.ui.h:26
+  msgid "Groups settings"
+  msgstr "Ajustes del grupo"
+  
+! #: ../interfaces/users.ui.h:27
+  msgid "Ma_ximum days a password may be used:"
+  msgstr "Má_ximo número de días que se puede usar una contraseña:"
+  
+! #: ../interfaces/users.ui.h:28
+  msgid "Maximum UID:"
+  msgstr "UID máximo:"
+  
+! #: ../interfaces/users.ui.h:29
+  msgid "Mi_nimum days between password changes:"
+  msgstr "Mí_nimo número de días entre cambio de contraseñas:"
+  
+! #: ../interfaces/users.ui.h:30
+  msgid "Minimum GID:"
+  msgstr "GID mínimo:"
+  
+! #: ../interfaces/users.ui.h:31
+  msgid "Minimum UID:"
+  msgstr "UID mínimo:"
+  
+! #: ../interfaces/users.ui.h:32
+  msgid "Minimum days allowed between password changes:"
+  msgstr "Mínimo número de días permitidos entre cambios de contraseñas:"
+  
+! #: ../interfaces/users.ui.h:33
+  msgid "Number of days that a password may be used:"
+  msgstr "Número de días que se puede usar una contraseña:"
+  
+! #: ../interfaces/users.ui.h:34
+  msgid "O_ffice location:"
+  msgstr "Ubicación en la o_ficina:"
+  
+! #: ../interfaces/users.ui.h:35
+  msgid "Password set to: "
+  msgstr "Contraseña establecida a: "
+  
+! #: ../interfaces/users.ui.h:36
+  msgid "Privileges"
+  msgstr "Privilegios"
+  
+! #: ../interfaces/users.ui.h:37
+  msgid "Profile _name:"
+  msgstr "_Nombre del perfil:"
+  
+! #: ../interfaces/users.ui.h:38
+  msgid "Set password b_y hand"
+  msgstr "Establecer la contraseña _a mano"
+  
+! #: ../interfaces/users.ui.h:39
+  msgid "User ID:"
+  msgstr "ID del usuario:"
+  
+! #: ../interfaces/users.ui.h:40
+  msgid "User Privileges"
+  msgstr "Privilegios del usuario"
+  
+! #: ../interfaces/users.ui.h:41
+  msgid "User _password:"
+  msgstr "Con_traseña del usuario:"
+  
+! #: ../interfaces/users.ui.h:42
+  msgid "User profiles"
+  msgstr "Perfiles del usuario"
+  
+! #: ../interfaces/users.ui.h:43
+  msgid "_Add Group"
+  msgstr "_Añadir grupo"
+  
+! #: ../interfaces/users.ui.h:44
+  msgid "_Add Profile"
+  msgstr "_Añadir perfil"
+  
+! #: ../interfaces/users.ui.h:45
+  msgid "_Add User"
+  msgstr "_Añadir usuario"
+  
+! #: ../interfaces/users.ui.h:46
+  msgid "_Comments"
+  msgstr "_Comentarios"
+  
+! #: ../interfaces/users.ui.h:47
+  msgid "_Days between warning and password expiration:"
+  msgstr "_Días entre la advertencia y la expiración de la contraseña:"
+  
+! #: ../interfaces/users.ui.h:48 ../src/network/address-list.c:77
+! #: ../src/network/hosts.c:33 ../src/shares/table.c:40 ../src/users/table.c:41
+  msgid "_Delete"
+  msgstr "_Borrar"
+  
+! #: ../interfaces/users.ui.h:49
+  msgid "_Generate"
+  msgstr "_Generar"
+  
+! #: ../interfaces/users.ui.h:50
+  msgid "_Home directory:"
+  msgstr "Directorio per_sonal:"
+  
+! #: ../interfaces/users.ui.h:51
+  msgid "_Home phone:"
+  msgstr "Teléfono del _domicilio:"
+  
+! #: ../interfaces/users.ui.h:52
+  msgid "_Main group:"
+  msgstr "Grupo pri_ncipal:"
+  
+! #: ../interfaces/users.ui.h:53
+  msgid "_Manage Groups"
+  msgstr "Gestionar g_rupos"
+  
+! #: ../interfaces/users.ui.h:54
+  msgid "_Profile:"
+  msgstr "_Perfil:"
+  
+! #: ../interfaces/users.ui.h:55
+  msgid "_Real name:"
+  msgstr "Nombre _real:"
+  
+! #: ../interfaces/users.ui.h:56
+  msgid "_Shell:"
+  msgstr "_Shell:"
+  
+! #: ../interfaces/users.ui.h:58
+  msgid "_Work phone:"
+  msgstr "Teléfono del _trabajo:"
+  
+***************
+*** 669,704 ****
+  msgid "An unexpected error has occurred."
+  msgstr "Ocurrió un error inesperado."
+  
+! #: ../src/common/gst-tool.c:184
+  msgid "The configuration could not be loaded"
+  msgstr "La configuración no se pudo cargar"
+  
+! #: ../src/common/gst-tool.c:185
+  msgid "You are not allowed to access the system configuration."
+  msgstr "No se le permite acceder a la configuración del sistema."
+  
+! #: ../src/common/gst-tool.c:187
+  msgid "The configuration could not be saved"
+  msgstr "La configuración no se pudo guardar"
+  
+! #: ../src/common/gst-tool.c:188
+  msgid "You are not allowed to modify the system configuration."
+  msgstr "No se le permite modificar la configuración del sistema."
+  
+! #: ../src/common/gst-tool.c:417
+  msgid "Could not display help"
+  msgstr "No se pudo mostrar la ayuda"
+  
+! #: ../src/common/gst-tool.c:577
+  msgid "The system configuration has potentially changed."
+  msgstr "La configuración del sistema ha cambiado."
+  
+! #: ../src/common/gst-tool.c:579
+  msgid "Update content? This will lose any modification in course."
+  msgstr "¿Actualizar el contenido? Se perderá cualquier modificación en curso."
+  
+  #: ../src/network/address-list.c:76 ../src/network/hosts.c:31
+! #: ../src/shares/table.c:38 ../src/users/table.c:38
+  msgid "_Add"
+  msgstr "_Añadir"
+  
+--- 685,720 ----
+  msgid "An unexpected error has occurred."
+  msgstr "Ocurrió un error inesperado."
+  
+! #: ../src/common/gst-tool.c:185
+  msgid "The configuration could not be loaded"
+  msgstr "La configuración no se pudo cargar"
+  
+! #: ../src/common/gst-tool.c:186
+  msgid "You are not allowed to access the system configuration."
+  msgstr "No se le permite acceder a la configuración del sistema."
+  
+! #: ../src/common/gst-tool.c:188
+  msgid "The configuration could not be saved"
+  msgstr "La configuración no se pudo guardar"
+  
+! #: ../src/common/gst-tool.c:189
+  msgid "You are not allowed to modify the system configuration."
+  msgstr "No se le permite modificar la configuración del sistema."
+  
+! #: ../src/common/gst-tool.c:418
+  msgid "Could not display help"
+  msgstr "No se pudo mostrar la ayuda"
+  
+! #: ../src/common/gst-tool.c:596
+  msgid "The system configuration has potentially changed."
+  msgstr "La configuración del sistema ha cambiado."
+  
+! #: ../src/common/gst-tool.c:598
+  msgid "Update content? This will lose any modification in course."
+  msgstr "¿Actualizar el contenido? Se perderá cualquier modificación en curso."
+  
+  #: ../src/network/address-list.c:76 ../src/network/hosts.c:31
+! #: ../src/shares/table.c:38 ../src/users/table.c:39
+  msgid "_Add"
+  msgstr "_Añadir"
+  
+***************
+*** 788,794 ****
+  msgstr "Propiedades de %s"
+  
+  #: ../src/network/hosts.c:32 ../src/network/ifaces-list.c:33
+! #: ../src/shares/table.c:39 ../src/users/table.c:39
+  msgid "_Properties"
+  msgstr "_Propiedades"
+  
+--- 804,810 ----
+  msgstr "Propiedades de %s"
+  
+  #: ../src/network/hosts.c:32 ../src/network/ifaces-list.c:33
+! #: ../src/shares/table.c:39 ../src/users/table.c:40
+  msgid "_Properties"
+  msgstr "_Propiedades"
+  
+***************
+*** 868,898 ****
+  msgid "Point to point connection"
+  msgstr "Conexión punto a punto"
+  
+! #: ../src/network/locations-combo.c:221
+! msgid "Changing network location"
+! msgstr "Cambiando configuración de la ubicación"
+! 
+! #: ../src/network/locations-combo.c:265
+  msgid "There is already a location with the same name"
+  msgstr "Ya hay una ubicación con ese nombre"
+  
+! #: ../src/network/locations-combo.c:267
+  msgid "Overwrite it?"
+  msgstr "¿Quiere sobreescribirla?"
+  
+! #: ../src/network/locations-combo.c:355
+  msgid "Save location"
+  msgstr "Guardar ubicación"
+  
+! #: ../src/network/locations-combo.c:370
+  msgid "_Location name:"
+  msgstr "Nombre de la _ubicación:"
+  
+! #: ../src/network/locations-combo.c:422
+  #, c-format
+  msgid "Do you want to delete location \"%s\"?"
+  msgstr "¿Quiere borrar la ubicación «%s»?"
+  
+  #: ../src/network/main.c:135
+  msgid "The interface does not exist"
+  msgstr "El interfaz no existe"
+--- 884,914 ----
+  msgid "Point to point connection"
+  msgstr "Conexión punto a punto"
+  
+! #: ../src/network/locations-combo.c:281
+  msgid "There is already a location with the same name"
+  msgstr "Ya hay una ubicación con ese nombre"
+  
+! #: ../src/network/locations-combo.c:283
+  msgid "Overwrite it?"
+  msgstr "¿Quiere sobreescribirla?"
+  
+! #: ../src/network/locations-combo.c:371
+  msgid "Save location"
+  msgstr "Guardar ubicación"
+  
+! #: ../src/network/locations-combo.c:386
+  msgid "_Location name:"
+  msgstr "Nombre de la _ubicación:"
+  
+! #: ../src/network/locations-combo.c:438
+  #, c-format
+  msgid "Do you want to delete location \"%s\"?"
+  msgstr "¿Quiere borrar la ubicación «%s»?"
+  
++ #: ../src/network/locations-combo.c:459
++ msgid "Changing network location"
++ msgstr "Cambiando configuración de la ubicación"
++ 
+  #: ../src/network/main.c:135
+  msgid "The interface does not exist"
+  msgstr "El interfaz no existe"
+***************
+*** 929,935 ****
+  msgid "Network"
+  msgstr "Red"
+  
+! #: ../src/network/network-tool.c:280
+  msgid "Network Settings"
+  msgstr "Configuración de la red"
+  
+--- 945,951 ----
+  msgid "Network"
+  msgstr "Red"
+  
+! #: ../src/network/network-tool.c:281
+  msgid "Network Settings"
+  msgstr "Configuración de la red"
+  
+***************
+*** 1046,1052 ****
+  
+  #: ../src/services/service.c:44
+  msgid "Synchronizes your computer clock with Internet time servers"
+! msgstr "Sincroniza el reloj de su equipo con los servidores de hora de Internet"
+  
+  #. GST_ROLE_NTP_SERVER
+  #: ../src/services/service.c:46
+--- 1062,1069 ----
+  
+  #: ../src/services/service.c:44
+  msgid "Synchronizes your computer clock with Internet time servers"
+! msgstr ""
+! "Sincroniza el reloj de su equipo con los servidores de hora de Internet"
+  
+  #. GST_ROLE_NTP_SERVER
+  #: ../src/services/service.c:46
+***************
+*** 1353,1358 ****
+--- 1370,1380 ----
+  msgid "System monitor"
+  msgstr "Monitor del sistema"
+  
++ #. GST_ROLE_SYSTEM_MONITORING
++ #: ../src/services/service.c:104
++ msgid "Virtual Machine management"
++ msgstr "Gestión de volúmenes lógicos"
++ 
+  #: ../src/services/services.desktop.in.in.h:1
+  msgid "Configure which services will be run when the system starts"
+  msgstr "Configurar qué servicios serán ejecutados cuando el sistema se inicie"
+***************
+*** 1454,1469 ****
+  msgid "Unix networks (NFS)"
+  msgstr "Redes UNIX (NFS)"
+  
+! #: ../src/shares/shares-tool.c:155
+  msgid "Sharing services are not installed"
+  msgstr "Los servicios de compartición no están instalados"
+  
+! #: ../src/shares/shares-tool.c:157
+  msgid ""
+  "You need to install at least either Samba or NFS in order to share your "
+  "folders."
+  msgstr "Necesita instalar al menos Samba o NFS para compartir sus carpetas."
+  
+  #: ../src/time/time.desktop.in.in.h:1
+  msgid "Change system time, date, and timezone"
+  msgstr "Cambiar hora, fecha y zona horaria"
+--- 1476,1518 ----
+  msgid "Unix networks (NFS)"
+  msgstr "Redes UNIX (NFS)"
+  
+! #: ../src/shares/share-settings.c:462
+! #, fuzzy, c-format
+! msgid "Settings for folder '%s'"
+! msgstr "Configuración para el servicio «%s»"
+! 
+! #: ../src/shares/share-settings.c:469
+! #, fuzzy
+! msgid "Share Folder"
+! msgstr "Carpetas compartidas"
+! 
+! #: ../src/shares/shares-tool.c:182
+  msgid "Sharing services are not installed"
+  msgstr "Los servicios de compartición no están instalados"
+  
+! #: ../src/shares/shares-tool.c:184
+  msgid ""
+  "You need to install at least either Samba or NFS in order to share your "
+  "folders."
+  msgstr "Necesita instalar al menos Samba o NFS para compartir sus carpetas."
+  
++ #: ../src/shares/shares-tool.c:186
++ #, fuzzy
++ msgid "Install services"
++ msgstr "Servicio de impresoras"
++ 
++ #. add NFS checkbutton
++ #: ../src/shares/shares-tool.c:189
++ #, fuzzy
++ msgid "Install Unix networks support (_NFS)"
++ msgstr "Redes UNIX (NFS)"
++ 
++ #. add SMB checkbutton
++ #: ../src/shares/shares-tool.c:195
++ #, fuzzy
++ msgid "Install Windows networks support (_SMB)"
++ msgstr "Redes Windows (SMB)"
++ 
+  #: ../src/time/time.desktop.in.in.h:1
+  msgid "Change system time, date, and timezone"
+  msgstr "Cambiar hora, fecha y zona horaria"
+***************
+*** 1472,1482 ****
+  msgid "Time and Date"
+  msgstr "Hora y fecha"
+  
+! #: ../src/time/time-tool.c:390
+  msgid "NTP support is not installed"
+  msgstr "El soporte NTP no está instalado"
+  
+! #: ../src/time/time-tool.c:392
+  msgid ""
+  "Please install and activate NTP support in the system to enable "
+  "synchronization of your local time server with internet time servers."
+--- 1521,1531 ----
+  msgid "Time and Date"
+  msgstr "Hora y fecha"
+  
+! #: ../src/time/time-tool.c:391
+  msgid "NTP support is not installed"
+  msgstr "El soporte NTP no está instalado"
+  
+! #: ../src/time/time-tool.c:393
+  msgid ""
+  "Please install and activate NTP support in the system to enable "
+  "synchronization of your local time server with internet time servers."
+***************
+*** 1484,1510 ****
+  "Instale y active el soporte NTP en el sistema para activar la sincronización "
+  "con su servidor de hora local con los servidores de hora de Internet."
+  
+! #: ../src/time/time-tool.c:422
+  msgid "Enabling NTP"
+  msgstr "Activando NTP"
+  
+! #: ../src/time/time-tool.c:422
+  msgid "Disabling NTP"
+  msgstr "Desactivando NTP"
+  
+! #: ../src/time/time-tool.c:434
+  msgid "Synchronizing system clock"
+  msgstr "Sincronizando reloj del sistema"
+  
+! #: ../src/time/time-tool.c:514
+  msgid "Keep synchronized with Internet servers"
+  msgstr "Mantener sincronizado con los servidores de Internet"
+  
+! #: ../src/time/time-tool.c:515
+  msgid "Manual"
+  msgstr "Manual"
+  
+! #: ../src/time/time-tool.c:661
+  msgid "Time and Date Settings"
+  msgstr "Ajustes de hora y fecha"
+  
+--- 1533,1563 ----
+  "Instale y active el soporte NTP en el sistema para activar la sincronización "
+  "con su servidor de hora local con los servidores de hora de Internet."
+  
+! #: ../src/time/time-tool.c:397
+! msgid "Install NTP support"
+! msgstr ""
+! 
+! #: ../src/time/time-tool.c:437
+  msgid "Enabling NTP"
+  msgstr "Activando NTP"
+  
+! #: ../src/time/time-tool.c:437
+  msgid "Disabling NTP"
+  msgstr "Desactivando NTP"
+  
+! #: ../src/time/time-tool.c:449
+  msgid "Synchronizing system clock"
+  msgstr "Sincronizando reloj del sistema"
+  
+! #: ../src/time/time-tool.c:529
+  msgid "Keep synchronized with Internet servers"
+  msgstr "Mantener sincronizado con los servidores de Internet"
+  
+! #: ../src/time/time-tool.c:530
+  msgid "Manual"
+  msgstr "Manual"
+  
+! #: ../src/time/time-tool.c:676
+  msgid "Time and Date Settings"
+  msgstr "Ajustes de hora y fecha"
+  
+***************
+*** 1514,1520 ****
+  
+  #: ../src/users/group-settings.c:55 ../src/users/group-settings.c:279
+  #: ../src/users/group-settings.c:303 ../src/users/user-settings.c:60
+! #: ../src/users/user-settings.c:550
+  msgid "This would leave the system unusable."
+  msgstr "Esto podría dejar el sistema inutilizable."
+  
+--- 1567,1573 ----
+  
+  #: ../src/users/group-settings.c:55 ../src/users/group-settings.c:279
+  #: ../src/users/group-settings.c:303 ../src/users/user-settings.c:60
+! #: ../src/users/user-settings.c:554
+  msgid "This would leave the system unusable."
+  msgstr "Esto podría dejar el sistema inutilizable."
+  
+***************
+*** 1525,1531 ****
+  
+  #: ../src/users/group-settings.c:71
+  msgid "This may leave files with invalid group ID in the filesystem."
+! msgstr "Esto puede dejar archivos con ID de grupo inválido en el sistema de archivos."
+  
+  #: ../src/users/group-settings.c:167
+  msgid "New group"
+--- 1578,1585 ----
+  
+  #: ../src/users/group-settings.c:71
+  msgid "This may leave files with invalid group ID in the filesystem."
+! msgstr ""
+! "Esto puede dejar archivos con ID de grupo inválido en el sistema de archivos."
+  
+  #: ../src/users/group-settings.c:167
+  msgid "New group"
+***************
+*** 1565,1571 ****
+  msgid "Group \"%s\" already exists"
+  msgstr "El grupo «%s» ya existe"
+  
+! #: ../src/users/group-settings.c:287 ../src/users/user-settings.c:484
+  msgid "Please select a different user name."
+  msgstr "Por favor seleccione un nombre de usuario diferente."
+  
+--- 1619,1625 ----
+  msgid "Group \"%s\" already exists"
+  msgstr "El grupo «%s» ya existe"
+  
+! #: ../src/users/group-settings.c:287 ../src/users/user-settings.c:488
+  msgid "Please select a different user name."
+  msgstr "Por favor seleccione un nombre de usuario diferente."
+  
+***************
+*** 1610,1627 ****
+  msgstr "Usar disqueteras"
+  
+  #: ../src/users/privileges-table.c:57
+  msgid "Access external storage devices automatically"
+  msgstr "Acceder automáticamente a dispositivos de almacenamiento externo"
+  
+! #: ../src/users/privileges-table.c:58
+  msgid "Use scanners"
+  msgstr "Usar escáneres"
+  
+! #: ../src/users/privileges-table.c:59
+  msgid "Use tape drives"
+  msgstr "Usar unidades de cinta"
+  
+! #: ../src/users/privileges-table.c:60
+  msgid "Be able to get administrator privileges"
+  msgstr "Poder obtener privilegios de administrador"
+  
+--- 1664,1695 ----
+  msgstr "Usar disqueteras"
+  
+  #: ../src/users/privileges-table.c:57
++ msgid "Allow use of fuse filesystems like LTSP Thin Client blockdevices"
++ msgstr ""
++ 
++ #: ../src/users/privileges-table.c:58
++ #, fuzzy
++ msgid "Manage printers"
++ msgstr "Gestionar g_rupos"
++ 
++ #: ../src/users/privileges-table.c:59
+  msgid "Access external storage devices automatically"
+  msgstr "Acceder automáticamente a dispositivos de almacenamiento externo"
+  
+! #: ../src/users/privileges-table.c:60
+! #, fuzzy
+! msgid "Share files with the local network"
+! msgstr "Comparte carpetas por la red"
+! 
+! #: ../src/users/privileges-table.c:61
+  msgid "Use scanners"
+  msgstr "Usar escáneres"
+  
+! #: ../src/users/privileges-table.c:62
+  msgid "Use tape drives"
+  msgstr "Usar unidades de cinta"
+  
+! #: ../src/users/privileges-table.c:63
+  msgid "Be able to get administrator privileges"
+  msgstr "Poder obtener privilegios de administrador"
+  
+***************
+*** 1658,1681 ****
+  msgid "New user account"
+  msgstr "Cuenta de usuario nueva"
+  
+! #: ../src/users/user-settings.c:342
+  #, c-format
+  msgid "Account '%s' Properties"
+  msgstr "Propiedades de la cuenta «%s»"
+  
+! #: ../src/users/user-settings.c:475
+  msgid "User name is empty"
+  msgstr "El nombre de usuario está vacío"
+  
+! #: ../src/users/user-settings.c:476
+  msgid "A user name must be specified."
+  msgstr "Debe especificar un nombre de usuario."
+  
+! #: ../src/users/user-settings.c:478
+  msgid "User name has invalid characters"
+  msgstr "El nombre de usuario tiene caracteres inválidos"
+  
+! #: ../src/users/user-settings.c:479
+  msgid ""
+  "Please set a valid user name consisting of a lower case letter followed by "
+  "lower case letters and numbers."
+--- 1726,1749 ----
+  msgid "New user account"
+  msgstr "Cuenta de usuario nueva"
+  
+! #: ../src/users/user-settings.c:343
+  #, c-format
+  msgid "Account '%s' Properties"
+  msgstr "Propiedades de la cuenta «%s»"
+  
+! #: ../src/users/user-settings.c:479
+  msgid "User name is empty"
+  msgstr "El nombre de usuario está vacío"
+  
+! #: ../src/users/user-settings.c:480
+  msgid "A user name must be specified."
+  msgstr "Debe especificar un nombre de usuario."
+  
+! #: ../src/users/user-settings.c:482
+  msgid "User name has invalid characters"
+  msgstr "El nombre de usuario tiene caracteres inválidos"
+  
+! #: ../src/users/user-settings.c:483
+  msgid ""
+  "Please set a valid user name consisting of a lower case letter followed by "
+  "lower case letters and numbers."
+***************
+*** 1683,1707 ****
+  "Establezca un nombre de usuario válido, consistente en una letra minúscula "
+  "seguida de letras minúsculas y/o números."
+  
+! #: ../src/users/user-settings.c:483
+  #, c-format
+  msgid "User name \"%s\" already exists"
+  msgstr "El nombre de usuario «%s» ya existe"
+  
+! #: ../src/users/user-settings.c:509
+  #, c-format
+  msgid "Invalid character \"%c\" in comment"
+  msgstr "Carácter inválido «%c» en comentario"
+  
+! #: ../src/users/user-settings.c:510
+  msgid "Check that this character is not used."
+  msgstr "Compruebe que este carácter no se use."
+  
+! #: ../src/users/user-settings.c:528
+  msgid "Incomplete path in home directory"
+  msgstr "Ruta incompleta en el directorio personal"
+  
+! #: ../src/users/user-settings.c:529
+  msgid ""
+  "Please enter full path for home directory\n"
+  "<span size=\"smaller\">i.e.: /home/john</span>."
+--- 1751,1775 ----
+  "Establezca un nombre de usuario válido, consistente en una letra minúscula "
+  "seguida de letras minúsculas y/o números."
+  
+! #: ../src/users/user-settings.c:487
+  #, c-format
+  msgid "User name \"%s\" already exists"
+  msgstr "El nombre de usuario «%s» ya existe"
+  
+! #: ../src/users/user-settings.c:513
+  #, c-format
+  msgid "Invalid character \"%c\" in comment"
+  msgstr "Carácter inválido «%c» en comentario"
+  
+! #: ../src/users/user-settings.c:514
+  msgid "Check that this character is not used."
+  msgstr "Compruebe que este carácter no se use."
+  
+! #: ../src/users/user-settings.c:532
+  msgid "Incomplete path in home directory"
+  msgstr "Ruta incompleta en el directorio personal"
+  
+! #: ../src/users/user-settings.c:533
+  msgid ""
+  "Please enter full path for home directory\n"
+  "<span size=\"smaller\">i.e.: /home/john</span>."
+***************
+*** 1709,1731 ****
+  "Escriba la ruta completa para el directorio personal\n"
+  "<span size=\"smaller\">ej: /home/juan</span>."
+  
+! #: ../src/users/user-settings.c:532
+  msgid "Home directory already exists"
+  msgstr "El directorio personal ya existe"
+  
+! #: ../src/users/user-settings.c:533
+  msgid "Please enter a different home directory path."
+  msgstr "Por favor seleccione una ruta para el directorio personal diferente."
+  
+! #: ../src/users/user-settings.c:549
+  msgid "Administrator account's user ID should not be modified"
+  msgstr "El ID de la cuenta de usuario del administrador no debería modificarse"
+  
+! #: ../src/users/user-settings.c:564
+  msgid "Incomplete path in shell"
+  msgstr "Ruta incompleta en el shell"
+  
+! #: ../src/users/user-settings.c:565
+  msgid ""
+  "Please enter full path for shell\n"
+  "<span size=\"smaller\">i.e.: /bin/bash</span>."
+--- 1777,1799 ----
+  "Escriba la ruta completa para el directorio personal\n"
+  "<span size=\"smaller\">ej: /home/juan</span>."
+  
+! #: ../src/users/user-settings.c:536
+  msgid "Home directory already exists"
+  msgstr "El directorio personal ya existe"
+  
+! #: ../src/users/user-settings.c:537
+  msgid "Please enter a different home directory path."
+  msgstr "Por favor seleccione una ruta para el directorio personal diferente."
+  
+! #: ../src/users/user-settings.c:553
+  msgid "Administrator account's user ID should not be modified"
+  msgstr "El ID de la cuenta de usuario del administrador no debería modificarse"
+  
+! #: ../src/users/user-settings.c:568
+  msgid "Incomplete path in shell"
+  msgstr "Ruta incompleta en el shell"
+  
+! #: ../src/users/user-settings.c:569
+  msgid ""
+  "Please enter full path for shell\n"
+  "<span size=\"smaller\">i.e.: /bin/bash</span>."
+***************
+*** 1733,1743 ****
+  "Introduzca una ruta completa para la shell\n"
+  "<span size=\"smaller\">ej: /bin/bash</span>."
+  
+! #: ../src/users/user-settings.c:598
+  msgid "Password is too short"
+  msgstr "La contraseña es demasiado corta"
+  
+! #: ../src/users/user-settings.c:599
+  msgid ""
+  "User passwords must be longer than 6 characters and preferably formed by "
+  "numbers, letters and special characters."
+--- 1801,1811 ----
+  "Introduzca una ruta completa para la shell\n"
+  "<span size=\"smaller\">ej: /bin/bash</span>."
+  
+! #: ../src/users/user-settings.c:602
+  msgid "Password is too short"
+  msgstr "La contraseña es demasiado corta"
+  
+! #: ../src/users/user-settings.c:603
+  msgid ""
+  "User passwords must be longer than 6 characters and preferably formed by "
+  "numbers, letters and special characters."
+***************
+*** 1745,1757 ****
+  "Las contraseñas de usuario deben ser más largas que 6 caracteres y "
+  "preferiblemente formadas por números, letras y caracteres especiales."
+  
+! #: ../src/users/user-settings.c:602
+  msgid "Password confirmation is not correct"
+  msgstr "La confirmación de la contraseña es incorrecta"
+  
+! #: ../src/users/user-settings.c:603
+  msgid "Check that you have provided the same password in both text fields."
+! msgstr "Compruebe que ha proporcionado la misma contraseña en ambos campos de texto."
+  
+  #: ../src/users/users-table.c:44
+  msgid "Name"
+--- 1813,1826 ----
+  "Las contraseñas de usuario deben ser más largas que 6 caracteres y "
+  "preferiblemente formadas por números, letras y caracteres especiales."
+  
+! #: ../src/users/user-settings.c:606
+  msgid "Password confirmation is not correct"
+  msgstr "La confirmación de la contraseña es incorrecta"
+  
+! #: ../src/users/user-settings.c:607
+  msgid "Check that you have provided the same password in both text fields."
+! msgstr ""
+! "Compruebe que ha proporcionado la misma contraseña en ambos campos de texto."
+  
+  #: ../src/users/users-table.c:44
+  msgid "Name"
+diff -Nrc gnome-system-tools-2.22.0-origdeb/src/users/accessibility-table.c gnome-system-tools-2.22.0/src/users/accessibility-table.c
+*** gnome-system-tools-2.22.0-origdeb/src/users/accessibility-table.c	1970-01-01 01:00:00.000000000 +0100
+--- gnome-system-tools-2.22.0/src/users/accessibility-table.c	2008-06-23 11:11:23.000000000 +0200
+***************
+*** 0 ****
+--- 1,154 ----
++ /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
++ /* accessibility-table.c: this file is part of users-admin, a ximian-setup-tool frontend 
++  * for user administration.
++  * 
++  * Copyright (C) 2006 Álvaro Peña
++  *
++  * This program is free software; you can redistribute it and/or modify
++  * it under the terms of the GNU General Public License as
++  * published by the Free Software Foundation; either version 2 of the
++  * License, or (at your option) any later version.
++  *
++  * This program is distributed in the hope that it will be useful,
++  * but WITHOUT ANY WARRANTY; without even the implied warranty of
++  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++  * GNU General Public License for more details.
++  *
++  * You should have received a copy of the GNU General Public License
++  * along with this program; if not, write to the Free Software
++  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
++  *
++  * Authors: Álvaro Peña <apg@openshin.com>
++  */
++ 
++ #include <config.h>
++ #include "gst.h"
++ #include <glib/gi18n.h>
++ #include <string.h>
++ #include <stdlib.h>
++ #include "accessibility-table.h"
++ 
++ #define PROFILE_PATH "/etc/desktop-profiles"
++ 
++ extern GstTool *tool;
++ 
++ enum {
++ 	COL_ACTIVATE,
++ 	COL_PROFILE_NAME
++ };
++ 
++ static void on_accessibility_toggled (GtkCellRendererToggle *cell, gchar *path_str, gpointer data);
++ static void populate_accessibility_profiles (GtkTreeModel *model);
++ 
++ void
++ create_accessibility_table (void)
++ {
++ 	GtkWidget *list;
++ 	GtkTreeModel *model;
++ 	GtkCellRenderer *renderer;
++ 	GtkTreeViewColumn *column;
++ 	GtkTreeIter iter;
++ 
++ 	list = gst_dialog_get_widget (tool->main_dialog, "user_accessibility");
++ 
++ 	model = GTK_TREE_MODEL (gtk_list_store_new (2, G_TYPE_BOOLEAN, G_TYPE_STRING));
++ 	gtk_tree_view_set_model (GTK_TREE_VIEW (list), model);
++ 	g_object_unref (model);
++ 
++ 	column = gtk_tree_view_column_new ();
++ 
++ 	renderer = gtk_cell_renderer_toggle_new ();
++ 	gtk_tree_view_column_pack_start (column, renderer, FALSE);
++ 	gtk_tree_view_column_set_attributes (column,
++ 					     renderer,
++ 					     "active", COL_ACTIVATE,
++ 					     NULL);
++ 	g_signal_connect (G_OBJECT (renderer), "toggled", G_CALLBACK (on_accessibility_toggled), model);
++ 
++ 	renderer = gtk_cell_renderer_text_new ();
++ 	gtk_tree_view_column_pack_end (column, renderer, TRUE);
++ 	gtk_tree_view_column_set_attributes (column,
++ 					     renderer,
++ 					     "text", COL_PROFILE_NAME,
++ 					     NULL);
++ 
++ 	gtk_tree_view_column_set_sort_column_id (column, 1);
++ 	gtk_tree_view_insert_column (GTK_TREE_VIEW (list), column, 0);
++ 	gtk_tree_view_column_clicked (column);
++ 
++ 	/* populate profiles */
++ 	populate_accessibility_profiles (model);
++ }
++ 
++ static void
++ populate_accessibility_profiles (GtkTreeModel *model)
++ {
++ 	GDir *profile_dir;
++ 	gchar *current_file;
++ 	gchar *profile_name;
++ 	GtkTreeIter iter;
++ 	
++ 	if (!g_file_test (PROFILE_PATH, G_FILE_TEST_IS_DIR)) {
++ 		g_print ("Error: can't found profile path in: %s", PROFILE_PATH);
++ 		return;
++ 	}
++ 	
++ 	profile_dir = g_dir_open (PROFILE_PATH, 0, NULL);
++ 	
++ 	current_file = g_dir_read_name (profile_dir);
++ 	while (current_file != NULL) {
++ 		if (g_str_has_suffix (current_file, "zip")) {
++ 			profile_name = g_strndup (current_file, (strlen (current_file) - 4));
++ 			gtk_list_store_append (GTK_LIST_STORE (model), &iter);
++ 			gtk_list_store_set (GTK_LIST_STORE (model), &iter,
++ 					    COL_ACTIVATE, FALSE,
++ 					    COL_PROFILE_NAME, profile_name,
++ 					    -1);
++ 		}
++ 
++ 		current_file = g_dir_read_name (profile_dir);
++ 	}
++ }
++ 
++ static void
++ on_accessibility_toggled (GtkCellRendererToggle *cell, gchar *path_str, gpointer data)
++ {
++ 	GtkTreeModel *model = (GtkTreeModel*) data;
++ 	GtkTreePath  *path  = gtk_tree_path_new_from_string (path_str);
++ 	GtkTreeIter   iter;
++ 	gboolean      value;
++ 
++ 	if (gtk_tree_model_get_iter (model, &iter, path)) {
++ 		gtk_tree_model_get (model, &iter, 0, &value, -1);
++ 		gtk_list_store_set (GTK_LIST_STORE (model), &iter, 0, !value, -1);
++ 	}
++ 
++ 	gtk_tree_path_free (path);
++ }
++ 
++ void
++ accessibility_table_save (gchar *user_name)
++ {
++ 	GtkWidget *table;
++ 	GtkTreeModel *model;
++ 	GtkTreeIter iter;
++ 	gchar *profile, *command_line;
++ 	gboolean valid, apply;
++ 	
++ 	table = gst_dialog_get_widget (tool->main_dialog, "user_accessibility");
++ 	model = gtk_tree_view_get_model (GTK_TREE_VIEW (table));
++ 	valid = gtk_tree_model_get_iter_first (model, &iter);
++ 
++ 	while (valid) {
++ 		gtk_tree_model_get (model, &iter,
++ 				    COL_ACTIVATE, &apply,
++ 				    COL_PROFILE_NAME, &profile,
++ 				    -1);
++ 		if (apply) {
++ 			command_line = g_strdup_printf ("/usr/bin/adp-admin.sh %s %s -f", user_name, profile);
++ 			system (command_line);
++ 		}
++ 		
++ 		valid = gtk_tree_model_iter_next (model, &iter);
++ 	}
++ }
+diff -Nrc gnome-system-tools-2.22.0-origdeb/src/users/accessibility-table.h gnome-system-tools-2.22.0/src/users/accessibility-table.h
+*** gnome-system-tools-2.22.0-origdeb/src/users/accessibility-table.h	1970-01-01 01:00:00.000000000 +0100
+--- gnome-system-tools-2.22.0/src/users/accessibility-table.h	2008-06-23 11:11:23.000000000 +0200
+***************
+*** 0 ****
+--- 1,30 ----
++ /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
++ /* accessibility-table.c: this file is part of users-admin, a ximian-setup-tool frontend 
++  * for user administration.
++  * 
++  * Copyright (C) 2006 Alvaro Peña
++  *
++  * This program is free software; you can redistribute it and/or modify
++  * it under the terms of the GNU General Public License as
++  * published by the Free Software Foundation; either version 2 of the
++  * License, or (at your option) any later version.
++  *
++  * This program is distributed in the hope that it will be useful,
++  * but WITHOUT ANY WARRANTY; without even the implied warranty of
++  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++  * GNU General Public License for more details.
++  *
++  * You should have received a copy of the GNU General Public License
++  * along with this program; if not, write to the Free Software
++  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
++  *
++  * Authors: Alvaro Peña <apg@openshine.com>
++  */
++ 
++ #ifndef __ACCESSIBILITY_TABLE_H
++ #define __ACCESSIBILITY_TABLE_H
++ 
++ void create_accessibility_table (void);
++ void accessibility_table_save (gchar *user_name);
++ 
++ #endif /* __ACCESSIBILITY_TABLE_H */
+diff -Nrc gnome-system-tools-2.22.0-origdeb/src/users/callbacks.c gnome-system-tools-2.22.0/src/users/callbacks.c
+*** gnome-system-tools-2.22.0-origdeb/src/users/callbacks.c	2008-06-23 11:04:17.000000000 +0200
+--- gnome-system-tools-2.22.0/src/users/callbacks.c	2008-06-23 11:11:24.000000000 +0200
+***************
+*** 38,43 ****
+--- 38,45 ----
+  #include "users-tool.h"
+  #include "group-settings.h"
+  #include "groups-table.h"
++ #include "accessibility-table.h"
++ 
+  
+  extern GstTool *tool;
+  
+***************
+*** 287,292 ****
+--- 289,296 ----
+  		oobs_object_commit (GST_USERS_TOOL (tool)->users_config);
+  		oobs_object_commit (GST_USERS_TOOL (tool)->groups_config);
+  
++ 		accessibility_table_save (oobs_user_get_login_name (user));
++ 
+  		gst_tool_update_config (tool);
+  		gst_tool_update_gui (tool);
+  	}
+***************
+*** 332,337 ****
+--- 336,342 ----
+  			/* change users/groups configuration */
+  			oobs_object_commit (GST_USERS_TOOL (tool)->users_config);
+  			oobs_object_commit (GST_USERS_TOOL (tool)->groups_config);
++ 			accessibility_table_save (oobs_user_get_login_name (user));
+  		} else {
+  			OobsObject *object = GST_USERS_TOOL (tool)->self_config;
+  
+***************
+*** 342,349 ****
+  				action = gst_polkit_action_new (oobs_object_get_authentication_action (object),
+  								GTK_WIDGET (tool->main_dialog));
+  
+! 				if (gst_polkit_action_authenticate (action))
+  					oobs_object_commit (GST_USERS_TOOL (tool)->self_config);
+  
+  				g_object_unref (action);
+  #endif
+--- 347,356 ----
+  				action = gst_polkit_action_new (oobs_object_get_authentication_action (object),
+  								GTK_WIDGET (tool->main_dialog));
+  
+! 				if (gst_polkit_action_authenticate (action)) {
+  					oobs_object_commit (GST_USERS_TOOL (tool)->self_config);
++ 					accessibility_table_save (oobs_user_get_login_name (user));
++ 				}
+  
+  				g_object_unref (action);
+  #endif
+diff -Nrc gnome-system-tools-2.22.0-origdeb/src/users/Makefile.am gnome-system-tools-2.22.0/src/users/Makefile.am
+*** gnome-system-tools-2.22.0-origdeb/src/users/Makefile.am	2008-03-09 17:07:03.000000000 +0100
+--- gnome-system-tools-2.22.0/src/users/Makefile.am	2008-06-23 11:11:25.000000000 +0200
+***************
+*** 26,31 ****
+--- 26,32 ----
+  	group-settings.c 	group-settings.h \
+  	users-table.c 		users-table.h \
+  	groups-table.c 		groups-table.h \
++ 	accessibility-table.c	accessibility-table.h \
+  	table.c 		table.h	\
+  	privileges-table.c 	privileges-table.h \
+  	group-members-table.c 	group-members-table.h \
+diff -Nrc gnome-system-tools-2.22.0-origdeb/src/users/Makefile.in gnome-system-tools-2.22.0/src/users/Makefile.in
+*** gnome-system-tools-2.22.0-origdeb/src/users/Makefile.in	2008-06-23 11:04:17.000000000 +0200
+--- gnome-system-tools-2.22.0/src/users/Makefile.in	2008-06-23 11:11:25.000000000 +0200
+***************
+*** 39,45 ****
+  bin_PROGRAMS = users-admin$(EXEEXT)
+  subdir = src/users
+  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+! am__aclocal_m4_deps = $(top_srcdir)/configure.in
+  am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+  	$(ACLOCAL_M4)
+  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+--- 39,46 ----
+  bin_PROGRAMS = users-admin$(EXEEXT)
+  subdir = src/users
+  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+! am__aclocal_m4_deps = $(top_srcdir)/m4/gnome-doc-utils.m4 \
+! 	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/configure.in
+  am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+  	$(ACLOCAL_M4)
+  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+***************
+*** 51,57 ****
+  am_users_admin_OBJECTS = main.$(OBJEXT) passwd.$(OBJEXT) \
+  	users-tool.$(OBJEXT) callbacks.$(OBJEXT) \
+  	user-settings.$(OBJEXT) group-settings.$(OBJEXT) \
+! 	users-table.$(OBJEXT) groups-table.$(OBJEXT) table.$(OBJEXT) \
+  	privileges-table.$(OBJEXT) group-members-table.$(OBJEXT) \
+  	user-profiles.$(OBJEXT) test-battery.$(OBJEXT)
+  users_admin_OBJECTS = $(am_users_admin_OBJECTS)
+--- 52,59 ----
+  am_users_admin_OBJECTS = main.$(OBJEXT) passwd.$(OBJEXT) \
+  	users-tool.$(OBJEXT) callbacks.$(OBJEXT) \
+  	user-settings.$(OBJEXT) group-settings.$(OBJEXT) \
+! 	users-table.$(OBJEXT) groups-table.$(OBJEXT) \
+! 	accessibility-table.$(OBJEXT) table.$(OBJEXT) \
+  	privileges-table.$(OBJEXT) group-members-table.$(OBJEXT) \
+  	user-profiles.$(OBJEXT) test-battery.$(OBJEXT)
+  users_admin_OBJECTS = $(am_users_admin_OBJECTS)
+***************
+*** 292,297 ****
+--- 294,300 ----
+  	group-settings.c 	group-settings.h \
+  	users-table.c 		users-table.h \
+  	groups-table.c 		groups-table.h \
++ 	accessibility-table.c	accessibility-table.h \
+  	table.c 		table.h	\
+  	privileges-table.c 	privileges-table.h \
+  	group-members-table.c 	group-members-table.h \
+***************
+*** 372,377 ****
+--- 375,381 ----
+  distclean-compile:
+  	-rm -f *.tab.c
+  
++ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/accessibility-table.Po@am__quote@
+  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/callbacks.Po@am__quote@
+  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/group-members-table.Po@am__quote@
+  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/group-settings.Po@am__quote@
+diff -Nrc gnome-system-tools-2.22.0-origdeb/src/users/table.c gnome-system-tools-2.22.0/src/users/table.c
+*** gnome-system-tools-2.22.0-origdeb/src/users/table.c	2008-03-09 17:07:03.000000000 +0100
+--- gnome-system-tools-2.22.0/src/users/table.c	2008-06-23 11:11:25.000000000 +0200
+***************
+*** 30,35 ****
+--- 30,36 ----
+  #include "groups-table.h"
+  #include "privileges-table.h"
+  #include "group-members-table.h"
++ #include "accessibility-table.h"
+  #include "callbacks.h"
+  
+  extern GstTool *tool;
+***************
+*** 170,175 ****
+--- 171,177 ----
+  	create_groups_table ();
+  	create_user_privileges_table ();
+  	create_group_members_table ();
++ 	create_accessibility_table ();
+  
+  	/* not strictly tables, but uses a model */
+  	setup_groups_combo ();

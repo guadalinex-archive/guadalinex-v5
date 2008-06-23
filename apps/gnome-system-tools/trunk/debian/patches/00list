@@ -1,0 +1,17 @@
+10_add_missing_services
+11_shares_admin_not_listed_under_gnome.dpatch
+18_disable_uid.dpatch
+20_fuse_as_default_group
+23_users_update_model
+24_lpadmin_group_definition.dpatch
+25_sambashare_group_definition.dpatch
+26_users_home_dir.dpatch
+80_gst-packages-common
+81_gst-packages-shares-admin
+82_gst-packages-time-admin
+83_network-locations-apply-button
+84_translate_extra_strings.dpatch
+85_users_fix_add_group.dpatch
+90_from_svn_correctly_configure_interface.dpatch
+98_automake
+99_accessibility_profiles

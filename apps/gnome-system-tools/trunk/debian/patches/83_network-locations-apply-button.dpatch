@@ -1,0 +1,207 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 83_network-locations-apply-button.dpatch by Sebastien Bacher <seb128@ubuntu.com>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad gnome-system-tools-2.21.2.1~/interfaces/network.ui gnome-system-tools-2.21.2.1/interfaces/network.ui
+--- gnome-system-tools-2.21.2.1~/interfaces/network.ui	2007-09-26 23:29:16.000000000 +0200
++++ gnome-system-tools-2.21.2.1/interfaces/network.ui	2007-12-12 18:52:02.000000000 +0100
+@@ -186,6 +186,31 @@
+                 <property name="fill">False</property>
+               </packing>
+             </child>
++            <child>
++	      <object class="GtkButton" id="apply_location">
++		<property name="visible">True</property>
++		<property name="tooltip-text" translatable="yes">Apply location as the current configuration</property>
++		<property name="can_focus">True</property>
++		<property name="relief">GTK_RELIEF_NORMAL</property>
++		<property name="focus_on_click">True</property>
++		<child>
++		  <object class="GtkImage" id="image11">
++                    <property name="visible">True</property>
++                    <property name="icon_size">4</property>
++                    <property name="icon_name">gtk-apply</property>
++                    <property name="xalign">0.5</property>
++                    <property name="yalign">0.5</property>
++                    <property name="xpad">0</property>
++                    <property name="ypad">0</property>
++		  </object>
++		</child>
++	      </object>
++	      <packing>
++		<property name="padding">0</property>
++		<property name="expand">False</property>
++		<property name="fill">False</property>
++	      </packing>
++            </child>
+           </object>
+           <packing>
+             <property name="padding">0</property>
+diff -urNad gnome-system-tools-2.21.2.1~/src/network/locations-combo.c gnome-system-tools-2.21.2.1/src/network/locations-combo.c
+--- gnome-system-tools-2.21.2.1~/src/network/locations-combo.c	2007-09-26 23:29:17.000000000 +0200
++++ gnome-system-tools-2.21.2.1/src/network/locations-combo.c	2007-12-12 18:51:45.000000000 +0100
+@@ -34,6 +34,7 @@
+   GtkWidget *combo;
+   GtkWidget *save_button;
+   GtkWidget *delete_button;
++  GtkWidget *apply_button;
+ 
+   GtkWidget *save_dialog;
+   GtkWidget *location_entry;
+@@ -44,7 +45,8 @@
+   PROP_TOOL,
+   PROP_COMBO,
+   PROP_SAVE,
+-  PROP_DELETE
++  PROP_DELETE,
++  PROP_APPLY
+ };
+ 
+ static void gst_locations_combo_class_init   (GstLocationsComboClass *class);
+@@ -108,6 +110,13 @@
+ 							"Delete",
+ 							GTK_TYPE_BUTTON,
+ 							G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY));
++  g_object_class_install_property (object_class,
++				   PROP_APPLY,
++				   g_param_spec_object ("apply",
++							"Apply",
++							"Apply",
++							GTK_TYPE_BUTTON,
++							G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY));
+   g_type_class_add_private (object_class,
+ 			    sizeof (GstLocationsComboPrivate));
+ }
+@@ -137,6 +146,9 @@
+   if (priv->delete_button)
+     g_object_unref (priv->delete_button);
+ 
++  if (priv->apply_button)
++    g_object_unref (priv->apply_button);
++
+   if (priv->model)
+     g_object_unref (priv->model);
+ }
+@@ -166,6 +178,9 @@
+     case PROP_DELETE:
+       priv->delete_button = GTK_WIDGET (g_value_dup_object (value));
+       break;
++    case PROP_APPLY:
++      priv->apply_button = GTK_WIDGET (g_value_dup_object (value));
++      break;
+     }
+ }
+ 
+@@ -194,6 +209,9 @@
+     case PROP_DELETE:
+       g_value_set_object (value, priv->delete_button);
+       break;
++    case PROP_APPLY:
++      g_value_set_object (value, priv->apply_button);
++      break;
+     }
+ }
+ 
+@@ -215,11 +233,9 @@
+       gtk_tree_model_get (model, &iter, 0, &str, -1);
+       gst_network_locations_set_location (locations, str);
+       gst_tool_update_gui (priv->tool);
+-
+-      oobs_object_commit (locations->hosts_config);
+-      gst_tool_commit_async (priv->tool, locations->ifaces_config,
+-			     _("Changing network location"), NULL, NULL);
+       g_free (str);
++
++      gtk_widget_set_sensitive (priv->apply_button, TRUE);
+     }
+ }
+ 
+@@ -430,6 +446,22 @@
+ }
+ 
+ static void
++on_apply_button_clicked (GtkWidget *widget, gpointer data)
++{
++  GstNetworkLocations *locations;
++  GstLocationsComboPrivate *priv;
++
++  priv = GST_LOCATIONS_COMBO (data)->_priv;
++  locations = GST_NETWORK_LOCATIONS (data);
++
++  oobs_object_commit (locations->hosts_config);
++  gst_tool_commit_async (priv->tool, locations->ifaces_config,
++			 _("Changing network location"), NULL, NULL);
++
++  gtk_widget_set_sensitive (widget, FALSE);
++}
++
++static void
+ fill_model (GstLocationsCombo *combo,
+ 	    GtkTreeModel      *model)
+ {
+@@ -480,6 +512,11 @@
+ 		    G_CALLBACK (on_save_button_clicked), object);
+   g_signal_connect (G_OBJECT (priv->delete_button), "clicked",
+ 		    G_CALLBACK (on_delete_button_clicked), object);
++  g_signal_connect (G_OBJECT (priv->apply_button), "clicked",
++		    G_CALLBACK (on_apply_button_clicked), object);
++
++  /* set the apply button initially unsensitive */
++  gtk_widget_set_sensitive (priv->apply_button, FALSE);
+ 
+   return object;
+ }
+@@ -501,12 +538,14 @@
+ gst_locations_combo_new (GstTool   *tool,
+ 			 GtkWidget *combo,
+ 			 GtkWidget *save,
+-			 GtkWidget *delete)
++			 GtkWidget *delete,
++			 GtkWidget *apply)
+ {
+   return g_object_new (GST_TYPE_LOCATIONS_COMBO,
+ 		       "tool", tool,
+ 		       "combo", combo,
+ 		       "save", save,
+ 		       "delete", delete,
++		       "apply", apply,
+ 		       NULL);
+ }
+diff -urNad gnome-system-tools-2.21.2.1~/src/network/locations-combo.h gnome-system-tools-2.21.2.1/src/network/locations-combo.h
+--- gnome-system-tools-2.21.2.1~/src/network/locations-combo.h	2007-09-26 23:29:17.000000000 +0200
++++ gnome-system-tools-2.21.2.1/src/network/locations-combo.h	2007-12-12 18:51:45.000000000 +0100
+@@ -53,7 +53,8 @@
+ GstLocationsCombo*     gst_locations_combo_new             (GstTool   *tool,
+ 							    GtkWidget *combo,
+ 							    GtkWidget *add,
+-							    GtkWidget *remove);
++							    GtkWidget *remove,
++							    GtkWidget *apply);
+ 
+ 
+ G_END_DECLS
+diff -urNad gnome-system-tools-2.21.2.1~/src/network/network-tool.c gnome-system-tools-2.21.2.1/src/network/network-tool.c
+--- gnome-system-tools-2.21.2.1~/src/network/network-tool.c	2007-09-30 18:07:57.000000000 +0200
++++ gnome-system-tools-2.21.2.1/src/network/network-tool.c	2007-12-12 18:51:45.000000000 +0100
+@@ -109,7 +109,7 @@
+ {
+   GObject *object;
+   GstNetworkTool *tool;
+-  GtkWidget *widget, *add_button, *delete_button;
++  GtkWidget *widget, *add_button, *delete_button, *apply_button;
+ 
+   object = (* G_OBJECT_CLASS (gst_network_tool_parent_class)->constructor) (type,
+ 									    n_construct_properties,
+@@ -147,7 +147,8 @@
+   widget = gst_dialog_get_widget (GST_TOOL (tool)->main_dialog, "locations_combo");
+   add_button = gst_dialog_get_widget (GST_TOOL (tool)->main_dialog, "add_location");
+   delete_button = gst_dialog_get_widget (GST_TOOL (tool)->main_dialog, "remove_location");
+-  tool->location = gst_locations_combo_new (GST_TOOL (tool), widget, add_button, delete_button);
++  apply_button = gst_dialog_get_widget (GST_TOOL (tool)->main_dialog, "apply_location");
++  tool->location = gst_locations_combo_new (GST_TOOL (tool), widget, add_button, delete_button, apply_button);
+ 
+   tool->dialog = connection_dialog_init (GST_TOOL (tool));
+ 

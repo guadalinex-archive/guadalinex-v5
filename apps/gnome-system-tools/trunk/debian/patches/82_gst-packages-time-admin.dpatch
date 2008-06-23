@@ -1,0 +1,42 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 82_gst-packages-time-admin.dpatch by Sebastien Bacher <seb128@ubuntu.com>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad gnome-system-tools-2.15.3~/src/time/time-tool.c gnome-system-tools-2.15.3/src/time/time-tool.c
+--- gnome-system-tools-2.15.3~/src/time/time-tool.c	2006-09-04 03:50:03.000000000 +0200
++++ gnome-system-tools-2.15.3/src/time/time-tool.c	2006-09-06 12:45:43.000000000 +0200
+@@ -385,5 +385,6 @@
+ 	GstTimeToolPrivate *priv = GST_TIME_TOOL_GET_PRIVATE (tool);
+ 	GtkWidget *message, *widget;
++	gint response;
+ 
+ 	if (GST_TIME_TOOL (tool)->ntp_service)
+ 		return TRUE;
+@@ -402,9 +403,23 @@
+ 						  _("Please install and activate NTP support in the system to enable "
+ 						    "synchronization of your local time server with "
+ 						    "internet time servers."));
+-	gtk_dialog_run (GTK_DIALOG (message));
++
++	gtk_dialog_add_button (GTK_DIALOG (message), _("Install NTP support"), GTK_RESPONSE_OK);
++	response = gtk_dialog_run (GTK_DIALOG (message));
+ 	gtk_widget_destroy (message);
+ 
++	if (response == GTK_RESPONSE_OK) {
++		const gchar *packages[] = { "ntp", NULL };
++
++		if (gst_packages_install (GTK_WINDOW (tool->main_dialog), packages)) {
++			gst_tool_update_config (tool);
++			gst_tool_update_gui (tool);
++
++			if (GST_TIME_TOOL (tool)->ntp_service)
++				return TRUE;
++		}
++	}
++
+ 	return FALSE;
+ }
+ 
