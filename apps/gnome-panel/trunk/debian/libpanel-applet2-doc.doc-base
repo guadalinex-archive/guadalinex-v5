@@ -1,0 +1,11 @@
+Document: libpanel-applet2-doc
+Title: Panel Applet Writer's Reference Manual
+Author: Mark McLoughlin <mark@skynet.ie>
+Abstract: This manual documents the interfaces of the panel applet writing
+ library for GNOME 2.x and a short guide to porting applets from the GNOME
+ 1.x interfaces.
+Section: Apps/Programming
+
+Format: HTML
+Index: /usr/share/doc/libpanel-applet2-doc/html/index.html
+Files: /usr/share/doc/libpanel-applet2-doc/html/*.html
