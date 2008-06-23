@@ -1,4 +1,0 @@
-debian/tmp/usr/include/ usr/
-debian/tmp/usr/lib/pkgconfig usr/lib/
-debian/tmp/usr/lib/libpanel-applet-2.{a,la,so} usr/lib/
-debian/tmp/usr/share/idl/ usr/share/
