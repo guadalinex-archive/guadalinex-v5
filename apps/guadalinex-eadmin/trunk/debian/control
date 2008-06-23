@@ -7,7 +7,7 @@ Standards-Version: 3.7.3
 
 Package: guadalinex-eadmin
 Architecture: i386
-Depends: ${shlibs:Depends}, firefox-3.0, getatr, guadalinex-hipath-sicurity-card-api, libccid, libnss3-1d, libnss3-tools, libssl-dev, mozilla-opensc (>= 0.11.4), openct, opensc (>= 0.11.4), opensc-ceres (>= 2.0.2), opensc-dnie (>= 1.4.0), pcsc-tools, pcscd, pinentry-gtk2, python, sun-java6-jre, sun-java6-plugin
+Depends: ${shlibs:Depends}, firefox-3.0, getatr, guadalinex-hipath-sicurity-card-api (>= 3.1-2), libccid, libnss3-1d, libnss3-tools, libssl-dev, mozilla-opensc (>= 0.11.4), openct, opensc (>= 0.11.4), opensc-ceres (>= 2.0.2), opensc-dnie (>= 1.4.0), pcsc-tools, pcscd, pinentry-gtk2, python, sun-java6-jre, sun-java6-plugin
 Description: E-Admin support for Guadalinex
  This package add support for different hardware and software systems
  needed to communicate with the electronic administration systems
