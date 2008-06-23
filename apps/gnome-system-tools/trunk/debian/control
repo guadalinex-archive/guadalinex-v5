@@ -34,6 +34,7 @@ Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends},
          perl
+	 accessibility-profiles
 Recommends: policykit-gnome
 Conflicts: system-tools-backends (<< 2.2)
 Suggests: ntp,

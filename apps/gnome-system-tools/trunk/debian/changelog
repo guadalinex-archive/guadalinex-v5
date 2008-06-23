@@ -1,3 +1,9 @@
+gnome-system-tools (2.22.0-0ubuntu10) hardy; urgency=low
+
+  * Append accessibility functionality
+
+ -- Álvaro Peña <apg@openshine.com>  Mon, 23 Jun 2008 12:01:47 +0200
+
 gnome-system-tools (2.22.0-0ubuntu9) hardy; urgency=low
 
   * Make it possible to create a group by using the tool by not
