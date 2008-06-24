@@ -6,7 +6,10 @@ set -e
 # This way, it is also possible select which services should be enabled
 # using preseeding.
 
+
 . /usr/share/debconf/confmodule
+
+exit 0
 
 # Returns 0 if the service was actually removed
 disable_service() {

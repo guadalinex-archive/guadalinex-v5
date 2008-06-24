@@ -3,6 +3,8 @@ set -e
 
 . /usr/share/debconf/confmodule
 
+exit 0
+
 file="$1"
 
 db_get apt-setup/services-select
