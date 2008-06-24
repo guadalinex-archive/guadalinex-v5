@@ -1,3 +1,9 @@
+guadalinex-eadmin (v5-0.3) hardy; urgency=low
+
+  * Fixed firefox.js preferences file to prevent EULA on fist run
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Mon, 24 Jun 2008 10:12:23 +0100
+
 guadalinex-eadmin (v5-0.2) hardy; urgency=low
 
   * Use of the bugfixing opensc 0.11.4-2ubuntu2
