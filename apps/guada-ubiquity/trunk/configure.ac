@@ -1,7 +1,7 @@
 AC_INIT(src/frontend/guada_ui.py)
 
 PACKAGE=guada-ubiquity
-VERSION=0.6
+VERSION=0.7
 
 AC_SUBST(PACKAGE)
 AC_SUBST(VERSION)

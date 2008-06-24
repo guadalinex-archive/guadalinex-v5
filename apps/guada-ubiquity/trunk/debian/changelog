@@ -1,3 +1,9 @@
+guada-ubiquity (0.7-1) hardy; urgency=low
+
+  * Better 70reuse bash syntax
+
+ -- Roberto Majadas <roberto.majadas@openshine.com>  Tue, 24 Jun 2008 10:20:24 +0200
+
 guada-ubiquity (0.6-1) hardy; urgency=low
 
   * Add reuse partitions option
@@ -29,7 +35,7 @@ guada-ubiquity (0.2-1) hardy; urgency=low
 
  -- Roberto Majadas <roberto.majadas@openshine.com>  Fri, 09 May 2008 13:03:25 +0200
 
-guad+a-ubiquity (0.1-1) unstable; urgency=low
+guada-ubiquity (0.1-1) unstable; urgency=low
 
   * Initial release 
 
