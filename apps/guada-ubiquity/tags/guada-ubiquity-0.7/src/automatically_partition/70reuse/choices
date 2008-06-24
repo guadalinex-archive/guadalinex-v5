@@ -1,0 +1,21 @@
+#!/bin/bash
+
+any_linux_on_dev() {
+    for dev in $(hal-find-by-capability --capability volume) ; 
+    do
+	fs=$(hal-get-property --udi $dev --key volume.fstype)
+	if [ x"$fs" == x"ext2" ] || [ x"$fs" == x"ext3" ] || [ x"$fs" == x"reiserfs" ]; then
+	    has_linux_part="yes"
+	fi
+	if [ x"$fs" == x"swap" ]; then
+	    has_swap_part="yes"
+	fi
+    done
+}
+
+any_linux_on_dev
+
+if [ x$has_linux_part == x"yes" ] && [ x$has_swap_part == x"yes" ]; then
+    RET="Reutilizar particiones"
+    printf "custom\t$RET"
+fi
