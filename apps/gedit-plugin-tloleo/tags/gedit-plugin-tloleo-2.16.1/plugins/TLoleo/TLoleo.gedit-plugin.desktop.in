@@ -1,0 +1,8 @@
+[Gedit Plugin]
+Module=TLoleo
+IAge=2
+_Name=Synthesize text with Festival
+_Description=Synthesizes the selected text with Festival using the Spanish male voice from the Hispavoces project http://forja.guadalinex.org/projects/hispavoces/
+Authors=Grupo de desarrollo Indisys:;Diego Martínez <d.martinez@indisys.es>;Jesús González <j.gonzalez@indisys.es>
+Copyright=Copyright © 2007 Intelligent Dialogue Systems S.L
+Website=http://www.indisys.es
