@@ -49,6 +49,6 @@ Icon=firestarter.png
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=System;GNOME;Network;Settings;
+Categories=System;GNOME;Settings;
 X-GNOME-Bugzilla-Bugzilla=GNOME
 X-GNOME-Bugzilla-Product=firestarter
