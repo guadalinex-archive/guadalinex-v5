@@ -1,9 +1,9 @@
 [Desktop Entry]
 Version=1.0
-Name=Firefox Web Browser
-Name[ca]=Navegador web Firefox
+Name=Firefox
+Name[ca]=Firefox
 Name[cs]=Firefox Webový prohlížeč
-Name[es]=Navegador web (Firefox)
+Name[es]=Firefox
 Name[fa]=مرورگر اینترنتی Firefox
 Name[fi]=Firefox-selain
 Name[fr]=Navigateur Web Firefox
@@ -42,9 +42,9 @@ Comment[pt_BR]=Navegue na Internet
 Comment[sk]=Prehliadanie internetu
 Comment[sv]=Surfa på webben
 GenericName=Web Browser
-GenericName[ca]=Navegador web
+GenericName[ca]=Firefox
 GenericName[cs]=Webový prohlížeč
-GenericName[es]=Navegador web
+GenericName[es]=Firefox
 GenericName[fa]=مرورگر اینترنتی
 GenericName[fi]=WWW-selain
 GenericName[fr]=Navigateur Web
