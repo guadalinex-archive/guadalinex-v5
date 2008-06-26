@@ -1952,7 +1952,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
 
 
 PACKAGE=guada-ubiquity
-VERSION=0.6
+VERSION=0.8
 
 
 
