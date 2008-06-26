@@ -30,9 +30,6 @@
         </Not>
       </And>
     </Include>
-    <Exclude>
-        <Filename>gnochm.desktop</Filename>
-    </Exclude>
   </Menu> <!-- End Accessories -->
 
   <!-- Accessibility submenu -->

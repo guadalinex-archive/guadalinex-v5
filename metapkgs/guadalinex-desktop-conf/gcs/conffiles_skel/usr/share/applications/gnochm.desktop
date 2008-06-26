@@ -34,6 +34,7 @@ Terminal=false
 Type=Application
 MimeType=application/x-chm;
 StartupNotify=true
+NoDisplay=true
 X-GNOME-DocPath=gnochm/gnochm.xml
 Categories=Application;Utility;X-Red-Hat-Extra;
 X-Ubuntu-Gettext-Domain=gnochm
