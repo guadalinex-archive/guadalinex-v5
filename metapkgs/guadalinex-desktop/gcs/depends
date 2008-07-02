@@ -45,6 +45,7 @@ dasher
 dcraw
 desktop-file-utils
 devede
+discover1
 doc-base
 dvd+rw-tools
 eciadsl
@@ -139,8 +140,10 @@ ndisgtk
 network-manager
 network-manager-gnome
 notification-daemon
+ntfs-3g
 onboard
 sun-java6-jre
+sun-java6-plugin
 openoffice.org-base-core
 openoffice.org-calc
 openoffice.org-common
