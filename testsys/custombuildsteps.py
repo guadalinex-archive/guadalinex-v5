@@ -170,8 +170,8 @@ class UploadPkg(ShellCommand):
     name = "UploadPkg"
     #TODO: Fix this string ala python style
     command = ["sh", "-c", 
-		    "cp ../*.dsc ../*.tar.gz ../*.deb ../*.build ../*.changes %s; \
-		    rm -f ../*.dsc ../*.tar.gz ../*.deb ../*.build ../*.changes"
+		    "cp ../*.dsc ../*.tar.gz ../*.udeb ../*.deb ../*.build ../*.changes %s; \
+		    rm -f ../*.dsc ../*.tar.gz ../*.udeb ../*.deb ../*.build ../*.changes"
 		    % upload_dir]
     description = [name]
 
