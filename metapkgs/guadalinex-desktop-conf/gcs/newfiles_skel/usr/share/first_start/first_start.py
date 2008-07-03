@@ -52,7 +52,7 @@ class FirstStart:
 
     def response(self, widget, res):
         if res == gtk.RESPONSE_ACCEPT:
-            os.system("firefox file:///usr/share/ayuda.html")
+            os.spawn(os.P_NOWAIT,'firefox', 'firefox', 'file:///usr/share/ayuda.html')
         if self.checkShow.get_active() == True:
             f = open(os.environ['HOME'] + "/.gnome2_private/first_start","w")
             f.write("OK\n")
