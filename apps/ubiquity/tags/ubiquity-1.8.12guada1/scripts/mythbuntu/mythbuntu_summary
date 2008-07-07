@@ -1,0 +1,81 @@
+#! /bin/sh
+#set -e
+
+. /usr/share/debconf/confmodule
+
+#Installation Type
+db_get mythbuntu/install_type
+db_subst mythbuntu/summary INSTALLTYPE "$RET"
+
+#Services
+db_get mythbuntu/vncservice
+db_subst mythbuntu/summary EN_VNC "$RET"
+db_get mythbuntu/sshservice
+db_subst mythbuntu/summary EN_OPENSSH "$RET"
+db_get mythbuntu/sambaservice
+db_subst mythbuntu/summary EN_SAMBA "$RET"
+db_get mythbuntu/nfsservice
+db_subst mythbuntu/summary EN_NFS "$RET"
+db_get mythbuntu/mysqlservice
+db_subst mythbuntu/summary EN_MYSQL "$RET"
+
+#Drivers
+db_get mythbuntu/video_driver
+db_subst mythbuntu/summary VIDEO_DRIVER "$RET"
+db_get mythbuntu/tvout
+db_subst mythbuntu/summary TVOUT "$RET"
+db_get mythbuntu/tvstandard
+db_subst mythbuntu/summary TVSTANDARD "$RET"
+
+#MythTV MySQL Passwords
+db_get mythtv/mysql_mythtv_user
+if [ -z "$RET" ]; then
+    db_set mythtv/mysql_mythtv_user "mythtv"
+fi
+db_get mythtv/mysql_mythtv_password
+if [ -z "$RET" ]; then
+    #set +e
+    NEW="$(pwgen -s 8)"
+    #set -e
+    db_set mythtv/mysql_mythtv_password "$NEW"
+fi
+db_get mythtv/mysql_host
+if [ -z "$RET" ]; then
+    db_set mythtv/mysql_host "localhost"
+fi
+db_get mythtv/mysql_mythtv_dbname
+if [ -z "$RET" ]; then
+    db_set mythtv/mysql_mythtv_dbname "mythconverg"
+fi
+
+#Normal Ubuntu Questions
+db_get languagechooser/language-name
+db_subst mythbuntu/summary LANGUAGE "$RET"
+if db_get console-setup/variant && [ "$RET" ]; then
+    db_subst mythbuntu/summary KEYMAP "$RET"
+else
+    db_get console-setup/layout
+    db_subst mythbuntu/summary KEYMAP "$RET"
+fi
+db_get passwd/user-fullname
+db_subst mythbuntu/summary FULLNAME "$RET"
+db_get passwd/username
+db_subst mythbuntu/summary USERNAME "$RET"
+db_get time/zone # actually continent/city (usually)
+db_subst mythbuntu/summary LOCATION "$RET"
+
+db_capb escape
+db_get ubiquity/partman-made-changes
+if [ "$RET" = true ]; then
+    db_metaget partman/confirm Extended_description
+else
+    db_metaget partman/confirm_nochanges Extended_description
+fi
+db_subst mythbuntu/summary PARTMAN_CHANGES \
+    "$(printf %s "$RET" | debconf-escape -e)"
+db_capb
+
+db_input high mythbuntu/summary || true
+db_go
+
+exit 0

@@ -1,0 +1,18 @@
+#!/bin/sh -e
+#Provides all mythbuntu questions asked by
+#ubiquity during install process
+# Written by Mario Limonciello <superm1@ubuntu.com>
+# Copyright (C) 2007 Mario Limonciello
+# Copyright (C) 2007 Jared Greenwald
+
+. /usr/share/debconf/confmodule
+
+#determine video. drivers
+db_input high mythbuntu/video_driver || true
+#determine tv out settings
+db_input high mythbuntu/tvout || true
+db_input high mythbuntu/tvstandard || true
+#Backend drivers
+db_input high mythbuntu/hdhomerun || true
+db_input high mythbuntu/xmltv || true
+db_input high mythbuntu/dvbutils || true
