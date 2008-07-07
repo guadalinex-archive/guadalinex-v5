@@ -4,9 +4,6 @@ if [ remove = "$1" ]; then
     rm -f /usr/lib/ubiquity/ubiquity/frontend/__init__.py 
     dpkg-divert --package guada-ubiquity --remove --rename \
              --divert /usr/lib/ubiquity/ubiquity/frontend/__init__.py.real /usr/lib/ubiquity/ubiquity/frontend/__init__.py
-    rm -f /usr/share/applications/ubiquity-gtkui.desktop
-    dpkg-divert --package guada-ubiquity --remove --rename \
-             --divert /usr/share/ubiquity/ubiquity-gtkui.desktop.real /usr/share/applications/ubiquity-gtkui.desktop
 fi
 
 
