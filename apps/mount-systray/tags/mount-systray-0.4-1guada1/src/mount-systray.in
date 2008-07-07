@@ -1,0 +1,2 @@
+#! /bin/sh
+PYTHONPATH=@PYTHONPATH@/gtk-2.0/:$PYTHONPATH @PYTHON@ @prefix@/share/mount-systray/mount-systray.py $1

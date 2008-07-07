@@ -175,3 +175,6 @@ msgstr "_Muestra una notificación"
 #: ../data/preferences.glade.h:10
 msgid "minutes."
 msgstr "minutos."
+
+msgid "Umount device"
+msgstr "Dispositivo desmontado"

@@ -1,0 +1,12 @@
+Source: mount-systray
+Section: gnome
+Priority: optional
+Maintainer: Roberto Majadas <telemaco@openshine.com>
+Build-Depends: cdbs, debhelper (>= 5), python-gtk2-dev, python-gnome2-dev, libgconf2-dev, gnome-pkg-tools, gnome-common
+Standards-Version: 3.7.2
+
+Package: mount-systray
+Architecture: any
+Depends: python-gtk2, python-gnome2, pmount | gnome-mount, python-notify, ${misc:Depends}
+Description: Systray applicacion for umount devices easy
+ Systray applicacion for umount devices easy, with integrated notification.
