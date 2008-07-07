@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=P2P (aMule)
+Comment=Descargue archivos de la red edonkey y kademlia, similar a eMule
 Exec=amule
 Icon=amule
 Terminal=false
