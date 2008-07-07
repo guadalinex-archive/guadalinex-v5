@@ -4,6 +4,7 @@ Name=Reproductor de Vídeo (VLC)
 name[es]=Reproductor de Vídeo (VLC)
 Name[fr]=Lecteur multimédia VLC
 Comment=Read, capture, broadcast your multimedia streams
+Comment[es]=Reproduce distintos archivos de audio y vídeo
 Comment[fr]=Lire, capturer, diffuser vos flux multimedia
 Name[sv]=Mediaspelaren VLC
 Comment[sv]=Allmän uppspelare av film och musik
