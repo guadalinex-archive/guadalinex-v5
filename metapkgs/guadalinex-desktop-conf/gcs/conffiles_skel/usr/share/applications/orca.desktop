@@ -1,6 +1,6 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Orca Screen Reader and Magnifier
+Name=Lector de pantalla y magnificador (Orca)
 Name[ar]=قارئ الشاشة و المكبّر أوركا
 Name[bg]=Orca - четец на екрана и лупа
 Name[ca]=Lector de pantalla i ampliador Orca
@@ -94,7 +94,6 @@ Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GNOME;GTK;Accessibility;
-NoDisplay=true
 X-GNOME-Bugzilla-Bugzilla=GNOME
 X-GNOME-Bugzilla-Product=orca
 X-GNOME-Bugzilla-Component=general
