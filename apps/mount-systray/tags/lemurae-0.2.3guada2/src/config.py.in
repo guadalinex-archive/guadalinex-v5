@@ -1,0 +1,23 @@
+version = "@VERSION@"
+image_dir = "@prefix@/share/pixmaps/mount-systray"
+glade_dir = "@prefix@/share/mount-systray"
+locale_dir = "@prefix@/share/locale"
+prefix = "@prefix@"
+
+def getPrefix():
+	return prefix
+
+def getVersion ():
+	return version
+
+def getImagedir ():
+	return image_dir
+
+def getGladedir ():
+	return glade_dir
+
+def GETTEXT_PACKAGE():
+	return "@GETTEXT_PACKAGE@"
+
+def GNOMELOCALEDIR():
+	return locale_dir
