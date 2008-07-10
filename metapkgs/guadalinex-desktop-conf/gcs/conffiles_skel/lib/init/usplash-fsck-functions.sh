@@ -123,10 +123,10 @@ usplash_progress() {
 
                 usplash_write "VERBOSE on"
                 if [ "$CLEAN" ]; then
-                    usplash_write "TEXT Comprobación rutinaria de las unidades de disco: $NAME..."
-                    usplash_write "TEXT Pulse ESCAPE para cancelar"
+                    usplash_write "TEXT Revisión periódica de: $NAME..."
+                    usplash_write "TEXT Pulse ESC para cancelar"
                 else
-                    usplash_write "TEXT Se sufrió un apagado inesperado, comprobando unidades de disco:"
+                    usplash_write "TEXT Comprobando unidades:"
                     usplash_write "TEXT $NAME..."
                 fi
 
@@ -134,7 +134,7 @@ usplash_progress() {
             fi
 
             usplash_write "STATUS $PERCENT% (stage $PASS/5, $CUR/$MAX)                       "
-            echo "Comprobando unidad $NAME: $PERCENT% (stage $PASS/5, $CUR/$MAX)" >/dev/console
+            echo "Comprobando $NAME: $PERCENT% (stage $PASS/5, $CUR/$MAX)" >/dev/console
 
             # ESC interrupts check for clean drives
             if [ -n "$CLEAN" ]; then
@@ -155,7 +155,7 @@ usplash_progress() {
             usplash_write "STATUS                                                             "
         fi
         usplash_write "VERBOSE default"
-        usplash_write "TEXT Comprobación de unidad finalizada."
+        usplash_write "TEXT Comprobación finalizada."
         usplash_write "TIMEOUT 15"
         wait %1 # to collect fsck's exit code
         EXITCODE=$?
