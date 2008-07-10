@@ -11,4 +11,4 @@ Icon=avidemux
 Terminal=false
 Type=Application
 Categories=GTK;AudioVideo
-MimeType=video/mpeg;video/x-mpeg;video/x-avi;application/x-flash-video;application/x-shockwave-flash;video/flv
+#MimeType=video/mpeg;video/x-mpeg;video/x-avi;application/x-flash-video;application/x-shockwave-flash;video/flv
