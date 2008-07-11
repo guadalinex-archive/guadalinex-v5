@@ -54,19 +54,35 @@ apps=[
 	"ubiquity",
         "usplash-theme-guadalinex",
         "vodafone-mobile-connect-card-driver-for-linux",
+        "accesibility-profiles",
+        "gedit-plugin-tloleo",
+        "gnome-panel",
+        "gnome-system-tools",
+        "gnome-volume-manager",
+        "gru",
+        "grubaker",
+        "guada-ubiquity",
+        "informe-diagnostico",
+        "mount-systray",
+        "opensc",
+        "sun-java6-6-06",
+        "watermain",
 ]
 
 # Lista de nombre de los metapkgs. El nombre debe coincidir con la rama de 
 # subversion que contiene el metapkg. La inclusión en esta lista de un nuevo 
 # metapkg hace que buildbot lo gestione automáticamente.
 metapkgs = [
+	"guadalinex-about",
         "guadalinex-artwork",
         "guadalinex-desktop",
         "guadalinex-desktop-conf",
+	"guadalinex-example-content",
         "guadalinex-minimal",
         "guadalinex-minimal-conf",
         "guadalinex-standard",
         "guadalinex-standard-conf",
+	"guadalinex-user-manual",
         "meta-guadalinex-v5",
         "suplemento-dvd-gv5",
         "suplemento-gv5-desarrollo",
