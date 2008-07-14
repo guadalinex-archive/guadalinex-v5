@@ -1,3 +1,10 @@
+migration-assistant (0.6.3) hardy-proposed; urgency=low
+
+  * More efficient and less error-prone device substring extraction.
+  * Set the locale to C when using expr (LP: #222690).
+
+ -- Evan Dandrea <evand@ubuntu.com>  Thu, 29 May 2008 12:20:35 -0400
+
 migration-assistant (0.6.1) hardy; urgency=low
 
   * Use + instead of : for a replacement character as it is explicitly

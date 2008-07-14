@@ -10,13 +10,13 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: Source: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2008-04-14 20:32-0400\n"
-"PO-Revision-Date: 2007-11-05 17:23+0000\n"
+"PO-Revision-Date: 2008-05-22 16:53+0000\n"
 "Last-Translator: Yannig MARCHEGAY (Kokoyaya) <yannig@marchegay.org>\n"
 "Language-Team: Occitan (post 1500) <ubuntu-l10n-oci@lists.ubuntu.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-04-21 21:56+0000\n"
+"X-Launchpad-Export-Date: 2008-06-02 15:35+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. Type: text
@@ -235,6 +235,8 @@ msgid ""
 "Select any accounts you would like to import.  The documents and settings "
 "for these accounts will be available after the install completes."
 msgstr ""
+"Seleccionatz lo(s) compte(s) que volètz importar. Los documents e paramètres "
+"d'aqueste(s) compte(s) seràn disponibles tre la fin de l'installacion."
 
 #. Type: text
 #. Description
@@ -368,14 +370,14 @@ msgstr ""
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:46001
 msgid "New partition table"
-msgstr ""
+msgstr "Taula de particion novèla"
 
 #. Type: text
 #. Description
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:47001
 msgid "New partition"
-msgstr ""
+msgstr "Particion novèla"
 
 #. Type: text
 #. Description
@@ -391,14 +393,14 @@ msgstr "Modificar la particion"
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:49001
 msgid "Delete partition"
-msgstr ""
+msgstr "Suprimir la particion"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:50001
 msgid "Device"
-msgstr ""
+msgstr "Periferic"
 
 #. Type: text
 #. Description
@@ -406,14 +408,14 @@ msgstr ""
 #. used (ext2, swap, etc.).
 #: ../ubiquity.templates:51001
 msgid "Type"
-msgstr ""
+msgstr "Tipe"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:52001
 msgid "Mount point"
-msgstr ""
+msgstr "Punt de montatge"
 
 #. Type: text
 #. Description
@@ -427,7 +429,7 @@ msgstr ""
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:54001
 msgid "Size"
-msgstr ""
+msgstr "Talha"
 
 #. Type: text
 #. Description
@@ -435,21 +437,21 @@ msgstr ""
 #. this partition is used by data.
 #: ../ubiquity.templates:55001
 msgid "Used"
-msgstr ""
+msgstr "Utilizat"
 
 #. Type: text
 #. Description
 #. Indicates unpartitioned free space on a disk.
 #: ../ubiquity.templates:56001
 msgid "free space"
-msgstr ""
+msgstr "espaci liure"
 
 #. Type: text
 #. Description
 #. Indicates that we do not know how much space is used on this partition.
 #: ../ubiquity.templates:57001
 msgid "unknown"
-msgstr ""
+msgstr "desconegut"
 
 #. Type: text
 #. Description
@@ -541,7 +543,7 @@ msgstr ""
 #. Description
 #: ../ubiquity.templates:74001
 msgid "Port:"
-msgstr ""
+msgstr "Pòrt :"
 
 #. Type: text
 #. Description
@@ -576,6 +578,8 @@ msgid ""
 "Installation is complete. You need to restart the computer in order to use "
 "the new installation."
 msgstr ""
+"L'installacion es acabada. Debètz tornar aviar l'ordenador per utilizar lo "
+"sistèma installat novèl."
 
 #. Type: note
 #. Description
@@ -637,7 +641,7 @@ msgstr "Còpia de fichièrs (mens d'una minuta restanta)..."
 #. Description
 #: ../ubiquity.templates:87001
 msgid "Failed to copy files; out of disk space."
-msgstr ""
+msgstr "Error al moment de copiar de fichièr ; espaci disc insufisent."
 
 #. Type: error
 #. Description
@@ -1426,7 +1430,7 @@ msgstr ""
 #: ../ubiquity-frontend-mythbuntu.templates:55001
 #: ../ubiquity-frontend-mythbuntu.templates:56001
 msgid "Enable/Disable All"
-msgstr ""
+msgstr "Tot activar/desactivar"
 
 #. Type: text
 #. Description

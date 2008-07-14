@@ -254,6 +254,7 @@
   </widget>
   <widget class="GtkWindow" id="debconf_progress_window">
     <property name="border_width">12</property>
+    <property name="deletable">False</property>
     <property name="title">Progress bar title</property>
     <property name="resizable">False</property>
     <property name="modal">True</property>

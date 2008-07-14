@@ -7,14 +7,17 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: Source: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2008-04-14 20:32-0400\n"
-"PO-Revision-Date: 2008-04-10 10:49+0000\n"
-"Last-Translator: Tomasz Dominikowski <dominikowski@gmail.com>\n"
+"PO-Revision-Date: 2008-06-03 11:01+0000\n"
+"Last-Translator: Piotr Zaryk (Aviary.pl) <Unknown>\n"
 "Language-Team: Polish <pddp@debian.linux.org.pl>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-04-21 21:56+0000\n"
+"X-Launchpad-Export-Date: 2008-06-19 18:24+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
+"X-Poedit-Country: POLAND\n"
+"X-Poedit-Language: Polish\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #. Type: text
 #. Description
@@ -60,8 +63,8 @@ msgid ""
 "Please choose the language used for the installation process. This language "
 "will be the default language for the final system."
 msgstr ""
-"Proszę wybrać język używany podczas procesu instalacji. Ten język będzie "
-"domyślnym językiem dla ostatecznego systemu."
+"Proszę wybrać język procesu instalacji. Wybrany język będzie także domyślnym "
+"językiem zainstalowanego systemu."
 
 #. Type: text
 #. Description
@@ -83,8 +86,8 @@ msgid ""
 "If you have Internet access, read the release notes for information on "
 "problems that may affect you."
 msgstr ""
-"Jeśli masz dostęp do Internetu, przeczytaj informacje o wydaniu, aby "
-"pozyskać informacje na temat problemów, które mogą wpłynąć na twój system."
+"Jeśli jest dostęp do internetu, można zapoznać się z informacjami o wydaniu, "
+"aby dowiedzieć się o problemach, które mogą wystąpić na tym komputerze."
 
 #. Type: text
 #. Description
@@ -96,7 +99,7 @@ msgstr "Informacje o wydaniu"
 #. Description
 #: ../ubiquity.templates:9001
 msgid "Where are you?"
-msgstr "Gdzie się znajdujesz?"
+msgstr "Gdzie jesteś?"
 
 #. Type: text
 #. Description
@@ -127,7 +130,7 @@ msgstr "Strefa czasowa:"
 #. Description
 #: ../ubiquity.templates:13001
 msgid "Selected region:"
-msgstr "Proszę wybrać region:"
+msgstr "Wybrany rejon:"
 
 #. Type: text
 #. Description
@@ -308,7 +311,7 @@ msgstr "Porzucić instalację?"
 #. Description
 #: ../ubiquity.templates:38001
 msgid "Do you really want to abort the installation now?"
-msgstr "Natychmiast porzucić instalację?"
+msgstr "Czy natychmiast porzucić instalację?"
 
 #. Type: text
 #. Description
@@ -365,14 +368,14 @@ msgstr ""
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:46001
 msgid "New partition table"
-msgstr ""
+msgstr "Nowa tablica partycji"
 
 #. Type: text
 #. Description
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:47001
 msgid "New partition"
-msgstr ""
+msgstr "Nowa partycja"
 
 #. Type: text
 #. Description
@@ -388,14 +391,14 @@ msgstr "Modyfikuj partycję"
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:49001
 msgid "Delete partition"
-msgstr ""
+msgstr "Usuń partycję"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:50001
 msgid "Device"
-msgstr ""
+msgstr "Urządzenie"
 
 #. Type: text
 #. Description
@@ -403,28 +406,28 @@ msgstr ""
 #. used (ext2, swap, etc.).
 #: ../ubiquity.templates:51001
 msgid "Type"
-msgstr ""
+msgstr "Rodzaj"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:52001
 msgid "Mount point"
-msgstr ""
+msgstr "Punkt montowania"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:53001
 msgid "Format?"
-msgstr ""
+msgstr "Formatować?"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:54001
 msgid "Size"
-msgstr ""
+msgstr "Rozmiar"
 
 #. Type: text
 #. Description
@@ -432,21 +435,21 @@ msgstr ""
 #. this partition is used by data.
 #: ../ubiquity.templates:55001
 msgid "Used"
-msgstr ""
+msgstr "Zajęte"
 
 #. Type: text
 #. Description
 #. Indicates unpartitioned free space on a disk.
 #: ../ubiquity.templates:56001
 msgid "free space"
-msgstr ""
+msgstr "dostępna przestrzeń"
 
 #. Type: text
 #. Description
 #. Indicates that we do not know how much space is used on this partition.
 #: ../ubiquity.templates:57001
 msgid "unknown"
-msgstr ""
+msgstr "nieznane"
 
 #. Type: text
 #. Description
@@ -460,7 +463,7 @@ msgstr "Utwórz patrycję"
 #. Description
 #: ../ubiquity.templates:59001 ../ubiquity.templates:66001
 msgid "New partition size in megabytes (1000000 bytes):"
-msgstr "Rozmiar nowej partycji w megabajtach (1000000 bajtów)"
+msgstr "Rozmiar nowej partycji w megabajtach (1000000 bajtów):"
 
 #. Type: text
 #. Description

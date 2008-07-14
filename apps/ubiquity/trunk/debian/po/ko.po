@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: Source: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2008-04-14 20:32-0400\n"
-"PO-Revision-Date: 2008-04-08 15:32+0000\n"
-"Last-Translator: Sunjae Park <darehanl@gmail.com>\n"
+"PO-Revision-Date: 2008-06-14 01:49+0000\n"
+"Last-Translator: Inseok Lee <dlunch@gmail.com>\n"
 "Language-Team: Korean <debian-l10n-korean@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-04-21 21:59+0000\n"
+"X-Launchpad-Export-Date: 2008-06-19 18:27+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. Type: text
@@ -223,6 +223,8 @@ msgid ""
 "Select any accounts you would like to import.  The documents and settings "
 "for these accounts will be available after the install completes."
 msgstr ""
+"가져올 계정을 선택하십시오. 이 계정들의 문서와 설정들은 설치가 완료된 뒤에 확"
+"인할 수 있습니다."
 
 #. Type: text
 #. Description
@@ -354,14 +356,14 @@ msgstr ""
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:46001
 msgid "New partition table"
-msgstr ""
+msgstr "새 파티션 테이블"
 
 #. Type: text
 #. Description
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:47001
 msgid "New partition"
-msgstr ""
+msgstr "새 파티션"
 
 #. Type: text
 #. Description
@@ -377,14 +379,14 @@ msgstr "파티션 편집"
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:49001
 msgid "Delete partition"
-msgstr ""
+msgstr "파티션 삭제"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:50001
 msgid "Device"
-msgstr ""
+msgstr "장치"
 
 #. Type: text
 #. Description
@@ -392,28 +394,28 @@ msgstr ""
 #. used (ext2, swap, etc.).
 #: ../ubiquity.templates:51001
 msgid "Type"
-msgstr ""
+msgstr "타입"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:52001
 msgid "Mount point"
-msgstr ""
+msgstr "마운트 위치"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:53001
 msgid "Format?"
-msgstr ""
+msgstr "포맷?"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:54001
 msgid "Size"
-msgstr ""
+msgstr "용량"
 
 #. Type: text
 #. Description
@@ -421,21 +423,21 @@ msgstr ""
 #. this partition is used by data.
 #: ../ubiquity.templates:55001
 msgid "Used"
-msgstr ""
+msgstr "사용됨"
 
 #. Type: text
 #. Description
 #. Indicates unpartitioned free space on a disk.
 #: ../ubiquity.templates:56001
 msgid "free space"
-msgstr ""
+msgstr "남은 공간"
 
 #. Type: text
 #. Description
 #. Indicates that we do not know how much space is used on this partition.
 #: ../ubiquity.templates:57001
 msgid "unknown"
-msgstr ""
+msgstr "알 수 없음"
 
 #. Type: text
 #. Description
@@ -515,19 +517,19 @@ msgstr "패키지 사용에 관한 설문 참여"
 #. Description
 #: ../ubiquity.templates:72001
 msgid "Network proxy"
-msgstr ""
+msgstr "네트워크 프록시"
 
 #. Type: text
 #. Description
 #: ../ubiquity.templates:73001
 msgid "HTTP proxy:"
-msgstr ""
+msgstr "HTTP 프록시:"
 
 #. Type: text
 #. Description
 #: ../ubiquity.templates:74001
 msgid "Port:"
-msgstr ""
+msgstr "포트:"
 
 #. Type: text
 #. Description
@@ -564,8 +566,7 @@ msgid ""
 "the new installation."
 msgstr ""
 "설치가 완료되었습니다. 새로 설치된 프로그램을 사용하기 위해 컴퓨터를 다시 시"
-"작하십시오. 변경된 문서가 보존되지는 않지만, 현재 CD를 계속 사용할 수 있습니"
-"다."
+"작하십시오."
 
 #. Type: note
 #. Description
@@ -627,7 +628,7 @@ msgstr "파일을 복사중입니다. (일 분가량 남았습니다)..."
 #. Description
 #: ../ubiquity.templates:87001
 msgid "Failed to copy files; out of disk space."
-msgstr ""
+msgstr "디스크 공간이 부족합니다. 파일 복사에 실패했습니다."
 
 #. Type: error
 #. Description
@@ -650,6 +651,8 @@ msgid ""
 "install to complete on the target partition.  Please run the installer again "
 "and select a larger partition to install into."
 msgstr ""
+"대상 파티션의 디스크 공간이 부족하여 에러가 발생하였습니다. 설치 프로그램을 "
+"다시 실행하신 후 더 큰 파티션을 선택하시기 바랍니다."
 
 #. Type: error
 #. Description
@@ -721,13 +724,13 @@ msgstr ""
 #. Description
 #: ../ubiquity.templates:91001
 msgid "Failed to copy file; faulty CD/DVD or hard disk?"
-msgstr ""
+msgstr "하드 디스크나 CD/DVD의 오류로 인하여 파일 복사에 실패했습니다."
 
 #. Type: select
 #. Description
 #: ../ubiquity.templates:91001
 msgid "The following file did not match its source copy on the CD/DVD:"
-msgstr ""
+msgstr "다음 파일은 CD/DVD의 원본과 일치하지 않습니다:"
 
 #. Type: text
 #. Description
@@ -951,7 +954,7 @@ msgstr "설치 프로그램이 이 파티션들의 언마운트를 시도할까�
 #. Description
 #: ../ubiquity.templates:129001
 msgid "Do you want to return to the partitioner?"
-msgstr ""
+msgstr "파티션 프로그램으로 돌아가시겠습니까?"
 
 #. Type: boolean
 #. Description
@@ -960,6 +963,8 @@ msgid ""
 "Some of the partitions you created are too small.  Please make the following "
 "partitions at least this large (in bytes):"
 msgstr ""
+"만든 파티션 중 일부는 크기가 너무 작습니다. 다음 파티션의 크기를 최소한 다음"
+"의 크기(바이트)만큼 지정해 주십시오:"
 
 #. Type: boolean
 #. Description
@@ -968,6 +973,8 @@ msgid ""
 "If you do not go back to the partitioner and increase the size of these "
 "partitions, the installation may fail."
 msgstr ""
+"파티션 프로그램으로 돌아가지 않고 파티션의 크기를 늘리지 않는다면 설치는 실패"
+"할 것입니다."
 
 #. Type: note
 #. Description
@@ -1387,7 +1394,7 @@ msgstr ""
 #: ../ubiquity-frontend-mythbuntu.templates:55001
 #: ../ubiquity-frontend-mythbuntu.templates:56001
 msgid "Enable/Disable All"
-msgstr ""
+msgstr "모두 활성화/비활성화"
 
 #. Type: text
 #. Description
@@ -1548,4 +1555,4 @@ msgstr "추가적인 서비스를 설정하는 중입니다..."
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:78001
 msgid "Configuring infrared devices..."
-msgstr ""
+msgstr "적외선 장비를 설정하고 있습니다..."

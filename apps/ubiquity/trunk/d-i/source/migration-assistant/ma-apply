@@ -19,11 +19,11 @@ IFS="$NEWLINE"
 selection=`echo "$RET" | sed -e 's/, /\n/g'`
 for choice in $selection; do # Microsoft Windows XP Professional (/dev/hda1)
     IFS="$OLDIFS"
-    location=`expr "$choice" : '.*(\(.*\))'` # /dev/hda1
+    location=$(LC_ALL=C expr "$choice" : '.*(\(.*\))') # /dev/hda1
     IFS="$NEWLINE"
     for line in `os-prober`; do
         IFS="$OLDIFS"
-        loc=$(expr match "$line" '\(.*\):.*:.*:.*')
+        loc="${line%%:*}"
         if [ "$location" != "$loc" ]; then
             continue
         fi

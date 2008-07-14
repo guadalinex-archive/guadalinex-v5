@@ -21,7 +21,7 @@ set_os_type () {
 	return 0
     fi
     
-    case `expr match "$1" '.*:.*:\(.*\):.*'` in
+    case `LC_ALL=C expr match "$1" '.*:.*:\(.*\):.*'` in
 	"Windows" )
 	ostype="windowsxp"
         return 0

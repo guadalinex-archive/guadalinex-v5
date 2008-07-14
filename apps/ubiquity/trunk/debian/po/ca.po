@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: Source: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2008-04-14 20:32-0400\n"
-"PO-Revision-Date: 2008-04-11 10:30+0000\n"
-"Last-Translator: David Planella <Unknown>\n"
+"PO-Revision-Date: 2008-06-09 18:03+0000\n"
+"Last-Translator: Jordi Mallach <jordi@canonical.com>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-04-21 21:56+0000\n"
+"X-Launchpad-Export-Date: 2008-06-19 18:24+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. Type: text
@@ -43,10 +43,10 @@ msgid ""
 "CD can be installed on this computer so you can run the system at full speed "
 "and without the CD."
 msgstr ""
-"Esteu preparats per a instal·lar? Una vegada hageu contestat a unes poquesp "
-"reguntes, es poden instal·lar els continguts del CD autònom en aquest "
-"ordinador per a que pogueu iniciar el sistema a la velocitat normal i sense "
-"el CD."
+"Esteu a punt per a iniciar la instal·lació? Un cop hàgiu contestat a unes "
+"poques preguntes, es podran instal·lar els continguts del CD autònom en "
+"aquest ordinador, de manera que pugueu iniciar el sistema a la velocitat "
+"normal i sense el CD."
 
 #. Type: text
 #. Description
@@ -232,6 +232,9 @@ msgid ""
 "Select any accounts you would like to import.  The documents and settings "
 "for these accounts will be available after the install completes."
 msgstr ""
+"Seleccioneu qualsevol compte que vulgueu importar. Els documents i la "
+"configuració d'aquests estaran disponibles un cop finalitzada la "
+"instal·lació."
 
 #. Type: text
 #. Description
@@ -364,14 +367,14 @@ msgstr ""
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:46001
 msgid "New partition table"
-msgstr ""
+msgstr "Taula de particions nova"
 
 #. Type: text
 #. Description
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:47001
 msgid "New partition"
-msgstr ""
+msgstr "Partició nova"
 
 #. Type: text
 #. Description
@@ -387,14 +390,14 @@ msgstr "Edita la partició"
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:49001
 msgid "Delete partition"
-msgstr ""
+msgstr "Suprimeix la partició"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:50001
 msgid "Device"
-msgstr ""
+msgstr "Dispositiu"
 
 #. Type: text
 #. Description
@@ -402,28 +405,28 @@ msgstr ""
 #. used (ext2, swap, etc.).
 #: ../ubiquity.templates:51001
 msgid "Type"
-msgstr ""
+msgstr "Tipus"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:52001
 msgid "Mount point"
-msgstr ""
+msgstr "Punt de muntatge"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:53001
 msgid "Format?"
-msgstr ""
+msgstr "A formatar?"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:54001
 msgid "Size"
-msgstr ""
+msgstr "Mida"
 
 #. Type: text
 #. Description
@@ -431,21 +434,21 @@ msgstr ""
 #. this partition is used by data.
 #: ../ubiquity.templates:55001
 msgid "Used"
-msgstr ""
+msgstr "En ús"
 
 #. Type: text
 #. Description
 #. Indicates unpartitioned free space on a disk.
 #: ../ubiquity.templates:56001
 msgid "free space"
-msgstr ""
+msgstr "espai lliure"
 
 #. Type: text
 #. Description
 #. Indicates that we do not know how much space is used on this partition.
 #: ../ubiquity.templates:57001
 msgid "unknown"
-msgstr ""
+msgstr "desconegut"
 
 #. Type: text
 #. Description
@@ -569,15 +572,12 @@ msgstr "Continua"
 #. Type: text
 #. Description
 #: ../ubiquity.templates:78001
-#, fuzzy
 msgid ""
 "Installation is complete. You need to restart the computer in order to use "
 "the new installation."
 msgstr ""
 "S'ha completat la instal·lació. Heu de tornar a iniciar l'ordinador per a "
-"utilitzar la instal·lació nova. Podeu continuar utilitzant aquest CD "
-"autònom, tot i que qualsevol canvi que feu els documents que deseu no es "
-"preservaran."
+"utilitzar la instal·lació nova."
 
 #. Type: note
 #. Description
@@ -663,6 +663,10 @@ msgid ""
 "install to complete on the target partition.  Please run the installer again "
 "and select a larger partition to install into."
 msgstr ""
+"Aquest error és degut al fet que no hi ha prou espai de disc a la partició "
+"de destinació, amb la qual cosa la instal·lació no es pot completar. Hauríeu "
+"d'executar l'instal·lador de nou i seleccionar una partició més grossa on "
+"dur a terme la instal·lació."
 
 #. Type: error
 #. Description
@@ -747,7 +751,7 @@ msgstr ""
 #. Description
 #: ../ubiquity.templates:91001
 msgid "The following file did not match its source copy on the CD/DVD:"
-msgstr ""
+msgstr "El fitxer següent no coincideix amb el seu original en el CD/DVD:"
 
 #. Type: text
 #. Description
@@ -985,6 +989,8 @@ msgid ""
 "Some of the partitions you created are too small.  Please make the following "
 "partitions at least this large (in bytes):"
 msgstr ""
+"Algunes de les particions que heu creat són massa petites. Hauríeu "
+"d'engrandir les particions següents com a mínim a aquesta mida (en bytes):"
 
 #. Type: boolean
 #. Description
@@ -993,6 +999,8 @@ msgid ""
 "If you do not go back to the partitioner and increase the size of these "
 "partitions, the installation may fail."
 msgstr ""
+"Si no torneu al partidor i incrementeu la mida d'aquestes particions, pot "
+"ser que falli la instal·lació."
 
 #. Type: note
 #. Description
@@ -1248,13 +1256,13 @@ msgstr "Controls del Myth"
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:30001
 msgid "Myth Movies"
-msgstr ""
+msgstr "Pel.lícules del Myth"
 
 #. Type: text
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:31001
 msgid "Myth Flix"
-msgstr "Pel·lícules del Myth"
+msgstr "Myth Flix"
 
 #. Type: text
 #. Description
@@ -1334,7 +1342,7 @@ msgstr ""
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:43001
 msgid "Find movies playing in nearby local cinemas"
-msgstr ""
+msgstr "Cerca pel·lícules de la cartellera dels cinemes locals propers"
 
 #. Type: text
 #. Description
@@ -1417,6 +1425,8 @@ msgid ""
 "Themes can greatly improve the aesthetic appeal of a MythTV setup, and "
 "display it to match your tastes much better."
 msgstr ""
+"Els temes permeten millorar de manera considerable l'aparença estètica del "
+"MythTV i adequar-la al vostres gustos."
 
 #. Type: text
 #. Description
@@ -1425,7 +1435,7 @@ msgstr ""
 #: ../ubiquity-frontend-mythbuntu.templates:55001
 #: ../ubiquity-frontend-mythbuntu.templates:56001
 msgid "Enable/Disable All"
-msgstr ""
+msgstr "Habilita-ho/inhabilita-ho tot"
 
 #. Type: text
 #. Description
@@ -1592,4 +1602,4 @@ msgstr "S'estan configurant els serveis addicionals..."
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:78001
 msgid "Configuring infrared devices..."
-msgstr ""
+msgstr "S'estan configurant els dispositius d'infrarojos"

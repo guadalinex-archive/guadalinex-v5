@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: Source: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2008-04-14 20:32-0400\n"
-"PO-Revision-Date: 2008-04-08 16:18+0000\n"
+"PO-Revision-Date: 2008-06-09 18:06+0000\n"
 "Last-Translator: Kartik Mistry <Unknown>\n"
 "Language-Team: Gujarati <team@utkarsh.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-04-21 21:59+0000\n"
+"X-Launchpad-Export-Date: 2008-06-19 18:27+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. Type: text
@@ -148,8 +148,9 @@ msgstr "તમે કોણ છો?"
 #. Type: text
 #. Description
 #: ../ubiquity.templates:19001
+#, fuzzy
 msgid "What is your name?"
-msgstr "તમારુ નામ શું છે?"
+msgstr "તમારું નામ શું છે?"
 
 #. Type: text
 #. Description
@@ -741,9 +742,8 @@ msgstr "ખાતુ બનાવાઇ રહ્યુ છે..."
 #. Type: text
 #. Description
 #: ../ubiquity.templates:99001
-#, fuzzy
 msgid "Importing documents and settings..."
-msgstr "ચોપડા અને ગોઠવણીઓ સંગ્રહી રહ્યા છીએ ..."
+msgstr "દસ્તાવેજો અને સંયોજનો આયાત કરી રહ્યા છીએ ..."
 
 #. Type: text
 #. Description
@@ -755,7 +755,7 @@ msgstr "હાર્ડવેર રૂપરેખાંકિત થઇ રહ
 #. Description
 #: ../ubiquity.templates:101001
 msgid "Configuring network..."
-msgstr "નેટવર્ક રૂપરેખાંકિત થઇ રહ્યુ છે..."
+msgstr "નેટવર્ક રૂપરેખાંકિત થઇ રહ્યું છે..."
 
 #. Type: text
 #. Description

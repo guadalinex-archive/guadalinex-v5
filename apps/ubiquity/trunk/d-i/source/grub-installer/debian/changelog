@@ -1,3 +1,10 @@
+grub-installer (1.27ubuntu8) hardy-proposed; urgency=low
+
+  * Let grub automatically detect the boot device when using Wubi
+    (LP: #217348).
+
+ -- Evan Dandrea <evand@ubuntu.com>  Fri, 02 May 2008 12:51:15 -0400
+
 grub-installer (1.27ubuntu7) hardy; urgency=low
 
   [ Colin Watson ]

@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: Source: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2008-04-14 20:32-0400\n"
-"PO-Revision-Date: 2008-04-08 13:43+0000\n"
+"PO-Revision-Date: 2008-06-09 18:38+0000\n"
 "Last-Translator: Mouhamadou Mamoune Mbacke <Unknown>\n"
 "Language-Team: Wolof <debian-boot@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-04-21 21:58+0000\n"
+"X-Launchpad-Export-Date: 2008-06-19 18:26+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. Type: text
@@ -201,7 +201,7 @@ msgstr ""
 #. Description
 #: ../ubiquity.templates:22001
 msgid "Choose a password to keep your account safe."
-msgstr ""
+msgstr "Tanal mot de pass ndax sa cont woor"
 
 #. Type: text
 #. Description
@@ -214,13 +214,13 @@ msgstr ""
 #: ../ubiquity.templates:24001
 msgid ""
 "Enter the same password twice, so that it can be checked for typing errors."
-msgstr ""
+msgstr "Bindal niari yoon sa mot de passe bi ndax niou meuneu kham ndax juumo"
 
 #. Type: text
 #. Description
 #: ../ubiquity.templates:25001
 msgid "What is the name of this computer?"
-msgstr ""
+msgstr "Louy tourou ordinateur bi?"
 
 #. Type: text
 #. Description
@@ -228,13 +228,13 @@ msgstr ""
 msgid ""
 "This name will be used if you make the computer visible to others on a "
 "network."
-msgstr ""
+msgstr "Tour bou ñeneen ñi di guiss si réso bi"
 
 #. Type: text
 #. Description
 #: ../ubiquity.templates:27001
 msgid "Migrate Documents and Settings"
-msgstr ""
+msgstr "Tokhalal say documents ak say beugeu beugeu"
 
 #. Type: text
 #. Description
@@ -251,6 +251,7 @@ msgid ""
 "If you do not wish to import any accounts, select nothing and go to the next "
 "page."
 msgstr ""
+"Bo beugoul tokhalal ay compte, boul tann dara te dem si page bi ci topp."
 
 #. Type: text
 #. Description
@@ -287,7 +288,7 @@ msgstr "kernel bi nuy istale:"
 #: ../ubiquity.templates:33001
 msgid ""
 "Your new operating system will now be installed with the following settings:"
-msgstr ""
+msgstr "Sa sistem bu bess bi di na instalé wu ak  sey beugeu beugeu yi :"
 
 #. Type: text
 #. Description
@@ -345,7 +346,7 @@ msgstr ""
 #. Description
 #: ../ubiquity.templates:42001
 msgid "Restart now"
-msgstr ""
+msgstr "Taalat legui"
 
 #. Type: text
 #. Description

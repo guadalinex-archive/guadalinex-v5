@@ -928,6 +928,7 @@ class Wizard(BaseFrontend):
         self.allow_change_step(False)
 
         self.backup = True
+        self.stay_on_page = False
 
         # Enabling next button
         self.allow_go_forward(True)
@@ -2585,9 +2586,7 @@ class ResizeWidget(QWidget):
 
     def _update_min(self):
         total = self.new_os.width() + self.old_os.width()
-        # The minimum percent needs to be 1% greater than the value debconf
-        # feeds us, otherwise the resize will fail.
-        tmp = (self.min_size / self.part_size) + 0.01
+        tmp = self.min_size / self.part_size
         pixels = int(tmp * total)
         self.old_os.setMinimumWidth(pixels)
 

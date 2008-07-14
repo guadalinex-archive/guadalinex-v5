@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: Source: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2008-04-14 20:32-0400\n"
-"PO-Revision-Date: 2008-04-08 14:23+0000\n"
-"Last-Translator: Arief S Fitrianto <Unknown>\n"
+"PO-Revision-Date: 2008-06-16 10:29+0000\n"
+"Last-Translator: Cecep Mahbub <cecep.mahbub@gmail.com>\n"
 "Language-Team: Debian Indonesia Team <debian-l10n-id@gurame.fisika.ui.ac."
 "id>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-04-21 21:59+0000\n"
+"X-Launchpad-Export-Date: 2008-06-19 18:27+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. Type: text
@@ -234,6 +234,8 @@ msgid ""
 "Select any accounts you would like to import.  The documents and settings "
 "for these accounts will be available after the install completes."
 msgstr ""
+"Pilih sebarang akun yang ingin diimpor. Dokumen-dokumen dan pengaturan-"
+"pengaturan bagi akun-akun ini akan tersedia setelah pemasangan selesai."
 
 #. Type: text
 #. Description
@@ -367,14 +369,14 @@ msgstr ""
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:46001
 msgid "New partition table"
-msgstr ""
+msgstr "Daftar Partisi Baru"
 
 #. Type: text
 #. Description
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:47001
 msgid "New partition"
-msgstr ""
+msgstr "Partisi Baru"
 
 #. Type: text
 #. Description
@@ -390,14 +392,14 @@ msgstr "Sunting partisi"
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:49001
 msgid "Delete partition"
-msgstr ""
+msgstr "Hapus Partisi"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:50001
 msgid "Device"
-msgstr ""
+msgstr "Perangkat"
 
 #. Type: text
 #. Description
@@ -405,28 +407,28 @@ msgstr ""
 #. used (ext2, swap, etc.).
 #: ../ubiquity.templates:51001
 msgid "Type"
-msgstr ""
+msgstr "Jenis"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:52001
 msgid "Mount point"
-msgstr ""
+msgstr "Titik kait"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:53001
 msgid "Format?"
-msgstr ""
+msgstr "Format?"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:54001
 msgid "Size"
-msgstr ""
+msgstr "Ukuran"
 
 #. Type: text
 #. Description
@@ -434,21 +436,21 @@ msgstr ""
 #. this partition is used by data.
 #: ../ubiquity.templates:55001
 msgid "Used"
-msgstr ""
+msgstr "Terpakai"
 
 #. Type: text
 #. Description
 #. Indicates unpartitioned free space on a disk.
 #: ../ubiquity.templates:56001
 msgid "free space"
-msgstr ""
+msgstr "ruang bebas"
 
 #. Type: text
 #. Description
 #. Indicates that we do not know how much space is used on this partition.
 #: ../ubiquity.templates:57001
 msgid "unknown"
-msgstr ""
+msgstr "Tidak Diketahui"
 
 #. Type: text
 #. Description
@@ -528,19 +530,19 @@ msgstr "Berpartisipasi dalam survey penggunaan paket"
 #. Description
 #: ../ubiquity.templates:72001
 msgid "Network proxy"
-msgstr ""
+msgstr "Proxy jaringan"
 
 #. Type: text
 #. Description
 #: ../ubiquity.templates:73001
 msgid "HTTP proxy:"
-msgstr ""
+msgstr "Proxy HTTP:"
 
 #. Type: text
 #. Description
 #: ../ubiquity.templates:74001
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 #. Type: text
 #. Description
@@ -572,15 +574,12 @@ msgstr "Teruskan"
 #. Type: text
 #. Description
 #: ../ubiquity.templates:78001
-#, fuzzy
 msgid ""
 "Installation is complete. You need to restart the computer in order to use "
 "the new installation."
 msgstr ""
 "Instalasi telah selesai. Anda perlu melakukan restart komputer ini agar "
-"dapat menggunakan instalasi baru tersebut. Anda dapat melanjutkan "
-"menggunakan live CD ini, walaupun setiap perubahan yang anda buat atau "
-"dokumen yang anda simpan tidak akan disimpan secara permanen."
+"dapat menggunakan instalasi baru tersebut."
 
 #. Type: note
 #. Description
@@ -642,7 +641,7 @@ msgstr "Menyalin berkas (kurang dari satu menit lagi)..."
 #. Description
 #: ../ubiquity.templates:87001
 msgid "Failed to copy files; out of disk space."
-msgstr ""
+msgstr "Gagal menyalin berkas; hard disk penuh."
 
 #. Type: error
 #. Description
@@ -665,6 +664,9 @@ msgid ""
 "install to complete on the target partition.  Please run the installer again "
 "and select a larger partition to install into."
 msgstr ""
+"Kesalahan ini karena sisa ruang hard disk tidak cukup bagi pemasangan sampai "
+"selesai pada partisi target. Silahkan jalankan pemasang lagi dan pilihlah "
+"partisi yang lebih besar sebagian tujuan pemasangan."
 
 #. Type: error
 #. Description
@@ -736,13 +738,13 @@ msgstr ""
 #. Description
 #: ../ubiquity.templates:91001
 msgid "Failed to copy file; faulty CD/DVD or hard disk?"
-msgstr ""
+msgstr "Gagal menyalin berkas; CD/DVD atau hard disk rusak?"
 
 #. Type: select
 #. Description
 #: ../ubiquity.templates:91001
 msgid "The following file did not match its source copy on the CD/DVD:"
-msgstr ""
+msgstr "Berkas berikut tidak cocok dengan sumbernya di CD/DVD."
 
 #. Type: text
 #. Description
@@ -972,8 +974,9 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../ubiquity.templates:129001
+#, fuzzy
 msgid "Do you want to return to the partitioner?"
-msgstr ""
+msgstr "Apakah anda ingin kembali ke pemartisi?"
 
 #. Type: boolean
 #. Description
@@ -982,6 +985,8 @@ msgid ""
 "Some of the partitions you created are too small.  Please make the following "
 "partitions at least this large (in bytes):"
 msgstr ""
+"Beberapa partisi yang anda buat terlalu kecil. Pastikan bahwa anda membuat "
+"partisi sekurang-kurangnya sebesar (dalam byte):"
 
 #. Type: boolean
 #. Description
@@ -990,6 +995,8 @@ msgid ""
 "If you do not go back to the partitioner and increase the size of these "
 "partitions, the installation may fail."
 msgstr ""
+"Jika anda tidak ingin kembali dalam pemartisi dan menambah ukuran partisi "
+"ini, instalasi mungkin gagal."
 
 #. Type: note
 #. Description
@@ -1246,7 +1253,7 @@ msgstr "Pengendali Myth"
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:30001
 msgid "Myth Movies"
-msgstr ""
+msgstr "Film Myth"
 
 #. Type: text
 #. Description
@@ -1332,7 +1339,7 @@ msgstr ""
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:43001
 msgid "Find movies playing in nearby local cinemas"
-msgstr ""
+msgstr "Cari film yang diputar di bioskop lokal terdekat"
 
 #. Type: text
 #. Description
@@ -1419,6 +1426,8 @@ msgid ""
 "Themes can greatly improve the aesthetic appeal of a MythTV setup, and "
 "display it to match your tastes much better."
 msgstr ""
+"Tema bisa sangat meningkatkan estetis dari pengaturan MythTV, dan "
+"menampilkannya sesuai dengan selera anda yang jauh lebih lebih baik."
 
 #. Type: text
 #. Description
@@ -1427,7 +1436,7 @@ msgstr ""
 #: ../ubiquity-frontend-mythbuntu.templates:55001
 #: ../ubiquity-frontend-mythbuntu.templates:56001
 msgid "Enable/Disable All"
-msgstr ""
+msgstr "Aktifkan/Non-Aktifkan semua"
 
 #. Type: text
 #. Description
@@ -1593,4 +1602,4 @@ msgstr "Sedang mengkonfigurasi layanan tambahan..."
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:78001
 msgid "Configuring infrared devices..."
-msgstr ""
+msgstr "Mengatur peralatan infra merah"

@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: Source: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2008-04-14 20:32-0400\n"
-"PO-Revision-Date: 2008-04-08 15:59+0000\n"
+"PO-Revision-Date: 2008-06-09 18:10+0000\n"
 "Last-Translator: Bjørn Steensrud <Unknown>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-04-21 21:58+0000\n"
+"X-Launchpad-Export-Date: 2008-06-19 18:25+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. Type: text
@@ -21,7 +21,7 @@ msgstr ""
 #. This is used as a window title.
 #: ../ubiquity.templates:2001
 msgid "Install"
-msgstr "Installér"
+msgstr "Installer"
 
 #. Type: text
 #. Description
@@ -149,7 +149,7 @@ msgstr "Hvilken oppsett er mest likt ditt tastatur?"
 #. Description
 #: ../ubiquity.templates:17001
 msgid "You can type into this box to test your new keyboard layout."
-msgstr "Her kan du skriva for å testa tastaturoppsettet."
+msgstr "Her kan du skrive for å teste tastaturoppsettet."
 
 #. Type: text
 #. Description
@@ -226,6 +226,8 @@ msgid ""
 "Select any accounts you would like to import.  The documents and settings "
 "for these accounts will be available after the install completes."
 msgstr ""
+"Velg brukerkontoer du ønsker å importere. Dokumenter og instillinger for "
+"disse vil være tilgjengelige etter at installasjonen er fullført."
 
 #. Type: text
 #. Description
@@ -520,19 +522,19 @@ msgstr "Delta i brukerundersøkelsen"
 #. Description
 #: ../ubiquity.templates:72001
 msgid "Network proxy"
-msgstr ""
+msgstr "Nettverksproxy"
 
 #. Type: text
 #. Description
 #: ../ubiquity.templates:73001
 msgid "HTTP proxy:"
-msgstr ""
+msgstr "HTTP-proxy:"
 
 #. Type: text
 #. Description
 #: ../ubiquity.templates:74001
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 #. Type: text
 #. Description
@@ -563,14 +565,12 @@ msgstr "Fortsett"
 #. Type: text
 #. Description
 #: ../ubiquity.templates:78001
-#, fuzzy
 msgid ""
 "Installation is complete. You need to restart the computer in order to use "
 "the new installation."
 msgstr ""
 "Installasjonen er fullført. Du må starte datamaskinen på nytt for å bruke "
-"den nye installasjonen. Du kan fortsette å bruke denne live CD'en, men ingen "
-"endringer du gjør eller dokumenter du lagrer vil ikke bli bevart."
+"den nye installasjonen."
 
 #. Type: note
 #. Description
@@ -632,7 +632,7 @@ msgstr "Kopierer filer (mindre enn ett minutt igjen)..."
 #. Description
 #: ../ubiquity.templates:87001
 msgid "Failed to copy files; out of disk space."
-msgstr ""
+msgstr "Filkopieringen feilet grunnet for lite diskplass."
 
 #. Type: error
 #. Description
@@ -656,6 +656,9 @@ msgid ""
 "install to complete on the target partition.  Please run the installer again "
 "and select a larger partition to install into."
 msgstr ""
+"Denne spesielle feilen skyldes at det er for lite diskplass til å fullføre "
+"installasjonen på den valgte partisjonen. Vennligst kjør installasjonen på "
+"nytt, og velg en større partisjon å installere på."
 
 #. Type: error
 #. Description
@@ -726,13 +729,13 @@ msgstr ""
 #. Description
 #: ../ubiquity.templates:91001
 msgid "Failed to copy file; faulty CD/DVD or hard disk?"
-msgstr ""
+msgstr "Filkopieringen feilet. Mulig feil på CD/DVD eller harddisk."
 
 #. Type: select
 #. Description
 #: ../ubiquity.templates:91001
 msgid "The following file did not match its source copy on the CD/DVD:"
-msgstr ""
+msgstr "Følgende fil tilsvarer ikke opprinnelig fil på CD/DVD:"
 
 #. Type: text
 #. Description
@@ -962,7 +965,7 @@ msgstr ""
 #. Description
 #: ../ubiquity.templates:129001
 msgid "Do you want to return to the partitioner?"
-msgstr ""
+msgstr "Ønsker du å gå tilbake til partisjoneringsprogrammet?"
 
 #. Type: boolean
 #. Description
@@ -971,6 +974,8 @@ msgid ""
 "Some of the partitions you created are too small.  Please make the following "
 "partitions at least this large (in bytes):"
 msgstr ""
+"Noen av partisjonene du har laget har for liten størrelse. Vennligst "
+"korriger følgende partisjoner til minst følgende størrelse (i bytes):"
 
 #. Type: boolean
 #. Description
@@ -979,6 +984,8 @@ msgid ""
 "If you do not go back to the partitioner and increase the size of these "
 "partitions, the installation may fail."
 msgstr ""
+"Hvis du ikke går tilbake til partisjoneringsprogrammet og øker størrelsen på "
+"disse partisjonene, vil installasjonen muligens feile."
 
 #. Type: note
 #. Description
@@ -1233,7 +1240,7 @@ msgstr "Myth-kontroller"
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:30001
 msgid "Myth Movies"
-msgstr ""
+msgstr "Myth Filmer"
 
 #. Type: text
 #. Description
@@ -1319,7 +1326,7 @@ msgstr ""
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:43001
 msgid "Find movies playing in nearby local cinemas"
-msgstr ""
+msgstr "Finn filmer som går på lokale kinoer"
 
 #. Type: text
 #. Description
@@ -1396,6 +1403,8 @@ msgid ""
 "Themes can greatly improve the aesthetic appeal of a MythTV setup, and "
 "display it to match your tastes much better."
 msgstr ""
+"Ulike temaer kan forbedre brukeropplevelsen av MythTV -oppsettet, og få "
+"utseendet til bedre å passe din smak."
 
 #. Type: text
 #. Description
@@ -1404,7 +1413,7 @@ msgstr ""
 #: ../ubiquity-frontend-mythbuntu.templates:55001
 #: ../ubiquity-frontend-mythbuntu.templates:56001
 msgid "Enable/Disable All"
-msgstr ""
+msgstr "Aktiver/Deaktiver alle"
 
 #. Type: text
 #. Description
@@ -1566,4 +1575,4 @@ msgstr "Konfigurerer tilleggstjenester..."
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:78001
 msgid "Configuring infrared devices..."
-msgstr ""
+msgstr "Konfigurerer infrarøde enheter..."

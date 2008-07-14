@@ -2,18 +2,19 @@
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
 #
+# Gabor Kelemen <kelemeng@gnome.hu>, 2007, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: Source: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2008-04-14 20:32-0400\n"
-"PO-Revision-Date: 2008-04-14 22:38+0000\n"
+"PO-Revision-Date: 2008-05-24 13:45+0000\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
-"Language-Team: Debian L10n Hungarian <debian-l10n-hungarian@lists.debian>\n"
+"Language-Team: Hungarian <gnome@fsf.hu>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-04-21 21:58+0000\n"
+"X-Launchpad-Export-Date: 2008-06-19 18:26+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. Type: text
@@ -43,9 +44,9 @@ msgid ""
 "CD can be installed on this computer so you can run the system at full speed "
 "and without the CD."
 msgstr ""
-"Készen áll a telepítésre? Néhány kérdés megválaszolásával elérheti, hogy a "
-"live CD tartalma a számítógépre kerüljön és teljes sebességgel, CD nélkül "
-"használhassa a rendszert."
+"Készen áll a telepítésre? Néhány kérdés megválaszolása után a live CD "
+"tartalma a számítógépre kerül és teljes sebességgel, CD nélkül használhatja "
+"a rendszert."
 
 #. Type: text
 #. Description
@@ -60,8 +61,8 @@ msgid ""
 "Please choose the language used for the installation process. This language "
 "will be the default language for the final system."
 msgstr ""
-"Válasszon nyelvet a telepítési folyamathoz. A választott nyelv lesz a "
-"végleges rendszer alapértelmezettje is."
+"Válassza ki a telepítés során használandó nyelvet. A kiválasztott nyelv "
+"egyben a végleges rendszer alapértelmezett nyelve is lesz."
 
 #. Type: text
 #. Description
@@ -82,8 +83,8 @@ msgid ""
 "If you have Internet access, read the release notes for information on "
 "problems that may affect you."
 msgstr ""
-"Ha van internet-hozzáférése, olvassa el a kiadási megjegyzéseket az "
-"esetlegesen Önt is érintő problémákról."
+"Ha van internet-hozzáférése, olvassa el a kiadási megjegyzéseket az esetleg "
+"Önt is érintő problémákról."
 
 #. Type: text
 #. Description
@@ -106,8 +107,8 @@ msgid ""
 "after rebooting into the installed system."
 msgstr ""
 "Válasszon egy várost az országnak és időzónának megfelelően. Ha a megfelelő "
-"időzóna kiválasztása után is helytelen a pillanatnyilag jelzett idő, akkor a "
-"telepített rendszer újraindítása után beállíthatja."
+"időzóna kiválasztása után is helytelen a pillanatnyilag jelzett idő, akkor "
+"azt a telepített rendszer újraindítása után beállíthatja."
 
 #. Type: text
 #. Description
@@ -125,7 +126,7 @@ msgstr "Időzóna:"
 #. Description
 #: ../ubiquity.templates:13001
 msgid "Selected region:"
-msgstr "Választott régió:"
+msgstr "Kiválasztott régió:"
 
 #. Type: text
 #. Description
@@ -190,7 +191,7 @@ msgstr "Válasszon jelszót, hogy biztonságban lehessen felhasználói fiókja.
 #. Description
 #: ../ubiquity.templates:23001
 msgid "You are running in debugging mode. Do not use a valuable password!"
-msgstr "A rendszer hibakereső módban fut! Ne használjon „értékes\" jelszót!"
+msgstr "A rendszer hibakereső módban fut! Ne használjon „értékes” jelszót!"
 
 #. Type: text
 #. Description
@@ -198,8 +199,7 @@ msgstr "A rendszer hibakereső módban fut! Ne használjon „értékes\" jelsz�
 msgid ""
 "Enter the same password twice, so that it can be checked for typing errors."
 msgstr ""
-"Írja be ugyanazt a jelszót kétszer, hogy ellenőrizhessük, nem vétett-e "
-"gépelési hibát."
+"Írja be ugyanazt a jelszót kétszer a gépelési hibák ellenőrzése érdekében."
 
 #. Type: text
 #. Description
@@ -275,7 +275,7 @@ msgstr "Készen áll a telepítésre"
 #: ../ubiquity.templates:33001
 msgid ""
 "Your new operating system will now be installed with the following settings:"
-msgstr "Az új operációs rendszer telepítésre kerül a következő beállításokkal:"
+msgstr "Az új operációs rendszer a következő beállításokkal kerül telepítésre:"
 
 #. Type: text
 #. Description
@@ -354,8 +354,8 @@ msgid ""
 msgstr ""
 "Elnézést, a telepítő összeomlott. Küldjön be egy új hibajelentést a https://"
 "launchpad.net/ubuntu/+source/ubiquity/+filebug oldalon (ne egy meglévő "
-"hibához csatolja), és amint lehetséges, egy fejlesztő megvizsgálja a "
-"problémát. A fejlesztők munkájának segítése érdekében vegye bele a következő "
+"hibához csatolja), és amint lehetséges egy fejlesztő megvizsgálja a "
+"problémát. A fejlesztők munkájának segítése érdekében vegye be a következő "
 "részleteket a hibajelentésbe és csatolja a /var/log/syslog és /var/log/"
 "partman fájlok tartalmát:"
 
@@ -364,14 +364,14 @@ msgstr ""
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:46001
 msgid "New partition table"
-msgstr ""
+msgstr "Új partíciós tábla"
 
 #. Type: text
 #. Description
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:47001
 msgid "New partition"
-msgstr ""
+msgstr "Új partíció"
 
 #. Type: text
 #. Description
@@ -387,14 +387,14 @@ msgstr "Partíció szerkesztése"
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:49001
 msgid "Delete partition"
-msgstr ""
+msgstr "Partíció törlése"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:50001
 msgid "Device"
-msgstr ""
+msgstr "Eszköz"
 
 #. Type: text
 #. Description
@@ -402,28 +402,28 @@ msgstr ""
 #. used (ext2, swap, etc.).
 #: ../ubiquity.templates:51001
 msgid "Type"
-msgstr ""
+msgstr "Típus"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:52001
 msgid "Mount point"
-msgstr ""
+msgstr "Csatolási pont"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:53001
 msgid "Format?"
-msgstr ""
+msgstr "Formázandó?"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:54001
 msgid "Size"
-msgstr ""
+msgstr "Méret"
 
 #. Type: text
 #. Description
@@ -431,21 +431,21 @@ msgstr ""
 #. this partition is used by data.
 #: ../ubiquity.templates:55001
 msgid "Used"
-msgstr ""
+msgstr "Használt"
 
 #. Type: text
 #. Description
 #. Indicates unpartitioned free space on a disk.
 #: ../ubiquity.templates:56001
 msgid "free space"
-msgstr ""
+msgstr "szabad terület"
 
 #. Type: text
 #. Description
 #. Indicates that we do not know how much space is used on this partition.
 #: ../ubiquity.templates:57001
 msgid "unknown"
-msgstr ""
+msgstr "ismeretlen"
 
 #. Type: text
 #. Description
@@ -519,7 +519,7 @@ msgstr "Népszerűségi verseny"
 #. Description
 #: ../ubiquity.templates:71001
 msgid "Participate in the package usage survey"
-msgstr "Vegyen részt a csomaghasználat-felmérésben"
+msgstr "Részvétel a csomaghasználat felmérésében"
 
 #. Type: text
 #. Description
@@ -563,7 +563,7 @@ msgstr "Vissza"
 #. Translators, this text will appear on a button, so KEEP IT SHORT
 #: ../ubiquity.templates:77001
 msgid "Continue"
-msgstr "Tovább"
+msgstr "Folytatás"
 
 #. Type: text
 #. Description
@@ -617,7 +617,7 @@ msgstr "A másolandó disztribúció keresése..."
 #. Description
 #: ../ubiquity.templates:84001
 msgid "Scanning files..."
-msgstr "Fájlok feldolgozása..."
+msgstr "Fájlok elemzése..."
 
 #. Type: text
 #. Description
@@ -648,7 +648,7 @@ msgstr "A fájlok másolása meghiúsult, elfogyott a lemezterület."
 #: ../ubiquity.templates:87001 ../ubiquity.templates:88001
 #: ../ubiquity.templates:89001 ../ubiquity.templates:90001
 msgid "The installer encountered an error copying files to the hard disk:"
-msgstr "A telepítő hibát észlelt a fájlok merevlemezre másolása közben."
+msgstr "A telepítő hibát észlelt a fájlok merevlemezre másolása során."
 
 #. Type: error
 #. Description
@@ -666,7 +666,7 @@ msgstr ""
 #. Description
 #: ../ubiquity.templates:88001
 msgid "Failed to copy files; faulty CD/DVD?"
-msgstr "A fájlok másolása meghiúsult, hibás a CD/DVD?"
+msgstr "A fájlok másolása meghiúsult. Lehet hogy hibás a CD/DVD?"
 
 #. Type: error
 #. Description
@@ -677,16 +677,16 @@ msgid ""
 "the CD/DVD drive lens (cleaning kits are often available from electronics "
 "suppliers)."
 msgstr ""
-"Ezt a hibát gyakran egy hibás CD/DVD lemez vagy meghajtó okozza. A CD/DVD "
-"megtisztítása, a CD/DVD alacsonyabb sebességen írása vagy a CD/DVD meghajtó "
-"lencséjének tisztítása (a legtöbb számítástechnikai üzletben kaphatók "
-"tisztítócsomagok) segíthet megoldani a problémát."
+"Ezt a hibát gyakran a hibás CD/DVD lemez vagy meghajtó okozza. A CD/DVD "
+"megtisztítása, a CD/DVD alacsonyabb sebességen történő írása vagy a CD/DVD "
+"meghajtó lencséjének tisztítása (a legtöbb számítástechnikai üzletben "
+"kaphatók tisztítócsomagok) segíthet megoldani a problémát."
 
 #. Type: error
 #. Description
 #: ../ubiquity.templates:89001
 msgid "Failed to copy files; faulty hard disk?"
-msgstr "A fájlok másolása meghiúsult, hibás a merevlemez?"
+msgstr "A fájlok másolása meghiúsult. Lehet hogy hibás a merevlemez?"
 
 #. Type: error
 #. Description
@@ -696,15 +696,16 @@ msgid ""
 "check whether the hard disk is old and in need of replacement, or to move "
 "the system to a cooler environment."
 msgstr ""
-"Ezt a hibát gyakran egy hibás merevlemez okozza. A probléma megoldásában "
+"Ezt a hibát gyakran a hibás merevlemez okozza. A probléma megoldásában "
 "segíthet a merevlemez ellenőrzése és esetleges cseréje, vagy a rendszer "
-"hűvösebb környezetbe helyezése."
+"hűvösebb környezetbe történő helyezése."
 
 #. Type: error
 #. Description
 #: ../ubiquity.templates:90001
 msgid "Failed to copy files; faulty CD/DVD or hard disk?"
-msgstr "A fájlok másolása meghiúsult, hibás a CD/DVD vagy merevlemez?"
+msgstr ""
+"A fájlok másolása meghiúsult. Lehet, hogy hibás a CD/DVD vagy a merevlemez?"
 
 #. Type: error
 #. Description
@@ -722,10 +723,10 @@ msgid ""
 "available from electronics suppliers), to check whether the hard disk is old "
 "and in need of replacement, or to move the system to a cooler environment."
 msgstr ""
-"Ezt a hibát gyakran egy hibás CD/DVD lemez vagy meghajtó, vagy hibás "
-"merevlemez okozza. A CD/DVD megtisztítása, a CD/DVD alacsonyabb sebességen "
+"Ezt a hibát gyakran a hibás CD/DVD vagy meghajtó, illetve hibás merevlemez "
+"okozza. A CD/DVD megtisztítása, a CD/DVD alacsonyabb sebességen történő "
 "írása vagy a CD/DVD meghajtó lencséjének tisztítása (a legtöbb "
-"számítástechnikai üzletben kaphatók tisztítócsomagok),  a merevlemez "
+"számítástechnikai üzletben kaphatók tisztítócsomagok), a merevlemez "
 "ellenőrzése és esetleges cseréje, vagy a rendszer hűvösebb környezetbe "
 "helyezése segíthet megoldani a problémát."
 
@@ -752,13 +753,13 @@ msgstr "Telepítési naplófájlok másolása..."
 #. Description
 #: ../ubiquity.templates:93001
 msgid "Configuring target system..."
-msgstr "A cél rendszer beállítása..."
+msgstr "A célrendszer beállítása..."
 
 #. Type: text
 #. Description
 #: ../ubiquity.templates:94001
 msgid "Configuring system locales..."
-msgstr "A nyelvi fájlok konfigurálása..."
+msgstr "A rendszer területi beállításainak konfigurálása..."
 
 #. Type: text
 #. Description
@@ -770,7 +771,7 @@ msgstr "Az apt beállítása..."
 #. Description
 #: ../ubiquity.templates:96001
 msgid "Configuring time zone..."
-msgstr "Az időzóna konfigurálása..."
+msgstr "Az időzóna beállítása..."
 
 #. Type: text
 #. Description
@@ -860,13 +861,13 @@ msgstr "Csomaglisták letöltése (${TIME} van hátra)..."
 #. Description
 #: ../ubiquity.templates:112001
 msgid "Error installing ${PACKAGE}"
-msgstr "Hiba a(z) ${PACKAGE} telepítése során"
+msgstr "Hiba a csomag (${PACKAGE}) telepítése során"
 
 #. Type: error
 #. Description
 #: ../ubiquity.templates:113001
 msgid "Error removing ${PACKAGE}"
-msgstr "Hiba a(z) ${PACKAGE} törlésekor"
+msgstr "Hiba a csomag (${PACKAGE}) eltávolítása során"
 
 #. Type: error
 #. Description
@@ -904,10 +905,10 @@ msgid ""
 msgstr ""
 "Ezt egy régi telepítő-lemezkép használata, vagy a fenti csomagok egyikének "
 "hibája okozhatja. További részletek a /var/log/syslog fájlban találhatók. A "
-"telepítő megpróbálja folytatni a telepítést, de később meghibásodhat és nem "
-"lesz képes más csomagok (saját magát is beleértve) telepítésére a telepített "
-"rendszerre vagy eltávolítására arról. Próbáljon újabb telepítő-lemezképeket "
-"keresni vagy jelentse a problémát a terjesztőnek."
+"telepítő megpróbálja folytatni a telepítést, de ez később meghiúsulhat és "
+"nem lesz képes más csomagok (saját magát is beleértve) telepítésére a "
+"telepített rendszerre vagy eltávolítására arról. Próbáljon újabb telepítő-"
+"lemezképeket beszerezni, vagy jelentse a problémát a terjesztőnek."
 
 #. Type: error
 #. Description
@@ -961,7 +962,7 @@ msgstr "Zárjon be minden, a kérdéses csatolási pontokat használó alkalmaz�
 #: ../ubiquity.templates:123001
 msgid "Would you like the installer to try to unmount these partitions again?"
 msgstr ""
-"Kívánja, hogy a telepítő újra megppróbálja leválasztani ezeket a partíciókat?"
+"Kívánja, hogy a telepítő újra megpróbálja leválasztani ezeket a partíciókat?"
 
 #. Type: boolean
 #. Description
@@ -1010,22 +1011,22 @@ msgid ""
 "     Regular Login name: ${USERNAME}\n"
 "     Location:           ${LOCATION}"
 msgstr ""
-" Telepítési típus:           ${INSTALLTYPE}\n"
+" Telepítési típus:              ${INSTALLTYPE}\n"
 " Meghajtók:\n"
-"     Kiegészítő videomeghajtó:  ${VIDEO_DRIVER}\n"
-"         TV-kimenet:             ${TVOUT}, ${TVSTANDARD}\n"
+"     További videomeghajtó:     ${VIDEO_DRIVER}\n"
+"         TV-kimenet:            ${TVOUT}, ${TVSTANDARD}\n"
 " További szolgáltatások:\n"
-"     VNC:                ${EN_VNC}\n"
-"     SSH:                ${EN_OPENSSH}\n"
-"     Samba:              ${EN_SAMBA}\n"
-"     NFS:                ${EN_NFS}\n"
-"     MythTV szolgáltatás:     ${EN_MYSQL}\n"
+"     VNC:                       ${EN_VNC}\n"
+"     SSH:                       ${EN_OPENSSH}\n"
+"     Samba:                     ${EN_SAMBA}\n"
+"     NFS:                       ${EN_NFS}\n"
+"     MythTV szolgáltatás:       ${EN_MYSQL}\n"
 " A normál Ubuntu telepítő kérdései:\n"
-"     Nyelv:           ${LANGUAGE}\n"
-"     Billentyűzetkiosztás:    ${KEYMAP}\n"
-"     Szokásos név:       ${FULLNAME}\n"
-"     Szokásos bejelentkezési név: ${USERNAME}\n"
-"     Hely:           ${LOCATION}"
+"     Nyelv:                     ${LANGUAGE}\n"
+"     Billentyűzetkiosztás:      ${KEYMAP}\n"
+"     Normál név:                ${FULLNAME}\n"
+"     Normál bejelentkezési név: ${USERNAME}\n"
+"     Hely:                      ${LOCATION}"
 
 #. Type: text
 #. Description
@@ -1053,9 +1054,9 @@ msgid ""
 "user interaction. This will install a backend, frontend, all plugins, and "
 "all themes."
 msgstr ""
-"A szabványos telepítés minden beállítást minimális felhasználói beavatkozás "
-"mellett állít be. Ez telepíti a hátteret, az előtétet, az összes bővítményt "
-"és az összes témát."
+"Az általános telepítés minden beállítást minimális felhasználói beavatkozás "
+"mellett állít be. Ez telepíti a háttérprogramot, az előtétprogramot, az "
+"összes bővítményt és az összes témát."
 
 #. Type: text
 #. Description
@@ -1162,7 +1163,7 @@ msgstr ""
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:19001
 msgid "Frontend"
-msgstr "ElőtétEgy csak előtét"
+msgstr "Előtét"
 
 #. Type: text
 #. Description
@@ -1172,9 +1173,9 @@ msgid ""
 "backend and distribute it.  This configuration requires an existing backend "
 "on the network."
 msgstr ""
-"A csak háttérből álló gép elsődleges funkciója a médiatartalom fogadása a "
-"háttértől és terjesztése. Ez a konfiguráció egy meglévő hátteret igényel a "
-"hálózaton,"
+"A csak előtétből álló gép elsődleges funkciója a médiatartalom fogadása a "
+"háttértől és annak terjesztése. Ez a konfiguráció egy meglévő hátteret "
+"igényel a hálózaton."
 
 #. Type: text
 #. Description
@@ -1189,7 +1190,7 @@ msgid ""
 "Plugins can be used to extend MythTV functionality beyond a time shifting TV "
 "solution."
 msgstr ""
-"A bővítmények segítségével a MythTV  funkcionalitását kiterjesztheti az "
+"A bővítmények segítségével a MythTV funkcionalitását kiterjesztheti az "
 "időeltolásos TV megoldásokon túlra."
 
 #. Type: text
@@ -1217,7 +1218,7 @@ msgid ""
 "MythWeb provides a web interface which can be used to view listings, "
 "schedule recordings, delete recordings, and search for programs."
 msgstr ""
-"A MythWeb egy webes felületet biztosít, amelyen műsorokat jeleníthet meg, "
+"A MythWeb webes felületet biztosít, amelyen műsorokat jeleníthet meg, "
 "ütemezheti és törölheti a felvételeket, valamint műsorokat kereshet."
 
 #. Type: text
@@ -1284,7 +1285,7 @@ msgstr "Myth telefon"
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:37001
 msgid "Myth Stream"
-msgstr "Myth adatfolyam"
+msgstr "Myth műsor"
 
 #. Type: text
 #. Description
@@ -1305,14 +1306,14 @@ msgid ""
 "A plugin for MythTV that lets you create DVDs from content on your MythTV "
 "Network."
 msgstr ""
-"MythTV bővítmény, amely lehetővé teszi DVD-k létrehozását a saját MythTV "
-"hálózatán."
+"A saját MythTV hálózatán elérhető tartalomból DVD-k létrehozását lehetővé "
+"tevő MythTV bővítmény."
 
 #. Type: text
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:41001
 msgid "An integrated web browser plugin for your MythTV system."
-msgstr "Integrált webböngésző-bővítmény a MythTV rendszeréhez."
+msgstr "Integrált webböngésző-bővítmény a MythTV rendszerhez."
 
 #. Type: text
 #. Description
@@ -1348,7 +1349,7 @@ msgstr ""
 #: ../ubiquity-frontend-mythbuntu.templates:46001
 msgid "A frontend to start any emulator or binary that Linux runs."
 msgstr ""
-"Előtét a Linux által futtatott tetszőleges emulátor vagy bináris "
+"Előtétprogram a Linux által futtatott tetszőleges emulátor vagy bináris "
 "elindításához."
 
 #. Type: text
@@ -1373,14 +1374,14 @@ msgstr ""
 msgid ""
 "A phone and videophone capability on MythTV using the standard SIP protocol."
 msgstr ""
-"Telefon- és videofon képesség a MythTV-hez a szabványos SIP protokoll "
+"Telefon- és videofon szolgáltatás a MythTV-hez, a szabványos SIP protokoll "
 "használatával."
 
 #. Type: text
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:50001
 msgid "Provides a method to listen to streaming internet radio stations."
-msgstr "Lehetőséget ad az internetes rádióállomások hallgatására."
+msgstr "Lehetőséget ad internetes rádióállomások hallgatására."
 
 #. Type: text
 #. Description
@@ -1389,7 +1390,7 @@ msgid ""
 "Allows you to browse and play video streams, using an external player, from "
 "within the MythTV interface."
 msgstr ""
-"Lehetővé teszi videofolyamok böngészését és lejátszását külső lejátszó "
+"Lehetővé teszi videoműsorok tallózását és lejátszását külső lejátszó "
 "segítségével a MythTV felületén belül."
 
 #. Type: text
@@ -1404,7 +1405,7 @@ msgstr ""
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:53001
 msgid "Choose Extra Themes"
-msgstr "Extra témák kiválsztása"
+msgstr "Extra témák kiválasztása"
 
 #. Type: text
 #. Description
@@ -1440,9 +1441,9 @@ msgid ""
 "do so here.  Note that proprietary graphics drivers may be necessary for TV "
 "Output or OpenGL effects."
 msgstr ""
-"A telepítéshez már be van állítva és engedélyezve van egy nyílt forrású "
-"meghajtó. Ha másik videomeghajtót szeretne használni, itt megteheti. Ne "
-"feledje, hogy a zárt meghajtók szükségesek lehetnek a TV kimenet vagy az "
+"A telepítéshez már be van állítva és engedélyezve van nyílt forrású "
+"meghajtó. Ha másik videomeghajtót szeretne használni, itt beállíthatja. Ne "
+"feledje, hogy zárt meghajtók lehetnek szükségesek a TV kimenet vagy az "
 "OpenGL effektek támogatásához."
 
 #. Type: text
@@ -1562,8 +1563,7 @@ msgid ""
 msgstr ""
 "A műsoradatforrás beállítása után el kell indítania a MythTV-Setup programot "
 "a háttérbeállítások első lefuttatásához, Az első négy szakaszt kell "
-"beállítania, a műsoradatok a harmadik lépésben történő megadásának "
-"biztosítása érdekében."
+"beállítania, ne feledje el a műsoradatokat megadni a harmadik lépésben."
 
 #. Type: text
 #. Description
@@ -1575,13 +1575,13 @@ msgstr "A mythtv beállítása..."
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:76001
 msgid "Configuring additional drivers..."
-msgstr "A további meghajtók konfigurálása..."
+msgstr "További meghajtók beállítása..."
 
 #. Type: text
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:77001
 msgid "Configuring additional services..."
-msgstr "A további kiszolgálók konfigurálása..."
+msgstr "További szolgáltatások beállítása..."
 
 #. Type: text
 #. Description

@@ -1,1 +1,2 @@
 deb-src http://archive.ubuntu.com/ubuntu hardy main
+deb-src http://archive.ubuntu.com/ubuntu hardy-proposed main

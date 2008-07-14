@@ -857,7 +857,7 @@ if ! db_get debian-installer/framebuffer || [ "$RET" = false ]; then
 fi
 
 if db_get grub-installer/bootdev_directory && [ "$RET" ]; then
-	sed -i "/^# groot=/s:).*:)$RET:" $ROOT/boot/grub/$menu_file
+	sed -i "s:^# groot=(hd.*:# groot=()$RET:" $ROOT/boot/grub/$menu_file
 	need_update_grub=1
 fi
 

@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: Source: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2008-04-14 20:32-0400\n"
-"PO-Revision-Date: 2008-04-19 09:24+0000\n"
-"Last-Translator: Roy Chan <roy.chan@linux.org.hk>\n"
+"PO-Revision-Date: 2008-06-09 18:38+0000\n"
+"Last-Translator: Tetralet <Unknown>\n"
 "Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists."
 "debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-04-21 21:56+0000\n"
+"X-Launchpad-Export-Date: 2008-06-19 18:25+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. Type: text
@@ -127,7 +127,7 @@ msgstr "選擇的區域"
 #. Description
 #: ../ubiquity.templates:14001
 msgid "Current time:"
-msgstr "目前時間："
+msgstr "當前時間："
 
 #. Type: text
 #. Description
@@ -163,7 +163,7 @@ msgstr "您的名字是？"
 #. Description
 #: ../ubiquity.templates:20001
 msgid "What name do you want to use to log in?"
-msgstr "您要使用什麼名字登入？"
+msgstr "您要使用什麼名稱登入？"
 
 #. Type: text
 #. Description
@@ -196,7 +196,7 @@ msgstr "輸入相同的密碼兩次，以檢查是否有打錯字。"
 #. Description
 #: ../ubiquity.templates:25001
 msgid "What is the name of this computer?"
-msgstr "您要將這台電腦取什麼名字？"
+msgstr "您要為這台電腦取什麼名字？"
 
 #. Type: text
 #. Description
@@ -204,7 +204,7 @@ msgstr "您要將這台電腦取什麼名字？"
 msgid ""
 "This name will be used if you make the computer visible to others on a "
 "network."
-msgstr "如果您設定讓別人能在網路上看到這台電腦, 將會是這個名字."
+msgstr "如果您設定讓別人能在網路上看到這台電腦，將會是這個名字。"
 
 #. Type: text
 #. Description
@@ -218,7 +218,7 @@ msgstr "匯入/搬移文件與設定"
 msgid ""
 "Select any accounts you would like to import.  The documents and settings "
 "for these accounts will be available after the install completes."
-msgstr ""
+msgstr "選擇您想要匯入的帳戶。帳戶的文件和設定值在安裝完成後便可以使用。"
 
 #. Type: text
 #. Description
@@ -244,7 +244,7 @@ msgstr "您想要如何分割磁碟？"
 #. Description
 #: ../ubiquity.templates:31001
 msgid "Prepare partitions"
-msgstr "準備分割區"
+msgstr "預備分割區"
 
 #. Type: text
 #. Description
@@ -280,7 +280,7 @@ msgstr "安裝[ action ]"
 #. Description
 #: ../ubiquity.templates:36001
 msgid "Step ${INDEX} of ${TOTAL}"
-msgstr "步驟  ${TOTAL} 之 ${INDEX}"
+msgstr "步驟 ${INDEX}  (共 ${TOTAL} 個)"
 
 #. Type: title
 #. Description
@@ -304,7 +304,7 @@ msgstr "略過"
 #. Description
 #: ../ubiquity.templates:40001
 msgid "Installation complete"
-msgstr "安裝作業完成"
+msgstr "安裝完成"
 
 #. Type: text
 #. Description
@@ -324,7 +324,7 @@ msgstr "立刻重新啟動"
 #. Description
 #: ../ubiquity.templates:43001 ../ubiquity.templates:44001
 msgid "Installer crashed"
-msgstr "安裝程式發生錯誤"
+msgstr "安裝程式當掉"
 
 #. Type: text
 #. Description
@@ -492,7 +492,7 @@ msgstr "開機載入器"
 #. Description
 #: ../ubiquity.templates:69001
 msgid "Install boot loader"
-msgstr "安裝開機管理程式"
+msgstr "安裝開機程式"
 
 #. Type: text
 #. Description
@@ -552,7 +552,6 @@ msgstr "繼續"
 #. Type: text
 #. Description
 #: ../ubiquity.templates:78001
-#, fuzzy
 msgid ""
 "Installation is complete. You need to restart the computer in order to use "
 "the new installation."
@@ -574,7 +573,7 @@ msgid ""
 msgstr ""
 " 使用語言：${LANGUAGE}\n"
 " 鍵盤模式：${KEYMAP}\n"
-" 使用者名稱：${FULLNAME}\n"
+" 真實姓名：${FULLNAME}\n"
 " 登入帳號：${USERNAME}\n"
 " 所在地區：${LOCATION}\n"
 " 資料轉移：\n"
@@ -643,12 +642,14 @@ msgid ""
 "install to complete on the target partition.  Please run the installer again "
 "and select a larger partition to install into."
 msgstr ""
+"此特殊錯誤是目標分割區並沒有足夠磁碟空間完成安裝工作。請重新執行安裝程式並選"
+"擇安裝到一個大一點的分割區。"
 
 #. Type: error
 #. Description
 #: ../ubiquity.templates:88001
 msgid "Failed to copy files; faulty CD/DVD?"
-msgstr "檔案複製失敗。可能是您的CD或DVD資料損毀。"
+msgstr "檔案複製失敗。可能是您的 CD/DVD 資料損毀。"
 
 #. Type: error
 #. Description
@@ -716,7 +717,7 @@ msgstr "複製檔案失敗：可能因為 CD/DVD 或硬碟的錯誤造成。"
 #. Description
 #: ../ubiquity.templates:91001
 msgid "The following file did not match its source copy on the CD/DVD:"
-msgstr ""
+msgstr "以下檔案和在 CD/DVD 中的版本不匹配："
 
 #. Type: text
 #. Description
@@ -740,7 +741,7 @@ msgstr "正在設定系統語系..."
 #. Description
 #: ../ubiquity.templates:95001
 msgid "Configuring apt..."
-msgstr "正在設定 apt..."
+msgstr "正在設定 apt ..."
 
 #. Type: text
 #. Description
@@ -788,7 +789,7 @@ msgstr "正在設定電腦名稱..."
 #. Description
 #: ../ubiquity.templates:103001
 msgid "Configuring boot loader..."
-msgstr "正在設定開機管理程式..."
+msgstr "正在設定開機載入器..."
 
 #. Type: text
 #. Description
@@ -905,7 +906,7 @@ msgstr "正在安裝語言套件"
 #. Description
 #: ../ubiquity.templates:118001
 msgid "Downloading language packs (${TIME} remaining)..."
-msgstr "下載語言套件中（剩餘 ${TIME}）..."
+msgstr "正在下載語言套件 (剩餘 ${TIME})..."
 
 #. Type: boolean
 #. Description
@@ -937,7 +938,7 @@ msgstr "您想安裝程式嘗試再次卸載這些分割區嗎？"
 #. Description
 #: ../ubiquity.templates:129001
 msgid "Do you want to return to the partitioner?"
-msgstr ""
+msgstr "您想回到磁碟分割程式嗎?"
 
 #. Type: boolean
 #. Description
@@ -946,6 +947,8 @@ msgid ""
 "Some of the partitions you created are too small.  Please make the following "
 "partitions at least this large (in bytes):"
 msgstr ""
+"有一些您創建的分割區容量太小了。請更改以下分割區的大小至最少以下大小 (位元"
+"組):"
 
 #. Type: boolean
 #. Description
@@ -953,7 +956,7 @@ msgstr ""
 msgid ""
 "If you do not go back to the partitioner and increase the size of these "
 "partitions, the installation may fail."
-msgstr ""
+msgstr "如果您不回到磁碟分割程式並增加這些分割區的大小，這次安裝可能會失敗。"
 
 #. Type: note
 #. Description
@@ -1003,7 +1006,7 @@ msgstr "您要選擇何種安裝模式？"
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:3001
 msgid "Two installation types are available for Mythbuntu:"
-msgstr "Mythbuntu提供兩種安裝模式"
+msgstr "Mythbuntu 提供兩種安裝模式："
 
 #. Type: text
 #. Description
@@ -1281,7 +1284,7 @@ msgstr "MythTV 的外部控制。這將允許您修改按鍵和鍵盤對應。"
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:43001
 msgid "Find movies playing in nearby local cinemas"
-msgstr ""
+msgstr "尋找本地附近電影院上映的電影。"
 
 #. Type: text
 #. Description
@@ -1354,7 +1357,7 @@ msgstr "選擇額外的佈景主題"
 msgid ""
 "Themes can greatly improve the aesthetic appeal of a MythTV setup, and "
 "display it to match your tastes much better."
-msgstr ""
+msgstr "佈景主題可以大大改善 MythTV 設定的外觀美感和更切合您的品味。"
 
 #. Type: text
 #. Description
@@ -1518,4 +1521,4 @@ msgstr "正在設定附加的服務..."
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:78001
 msgid "Configuring infrared devices..."
-msgstr ""
+msgstr "設定紅外線裝置中..."

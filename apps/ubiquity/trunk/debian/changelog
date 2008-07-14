@@ -1,40 +1,56 @@
-ubiquity (1.8.12guada1) hardy; urgency=low
+ubiquity (1.8.12) hardy-proposed; urgency=low
 
-  * reverted to 1.8.7
+  * Added missing translation updates from Rosetta.
+  * Automatic update of included source packages: base-installer
+    1.86ubuntu2.2, partman-auto-loop 0ubuntu14 (LP: #241420).
 
- -- Alfredo Matas <amatas@emergya.es>  Mon, 07 Jul 2008 13:05:31 +0200
+ -- Evan Dandrea <evand@ubuntu.com>  Thu, 19 Jun 2008 16:41:11 -0400
 
-ubiquity (1.8.7guada4) hardy; urgency=low
+ubiquity (1.8.11) hardy-proposed; urgency=low
 
-  * Update upstream version
+  * Bump configure.ac.
 
- -- Roberto Majadas <roberto.majadas@openshine.com>  Tue, 24 Jun 2008 10:51:02 +0200
+ -- Evan Dandrea <evand@ubuntu.com>  Wed, 11 Jun 2008 13:32:36 -0400
 
-ubiquity (1.8.7guada3) hardy; urgency=low
+ubiquity (1.8.10) hardy-proposed; urgency=low
 
-  * Remove all ubuntu repositories 
+  * Revert RAWSIZE change.  It should not have gone into -proposed yet
+    (LP: #239207).
 
- -- Roberto Majadas <roberto.majadas@openshine.com>  Tue, 24 Jun 2008 10:36:06 +0200
+ -- Evan Dandrea <evand@ubuntu.com>  Wed, 11 Jun 2008 11:23:01 -0400
 
-ubiquity (1.8.7guada3) hardy; urgency=low
+ubiquity (1.8.9) hardy-proposed; urgency=low
 
-  * Add accesibility stuff
+  [ Colin Watson ]
+  * Make use of RAWMINSIZE, RAWCURSIZE, and RAWMAXSIZE variables from
+    partman-partitioning 59ubuntu2 to set accurate bounds on the resize
+    widget.
+  
+  [ Evan Dandrea ]
+  * Disable the close button for progress windows (LP: #107686).
+  * Reset stay_on_page when the back button is pressed (LP: #235374).
 
- -- Roberto Majadas  <roberto.majadas@openshine.com>  Wed, 11 Jun 2008 09:47:54 +0200
+ -- Evan Dandrea <evand@ubuntu.com>  Mon, 02 Jun 2008 13:02:32 -0400
 
-ubiquity (1.8.7guada2) hardy; urgency=low
+ubiquity (1.8.8) hardy-proposed; urgency=low
 
-  * Update guadalinex frontend gui
+  [ Colin Watson ]
+  * Fix ownership of /home/oem/Desktop in OEM installations (LP: #209683).
+  * Silence deprecation warning in zoommap.
 
- -- Alfredo Matas <amatas@emergya.es>  Tue, 13 May 2008 12:30:30 +0200
+  [ Evan Dandrea ]
+  * Usability fixes for the timezone widget (LP: #203423):
+    - Make the hover-to-zoom areas relative to the widget size.
+    - Zoom in on the location of the cursor, not the edge relative to its
+      position.
+    - Add a delay for zooming out.
+  * Handle the migration-assistant UI being fed non-UTF data gracefully
+    (LP: #222690).
+  * Automatic update of included source packages: apt-setup
+    1:0.31ubuntu8, base-installer 1.86ubuntu2.1, grub-installer
+    1.27ubuntu8, migration-assistant 0.6.3.
 
-ubiquity (1.8.7guada1) hardy; urgency=low
-
-  * Import for Guadalinex
-  * Change desktop icon
-  * Change installer background
-
- -- Alfredo Matas <amatas@emergya.es>  Thu, 08 May 2008 14:51:36 +0200
+ -- Evan Dandrea <evand@ubuntu.com>  Mon, 02 Jun 2008 11:59:13 -0400
 
 ubiquity (1.8.7) hardy; urgency=low
 

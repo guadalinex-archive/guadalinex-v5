@@ -27,8 +27,8 @@ from math import pi
 from gtk import gdk
 import ubiquity.tz
 
-# The width, in pixels, of the hover-to-move areas.
-MOTION_AREA = 50
+# The width, in percent of the allocation, of the hover-to-move areas.
+MOTION_AREA = 0.12
 # The distance, in pixels, to step when moving.
 MOTION_STEP = 20
 
@@ -111,6 +111,7 @@ class ZoomMapWidget(gtk.Widget):
         timezone_city_combo.connect("changed", self.city_changed)
         self.connect("button_release_event", self.button_release)
         self.motion_notify_id = None
+        self.leave_notify_id = None
         self.connect("enter_notify_event", self.enter_event)
         self.connect("leave_notify_event", self.leave_event)
         self.connect("map-event", self.mapped)
@@ -196,19 +197,19 @@ class ZoomMapWidget(gtk.Widget):
         map_h = self.big_pixbuf.get_height()
         scrolling = False
         # right
-        if w - self.cursor_x < MOTION_AREA and self.start_x > (-map_w + w):
+        if w - self.cursor_x < int(MOTION_AREA * w) and self.start_x > (-map_w + w):
             self.start_x = self.start_x - MOTION_STEP
             scrolling = True
         # left
-        elif self.cursor_x < MOTION_AREA and self.start_x < 0:
+        elif self.cursor_x < int(MOTION_AREA * w) and self.start_x < 0:
             self.start_x = self.start_x + MOTION_STEP
             scrolling = True
         # top
-        if self.cursor_y < MOTION_AREA and self.start_y < 0:
+        if self.cursor_y < int(MOTION_AREA * h) and self.start_y < 0:
             self.start_y = self.start_y + MOTION_STEP
             scrolling = True
         # bottom
-        elif h - self.cursor_y < MOTION_AREA and self.start_y > (-map_h + h):
+        elif h - self.cursor_y < int(MOTION_AREA * h) and self.start_y > (-map_h + h):
             self.start_y = self.start_y - MOTION_STEP
             scrolling = True
         if scrolling:
@@ -237,17 +238,17 @@ class ZoomMapWidget(gtk.Widget):
         else:
             return False
 
-        if self.cursor_x < MOTION_AREA:
+        if self.cursor_x < int(MOTION_AREA * w):
             self.start_x = 0
-        elif w - self.cursor_x < MOTION_AREA:
+        elif w - self.cursor_x < int(MOTION_AREA * w):
             self.start_x = (-map_w + w)
         else:
             map_x = 1.0 * self.cursor_x / w * map_w
             map_x_offset = min(map_w - w / 2.0, max(map_x - w/2.0, 0.0)) - x
             self.start_x = -map_x_offset
-        if self.cursor_y < MOTION_AREA:
+        if self.cursor_y < int(MOTION_AREA * h):
             self.start_y = 0
-        elif h - self.cursor_y < MOTION_AREA:
+        elif h - self.cursor_y < int(MOTION_AREA * h):
             self.start_y = (-map_h + h)
         else:
             map_y = 1.0 * self.cursor_y / h * map_h
@@ -262,16 +263,23 @@ class ZoomMapWidget(gtk.Widget):
         return False
 
     def enter_event(self, widget, event):
-        gobject.timeout_add(500, self.enter_timeout)
+        if self.leave_notify_id and self.cursor_x:
+            gobject.source_remove(self.leave_notify_id)
+            return True
+        gobject.timeout_add(1000, self.enter_timeout)
         return True
 
-    def leave_event(self, widget, event):
+    def leave_timeout(self):
         self.cursor_x = None
         self.cursor_y = None
         if self.motion_notify_id is not None:
             self.disconnect(self.motion_notify_id)
             self.motion_notify_id = None
         self.redraw_all()
+
+    def leave_event(self, widget, event):
+        self.leave_notify_id = gobject.timeout_add(2000, self.leave_timeout)
+        return True
 
     def load_pixmap(self, pixmap_filename):
         try:
@@ -330,7 +338,7 @@ class ZoomMapWidget(gtk.Widget):
             self.window.move_resize(*allocation)
         x,y,w,h = allocation
         self.small_pixbuf = self.pixbuf.scale_simple(w, h, gtk.gdk.INTERP_BILINEAR)
-        self.big_pixbuf = self.pixbuf.scale_simple(w * 4.5, h * 4.5, gtk.gdk.INTERP_BILINEAR)
+        self.big_pixbuf = self.pixbuf.scale_simple(int(w * 4.5), int(h * 4.5), gtk.gdk.INTERP_BILINEAR)
 
     def do_expose_event(self, event):
         self.context = self.window.cairo_create()

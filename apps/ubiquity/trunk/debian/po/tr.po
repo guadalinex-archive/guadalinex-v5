@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: Source: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2008-04-14 20:32-0400\n"
-"PO-Revision-Date: 2008-04-10 01:09+0000\n"
-"Last-Translator: Sait Ahmet Binselam <Unknown>\n"
+"PO-Revision-Date: 2008-06-09 18:37+0000\n"
+"Last-Translator: Recai Oktaş <roktas@omu.edu.tr>\n"
 "Language-Team: Debian L10n Turkish <debian-l10n-turkish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-04-21 22:00+0000\n"
+"X-Launchpad-Export-Date: 2008-06-19 18:28+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. Type: text
@@ -361,15 +361,16 @@ msgstr ""
 #. Description
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:46001
+#, fuzzy
 msgid "New partition table"
-msgstr ""
+msgstr "Yeni disk bölümü tablosu"
 
 #. Type: text
 #. Description
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:47001
 msgid "New partition"
-msgstr ""
+msgstr "Yeni disk bölümü"
 
 #. Type: text
 #. Description
@@ -384,44 +385,49 @@ msgstr "Bölüm düzenle"
 #. Description
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:49001
+#, fuzzy
 msgid "Delete partition"
-msgstr ""
+msgstr "Disk bölümünü sil"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:50001
+#, fuzzy
 msgid "Device"
-msgstr ""
+msgstr "Aygıt"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner. Indicates how the partition is to be
 #. used (ext2, swap, etc.).
 #: ../ubiquity.templates:51001
+#, fuzzy
 msgid "Type"
-msgstr ""
+msgstr "Tür"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:52001
+#, fuzzy
 msgid "Mount point"
-msgstr ""
+msgstr "Bağlama noktası"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:53001
+#, fuzzy
 msgid "Format?"
-msgstr ""
+msgstr "Biçem?"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:54001
 msgid "Size"
-msgstr ""
+msgstr "Boyut"
 
 #. Type: text
 #. Description
@@ -429,21 +435,23 @@ msgstr ""
 #. this partition is used by data.
 #: ../ubiquity.templates:55001
 msgid "Used"
-msgstr ""
+msgstr "Kullanılan"
 
 #. Type: text
 #. Description
 #. Indicates unpartitioned free space on a disk.
 #: ../ubiquity.templates:56001
+#, fuzzy
 msgid "free space"
-msgstr ""
+msgstr "Boş alan"
 
 #. Type: text
 #. Description
 #. Indicates that we do not know how much space is used on this partition.
 #: ../ubiquity.templates:57001
+#, fuzzy
 msgid "unknown"
-msgstr ""
+msgstr "bilinmeyen"
 
 #. Type: text
 #. Description

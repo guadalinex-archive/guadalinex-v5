@@ -1,8 +1,7 @@
 [Desktop Entry]
+Type=Application
 Version=1.0
 Encoding=UTF-8
-Name=Sin nombre
-Type=Application
 _Name=Install
 _Comment=Install this system permanently to your hard disk
 Exec=ubiquity kde_ui
@@ -11,4 +10,3 @@ Terminal=false
 Categories=KDE;Qt;System;
 OnlyShowIn=KDE;
 X-Ubuntu-Gettext-Domain=ubiquity
-GenericName[es_ES]=

@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: Source: ubiquity@packages.debian.org\n"
 "POT-Creation-Date: 2008-04-14 20:32-0400\n"
-"PO-Revision-Date: 2008-04-20 16:03+0000\n"
-"Last-Translator: Yaron <sh.yaron@gmail.com>\n"
+"PO-Revision-Date: 2008-06-18 22:44+0000\n"
+"Last-Translator: niska <Unknown>\n"
 "Language-Team: Hebrew <debian-hebrew-common@lists.alioth.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-04-21 21:57+0000\n"
+"X-Launchpad-Export-Date: 2008-06-19 18:24+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. Type: text
@@ -219,6 +219,8 @@ msgid ""
 "Select any accounts you would like to import.  The documents and settings "
 "for these accounts will be available after the install completes."
 msgstr ""
+"בחר את החשבונות אותם תרצה לייבא. המסמכים וההגדרות של חשבונות אלו יהיו זמינים "
+"לאחר השלמת ההתקנה."
 
 #. Type: text
 #. Description
@@ -348,14 +350,14 @@ msgstr ""
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:46001
 msgid "New partition table"
-msgstr ""
+msgstr "טבלת מחיצות חדשה"
 
 #. Type: text
 #. Description
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:47001
 msgid "New partition"
-msgstr ""
+msgstr "צור מחיצה"
 
 #. Type: text
 #. Description
@@ -371,14 +373,14 @@ msgstr "ערוך מחיצה"
 #. An action, displayed on a button or as a menu item.
 #: ../ubiquity.templates:49001
 msgid "Delete partition"
-msgstr ""
+msgstr "מחק מחיצה"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:50001
 msgid "Device"
-msgstr ""
+msgstr "התקן"
 
 #. Type: text
 #. Description
@@ -386,28 +388,28 @@ msgstr ""
 #. used (ext2, swap, etc.).
 #: ../ubiquity.templates:51001
 msgid "Type"
-msgstr ""
+msgstr "סוג"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:52001
 msgid "Mount point"
-msgstr ""
+msgstr "נקודת עיגון"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:53001
 msgid "Format?"
-msgstr ""
+msgstr "לפרמט?"
 
 #. Type: text
 #. Description
 #. A column heading in the partitioner.
 #: ../ubiquity.templates:54001
 msgid "Size"
-msgstr ""
+msgstr "גודל"
 
 #. Type: text
 #. Description
@@ -415,21 +417,21 @@ msgstr ""
 #. this partition is used by data.
 #: ../ubiquity.templates:55001
 msgid "Used"
-msgstr ""
+msgstr "בשימוש"
 
 #. Type: text
 #. Description
 #. Indicates unpartitioned free space on a disk.
 #: ../ubiquity.templates:56001
 msgid "free space"
-msgstr ""
+msgstr "שטח פנוי"
 
 #. Type: text
 #. Description
 #. Indicates that we do not know how much space is used on this partition.
 #: ../ubiquity.templates:57001
 msgid "unknown"
-msgstr ""
+msgstr "לא ידוע"
 
 #. Type: text
 #. Description
@@ -616,7 +618,7 @@ msgstr "מעתיק קבצים (נשארה פחות מדקה)..."
 #. Description
 #: ../ubiquity.templates:87001
 msgid "Failed to copy files; out of disk space."
-msgstr ""
+msgstr "העתקת הקבצים נכשלה; תם המקום בכונן."
 
 #. Type: error
 #. Description
@@ -639,6 +641,8 @@ msgid ""
 "install to complete on the target partition.  Please run the installer again "
 "and select a larger partition to install into."
 msgstr ""
+"שגיאה זו התרחשה מאחר ואין מספיק שטח אחסון בכדי להשלים את ההתקנה במחיצה "
+"המיועדת. אנא הרץ את תכנית ההתקנה בשנית ובחר מחיצה גדולה יותר להתקנה."
 
 #. Type: error
 #. Description
@@ -708,13 +712,13 @@ msgstr ""
 #. Description
 #: ../ubiquity.templates:91001
 msgid "Failed to copy file; faulty CD/DVD or hard disk?"
-msgstr ""
+msgstr "נכשל בהעתקת הקובץ; כונן תקליטורים או כונן קשיח פגום?"
 
 #. Type: select
 #. Description
 #: ../ubiquity.templates:91001
 msgid "The following file did not match its source copy on the CD/DVD:"
-msgstr ""
+msgstr "הקובץ הבא אינו תואם לעותק המקור שלו בתקליטור/DVD:"
 
 #. Type: text
 #. Description
@@ -939,7 +943,7 @@ msgstr "האם ברצונך שתוכנית ההתקנה תנסה לכבות את
 #. Description
 #: ../ubiquity.templates:129001
 msgid "Do you want to return to the partitioner?"
-msgstr ""
+msgstr "האם ברצונך לחזור ליוצר המחיצות?"
 
 #. Type: boolean
 #. Description
@@ -948,6 +952,8 @@ msgid ""
 "Some of the partitions you created are too small.  Please make the following "
 "partitions at least this large (in bytes):"
 msgstr ""
+"כמה מהמחיצות שיצרת קטנות מדי. נא וודא שהמחיצות הבאות בעלות נפח זה לפחות "
+"(בבתים):"
 
 #. Type: boolean
 #. Description
@@ -956,6 +962,7 @@ msgid ""
 "If you do not go back to the partitioner and increase the size of these "
 "partitions, the installation may fail."
 msgstr ""
+"אם לא תחזור ליוצר המחיצות ותקטין את גודלן של מחיצות אלו, תהליך ההתקנה יכשל."
 
 #. Type: note
 #. Description
@@ -1200,13 +1207,13 @@ msgstr "Myth Browser"
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:29001
 msgid "Myth Controls"
-msgstr "Myth Controls"
+msgstr "פקדי Myth"
 
 #. Type: text
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:30001
 msgid "Myth Movies"
-msgstr ""
+msgstr "סרטי Myth"
 
 #. Type: text
 #. Description
@@ -1218,7 +1225,7 @@ msgstr "Myth Flix"
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:32001
 msgid "Myth Gallery"
-msgstr "Myth Gallery"
+msgstr "גלריית Myth"
 
 #. Type: text
 #. Description
@@ -1275,7 +1282,7 @@ msgstr ""
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:41001
 msgid "An integrated web browser plugin for your MythTV system."
-msgstr "תוסף דפדפן אינטרנט עבור מערכת ה-MythTV שלך."
+msgstr "תוסף מובנה בדפדפן האינטרנט עבור מערכת ה-MythTV שלך."
 
 #. Type: text
 #. Description
@@ -1283,37 +1290,39 @@ msgstr "תוסף דפדפן אינטרנט עבור מערכת ה-MythTV שלך.
 msgid ""
 "External controls for MythTV. This will allow you to modify button mappings "
 "and key bindings."
-msgstr "שליטה חיצונית עבור MythTV. זה מאפשר לך לשנות את מיפוי הכפתורים."
+msgstr ""
+"שליטה חיצונית עבור MythTV. תוכל לשנות את מיפוי הכפתורים וצירופי המקשים."
 
 #. Type: text
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:43001
 msgid "Find movies playing in nearby local cinemas"
-msgstr ""
+msgstr "מצא סרטים המוקרנים בבתי קולנוע הסמוכים אליך"
 
 #. Type: text
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:44001
 msgid "Allows you to monitor your Netflix dvd rental queue."
-msgstr "מאפשר לפקח על רשימת ההמתנה שלך ב-Netflix"
+msgstr "מאפשר לפקח על רשימת ההמתנה שלך בשירות הזמנת הסרטים Netflix."
 
 #. Type: text
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:45001
 msgid "Allows you to visually browse a directory tree containing image files."
-msgstr "מאפשר לסייר בצורה ויזואלית בעץ תיקיות המכיל תמונות."
+msgstr "מאפשר לסייר בצורה ויזואלית בעץ תיקיות המכילות קבצי תמונה."
 
 #. Type: text
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:46001
 msgid "A frontend to start any emulator or binary that Linux runs."
-msgstr "Frontend המאפשר להריץ כל emulator או קובץ בינארי שלינוקס יכול להריץ."
+msgstr ""
+"ממשק הפעלה המאפשר להריץ כל תוכנית הדמיה או קובץ בינארי שלינוקס יכול להריץ."
 
 #. Type: text
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:47001
 msgid "Provides a digital audio jukebox integrated with MythTV."
-msgstr "מספק שילוב של נגן מדיה דיגיטלית עם MythTV."
+msgstr "מספק מכונת נגינה דיגיטלית המשולבת עם MythTV."
 
 #. Type: text
 #. Description
@@ -1322,7 +1331,7 @@ msgid ""
 "An RSS feed news reader plugin for MythTV that keeps you up-to-date on your "
 "favorite news topics."
 msgstr ""
-"תוסף ל-MythTV הקורא עידכוני RSS המאפשר לך להישאר מועדכן בנושאים שמעניינים "
+"תוסף ל-MythTV הקורא עדכוני RSS המאפשר לך להשאר מעודכן בנושאים שבאמת מעניינים "
 "אותך."
 
 #. Type: text
@@ -1331,13 +1340,13 @@ msgstr ""
 msgid ""
 "A phone and videophone capability on MythTV using the standard SIP protocol."
 msgstr ""
-"יכולת טפלון וטלפון עם וידיאו ל-MythTV באמצעות שימוש בפרוטוקול SIP הסטנדרטי."
+"תמיכה בטלפון וטלפון עם וידאו עבור MythTV על ידי שימוש בפרוטוקול SIP התקני."
 
 #. Type: text
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:50001
 msgid "Provides a method to listen to streaming internet radio stations."
-msgstr "מאפשר האזנה לתחנות רדיו אינטרנטיות זורמות."
+msgstr "מספק שיטה להאזנה לתחנות רדיו המוזרמות דרך האינטרנט."
 
 #. Type: text
 #. Description
@@ -1346,14 +1355,14 @@ msgid ""
 "Allows you to browse and play video streams, using an external player, from "
 "within the MythTV interface."
 msgstr ""
-"מאפשר לך לדפדף בין ולנגן זירמי וידאו, באמצעות שימוש בנגן חיצוני, מיתוך ממשק "
+"מאפשר לך לדפדף בין ולנגן זרמי וידאו, באמצעות שימוש בנגן חיצוני, מתוך ממשק "
 "MythTV."
 
 #. Type: text
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:52001
 msgid "Displays current and forecast weather information within MythTV."
-msgstr "מציג את תחזית מזג האוויר בתוך MythTV."
+msgstr "מציג את נתוני תחזית מזג האוויר בתוך MythTV."
 
 #. Type: text
 #. Description
@@ -1368,6 +1377,8 @@ msgid ""
 "Themes can greatly improve the aesthetic appeal of a MythTV setup, and "
 "display it to match your tastes much better."
 msgstr ""
+"ערכות נושא יכולות לשפר באופן משמעותי את הרושם החזותי של התקנת MythTV, ולהציג "
+"אותה כך שתתאים לטעמך."
 
 #. Type: text
 #. Description
@@ -1393,9 +1404,9 @@ msgid ""
 "do so here.  Note that proprietary graphics drivers may be necessary for TV "
 "Output or OpenGL effects."
 msgstr ""
-"מנהל התקנים גראפי בקוד פתוח כבר מאופשר ומוגדר להתקנה שלך. אם ברצונך להשתמש "
-"במנהל התקנים גראפי אחר, אתה יכול לעשות זאת כאן. שים לב לכך שמנהל התקנים "
-"גראפי הוא הכרחי לפלט טלוויזיה או אפקטים של OpenGL."
+"מנהל התקן לכרטיס המסך בקוד פתוח כבר מאופשר ומוגדר להתקנה על ידך. אם ברצונך "
+"להשתמש במנהל התקן שונה לכרטיס המסך, תוכל לעשות זאת כאן. שים לב לכך שמנהל "
+"התקן כרטיס המסך הינו הכרחי לפלט טלוויזיה או אפקטים של OpenGL."
 
 #. Type: text
 #. Description
@@ -1535,4 +1546,4 @@ msgstr "מגדיר שירותים נוספים..."
 #. Description
 #: ../ubiquity-frontend-mythbuntu.templates:78001
 msgid "Configuring infrared devices..."
-msgstr ""
+msgstr "מגדיר את התקני האינפרא-אדום..."

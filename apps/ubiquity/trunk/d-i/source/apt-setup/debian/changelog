@@ -1,3 +1,10 @@
+apt-setup (1:0.31ubuntu8) hardy-proposed; urgency=low
+
+  * Remove restricted from cdrom entry if apt-setup/restricted is false
+    (LP: #220805).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 20 May 2008 22:24:39 +0200
+
 apt-setup (1:0.31ubuntu7) hardy; urgency=low
 
   * Make the path to security updates configurable, as well as the host
