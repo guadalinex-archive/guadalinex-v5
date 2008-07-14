@@ -131,6 +131,7 @@ libsasl2-modules
 libxp6
 metacity
 mount-systray
+mozilla-plugin-vlc
 mplayer-nogui
 multisync
 nautilus
@@ -200,6 +201,7 @@ unzip
 update-notifier
 usplash
 vlc
+vlc-plugin-sdl
 vodafone-mobile-connect-card-driver-for-linux
 watermain
 xdg-user-dirs
