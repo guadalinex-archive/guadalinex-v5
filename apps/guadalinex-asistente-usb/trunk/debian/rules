@@ -17,6 +17,7 @@ install: build
 	dh_install  "syslinux.cfg" "usr/share/guadalinex-asistente-usb"
 	dh_install  "guadalinex-asistente-usb" "usr/sbin"
 	dh_install  "guadalinex-asistente-usb.desktop" "usr/share/applications"
+	dh_install  "usb-assistant.png" "usr/share/pixmaps"
 
 binary-indep:  build install
 
