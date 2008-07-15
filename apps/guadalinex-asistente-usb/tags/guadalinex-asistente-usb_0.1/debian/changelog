@@ -1,0 +1,8 @@
+guadalinex-asistente-usb (0.1) hardy; urgency=low
+
+  * Código adaptado a las necesidades y nomenclaturas de Guadalinex
+  * Reducida la verbosidad del backend
+
+ -- David Teyssiere <dteyssiere@emergya.es>  Thu, 10 Jul 2008 13:37:39 +0200
+
+

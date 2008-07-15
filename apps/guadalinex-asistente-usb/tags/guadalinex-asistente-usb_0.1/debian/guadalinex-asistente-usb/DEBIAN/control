@@ -1,0 +1,13 @@
+Package: guadalinex-asistente-usb
+Version: 0.1
+Architecture: i386
+Maintainer: David Teyssiere <dteyssiere@emergya.es>
+Installed-Size: 84
+Depends: mbr, syslinux
+Section: admin
+Priority: optional
+Description: Instala Guadalinex live en un dispositivo USB
+ Este asistente instala Guadalinex Live en un pedrive
+ Tiene la característica de mantener los datos del usuario
+ de la sesion live en una particion aparte, lo que
+ hará que mantenga sus datos en próximos reinicios
