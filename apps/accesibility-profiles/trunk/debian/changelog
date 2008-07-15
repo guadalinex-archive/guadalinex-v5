@@ -1,4 +1,4 @@
-accesibility-profiles (0.2-1) hardy; urgency=low
+accessibility-profiles (0.2-1) hardy; urgency=low
 
   * append gok and dasher at launch time
   * deppends from gok, dasher and gnome-orca
