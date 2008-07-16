@@ -1,0 +1,26 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 18_disable_uid.dpatch by Sebastien Bacher <seb128@ubuntu.com>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad gnome-system-tools-2.15.3~/src/users/user-settings.c gnome-system-tools-2.15.3/src/users/user-settings.c
+--- gnome-system-tools-2.15.3~/src/users/user-settings.c	2006-08-28 03:58:40.000000000 +0200
++++ gnome-system-tools-2.15.3/src/users/user-settings.c	2006-09-06 12:32:35.000000000 +0200
+@@ -324,6 +324,7 @@
+ 		uid = find_new_uid (GST_USERS_TOOL (tool)->minimum_uid,
+ 				    GST_USERS_TOOL (tool)->maximum_uid);
+ 		gtk_spin_button_set_value (GTK_SPIN_BUTTON (widget), uid);
++		gtk_widget_set_sensitive (GTK_SPIN_BUTTON (widget), TRUE);
+ 		setup_profiles_visibility (tool, TRUE);
+ 	} else {
+ 		g_object_set_data (G_OBJECT (dialog), "is_new", GINT_TO_POINTER (FALSE));
+@@ -340,6 +341,7 @@
+ 
+ 		widget = gst_dialog_get_widget (tool->main_dialog, "user_settings_uid");
+ 		gtk_spin_button_set_value (GTK_SPIN_BUTTON (widget), oobs_user_get_uid (user));
++		gtk_widget_set_sensitive (GTK_SPIN_BUTTON (widget), FALSE);
+ 		setup_profiles_visibility (tool, FALSE);
+ 	}
+ 

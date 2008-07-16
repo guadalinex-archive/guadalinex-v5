@@ -1,0 +1,18 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 25_sambashare_group_definition.dpatch by Sebastien Bacher <seb128@canonical.com>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad gnome-system-tools-2.22.0~/src/users/privileges-table.c gnome-system-tools-2.22.0/src/users/privileges-table.c
+--- gnome-system-tools-2.22.0~/src/users/privileges-table.c	2008-03-09 17:07:03.000000000 +0100
++++ gnome-system-tools-2.22.0/src/users/privileges-table.c	2008-03-28 00:13:35.000000000 +0100
+@@ -55,6 +55,7 @@
+ 	{ "fax", N_("Send and receive faxes") },
+ 	{ "floppy", N_("Use floppy drives") },
+ 	{ "plugdev", N_("Access external storage devices automatically") },
++	{ "sambashare", N_("Share files with the local network") },
+ 	{ "scanner", N_("Use scanners") },
+ 	{ "tape", N_("Use tape drives") },
+ 	{ "wheel", N_("Be able to get administrator privileges") },

@@ -1,0 +1,18 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 11_shares_admin_not_listed_under_gnome.dpatch by Sebastien Bacher <seb128@canonical.com>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad gnome-system-tools-2.22.0~/src/shares/shares.desktop.in.in gnome-system-tools-2.22.0/src/shares/shares.desktop.in.in
+--- gnome-system-tools-2.22.0~/src/shares/shares.desktop.in.in	2008-03-09 17:07:03.000000000 +0100
++++ gnome-system-tools-2.22.0/src/shares/shares.desktop.in.in	2008-04-14 14:44:05.000000000 +0200
+@@ -6,6 +6,7 @@
+ Terminal=false
+ Type=Application
+ Categories=GNOME;GTK;System;Settings;X-GNOME-NetworkSettings;
++NotShowIn=GNOME;
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=gnome-system-tools
+ X-GNOME-Bugzilla-Component=shares-admin

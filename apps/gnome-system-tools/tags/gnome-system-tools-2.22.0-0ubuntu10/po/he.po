@@ -1,0 +1,1749 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Yair Hershkovitz, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-system-tools\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-02-15 20:33+0000\n"
+"PO-Revision-Date: 2008-02-01 15:22+0000\n"
+"Last-Translator: Yaniv Abir <yanivabir at gmail dot com>\n"
+"Language-Team: Hebrew <he@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../gnome-system-tools.schemas.in.h:1
+msgid "Whether the users-admin tool should show all users and groups or not"
+msgstr "Whether the users-admin tool should show all users and groups or not"
+
+#: ../interfaces/common.ui.h:1
+msgid ""
+"<span weight=\"bold\" size=\"larger\">Please enter your root password</span>"
+msgstr ""
+
+#: ../interfaces/common.ui.h:2
+msgid "Enter Password"
+msgstr "הכנס סיסמה"
+
+#: ../interfaces/common.ui.h:3
+msgid ""
+"You need administrator privileges to use this tool. Enter a password to "
+"modify\n"
+"your system configuration."
+msgstr ""
+
+#: ../interfaces/common.ui.h:5
+msgid "_Password:"
+msgstr "_סיסמה:"
+
+#: ../interfaces/network.ui.h:1
+msgid "<b>Account data</b>"
+msgstr "<b>מידע חשבון</b>"
+
+#: ../interfaces/network.ui.h:2
+msgid "<b>Connection Settings</b>"
+msgstr "<b>הגדרות חיבור</b>"
+
+#: ../interfaces/network.ui.h:3
+msgid "<b>DNS Servers</b>"
+msgstr "<b>שרתי DNS</b>"
+
+#: ../interfaces/network.ui.h:4
+msgid "<b>Host Settings</b>"
+msgstr "<b>הגדרות מארח</b>"
+
+#: ../interfaces/network.ui.h:5
+msgid "<b>Internet service provider data</b>"
+msgstr ""
+
+#: ../interfaces/network.ui.h:6
+msgid "<b>Modem Settings</b>"
+msgstr "<b>הגדרות מודם</b>"
+
+#: ../interfaces/network.ui.h:7
+msgid "<b>Search Domains</b>"
+msgstr "<b>מתחמי חיפוש</b>"
+
+#: ../interfaces/network.ui.h:8
+msgid "<b>Wireless Settings</b>"
+msgstr "<b>הגדרות אל-חוט</b>"
+
+#: ../interfaces/network.ui.h:9
+msgid "Access point name:"
+msgstr "שם נקודת גישה:"
+
+#: ../interfaces/network.ui.h:10
+msgid "Aliases:"
+msgstr "כינויים:"
+
+#: ../interfaces/network.ui.h:11
+msgid "Con_figuration:"
+msgstr "ה_גדרות:"
+
+#: ../interfaces/network.ui.h:12
+msgid "Connection type:"
+msgstr "סוג חיבור:"
+
+#: ../interfaces/network.ui.h:13
+msgid "Connections"
+msgstr "חיבורים"
+
+#: ../interfaces/network.ui.h:14
+msgid "DNS"
+msgstr "DNS"
+
+#: ../interfaces/network.ui.h:15
+msgid "D_omain name:"
+msgstr "שם _מתחם:"
+
+#: ../interfaces/network.ui.h:16
+msgid "Delete current location"
+msgstr "מחק את המיקום הנוכחי"
+
+#: ../interfaces/network.ui.h:17
+msgid "E_nable roaming mode"
+msgstr ""
+
+#: ../interfaces/network.ui.h:18
+msgid "E_nable this connection"
+msgstr "_אפשר חיבור זה"
+
+#: ../interfaces/network.ui.h:19
+msgid "Ethernet interface:"
+msgstr "מנשק Ethernet:"
+
+#: ../interfaces/network.ui.h:20 ../interfaces/users.ui.h:19
+msgid "General"
+msgstr "כללי"
+
+#: ../interfaces/network.ui.h:21
+#, fuzzy
+msgid "Host Alias Properties"
+msgstr "מאפייני %s"
+
+#: ../interfaces/network.ui.h:22
+msgid "Hosts"
+msgstr "מארחים"
+
+#: ../interfaces/network.ui.h:23 ../interfaces/shares.ui.h:14
+msgid "IP address:"
+msgstr ""
+"כתובת IP:"
+
+#: ../interfaces/network.ui.h:24
+msgid "Interface properties"
+msgstr "מאפייני מנשק"
+
+#: ../interfaces/network.ui.h:25
+msgid "Location:"
+msgstr "מיקום:"
+
+#: ../interfaces/network.ui.h:26
+msgid "Modem"
+msgstr "מודם"
+
+#: ../interfaces/network.ui.h:27
+msgid "Network _password:"
+msgstr "_סיסמת רשת:"
+
+#: ../interfaces/network.ui.h:28
+msgid "Network name (_ESSID):"
+msgstr "שם רשת (_ESSID):"
+
+#: ../interfaces/network.ui.h:29
+msgid "Options"
+msgstr "אפשרויות"
+
+#: ../interfaces/network.ui.h:30
+msgid "P_assword"
+msgstr "_סיסמה"
+
+#: ../interfaces/network.ui.h:31
+msgid "Password _type:"
+msgstr "סו_ג סיסמה:"
+
+#: ../interfaces/network.ui.h:32
+msgid "Save current network configuration as a location"
+msgstr ""
+
+#: ../interfaces/network.ui.h:33
+msgid "Use the Internet service provider nameservers"
+msgstr ""
+
+#: ../interfaces/network.ui.h:34
+msgid "_Autodetect"
+msgstr "_זיהוי אוטומטי"
+
+#: ../interfaces/network.ui.h:35
+msgid "_Dial prefix:"
+msgstr ""
+
+#: ../interfaces/network.ui.h:36
+msgid "_Dial type:"
+msgstr ""
+
+#: ../interfaces/network.ui.h:37
+#, fuzzy
+msgid "_Gateway address:"
+msgstr "הכנס כתובת"
+
+#: ../interfaces/network.ui.h:38
+msgid "_Host name:"
+msgstr "שם מ_ארח:"
+
+#: ../interfaces/network.ui.h:39
+msgid "_IP address:"
+msgstr ""
+"_כתובת IP:"
+
+#: ../interfaces/network.ui.h:40
+msgid "_Local IP:"
+msgstr ""
+"‏IP _מקומי"
+
+#: ../interfaces/network.ui.h:41
+msgid "_Modem port:"
+msgstr ""
+
+#: ../interfaces/network.ui.h:42
+msgid "_Phone number:"
+msgstr "_מספר טלפון:"
+
+#: ../interfaces/network.ui.h:43
+msgid "_Remote IP:"
+msgstr ""
+"‏IP מ_רוחק:"
+
+#: ../interfaces/network.ui.h:44
+msgid "_Retry if the connection breaks or fails to start"
+msgstr ""
+
+#: ../interfaces/network.ui.h:45
+msgid "_Set modem as default route to internet"
+msgstr ""
+
+#: ../interfaces/network.ui.h:46
+msgid "_Subnet mask:"
+msgstr ""
+
+#: ../interfaces/network.ui.h:47 ../interfaces/users.ui.h:55
+msgid "_Username:"
+msgstr "_שם משתמש:"
+
+#: ../interfaces/network.ui.h:48
+msgid "_Volume:"
+msgstr "_עוצמה:"
+
+#: ../interfaces/services.ui.h:1
+msgid "Advanced settings:"
+msgstr "הגדרות מתקדמות:"
+
+#: ../interfaces/services.ui.h:2
+msgid "Select the services that you wish to activate:"
+msgstr ""
+
+#: ../interfaces/shares.ui.h:1
+msgid "<b>Allowed Hosts</b>"
+msgstr "<b>מארחים מורשים</b>"
+
+#: ../interfaces/shares.ui.h:2
+msgid "<b>Hosts Settings</b>"
+msgstr "<b>הגדרות מארחים</b>"
+
+#: ../interfaces/shares.ui.h:3
+msgid "<b>Share Properties</b>"
+msgstr "<b>מאפייני שיתוף</b>"
+
+#: ../interfaces/shares.ui.h:4
+msgid "<b>Shared Folder</b>"
+msgstr "<b>תיקייה משותפת</b>"
+
+#: ../interfaces/shares.ui.h:5
+msgid "<b>Windows sharing</b>"
+msgstr "<b>שיתוף Windows</b>"
+
+#: ../interfaces/shares.ui.h:6
+msgid "<span size=\"larger\" weight=\"bold\">Enter password for user:</span>"
+msgstr ""
+
+#: ../interfaces/shares.ui.h:7
+#, fuzzy
+msgid "Add allowed hosts"
+msgstr "רשת/מארח מורשה"
+
+#: ../interfaces/shares.ui.h:8
+msgid "Allowed hosts:"
+msgstr "מארחים מורשים:"
+
+#: ../interfaces/shares.ui.h:9
+msgid "Comment:"
+msgstr "הערה:"
+
+#: ../interfaces/shares.ui.h:10
+msgid "Domain / _Workgroup:"
+msgstr ""
+
+#: ../interfaces/shares.ui.h:11
+msgid "Enter password for user"
+msgstr "הכנס סימה עבור המשתמש"
+
+#: ../interfaces/shares.ui.h:12
+msgid "General Properties"
+msgstr "מאפיינים כלליים"
+
+#: ../interfaces/shares.ui.h:13
+msgid "Host name:"
+msgstr "שם מארח:"
+
+#: ../interfaces/shares.ui.h:15
+msgid "Name:"
+msgstr "שם:"
+
+#: ../interfaces/shares.ui.h:16
+msgid "Netmask:"
+msgstr ""
+
+#: ../interfaces/shares.ui.h:17
+msgid "Network:"
+msgstr "רשת:"
+
+#: ../interfaces/shares.ui.h:18 ../src/shares/nfs-acl-table.c:56
+msgid "Read only"
+msgstr "קריאה בלבד"
+
+#: ../interfaces/shares.ui.h:19
+msgid "Share through:"
+msgstr ""
+
+#: ../interfaces/shares.ui.h:20 ../src/shares/shares.desktop.in.in.h:2
+#: ../src/shares/shares-tool.c:239
+msgid "Shared Folders"
+msgstr "תיקיות משותפות"
+
+#: ../interfaces/shares.ui.h:21
+msgid "This computer is a _WINS server"
+msgstr "מחשב זה הוא _שרת WINS"
+
+#: ../interfaces/shares.ui.h:22
+msgid "Users"
+msgstr "משתמשים"
+
+#: ../interfaces/shares.ui.h:23
+msgid "WINS _server:"
+msgstr "_שרתי WINS:"
+
+#: ../interfaces/shares.ui.h:24
+msgid "_Path:"
+msgstr "_נתיב:"
+
+#: ../interfaces/shares.ui.h:25
+msgid "_Read only"
+msgstr "קריאה _בלבד"
+
+#: ../interfaces/time.ui.h:1
+msgid "<b>Selection</b>"
+msgstr "<b>בחירה</b>"
+
+#: ../interfaces/time.ui.h:2
+msgid "<b>Time Zone</b>"
+msgstr "<b>איזור זמן</b>"
+
+#: ../interfaces/time.ui.h:3
+msgid "Add NTP Server"
+msgstr "הוסף שרת NTP"
+
+#: ../interfaces/time.ui.h:4
+msgid "NTP server"
+msgstr "שרת NTP"
+
+#: ../interfaces/time.ui.h:5
+msgid "Se_lect Servers"
+msgstr "_בחר שרתים"
+
+#: ../interfaces/time.ui.h:6
+msgid "Synchronize now"
+msgstr "סנכרן עכשיו"
+
+#: ../interfaces/time.ui.h:7
+msgid "Time servers"
+msgstr "שרתי זמן"
+
+#: ../interfaces/time.ui.h:8
+msgid "Time servers:"
+msgstr "שרתי זמן:"
+
+#: ../interfaces/time.ui.h:9
+msgid "Time zone"
+msgstr "איזור זמן"
+
+#: ../interfaces/time.ui.h:10
+msgid "Time zone:"
+msgstr "איזור זמן:"
+
+#: ../interfaces/time.ui.h:11
+msgid "Unconfigured"
+msgstr "לא מוגדר"
+
+#: ../interfaces/time.ui.h:12
+msgid "_Configuration:"
+msgstr "ה_גדרות:"
+
+#: ../interfaces/time.ui.h:13
+msgid "_Date:"
+msgstr "_תאריך:"
+
+#: ../interfaces/time.ui.h:14
+msgid "_Time:"
+msgstr "_שעה:"
+
+#: ../interfaces/users.ui.h:1
+msgid "<span weight=\"bold\">Advanced Settings</span>"
+msgstr "<span weight=\"bold\">הגדרות מתקדמות</span>"
+
+#: ../interfaces/users.ui.h:2
+msgid "<span weight=\"bold\">Automatic UID/GID</span>"
+msgstr ""
+"<span weight=\"bold\">"
+"‏UID/GID אוטומטי</span>"
+
+#: ../interfaces/users.ui.h:3
+msgid "<span weight=\"bold\">Basic Settings</span>"
+msgstr "<span weight=\"bold\">הגדרות בסיסיות</span>"
+
+#: ../interfaces/users.ui.h:4
+msgid "<span weight=\"bold\">Contact Information</span>"
+msgstr ""
+
+#: ../interfaces/users.ui.h:5
+msgid "<span weight=\"bold\">Group Members</span>"
+msgstr "<span weight=\"bold\">חברים בקבוצה</span>"
+
+#: ../interfaces/users.ui.h:6
+msgid "<span weight=\"bold\">Optional Settings</span>"
+msgstr "<span weight=\"bold\">הגדרות אפשריות</span>"
+
+#: ../interfaces/users.ui.h:7
+msgid "<span weight=\"bold\">Password Settings</span>"
+msgstr "<span weight=\"bold\">הגדרות סיסמה</span>"
+
+#: ../interfaces/users.ui.h:8
+msgid "<span weight=\"bold\">Password</span>"
+msgstr "<span weight=\"bold\">סיסמה</span>"
+
+#: ../interfaces/users.ui.h:9
+msgid "<span weight=\"bold\">Profile Settings</span>"
+msgstr "<span weight=\"bold\">הגדרות פרופיל</span>"
+
+#: ../interfaces/users.ui.h:10
+msgid "<span weight=\"bold\">System Defaults</span>"
+msgstr "<span weight=\"bold\">ברירות מחדל</span>"
+
+#: ../interfaces/users.ui.h:11
+msgid "Account"
+msgstr "חשבון"
+
+#: ../interfaces/users.ui.h:12
+msgid "Advanced"
+msgstr "מתקדם"
+
+#: ../interfaces/users.ui.h:13
+msgid "Assign a random password by default"
+msgstr ""
+
+#: ../interfaces/users.ui.h:14
+msgid "Check password _quality"
+msgstr ""
+
+#: ../interfaces/users.ui.h:15
+msgid "Con_firmation:"
+msgstr "_אישור:"
+
+#: ../interfaces/users.ui.h:16
+msgid "Days between warning and password expiration:"
+msgstr ""
+
+#: ../interfaces/users.ui.h:17
+msgid "Default _group:"
+msgstr ""
+
+#: ../interfaces/users.ui.h:18
+msgid "Default _shell:"
+msgstr ""
+
+#: ../interfaces/users.ui.h:20
+msgid "Generate _random password"
+msgstr ""
+
+#: ../interfaces/users.ui.h:21
+msgid "Group _ID:"
+msgstr "_זיהוי קבוצה:"
+
+#: ../interfaces/users.ui.h:22
+msgid "Group _name:"
+msgstr "שם קבוצה:"
+
+#: ../interfaces/users.ui.h:23
+msgid "Group properties"
+msgstr "מאפייני קבוצה"
+
+#: ../interfaces/users.ui.h:24
+msgid "Groups settings"
+msgstr "הגדרות קבוצות"
+
+#: ../interfaces/users.ui.h:25
+msgid "Ma_ximum days a password may be used:"
+msgstr ""
+
+#: ../interfaces/users.ui.h:26
+msgid "Maximum UID:"
+msgstr ""
+
+#: ../interfaces/users.ui.h:27
+msgid "Mi_nimum days between password changes:"
+msgstr ""
+
+#: ../interfaces/users.ui.h:28
+msgid "Minimum GID:"
+msgstr ""
+
+#: ../interfaces/users.ui.h:29
+msgid "Minimum UID:"
+msgstr ""
+
+#: ../interfaces/users.ui.h:30
+msgid "Minimum days allowed between password changes:"
+msgstr ""
+
+#: ../interfaces/users.ui.h:31
+msgid "Number of days that a password may be used:"
+msgstr ""
+
+#: ../interfaces/users.ui.h:32
+msgid "O_ffice location:"
+msgstr "מיקום _משרד:"
+
+#: ../interfaces/users.ui.h:33
+msgid "Password set to: "
+msgstr "הסיסמה נקבעה ל: "
+
+#: ../interfaces/users.ui.h:34
+msgid "Privileges"
+msgstr ""
+
+#: ../interfaces/users.ui.h:35
+msgid "Profile _name:"
+msgstr "שם _פרופיל:"
+
+#: ../interfaces/users.ui.h:36
+msgid "Set password b_y hand"
+msgstr ""
+
+#: ../interfaces/users.ui.h:37
+msgid "User ID:"
+msgstr "זיהוי משתמש:"
+
+#: ../interfaces/users.ui.h:38
+#, fuzzy
+msgid "User Privileges"
+msgstr "שימוש בכונני קלטות"
+
+#: ../interfaces/users.ui.h:39
+msgid "User _password:"
+msgstr "_סיסמת משתמש:"
+
+#: ../interfaces/users.ui.h:40
+msgid "User profiles"
+msgstr "פרופילי משתמש"
+
+#: ../interfaces/users.ui.h:41
+msgid "_Add Group"
+msgstr "הוסף _קבוצה"
+
+#: ../interfaces/users.ui.h:42
+msgid "_Add Profile"
+msgstr "הוסף _פרופיל"
+
+#: ../interfaces/users.ui.h:43
+msgid "_Add User"
+msgstr "_הוסף משתמש"
+
+#: ../interfaces/users.ui.h:44
+msgid "_Comments"
+msgstr "_הערות"
+
+#: ../interfaces/users.ui.h:45
+msgid "_Days between warning and password expiration:"
+msgstr ""
+
+#: ../interfaces/users.ui.h:46 ../src/network/address-list.c:77
+#: ../src/network/hosts.c:33 ../src/shares/table.c:40 ../src/users/table.c:40
+msgid "_Delete"
+msgstr "_מחק"
+
+#: ../interfaces/users.ui.h:47
+msgid "_Generate"
+msgstr "_ייצר"
+
+#: ../interfaces/users.ui.h:48
+msgid "_Home directory:"
+msgstr "תיקיית ה_בית:"
+
+#: ../interfaces/users.ui.h:49
+msgid "_Home phone:"
+msgstr "טלפון ב_בית:"
+
+#: ../interfaces/users.ui.h:50
+msgid "_Main group:"
+msgstr "קבוצה _ראשית"
+
+#: ../interfaces/users.ui.h:51
+msgid "_Manage Groups"
+msgstr "_נהל קבוצות"
+
+#: ../interfaces/users.ui.h:52
+msgid "_Profile:"
+msgstr "_פרופיל:"
+
+#: ../interfaces/users.ui.h:53
+msgid "_Real name:"
+msgstr "שם _אמיתי:"
+
+#: ../interfaces/users.ui.h:54
+msgid "_Shell:"
+msgstr "_מעטפת:"
+
+#: ../interfaces/users.ui.h:56
+msgid "_Work phone:"
+msgstr "טלפון ב_עבודה:"
+
+#: ../src/common/gst-dialog.c:179
+msgid "_Unlock"
+msgstr "_בטל נעילה"
+
+#: ../src/common/gst-platform-dialog.c:179
+msgid "The platform you are running is not supported by this tool"
+msgstr "המערכת שאתה מריץ אינה נתמכת על ידי כלי זה"
+
+#. label
+#: ../src/common/gst-platform-dialog.c:185
+msgid ""
+"If you know for sure that it works like one of the platforms listed below, "
+"you can select that and continue. Note, however, that this might damage the "
+"system configuration or downright cripple your computer."
+msgstr ""
+"אם אתה יודע לבטח שהיא עובדת כמו אחת המערכות שרשומות מטה, אתה יכול לבחור את "
+"זה ולהמשיך. שים לב, בכל אופן, זה יכול לגרום נזק לתצורת המערכת או לשבש את "
+"פעולת המחשב שלך."
+
+#: ../src/common/gst-platform-dialog.c:212
+msgid "Unsupported platform"
+msgstr "מערכת לא ניתמכת"
+
+#: ../src/common/gst-polkit-button.c:126
+msgid "This action is allowed"
+msgstr "יש הרשאה לביצוע פעולה זו"
+
+#: ../src/common/gst-polkit-button.c:140
+msgid "This action is not allowed"
+msgstr "אין הרשאה לביצוע פעולה זו"
+
+#: ../src/common/gst-polkit-button.c:247
+msgid "Could not authenticate"
+msgstr "האימות נכשל"
+
+#: ../src/common/gst-polkit-button.c:249
+msgid "An unexpected error has occurred."
+msgstr "אירעה שגיאה בלתי צפויה."
+
+#: ../src/common/gst-tool.c:184
+msgid "The configuration could not be loaded"
+msgstr "אי אפשר לטעון את ההגדרות"
+
+#: ../src/common/gst-tool.c:185
+msgid "You are not allowed to access the system configuration."
+msgstr "אינך בעל הרשאת גישה להגדרות המערכת."
+
+#: ../src/common/gst-tool.c:187
+msgid "The configuration could not be saved"
+msgstr "לא ניתן לשמור את ההגדרות"
+
+#: ../src/common/gst-tool.c:188
+msgid "You are not allowed to modify the system configuration."
+msgstr "אין לך הרשאה לשנות את הגדרות המערכת."
+
+#: ../src/common/gst-tool.c:417
+msgid "Could not display help"
+msgstr "לא ניתן להציג עזרה"
+
+#: ../src/common/gst-tool.c:577
+msgid "The system configuration has potentially changed."
+msgstr "יתכן שהגדרות המערכת השתנו."
+
+#: ../src/common/gst-tool.c:579
+msgid "Update content? This will lose any modification in course."
+msgstr "האם לעדכן את התוכן? שינויים שבוצעו עד כה לא ישמרו."
+
+#: ../src/network/address-list.c:76 ../src/network/hosts.c:31
+#: ../src/shares/table.c:38 ../src/users/table.c:38
+msgid "_Add"
+msgstr "_הוסף"
+
+#: ../src/network/address-list.c:486
+msgid "Type address"
+msgstr "הכנס כתובת"
+
+#: ../src/network/callbacks.c:237 ../src/network/callbacks.c:487
+msgid "Changing interface configuration"
+msgstr "משנה הגדרות המנשק"
+
+#: ../src/network/callbacks.c:299
+msgid "Could not autodetect modem device"
+msgstr "התקן המודם לא זוהה אוטומטית"
+
+#: ../src/network/callbacks.c:302
+msgid ""
+"Check that the device is not busy and that is correctly attached to the "
+"computer."
+msgstr "בדוק שההתקן אינו עסוק ומחובר למחשב כהלכה."
+
+#: ../src/network/callbacks.c:523
+msgid "The host name has changed"
+msgstr "שם המארח השתנה"
+
+#: ../src/network/callbacks.c:526
+msgid ""
+"This will prevent you from launching new applications, and so you will have "
+"to log in again. Continue anyway?"
+msgstr ""
+"פעולה זו תמנע ממך הפעלת ישומים חדשים ולכן יהיה עליך לבצע כניסה למערכת מחדש. "
+"האם להמשיך?"
+
+#: ../src/network/callbacks.c:532
+msgid "Change _Host name"
+msgstr "שנה שם מ_ארח"
+
+#: ../src/network/connection.c:40
+msgid "Automatic configuration (DHCP)"
+msgstr "הגדרה אוטומטית (DHCP)"
+
+#: ../src/network/connection.c:41
+msgid "Local Zeroconf network (IPv4 LL)"
+msgstr "רשת מקומית של ZeroconfI (IPv4 LL)"
+
+#: ../src/network/connection.c:42
+msgid "Static IP address"
+msgstr "כתובת IP קבועה"
+
+#: ../src/network/connection.c:46
+msgid "WEP key (ascii)"
+msgstr "מפתח WEP (טקסטואלי)"
+
+#: ../src/network/connection.c:47
+msgid "WEP key (hexadecimal)"
+msgstr "מפתח WEP (הקסדצימלי)"
+
+#: ../src/network/connection.c:48
+msgid "WPA Personal"
+msgstr "WPA אישי"
+
+#: ../src/network/connection.c:49
+msgid "WPA2 Personal"
+msgstr "WPA2 אישי"
+
+#: ../src/network/connection.c:53
+msgid "GPRS/UMTS"
+msgstr "GPRS/UMTS"
+
+#: ../src/network/connection.c:54
+msgid "ISDN modem"
+msgstr "מודם ISDN"
+
+#: ../src/network/connection.c:55
+msgid "Serial modem"
+msgstr "מודם טורי"
+
+#: ../src/network/connection.c:56
+msgid "PPPoE"
+msgstr "PPPoE"
+
+#: ../src/network/connection.c:769
+#, c-format
+msgid "%s Properties"
+msgstr "מאפייני %s"
+
+#: ../src/network/hosts.c:32 ../src/network/ifaces-list.c:33
+#: ../src/shares/table.c:39 ../src/users/table.c:39
+msgid "_Properties"
+msgstr "_מאפיינים"
+
+#: ../src/network/hosts.c:89
+msgid "IP Address"
+msgstr "כתובת IP"
+
+#: ../src/network/hosts.c:97
+msgid "Aliases"
+msgstr "כינויים"
+
+#: ../src/network/ifaces-list.c:280
+msgid "This network interface is not configured"
+msgstr "ממשק רשת זה לא הוגדר"
+
+#: ../src/network/ifaces-list.c:282
+msgid "Roaming mode enabled"
+msgstr "מצב שוטטות מופעל"
+
+#: ../src/network/ifaces-list.c:289
+#, c-format
+msgid "<b>Essid:</b> %s "
+msgstr "<b>שם הרשת (Essid):</b> %s "
+
+#: ../src/network/ifaces-list.c:295
+#, c-format
+msgid "<b>Address:</b> %s <b>Subnet mask:</b> %s"
+msgstr "<b>כתובת:</b> %s <b>מסכת תת-רשת:</b> %s"
+
+#: ../src/network/ifaces-list.c:299
+#, c-format
+msgid "<b>Address:</b> %s"
+msgstr "<b>כתובת:</b> %s"
+
+#: ../src/network/ifaces-list.c:303
+#, c-format
+msgid "<b>Address:</b> %s <b>Remote address:</b> %s"
+msgstr "<b>כתובת:</b> %s <b>כתובת מרוחקת:</b> %s"
+
+#: ../src/network/ifaces-list.c:315
+#, c-format
+msgid "<b>Type:</b> %s <b>Phone number:</b> %s"
+msgstr "<b>סוג:</b> %s <b>מספר טלפון:</b> %s"
+
+#: ../src/network/ifaces-list.c:318
+#, c-format
+msgid "<b>Type:</b> %s <b>Access point name:</b> %s"
+msgstr "<b>סוג:</b> %s <b>שם נקודת גישה:</b> %s"
+
+#: ../src/network/ifaces-list.c:325
+#, c-format
+msgid "<b>Type:</b> %s <b>Ethernet interface:</b> %s"
+msgstr "<b>סוג:</b> %s <b>מנשק Ethernet:</b> %s"
+
+#: ../src/network/ifaces-list.c:329
+#, c-format
+msgid "<b>Type:</b> %s"
+msgstr "<b>סוג:</b> %s"
+
+#: ../src/network/ifaces-list.c:346
+msgid "Wireless connection"
+msgstr "חיבור אלחוטי"
+
+#: ../src/network/ifaces-list.c:348
+msgid "Infrared connection"
+msgstr "חיבור אינפרא-אדום"
+
+#: ../src/network/ifaces-list.c:350
+msgid "Wired connection"
+msgstr "חיבור קוי"
+
+#: ../src/network/ifaces-list.c:352
+msgid "Parallel port connection"
+msgstr "חיבור מקבילי"
+
+#: ../src/network/ifaces-list.c:354
+msgid "Point to point connection"
+msgstr "חיבור נקודה לנקודה"
+
+#: ../src/network/locations-combo.c:221
+msgid "Changing network location"
+msgstr "משנה מיקום רשת"
+
+#: ../src/network/locations-combo.c:265
+msgid "There is already a location with the same name"
+msgstr "מיקום בשם זה כבר קיים"
+
+#: ../src/network/locations-combo.c:267
+msgid "Overwrite it?"
+msgstr "האם להחליפו?"
+
+#: ../src/network/locations-combo.c:355
+msgid "Save location"
+msgstr "שמור מיקום"
+
+#: ../src/network/locations-combo.c:370
+msgid "_Location name:"
+msgstr "שם _מיקום:"
+
+#: ../src/network/locations-combo.c:422
+#, c-format
+msgid "Do you want to delete location \"%s\"?"
+msgstr "האם למחוק את המיקום \"%s\"?"
+
+#: ../src/network/main.c:135
+msgid "The interface does not exist"
+msgstr "הממשק לא קיים"
+
+#: ../src/network/main.c:137
+msgid ""
+"Check that it is correctly typed and that it is correctly supported by your "
+"system."
+msgstr "ודא שהוא מודפס בצורה נכונה ונתמך על-ידי המערכת."
+
+#: ../src/network/main.c:183
+msgid "Configure a network interface"
+msgstr "Configure a network interface"
+
+#: ../src/network/main.c:183
+msgid "INTERFACE"
+msgstr "INTERFACE"
+
+#: ../src/network/main.c:184
+msgid "Configure the first network interface with a specific type"
+msgstr "Configure the first network interface with a specific type"
+
+#: ../src/network/main.c:184
+msgid "TYPE"
+msgstr "TYPE"
+
+#: ../src/network/network.desktop.in.in.h:1
+msgid "Configure network devices and connections"
+msgstr "הגדרת התקני רשת וחיבורים"
+
+#: ../src/network/network.desktop.in.in.h:2
+msgid "Network"
+msgstr "רשת"
+
+#: ../src/network/network-tool.c:280
+msgid "Network Settings"
+msgstr "הגדרות רשת"
+
+#: ../src/services/callbacks.c:59
+#, c-format
+msgid "Settings for service \"%s\""
+msgstr "הגדרות עבור השירות \"%s\""
+
+#: ../src/services/callbacks.c:119
+#, c-format
+msgid "Are you sure you want to deactivate %s?"
+msgstr "האם אתה בטוח שברצונך לכבות את \"%s\"?"
+
+#: ../src/services/callbacks.c:123
+msgid ""
+"This may affect your system behavior in several ways, possibly leading to "
+"data loss."
+msgstr "פעולה זו עלולה להשפיע על המערכת בדרכים שונות, ואף להוביל לאובדן מידע."
+
+#: ../src/services/service.c:32
+msgid "Web server"
+msgstr "שרת Web"
+
+#: ../src/services/service.c:32
+msgid "Shares your web pages over the Internet"
+msgstr "משתף את דפי ה-Web שלך באינטרנט"
+
+#. GST_ROLE_WEB_SERVER
+#: ../src/services/service.c:33
+msgid "Actions scheduler"
+msgstr "מתזמן משימות"
+
+#: ../src/services/service.c:33
+msgid "Executes scheduled actions"
+msgstr "מבצע משימות מתוזמנות"
+
+#. GST_ROLE_COMMAND_SCHEDULER
+#: ../src/services/service.c:34
+msgid "Printer service"
+msgstr "שירות הדפסה"
+
+#: ../src/services/service.c:34
+msgid "Allows applications to use printers"
+msgstr "מאפשר ליישומים להדפיס"
+
+#. GST_ROLE_PRINTER_SERVICE
+#: ../src/services/service.c:35
+msgid "Mail agent"
+msgstr "סוכן דואר"
+
+#: ../src/services/service.c:35
+msgid "Delivers your outgoing mail"
+msgstr "שולח את הדואר היוצא שלך"
+
+#. GST_ROLE_MTA
+#: ../src/services/service.c:36
+msgid "MTA authentication service"
+msgstr "שרות אימות MTA"
+
+#. GST_ROLE_MTA_AUTH
+#: ../src/services/service.c:37
+msgid "Mail fetcher"
+msgstr "מייבא דואר"
+
+#: ../src/services/service.c:37
+msgid "Downloads your mail from remote accounts"
+msgstr "מוריד את הדואר שלך מחשבונות מרוחקים"
+
+#. GST_ROLE_MAIL_FETCHER
+#: ../src/services/service.c:38
+msgid "Graphical login manager"
+msgstr "מנהל התחברות גרפי"
+
+#: ../src/services/service.c:38
+msgid "Allows users to login graphically"
+msgstr "מאפשר למשתמשים להתחבר באופן גרפי"
+
+#. GST_ROLE_DISPLAY_MANAGER
+#: ../src/services/service.c:39
+msgid "Database server"
+msgstr "שרת מסד נתונים"
+
+#: ../src/services/service.c:39
+msgid "Data storage system"
+msgstr "מערכת אחסון מידע"
+
+#. GST_ROLE_DATABASE_SERVER
+#. GST_ROLE_FILE_SERVER_SMB
+#. GST_ROLE_FILE_SERVER_FTP
+#: ../src/services/service.c:40 ../src/services/service.c:41
+#: ../src/services/service.c:43
+msgid "Folder sharing service"
+msgstr "שירות שיתוף תיקיות"
+
+#: ../src/services/service.c:40 ../src/services/service.c:41
+msgid "Shares folders over your network"
+msgstr "משתף תיקיות ברשת שלך"
+
+#. GST_ROLE_FILE_SERVER_NFS
+#: ../src/services/service.c:42
+msgid "FTP service"
+msgstr "שירות FTP"
+
+#: ../src/services/service.c:42 ../src/services/service.c:43
+msgid "Shares folders over the Internet"
+msgstr "משתף תיקיות באינטרנט"
+
+#. GST_ROLE_FILE_SERVER_TFTP
+#: ../src/services/service.c:44
+msgid "Clock synchronization service"
+msgstr "שירות סינכרון שעון"
+
+#: ../src/services/service.c:44
+msgid "Synchronizes your computer clock with Internet time servers"
+msgstr "מכוון את שעון המערכת שלך בעזרת שרתי זמן באינטרנט"
+
+#. GST_ROLE_NTP_SERVER
+#: ../src/services/service.c:46
+msgid "Antivirus"
+msgstr "אנטי-וירוס"
+
+#: ../src/services/service.c:46
+msgid "Analyzes your incoming mail for virus"
+msgstr "סורק את הדואר הנכנס למציאת וירוסים"
+
+#. GST_ROLE_ANTIVIRUS
+#: ../src/services/service.c:47
+msgid "Firewall"
+msgstr "חומת-אש"
+
+#: ../src/services/service.c:47
+msgid "Blocks undesired network access to your computer"
+msgstr "חוסם תעבורת רשת בלתי רצויה למחשבך"
+
+#. GST_ROLE_FIREWALL_MANAGEMENT
+#: ../src/services/service.c:49
+msgid "Dictionary server"
+msgstr "שרת מילון"
+
+#. GST_ROLE_DICTIONARY_SERVER
+#: ../src/services/service.c:50
+msgid "Speech synthesis support"
+msgstr "תמיכה בדיבור מלאכותי"
+
+#. GST_ROLE_SPEECH_SYNTHESIS
+#: ../src/services/service.c:51
+msgid "Computer activity logger"
+msgstr "רישום פעילות במחשב"
+
+#: ../src/services/service.c:51
+msgid "Keeps a log of your computer activity"
+msgstr "שומר ומעדכן רישום של הפעילות במחשבך"
+
+#. GST_ROLE_SYSTEM_LOGGER
+#: ../src/services/service.c:52
+msgid "Remote backup server"
+msgstr "שרת גיבוי מרוחק"
+
+#. GST_ROLE_REMOTE_BACKUP
+#: ../src/services/service.c:53
+msgid "Spam filter"
+msgstr "מסנן דואר זבל"
+
+#. GST_ROLE_SPAM_FILTER
+#: ../src/services/service.c:54
+msgid "Remote shell server"
+msgstr "שרת מעטפת מרוחק"
+
+#: ../src/services/service.c:54
+msgid "Secure shell server"
+msgstr "שרת מעטפת מאובטח"
+
+#. GST_ROLE_SECURE_SHELL_SERVER
+#: ../src/services/service.c:55
+msgid "Application server"
+msgstr "שרת יישומים"
+
+#. GST_ROLE_APPLICATION_SERVER
+#: ../src/services/service.c:56
+msgid "Automated crash reports support"
+msgstr "תמיכה ביצירת דיווחים אוטומטים בעת התרסקות תוכנה"
+
+#. GST_ROLE_AUTOMATED_CRASH_REPORTS_MANAGEMENT
+#: ../src/services/service.c:57
+msgid "System communication bus"
+msgstr "אפיק תקשורת מערכת"
+
+#. GST_ROLE_DBUS,
+#: ../src/services/service.c:58
+msgid "System configuration manager"
+msgstr "מנהל הגדרות מערכת"
+
+#. GST_ROLE_SYSTEM_CONFIGURATION_MANAGEMENT
+#: ../src/services/service.c:59
+msgid "School management platform"
+msgstr "מערכת לניהול בית-ספר"
+
+#. GST_ROLE_SCHOOL_MANAGEMENT_PLATFORM
+#: ../src/services/service.c:60
+msgid "Network security auditor"
+msgstr "בקר אבטחת רשת"
+
+#. GST_ROLE_SECURITY_AUDITING
+#: ../src/services/service.c:61
+msgid "Web calendar server"
+msgstr "שרת יומן רשת"
+
+#. GST_ROLE_WEB_CALENDAR_SERVER
+#: ../src/services/service.c:62
+msgid "OEM configuration manager"
+msgstr "מנהל הגדרות יצרן"
+
+#. GST_ROLE_OEM_CONFIGURATION_MANAGEMENT
+#: ../src/services/service.c:63
+msgid "Terminal multiplexor"
+msgstr "מכפל מסוף"
+
+#. GST_ROLE_TERMINAL_MULTIPLEXOR
+#: ../src/services/service.c:64
+msgid "Disk quota activation"
+msgstr "אכיפת מכסות דיסק"
+
+#. GST_ROLE_QUOTA_MANAGEMENT
+#: ../src/services/service.c:65
+msgid "Package index monitor"
+msgstr "ניטור אינדקס החבילות"
+
+#. GST_ROLE_PACKAGE_INDEX_MONITORING
+#: ../src/services/service.c:66
+msgid "Network service"
+msgstr "שרות רשת"
+
+#. GST_ROLE_NETWORK
+#: ../src/services/service.c:67
+msgid "Dynamic DNS services updater"
+msgstr "עדכון DNS דינמי"
+
+#. GST_ROLE_DYNAMIC_DNS_SERVICE
+#: ../src/services/service.c:68
+msgid "DHCP server"
+msgstr "שרת DHCP"
+
+#. GST_ROLE_DHCP_SERVER
+#: ../src/services/service.c:69
+msgid "Domain name server"
+msgstr "שרת שמות מתחם"
+
+#. GST_ROLE_DNS
+#: ../src/services/service.c:70
+msgid "Proxy cache service"
+msgstr "שרות מטמון מתווך"
+
+#. GST_ROLE_PROXY_CACHE
+#: ../src/services/service.c:71
+msgid "LDAP server"
+msgstr "שרת LDAP"
+
+#. GST_ROLE_LDAP_SERVER
+#: ../src/services/service.c:72
+msgid "Mailing lists manager"
+msgstr "מנהל רשימות תפוצה"
+
+#. GST_ROLE_MAILING_LISTS_MANAGER
+#: ../src/services/service.c:73
+msgid "Multicast DNS service discovery"
+msgstr "מגלה שירות שידור DNS מרובב"
+
+#. GST_ROLE_RENDEZVOUS
+#: ../src/services/service.c:74
+msgid "Account information resolver"
+msgstr "מאתר פרטי חשבון"
+
+#. GST_ROLE_NSS
+#: ../src/services/service.c:75
+msgid "Virtual Private Network server"
+msgstr "שרת VPN"
+
+#. GST_ROLE_VPN_SERVER
+#: ../src/services/service.c:76
+msgid "Router advertisement server"
+msgstr "שרת פרסום הודעות נתבים"
+
+#. GST_ROLE_ROUTER_ADVERTISEMENT_SERVER
+#: ../src/services/service.c:77
+msgid "IPSec key exchange server"
+msgstr "שרת החלפת מפתחות IPSec"
+
+#. GST_ROLE_IPSEC_KEY_EXCHANGE_SERVER
+#: ../src/services/service.c:78
+msgid "Disk server"
+msgstr "שרת דיסק"
+
+#. GST_ROLE_DISK_SERVER
+#: ../src/services/service.c:79
+msgid "Disk client"
+msgstr "לקוח דיסק"
+
+#. GST_ROLE_DISK_CLIENT
+#: ../src/services/service.c:80
+msgid "Route server"
+msgstr "שרת ניתוב"
+
+#. GST_ROLE_ROUTE_SERVER
+#: ../src/services/service.c:81
+msgid "RPC mapper"
+msgstr "ממפה RPC"
+
+#. GST_ROLE_RPC_MAPPER
+#: ../src/services/service.c:82
+msgid "SNMP server"
+msgstr "שרת SNMP"
+
+#. GST_ROLE_SNMP_SERVER
+#: ../src/services/service.c:83
+msgid "Terminal server client"
+msgstr "לקוח שרת מסוף"
+
+#. GST_ROLE_LTSP_CLIENT
+#: ../src/services/service.c:84
+msgid "Audio settings management"
+msgstr "ניהול הגדרות שמע"
+
+#. GST_ROLE_AUDIO_MANAGEMENT
+#: ../src/services/service.c:85
+msgid "Volumes mounter"
+msgstr "מחבר התקני אכסון"
+
+#: ../src/services/service.c:85
+msgid "Mounts your volumes automatically"
+msgstr "מחבר את התקני האכסון שלך באופן אוטומטי"
+
+#. GST_ROLE_AUTOMOUNTER
+#: ../src/services/service.c:86
+msgid "Infrared port management"
+msgstr "ניהול יציאת אינפרא-אדום"
+
+#. GST_ROLE_INFRARED_MANAGEMENT
+#: ../src/services/service.c:87
+msgid "Braille display management"
+msgstr "ניהול תצוגת כתב ברייל"
+
+#. GST_ROLE_BRAILLE_DISPLAY_MANAGEMENT
+#: ../src/services/service.c:88
+msgid "Bluetooth device management"
+msgstr "ניהול התקני Bluetooth"
+
+#. GST_ROLE_BLUETOOTH_MANAGEMENT
+#: ../src/services/service.c:89
+msgid "Hard disk tuning"
+msgstr "כיונון הגדרות כונן קשיח"
+
+#. GST_ROLE_HDD_MANAGEMENT
+#: ../src/services/service.c:90
+msgid "Hotkeys management"
+msgstr "ניקוי קיצורי מקשים"
+
+#. GST_ROLE_HOTKEYS_MANAGEMENT
+#: ../src/services/service.c:91
+msgid "Power management"
+msgstr "ניהול צריכת חשמל"
+
+#. GST_ROLE_POWER_MANAGEMENT
+#: ../src/services/service.c:92
+msgid "Logical volume management"
+msgstr "ניהול התקני אכסון לוגיים"
+
+#. GST_ROLE_LVM_MANAGEMENT
+#: ../src/services/service.c:93
+msgid "Cluster management tool"
+msgstr "כלי לניהול צבירי מחשבים"
+
+#. GST_ROLE_CLUSTER_MANAGEMENT
+#: ../src/services/service.c:94
+msgid "Fax settings management"
+msgstr "ניהול הגדרות פקס"
+
+#. GST_ROLE_FAX_MANAGEMENT
+#: ../src/services/service.c:95
+msgid "RAID disks management"
+msgstr "ניהול כונני RAID"
+
+#. GST_ROLE_RAID_MANAGEMENT
+#: ../src/services/service.c:96
+msgid "Graphic tablets management"
+msgstr ""
+
+#. GST_ROLE_GRAPHIC_TABLETS_MANAGEMENT
+#: ../src/services/service.c:97
+msgid "CPU Frequency manager"
+msgstr "מנהל תדר המעבד"
+
+#. GST_ROLE_CPUFREQ_MANAGEMENT
+#: ../src/services/service.c:98
+msgid "Eagle USB ADSL modems manager"
+msgstr "מנהל מודמי Eagle USB ADSL"
+
+#. GST_ROLE_EAGLE_USB_MODEMS_MANAGEMENT
+#: ../src/services/service.c:99
+msgid "Serial port settings management"
+msgstr "ניהול הגדרות יציאה טורית"
+
+#. GST_ROLE_SERIAL_PORTS_MANAGEMENT
+#: ../src/services/service.c:100
+msgid "ISDN modems manager"
+msgstr "מנהל מודמי ISDN"
+
+#. GST_ROLE_ISDN_MANAGEMENT
+#: ../src/services/service.c:101
+msgid "Telstra Bigpond Cable Network client"
+msgstr "לקוח רשת כבלים Telstra Bigpond"
+
+#. GST_ROLE_TELSTRA_BIGPOND_NETWORK_CLIENT
+#: ../src/services/service.c:102
+msgid "Hardware monitor"
+msgstr "מנטר חומרה"
+
+#. GST_ROLE_HARDWARE_MONITORING
+#: ../src/services/service.c:103
+msgid "System monitor"
+msgstr "מנטר מערכת"
+
+#: ../src/services/services.desktop.in.in.h:1
+msgid "Configure which services will be run when the system starts"
+msgstr "הגדרת השירותים שיופעלו עם הפעלת המערכת"
+
+#: ../src/services/services.desktop.in.in.h:2
+msgid "Services"
+msgstr "שירותים"
+
+#: ../src/services/service-settings-table.c:73
+#: ../src/services/service-settings-table.c:97
+#: ../src/services/service-settings-table.c:109
+msgid "Start"
+msgstr "התחל"
+
+#: ../src/services/service-settings-table.c:79
+#: ../src/services/service-settings-table.c:99
+#: ../src/services/service-settings-table.c:111
+msgid "Stop"
+msgstr "עצור"
+
+#: ../src/services/service-settings-table.c:85
+#: ../src/services/service-settings-table.c:102
+msgid "Ignore"
+msgstr "התעלם"
+
+#: ../src/services/service-settings-table.c:175
+msgid "Runlevel"
+msgstr "רמת הרצה"
+
+#: ../src/services/service-settings-table.c:192
+msgid "Status"
+msgstr "מצב"
+
+#: ../src/services/service-settings-table.c:211
+msgid "Priority"
+msgstr "עדיפות"
+
+#: ../src/services/services-tool.c:99
+msgid "Services Settings"
+msgstr "הגדרות שירותים"
+
+#: ../src/shares/callbacks.c:196
+msgid "Are you sure you want to delete this share?"
+msgstr "האם אתה בטוח שברצונך למחוק שיתוף זה?"
+
+#: ../src/shares/callbacks.c:198
+msgid "Other computers in your network will stop viewing this."
+msgstr "מחשבים אחרים ברשת שלך לא יוכלו יותר לצפות בזה."
+
+#: ../src/shares/main.c:103
+msgid "Add a shared path, modifies it if it already exists"
+msgstr "Add a shared path, modifies it if it already exists"
+
+#: ../src/shares/main.c:103
+msgid "PATH"
+msgstr "PATH"
+
+#: ../src/shares/nautilus/nautilus-shares.c:152
+msgid "_Share Folder..."
+msgstr "_שתף תיקייה..."
+
+#: ../src/shares/nautilus/nautilus-shares.c:153
+msgid "Share this folder with other computers"
+msgstr "שתף תיקייה זו עם מחשבים אחרים"
+
+#: ../src/shares/nfs-acl-table.c:50
+msgid "Allowed host/network"
+msgstr "רשת/מארח מורשה"
+
+#: ../src/shares/share-nfs-add-hosts.c:117
+msgid "Specify hostname"
+msgstr "ציין שם מארח"
+
+#: ../src/shares/share-nfs-add-hosts.c:124
+msgid "Specify IP address"
+msgstr "ציין כתובת IP"
+
+#: ../src/shares/share-nfs-add-hosts.c:131
+msgid "Specify network"
+msgstr "ציין רשת"
+
+#: ../src/shares/shares.desktop.in.in.h:1
+msgid "Configure which folders are available for your network neighborhood"
+msgstr "הגדר אילו תיקיות זמינות בסביבת הרשת שלך"
+
+#: ../src/shares/share-settings.c:61
+msgid "File System"
+msgstr "מערכת קבצים"
+
+#: ../src/shares/share-settings.c:144
+msgid "Do not share"
+msgstr "אל תשתף"
+
+#: ../src/shares/share-settings.c:152
+msgid "Windows networks (SMB)"
+msgstr "רשתות Windows (SMB)"
+
+#: ../src/shares/share-settings.c:160
+msgid "Unix networks (NFS)"
+msgstr "רשתות Unix (NFS)"
+
+#: ../src/shares/shares-tool.c:155
+msgid "Sharing services are not installed"
+msgstr "שירותי שיתוף לא מותקנים"
+
+#: ../src/shares/shares-tool.c:157
+msgid ""
+"You need to install at least either Samba or NFS in order to share your "
+"folders."
+msgstr "עליך להתקין Samba או NFS כדי לשתף תיקיות."
+
+#: ../src/time/time.desktop.in.in.h:1
+msgid "Change system time, date, and timezone"
+msgstr "כיוון השעון, התאריך ואיזור הזמן של המערכת"
+
+#: ../src/time/time.desktop.in.in.h:2
+msgid "Time and Date"
+msgstr "זמן ותאריך"
+
+#: ../src/time/time-tool.c:390
+msgid "NTP support is not installed"
+msgstr "התמיכה בשרותי זמן (NTP) אינה מותקנת"
+
+#: ../src/time/time-tool.c:392
+msgid ""
+"Please install and activate NTP support in the system to enable "
+"synchronization of your local time server with internet time servers."
+msgstr ""
+"יש להתקין ולהפעיל את התמיכה בשרותי הזמן (NTP) כדי לאפשר את כיוון השעון "
+"המקומי שלך לפי שרתי זמן מהאינטרנט."
+
+#: ../src/time/time-tool.c:422
+msgid "Enabling NTP"
+msgstr "מפעיל NTP"
+
+#: ../src/time/time-tool.c:422
+msgid "Disabling NTP"
+msgstr "מכבה NTP"
+
+#: ../src/time/time-tool.c:434
+msgid "Synchronizing system clock"
+msgstr "מכוון את שעון המערכת"
+
+#: ../src/time/time-tool.c:514
+msgid "Keep synchronized with Internet servers"
+msgstr "שמור על סינכרון מול שרתי האינטרנט"
+
+#: ../src/time/time-tool.c:515
+msgid "Manual"
+msgstr "ידני"
+
+#: ../src/time/time-tool.c:661
+msgid "Time and Date Settings"
+msgstr "הגדרות זמן ותאריך"
+
+#: ../src/users/group-settings.c:52
+msgid "Administrator group can not be deleted"
+msgstr "קבוצת מנהלי המערכת אינה ניתנת למחיקה"
+
+#: ../src/users/group-settings.c:55 ../src/users/group-settings.c:279
+#: ../src/users/group-settings.c:303 ../src/users/user-settings.c:60
+#: ../src/users/user-settings.c:550
+msgid "This would leave the system unusable."
+msgstr "פעולה זו תשאיר את המערכת במצב בלתי שמיש."
+
+#: ../src/users/group-settings.c:68
+#, c-format
+msgid "Are you sure you want to delete group \"%s\"?"
+msgstr "האם אתה בטוח שברצונך למחור את הקבוצה \"%s\"?"
+
+#: ../src/users/group-settings.c:71
+msgid "This may leave files with invalid group ID in the filesystem."
+msgstr "פעולה זו תשאיר במערכת קבצים בעלי מזהה קבוצה שאינו תקף."
+
+#: ../src/users/group-settings.c:167
+msgid "New group"
+msgstr "קבוצה חדשה"
+
+#: ../src/users/group-settings.c:175
+#, c-format
+msgid "Group '%s' Properties"
+msgstr "מאפייני הקבוצה \"%s\""
+
+#: ../src/users/group-settings.c:275
+msgid "Group name is empty"
+msgstr "שם הקבוצה ריק"
+
+#: ../src/users/group-settings.c:276
+msgid "A group name must be specified."
+msgstr "חובה לציין שם קבוצה."
+
+#: ../src/users/group-settings.c:278
+msgid "Group name of the administrator group user should not be modified"
+msgstr "אין לשנות את שם הקבוצה של קבוצת מנהלי המערכת"
+
+#: ../src/users/group-settings.c:281
+msgid "Group name has invalid characters"
+msgstr "שם הקבוצה מכיל תוים לא חוקיים"
+
+#: ../src/users/group-settings.c:282
+msgid ""
+"Please set a valid group name consisting of a lower case letter followed by "
+"lower case letters and numbers."
+msgstr "נא לקבוע שם קבוצה שמתחיל באות קטנה ומכיל אותיות קטנות ומספרים בלבד."
+
+#: ../src/users/group-settings.c:286
+#, c-format
+msgid "Group \"%s\" already exists"
+msgstr "הקבוצה \"%s\" כבר קיימת"
+
+#: ../src/users/group-settings.c:287 ../src/users/user-settings.c:484
+msgid "Please select a different user name."
+msgstr "נא לבחור שם משתמש אחר."
+
+#: ../src/users/group-settings.c:302
+msgid "Group ID of the Administrator account should not be modified"
+msgstr "מספר הזיהוי של קבוצת מנהלי המערכת אינו ניתן לשינוי"
+
+#: ../src/users/groups-table.c:45
+msgid "Group name"
+msgstr "שם קבוצה"
+
+#: ../src/users/privileges-table.c:49
+msgid "Monitor system logs"
+msgstr "ניטור רישום המערכת"
+
+#: ../src/users/privileges-table.c:50
+msgid "Administer the system"
+msgstr "ניהול ההמערכת"
+
+#: ../src/users/privileges-table.c:51
+msgid "Use audio devices"
+msgstr "שימוש בהתקני שמע"
+
+#: ../src/users/privileges-table.c:52
+msgid "Use CD-ROM drives"
+msgstr "שימוש בכונני CD-ROM"
+
+#: ../src/users/privileges-table.c:53
+msgid "Use modems"
+msgstr "שימוש במודמים"
+
+#: ../src/users/privileges-table.c:54
+msgid "Connect to Internet using a modem"
+msgstr "חיבטר לאינטרנט באמצעות מודם"
+
+#: ../src/users/privileges-table.c:55
+msgid "Send and receive faxes"
+msgstr "שליחת וקבלת פקסים"
+
+#: ../src/users/privileges-table.c:56
+msgid "Use floppy drives"
+msgstr "שימוש בכונני דיסקטים"
+
+#: ../src/users/privileges-table.c:57
+msgid "Access external storage devices automatically"
+msgstr "גישה להתקני איחסון באופן אוטומטי"
+
+#: ../src/users/privileges-table.c:58
+msgid "Use scanners"
+msgstr "שימוש בסורקים"
+
+#: ../src/users/privileges-table.c:59
+msgid "Use tape drives"
+msgstr "שימוש בכונני קלטות"
+
+#: ../src/users/privileges-table.c:60
+msgid "Be able to get administrator privileges"
+msgstr "מסוגל לקבל הרשאות מנהל מערכת"
+
+#: ../src/users/users.desktop.in.in.h:1
+msgid "Add or remove users and groups"
+msgstr "הוספה או הסרה של משתמשים וקבוצות"
+
+#: ../src/users/users.desktop.in.in.h:2
+msgid "Users and Groups"
+msgstr "משתמשים וקבוצות"
+
+#: ../src/users/user-settings.c:57
+msgid "Administrator account cannot be deleted"
+msgstr "חשבון מנהל המערכת אינו ניתן למחיקה"
+
+#: ../src/users/user-settings.c:71
+#, c-format
+msgid "Are you sure you want to delete account \"%s\"?"
+msgstr "האם אתה בטוח שברצונך למחוק את \"%s\"?"
+
+#: ../src/users/user-settings.c:74
+msgid ""
+"This will disable this user's access to the system without deleting the "
+"user's home directory."
+msgstr ""
+"אפשרות זו תמנע מהמשתמש גישה למערכת ללא מחיקת תכולת ספריית הבית של המשתמש."
+
+#: ../src/users/user-settings.c:84
+msgid "This user is currently using this computer"
+msgstr "משתמש זה עושה שימוש במחשב זה כרגע"
+
+#: ../src/users/user-settings.c:324
+msgid "New user account"
+msgstr "חשבון משתמש חדש"
+
+#: ../src/users/user-settings.c:342
+#, c-format
+msgid "Account '%s' Properties"
+msgstr "מאפיניי החשבון '%s'"
+
+#: ../src/users/user-settings.c:475
+msgid "User name is empty"
+msgstr "שם המשתמש ריק"
+
+#: ../src/users/user-settings.c:476
+msgid "A user name must be specified."
+msgstr "יש להזין שם משתמש."
+
+#: ../src/users/user-settings.c:478
+msgid "User name has invalid characters"
+msgstr "שם המשתמש מכיל תוים לא חוקיים"
+
+#: ../src/users/user-settings.c:479
+msgid ""
+"Please set a valid user name consisting of a lower case letter followed by "
+"lower case letters and numbers."
+msgstr "יש לקבוע שם משתמש המתחיל באות קטנה ומכיל אותיות קטנות ומספרים בלבד."
+
+#: ../src/users/user-settings.c:483
+#, c-format
+msgid "User name \"%s\" already exists"
+msgstr "שם המשתמש \"%s\" כבר קיים במערכת"
+
+#: ../src/users/user-settings.c:509
+#, c-format
+msgid "Invalid character \"%c\" in comment"
+msgstr "תו לא חוקי \"%c\" בהערה"
+
+#: ../src/users/user-settings.c:510
+msgid "Check that this character is not used."
+msgstr "ודא שתו זה אינו בשימוש"
+
+#: ../src/users/user-settings.c:528
+msgid "Incomplete path in home directory"
+msgstr "נתיב לא מלא בתיקיית הבית"
+
+#: ../src/users/user-settings.c:529
+msgid ""
+"Please enter full path for home directory\n"
+"<span size=\"smaller\">i.e.: /home/john</span>."
+msgstr ""
+"אנא הכנס נתיב מלא לתיקיית הבית\n"
+"<span size=\"smaller\">לדוגמה: /home/john</span>."
+
+#: ../src/users/user-settings.c:532
+msgid "Home directory already exists"
+msgstr "סיפריית הבית כבר קיימת"
+
+#: ../src/users/user-settings.c:533
+msgid "Please enter a different home directory path."
+msgstr "אנא הכנס נתיב שונה לתיקיית הבית."
+
+#: ../src/users/user-settings.c:549
+msgid "Administrator account's user ID should not be modified"
+msgstr "אין לשנות את מספר מזהה החשבון של מנהל המערכת"
+
+#: ../src/users/user-settings.c:564
+msgid "Incomplete path in shell"
+msgstr "נתיב לא מלא עבור המעטפת"
+
+#: ../src/users/user-settings.c:565
+msgid ""
+"Please enter full path for shell\n"
+"<span size=\"smaller\">i.e.: /bin/bash</span>."
+msgstr ""
+"אנא הכנס נתיב מלא למעטפת\n"
+"<span size=\"smaller\">לדוגמה: /bin/sh</span>."
+
+#: ../src/users/user-settings.c:598
+msgid "Password is too short"
+msgstr "הסיסמה קצרה מדי"
+
+#: ../src/users/user-settings.c:599
+msgid ""
+"User passwords must be longer than 6 characters and preferably formed by "
+"numbers, letters and special characters."
+msgstr ""
+"סיסמת משתמש חייבת להכיל לפחות 6 תוים ועדיף לכלול בה גם כמה מספרים, אותיות "
+"ותוים מיוחדים"
+
+#: ../src/users/user-settings.c:602
+msgid "Password confirmation is not correct"
+msgstr "אימות סיסמה שגוי"
+
+#: ../src/users/user-settings.c:603
+msgid "Check that you have provided the same password in both text fields."
+msgstr "בדוק שהקלדת את אותה הסיסמה בשתי התיבות."
+
+#: ../src/users/users-table.c:44
+msgid "Name"
+msgstr "שם"
+
+#: ../src/users/users-table.c:67
+msgid "Login name"
+msgstr "שם משתמש"
+
+#: ../src/users/users-table.c:76
+msgid "Home directory"
+msgstr "תיקיית הבית"
+
+#: ../src/users/users-tool.c:216
+msgid "Users Settings"
+msgstr "הגדרות משתמשים"

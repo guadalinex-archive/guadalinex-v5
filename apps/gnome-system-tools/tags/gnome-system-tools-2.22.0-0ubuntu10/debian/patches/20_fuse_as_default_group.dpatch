@@ -1,0 +1,18 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 20_fuse_as_default_group.dpatch by  <ogra@edubuntu>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad gnome-system-tools-2.15.2~/src/users/privileges-table.c gnome-system-tools-2.15.2/src/users/privileges-table.c
+--- gnome-system-tools-2.15.2~/src/users/privileges-table.c	2006-05-29 02:48:37.000000000 +0200
++++ gnome-system-tools-2.15.2/src/users/privileges-table.c	2006-08-23 13:52:16.000000000 +0200
+@@ -54,6 +54,7 @@
+ 	{ "dip", N_("Connect to Internet using a modem") },
+ 	{ "fax", N_("Send and receive faxes") },
+ 	{ "floppy", N_("Use floppy drives") },
++	{ "fuse", N_("Allow use of fuse filesystems like LTSP Thin Client blockdevices") },
+ 	{ "plugdev", N_("Access external storage devices automatically") },
+ 	{ "scanner", N_("Use scanners") },
+ 	{ "tape", N_("Use tape drives") },

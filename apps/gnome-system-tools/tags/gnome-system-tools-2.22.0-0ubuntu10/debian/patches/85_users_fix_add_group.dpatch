@@ -1,0 +1,53 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 85_users_fix_add_group.dpatch by  <james.westby@canonical.com>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: Set the group name when finished creating a new group.
+
+@DPATCH@
+diff -urNad gnome-system-tools-2.22.0~/src/users/callbacks.c gnome-system-tools-2.22.0/src/users/callbacks.c
+--- gnome-system-tools-2.22.0~/src/users/callbacks.c	2008-03-09 16:07:03.000000000 +0000
++++ gnome-system-tools-2.22.0/src/users/callbacks.c	2008-04-20 13:12:33.000000000 +0100
+@@ -407,7 +407,7 @@
+ 	response = group_settings_dialog_run (dialog, group);
+ 
+ 	if (response == GTK_RESPONSE_OK) {
+-		group_settings_dialog_get_data (group);
++		group = group_settings_dialog_get_group ();
+ 
+ 		config = OOBS_GROUPS_CONFIG (GST_USERS_TOOL (tool)->groups_config);
+ 		groups_list = oobs_groups_config_get_groups (config);
+diff -urNad gnome-system-tools-2.22.0~/src/users/group-settings.c gnome-system-tools-2.22.0/src/users/group-settings.c
+--- gnome-system-tools-2.22.0~/src/users/group-settings.c	2008-03-09 16:07:03.000000000 +0000
++++ gnome-system-tools-2.22.0/src/users/group-settings.c	2008-04-20 13:14:46.000000000 +0100
+@@ -341,3 +341,19 @@
+ 
+ 	group_members_table_save (group);
+ }
++
++OobsGroup*
++group_settings_dialog_get_group (void)
++{
++	GtkWidget *widget;
++	OobsGroup *group;
++
++	widget = gst_dialog_get_widget (tool->main_dialog, "group_settings_name");
++	group  = oobs_group_new(gtk_entry_get_text (GTK_ENTRY (widget)));
++	widget = gst_dialog_get_widget (tool->main_dialog, "group_settings_gid");
++	oobs_group_set_gid (group, gtk_spin_button_get_value (GTK_SPIN_BUTTON (widget)));
++
++	group_members_table_save (group);
++  
++	return group;
++}
+diff -urNad gnome-system-tools-2.22.0~/src/users/group-settings.h gnome-system-tools-2.22.0/src/users/group-settings.h
+--- gnome-system-tools-2.22.0~/src/users/group-settings.h	2008-03-09 16:07:03.000000000 +0000
++++ gnome-system-tools-2.22.0/src/users/group-settings.h	2008-04-20 13:13:49.000000000 +0100
+@@ -37,6 +37,7 @@
+ 
+ gid_t        group_settings_find_new_gid        (void);
+ void         group_settings_dialog_get_data     (OobsGroup    *group);
++OobsGroup*   group_settings_dialog_get_group    (void);
+ 
+ 
+ #endif /* __GROUP_SETTINGS_H */

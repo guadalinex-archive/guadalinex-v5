@@ -1,0 +1,48 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 10_add_postgres82.dpatch by Daniel Holbach <daniel.holbach@ubuntu.com>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad gnome-system-tools-2.18.0~/src/common/gst-service-role.c gnome-system-tools-2.18.0/src/common/gst-service-role.c
+--- gnome-system-tools-2.18.0~/src/common/gst-service-role.c	2007-03-12 10:35:53.000000000 +0100
++++ gnome-system-tools-2.18.0/src/common/gst-service-role.c	2007-03-12 11:19:31.000000000 +0100
+@@ -104,6 +104,7 @@
+ 	{ "kdm",                    GST_ROLE_DISPLAY_MANAGER },
+ 	{ "keepalived",             GST_ROLE_CLUSTER_MANAGEMENT },
+ 	{ "klogd",                  GST_ROLE_SYSTEM_LOGGER },
++	{ "lighttpd",               GST_ROLE_WEB_SERVER },
+ 	{ "lm-sensors",             GST_ROLE_HARDWARE_MONITORING },
+ 	{ "lpd",                    GST_ROLE_PRINTER_SERVICE },
+ 	{ "lpdng",                  GST_ROLE_PRINTER_SERVICE },
+@@ -176,6 +177,7 @@
+ 	{ "syslog",                 GST_ROLE_SYSTEM_LOGGER },
+ 	{ "tftpd-hpa",              GST_ROLE_FILE_SERVER_TFTP },
+ 	{ "vcron",                  GST_ROLE_COMMAND_SCHEDULER },
++	{ "vmware-player",          GST_ROLE_VIRTUAL_MACHINE_MANAGEMENT },
+ 	{ "vsftpd",                 GST_ROLE_FILE_SERVER_FTP },
+ 	{ "wacom-tools",            GST_ROLE_GRAPHIC_TABLETS_MANAGEMENT },
+ 	{ "wdm",                    GST_ROLE_DISPLAY_MANAGER },
+diff -urNad gnome-system-tools-2.18.0~/src/common/gst-service-role.h gnome-system-tools-2.18.0/src/common/gst-service-role.h
+--- gnome-system-tools-2.18.0~/src/common/gst-service-role.h	2007-03-12 10:35:53.000000000 +0100
++++ gnome-system-tools-2.18.0/src/common/gst-service-role.h	2007-03-12 11:19:31.000000000 +0100
+@@ -100,6 +100,7 @@
+ 	GST_ROLE_TELSTRA_BIGPOND_NETWORK_CLIENT,
+ 	GST_ROLE_HARDWARE_MONITORING,
+ 	GST_ROLE_SYSTEM_MONITORING,
++	GST_ROLE_VIRTUAL_MACHINE_MANAGEMENT,
+ 	GST_ROLE_NONE
+ };
+ 
+diff -urNad gnome-system-tools-2.18.0~/src/services/service.c gnome-system-tools-2.18.0/src/services/service.c
+--- gnome-system-tools-2.18.0~/src/services/service.c	2007-03-12 10:35:16.000000000 +0100
++++ gnome-system-tools-2.18.0/src/services/service.c	2007-03-12 11:19:31.000000000 +0100
+@@ -101,6 +101,7 @@
+ 	{ FALSE, NULL,                 N_("Telstra Bigpond Cable Network client"), NULL }, /* GST_ROLE_TELSTRA_BIGPOND_NETWORK_CLIENT */
+ 	{ FALSE, NULL,                 N_("Hardware monitor"),                NULL }, /* GST_ROLE_HARDWARE_MONITORING */
+ 	{ FALSE, NULL,                 N_("System monitor"),                  NULL }, /* GST_ROLE_SYSTEM_MONITORING */
++	{ FALSE, NULL,                 N_("Virtual Machine management"),      NULL }, /* GST_ROLE_VIRTUAL_MACHINE_MANAGEMENT */
+ 	{ FALSE }
+ };
+ 

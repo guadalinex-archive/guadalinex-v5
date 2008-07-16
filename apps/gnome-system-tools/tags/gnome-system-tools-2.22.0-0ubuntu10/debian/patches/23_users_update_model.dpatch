@@ -1,0 +1,60 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+@DPATCH@
+diff -urNad gnome-system-tools-2.21.3~/src/users/callbacks.c gnome-system-tools-2.21.3/src/users/callbacks.c
+--- gnome-system-tools-2.21.3~/src/users/callbacks.c	2007-11-14 16:31:22.000000000 +0100
++++ gnome-system-tools-2.21.3/src/users/callbacks.c	2007-12-19 16:38:31.000000000 +0100
+@@ -284,6 +284,9 @@
+ 		users_table_add_user (user, &list_iter);
+ 		oobs_object_commit (GST_USERS_TOOL (tool)->users_config);
+ 		oobs_object_commit (GST_USERS_TOOL (tool)->groups_config);
++
++		gst_tool_update_config (tool);
++		gst_tool_update_gui (tool);
+ 	}
+ }
+ 
+@@ -369,6 +372,10 @@
+ 	g_list_free (list);
+ 
+ 	oobs_object_commit (GST_USERS_TOOL (tool)->users_config);
++ 	oobs_object_commit (GST_USERS_TOOL (tool)->groups_config);
++ 
++ 	gst_tool_update_config (tool);
++ 	gst_tool_update_gui (tool);
+ }
+ 
+ void
+@@ -412,6 +419,9 @@
+ 
+ 		groups_table_add_group (group, &list_iter);
+ 		oobs_object_commit (GST_USERS_TOOL (tool)->groups_config);
++
++		gst_tool_update_config (tool);
++		gst_tool_update_gui (tool);
+ 	}
+ }
+ 
+@@ -451,7 +461,11 @@
+ 								  &filter_iter, &iter);
+ 		group_settings_dialog_get_data (group);
+ 		groups_table_set_group (group, list_iter, &filter_iter);
++		oobs_object_commit (GST_USERS_TOOL (tool)->users_config);
+ 		oobs_object_commit (GST_USERS_TOOL (tool)->groups_config);
++
++		gst_tool_update_config (tool);
++		gst_tool_update_gui (tool);
+ 	}
+ 
+ 	g_object_unref (group);
+@@ -479,7 +493,11 @@
+ 	g_list_foreach (list, (GFunc) gtk_tree_row_reference_free, NULL);
+ 	g_list_free (list);
+ 
++	oobs_object_commit (GST_USERS_TOOL (tool)->users_config);
+ 	oobs_object_commit (GST_USERS_TOOL (tool)->groups_config);
++
++	gst_tool_update_config (tool);
++	gst_tool_update_gui (tool);
+ }
+ 
+ /* User settings callbacks */
