@@ -61,9 +61,7 @@ fi
 copiar_guadalinex() {
   (
   echo " * Copiando archivos de Guadalinex... (tarda un rato)"
-#  cp -a /cdrom/* /mnt/guadav5/
-#  los llaveros generados con cp dan problemas al arrancar
-  rsync -Pazv /cdrom/ /mnt/guadav5/
+  cp -a /cdrom/* /mnt/guadav5/
   mv /mnt/guadav5/isolinux/* /mnt/guadav5/
   rm -rf /mnt/guadav5/isolinux/
   cp /usr/share/guadalinex-asistente-usb/syslinux.cfg /mnt/guadav5/
