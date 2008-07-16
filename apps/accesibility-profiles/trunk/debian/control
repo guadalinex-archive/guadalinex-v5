@@ -8,6 +8,8 @@ Standards-Version: 3.7.2
 Package: accessibility-profiles
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, gok, dasher, gnome-orca
+Conflicts: accesibility-profiles
+Replaces: accesibility-profiles
 Description: A set of accesibility desktop profiles
  A set of GNOME desktop profiles created with Sabayon 
  for users with accesibility requirements
