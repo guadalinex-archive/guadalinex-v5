@@ -1,0 +1,40 @@
+
+OBJS =		EMAddressbook.o EMAddressbookAPI.o EMContact.o
+
+LIBS =
+
+TARGET =	libagenda.a
+
+CPPINCLUDES = 
+	
+CPPFLAGS = $(CPPINCLUDES) $(CPPDEFINES)  
+
+CXXFLAGS =	-O2 -g -Wall -fmessage-length=0
+
+$(TARGET):	$(OBJS)
+	ar -r $(TARGET) $(OBJS)
+
+all:	$(TARGET)
+
+clean:
+	rm -f $(OBJS) $(TARGET)
+
+distclean:
+	rm -f Makefile
+	rm -f config.h
+
+maintainer-clean:
+
+distdir:
+	cp -f configure.ac configure config.h.in Makefile.in NO-AUTO-GEN \
+		AgendaLib.h EMAddressbook.h EMAddressbookAPI.h EMContact.h siteconfig.h \
+		stdafx.h AgendaLib.cpp EMAddressbook.cpp EMAddressbookAPI.cpp \
+		EMContact.cpp stdafx.cpp \
+		$(distdir)
+
+TARG = install install-data install-exec uninstall install-info installdirs \
+	check installcheck mostlyclean \
+	dvi pdf ps info html tags ctags 
+.PHONY: $(TARG)
+$(TARG): 
+

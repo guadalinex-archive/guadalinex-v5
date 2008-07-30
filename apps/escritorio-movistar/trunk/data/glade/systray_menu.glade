@@ -1,0 +1,58 @@
+<?xml version="1.0" standalone="no"?> <!--*- mode: xml -*-->
+<!DOCTYPE glade-interface SYSTEM "http://glade.gnome.org/glade-2.0.dtd">
+
+<glade-interface>
+
+<widget class="GtkMenu" id="systray_menu">
+  <property name="visible">True</property>
+
+  <child>
+    <widget class="GtkSeparatorMenuItem" id="separador1">
+      <property name="visible">True</property>
+    </widget>
+  </child>
+
+  <child>
+    <widget class="GtkImageMenuItem" id="systray_connect">
+      <property name="visible">True</property>
+      <property name="label">gtk-connect</property>
+      <property name="use_stock">True</property>
+      <signal name="activate" handler="on_systray_connect_activate" last_modification_time="Tue, 03 Apr 2007 11:05:59 GMT"/>
+    </widget>
+  </child>
+
+  <child>
+    <widget class="GtkImageMenuItem" id="systray_disconnect">
+      <property name="visible">True</property>
+      <property name="label">gtk-disconnect</property>
+      <property name="use_stock">True</property>
+      <signal name="activate" handler="on_systray_disconnect_activate" last_modification_time="Tue, 03 Apr 2007 11:10:31 GMT"/>
+    </widget>
+  </child>
+
+  <child>
+    <widget class="GtkSeparatorMenuItem" id="separador2">
+      <property name="visible">True</property>
+    </widget>
+  </child>
+
+  <child>
+    <widget class="GtkMenuItem" id="systray_open">
+      <property name="visible">True</property>
+      <property name="label" translatable="yes">Abrir Escritorio movistar</property>
+      <property name="use_underline">True</property>
+      <signal name="activate" handler="on_systray_open_activate" last_modification_time="Tue, 03 Apr 2007 11:05:59 GMT"/>
+    </widget>
+  </child>
+
+  <child>
+    <widget class="GtkImageMenuItem" id="systray_exit">
+      <property name="visible">True</property>
+      <property name="label">gtk-quit</property>
+      <property name="use_stock">True</property>
+      <signal name="activate" handler="on_systray_exit_activate" last_modification_time="Mon, 19 Mar 2007 16:39:20 GMT"/>
+    </widget>
+  </child>
+</widget>
+
+</glade-interface>
