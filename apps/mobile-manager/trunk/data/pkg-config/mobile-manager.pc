@@ -1,0 +1,10 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+
+Name: mobile-manager-0.7
+Description: Mobile Manager 3G/GPRS daemom
+Version: 0.7
+
