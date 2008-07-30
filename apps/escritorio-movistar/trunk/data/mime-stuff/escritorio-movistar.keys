@@ -1,9 +1,0 @@
-application/x-extension-emsc
-        icon_filename=movistar_icon
-        category=Internet
-        description=Archivo de configuración del escritorio movistar
-        short_list_application_ids_for_novice_user_level=escritorio-movistar
-        short_list_application_ids_for_intermediate_user_level=escritorio-movistar
-        short_list_application_ids_for_advanced_user_level=escritorio-movistar
-        open=escritorio-movistar %f
-        view=escritorio-movistar %f

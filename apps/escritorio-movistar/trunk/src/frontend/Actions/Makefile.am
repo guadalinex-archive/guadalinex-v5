@@ -1,1 +1,0 @@
-SUBDIRS = MSDAInternet MSDAIntranet MSDASendMMS MSDASendSMS
