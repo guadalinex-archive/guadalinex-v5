@@ -1,0 +1,163 @@
+2008-07-15  Cesar Garcia <tapia@openshine.com>
+
+	* po/es.po: Bugs #778 y #784
+
+2008-07-15  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/MobileDialWvdial.py (MobileDialWvdial.__detect_roaming): remove bluetooth roaming detection
+
+	* src/ui/MobileATOptionsButton.py (MobileATOptionsButton.__on_card_deactivate): Timeout wait while wvdial is stopping
+
+2008-07-14  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/MobileDialWvdial.py (MobileDialWvdial.start): Try to detect roaming support
+
+	* src/devices/MobileDeviceNovatel.py (MobileDeviceNovatel.is_on , turn_off, turn_on): Novatel at+cfun simulation
+
+	* src/MobileController.py (MobileController.__unplug_device_cb): Fix bug (correct device id send in removed-device signal)
+
+2008-07-13  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/MobileDialWvdial.py (MobileDialWvdial.__detect_roaming): detection roaming support on start up dialup connection
+
+2008-07-10  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/devices/MobileDeviceNovatel.py (MobileDeviceNovatel.get_carrier_list_from_raw): Add get_carrier_list_from_raw
+
+2008-07-07  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/devices/MobileDeviceOption.py (MobileDeviceOption.__init__): Option GlobberTrotter support (0x6901)
+
+	* src/MobileDialWvdial.py (MobileDialWvdial): Fix ppp abort bug
+
+2008-07-03  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/MobileDialWvdial.py (MobileDialWvdial.__pppd_monitor): Emit connecting later
+
+2008-07-02  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/devices/MobileDeviceNovatel.py (MobileDeviceNovatel): Support for Novatel M950D
+
+2008-07-01  Cesar Garcia <tapia@openshine.com>
+
+	* po/es.po: Bug #746
+
+2008-06-30  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/devices/MobileDeviceSierra.py (MobileDeviceSierra.init_device): Fix detection bug
+	* src/devices/MobileDeviceNovatel.py (MobileDeviceNovatel.init_device): Fix detection bug
+
+2008-06-30  Cesar Garcia <tapia@openshine.com>
+
+	* src/ui/MobilePinDialog.py: Bug #710
+
+2008-06-30  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/MobileDialWvdial.py (MobileDialWvdial.__set_dns_info): Fix dns resolv.conf bug
+	* src/devices/MobileDeviceHuawei.py: Fix bug +CME ERROR
+	* src/devices/MobileDeviceSierra.py: Experimental support for sierra devices
+	* src/devices/MobileDeviceNovatel.py: Experimental support for novatel devices
+	* src/MobileDevice.py: Add "try" to poll
+
+2008-06-25  Cesar Garcia <tapia@openshine.com>
+
+	* po/es.po: Bug #716
+
+2008-06-25  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/MobileDevice.py : Changes in reopen device stuff 
+	* src/MobileDialWvdial.py: Changes in reopen device stuff and monitors
+	* src/devices/MobileDeviceHuawei.py (MobileDeviceHuawei.actions_on_open_port): New commands
+
+2008-06-24  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/MobileDialWvdial.py (MobileDialWvdial.__pppd_options): Use replacedefaultroute in ubuntu/debian
+
+2008-06-23  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/MobileDevice.py: Add try patch
+	* src/devices/MobileDeviceHuawei.py: Fix bug HS*PA
+	
+
+2008-06-19  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/ui/MobilePinDialog.py (MobileAskPinDialog.run): UI bug fixed. Don't show ask dialog if pin is ready
+	* src/devices/MobileDeviceHuawei.py (MobileDeviceHuawei.get_net_info): Added HSDPA HSUPA support
+
+2008-06-18  Cesar Garcia <tapia@openshine.com>
+
+	* po/es.po: Repaso general. Bugs #683 y #684
+
+2008-06-10  Roberto Majadas  <telemaco@openshine.com>
+
+	* Apport support
+	* src/ui/MobileATOptionsButton.py: Check in all dialogs if there is an active device
+	(MobileATOptionsButton.__init__): Added dialer callbacks
+
+	* src/ui/MobileCarrierDialog.py: Check in all dialogs if there is an active device
+	* src/ui/MobileDeviceConf.py : Check in all dialogs if there is an active device
+	* src/ui/MobilePukDialog.py: Check in all dialogs if there is an active device
+	* src/ui/MobilePinDialog.py: Check in all dialogs if there is an active device
+	* src/MobileManagerDbus.py (MobileManagerDbusController.GetActiveDevice): return "" when there isn't an active device
+
+2008-06-03  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/MobileManagerDaemon: Add "import sys"
+
+	* configure.ac: Updated to 0.4
+
+2008-06-02  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/MobileManagerDbus.py (MobileManagerDbusDevice.GetDeviceIcon): Export get_device_icon methond
+	(MobileManagerDbusController.__dialer_disconnecting_cb): Fix bug, incorrect signal "disconnecting"
+
+	* src/devices/MobileDevice*.py: Added icons
+	* src/MobileDevice.py (MobileDevice.__gproperties__): Added new property 'device-icon'
+	* src/ui/__init__.py.in (init_i18n): Added i18n init function
+	* src/ui/MobileDeviceConf.py (MobileDeviceConfWidget.__init__): Set no show all to at_op_button
+	(MobileDeviceConfWidget.__init_fields): Added custom icons per device
+
+2008-06-01  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/MobileDialWvdial.py (MobileDialWvdial.stop): Added turn off/on. Some cards crash, when wvdial is killed
+
+2008-05-30  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/MobileDialWvdial.py (MobileDialWvdial.__pppd_monitor): Added LANG=C 
+
+2008-05-27  Roberto Majadas  <telemaco@openshine.com>
+
+	* configure.ac: Update to 0.3, fix some erase dirs
+	* contrib/novatel, option: removed
+	* data/usb-modeswitch : add experimental support for usb-modeswitch
+	* data/udev-rules/* : add new udev rules dir
+	* src/pppmanager : removed
+	* src/test : removed
+	
+
+2008-05-26  Roberto Majadas  <telemaco@openshine.com>
+
+	* contrib/usb-modeswitch/usb_modeswitch.[ch]: Add new usb mode switchs
+
+	* src/MobileManagerDbus.py (MobileManagerDbusDevice.GetUSSDCmd): Add new dbus method for USSD cmds
+
+	* src/devices/MobileDeviceHuawei.py (MobileDeviceHuawei.get_ussd_cmd_handler) 
+	(MobileDeviceHuawei.get_ussd_cmd): Add custom ussd cmd
+
+	* src/MobileDevice.py (MobileDevice.get_ussd_cmd)
+	(MobileDevice.get_ussd_cmd_handler) : Add ussd cmd
+
+2008-05-21  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/MobileDialWvdial.py (MobileDialWvdial.start): Fix dns bug
+
+2008-05-20  Roberto Majadas  <telemaco@openshine.com>
+
+	* configure.ac: Updated version to 0.2
+	* data/pkg-config/Makefile.am (pkgconfigdir): Fix , correct pkg-config-path
+
+2008-05-19  Roberto Majadas  <telemaco@openshine.com>
+
+	* data/Makefile.am: Added pkg-config dir
+	* data/pkg-config/mobile-manager.pc.in (Version): Create pkg-config
+
