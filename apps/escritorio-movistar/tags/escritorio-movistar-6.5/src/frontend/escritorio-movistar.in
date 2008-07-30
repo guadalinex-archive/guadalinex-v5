@@ -1,0 +1,53 @@
+#!/bin/bash
+LOCK_DIR=~/.movistar_desktop
+LOCK_FILE=$LOCK_DIR/escritoriom.lock
+
+STARTUP_FLAG=~/.movistar_desktop/startup
+
+STARTUP="False"
+
+if [ x$1 == x"startup" ] ; then
+    if [ -f $STARTUP_FLAG ] ; then
+	STARTUP="True"
+    else
+	exit 0
+    fi
+fi  
+
+echo $LOCK_FILE
+[ -d $LOCK_DIR ] || mkdir $LOCK_DIR
+if [ -f $LOCK_FILE ] ; then
+  # the lock file already exists, so what to do?
+  if [ "$(ps -p `cat $LOCK_FILE` | wc -l)" -gt 1 ]; then
+    # process is still running copy 
+    if [ $# -ge 1 ]; then    
+	cp "$1"  ~/.movistar_desktop/import
+    fi
+    exit 0
+  else
+    # process not running, but lock file not deleted?
+    echo " $0: orphan lock file warning. Lock file deleted."
+    rm $LOCK_FILE
+  fi
+fi
+
+if [ $STARTUP == "False" ]; then
+    if [ $# -ge 1 ]; then
+	cp "$1"  ~/.movistar_desktop/import
+    fi
+fi
+
+if [ -e /etc/fedora-release ] ; then
+    export MOZILLA_FIVE_HOME=/usr/lib/xulrunner-1.9/
+    export LD_LYBRARY_PATH=/usr/lib/xulrunner-1.9
+fi
+
+if [ -e /etc/SuSE-release ] ; then
+    export MOZILLA_FIVE_HOME=/usr/lib/xulrunner-1.8.1.13/
+    export LD_LYBRARY_PATH=/usr/lib/xulrunner-1.8.1.13/
+fi
+
+
+/usr/bin/python @prefix@/bin/MSDesktop.py
+
+rm $LOCK_FILE

@@ -1,0 +1,63 @@
+
+ARS =	../AgendaLib/libagenda.a \
+	../SyncMLTk/bin/linux/libsml.a \
+	../SyncMLTk/bin/linux/libiobex.a \
+	../SyncMLTk/bin/linux/libxpt.a \
+	../SyncMLTk/bin/linux/libxpthttp.a \
+	../SyncMLTk/bin/linux/libxptobex.a \
+	../SyncMLTk/bin/linux/libxptwsp.a \
+	../SyncMLTk/bin/linux/libxptawsp.a \
+	../ptools/ptools.a 
+ 
+OBJS =		SyncML.o Sync.o vCard.o # tools.o # main.o 
+
+# LIBS = -lsqlite3
+
+# TARGET =	syncml
+TARGETA =	syncml.a
+
+CPPINCLUDES = \
+	-I../SyncMLTk/src/sml/inc \
+	-I../SyncMLTk/src/sml/inc/linux \
+	-I../SyncMLTk/src/xpt/manager/inc \
+	-I../SyncMLTk/src/xpt/manager/linux \
+	-I../SyncMLTk/src/xpt/bindings/common/all \
+	-I../SyncMLTk/src/xpt/bindings/common/tcp/all \
+	-I../SyncMLTk/src/xpt/bindings/http/all \
+	-I../SyncMLTk/src/sml/lib/inc \
+	-I../AgendaLib \
+	-I../ptools
+	
+CPPDEFINES = -D__linux__ -DDEBUG
+
+CPPFLAGS = $(CPPINCLUDES) $(CPPDEFINES)  
+
+CXXFLAGS =	-O2 -g -Wall -fmessage-length=0 $(CPPINCLUDES) $(CPPDEFINES)
+
+# $(TARGET):	$(OBJS) $(ARS)
+# 	$(CXX) -o $(TARGET) $(OBJS) $(ARS) $(LIBS)
+
+$(TARGETA):	$(OBJS)
+	ar -r $(TARGETA) $(OBJS)
+
+all:	$(TARGETA) # $(TARGET)
+
+clean:
+	rm -f $(OBJS) $(TARGET) $(TARGETA)
+
+distclean:
+	rm -f Makefile
+	rm -f config.h
+
+maintainer-clean:
+
+distdir:
+	cp -f configure.ac configure config.h.in Makefile.in NO-AUTO-GEN \
+		siteconfig.h stdafx.h SyncML.h SyncML.cpp Sync.h Sync.cpp vCard.h vCard.cpp $(distdir)
+
+TARG = install install-data install-exec uninstall install-info installdirs \
+	check installcheck mostlyclean \
+	dvi pdf ps info html tags ctags 
+.PHONY: $(TARG)
+$(TARG): 
+

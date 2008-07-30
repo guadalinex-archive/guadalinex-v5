@@ -1,0 +1,1236 @@
+2008-07-15  Roberto Majadas  <telemaco@openshine.com>
+
+	* Add python header to some scripts
+
+2008-07-15  Cesar Garcia <tapia@openshine.com>
+
+	* data/glade/preferences.glade: Bug #755
+	* src/frontend/MSD/MSDRSSFeeder.py: Bugs #785
+	* configure.ac: Bug #786. Removed all languages but spanish in ALL_LINGUAS 
+	* src/frontend/MSD/MSDBookmarksTab.py: Bug #790 
+	* src/frontend/MSD/MSDMessages.py: Added new message for bug #790 
+
+2008-07-15  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/MSD/MSDConf.py (MSDConf.add_bookmark): Fix #789 movistar icon in bookmark
+
+2008-07-14  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/MSD/MSDConf.py (MSDConf.load_conf): Fix #743 , revert to default configuration if configuration file is corrupted
+
+	* src/frontend/MSD/MSDConnectionsManager.py (MSDConnectionsManager.error_on_connection): Fix #715 , error on connection must hide progress dialog
+
+	* src/frontend/MSD/MSDExporter.py: Fix exporting in SUSE an Fedora
+
+	* src/frontend/MSD/MSDConsumManager.py (MSDConsumManager.isRoaming): Roaming support for usb devices too
+
+	* src/frontend/MSD/MobileManagerClient.py (MobileManagerControllerClient.get_device_obj_from_path): Caching device objects
+	(MobileManagerDeviceClient.is_roaming): New roaming support
+
+2008-07-09  Leo Zayas
+
+	* src/frontend/MSD/MSDTrafficHistoryGraph.py 
+	(MSDTrafficHistoryGraph.draw): Fix bug #766.  Graph scale to visible column
+	data only.
+
+2008-07-08  Leo Zayas
+
+	* src/frontend/MSD/MSDConf.py (MSDConf.__default_conf): Change Copiagenda
+	access host from test to production.
+
+2008-07-06  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/MSD/MSDConf.py (MSDConf.__default_conf): Fix #760
+
+	* src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.py (MSDAMovilidad.__az_key_button_cb): Fix #776
+
+2008-07-03  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/MSD/MSDPreferencesDialog.py (MSDPreferencesDialog.show_all): Fix #764
+
+2008-07-03  Cesar Garcia <tapia@openshine.com>
+
+	* src/front/MSD/MSDAddressBook/frontend.py: Bug #721 
+	* data/glade/agenda.glade: Bug #751
+	* src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.py: Fix #752
+	* data/glade/preferences.glade: Bug #757
+	* src/frontend/MSD/MSDRSSFeeder.py: Bugs #750 y #759
+	* *.py: Bugs #726 y #760
+	* data/glade/consum.glade: Bug #772
+	* src/frontend/MSD/MSDConsumWindow.py: Bug #772
+
+2008-07-02  Cesar Garcia <tapia@openshine.com>
+
+	* src/front/MSD/MSDAddressBook/frontend.py: Bug #701 
+
+2008-07-02  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/MSD/MSDAddressbookTab.py : Added again to the preferences window
+	* src/frontend/MSD/MSDConsumManager.py (MSDConsumManager.__update_warnings): Fix #694
+	(MSDConsumManager.update_color_signals): Fix bug in color signals "roaming"
+
+	* src/frontend/MSD/MobileManagerClient.py (MobileManagerDeviceClient.is_roaming): Add flag to force roaming
+
+2008-07-01  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/MSD/MSDConsumManager.py (MSDConsumManager.update_color_signals): color signal system
+
+2008-07-01  Cesar Garcia <tapia@openshine.com>
+
+	* src/frontend/MSD/MSDRSSFeeder.py: Bug #749
+
+2008-07-01  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/MSD/MSDAddressBook/frontend.py (MDAddressBookController.on_synchronize_button_clicked): Fix status bug
+	* src/frontend/MSD/MSDConsumManager.py (MSDConsumManager.__reset_acumulado): Bug #675
+
+2008-06-30  Leo Zayas
+
+	* src/sync/syncml/Sync.cpp (CSync::filtrarContactosCopiagenda):
+	Disable spaces in imported sync contact telephones.
+	* src/sync/syncml/SyncML.cpp (CSyncML::EndMessage): Fix crash when trace
+	string contains '%' character.
+	* src/sync/syncml/vCard.cpp (CVCard::fromString): Fix erroneous 
+	QUOTED-PRINTABLE encoding when reading contact data.
+
+2008-06-30  Leo Zayas
+
+	* src/front/MSD/MSDAddressBook/frontend.py 
+	(MDAddressBookController.__cell_edited_cb): Bug #737. Do not replace a 
+	locally modified contact when re-syncing.
+
+2008-06-30  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade: Fix #739
+	* src/frontend/Actions/MSDASendMMS/MSDASendMMS.py (MSDASendMMS.install_actions) : Fix #704
+	* src/frontend/MSD/MobileManagerClient.py (MobileManagerDialerClient.add_stop_delegate): Add stop delegates function
+
+2008-06-30  Cesar Garcia <tapia@openshine.com>
+
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Bugs #685, #721, #738 y #740
+	* src/frontend/MSD/MSDMainWindow.py: Bug #742
+
+2008-06-27  Leo Zayas
+
+	* data/glade/agenda.glade: Fix bug #713; remove minimize button.
+
+2008-06-26  Cesar Garcia <tapia@openshine.com>
+
+        * src/frontend/MSD/MSDRSSFeeder.py: Bugs #723 y #724
+	* src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.py: Bug #717
+
+2008-06-25  Cesar Garcia <tapia@openshine.com>
+        
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Bug #701
+	* data/glade/agenda.glade: Bug #701
+	* src/frontend/Actions/MSDASendSMS/MSDASendSMS.py: Bug #700
+	* src/frontend/Actions/MSDAIntranet/MSDAIntranet.py: Bug #700
+	* src/frontend/Actions/MSDASendMMS/MSDASendMMS.py: Bug #700
+	* src/frontend/Actions/MSDAInternet/MSDAInternet.py: Bug #700
+	* src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.py: Bug #700
+	* src/frontend/MSD/MSDSecurityManager.py: Bug #700
+	* src/frontend/MSD/MSDConsumManager.py: Bug #698
+	* src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade: Bugs #718 y #722
+
+
+2008-06-24  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/MSD/MSDConsumManager.py (MSDConsumManager.__reset_acumulado): New reset method #693
+        * src/frontend/MSD/MobileManagerClient.py: Added decorators
+	* src/frontend/MSD/MSDMainWindow.py(MSDMainWindow.__device_added_cb): Resolve some bugs in this method
+
+2008-06-23  Cesar Garcia <tapia@openshine.com>
+        
+	* src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.py: Bug #692
+        * src/frontend/MSD/MSDConf.py: Bug #646
+	* src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade: Bug #682
+	* data/glade/mainwindow.glade: Bug #699
+
+2008-06-20  Leo Zayas
+
+	* src/frontend/MSD/MSDConsumManager.py (MSDConsumManager.end_history):
+	New function.
+	* src/frontend/MSD/MSDConsumManager.py
+	(MSDConsumManager.__disconnecting_cb):
+	Call self.end_history().
+	
+2008-06-20  Leo Zayas
+
+	* src/frontend/MSD/__init__.py.in (msd_version_minor): Changed to 6.5.
+
+2008-06-20  Leo Zayas
+
+	* src/frontend/MSD/MSDConsumWindow.py (MSDConsumWindow.__init__):
+	Hide back and forward traffic history buttons.
+	* data/glade/consum.glade: Hide back and forward traffic history buttons.
+
+2008-06-18  Cesar Garcia <tapia@openshine.com>
+
+	* Cerrados bugs #682, #686 y #687
+
+2008-06-17  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/MSD/MSDMainWindow.py (MSDMainWindow.__init__): If mm is already connected when starts EM, emit connected
+
+	* src/frontend/MSD/MSDConsumManager.py (MSDConsumManager.isRoaming): Cache roaming value 
+
+2008-06-13  Leo Zayas
+
+	* src/frontend/MSD/MSDAddressBook/frontend.py
+	(MDAddressBookController.on_synchroniza_button_clicked):
+	Ask for username and password.
+	* src/frontend/MSD/MSDSecurityManager.py (run_security_dialog): New method.
+
+2008-06-13  Leo Zayas
+
+	* src/frontend/MSD/MSDAddressBook/frontend.py
+	(MDAddressBookController.on_synchronize_button_clicked):
+	Show user/password configuration screen when importingcontacts from Copiagenda.
+	* data/autostart/Makefile.am: Fix installation issue when install dir is not
+	root directory.
+
+2008-06-11  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.py (MSDAMovilidad.get_default_conf): Bug #661 new action name
+	(MSDAMovilidad.__init_hotspots): sort prov_local items
+
+	* src/frontend/MSD/MSDRSSFeeder.py (MSDRSSFeeder.__init__): Bug #673 fix window icon
+	* src/frontend/MSD/MSDConf.py (MSDConf.__default_conf): Bug #646
+	(MSDConf.__default_conf): Default roaming warning mb = 10 Mb
+	(MSDConf.__default_conf): Bug #662 right actions order
+
+	* data/glade/mainwindow.glade : BETA title
+
+2008-06-09  Roberto Majadas  <telemaco@openshine.com>
+
+	* Avisos 
+	* Init EM at start session
+	* Activate/no activate news reader
+	* Close Conf dialog when news reader is open
+	* Revamped Conf->General
+	* Actions name are translatables
+	* Zonas Adsl Wifi
+	* banners translatables
+	* Add devices callbacks
+	* Stop ppp at start
+	* Proxy support
+	* CosumGraph new
+	* Acumulado Roaming
+
+2008-06-06  Leo Zayas
+
+	* src/sync/SyncML_Ref_Toolkit_4_4: Fixed dist long path erro when tarring.  
+	Changed directory name to SyncMLTk.
+	* autogen.sh: Use new directory SyncMLTk.
+	* configure.ac: Use new directory SyncMLTk.
+	* src/Makefile.am: Use new directory SyncMLTk.
+	* src/sync/emsyncmodule/Makefile.in: Use new directory SyncMLTk.
+	* src/sync/syncml/Makefile.in: Use new directory SyncMLTk.
+	
+2008-06-06  Leo Zayas
+
+	* src/frontend/MSD/Makefile.am: Fix Makefile trailing backslash warning.
+	* src/Makefile.am: Backslashify.
+	* src/sync/AgendaLib/Makefile.in: Add dist build.
+	* src/sync/emsyncmodule/Makefile.in: Add dist build.
+	* src/sync/ptools/Makefile.in: Add dist build.
+	* src/sync/SyncML_Ref_Toolkit_4_4/src/bld/linux/Makefile.in: Add dist build.
+	* src/sync/syncml/Makefile.in: Add dist build.
+	* src/traffic/emtrafficmodule/Makefile.in: Add dist build.
+	* src/traffic/traffic/Makefile.in: Add dist build.
+
+2008-06-05  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/MSD/MSDRSSFeeder.py (MSDRSSFeeder.__init__): Remove destroy signal
+	(MSDRSSFeeder.show_rss): New method
+	* src/frontend/MSD/MSDUtils.py (close_app): Fix closeapp bug from systray
+	* src/frontend/MSD/MSDGeneralTab.py (MSDGeneralTab): Adde new tab
+
+	* src/frontend/MSD/MSDPreferencesDialog.py (MSDPreferencesDialog): Add new tab General
+	* src/frontend/MSD/MSDUpdateChecker.py (MSDUpdateChecker.__init__): Remove timeout
+	* src/frontend/MSD/MSDRSSFeeder.py (MSDRSSFeeder.check_on_connect): Add new method
+	* src/frontend/MSD/MSDConf.py (MSDConf.__default_conf): Add roaming default conf
+	* data/glade/consum.glade: rethink traffic dialog
+
+2008-06-04  Leo Zayas
+
+	* src/frontend/MSD/MSDConsumManager.py (__ppp_stats_cb): Python syntax error.
+	* src/frontend/MSD/MSDMainWindow.py: Localization errors.
+	* src/frontend/MSD/MSDRSSFeeder.py (update_cache): Python syntax error.	
+	
+2008-06-04  Leo Zayas
+
+	* src/frontend/MSD/MSDTrafficHistoryGraph.py: Localize strings.  Cleanup.
+	* src/traffic/traffic/Traffic.cpp (CTraffic::ProcesaHistorico): Remove debug
+	logs.
+	
+2008-06-04  Leo Zayas
+
+	* src/frontend/*.py: Localize strings.
+	
+2008-06-03  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/MSD/MSDRSSFeeder.py: Added MSDRSSFeeder class
+	* data/glade/rssfeeder.glade : Addeld rss glade
+	* configure.ac (PYGNOMEEXTRAS_LIBS): Added gtkmoz depends
+
+	* src/Makefile.am (emtrafficm_DATA): correct path
+
+2008-06-02  Leo Zayas
+
+	* src/frontend/MSDConsumManager.py (__disconnecting_cb): Save pending 
+	traffic to history db.
+	* src/frontend/MSDConsumManager.py (__ppp_stats_cb): Save traffic to
+	history db.
+
+2008-05-29  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.py/glade: experimental support for this action
+
+2008-05-29  Leo Zayas
+
+	* src/sync/AgendaLib/AgendaLib.h,
+	src/sync/AgendaLib/EMAddressBook.cpp,
+	src/sync/AgendaLib/EMAddressBook.h, 
+	src/sync/ptools/ptools.cpp,
+	src/sync/syncml/SyncML.cpp,
+	src/sync/syncml/syncml.vcproj,
+	src/sync/syncml/vCard.cpp: Win32 changes update.
+
+2008-05-29  Leo Zayas
+
+	* src/sync/*/Makefile.in: Fix compilation flags.
+
+2008-05-28  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/Actions/*/ : Clean icons
+	* src/frontend/Actions/MSDAMovilidad/* : Add initial plugin
+
+2008-05-28  Leo Zayas
+
+	* src/traffic/traffic: New package for portable Windows/Linux traffic 
+	history management.
+	* src/traffic/emtrafficmodule: New package for traffic history python 
+	module.
+
+2008-05-28  Leo Zayas
+
+	* autogen.sh: Added autoconf subdirs for new traffic and python traffic 
+	module.
+	* configure.ac: Added autoconf subdirs for new traffic and python 
+	traffic module.
+	* data/glade/consum.glade: New tab for traffic history.
+	* src/frontend/MSD/__init__.py.in: New traffic history graph import.  New 
+	global MSD version vars.
+	* src/frontend/MSD/Makefile.am: New source file MSDTrafficHistoryGraph.py.
+	* src/frontend/MSD/MSDConsumManager.py (traffic, traffic_roaming):
+	New globals to manage traffic history.
+	* src/frontend/MSD/MSDConsumManager.py (get_user_traffic_db_path): 
+	New function to get traffic history db path.
+	* src/frontend/MSD/MSDConsumManager.py (MSDConsumManager.__init__):
+	Initialize new globals to manage traffic history.
+	* src/frontend/MSD/MSDConsumWindow.py (MSDConsumWindow.__init__):
+	Create and setup traffic history widget.
+	* src/frontend/MSD/MSDConsumWindow.py (MSDCOnsumWindow.__hist_go_back):
+	New function to handle back scrolling into traffic history.
+	* src/frontend/MSD/MSDConsumWindow.py (MSDCOnsumWindow.__hist_go_forward):
+	New function to handle forward scrolling into traffic history.
+	* src/frontend/MSD/MSDMainWindow.py (MSDMainWindow.__init__):
+	Initialize traffic history module.
+	* src/frontend/MSD/MSDDesktop.py:
+	Initialize traffic history module.
+	* src/Makefile.am: New traffic history subdirs and module instalation.
+	* src/sync/ptools/configure.ac: New portability types.
+	* src/sync/ptools/ptools.cpp (ptoolsInit): Check locale hasn't been already
+	initialized.
+	* src/sync/ptools/ptools.cpp (ptoolsEnd): Check locale hasn't already been
+	un-initialized.
+	* src/sync/ptools/ptools.h: New portability types.
+	* src/frontend/MSD/MSDTrafficHistoryGraph.py: New file for traffic history
+	graph.
+
+2008-05-22  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/MSD/MSDConf.py (MSDConf.__default_conf): Add new bookmarks (#646)
+	* src/frontend/MSD/MSDMainStatsWidget.py:  Add cover button 
+
+2008-03-12  Leo Zayas
+
+	* src/sync/emsyncmodule/emsyncmodule.cpp:
+	Fix crash bug when loading module.  Fixed bad error enum value.
+	
+2008-03-12  Leo Zayas
+
+	* src/frontend/MSD/MSDAddressBook/frontend.py
+	(MDImportProgress.on_timeout):
+	Add error reply from SyncML server for bad credentials.
+	* src/sync/syncml/Sync.h (CSync): Added error enum for bad credentials.
+	* src/sync/syncml/Sync.cpp (CSync::ThreadProc):
+	Added support for bad credentials error from SyncML server.
+	* src/sync/emsyncmodule/emsyncmodule.cpp
+	(emsync_Sync): New enum for bad credentials.
+	* src/sync/emsyncmodule/emsyncmodule.cpp
+	(init_emsync_Sync): New support for bad credentials.
+	* src/sync/emsyncmodule/emsyncmodule.cpp
+	(emsync_SyncMembers): New exposed constant to python interface for bad 
+	credentials.  
+
+2008-01-17  Leo Zayas
+
+	* src/ptools/ptools.cpp: Windows compile issues fixed.
+	* src/ptools/ptools.h: Windows compile issues fixed.
+
+2008-01-17  Leo Zayas
+
+	* src/sync/emsyncmodule/emsyncmodule.cpp (filter_contacts):
+	New Python module exported function.
+	* src/syncemsyncmodule/Makefile.in: New include directory dependency for
+	AgendaLib.
+	* src/sync/AgendaLib/AgendaLib.h [_MSC_VER]: VC specific pragma.
+	* src/sync/syncml/Sync.cpp (CSync::CSync): Changed construction order to
+	remove gcc warning.
+	* src/frontend/MSD/MSDAddressBook/frontend.py (MDImportProgress.__init__):
+	Added window icon.
+	* src/frontend/MSD/MSDAddressBook/frontend.py 
+	(MDAddressBookController.on_add_button_clicked):
+	Filter out synch'ed contacts.
+	* src/frontend/MSD/MSDAddressBook/frontend.py 
+	(MDAddressBookController.on_edit_button_clicked):
+	Filter out synch'ed contacts.
+	* src/frontend/MSD/MSDAddressBook/frontend.py 
+	(MDAddressBookController.on_synchronize_button_clicked):
+	Filter out synch'ed contacts, use MSDConf.py configured server parameters.
+	* src/frontend/MSD/MSDConf.py (MSDConf.get_country_code): New function.
+	* src/frontend/MSD/MSDConf.py (MSDConf.get_syncml_server): New function.
+	* src/frontend/MSD/MSDConf.py (MSDConf.get_syncml_service): New function.
+	* src/frontend/MSD/MSDConf.py (MSDConf.get_syncml_resource): New function.
+	* src/frontend/MSD/MSDConf.py (MSDConf.__default_conf): Init 'country_code',
+	'syncml.server', 'syncml.service', 'syncml.resource' default values.
+
+2008-01-16  Leo Zayas
+
+	* data/glade/agenda.glade: New synchronize button.
+	
+2008-01-16  Leo Zayas
+
+	* src/sync/ptools/ptools.c (ASSERT): New portability macro.
+	* src/sync/ptools/ptools.c (TRACE): New portability macro.
+	* src/sync/ptools/ptools.c (_T): New portability macro.
+	* src/sync/ptools/ptools.c (tchar): New portability macro.
+	* src/sync/syncml/Makefile.in (OBJS): Removed tools.o dependency.
+	* src/sync/syncml/Sync.cpp: Changed "tools.h" for "ptools.h"
+	* src/sync/syncml/SyncML.cpp: Changed "tools.h" for "ptools.h"
+	* src/sync/syncml/SyncML.cpp (CSyncML::Init): Cleanup.
+	* src/sync/syncml/vCard.h: Changed "tools.h" for "ptools.h"
+	* src/sync/syncml/vCard.cpp: Changed "tools.h" for "ptools.h"
+
+2008-01-15  Leo Zayas
+
+	* configure.ac: Configure include src/sync packages.
+	* src/Makefile.am: Build include src/sync packages.
+	* src/Makefile.am: Install emsync module.
+
+2008-01-15  Leo Zayas
+
+	* data/icons/Makefile.am: Install synchronize_32x32.png button icon.
+	* data/icons/synchronize_32x32.png: New button icon.
+	* data/glade/agenda.glade: New toolbar button.
+	* data/glade/agenda.glade: New progress dialog.
+	* data/glade/agenda.glade: Change "Sincronizar" for "Importar".
+
+2008-01-15  Leo Zayas
+
+	* src/frontend/MSDesktop.py: Init emsync module.
+	* src/frontend/MSD/MSDAddressBook/backend.py (MDAddressBook.__init_db):
+	Save database filename.
+	* src/frontend/MSD/MSDAddressBook/frontend.py (MDImportProgress):
+	New object to display synchronization progress.
+	* src/frontend/MSD/MSDAddressBook/frontend.py  
+	(MDAddressBookController.__init__):
+	Enable synchronization button.
+	* src/frontend/MSD/MSDAddressBook/frontend.py
+	(MDAddressBookController.on_synchroniza_button_clicked):
+	New function to handle synchronization process.
+
+2008-01-15  Leo Zayas
+
+	* src/sync/ptools: New package containing win/linux portability C functions.
+	* src/sync/AgeldaLib: New package C encapsulation for sqlite3 address book.
+	* src/sync/SyncML_Ref_Toolkit_4_4: New package implementing SyncML standard. 
+	* src/sync/syncml: New package to encapsulate SyncML_Ref_Toolkit_4_4 and 
+	handle 'Copiagenda' synchronization.
+	* src/sync/emsyncmodule: New package implementing a Python module interface
+	to use src/sync/syncml package from Pyton frontend.
+
+2007-12-12  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/MobileDeviceSerial.py (MobileDeviceSerial.init_device): Added translatable string
+	* src/frontend/escritorio-movistar.in : remove debug messages
+	* src/frontend/Actions/MSDAIntranet/MSDAIntranet.py (MSDAIntranet.get_default_conf): Internet GPRS/3G -> movistar Internet
+
+2007-12-12  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDMainWindow.py: Send UpdateChecker objet to
+	"close_app" function
+	* src/frontend/MSD/MSDUpdateChecker.py: Save wget/curl execution
+	class for kill on exit app (Fix #623)
+	* src/frontend/MSD/MSDUtils.py: Execute a kill for wget/curl in
+	"close_app" function if they don't end
+
+2007-12-12  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDUpdateChecker.py: Changed date comparation
+
+2007-12-12  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/ui/MobileCarrierDialog.py (MobileCarrierSelectorDialog.run): Bug #610
+	* src/frontend/MSD/MSDConf.py (MSDConf.load_conf): Bug #624
+	* src/frontend/MSD/MSDMainWindow.py (MSDMainWindow.__active_device_changed_cb): Bug #621
+
+2007-12-11  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/MSD/MSDConsumManager.py (MSDConsumManager.__ppp_stats_cb): Revert changes to 2300 svn revision
+	* src/frontend/MSD/MSDConsumGraph.py (MSDConsumGraph.recalculate_scale): Revert changes to 2300 svn revision
+	* src/frontend/MSD/MSDMainWindow.py (MSDMainWindow.__closeapp_cb): Bug #601
+	* src/mobilemanager/ui/MobileDeviceConf.py (MobileDeviceConfWidget.__imc_radiobutton_cb): Bug #606
+	(MobileDeviceConfWidget.__od_combobox_cb): Fix #606
+
+	* src/mobilemanager/ui/MobilePukDialog.py (MobilePukDialog.run): Fix bug in Puk validation
+
+2007-12-10  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/MobileDevice.py (MobileDevice.start_polling)
+	(MobileDevice.stop_polling): Remove pooling stuff
+
+2007-12-09  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDConf.py: Function for get release date
+	* src/frontend/MSD/MSDUpdateChecker.py: Check if feed date is
+	big than release date
+
+2007-12-08  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/updater.glade: Changed "cerrar" to "cancelar"
+
+2007-12-08  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/agenda.glade: Change "borrar" to "eliminar"
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Change "borrar" to
+	"eliminar"
+
+2007-12-06  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/ui/MobileCarrierDialog.py (MobileCarrierSelectorDialog.run): Bug #600
+	* src/mobilemanager/ui/MobileATOptionsButton.py (MobileATOptionsButton.__on_manual_oper_activate): Bug #600
+	* src/frontend/MSD/MSDConnectionsManager.py (MSDConnectionsManager.__new_connection_active_dialog): Bug #602, Fixed focus bug
+	* src/frontend/MSD/MSDSecurityManager.py (MSDSecurityManager.launch_secure_url): Bug #604 , added "&" to open web functions
+	* src/frontend/MSD/MSDMainWindow.py (MSDMainWindow.__main_actions_menu_item_help_cb): Bug #603 , show help in deinstalled service 
+	(MSDMainWindow.__device_added_cb): Bug #605 fixed
+
+2007-12-05  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Added column
+	tooltip
+
+2007-12-05  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/MSD/MSDConsumGraph.py (MSDConsumGraph.set_in_value): Fix too too much in out traffic bug
+
+2007-12-04  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/MobileDeviceOption.py (MobileDeviceOption.get_carrier): bug #581 , new option carrier
+
+2007-12-03  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDAction.py: Added ampersand for background
+	execution
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Link with the
+	addressbook help
+
+2007-12-03  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/Actions* : Added help stuff
+	* src/frontend/MSD/MSDSecurityManager.py (MSDSecurityManager.__help_button_cb): Added new url help
+
+2007-12-03  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDAddressBook/backend.py: Changed database
+	struct and name
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Using new table
+	schema
+
+2007-11-30  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/consum.glade: Set min percent warning to one.
+
+2007-11-30  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/agenda.glade: Removed "last name" entry
+	* src/frontend/MSD/MSDAddressBook/backend.py: Merge first and last
+	name y one
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Merge first and
+	last name y one
+	* src/frontend/MSD/MSDConf.py: Set release_date
+	* src/frontend/MSD/MSDMainWindow.py: Only take name from contacts
+	database
+
+2007-11-30  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Changed min search
+	caracters to 0 (starts with one)
+
+2007-11-30  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/MobileDevice.py (MobileDevice.turn_off): Clear cached values
+	* src/mobilemanager/ui/MobileCarrierDialog.py (MobileCarrierSelectorDialog.run): Fix string #595
+	* src/mobilemanager/ui/MobilePinDialog.py (MobileAskPinDialog.run): Fix puk stuff in huawei devices
+
+2007-11-29  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/ui/MobileCarrierDialog.py (MobileCarrierSelectorDialog.__registering_timeout_cb): New timeout
+	* src/frontend/MSD/MSDMainWindow.py (MSDMainWindow.__device_added_cb): Dectectado -> detectado
+
+2007-11-28  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/MSD/MSDMainStatsWidget.py: Fix home zone hide button when the card is not active.
+	* src/mobilemanager/ui/MobileDeviceConf.py (MobileDeviceConfWidget.__active_device_changed_cb): Fix options button visibility bug
+	* src/mobilemanager/ui/MobileCarrierDialog.py (MobileCarrierSelectorDialog.run): Manual process fixed with no correct carriers
+	* src/mobilemanager/MobileDevice.py (MobileDevice.send_at_command): Resend if don't return correct At command sended
+	(MobileDevice.get_x_zone): Fix bug in homeZone
+	(MobileDevice.send_at_command): Fix bug in send_at_command 
+
+	* src/mobilemanager/MobileDeviceOption.py (MobileDeviceOption.open_device): More attempts and more timeout 
+	for this devices when write on it the AT commands
+	(MobileDeviceOption.__init__): Added MobileDeviceIO
+
+	* src/mobilemanager/ui/MobilePinDialog.py (MobileChangePinDialog.run): Fix bug in change pin 
+	* src/frontend/MSD/MSDMainWindow.py (MSDMainWindow.__device_added_cb): Bug #579 fixed
+
+2007-11-26  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/MobileDevice.py (MobileDeviceIO.readline): Fix bug with option get_carrier
+	* src/frontend/MSD/MSDMainStatsWidget.py (MSDMainStatsWidget.__active_device_x_zone_changed): Fix bug #578 , show correctly home_zone icon
+
+2007-11-23  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/MSD/MSDMainWindow.py: Bug #563 . Set a default dev if is available 
+
+2007-11-22  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/MSD/MSDMainStatsWidget.py (MSDMainStatsWidget.__active_device_x_zone_changed): Bug #569 closed
+	* src/frontend/MSD/MSDConf.py (MSDConf.__default_conf): Bug #571 closed
+	(MSDConf.__default_conf): MOVISTAR_OPT -> MOVISTAR_OPTI
+
+2007-11-21  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/MSD/__init__.py.in (help_uri): use new path for documentation
+	* src/mobilemanager/ui/MobileATOptionsButton.py (MobileATOptionsButton.__on_auto_oper_activate): bug #513 closed
+	* src/mobilemanager/MobileDevice.py (MobileDevice.get_net_info): Force string format for the carrier name
+	* src/mobilemanager/ui/MobilePinDialog.py (MobileChangePinDialog.run): Fix bug #550 closed
+	* data/glade/agenda.glade : Fix bug #570 closed
+	* src/frontend/MSD/MSDMainStatsWidget.py (MSDMainStatsWidget.set_3g_on): Fix Bug #568
+	* src/frontend/MSD/MSDMainWindow.py (MSDMainWindow.__device_added_cb): Fix bug #560
+
+2007-11-19  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/ui/MobileDeviceConf.py (MobileDeviceConfWidget.__od_radiobutton_cb): If change device, turn off the at's devices
+
+	* src/frontend/MSD/MSDMainStatsWidget.py (MSDMainStatsWidget.__active_device_changed_cb): bug #533
+	* src/mobilemanager/ui/MobilePukDialog.py (MobilePukDialog.run): Bug #551 closed 
+	* src/frontend/MSD/MSDConnectionsManager.py (MSDConnectionsManager.__[dis]connecting_cb): bug #519 closed
+	* data/*/*.glade : Set active widget on ok button
+
+2007-11-19  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Included tooltips 
+
+2007-11-19  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/ui/MobilePinDialog.py: Bug #120 closed
+	* src/frontend/MSD/MSDConf.py (MSDConf.load_conf): Bug #567 closed
+	(MSDConf.__default_conf): Bug #528 Closed
+	* src/frontend/MSD/MSDImporter.py (MSDImporter.__add_connection): Bug #562 closed
+	* src/frontend/MSD/MSDSecurityManager.py (MSDSecurityManager.launch_secure_url): Bug #558 closed
+	* src/frontend/MSD/MSDMainWindow.py (MSDMainWindow.__load_help_info): Bug #520 closed
+	(MSDMainWindow.__load_help_info): Bug #547 Closed
+
+2007-11-16  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Changed "Editar" to
+	"Modificar"
+
+2007-11-16  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/agenda.glade: Removed about menu item
+	* src/frontend/MSD/MSDAddressBook/frontend.py: remove about menu
+	item
+
+2007-11-16  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/updater.glade: Append Cancel button
+
+2007-11-16  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/agenda.glade: Added icons to some menu items
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Hide items when no
+	contacts are selected
+
+2007-11-16  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/agenda.glade: Removed Ctrl+Q from "Salir"
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Fixed on "Salir"
+	menu item callback
+
+2007-11-15  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/MSD/MSDUpdateChecker.py (MSDUpdateChecker.check_now): Async get rss with curl and wget
+	* src/mobilemanager/MobileDeviceBluetooth.py (MobileDeviceBluetooth.is_device_supported): Fix bug with duplicated bluetooth devices
+
+2007-11-14  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/pppmanager/PPPManager/PPPManager.py (ProcesMonitor.stop): Solved problem in stop pppd
+
+2007-11-13  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/MSD/MSDPreferencesDialog.py (MSDPreferencesDialog): Hide Adressbook in Preferences dialog
+	* src/frontend/MSD/MSDMainWindow.py (MSDMainWindow.__load_help_info): bug #520
+	(MSDMainWindow.__device_added_cb): New add device policy
+	* src/frontend/MSD/MSDConf.py (MSDConf.__default_conf): Added new connections
+	* src/mobilemanager/MobileDeviceHuawei.py (MobileDeviceHuawei.init_device): Diferent ports for 1003 huawei device
+	* src/mobilemanager/MobileDevice.py (MobileDevice.__init__): remove homezone support
+	if device has not the capability
+
+2007-11-13  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/mainwindow.glade: Append new contacts list window
+	* src/frontend/MSD/MSDMainWindow.py: Control "send mail" utility
+
+2007-11-12  Álvaro Peña  <apg@openshine.com>
+
+	* Modify some icons
+	* First changes in addressbook for support send email from main
+	window
+
+2007-11-12  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/agenda.glade: Using new icons
+	* data/icons/Makefile.am: New icons
+	* src/frontend/MSD/MSDAddressBook/frontend.py: New icons
+
+2007-11-12  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/maintoolbar.glade: Append addressbook tooltip
+
+2007-11-12  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDMainWindow.py: Created MSDUpdateChecker
+	* src/frontend/MSD/MSDUpdateChecker.py: Connect to "connected"
+	signal for check feed
+
+2007-11-12  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/Makefile.am: Added updater.glade
+	* data/glade/updater.glade: Dialog to show update notifications
+	* src/frontend/MSD/MSDConf.py: Append updater feed configuration
+	* src/frontend/MSD/MSDUpdateChecker.py: Main class to check rss
+	feed
+	* src/frontend/MSD/Makefile.am: Append feedparser and
+	MSDUpdateChecker
+	* src/frontend/MSD/__init__.py.in: Append MSDUpdateChecker
+	* src/frontend/MSD/feedparser.py: Parser from feedparser package 
+
+2007-11-11  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/MobileController.py (MobileController.__first_time_hardware_detection): fix bug about firts start of mobilecontroller, don't find dir
+
+2007-11-05  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/MobileDeviceOption.py (MobileDeviceOption.init_device): Adedd method
+
+	* configure.ac: Some distro detection stuff
+
+2007-11-05  Álvaro Peña  <apg@openshine.com>
+
+	(Ticket #525)
+	* src/frontend/MSD/MSDConsumManager.py: Set ISO-8859-15
+	* src/frontend/MSD/MSDConsumWindow.py: Set "á" with 8859
+
+2007-11-05  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/agenda.glade: Removing sync buttons 
+	* data/glade/mainwindow.glade: (Tickets #454, #516)
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Set application
+	name
+	* src/frontend/MSD/MSDConf.py: Changed version to 6.1
+
+2007-11-05  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/mainwindow.glade: (Ticket #515) Adding "Beta" in
+	window title
+
+2007-11-05  Álvaro Peña  <apg@openshine.com>
+
+	* data/icons/mail_*: Changed to correct icons 
+
+2007-11-05  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/agenda.glade: Removed ending "l" in "Telefono"
+	* src/frontend/MSD/MSDAddressBook/frontend.py: (Ticket #478)
+	Ellipsize at the end, now at start
+
+2007-11-05  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDConnectionsTab.py: (Ticket #506) Now using
+	prepend (the last ones will be first)
+
+2007-11-05  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDConsumManager.py: (Ticket #524) Connect
+	"value-changed" instead of "changed" for better control
+
+2007-11-02  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/MobileDevice.py (MobileDeviceIO.readline): more timeout time
+	* src/mobilemanager/MobileDeviceHuawei.py (MobileDeviceHuawei.actions_on_reopen_port): AT+COPS=3,0
+	(MobileDeviceHuawei.init_device): Pretty-name
+
+	* src/mobilemanager/ui/MobilePinDialog.py (Mobile*PinDialog): Added error msg for *Dialogs
+
+2007-10-31  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/MobileDevice.py (MobileDevice): Send No sim signal
+	* src/frontend/MSD/MSDMainWindow.py (MSDMainWindow.__active_device_card_status_changed): Added msg for no sim
+	(MSDMainWindow.__active_device_card_status_changed): Bug #511 
+	* src/mobilemanager/ui/MobileATOptionsButton.py (MobileATOptionsButton.__on_auto_tech_*): Added correct CARD_DOMAIN
+	* src/mobilemanager/MobileDeviceHuawei.py (MobileDeviceHuawei.get_mode_domain): Rewrited method
+	(MobileDeviceHuawei.set_mode_domain): Rewrited method
+	(MobileDeviceHuawei.get_net_info): Added new method
+
+2007-10-30  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/pppmanager/PPPManager/PPPManager.py (PPPHelper.create_chat_file): Loggin 
+	* src/frontend/MSD/MSDMainStatsWidget.py (MSDMainStatsWidget.__active_device_x_zone_changed): x-zone handler
+	* src/mobilemanager/MobileController.py (MobileController.__gsignals__): Added x-zone signal
+	* src/mobilemanager/MobileDevice.py (MobileDevice.get_x_zone): get X zone support added
+	(MobileDevice.get_x_zone): bug fixed
+
+2007-10-29  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/pppmanager/PPPManager/PPPManager.py (PPPHelper.create_chat_file): Fix bug
+
+2007-10-29  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/agenda.glade: Removed landline phone
+	* src/frontend/MSD/MSDAddressBook/backend.py: Removed landline
+	phone
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Removed landline
+	phone
+	* src/pppmanager/PPPManager/PPPManager.py: Don't append
+	"movistar.es" if apn ends with "telefonica.es"
+
+2007-10-29  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/agenda.glade: Added a tip
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Check name and
+	cellular before append a contact
+
+2007-10-29  Álvaro Peña  <apg@openshine.com>
+
+	* data/icons/Makefile.am: Added 32x32 mail icon
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Using movistar mail
+	icons
+	* src/frontend/MSD/MSDMessages.py: Changes from usability
+
+2007-10-29  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/ui/MobilePinDialog.py (MobileAskPinDialog.run): Clean pin error text after wrong pin 
+	* src/mobilemanager/MobileDevice.py (MobileDevice.is_carrier_auto): Added new method
+	* src/mobilemanager/MobileDeviceOption.py (MobileDeviceOption.set_mode_domain): set_mode_domain method
+	* src/mobilemanager/MobileDeviceHuawei.py (MobileDeviceHuawei.set_mode_domain): set_mode_domain method
+
+2007-10-26  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/frontend/MSD/MSDConnectionsTab.py (MSDConnectionsTab.__connections_treview_row_changed_cb): Not possible remove Internet Optimizado connection
+	* src/frontend/MSD/MSDConf.py (MSDConf.__default_conf): MOVISTAR -> MOVISTAR_DIRECTO
+	(MSDConf.load_conf): Upgrade conf from 6.0 -> 6.1
+	* src/frontend/MSD/MSDMainStatsWidget.py (MSDMainStatsWidget.__active_device_card_status_changed): fixed bug #501
+	* src/frontend/MSD/MSDMainWindow.py (MSDMainWindow.__active_device_changed_cb): change device text in help
+	(MSDMainWindow.__active_device_card_status_changed): New status bar strings
+	* src/pppmanager/PPPManager/PPPManager.py: remove print "import glib"
+	* configure.ac (and others): Remove dependency of old card manager
+
+2007-10-24  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/MobileController.py (MobileController): heavy rework of self.available_devices stuff
+
+2007-10-24  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDAddressBook/frontend.py: check button status
+	in first "show_all"
+
+2007-10-22  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/agenda.glade: Changed send mail icon to a
+	better gnome-icon-theme icon
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Deactive send mail
+	icon when contact haven't it
+
+2007-10-22  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/consum.glade: Added a information label
+	* src/frontend/MSD/MSDConsumManager.py: Set percent megabites in a
+	information label
+	* src/frontend/MSD/MSDConsumWindow.py: Set percent megabites in a
+	information label
+
+2007-10-18  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/MobileDeviceHuawei.py (MobileDeviceHuawei.actions_on_reopen_port): Added method
+	* src/frontend/MSD/MSDMainWindow.py (MSDMainWindow.__active_device_card_status_changed): Added pink puk dialogs
+	(MSDMainWindow.__select_active_device_on_init): added method
+	(MSDMainWindow.__device_added_cb): Added method
+	(MSDMainWindow.__device_removed_cb): Added method
+
+2007-10-17  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/MobileDeviceSerial.py (MobileDeviceSerial.init_device): pretty name added
+	* src/frontend/MSD/MSDConnectionsManager.py (MSDConnectionsManager.__init__): remove stats manager
+	* src/frontend/MSD/Makefile.am : remove MSDStatisticsmanager scramble
+	* src/frontend/MSD/__init__.py.in: remove MSDStatisticsmanager scramble
+	* src/mobilemanager/ui/MobileATOptionsButton.py (MobileATOptionsButton.__disconnected_cb): reload card status actions
+	* src/frontend/MSD/MSDMainStatsWidget.py (MSDMainStatsWidget.__active_device_card_status_changed): callback for card off actions
+	* src/mobilemanager/MobileDevice.py (MobileDevice.turn_on): Clear cached values
+	(MobileDevice.turn_off): Send no signal level = 99 
+	(MobileDevice.set_carrier): Force alfanumeric carrier return
+	* src/frontend/MSD/MSDConnectionsTab.py (MSDConnectionsTab): ~/Desktop -> ~/
+	* src/frontend/MSD/MSDBookmarksTab.py (MSDBookmarksTab): ~/Desktop -> ~/
+	* src/frontend/MSD/MSDUtils.py (close_app): Bug #491 fixed
+	* src/frontend/MSD/MSDMainWindow.py (MSDMainWindow.__bookmarks_item_cb): Fix bug in launch
+	(MSDMainWindow.__active_device_card_status_changed): Added card statusbar
+	(MSDMainWindow): remove StatsMananger
+
+	* src/frontend/MSD/MSDAction.py (MSDAction.launch): Fix bug in launch
+
+2007-10-17  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDAction.py: Don't connect if status is
+	connected 
+	* src/frontend/MSD/MSDMainWindow.py: Don't connect if status is
+	connected
+
+2007-10-17  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/agenda.glade: Changed contextual menu names
+	* data/glade/consum.glade: Moved reset button for better space
+	used
+	* src/frontend/MSD/MSDConsumWindow.py: Deiconify
+	* src/frontend/MSD/MSDMainWindow.py: Deiconify
+
+2007-10-17  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/preferences.glade: New connection preferences
+	* src/frontend/MSD/MSDBookmarksTab.py: Using new connection
+	preferences and hide the bookmark creation confirmation dialog
+	when it's called from configuration dialog
+	* src/frontend/MSD/MSDMainWindow.py: When new bookmark was created
+	show the confirmation dialog
+	* src/frontend/MSD/MSDServicesTab.py: Fix "hide uninstalled" to
+	selected by default
+
+2007-10-16  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/MobileDialPPP.py (MobileDialPPP.stop): Async stop
+	* src/mobilemanager/ui/MobileATOptionsButton.py (MobileATOptionsButton.__on_card_deactivate): if dial up , turn off -> dial down
+	(MobileATOptionsButton.__disconnected_cb): Change wrong signal connect
+	* src/mobilemanager/MobileDevice.py (MobileDevice.turn_off): OFF signal emited
+	(MobileDevice.send_at_command): Fallback in send_at_command for not correct response
+	* src/frontend/MSD/MSDConnectionsManager.py (MSDConnectionsManager): Added PPP_STATUS*
+	(MSDConnectionsManager.__disconnected_cb): Added force change status
+	* src/mobilemanager/MobileStatus.py: Added PPP_STATUS* 
+	* src/mobilemanager/MobileDeviceHuawei.py (MobileDeviceHuawei.turn_off): AT^PORTSEL stuff in Huawei driver
+	* src/frontend/MSD/MSDMainWindow.py (MSDMainWindow.__device_selected_button_cb): Fixed bug in device main window button.
+	(MSDMainWindow.__active_device_card_status_changed): Added status bar callbacks
+	(MSDMainWindow.__active_device_card_status_changed): Fixed error  my_status_bar -> main_status_bar
+	(MSDMainWindow.__(dis)connect(ed|ing)_cb): Added signals 
+
+	* src/mobilemanager/MobileController.py (MobileController.__first_time_hardware_detection): Cache for not supported devices
+
+2007-10-15  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/MobileController.py (MobileController.__unplug_device_cb): Fix sintax bug
+	* src/mobilemanager/MobileDevice.py: Removed import serial
+	* Mobile Manager merging
+
+2007-10-15  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDConf.py: Don't show warning dialog by
+	default
+
+2007-10-15  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Added window icon
+	to remove contact dialog
+
+2007-10-15  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/consum.glade: Change window title
+	* data/icons/cabecera-consumo.png: Change title
+	* src/frontend/MSD/MSDAddressBook/backend.py: remove spaces
+	* src/frontend/MSD/MSDAddressBook/frontend.py: remove spaces
+
+2007-09-28  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/agenda.glade: Remove "first name required" text
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Check if all entry
+	in "create new contact" dialog are empty
+
+2007-09-28  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/agenda.glade: Menu changes
+	* data/glade/preferences.glade: Addressbook tab
+	* data/icons/Makefile.am: Append addressbook icons
+	* src/frontend/MSD/MSDAddressBook/frontend.py: open preferences
+	window
+	* src/frontend/MSD/MSDAddressbookTab.py: Tab for addressbook config
+	* src/frontend/MSD/MSDMainWindow.py: Send preferences window to
+	addressbook
+	* src/frontend/MSD/MSDPreferencesDialog.py: Append addressbook tab
+	* src/frontend/MSD/Makefile.am: append MSDAddressbookTab.py
+	* src/frontend/MSD/__init__.py.in: append MSDAddressbookTab.py
+
+2007-09-27 Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/agenda.glade: Added about dialog
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Added about dialog 
+	* src/frontend/MSD/MSDConf.py: Added get_version function
+	* src/frontend/MSD/MSDMainWindow.py: Send config to addressbook
+	controller
+
+2007-09-27  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/agenda.glade: Added menu bar
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Append menu bar
+	actions
+
+2007-09-26  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDBookmarksTab.py: Fixed '&' display problem
+	* src/frontend/MSD/MSDConnectionsTab.py: Fixed '&' display problem
+	* src/frontend/MSD/MSDMainWindow.py: Fixed '&' display problem
+
+2007-09-26  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/connect-preferences-frame.glade: Update connection
+	preferences dialog
+	* src/frontend/MSD/MSDAction.py: Update connection preferences
+	dialog 
+
+2007-09-24  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDConsumManager.py: uncomented reset max
+	up/down-load speed
+
+2007-09-24  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Sort improvement,
+	see Trac's ticket: #461
+
+2007-09-24  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Fixed remove
+	confirmation message
+
+2007-09-24  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Deiconify
+	AddressBook Window
+
+2007-09-24  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/statswidget.glade: Changed "Ver consumo" to "Consumo"
+
+2007-09-24  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Using ellipsize
+	* src/frontend/MSD/MSDPreferencesDialog.py: Expand with xpad, only
+	a test
+
+2007-09-24  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/agenda.glade: Update toolbar texts
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Change text 'Email'
+	to "Correo electrónico"
+
+2007-09-24  Álvaro Peña  <apg@openshine.com>
+
+	* data/icons/Makefile.am: Append 16x16 Addressbook icon
+	* data/icons/addressbook_16x16.png: Resized from 48x48
+	* src/frontend/MSD/MSDAddressBook/frontend.py:  Now using icon for
+	windows
+	* src/frontend/MSD/MSDConsumWindow.py: Fix close button grab focus
+
+2007-09-21  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDMainWindow.py: Append help entry to services
+	contaxtual menu
+
+2007-09-21  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Controll double
+	click in contacts list
+
+2007-09-21  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/agenda.glade: Create a new contaxtual menu for
+	contact list in addresbook
+	* data/icons/mail_16x16.png: New mail icon (16x16)
+	* data/icons/Makefile.am: Append mail icon (16x16)
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Now using the glade
+	contaxtual menu
+
+2007-09-19  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/statswidget.glade: Bigger connect button
+
+2007-09-19  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDConf.py: Hide uninstalled services by
+	default
+
+2007-09-19  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/agenda.glade: Some improvments
+	* data/glade/cardmanager.glade: HIG adaptations
+	* data/glade/consum.glade: HIG, notebook renaming and close button
+	focus
+	* data/glade/security.glade: button focus
+	* src/frontend/MSD/MSDBookmarksTab.py: Changed button focus
+	* src/frontend/MSD/MSDConnectionsTab.py: Changed button focus
+	* src/frontend/MSD/MSDConsumWindow.py: Changed button focus
+	* src/frontend/MSD/MSDMainWindow.py: Changed button focus for help
+	dialog 
+	* src/frontend/MSD/MSDPreferencesDialog.py: Changed button focus
+	* src/frontend/MSD/MSDWarningDialog.py: Changed button focus
+
+2007-09-10  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/test/manage-pin-test.py (managepintest): Added manage pin test
+	* src/mobilemanager/ui/MobilePinDialog.py (MobileAskPinDialog.run): Bug fixing in this dialog
+	(MobileManagePinDialog.run): Bug fixing in this dialog
+
+2007-09-07  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/test/ask-pin-test.py: Added dialog test
+	* src/mobilemanager/test/change-pin-test.py: Added dialog test
+	* src/mobilemanager/test/puk-pin-test.py: Added dialog test
+	* src/mobilemanager/ui/MobilePinDialog.py (MobileAskPinDialog): Bugfixing in ask pin dialog
+	(MobileChangePinDialog): Some UI works
+	* src/mobilemanager/MobileController.py (MobileController.__init__): Disabled hardware autodetection 
+	* src/mobilemanager/MobileDeviceHuawei.py (MobileDeviceHuawei.init_device): Added autodetection in huawei driver
+	* src/mobilemanager/MobileDevice.py (MobileDevice.init_device): Added init_device method
+	* src/mobilemanager/ui/MobilePukDialog.py (MobilePukDialog): Some bugfixing
+	(MobilePukDialog.run): Some ui fixes
+
+2007-09-06  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/MobileDevice.py (MobileDevice.__gproperties__): Add Device properties
+	(MobileDevice.load_conf): Added load conf device stuff
+	(MobileDevice.save_conf): Added save conf device stuff
+	* src/mobilemanager/MobileDial.py (MobileDial): Added statatics stuff. Now works in user space
+	* src/mobilemanager/ui/MobileTrafficGraph.py (MobileTrafficGraph): Added new TrafficGrafh widget
+
+
+2007-09-04  Roberto Majadas  <telemaco@openshine.com>
+
+	* data/mobile-manager/Makefile.am (mobilemanagerglade_DATA): Added carrier dialog
+	* src/mobilemanager/ui/MobileCarrierDialog.py (MobileCarrierSelectorDialog): Added new
+	* src/mobilemanager/ui/__init__.py.in: Added MobilePinDialog  Added MobileCarrierDialog
+	* src/mobilemanager/ui/MobilePinDialog.py: Complete porting from old pin dialogs
+
+2007-09-03  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/ui/MobilePinDialog.py (MobileAskPinDialog)
+	(MobileChangePinDialog, MobileManagePinDialog): Added new pin dialogs
+	* src/mobilemanager/ui/MobilePukDialog.py (MobilePukDialog): Added MobilePukDialog
+	* data/Makefile.am (SUBDIRS): Add mobile-manager dir
+	* configure.ac: Added mobilemanager.ui Makefile to configure.ac. Added mobilemanager.ui.__init__.py
+	* data/mobile-manager/Makefile.am (mobilemanagerglade_DATA):  Added mm_puk_dialog.glade
+	* data/mobile-manager/mm_puk_dialog.glade : Added new glade
+	* data/mobile-manager/mm_pin_dialog.glade : Added new glade
+
+2007-08-28  Álvaro Peña  <apg@openshine.com>
+
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Don't allow the
+	user clear the contact's first name
+
+2007-08-27  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/agenda.glade: Improve the addressbook dialogs
+	* src/frontend/MSD/MSDAddressBook/frontend.py: Can't create a new
+	contact without a name. Now name field is required.
+
+2007-08-27  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/Makefile.am (mobilemanager_PYTHON): Added new USB driver
+	* src/mobilemanager/MobileDeviceUSB.py : Added new USB driver
+	
+2007-08-24  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/MobileController.py (MobileController.__plug_device_cb): Plug device callback implementated
+	(MobileController.__unplug_device_cb): Unplug device callback implementated
+
+2007-08-23  Roberto Majadas  <telemaco@openshine.com>
+
+	* src/mobilemanager/MobileDeviceOption.py (MobileDeviceOption): Initial work Option Driver
+	* src/mobilemanager/Makefile.am (mobilemanager_PYTHON): Added new drivers
+	* src/mobilemanager/MobileController.py (MobileController.__first_time_hardware_detection): Added Hardware first time support
+	* src/mobilemanager/MobileDeviceHuawei.py (MobileDeviceHuawei): Initial work Huawei driver
+	* src/mobilemanager/MobileDeviceBluetooth.py (MobileDeviceBluetooth): Initial work Bluetooth driver
+	* src/mobilemanager/MobileDevice.py (MobileDevice.is_device_supported): Added virtual method
+	* configure.ac (PYDBUS): Added detection support for python-dbus
+
+2007-08-21  Álvaro Peña  <apg@openshine.com>
+
+	* data/icons/cabecera-consumo.png: Text changed to "Control de
+	consumo"
+
+2007-08-21  Roberto Majadas  <telemaco@openshine.com>
+
+	* Change -> MobileConn* -> MobileDial*
+	* configure.ac: Added mobilemanager Makefile
+	* src/Makefile.am (SUBDIRS): Added mobilemanager
+	* src/mobilemanager/Makefile.am : Added Makefile.am
+
+	* src/mobilemanager/__init__.py: Added __init__.py
+	* src/mobilemanager/MobileConnPPP.py (MobileConnPPP): Added Class MobileConnPPP
+	(MobileConnPPP.__init__): Added dbus init support for PPPHelper daemon
+	(MobileConnPPP.ppp_start, MobileConnPPP.ppp_stop)
+	(MobileConnPPP.ppp_status): Added ppp methods
+	(MobileConnPPP.__connected_cb, MobileConnPPP.__connecting_cb)
+	(MobileConnPPP.__disconnected_cb)
+	(MobileConnPPP.__disconnecting_cb): Added callbacks methods 
+	
+
+	* src/mobilemanager/MobileDevice.py (MobileDevice): Added Class MobileDevice
+	* src/mobilemanager/MobileConn.py (MobileConn): Added Class MobileConn
+
+2007-08-21  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/consum.glade: New percent manual entry (with a
+	SpinButton)
+	* src/frontend/MSD/MSDConsumManager.py: Manage percent manual
+	entry
+	* src/frontend/MSD/MSDConsumWindow.py: Gets percent manual entry
+
+2007-08-15  Álvaro Peña  <apg@openshine.com>
+
+	* data/glade/agenda.glade: Scrollbars set to "automatic"
+	* data/glade/mainwindow.glade: Performs warning message
+	* data/glade/consum.glade: Changes for ticket #450
+	* data/glade/statswidget.glade: Changes for ticket #450
+	* src/frontend/MSD/MSDConsumWindow.py: Changes for ticket #450
+
+2007-08-14  Álvaro Peña  <apg@openshine.com>
+
+	* data/Makefile.am: Added "initscripts" dir
+

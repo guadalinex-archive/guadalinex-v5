@@ -1,0 +1,432 @@
+#
+# Copyright Notice
+# Copyright (c) Ericsson, IBM, Lotus, Matsushita Communication 
+# Industrial Co., Ltd., Motorola, Nokia, Openwave Systems, Inc., 
+# Palm, Inc., Psion, Starfish Software, Symbian, Ltd. (2001).
+# All Rights Reserved.
+# Implementation of all or part of any Specification may require 
+# licenses under third party intellectual property rights, 
+# including without limitation, patent rights (such a third party 
+# may or may not be a Supporter). The Sponsors of the Specification 
+# are not responsible and shall not be held responsible in any 
+# manner for identifying or failing to identify any or all such 
+# third party intellectual property rights.
+# 
+# THIS DOCUMENT AND THE INFORMATION CONTAINED HEREIN ARE PROVIDED 
+# ON AN "AS IS" BASIS WITHOUT WARRANTY OF ANY KIND AND ERICSSON, IBM, 
+# LOTUS, MATSUSHITA COMMUNICATION INDUSTRIAL CO. LTD, MOTOROLA, 
+# NOKIA, PALM INC., PSION, STARFISH SOFTWARE AND ALL OTHER SYNCML 
+# SPONSORS DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING 
+# BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION 
+# HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF 
+# MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT 
+# SHALL ERICSSON, IBM, LOTUS, MATSUSHITA COMMUNICATION INDUSTRIAL CO., 
+# LTD, MOTOROLA, NOKIA, PALM INC., PSION, STARFISH SOFTWARE OR ANY 
+# OTHER SYNCML SPONSOR BE LIABLE TO ANY PARTY FOR ANY LOSS OF 
+# PROFITS, LOSS OF BUSINESS, LOSS OF USE OF DATA, INTERRUPTION OF 
+# BUSINESS, OR FOR DIRECT, INDIRECT, SPECIAL OR EXEMPLARY, INCIDENTAL, 
+# PUNITIVE OR CONSEQUENTIAL DAMAGES OF ANY KIND IN CONNECTION WITH 
+# THIS DOCUMENT OR THE INFORMATION CONTAINED HEREIN, EVEN IF ADVISED 
+# OF THE POSSIBILITY OF SUCH LOSS OR DAMAGE.
+# 
+# The above notice and this paragraph must be included on all copies 
+# of this document that are made.
+# 
+#
+
+
+# delete files
+RM	= 	rm -f
+
+# compiler to use
+CC   	=	gcc
+
+# some flags
+CFLAGS 	= -g -Wall -DLINK_TRANSPORT_STATICALLY -DINCLUDE_HTTP_STATICALLY
+
+#
+# Various targets to build.
+#
+BIN	 =	../../../bin/linux
+
+# LEO:
+# SML_NAME = 	$(BIN)/libsml.so
+SML_NAME = 	$(BIN)/libsml.a
+
+#
+# where to find the includes and objects
+#
+SRC	=	../../sml
+INCS 	=	-I$(SRC)/.. \
+		-I$(SRC)/inc \
+		-I$(SRC)/inc/win \
+		-I$(SRC)/lib/inc \
+		-I$(SRC)/mgr/inc \
+		-I$(SRC)/wsm/inc \
+		-I$(SRC)/xlt/all \
+		-I$(SRC)/xlt/inc
+VPATH	= 	../.. \
+		$(SRC)/inc \
+		$(SRC)/inc/win \
+		$(SRC)/lib/inc \
+		$(SRC)/lib/all \
+		$(SRC)/mgr/inc \
+		$(SRC)/mgr/all \
+		$(SRC)/mgr/win \
+		$(SRC)/wsm/inc \
+		$(SRC)/wsm/all \
+		$(SRC)/wsm/win \
+		$(SRC)/xlt/inc \
+		$(SRC)/xlt/all
+
+#
+# all objects for the shared object
+#
+SML_OBJS =	libstr.o \
+		libutil.o \
+		libmem.o \
+		mgr.o \
+		mgrcmdbuilder.o \
+		mgrcmddispatcher.o \
+		mgrinstancelist.o \
+		mgrinstancemgr.o \
+		mgrutil.o \
+		wsm.o \
+		wsm_sm.o \
+		xlttags.o \
+		xltdec.o \
+		xltdecwbxml.o \
+		xltdecxml.o \
+		xltutilstack.o \
+		xltenc.o \
+		xltencwbxml.o \
+		xltencxml.o \
+		xltenccom.o \
+		xltmetinf.o \
+		xltdevinf.o
+
+#
+# create shared object
+#
+
+# LEO:
+# $(SML_NAME) : $(SML_OBJS)
+# 	@mkdir -p $(BIN)
+# 	ld -shared $(SML_OBJS) -o $(SML_NAME)
+# 	@echo SML build done.
+	
+$(SML_NAME) : $(SML_OBJS)
+	@mkdir -p $(BIN)
+	ar -r $(SML_NAME) $(SML_OBJS)
+	@echo SML build done.
+
+#
+# dependencies
+#
+libstr.o		: smldef.h define.h libstr.h libmem.h
+libmem.o		: smldef.h
+libutil.o		: smldef.h define.h smlerr.h sml.h libmem.h libutil.h \
+			  mgr.h smldtd.h wsm.h wsm_sm.h 
+mgr.o			: smldef.h define.h sml.h smldtd.h smlerr.h libmem.h \
+			  wsm.h wsm_sm.h mgr.h 
+mgrcmdbuilder.o		: smldef.h define.h xltenc.h smlerr.h xltenccom.h \
+			  smldtd.h mgr.h sml.h wsm.h wsm_sm.h 
+mgrcmddispatcher.o	: smldef.h define.h smldtd.h smlerr.h libmem.h sml.h \
+			  libutil.h xltdec.h mgr.h wsm.h wsm_sm.h
+mgrinstancelist.o	: smlerr.h libmem.h smldef.h define.h mgr.h sml.h \
+			  smldtd.h wsm.h wsm_sm.h 
+mgrinstancemgr.o	: smldef.h define.h sml.h smldtd.h smlerr.h libmem.h \
+			  wsm.h wsm_sm.h mgr.h 
+mgrutil.o		: smldef.h sml.h smldtd.h smlerr.h define.h\
+			  smlmetinfdtd.h
+wsm.o			: wsm.h smlerr.h define.h libutil.h wsm_sm.h sml.h \
+			  smldtd.h smldef.h libmem.h libstr.h mgr.h
+wsm_sm.o		: wsm_sm.h smldef.h define.h libutil.h smlerr.h \
+			  mgr.h sml.h smldtd.h wsm.h
+xlttags.o		: xlttags.h smlerr.h libmem.h libutil.h libstr.h
+xltdec.o		: xlttags.h define.h smldtd.h smlerr.h xltdec.h \
+			  xltdeccom.h xltutilstack.h smldef.h libutil.h \
+			  libmem.h libstr.h xlttagtbl.h xltmetinf.h 
+xltdecwbxml.o		: xlttags.h define.h smldtd.h smlerr.h xltdeccom.h \
+			  xltutilstack.h smldef.h libutil.h libmem.h libstr.h
+xltdecxml.o		: xltdeccom.h smldef.h define.h smldtd.h xlttags.h \
+			  libutil.h libmem.h libstr.h smlerr.h
+xltutilstack.o		: xltdeccom.h smldef.h define.h smldtd.h xlttags.h \
+			  libutil.h xltutilstack.h smlerr.h libmem.h
+xltenc.o		: xltenc.h smlerr.h xltenccom.h smldef.h define.h \
+			  smldtd.h xltencwbxml.h xlttags.h xltencxml.h \
+			  libstr.h libmem.h libutil.h smlmetinfdtd.h xltmetinf.h\
+			  xlttagtbl.h 
+xltencwbxml.o		: xltencwbxml.h smlerr.h smldef.h define.h smldtd.h \
+			  xlttags.h xltenccom.h libmem.h libstr.h libutil.h
+xltencxml.o		: xltencxml.h smlerr.h xlttags.h smldtd.h smldef.h \
+			  define.h xltenccom.h libstr.h libmem.h libutil.h
+xltenccom.o		: xltenccom.h smldef.h define.h smlerr.h libmem.h \
+			  libutil.h
+xltmetinf.o		: smldef.h smldtd.h smlerr.h smlmetinfdtd.h define.h\
+			  libmem.h libstr.h libutil.h xltdeccom.h xltmetinf.h\
+			  xlttags.h xlttagtbl.h xltdec.h xltenc.h
+xltdevinf.o		: smldevinfdtd.h xlttags.h xlttagtbl.h xltenc.h \
+			  xltenc.h xltencwbxml.h libstr.h smlerr.h smldtd.h\
+			  libmem.h libutil.h
+##
+# default rule for compiling files
+#
+.c.o:
+	$(CC) -c $(CFLAGS) $(INCS) -o $@ $<
+
+.PHONY: all sml xpt clean
+
+#
+# targets
+#
+all 	: sml xpt
+sml 	: $(SML_NAME)
+xpt     : sml
+	@$(MAKE) -f Makefile.xpt --no-print-directory
+clean	: .
+	@$(RM) *.o
+	@$(MAKE) -f Makefile.xpt --no-print-directory clean
+
+distclean:
+	rm -f Makefile
+	rm -f ../../../config.h
+
+maintainer-clean:
+
+distdir:
+	echo $(distdir)
+	# mkdir $(distdir)/../../../bin/
+	mkdir -p $(distdir)/../../../bin/linux/
+	# mkdir $(distdir)/../../../src/
+	# mkdir $(distdir)/../../../src/bld
+	mkdir -p $(distdir)/../../../src/bld/linux/
+	cp -f ../../../src/bld/linux/Makefile.in $(distdir)
+	cp -f ../../../src/bld/linux/Makefile.xpt $(distdir)
+	# cp -rf ../../../src/sml ../../../src/xpt $(distdir)/../../../src/
+	mkdir -p $(distdir)/../../../src/sml/inc/linux/
+	mkdir -p $(distdir)/../../../src/sml/inc/palm/
+	mkdir -p $(distdir)/../../../src/sml/inc/win/
+	mkdir -p $(distdir)/../../../src/sml/inc/
+	mkdir -p $(distdir)/../../../src/sml/lib/all/
+	mkdir -p $(distdir)/../../../src/sml/lib/inc/
+	mkdir -p $(distdir)/../../../src/sml/mgr/all/
+	mkdir -p $(distdir)/../../../src/sml/mgr/inc/
+	mkdir -p $(distdir)/../../../src/sml/mgr/win/
+	mkdir -p $(distdir)/../../../src/sml/wsm/all/
+	mkdir -p $(distdir)/../../../src/sml/wsm/inc/
+	mkdir -p $(distdir)/../../../src/sml/wsm/palm/
+	mkdir -p $(distdir)/../../../src/sml/wsm/win/
+	mkdir -p $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/inc/linux/define.h $(distdir)/../../../src/sml/inc/linux/
+	cp -f ../../../src/sml/inc/palm/define.h $(distdir)/../../../src/sml/inc/palm/
+	cp -f ../../../src/sml/inc/win/define.h $(distdir)/../../../src/sml/inc/win/
+	cp -f ../../../src/sml/inc/sml.h $(distdir)/../../../src/sml/inc/
+	cp -f ../../../src/sml/inc/smldef.h $(distdir)/../../../src/sml/inc/
+	cp -f ../../../src/sml/inc/smldevinfdtd.h $(distdir)/../../../src/sml/inc/
+	cp -f ../../../src/sml/inc/smldtd.h $(distdir)/../../../src/sml/inc/
+	cp -f ../../../src/sml/inc/smlerr.h $(distdir)/../../../src/sml/inc/
+	cp -f ../../../src/sml/inc/smlmetinfdtd.h $(distdir)/../../../src/sml/inc/
+	cp -f ../../../src/sml/lib/all/liblock.c $(distdir)/../../../src/sml/lib/all/
+	cp -f ../../../src/sml/lib/all/libmem.c $(distdir)/../../../src/sml/lib/all/
+	cp -f ../../../src/sml/lib/all/libstr.c $(distdir)/../../../src/sml/lib/all/
+	cp -f ../../../src/sml/lib/all/libutil.c $(distdir)/../../../src/sml/lib/all/
+	cp -f ../../../src/sml/lib/inc/liblock.h $(distdir)/../../../src/sml/lib/inc/
+	cp -f ../../../src/sml/lib/inc/libmem.h $(distdir)/../../../src/sml/lib/inc/
+	cp -f ../../../src/sml/lib/inc/libstr.h $(distdir)/../../../src/sml/lib/inc/
+	cp -f ../../../src/sml/lib/inc/libutil.h $(distdir)/../../../src/sml/lib/inc/
+	cp -f ../../../src/sml/mgr/all/mgr.c $(distdir)/../../../src/sml/mgr/all/
+	cp -f ../../../src/sml/mgr/all/mgrcmdbuilder.c $(distdir)/../../../src/sml/mgr/all/
+	cp -f ../../../src/sml/mgr/all/mgrcmddispatcher.c $(distdir)/../../../src/sml/mgr/all/
+	cp -f ../../../src/sml/mgr/all/mgrinstancelist.c $(distdir)/../../../src/sml/mgr/all/
+	cp -f ../../../src/sml/mgr/all/mgrinstancemgr.c $(distdir)/../../../src/sml/mgr/all/
+	cp -f ../../../src/sml/mgr/all/mgrutil.c $(distdir)/../../../src/sml/mgr/all/
+	cp -f ../../../src/sml/mgr/inc/mgr.h $(distdir)/../../../src/sml/mgr/inc/
+	cp -f ../../../src/sml/mgr/inc/mgrutil.h $(distdir)/../../../src/sml/mgr/inc/
+	cp -f ../../../src/sml/mgr/win/libinit.c $(distdir)/../../../src/sml/mgr/win/
+	cp -f ../../../src/sml/wsm/all/wsm.c $(distdir)/../../../src/sml/wsm/all/
+	cp -f ../../../src/sml/wsm/inc/wsm_sm.h $(distdir)/../../../src/sml/wsm/inc/
+	cp -f ../../../src/sml/wsm/inc/wsm.h $(distdir)/../../../src/sml/wsm/inc/
+	cp -f ../../../src/sml/wsm/palm/wsm_sm.c $(distdir)/../../../src/sml/wsm/palm/
+	cp -f ../../../src/sml/wsm/win/wsm_sm.c $(distdir)/../../../src/sml/wsm/win/
+	cp -f ../../../src/sml/xlt/all/xltdeccom.h $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/all/xltdecwbxml.h $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/all/xltdevinf.h $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/all/xltenccom.h $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/all/xltencwbxml.h $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/all/xltencxml.h $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/all/xltmetinf.h $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/all/xlttags.h $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/all/xlttagtbl.h $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/all/xltutilstack.h $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/all/xltdec.c $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/all/xltdecwbxml.c $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/all/xltdecxml.c $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/all/xltdevinf.c $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/all/xltenc.c $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/all/xltenccom.c $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/all/xltencwbxml.c $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/all/xltencxml.c $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/all/xltmetinf.c $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/all/xlttags.c $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/all/xltutilstack.c $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/inc/xltdec.h $(distdir)/../../../src/sml/xlt/all/
+	cp -f ../../../src/sml/xlt/inc/xltenc.h $(distdir)/../../../src/sml/xlt/all/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/common/all/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/common/linux/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/common/macosx/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/common/palm/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/common/tcp/all/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/common/tcp/linux/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/common/tcp/macosx/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/common/tcp/palm/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/common/tcp/win/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/common/win/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/http/all/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/http/linux/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/http/macosx/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/http/palm/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/http/win/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/obex/palm/obex/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/obex/palm/syncbmr/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/obex/smlobex/obex/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/obex/smlobex/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/obex/win/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/wsp/all/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/wsp/awsp/all/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/wsp/inc/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/wsp/palm/
+	mkdir -p $(distdir)/../../../src/xpt/bindings/wsp/win/
+	mkdir -p $(distdir)/../../../src/xpt/manager/all/
+	mkdir -p $(distdir)/../../../src/xpt/manager/inc/
+	mkdir -p $(distdir)/../../../src/xpt/manager/linux/
+	mkdir -p $(distdir)/../../../src/xpt/manager/macosx/
+	mkdir -p $(distdir)/../../../src/xpt/manager/palm/
+	mkdir -p $(distdir)/../../../src/xpt/manager/win/
+	mkdir -p $(distdir)/../../../src/
+	cp -f ../../../src/xpt/bindings/common/all/digcalc.h $(distdir)/../../../src/xpt/bindings/common/all/
+	cp -f ../../../src/xpt/bindings/common/all/global.h $(distdir)/../../../src/xpt/bindings/common/all/
+	cp -f ../../../src/xpt/bindings/common/all/md5.h $(distdir)/../../../src/xpt/bindings/common/all/
+	cp -f ../../../src/xpt/bindings/common/all/xpt-auth.h $(distdir)/../../../src/xpt/bindings/common/all/
+	cp -f ../../../src/xpt/bindings/common/all/xpt-b64.h $(distdir)/../../../src/xpt/bindings/common/all/
+	cp -f ../../../src/xpt/bindings/common/all/xptmutex.h $(distdir)/../../../src/xpt/bindings/common/all/
+	cp -f ../../../src/xpt/bindings/common/all/digcalc.c $(distdir)/../../../src/xpt/bindings/common/all/
+	cp -f ../../../src/xpt/bindings/common/all/md5.c $(distdir)/../../../src/xpt/bindings/common/all/
+	cp -f ../../../src/xpt/bindings/common/all/xpt-auth.c $(distdir)/../../../src/xpt/bindings/common/all/
+	cp -f ../../../src/xpt/bindings/common/all/xpt-b64.c $(distdir)/../../../src/xpt/bindings/common/all/
+	cp -f ../../../src/xpt/bindings/common/linux/xptmutex.c $(distdir)/../../../src/xpt/bindings/common/linux/
+	cp -f ../../../src/xpt/bindings/common/macosx/xptmutex.c $(distdir)/../../../src/xpt/bindings/common/macosx/
+	cp -f ../../../src/xpt/bindings/common/palm/xptmutex.c $(distdir)/../../../src/xpt/bindings/common/palm/
+	cp -f ../../../src/xpt/bindings/common/tcp/all/xpt-tcp.h $(distdir)/../../../src/xpt/bindings/common/tcp/all/
+	cp -f ../../../src/xpt/bindings/common/tcp/all/xpttypes.h $(distdir)/../../../src/xpt/bindings/common/tcp/all/
+	cp -f ../../../src/xpt/bindings/common/tcp/all/xpt-tcp.c $(distdir)/../../../src/xpt/bindings/common/tcp/all/
+	cp -f ../../../src/xpt/bindings/common/tcp/linux/xptib64.h $(distdir)/../../../src/xpt/bindings/common/tcp/linux/
+	cp -f ../../../src/xpt/bindings/common/tcp/linux/xptitcp.h $(distdir)/../../../src/xpt/bindings/common/tcp/linux/
+	cp -f ../../../src/xpt/bindings/common/tcp/linux/xptitcp.c $(distdir)/../../../src/xpt/bindings/common/tcp/linux/
+	cp -f ../../../src/xpt/bindings/common/tcp/macosx/xptib64.h $(distdir)/../../../src/xpt/bindings/common/tcp/macosx/
+	cp -f ../../../src/xpt/bindings/common/tcp/macosx/xptitcp.h $(distdir)/../../../src/xpt/bindings/common/tcp/macosx/
+	cp -f ../../../src/xpt/bindings/common/tcp/macosx/xptitcp.c $(distdir)/../../../src/xpt/bindings/common/tcp/macosx/
+	cp -f ../../../src/xpt/bindings/common/tcp/palm/xptib64.h $(distdir)/../../../src/xpt/bindings/common/tcp/palm/
+	cp -f ../../../src/xpt/bindings/common/tcp/palm/xptitcp.h $(distdir)/../../../src/xpt/bindings/common/tcp/palm/
+	cp -f ../../../src/xpt/bindings/common/tcp/palm/xptitcp.c $(distdir)/../../../src/xpt/bindings/common/tcp/palm/
+	cp -f ../../../src/xpt/bindings/common/tcp/win/xptib64.h $(distdir)/../../../src/xpt/bindings/common/tcp/win/
+	cp -f ../../../src/xpt/bindings/common/tcp/win/xptitcp.h $(distdir)/../../../src/xpt/bindings/common/tcp/win/
+	cp -f ../../../src/xpt/bindings/common/tcp/win/xptitcp.c $(distdir)/../../../src/xpt/bindings/common/tcp/win/
+	cp -f ../../../src/xpt/bindings/common/win/xptmutex.c $(distdir)/../../../src/xpt/bindings/common/win/
+	cp -f ../../../src/xpt/bindings/http/all/httpdefs.h $(distdir)/../../../src/xpt/bindings/http/all/
+	cp -f ../../../src/xpt/bindings/http/all/httpserverports.h $(distdir)/../../../src/xpt/bindings/http/all/
+	cp -f ../../../src/xpt/bindings/http/all/httptrans.h $(distdir)/../../../src/xpt/bindings/http/all/
+	cp -f ../../../src/xpt/bindings/http/all/xpt-http.h $(distdir)/../../../src/xpt/bindings/http/all/
+	cp -f ../../../src/xpt/bindings/http/all/httpserverports.c $(distdir)/../../../src/xpt/bindings/http/all/
+	cp -f ../../../src/xpt/bindings/http/all/httptrans.c $(distdir)/../../../src/xpt/bindings/http/all/
+	cp -f ../../../src/xpt/bindings/http/all/xpt-http.c $(distdir)/../../../src/xpt/bindings/http/all/
+	cp -f ../../../src/xpt/bindings/http/linux/xptihttp.h $(distdir)/../../../src/xpt/bindings/http/linux/
+	cp -f ../../../src/xpt/bindings/http/macosx/xptihttp.h $(distdir)/../../../src/xpt/bindings/http/macosx/
+	cp -f ../../../src/xpt/bindings/http/palm/xptihttp.h $(distdir)/../../../src/xpt/bindings/http/palm/
+	cp -f ../../../src/xpt/bindings/http/win/xptihttp.h $(distdir)/../../../src/xpt/bindings/http/win/
+	cp -f ../../../src/xpt/bindings/obex/palm/obex/obexbinding.h $(distdir)/../../../src/xpt/bindings/obex/palm/obex/
+	cp -f ../../../src/xpt/bindings/obex/palm/obex/obexbinding.c $(distdir)/../../../src/xpt/bindings/obex/palm/obex/
+	cp -f ../../../src/xpt/bindings/obex/palm/syncbmr/SyncBmr.h $(distdir)/../../../src/xpt/bindings/obex/palm/syncbmr/
+	cp -f ../../../src/xpt/bindings/obex/palm/syncbmr/SyncBmrUtil.h $(distdir)/../../../src/xpt/bindings/obex/palm/syncbmr/
+	cp -f ../../../src/xpt/bindings/obex/palm/syncbmr/SyncBmr.c $(distdir)/../../../src/xpt/bindings/obex/palm/syncbmr/
+	cp -f ../../../src/xpt/bindings/obex/palm/syncbmr/SyncBmrUtil.c $(distdir)/../../../src/xpt/bindings/obex/palm/syncbmr/
+	cp -f ../../../src/xpt/bindings/obex/palm/syncbmr/SyncBmr.rcp $(distdir)/../../../src/xpt/bindings/obex/palm/syncbmr/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/obex/constants.h $(distdir)/../../../src/xpt/bindings/obex/smlobex/obex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/obex/error.h $(distdir)/../../../src/xpt/bindings/obex/smlobex/obex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/obex/obex.h $(distdir)/../../../src/xpt/bindings/obex/smlobex/obex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/buffer.h $(distdir)/../../../src/xpt/bindings/obex/smlobex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/debug.h $(distdir)/../../../src/xpt/bindings/obex/smlobex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/handle.h $(distdir)/../../../src/xpt/bindings/obex/smlobex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/header.h $(distdir)/../../../src/xpt/bindings/obex/smlobex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/iConstants.h $(distdir)/../../../src/xpt/bindings/obex/smlobex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/inetTransport.h $(distdir)/../../../src/xpt/bindings/obex/smlobex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/irTransport.h $(distdir)/../../../src/xpt/bindings/obex/smlobex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/object.h $(distdir)/../../../src/xpt/bindings/obex/smlobex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/transport.h $(distdir)/../../../src/xpt/bindings/obex/smlobex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/utils.h $(distdir)/../../../src/xpt/bindings/obex/smlobex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/buffer.c $(distdir)/../../../src/xpt/bindings/obex/smlobex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/debug.c $(distdir)/../../../src/xpt/bindings/obex/smlobex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/handle.c $(distdir)/../../../src/xpt/bindings/obex/smlobex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/header.c $(distdir)/../../../src/xpt/bindings/obex/smlobex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/inetTransport.c $(distdir)/../../../src/xpt/bindings/obex/smlobex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/irTransport.c $(distdir)/../../../src/xpt/bindings/obex/smlobex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/obex.c $(distdir)/../../../src/xpt/bindings/obex/smlobex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/object.c $(distdir)/../../../src/xpt/bindings/obex/smlobex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/transport.c $(distdir)/../../../src/xpt/bindings/obex/smlobex/
+	cp -f ../../../src/xpt/bindings/obex/smlobex/utils.c $(distdir)/../../../src/xpt/bindings/obex/smlobex/
+	cp -f ../../../src/xpt/bindings/obex/win/obexbinding.h $(distdir)/../../../src/xpt/bindings/obex/win/
+	cp -f ../../../src/xpt/bindings/obex/win/obexbindingerror.h $(distdir)/../../../src/xpt/bindings/obex/win/
+	cp -f ../../../src/xpt/bindings/obex/win/obexbinding.c $(distdir)/../../../src/xpt/bindings/obex/win/
+	cp -f ../../../src/xpt/bindings/wsp/all/protocol.h $(distdir)/../../../src/xpt/bindings/wsp/all/
+	cp -f ../../../src/xpt/bindings/wsp/all/session.h $(distdir)/../../../src/xpt/bindings/wsp/all/
+	cp -f ../../../src/xpt/bindings/wsp/all/settings.h $(distdir)/../../../src/xpt/bindings/wsp/all/
+	cp -f ../../../src/xpt/bindings/wsp/all/transact.h $(distdir)/../../../src/xpt/bindings/wsp/all/
+	cp -f ../../../src/xpt/bindings/wsp/all/wsphttp.h $(distdir)/../../../src/xpt/bindings/wsp/all/
+	cp -f ../../../src/xpt/bindings/wsp/all/wsputil.h $(distdir)/../../../src/xpt/bindings/wsp/all/
+	cp -f ../../../src/xpt/bindings/wsp/all/xpt-wsp.h $(distdir)/../../../src/xpt/bindings/wsp/all/
+	cp -f ../../../src/xpt/bindings/wsp/all/protocol.c $(distdir)/../../../src/xpt/bindings/wsp/all/
+	cp -f ../../../src/xpt/bindings/wsp/all/session.c $(distdir)/../../../src/xpt/bindings/wsp/all/
+	cp -f ../../../src/xpt/bindings/wsp/all/settings.c $(distdir)/../../../src/xpt/bindings/wsp/all/
+	cp -f ../../../src/xpt/bindings/wsp/all/transact.c $(distdir)/../../../src/xpt/bindings/wsp/all/
+	cp -f ../../../src/xpt/bindings/wsp/all/wspcbk.c $(distdir)/../../../src/xpt/bindings/wsp/all/
+	cp -f ../../../src/xpt/bindings/wsp/all/wsphttp.c $(distdir)/../../../src/xpt/bindings/wsp/all/
+	cp -f ../../../src/xpt/bindings/wsp/all/wsputil.c $(distdir)/../../../src/xpt/bindings/wsp/all/
+	cp -f ../../../src/xpt/bindings/wsp/all/xpt-wsp.c $(distdir)/../../../src/xpt/bindings/wsp/all/
+	cp -f ../../../src/xpt/bindings/wsp/awsp/all/awsp.c $(distdir)/../../../src/xpt/bindings/wsp/awsp/all/
+	cp -f ../../../src/xpt/bindings/wsp/inc/awsp.h $(distdir)/../../../src/xpt/bindings/wsp/inc/
+	cp -f ../../../src/xpt/bindings/wsp/palm/wspdef.h $(distdir)/../../../src/xpt/bindings/wsp/palm/
+	cp -f ../../../src/xpt/bindings/wsp/palm/xptiwsp.h $(distdir)/../../../src/xpt/bindings/wsp/palm/
+	cp -f ../../../src/xpt/bindings/wsp/win/wspdef.h $(distdir)/../../../src/xpt/bindings/wsp/win/
+	cp -f ../../../src/xpt/bindings/wsp/win/xptiwsp.h $(distdir)/../../../src/xpt/bindings/wsp/win/
+	cp -f ../../../src/xpt/manager/all/xptcomm.c $(distdir)/../../../src/xpt/manager/all/
+	cp -f ../../../src/xpt/manager/inc/xpt.h $(distdir)/../../../src/xpt/manager/inc/
+	cp -f ../../../src/xpt/manager/inc/xptport.h $(distdir)/../../../src/xpt/manager/inc/
+	cp -f ../../../src/xpt/manager/inc/xptTransport.h $(distdir)/../../../src/xpt/manager/inc/
+	cp -f ../../../src/xpt/manager/linux/utilities.h $(distdir)/../../../src/xpt/manager/linux/
+	cp -f ../../../src/xpt/manager/linux/xptcomm.h $(distdir)/../../../src/xpt/manager/linux/
+	cp -f ../../../src/xpt/manager/linux/xptdef.h $(distdir)/../../../src/xpt/manager/linux/
+	cp -f ../../../src/xpt/manager/linux/utilities.c $(distdir)/../../../src/xpt/manager/linux/
+	cp -f ../../../src/xpt/manager/macosx/utilities.h $(distdir)/../../../src/xpt/manager/macosx/
+	cp -f ../../../src/xpt/manager/macosx/xptcomm.h $(distdir)/../../../src/xpt/manager/macosx/
+	cp -f ../../../src/xpt/manager/macosx/xptdef.h $(distdir)/../../../src/xpt/manager/macosx/
+	cp -f ../../../src/xpt/manager/macosx/utilities.c $(distdir)/../../../src/xpt/manager/macosx/
+	cp -f ../../../src/xpt/manager/palm/utilities.h $(distdir)/../../../src/xpt/manager/palm/
+	cp -f ../../../src/xpt/manager/palm/xptcomm.h $(distdir)/../../../src/xpt/manager/palm/
+	cp -f ../../../src/xpt/manager/palm/xptdef.h $(distdir)/../../../src/xpt/manager/palm/
+	cp -f ../../../src/xpt/manager/palm/xptprefix.h $(distdir)/../../../src/xpt/manager/palm/
+	cp -f ../../../src/xpt/manager/palm/utilities.c $(distdir)/../../../src/xpt/manager/palm/
+	cp -f ../../../src/xpt/manager/win/utilities.h $(distdir)/../../../src/xpt/manager/win/
+	cp -f ../../../src/xpt/manager/win/xptcomm.h $(distdir)/../../../src/xpt/manager/win/
+	cp -f ../../../src/xpt/manager/win/xptdef.h $(distdir)/../../../src/xpt/manager/win/
+	cp -f ../../../src/xpt/manager/win/utilities.c $(distdir)/../../../src/xpt/manager/win/
+	cp -f ../../../src/syncml_tk_prefix_file.h $(distdir)/../../../src/
+	cp -f ../../../opensource_license.txt $(distdir)/../../../
+	cp -f ../../../NO-AUTO-GEN ../../../config.h.in ../../../configure \
+		../../../configure.ac $(distdir)/../../../
+
+TARG = install install-data install-exec uninstall install-info installdirs \
+	check installcheck mostlyclean \
+	dvi pdf ps info html tags ctags 
+.PHONY: $(TARG)
+$(TARG): 
+

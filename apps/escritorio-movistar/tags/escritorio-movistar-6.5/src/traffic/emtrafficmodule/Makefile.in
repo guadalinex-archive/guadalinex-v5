@@ -1,0 +1,44 @@
+	
+OBJS =		emtrafficmodule.o 
+
+ARS =	\
+	../traffic/traffic.a \
+	../../sync/ptools/ptools.a 
+
+LIBS = -lsqlite3 -lpython2.5
+
+TARGET =	emtrafficmodule.so
+
+CPPINCLUDES = -I/usr/include/python2.5/ \
+	-I../traffic/ \
+	-I../../sync/ptools 
+	
+CPPFLAGS = $(CPPINCLUDES) $(CPPDEFINES)  
+
+CXXFLAGS =	-O2 -g -Wall -fmessage-length=0
+
+$(TARGET):	$(OBJS) $(ARS) emtraffic_versionscript
+	$(CXX) -shared --version-script emtraffic_versionscript -o $(TARGET) \
+	$(OBJS) $(ARS) $(LIBS)
+
+all:	$(TARGET)
+
+clean:
+	rm -f $(OBJS) $(TARGET)
+
+distclean:
+	rm -f Makefile
+	rm -f config.h
+
+maintainer-clean:
+
+distdir:
+	cp -f configure.ac configure config.h.in Makefile.in NO-AUTO-GEN \
+		emtrafficmodule.cpp emtraffic_versionscript $(distdir)
+
+TARG = install install-data install-exec uninstall install-info installdirs \
+	check installcheck mostlyclean \
+	dvi pdf ps info html tags ctags 
+.PHONY: $(TARG)
+$(TARG): 
+

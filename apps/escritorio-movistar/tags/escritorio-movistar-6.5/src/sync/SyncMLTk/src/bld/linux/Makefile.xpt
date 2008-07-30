@@ -1,0 +1,340 @@
+#
+# Copyright Notice
+# Copyright (c) Ericsson, IBM, Lotus, Matsushita Communication 
+# Industrial Co., Ltd., Motorola, Nokia, Openwave Systems, Inc., 
+# Palm, Inc., Psion, Starfish Software, Symbian, Ltd. (2001).
+# All Rights Reserved.
+# Implementation of all or part of any Specification may require 
+# licenses under third party intellectual property rights, 
+# including without limitation, patent rights (such a third party 
+# may or may not be a Supporter). The Sponsors of the Specification 
+# are not responsible and shall not be held responsible in any 
+# manner for identifying or failing to identify any or all such 
+# third party intellectual property rights.
+# 
+# THIS DOCUMENT AND THE INFORMATION CONTAINED HEREIN ARE PROVIDED 
+# ON AN "AS IS" BASIS WITHOUT WARRANTY OF ANY KIND AND ERICSSON, IBM, 
+# LOTUS, MATSUSHITA COMMUNICATION INDUSTRIAL CO. LTD, MOTOROLA, 
+# NOKIA, PALM INC., PSION, STARFISH SOFTWARE AND ALL OTHER SYNCML 
+# SPONSORS DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING 
+# BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION 
+# HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF 
+# MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT 
+# SHALL ERICSSON, IBM, LOTUS, MATSUSHITA COMMUNICATION INDUSTRIAL CO., 
+# LTD, MOTOROLA, NOKIA, PALM INC., PSION, STARFISH SOFTWARE OR ANY 
+# OTHER SYNCML SPONSOR BE LIABLE TO ANY PARTY FOR ANY LOSS OF 
+# PROFITS, LOSS OF BUSINESS, LOSS OF USE OF DATA, INTERRUPTION OF 
+# BUSINESS, OR FOR DIRECT, INDIRECT, SPECIAL OR EXEMPLARY, INCIDENTAL, 
+# PUNITIVE OR CONSEQUENTIAL DAMAGES OF ANY KIND IN CONNECTION WITH 
+# THIS DOCUMENT OR THE INFORMATION CONTAINED HEREIN, EVEN IF ADVISED 
+# OF THE POSSIBILITY OF SUCH LOSS OR DAMAGE.
+# 
+# The above notice and this paragraph must be included on all copies 
+# of this document that are made.
+# 
+#
+
+# Build the xpt components of the SyncML Toolkit
+
+SRC = ../..
+BIN = ../../../bin/linux
+
+MAKEOPTS = -f Makefile.xpt --no-print-directory
+
+# compiler to use
+CC = gcc
+
+# Flags that apply to everything built by this Makefile
+ALL_CFLAGS = -g -fPIC -DTRACE -Wall -DLINK_TRANSPORT_STATICALLY -DINCLUDE_HTTP_STATICALLY
+# Add -DTRACE_TO_STDOUT to the above options to send debugging output directly
+# to the screen instead of to smlLibPrint().
+
+#--------------------------------------------------
+# Flags that apply to the libxpt.so
+XPT_DLL_CFLAGS  = -DBUILDING_XPT
+# The sml library isn't needed if -DTRACE_TO_STDOUT is specified as a compiler
+# option, which makes libxpt.so easier to test as a standalone entity.
+XPT_DLL_LIBS    = -ldl -lsml
+XPT_DLL_SRCPATH = $(SRC)/xpt/manager/all $(SRC)/xpt/manager/linux \
+                  $(SRC)/xpt/manager/inc $(SRC)/sml/inc \
+                  $(SRC)/sml/inc/win $(SRC)/sml/lib/inc $(SRC)
+XPT_DLL_OFILES  = xptcomm.o utilities.o
+
+# For other DLLs that want to include headers from libxpt.so
+XPT_INCLUDE_DIRS = $(SRC)/xpt/manager/inc $(SRC)/xpt/manager/linux $(SRC)/sml/inc \
+                   $(SRC)/sml/inc/win $(SRC)/sml/lib/inc
+#--------------------------------------------------
+
+# Flags that apply to the libxpthttp.so
+HTTP_DLL_SRCPATH = $(SRC)/xpt/bindings/http/linux $(SRC)/xpt/bindings/http/all \
+                   $(SRC)/xpt/bindings/common/linux $(SRC)/xpt/bindings/common/all \
+                   $(SRC)/xpt/bindings/common/tcp/linux $(SRC)/xpt/bindings/common/tcp/all \
+                   $(XPT_INCLUDE_DIRS) $(SRC)
+HTTP_DLL_OFILES  = xpt-http.o httpserverports.o httptrans.o \
+                   xpt-auth.o digcalc.o xpt-b64.o md5.o xpt-tcp.o \
+                   xptmutex.o
+HTTP_DLL_LIBS    = -lxpt
+
+#--------------------------------------------------
+
+# Flags that apply to the libxptwsp.so
+WSP_DLL_SRCPATH = $(SRC)/xpt/bindings/wsp/win $(SRC)/xpt/bindings/wsp/all \
+                  $(SRC)/xpt/bindings/wsp/inc \
+                  $(XPT_INCLUDE_DIRS) $(SRC)
+WSP_DLL_OFILES  = protocol.o xpt-wsp.o wspcbk.o wsphttp.o transact.o session.o \
+                  settings.o wsputil.o
+WSP_DLL_LIBS = -lxpt -lxptawsp
+# The WSP binding is really supposed to be linked against an actual WAP stack.
+# Until we have one, link it against a skeleton stack.
+
+#-----
+
+# Flags that apply to the libawsp.so, a test-only skeleton WAP stack DLL
+AWSP_DLL_SRCPATH = $(SRC)/xpt/bindings/wsp/awsp/all \
+                   $(SRC)/xpt/bindings/wsp/inc \
+                   $(XPT_INCLUDE_DIRS)
+AWSP_DLL_OFILES  = awsp.o
+AWSP_DLL_LIBS    = -lxpt
+
+#--------------------------------------------------
+# Flags that apply to the libiobex.so, a general Obex library used by libxptobex.so
+
+IOBEX_DLL_SRCPATH = $(SRC)/xpt/bindings/obex/smlobex $(SRC) \
+                    $(SRC)/xpt/bindings/common/tcp/linux \
+                    $(SRC)/xpt/bindings/common/tcp/all
+IOBEX_DLL_OFILES  = debug.o handle.o header.o inetTransport.o irTransport.o \
+                    obex.o object.o transport.o utils.o buffer.o
+
+#--------------------------------------------------
+
+# Flags that apply to the libxptobex.so
+OBEX_DLL_SRCPATH = $(SRC)/xpt/bindings/obex/win \
+                   $(SRC)/xpt/bindings/obex/smlobex \
+                   $(XPT_INCLUDE_DIRS) $(SRC)
+OBEX_DLL_OFILES  = obexbinding.o
+OBEX_DLL_LIBS    = -liobex -lxpt
+
+#--------------------------------------------------
+
+
+ifdef TARGET
+# Assign the actual variables, depending on what target we're building
+CFLAGS = $(ALL_CFLAGS) $($(TARGET)_CFLAGS) $($(TARGET)_SRCPATH:%=-I%)
+LDLIBS = $($(TARGET)_LIBS)
+VPATH  = $($(TARGET)_SRCPATH)
+OFILES = $($(TARGET)_OFILES)
+endif
+
+# All shared objects in this Makefile are built with the same basic options.
+LDFLAGS = -shared -g -L$(BIN)
+
+# Declare pseudo-targets, targets that don't exist as files
+.PHONY: all clean
+
+# Cause files partially created by failing commands to be erased:
+.DELETE_ON_ERROR:
+
+# Rules
+
+# LEO:
+all:
+# Create the bin dirs if they don't already exist.
+# 	@-mkdir -p $(BIN)
+# 	@$(MAKE) $(MAKEOPTS) $(BIN)/libxpt.so TARGET=XPT_DLL
+# 	@$(MAKE) $(MAKEOPTS) $(BIN)/libxpthttp.so TARGET=HTTP_DLL
+# 	@$(MAKE) $(MAKEOPTS) $(BIN)/libxptawsp.so TARGET=AWSP_DLL
+# 	@$(MAKE) $(MAKEOPTS) $(BIN)/libxptwsp.so TARGET=WSP_DLL
+# 	@$(MAKE) $(MAKEOPTS) $(BIN)/libiobex.so TARGET=IOBEX_DLL
+# 	@$(MAKE) $(MAKEOPTS) $(BIN)/libxptobex.so TARGET=OBEX_DLL
+
+all:
+# Create the bin dirs if they don't already exist.
+	@-mkdir -p $(BIN)
+	@$(MAKE) $(MAKEOPTS) $(BIN)/libxpt.a TARGET=XPT_DLL
+	@$(MAKE) $(MAKEOPTS) $(BIN)/libxpthttp.a TARGET=HTTP_DLL
+	@$(MAKE) $(MAKEOPTS) $(BIN)/libxptawsp.a TARGET=AWSP_DLL
+	@$(MAKE) $(MAKEOPTS) $(BIN)/libxptwsp.a TARGET=WSP_DLL
+	@$(MAKE) $(MAKEOPTS) $(BIN)/libiobex.a TARGET=IOBEX_DLL
+	@$(MAKE) $(MAKEOPTS) $(BIN)/libxptobex.a TARGET=OBEX_DLL
+
+#--------------------------------------------------
+# libxpt.so      - The xpt manager layer
+
+libxpt.so: $(OFILES)
+	$(LINK.o) -o$@ $^ $(LDLIBS)
+
+$(BIN)/libxpt.so: libxpt.so
+	cp $^ $(BIN)
+	
+# LEO:
+libxpt.a: $(OFILES)
+	ar -r $@ $^ 
+
+$(BIN)/libxpt.a: libxpt.a
+	cp $^ $(BIN)
+
+#--------------------------------------------------
+# libxpthttp.so  - The http transport implementation
+
+libxpthttp.so: $(OFILES)
+	$(LINK.o) -o$@ $^ $(LDLIBS)
+
+$(BIN)/libxpthttp.so: libxpthttp.so
+	cp $^ $(BIN)
+
+# LEO:
+libxpthttp.a: $(OFILES)
+	ar -r $@ $^
+
+$(BIN)/libxpthttp.a: libxpthttp.a
+	cp $^ $(BIN)
+
+#--------------------------------------------------
+# libxptwsp.so   - The wsp transport implementation
+
+libxptwsp.so: $(OFILES)
+	$(LINK.o) -o$@ $^ $(LDLIBS)
+
+$(BIN)/libxptwsp.so: libxptwsp.so
+	cp $^ $(BIN)
+
+# LEO:
+libxptwsp.a: $(OFILES)
+	ar -r $@ $^
+
+$(BIN)/libxptwsp.a: libxptwsp.a
+	cp $^ $(BIN)
+
+#------------
+# libxptawsp.so  - A non-working, skeleton wsp communication stack, for testing
+
+libxptawsp.so: $(OFILES)
+	$(LINK.o) -o$@ $^ $(LDLIBS)
+
+$(BIN)/libxptawsp.so: libxptawsp.so
+	cp $^ $(BIN)
+
+# LEO:
+libxptawsp.a: $(OFILES)
+	ar -r $@ $^
+
+$(BIN)/libxptawsp.a: libxptawsp.a
+	cp $^ $(BIN)
+
+#--------------------------------------------------
+# libiobex.so - Utility DLL used by the Obex transport implementation
+
+libiobex.so: $(OFILES)
+	$(LINK.o) -o$@ $^ $(LDLIBS)
+
+$(BIN)/libiobex.so: libiobex.so
+	cp $^ $(BIN)
+
+# LEO:
+libiobex.a: $(OFILES)
+	ar -r $@ $^
+
+$(BIN)/libiobex.a: libiobex.a
+	cp $^ $(BIN)
+
+#--------------------------------------------------
+# libxptobex.so  - The obex transport implementation
+
+libxptobex.so: $(OFILES)
+	$(LINK.o) -o$@ $^ $(LDLIBS)
+
+$(BIN)/libxptobex.so: libxptobex.so
+	cp $^ $(BIN)
+
+# LEO:
+libxptobex.a: $(OFILES)
+	ar -r $@ $^
+
+$(BIN)/libxptobex.a: libxptobex.a
+	cp $^ $(BIN)
+
+#--------------------------------------------------
+# cleanup
+
+# LEO:
+clean:
+	-rm *.o *.so *.a 2>/dev/null
+	
+	# -rm *.o *.so 2>/dev/null
+
+#--------------------------------------------------
+#
+# dependencies
+#
+
+# libxpt.so dependencies
+xptcomm.o:     xpt.h xptdef.h smldef.h define.h smlerr.h xptTransport.h \
+               xptcomm.h utilities.h xptport.h
+utilities.o:   xpt.h xptdef.h smldef.h define.h smlerr.h xptTransport.h \
+               utilities.h
+
+# libxpthttp.so dependencies
+digcalc.o:     global.h md5.h xptport.h xptdef.h define.h digcalc.h
+httpserverports.o: httpdefs.h xptdef.h xptport.h define.h xpt.h smldef.h \
+               smlerr.h httpserverports.h xpt-tcp.h xpttypes.h xptmutex.h
+httptrans.o:   httpdefs.h xptdef.h xptport.h define.h httptrans.h \
+               xptTransport.h xpt.h smldef.h smlerr.h xpttypes.h xpt-http.h \
+               xpt-tcp.h xpt-auth.h
+md5.o:         global.h md5.h
+xpt-auth.o:    xptport.h xptdef.h define.h xpt-b64.h xpttypes.h digcalc.h \
+               xpt-auth.h
+xpt-b64.o:     xptport.h xptdef.h define.h xpttypes.h xpt-b64.h xptib64.h
+xpt-http.o:    xpttypes.h xptihttp.h xpt-tcp.h xpt-http.h xpt-auth.h \
+               xpt.h xptdef.h smldef.h define.h smlerr.h xptport.h
+xpt-tcp.o:     xptitcp.h xpttypes.h xptport.h xptdef.h define.h xpt-tcp.h
+xptmutex.o:    xptmutex.h
+
+# libxptawsp.so dependencies
+awsp.o:        awsp.h xptdef.h xptTransport.h xpt.h smldef.h define.h smlerr.h \
+               xptport.h
+
+# libxptwsp.so dependencies
+protocol.o:    protocol.h xpt.h xptdef.h smldef.h define.h smlerr.h \
+               xptTransport.h awsp.h session.h wspdef.h settings.h \
+               wsphttp.h transact.h xptport.h
+session.o:     session.h awsp.h xptdef.h xptTransport.h xpt.h smldef.h \
+               define.h smlerr.h wspdef.h wsputil.h xptport.h
+settings.o:    settings.h awsp.h xptdef.h wsphttp.h xptTransport.h xpt.h \
+               smldef.h define.h smlerr.h wspdef.h wsputil.h xptport.h
+transact.o:    transact.h awsp.h xptdef.h xpt.h smldef.h define.h smlerr.h \
+               wsphttp.h xptTransport.h wspdef.h wsputil.h xptiwsp.h \
+               xptport.h
+wspcbk.o:      awsp.h xptdef.h xpt-wsp.h xptTransport.h xpt.h smldef.h define.h \
+               smlerr.h protocol.h session.h wspdef.h settings.h \
+               wsphttp.h transact.h
+wsphttp.o:     wsphttp.h xptTransport.h xptdef.h xpt.h smldef.h define.h \
+               smlerr.h wspdef.h wsputil.h xptport.h
+wsputil.o:     wsputil.h xptTransport.h xptdef.h xpt.h smldef.h define.h \
+               smlerr.h wspdef.h xptport.h
+xpt-wsp.o:     xpt-wsp.h xptTransport.h xptdef.h xpt.h smldef.h define.h \
+               smlerr.h protocol.h awsp.h session.h wspdef.h \
+               settings.h wsphttp.h transact.h
+
+# libiobex.so dependencies
+buffer.o:      buffer.h obex/constants.h utils.h iConstants.h debug.h obex/error.h
+debug.o:       debug.h iConstants.h obex/constants.h buffer.h utils.h obex/error.h
+handle.o:      handle.h obex/constants.h iConstants.h buffer.h utils.h debug.h \
+               obex/error.h transport.h
+header.o:      header.h obex/constants.h buffer.h utils.h iConstants.h debug.h \
+               obex/error.h handle.h object.h
+inetTransport.o: inetTransport.h iConstants.h obex/constants.h buffer.h \
+               utils.h debug.h obex/error.h
+irTransport.o: irTransport.h iConstants.h obex/constants.h buffer.h utils.h \
+               debug.h obex/error.h
+obex.o:        obex/obex.h obex/constants.h obex/error.h iConstants.h buffer.h \
+               utils.h debug.h handle.h object.h header.h transport.h
+object.o:      object.h iConstants.h obex/constants.h buffer.h utils.h debug.h \
+               obex/error.h handle.h header.h
+transport.o:   transport.h obex/constants.h iConstants.h buffer.h utils.h \
+               debug.h obex/error.h irTransport.h inetTransport.h
+utils.o:       utils.h iConstants.h obex/constants.h buffer.h debug.h obex/error.h
+
+# libxptobex.so dependencies
+obexbinding.o: obexbinding.h smldef.h define.h xptTransport.h xptdef.h xpt.h \
+               smlerr.h obex/obex.h obex/constants.h obex/error.h obexbindingerror.h
+

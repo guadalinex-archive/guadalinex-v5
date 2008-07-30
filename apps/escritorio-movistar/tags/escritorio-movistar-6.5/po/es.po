@@ -1,0 +1,2636 @@
+# translation of es.po to spanish
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Roberto Majadas <telemaco@openshine.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: es\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-07-07 02:18+0200\n"
+"PO-Revision-Date: 2007-12-12 19:00+0100\n"
+"Last-Translator: Roberto Majadas <telemaco@openshine.com>\n"
+"Language-Team: spanish <telemaco@openshine.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../data/glade/consum.glade.h:2
+#, no-c-format
+msgid "%"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:3
+msgid "-"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:4
+msgid "--"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:5
+msgid ""
+"200 MB\n"
+"1 GB\n"
+"5 GB\n"
+"Otra cantidad"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:9 ../src/frontend/MSD/MSDConsumWindow.py:142
+msgid "<b><big>Red movistar</big></b>"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:10 ../src/frontend/MSD/MSDConsumWindow.py:144
+msgid "<b><big>Roaming</big></b>"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:11 ../src/frontend/MSD/MSDConsumWindow.py:140
+msgid "<b><big>Sin Conexión</big></b>"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:12
+msgid "<b>Enviado</b>"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:13
+msgid "<b>Histórico (MB)</b>"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:14
+msgid "<b>Recibido</b>"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:15
+msgid "<b>Red movistar</b>"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:16
+msgid "<b>Resumen: desde 18/02/2008</b>"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:17
+msgid "<b>Resumen</b>"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:18
+msgid "<b>Roaming</b>"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:19
+msgid "<b>Tiempo:</b>"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:20
+msgid "<b>Tiempo</b>"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:21
+msgid "<b>Total</b>"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:22
+msgid "<b>Tráfico:</b>"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:23
+msgid "<b>Tráfico</b>"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:24
+msgid "<b>Velocidad</b>"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:25
+msgid "<span foreground=\"blue\" size=\"xx-large\">Consumo</span>"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:26
+msgid ""
+"<span foreground=\"blue\" underline=\"single\">http://www.canalcliente."
+"movistar.es</span>"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:27
+msgid "A_viso al alcanzar el siguiente límite:"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:28
+msgid "Acumulado"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:29
+msgid "Aviso al alcanzar:"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:30
+msgid "Aviso al alcanzar: "
+msgstr ""
+
+#: ../data/glade/consum.glade.h:31
+msgid "Aviso de consumo en Red movistar : "
+msgstr ""
+
+#: ../data/glade/consum.glade.h:32
+msgid "Aviso de consumo en Roaming : "
+msgstr ""
+
+#: ../data/glade/consum.glade.h:33
+msgid "Avisos"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:34
+msgid ""
+"El periodo de facturación comienza el 18 y finaliza el 17 de cada mes. La "
+"información proporcionada es orientativa. \n"
+"Recuerda que si quieres conocer tu consumo real puedes visitar:"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:36
+msgid "Envío"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:37
+msgid "Escritorio movistar - Consumo"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:38
+msgid "Kb/s"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:39
+msgid "MB"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:40
+msgid "Recepción"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:41
+msgid "Reiniciar automáticamente al finalizar el ciclo de facturación"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:42
+msgid "Se avisará al consumir X MB"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:43
+msgid "Sesión actual"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:44
+msgid "Tiempo de conexión(min)"
+msgstr ""
+
+#: ../data/glade/consum.glade.h:45
+msgid "Tráfico : "
+msgstr ""
+
+#: ../data/glade/consum.glade.h:46
+msgid "Velocidad máxima : "
+msgstr ""
+
+#: ../data/glade/consum.glade.h:47
+msgid "_Reiniciar"
+msgstr ""
+
+#: ../data/glade/updater.glade.h:1
+msgid "Ignorar"
+msgstr ""
+
+#: ../data/glade/updater.glade.h:2 ../data/glade/preferences.glade.h:98
+msgid "dialog1"
+msgstr ""
+
+#: ../data/glade/updater.glade.h:3
+msgid "text"
+msgstr ""
+
+#: ../data/glade/security.glade.h:1 ../data/glade/preferences.glade.h:34
+msgid "Clave:"
+msgstr ""
+
+#: ../data/glade/security.glade.h:2 ../data/glade/preferences.glade.h:39
+#: ../src/frontend/MSD/MSDPreferencesDialog.py:115
+#: ../src/frontend/MSD/MSDPreferencesDialog.py:123
+msgid "Datos de usuario"
+msgstr ""
+
+#: ../data/glade/security.glade.h:3
+msgid "Este servicio requiere identificación:"
+msgstr ""
+
+#: ../data/glade/security.glade.h:4
+msgid "Recordar teléfono y clave"
+msgstr ""
+
+#: ../data/glade/security.glade.h:5 ../data/glade/preferences.glade.h:85
+msgid "Teléfono:"
+msgstr ""
+
+#: ../data/glade/maintoolbar.glade.h:1
+msgid "Abre la agenda de contactos del Escritorio"
+msgstr ""
+
+#: ../data/glade/maintoolbar.glade.h:2
+msgid "Abre la configuración del Escritorio y sus servicios"
+msgstr ""
+
+#: ../data/glade/maintoolbar.glade.h:3
+msgid "Abre la información de ayuda sobre el Escritorio"
+msgstr ""
+
+#: ../data/glade/maintoolbar.glade.h:4
+msgid ""
+"Abre tus accesos directos a aplicaciones locales y a direcciones de Internet"
+msgstr ""
+
+#: ../data/glade/maintoolbar.glade.h:5 ../data/glade/preferences.glade.h:23
+#: ../src/frontend/MSD/MSDPreferencesDialog.py:115
+#: ../src/frontend/MSD/MSDPreferencesDialog.py:121
+msgid "Accesos directos"
+msgstr ""
+
+#: ../data/glade/maintoolbar.glade.h:6 ../data/glade/preferences.glade.h:24
+#: ../src/frontend/MSD/MSDPreferencesDialog.py:115
+#: ../src/frontend/MSD/MSDPreferencesDialog.py:119
+msgid "Agenda"
+msgstr ""
+
+#: ../data/glade/maintoolbar.glade.h:7
+msgid "Ayuda"
+msgstr ""
+
+#: ../data/glade/maintoolbar.glade.h:8
+msgid "Configuración "
+msgstr ""
+
+#: ../data/glade/import.glade.h:1
+msgid "<b>Acceso directo : 'prueba'</b>"
+msgstr ""
+
+#: ../data/glade/import.glade.h:2
+msgid "<b>Conexíon : Internet GPRS/3G</b>"
+msgstr ""
+
+#: ../data/glade/import.glade.h:3
+msgid "El contenido del fichero es el siguiente : "
+msgstr ""
+
+#: ../data/glade/import.glade.h:4
+msgid "Esta conexión no se puede sobrescribir."
+msgstr ""
+
+#: ../data/glade/import.glade.h:5
+msgid "Esta conexión ya existe y deseo sobrescribirla"
+msgstr ""
+
+#: ../data/glade/import.glade.h:6
+msgid "Este acceso directo ya existe y deseo sobrescribirlo"
+msgstr ""
+
+#: ../data/glade/import.glade.h:7
+msgid "Fichero : "
+msgstr ""
+
+#: ../data/glade/import.glade.h:8
+msgid "Importar archivo"
+msgstr ""
+
+#: ../data/glade/import.glade.h:9
+msgid ""
+"La conexión no dispone de usuario asociado.\n"
+"Introduce el nombre de usuario para la conexión."
+msgstr ""
+
+#: ../data/glade/import.glade.h:11
+msgid "Nombre de usuario : "
+msgstr ""
+
+#: ../data/glade/import.glade.h:12
+msgid "Nombre del fichero"
+msgstr ""
+
+#: ../data/glade/import.glade.h:13 ../data/glade/agenda.glade.h:29
+msgid "_Importar"
+msgstr ""
+
+#: ../data/glade/import.glade.h:14
+msgid "¿Deseas importar estos datos?"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:1
+msgid "<b>Acerca de Escritorio movistar</b>"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:2
+msgid "<b>Ayuda</b>"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:3
+msgid "<b>Escritorio movistar Linux 6.5</b>"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:4
+msgid ""
+"<span foreground=\"blue\" underline=\"single\">http://www.atencionenlinea."
+"movistar.es</span>"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:5
+msgid "<span foreground=\"white\">Dispositivo  GPRS/3G : </span>"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:6
+msgid "<span foreground=\"white\">E_xpandir</span>"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:7
+msgid "Aviso"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:8
+msgid "Co_ntraer"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:9
+msgid "Copyright © 2003-2008"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:10 ../data/glade/agenda.glade.h:12
+msgid "Enviar correo"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:11
+msgid "Escritorio movistar - Ayuda"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:12
+msgid "Escritorio movistar BETA"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:13
+msgid "Información sobre la Tarjeta o Módem USB Internet Móvil:"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:14
+msgid "Ningún dispositivo seleccionado"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:15
+#: ../src/frontend/MSD/MSDMainWindow.py:127
+msgid "Nuevo correo"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:16
+msgid ""
+"Para más información, puedes llamar al 609 o escribir tu consulta desde la "
+"siguiente dirección:"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:17
+msgid "Redimensiona la ventana a su tamaño contraído"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:18
+msgid "Redimensiona la ventana a su tamaño original"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:19
+msgid "Selecciona un contacto de la lista:"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:20
+msgid ""
+"TME procesa con fines estadísticos datos anónimos de los usuarios, relativos "
+"a la utilización de los servicios del Escritorio movistar, datos de "
+"conexión, sistema operativo y versiones del software, con el único objetivo "
+"de detectar posibles mejoras del servicio y facilitar su utilización por "
+"parte de los usuarios, sin que en ningún caso se realice tratamiento de "
+"datos personales."
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:21
+msgid "Telefónica Móviles España, S.A.U., 2008"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:22
+msgid "Temas de ayuda"
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:23
+msgid ""
+"Temas de ayuda muestra el manual de la aplicación con una lista con las "
+"preguntas y respuestas a los problemas más frecuentes."
+msgstr ""
+
+#: ../data/glade/mainwindow.glade.h:24 ../data/glade/preferences.glade.h:91
+msgid "_No volver a mostrar este mensaje"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:1
+msgid "<b>Nombre:</b>"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:2
+msgid "<b>Teléfono:</b>"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:3
+msgid "<small><i>Los campos en negrita son obligatorios</i></small>"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:4
+msgid "<span foreground=\"blue\" size=\"xx-large\">Agenda</span>"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:5
+msgid "A_yuda"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:6
+msgid "Cancelar"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:7
+msgid ""
+"Copyright 2003-2007\n"
+"Telefónica Móviles España S.A.U."
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:9
+msgid "Correo electrónico:"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:10
+msgid "Editar contacto"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:11
+msgid "Eliminar"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:13
+msgid "Escritorio movistar - Agenda"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:14
+msgid "Importar"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:15
+msgid "Modificar"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:16
+msgid "No se ha podido importar correctamente\t\n"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:18
+msgid "Nombre de la aplicación"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:19
+msgid "Nuevo"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:20
+msgid "Progreso de la importación"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:21
+msgid "Salir"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:22
+msgid "Ver a_yuda"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:23
+msgid "_Abrir configuración"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:24
+msgid "_Archivo"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:25
+msgid "_Configuración"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:26
+msgid "_Editar"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:27
+msgid "_Eliminar contacto"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:28
+msgid "_Herramientas"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:30
+msgid "_Modificar contacto"
+msgstr ""
+
+#: ../data/glade/agenda.glade.h:31
+msgid "_Nuevo contacto"
+msgstr ""
+
+#. TRANSLATORS: Replace this string with your names, one name per line.
+#: ../data/glade/agenda.glade.h:33
+msgid "translator-credits"
+msgstr ""
+
+#: ../data/glade/menu_pcmcia.glade.h:1
+msgid "Activar tarjeta"
+msgstr ""
+
+#: ../data/glade/menu_pcmcia.glade.h:2
+msgid "Desactivar tarjeta"
+msgstr ""
+
+#: ../data/glade/menu_pcmcia.glade.h:3
+msgid "G_PRS/2.5G preferido"
+msgstr ""
+
+#: ../data/glade/menu_pcmcia.glade.h:4
+msgid "Gestión del PIN"
+msgstr ""
+
+#: ../data/glade/menu_pcmcia.glade.h:5
+msgid "Selección _tecnologia de red"
+msgstr ""
+
+#: ../data/glade/menu_pcmcia.glade.h:6
+msgid "Selección de operadora"
+msgstr ""
+
+#: ../data/glade/menu_pcmcia.glade.h:7
+msgid "U_TMS/3G preferido"
+msgstr ""
+
+#: ../data/glade/menu_pcmcia.glade.h:8
+msgid "_Automática"
+msgstr ""
+
+#: ../data/glade/menu_pcmcia.glade.h:9
+msgid "_Automático"
+msgstr ""
+
+#: ../data/glade/menu_pcmcia.glade.h:10
+msgid "_Cambiar PIN..."
+msgstr ""
+
+#: ../data/glade/menu_pcmcia.glade.h:11
+msgid "_Desactivar/Activar PIN..."
+msgstr ""
+
+#: ../data/glade/menu_pcmcia.glade.h:12
+msgid "_GPRS/2.5G sólo"
+msgstr ""
+
+#: ../data/glade/menu_pcmcia.glade.h:13
+msgid "_Manual"
+msgstr ""
+
+#: ../data/glade/menu_pcmcia.glade.h:14
+msgid "_UTMS/3G sólo"
+msgstr ""
+
+#: ../data/glade/connect-preferences-frame.glade.h:1
+#: ../data/glade/preferences.glade.h:2
+msgid ""
+"(*) De no seleccionar esta opción, la conexión que se utilizará será la que "
+"esté activa en ese momento o la predeterminada del Escritorio."
+msgstr ""
+
+#: ../data/glade/connect-preferences-frame.glade.h:2
+msgid "<b>Conexión</b>"
+msgstr ""
+
+#: ../data/glade/connect-preferences-frame.glade.h:3
+msgid "Connect dialog"
+msgstr ""
+
+#: ../data/glade/connect-preferences-frame.glade.h:4
+msgid "_Desinstalar servicio"
+msgstr ""
+
+#: ../data/glade/connect-preferences-frame.glade.h:5
+msgid "_Instalar servicio"
+msgstr ""
+
+#: ../data/glade/connect-preferences-frame.glade.h:6
+#: ../data/glade/preferences.glade.h:95
+msgid "_Usar la siguiente conexión específica (*):"
+msgstr ""
+
+#: ../data/glade/progress_dialog.glade.h:1
+msgid "Conectando con internet GRPS/3G"
+msgstr ""
+
+#: ../data/glade/ask_password.glade.h:1
+msgid "Contraseña :  "
+msgstr ""
+
+#: ../data/glade/ask_password.glade.h:2
+msgid "Introducción de contraseña"
+msgstr ""
+
+#: ../data/glade/ask_password.glade.h:3
+msgid "Introduce la contraseña de usuario para la conexión X"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:1
+#: ../src/frontend/Actions/MSDAInternet/MSDAInternet.glade.h:1
+msgid "      "
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:3
+msgid "<b><big>Accesos directos</big></b>"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:4
+msgid "<b><big>Agenda</big></b>"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:5
+msgid "<b><big>Conexiones</big></b>"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:6
+msgid "<b><big>Datos de usuario</big></b>"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:7
+msgid "<b><big>General</big></b>"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:8
+msgid "<b><big>Mis dispositivos</big></b>"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:9
+msgid "<b><big>Servicios</big></b>"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:10
+msgid "<b>Al conectar abrir:</b>"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:11
+msgid "<b>Conexión:</b>"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:12
+msgid "<b>Inicio</b>"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:13
+msgid "<b>Noticias</b>"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:14
+msgid "<b>Nuevos usuarios:</b>"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:15
+msgid "<b>Perfil asignado por Telefónica Móviles</b>"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:16
+msgid "<big><b>Nombre :</b></big>"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:17
+msgid "<big><b>Nombre:</b></big>"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:18
+msgid "<small>(Separado por comas)</small>"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:19
+msgid ""
+"<span foreground=\"blue\" underline=\"single\">http://www.copiagenda."
+"movistar.es</span>"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:20
+msgid "APN"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:21
+msgid "Acceso directo creado"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:22
+msgid ""
+"Acceso directo creado con éxito. Recuerda que puedes modificarlo desde "
+"Configuración > Accesos Directos."
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:25
+msgid ""
+"Algunos servicios del Escritorio movistar necesitan identificación. Desde "
+"aquí puedes\n"
+"guardar tu usuario y clave.\n"
+"\n"
+"Selecciona la forma en que deseas conectarte con los servicios movistar:"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:29
+msgid ""
+"Así mismo, si eres usuario del servicio <b>Copiagenda</b> de movistar, "
+"podrás\n"
+"descargarte los contactos en red que tengas almacenados. La descarga\n"
+"de contactos tendrá un coste asociado en función de datos contratada.\n"
+"Para mas información relativa a este servicio puedes visitar :"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:33
+msgid "Búsqueda de dominio :  "
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:35
+msgid "Conectar sin identificarme"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:36
+#: ../src/frontend/MSD/MSDPreferencesDialog.py:116
+#: ../src/frontend/MSD/MSDPreferencesDialog.py:127
+msgid "Conexiones"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:37
+msgid "Contraseña "
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:38
+msgid "DNS"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:40
+msgid ""
+"Define el orden en que deseas que aparezcan los servicios en el Escritorio "
+"movistar.\n"
+"Selecciona el servicio que deseas mover y pulsa los botones Subir y Bajar "
+"hasta\n"
+"conseguir la posición deseada."
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:43
+msgid "Descargar automáticamente nuevas noticias al conectar"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:44
+msgid ""
+"Desde aquí puedes gestionar las conexiones guardadas por el Escritorio "
+"movistar."
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:45
+msgid ""
+"Desde la Agenda del Escritorio movistar mantienes una lista de contactos\n"
+" a los que podrás enviar mensajes, videollamadas y correos electrónicos."
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:47
+msgid "Direcciones del servidor asignadas por el usuario"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:48
+msgid "Direcciones del servidor asignadas por la red"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:49
+msgid "Dirección : "
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:50
+msgid "Dirección URL : "
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:51
+msgid "E_xportar ..."
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:52
+msgid "Elige si quieres que el Escritorio movistar descargue noticias."
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:53
+msgid ""
+"Elige si quieres que el Escritorio movistar se ejecute cuando enciendas el "
+"ordenador."
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:54
+msgid "Escritorio movistar - Configuración"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:55
+msgid "Fichero"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:56
+#: ../src/frontend/MSD/MSDPreferencesDialog.py:115
+#: ../src/frontend/MSD/MSDPreferencesDialog.py:117
+msgid "General"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:57
+msgid "Identificación"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:58
+msgid "Lanzar Escritorio movistar al iniciar la sesión"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:59
+msgid "Lista de accesos directos :"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:60
+msgid ""
+"Los datos de identificación para realizar la descarga de contactos en red\n"
+"se recogen en la ventana de configuración <b>Datos de usuario</b>."
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:62
+#: ../src/frontend/MSD/MSDPreferencesDialog.py:116
+#: ../src/frontend/MSD/MSDPreferencesDialog.py:125
+msgid "Mis dispositivos"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:63
+msgid "No usar proxy"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:64
+msgid "Ocultar servicios no instalados"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:65
+msgid "Perfil _personalizado:"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:66
+msgid "Perfil por _defecto"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:67
+msgid "Preguntar antes de cambiar la conexión activa."
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:68
+msgid "Preguntar antes de conectar a un servicio."
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:69
+msgid "Preguntar antes de conectar con el botón de conectar."
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:70
+msgid "Proxy"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:71
+msgid "Puerto : "
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:72
+#: ../src/frontend/Actions/MSDASendMMS/MSDASendMMS.glade.h:7
+msgid "Selecciona un archivo"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:73
+msgid "Servicio"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:74
+msgid "Servidor primario : "
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:75
+msgid "Servidor secundario :"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:76
+msgid ""
+"Si eres un usuario nuevo de los servicios movistar o has olvidado tu clave "
+"de acceso, \n"
+"solicita tu clave con un mensaje de texto gratuito al 770. Indicando en el "
+"mensaje la \n"
+"clave que desees. La clave deberá tener entre 6 y 14 caracteres y es "
+"sensible a las \n"
+"mayúsculas. Tras enviar el mensaje, recibirás un mensaje de texto "
+"confirmando tu \n"
+"clave .\n"
+"\n"
+"Ejemplo, envía \"Azules\" al 770 para que esa sea tu clave de acceso."
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:83
+msgid "Solicitar contraseña al conectar"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:84
+msgid "Solicitar siempre clave al conectar"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:86
+msgid "Usar proxy"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:87
+msgid "Usuario "
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:88
+msgid "Utilizar los siguientes datos"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:89
+msgid "_Importar ..."
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:90
+msgid "_Modificar..."
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:92
+msgid "_Nuevo..."
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:93
+msgid "_Predeterminar"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:94
+msgid "_Restaurar apariencia original"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:96
+msgid "_Ver noticias"
+msgstr ""
+
+#: ../data/glade/preferences.glade.h:97
+msgid "dialog"
+msgstr ""
+
+#: ../data/glade/systray_menu.glade.h:1
+msgid "Abrir Escritorio movistar"
+msgstr ""
+
+#: ../data/glade/statswidget.glade.h:1
+msgid "3G"
+msgstr ""
+
+#: ../data/glade/statswidget.glade.h:2
+msgid "<b><span foreground=\"#515774\">Conexión : </span></b>"
+msgstr ""
+
+#: ../data/glade/statswidget.glade.h:3
+msgid "<b><span foreground=\"#515774\">Tiempo : </span></b>"
+msgstr ""
+
+#: ../data/glade/statswidget.glade.h:4
+msgid "<b><span foreground=\"#515774\">Tráfico : </span></b>"
+msgstr ""
+
+#: ../data/glade/statswidget.glade.h:5
+msgid "<b><span foreground=\"#515774\">Velocidad : </span></b>"
+msgstr ""
+
+#: ../data/glade/statswidget.glade.h:6
+msgid "<b><span foreground=\"blue\">movistar</span></b>"
+msgstr ""
+
+#: ../data/glade/statswidget.glade.h:7
+msgid "<small>Con_sumo</small>"
+msgstr ""
+
+#: ../data/glade/statswidget.glade.h:8
+msgid "<span foreground=\"#003c86\">0 Kbits/s</span>"
+msgstr ""
+
+#: ../data/glade/statswidget.glade.h:9
+msgid "<span foreground=\"#003c86\">0 bytes</span>"
+msgstr ""
+
+#: ../data/glade/statswidget.glade.h:10
+msgid "<span foreground=\"#003c86\">00:00:00</span>"
+msgstr ""
+
+#: ../data/glade/statswidget.glade.h:11
+msgid "<span foreground=\"#003c86\">Ninguna establecida</span>"
+msgstr ""
+
+#: ../data/glade/statswidget.glade.h:12
+msgid "Conectar con la conexión predeterminada"
+msgstr ""
+
+#: ../data/glade/statswidget.glade.h:13
+#: ../src/frontend/MSD/MSDConnectionsManager.py:37
+msgid "Desconectar"
+msgstr ""
+
+#: ../data/glade/statswidget.glade.h:14
+msgid "GPRS /"
+msgstr ""
+
+#: ../data/glade/statswidget.glade.h:15
+msgid "Muestra gráfica de consumo"
+msgstr ""
+
+#: ../data/glade/rssfeeder.glade.h:1
+msgid "Leídos"
+msgstr ""
+
+#: ../data/glade/rssfeeder.glade.h:2
+msgid "No leídos"
+msgstr ""
+
+#: ../data/glade/rssfeeder.glade.h:3
+msgid "Noticias"
+msgstr ""
+
+#: ../data/glade/rssfeeder.glade.h:4
+msgid "Todos"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAInternet/MSDAInternet.glade.h:2
+#: ../src/frontend/Actions/MSDAIntranet/MSDAIntranet.glade.h:1
+msgid "<b>Página de inicio</b>"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAInternet/MSDAInternet.glade.h:3
+#: ../src/frontend/Actions/MSDAIntranet/MSDAIntranet.glade.h:2
+msgid "Abrir navegador por defecto al iniciar el servicio"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAInternet/MSDAInternet.glade.h:4
+#: ../src/frontend/Actions/MSDAIntranet/MSDAIntranet.glade.h:6
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade.h:4
+#: ../src/frontend/Actions/MSDASendMMS/MSDASendMMS.glade.h:2
+#: ../src/frontend/Actions/MSDASendSMS/MSDASendSMS.glade.h:1
+msgid "Action Preferences Window"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAInternet/MSDAInternet.glade.h:5
+msgid ""
+"Este servicio te permite acceder a Internet desde el Escritorio movistar."
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAInternet/MSDAInternet.glade.h:6
+msgid ""
+"Navega rápidamente por tus páginas favoritas de internet desde cualquier "
+"lugar"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAInternet/MSDAInternet.glade.h:7
+msgid "Página : "
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAInternet/MSDAInternet.py:58
+msgid "movistar Internet"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAInternet/MSDAInternet.py:60
+msgid "Accede a Internet desde el Escritorio movistar"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAIntranet/MSDAIntranet.glade.h:3
+msgid ""
+"Accede a la Intranet de tu empresa de la forma más rápida, cómoda y segura.\n"
+"\n"
+"Este servicio requiere contratación específica. Para más información, "
+"contacta con el comercial asignado a tu empresa."
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAIntranet/MSDAIntranet.glade.h:7
+msgid ""
+"Este servicio te permite acceder a la intranet de tu empresa de forma cómoda "
+"y segura. El servicio requiere contratación específica. Para más "
+"información, contacta con el comercial asignado a tu empresa."
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAIntranet/MSDAIntranet.glade.h:8
+msgid "Página: "
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAIntranet/MSDAIntranet.py:57
+msgid "movistar Intranet"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAIntranet/MSDAIntranet.py:59
+msgid "Conecta con la intranet de tu empresa"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade.h:1
+msgid "<b>Cobertura Zona WiFi de Telefónica</b>"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade.h:2
+msgid ""
+"<span foreground=\"#0000ff\" underline_color=\"#0000FF\"><u>http://www."
+"telefonicaonline.com/zonawifi</u></span>"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade.h:3
+msgid ""
+"<span foreground=\"blue\" size=\"xx-large\">Zonas WiFi de Telefónica</span>"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade.h:5
+msgid "Cobertura"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade.h:6
+msgid ""
+"Con cualquiera de las <b>Tarifas Banda Ancha Móvil</b> de calidad Premium "
+"prodrás conectarte en las Zonas WiFi de Telefónica gratuitamente y de forma "
+"ilimitada."
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade.h:7
+msgid ""
+"Con cualquiera de las <b>Tarifas Banda Ancha Móvil</b> de calidad Premium "
+"prodrás conectarte en las Zonas WiFi de Telefónica gratuitamente y de forma "
+"ilimitada.\n"
+"\n"
+"Las Tarifas con las que podrás disfrutar del acceso WiFi son las "
+"siguientes :\n"
+"\n"
+"<b>- Internet en el Móvil Plus\n"
+"- Tarifa Plana Internet Plus\n"
+"- Tarifa Plana Internet Premium\n"
+"</b>\n"
+"\n"
+"Para más información sobre las Tarifas Banda Ancha Móvil llama al <b>109</b>"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade.h:17
+msgid ""
+"Con cualquiera de las <b>Tarifas Banda Ancha Móvil</b> de la calidad Premium "
+"podrás conectarte en las Zonas WiFi de Telefónica gratuitamente y de forma "
+"ilimitada.\n"
+"\n"
+"Las Tarifas con las que podrás disfrutar del acceso WiFi son las "
+"siguientes:\n"
+"\n"
+"<b>- Internet en el Móvil Plus\n"
+"- Tarifa Plana Internet Plus\n"
+"- Tarifa Plana Internet Premium</b>\n"
+"\n"
+"Para más información sobre las Tarifas Banda Ancha Móvil llama al <b>109</b>."
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade.h:26
+msgid "Escritorio movistar - Zonas WiFi de Telefónica"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade.h:27
+msgid "Listado de cobertura"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade.h:28
+msgid "Localidad :"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade.h:29
+msgid ""
+"Para conocer los puntos de acceso de la Zona WiFi de Telefónica pulsa el "
+"botón de 'Cobertura'."
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade.h:30
+msgid "Provincia : "
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade.h:31
+msgid "Puntos de acceso WiFi resultado de la búsqueda: "
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade.h:32
+msgid ""
+"Selecciona tu ubicación para acceder a la lista de Zonas WiFi de Telefónica. "
+"Si tienes acceso a Internet puedes consultar un listado actualizado en:"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade.h:33
+msgid ""
+"Si tienes contratado una de estas Tarifas puedes solicitar tu clave para "
+"conectarte pulsando el botón 'Solicitar clave'."
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade.h:34
+msgid "Solicitar clave"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade.h:35
+msgid "Tipo :"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.glade.h:36
+msgid "Ubicación :"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.py:264
+msgid "Solicitando clave..."
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.py:264
+msgid "Espere un momento, por favor..."
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.py:288
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.py:302
+msgid "Envío de mensaje"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.py:385
+msgid "Zonas WiFi de Telefónica"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDAMovilidad/MSDAMovilidad.py:387
+msgid ""
+"Gestiona el acceso a la Zona WiFi de tu Tarifa Banda Ancha Móvil con WiFi"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDASendMMS/MSDASendMMS.glade.h:1
+msgid "<b>Cliente de correo</b>"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDASendMMS/MSDASendMMS.glade.h:3
+msgid ""
+"Correo Móvil te permite usar tu cuenta de correo movistar. Dispones de "
+"agenda, libreta de direcciones y aviso por SMS para los correos recibidos.\n"
+"\n"
+"Recuerda que en las preferencias de seguridad puedes configurar el acceso a "
+"éste y otros servicios movistar."
+msgstr ""
+
+#: ../src/frontend/Actions/MSDASendMMS/MSDASendMMS.glade.h:6
+msgid ""
+"Este servicio te permite enviar y recibir correos electrónicos con "
+"notificaciones por móvil. Dispones además de libreta de direcciones."
+msgstr ""
+
+#: ../src/frontend/Actions/MSDASendMMS/MSDASendMMS.glade.h:8
+msgid "Usar cliente web"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDASendMMS/MSDASendMMS.glade.h:9
+msgid "Usar el siguiente programa cliente:"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDASendMMS/MSDASendMMS.py:85
+msgid "Correo Móvil"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDASendMMS/MSDASendMMS.py:87
+msgid "Accede a tu cuenta del servicio Correo Móvil"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDASendSMS/MSDASendSMS.glade.h:2
+msgid ""
+"Descubre con Mensajería Web la forma más sencilla de enviar mensajes de "
+"texto y mensajes multimedia desde tu ordenador.\n"
+"\n"
+"Recuerda que en las preferencias de seguridad puedes configurar el acceso a "
+"éste y otros servicios movistar."
+msgstr ""
+
+#: ../src/frontend/Actions/MSDASendSMS/MSDASendSMS.glade.h:5
+msgid ""
+"Este servicio te permite enviar mensajes de texto y multimedia desde tu "
+"ordenador mediante el servicio Mensajería Web."
+msgstr ""
+
+#: ../src/frontend/Actions/MSDASendSMS/MSDASendSMS.py:33
+msgid "Mensajes"
+msgstr ""
+
+#: ../src/frontend/Actions/MSDASendSMS/MSDASendSMS.py:35
+msgid "Envía mensajes de texto y multimedia"
+msgstr ""
+
+#: ../src/frontend/MSD/MobileManagerClient.py:129
+#: ../src/frontend/MSD/MobileManagerClient.py:314
+#: ../src/frontend/MSD/MobileManagerClient.py:474
+msgid "<b>Mobile Manager no disponible</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MobileManagerClient.py:130
+#: ../src/frontend/MSD/MobileManagerClient.py:315
+#: ../src/frontend/MSD/MobileManagerClient.py:475
+msgid ""
+"Mobile manager no está activado o no funciona correctamente.\n"
+"Por favor trate de reactivarlo para iniciar el Escritorio movistar."
+msgstr ""
+
+#: ../src/frontend/MSD/MobileManagerClient.py:148
+msgid "Not dbus connection available"
+msgstr ""
+
+#: ../src/frontend/MSD/MobileManagerClient.py:507
+#, python-format
+msgid "Parameters %s "
+msgstr ""
+
+#: ../src/frontend/MSD/MobileManagerClient.py:508
+#, python-format
+msgid "Parameters %s ,%s, %s ,%s, %s, %s, %s"
+msgstr ""
+
+#: ../src/frontend/MSD/MobileManagerClient.py:532
+msgid "MobileDial stop"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAction.py:152
+msgid "Desinstalar servicio"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAction.py:153
+#, python-format
+msgid "<b>¿Deseas desinstalar el servicio '%s'?</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAction.py:154
+msgid "Podrás volver a instalarlo desde esta ventana de configuración."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAction.py:159
+msgid "Desinstalando servicio"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAction.py:159
+#, python-format
+msgid "Por favor, espera mientras se desinstala el servicio '%s'."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAction.py:178
+#: ../src/frontend/MSD/MSDMainWindow.py:429
+msgid "Instalando servicio"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAction.py:178
+#: ../src/frontend/MSD/MSDMainWindow.py:429
+#, python-format
+msgid "Por favor, espera mientras se instala el servicio '%s'."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:116
+msgid "Conectando..."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:118
+msgid "Iniciando importación..."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:120
+msgid "Descargando..."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:122
+msgid "Confirmando datos..."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:124
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:141
+msgid "Cancelado."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:126
+msgid "Importación correcta."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:128
+msgid "Se produjo un error al importar."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:130
+msgid "No se importaron todos los datos."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:143
+msgid "No se ha podido abrir la agenda."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:145
+msgid "No se ha podido conectar."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:147
+msgid "Se ha recibido una respuesta incorrecta."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:149
+msgid "El usuario/contraseña son incorrectos."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:151
+msgid "Error desconocido."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:203
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:371
+msgid "Nuevo contacto"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:206
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:362
+msgid "Modificar contacto"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:222
+msgid "<b>Número de teléfono incorrecto</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:223
+msgid ""
+"Número de teléfono incorrecto. Este campo sólo permite números y los "
+"caracteres +, # y *."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:308
+msgid "Escritorio Movistar - Beta"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:355
+msgid "Eliminar contacto"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:378
+msgid "Enviar Correo"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:430
+#: ../src/frontend/MSD/MSDMainWindow.py:290
+msgid "Nombre"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:430
+msgid "Teléfono"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:430
+#: ../src/frontend/MSD/MSDMainWindow.py:290
+msgid "Correo electrónico"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:597
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:616
+msgid "Seleccione el fichero destino para exportar"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:734
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:767
+msgid "Canceled"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:754
+#, python-format
+msgid "¿Deseas eliminar el contacto \"%s\"?"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:756
+#, python-format
+msgid "¿Deseas eliminar %d contactos?"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:761
+msgid "Eliminar contactois"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:806
+msgid "<b>No hay conexión establecida</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:807
+msgid ""
+"Es necesario estar conectado para poder importar los contactos de Copiagenda "
+"movistar. Por favor, conecta previamente y vuelve a intentarlo."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDAddressBook/frontend.py:853
+msgid ""
+"Ha ocurrido un problema al intentar importar.\n"
+"Reinstalar la aplicación podría resolver el problema."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDBookmarksTab.py:154
+msgid "Exportar acceso directo"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDBookmarksTab.py:173
+#: ../src/frontend/MSD/MSDConnectionsTab.py:248
+msgid "<b>El fichero debe tener una extensión</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDBookmarksTab.py:174
+#: ../src/frontend/MSD/MSDConnectionsTab.py:249
+msgid "Los ficheros que guardes deben tener extensión .emsc"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDBookmarksTab.py:190
+msgid "Importar acceso directo"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConf.py:748
+msgid "Canal Cliente"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConf.py:749
+msgid "Yavoy"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConf.py:750
+msgid "Cobertura GPRS\\3G\\3.5G"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConf.py:751
+msgid "Cobertura Zona ADSL\\WiFi de Telefónica"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:36
+#: ../src/frontend/MSD/MSDMainWindow.py:811
+msgid "Desconectado"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:36
+#: ../src/frontend/MSD/MSDMainWindow.py:795
+msgid "Conectado"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:36
+#: ../src/frontend/MSD/MSDMainWindow.py:805
+msgid "Conectando"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:36
+#: ../src/frontend/MSD/MSDMainWindow.py:819
+msgid "Desconectando"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:37
+msgid "Conectar"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:85
+msgid "begin status"
+msgstr ""
+
+#. FIXED : Dialer (Async)
+#: ../src/frontend/MSD/MSDConnectionsManager.py:87
+msgid "Aqui iba un status"
+msgstr ""
+
+#. self.ppp_manager.status(r_handler_func=self.__async_init_status_cb, e_handler_func=self.__async_init_status_error_cb)
+#: ../src/frontend/MSD/MSDConnectionsManager.py:89
+msgid "end estatus"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:97
+msgid "error in MSDConnectionsManager in async status"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:115
+msgid "No se ha encontrado el ppp manager"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:230
+msgid "stop connecction 0"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:266
+msgid "stop connecction 1"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:293
+msgid "stop connection 2"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:317
+msgid "start connection"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:335
+msgid "disconnect"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:369
+msgid "MSDConnManager : method -> __is_device_selected()"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:416
+#, python-format
+msgid "actualizando ui para %s"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:456
+#: ../src/frontend/MSD/MSDMainStatsWidget.py:176
+msgid "Ninguna establecida"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:463
+msgid "CONNECTED (Aborted)"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:473
+#, python-format
+msgid "CONNECTED ---> %s"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:485
+msgid "CONNECTING (Aborted)"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:490
+#, python-format
+msgid "Conectando con '%s'"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:492
+#, python-format
+msgid "CONNECTING ---> %s"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:503
+#: ../src/frontend/MSD/MSDConnectionsManager.py:527
+#: ../src/frontend/MSD/MSDConnectionsManager.py:538
+#: ../src/frontend/MSD/MSDConnectionsManager.py:549
+msgid "DISCONNECTED (Aborted)"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:553
+#, python-format
+msgid "DISCONNECTED ---> %s"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:560
+#, python-format
+msgid "Desconectando '%s'"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:564
+#, python-format
+msgid "Conectando a '%s'"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:570
+#, python-format
+msgid "DISCONNECTING ---> %s"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:580
+msgid "No volver a mostrar este dialogo"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:604
+msgid "_Usar conexión establecida"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsManager.py:625
+msgid "No preguntar de nuevo"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsTab.py:200
+msgid "Importar conexión"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsTab.py:207
+#: ../src/frontend/MSD/MSDConnectionsTab.py:237
+msgid "Ficheros emsc"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsTab.py:212
+msgid "Ficheros msgprs"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsTab.py:229
+msgid "Exportar conexión"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConnectionsTab.py:289
+#, python-format
+msgid "Del connection %s "
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConsumManager.py:124
+#: ../src/frontend/MSD/MSDConsumManager.py:126
+#: ../src/frontend/MSD/MSDConsumManager.py:788
+#: ../src/frontend/MSD/MSDConsumManager.py:790
+#, python-format
+msgid "<b>Resumen : desde %s</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConsumManager.py:332
+#: ../src/frontend/MSD/MSDConsumManager.py:339
+#, python-format
+msgid "Activado a %s MB "
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConsumManager.py:334
+#: ../src/frontend/MSD/MSDConsumManager.py:341
+#, python-format
+msgid "Activado a %s MB y %s MB"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConsumManager.py:345
+#: ../src/frontend/MSD/MSDConsumManager.py:348
+#: ../src/frontend/MSD/MSDMessages.py:64
+msgid "Desactivado"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConsumManager.py:532
+msgid "process history disconnecting"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConsumManager.py:550
+#: ../src/frontend/MSD/MSDConsumManager.py:559
+msgid "Consumo"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConsumManager.py:551
+msgid "Se ha alcanzado el límite de consumo GPRS/3G fijado"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConsumManager.py:560
+msgid ""
+"Se ha alcanzado el tanto por ciento del límite de consumo GPRS/3G fijado"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConsumManager.py:634
+#, python-format
+msgid "Rcv %s bytes  in %s seconds speed = %s"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConsumManager.py:650
+msgid "Notificando delegado"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConsumManager.py:806
+msgid "<b>Reiniciar consumo acumulado</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConsumWindow.py:257
+#: ../src/frontend/MSD/MSDConsumWindow.py:267
+#: ../src/frontend/MSD/MSDConsumWindow.py:273
+#, python-format
+msgid "%.2f Kbits/s"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDConsumWindow.py:263
+#, python-format
+msgid "<b>%.2f Kbits/s</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDDevicesTab.py:48
+msgid "Ningún dispositivo disponible"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDImporter.py:267
+#: ../src/frontend/MSD/MSDImporter.py:293
+#: ../src/frontend/MSD/MSDImporter.py:472
+msgid "<b>Este acceso directo no puede ser importado</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDImporter.py:268
+#: ../src/frontend/MSD/MSDImporter.py:294
+#: ../src/frontend/MSD/MSDImporter.py:473
+msgid ""
+"Error al importar el acceso directo. Probablemente el archivo asociado no "
+"exista en tu sistema."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDImporter.py:386
+#: ../src/frontend/MSD/MSDImporter.py:406
+#: ../src/frontend/MSD/MSDImporter.py:436
+#: ../src/frontend/MSD/MSDImporter.py:452
+#: ../src/frontend/MSD/MSDImporter.py:490
+#: ../src/frontend/MSD/MSDImporter.py:506
+#: ../src/frontend/MSD/MSDImporter.py:544
+#: ../src/frontend/MSD/MSDImporter.py:562
+#: ../src/frontend/MSD/MSDImporter.py:584
+#: ../src/frontend/MSD/MSDImporter.py:604
+#: ../src/frontend/MSD/MSDImporter.py:629
+#: ../src/frontend/MSD/MSDImporter.py:657
+#: ../src/frontend/MSD/MSDImporter.py:678
+#: ../src/frontend/MSD/MSDImporter.py:702
+#: ../src/frontend/MSD/MSDImporter.py:722
+#: ../src/frontend/MSD/MSDImporter.py:744
+msgid "Importacion cancelada"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDImporter.py:391
+msgid "Caso de que no haya usuario"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDImporter.py:398
+#: ../src/frontend/MSD/MSDImporter.py:428
+#: ../src/frontend/MSD/MSDImporter.py:444
+#: ../src/frontend/MSD/MSDImporter.py:535
+#: ../src/frontend/MSD/MSDImporter.py:553
+#: ../src/frontend/MSD/MSDImporter.py:575
+#: ../src/frontend/MSD/MSDImporter.py:595
+#: ../src/frontend/MSD/MSDImporter.py:620
+#: ../src/frontend/MSD/MSDImporter.py:648
+#: ../src/frontend/MSD/MSDImporter.py:669
+#: ../src/frontend/MSD/MSDImporter.py:693
+#: ../src/frontend/MSD/MSDImporter.py:713
+#: ../src/frontend/MSD/MSDImporter.py:735
+#, python-format
+msgid "<b>Conexión : '%s'</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDImporter.py:419
+#, python-format
+msgid "<b>La conexión '%s' no se puede sobrescribir</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDImporter.py:424
+msgid "preguntar la conexion, si desea ser sobreescrita"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDImporter.py:482
+#: ../src/frontend/MSD/MSDImporter.py:498
+#: ../src/frontend/MSD/MSDImporter.py:536
+#: ../src/frontend/MSD/MSDImporter.py:554
+#: ../src/frontend/MSD/MSDImporter.py:576
+#: ../src/frontend/MSD/MSDImporter.py:596
+#: ../src/frontend/MSD/MSDImporter.py:621
+#: ../src/frontend/MSD/MSDImporter.py:649
+#: ../src/frontend/MSD/MSDImporter.py:670
+#: ../src/frontend/MSD/MSDImporter.py:694
+#: ../src/frontend/MSD/MSDImporter.py:714
+#: ../src/frontend/MSD/MSDImporter.py:736
+#, python-format
+msgid "<b>Acceso directo : '%s'</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDImporter.py:495
+msgid "preguntar si se puede sobreescribir el acceso directo"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDImporter.py:571
+msgid "ask(Puedo sobreescribir bookmark y conn no porque es internt/gprs)"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDImporter.py:591
+msgid "ask(Puedo sobreescribir bookmark y conn)"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDImporter.py:616
+msgid "ask(Puedo sobreescribir bookmark y conn, sin user)"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDImporter.py:643
+msgid "ask (Puedo sobreescribir bookmark)"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDImporter.py:689
+msgid "ask (Puedo no sobreescribir porque es internet gprs3g )"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDImporter.py:708
+msgid "ask (Puedo sobreescribir conn)"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDImporter.py:769
+#, python-format
+msgid "Falta el campo %s en el fichero"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDImporter.py:878
+#, python-format
+msgid "Error importando : %s"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainStatsWidget.py:198
+msgid "<b><span foreground=\"#515774\"> GPRS</span></b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainStatsWidget.py:201
+msgid "Registrado en red GPRS"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainStatsWidget.py:201
+msgid "Estás registrado en la red GPRS."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainStatsWidget.py:213
+msgid "<b><span foreground=\"#515774\">3G</span></b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainStatsWidget.py:215
+msgid "<b><span foreground=\"#515774\">3,5G</span></b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainStatsWidget.py:217
+msgid "<b><span foreground=\"#515774\">3,5G+</span></b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainStatsWidget.py:220
+msgid "Registrado en red 3G"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainStatsWidget.py:220
+msgid "Estás registrado en la red 3G."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:114
+#: ../src/frontend/MSD/MSDMainWindow.py:611
+msgid "<span foreground=\"white\">Ningún dispositivo disponible</span>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:197
+msgid "Abrir"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:198
+msgid "Configuración"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:199
+msgid "Instalar"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:461
+msgid "Nuevo acceso directo..."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:462
+msgid "Configurar accesos directos..."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:532
+msgid ""
+"Cargando datos de la agenda...\n"
+"Por favor espera. "
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:567
+#: ../src/frontend/MSD/MSDMainWindow.py:579
+msgid "Información no disponible"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:575
+msgid "Modelo"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:575
+msgid "Fabricante"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:575
+msgid "Firmware"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:631
+msgid "Tarjeta detectada"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:634
+#: ../src/frontend/MSD/MSDMessages.py:30
+msgid "Inicializando tarjeta"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:637
+msgid "Tarjeta no tiene SIM"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:641
+msgid "<b>SIM no encontrada</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:642
+msgid ""
+"La Tarjeta o Módem USB Internet Móvil no contiene una tarjeta SIM válida. "
+"Por favor, comprueba que hay una tarjeta SIM introducida correctamente en la "
+"Tarjeta o Módem USB Internet Móvil."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:653
+#: ../src/frontend/MSD/MSDMainWindow.py:659
+#: ../src/frontend/MSD/MSDMessages.py:32
+msgid "Comprobando código PIN"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:665
+msgid "Tarjeta apagada"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:668
+#: ../src/frontend/MSD/MSDMessages.py:34
+msgid "Buscando red y registrando"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:671
+#: ../src/frontend/MSD/MSDMessages.py:35
+msgid "Tarjeta preparada"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:723
+msgid "<b>Dispositivo detectado</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:725
+#: ../src/frontend/MSD/MSDMainWindow.py:751
+#, python-format
+msgid ""
+"Se ha detectado la inserción del dispositivo :\n"
+"\n"
+"<b>%s</b>.\n"
+"\n"
+"¿Deseas seleccionarlo como dispositivo GPRS/3G?"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMainWindow.py:749
+msgid "<b>Dispositivo Detectado</b>"
+msgstr ""
+
+#. !/usr/bin/python
+#. -*- coding: utf-8 -*-
+#.
+#. Authors : Roberto Majadas <roberto.majadas@openshine.com>
+#. Oier Blasco <oierblasco@gmail.com>
+#. Alvaro Peña <alvaro.pena@openshine.com>
+#.
+#. Copyright (c) 2003-2007, Telefonica Móviles España S.A.U.
+#.
+#. This library is free software; you can redistribute it and/or
+#. modify it under the terms of the GNU General Public
+#. License as published by the Free Software Foundation; either
+#. version 2 of the License, or (at your option) any later version.
+#. This library is distributed in the hope that it will be useful,
+#. but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+#. Library General Public License for more details.
+#. You should have received a copy of the GNU General Public
+#. License along with this library; if not, write to the Free
+#. Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.
+#: ../src/frontend/MSD/MSDMessages.py:25
+msgid ""
+"No se ha podido establecer comunicación con la Tarjeta o Módem USB Internet "
+"Móvil."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:31
+msgid "Tarjeta  apagada"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:33
+msgid "Comprobando código PUK"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:36
+msgid "Tarjeta no detectada"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:37
+msgid "Tarjeta  detectada"
+msgstr ""
+
+#. dialog de Seguridad sim SIM
+#: ../src/frontend/MSD/MSDMessages.py:41
+msgid "Indroduzca el PIN de la tarjeta"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:42
+msgid ""
+"El código PIN de la tarjeta SIM se encuentra activado.\n"
+"Para desactivarlo introduce su valor en la casilla\n"
+"y pulsa Aceptar."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:43
+msgid ""
+"El código PIN de la tarjeta SIM se encuentra desactivado.\n"
+"Para activarlo introduce su valor en la casilla\n"
+"y pulsa Aceptar."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:44
+msgid "El código PIN introducido no es correcto."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:45
+msgid ""
+"El código PIN introducido debe tener entre 4 y 8 cifras.\n"
+"Por favor, inténtalo de nuevo."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:46
+msgid "El PIN y la verificación del PIN no coinciden."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:47
+msgid "El código PUK introducido no es correcto."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:48
+msgid ""
+"No se ha podido establecer contacto con la Tarjeta o Módem USB Internet "
+"Móvil."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:50
+msgid ""
+"Has cancelado el proceso de comprobación del código PUK y tu Tarjeta o Módem "
+"USB Internet Móvil se apagará\n"
+"\n"
+"Para volver a iniciar el proceso enciéndela desde el menú de tarjeta a "
+"través de la opción 'Activar tarjeta'."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:51 ../src/frontend/MSD/MSDMessages.py:56
+msgid "Comprobación cancelada"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:53
+msgid ""
+"Has cancelado el proceso de comprobación del código PIN y tu Tarjeta o Módem "
+"USB Internet Móvil se apagará.\n"
+"\n"
+"Para volver a iniciar el proceso enciéndela desde el menú de tarjeta a "
+"través de la opción 'Activar tarjeta'."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:58
+msgid ""
+"Ha fallado el proceso de cambio de PIN de la tarjeta SIM.\n"
+"A continuación se apagará la Tarjeta o Módem USB Internet Móvil. La "
+"siguiente vez que se encienda se pedirá el código PUK de la misma."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:59
+msgid "Error en el cambio de PIN"
+msgstr ""
+
+#. Estados del pin
+#: ../src/frontend/MSD/MSDMessages.py:63
+msgid "Activado"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:66
+msgid ""
+"El código PIN de la tarjeta SIM se encuentra activado.\n"
+"Para desactivarlo introduce su valor en la casilla y pulsa el botón Aceptar."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:68
+msgid ""
+"El código PIN de la tarjeta SIM se encuentra desactivado.\n"
+"Para activarlo introduce su valor en la casilla y pulsa el botón Aceptar."
+msgstr ""
+
+#. buscar operadora
+#: ../src/frontend/MSD/MSDMessages.py:71
+msgid "Selección manual de operadora"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:72
+msgid ""
+"A continuación se van a buscar las operadoras disponibles. Esta operación "
+"puede tardar varios minutos. Para comenzar la búsqueda pulsa en Aceptar."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:74
+msgid ""
+"Ha fallado el proceso de activación/desactivación  del código PIN de la "
+"tarjeta SIM.\n"
+"A continuación se apagará la Tarjeta o Módem USB Internet Móvil. La "
+"siguiente vez que se encienda se pedirá el código PUK de la misma."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:76
+msgid "Error en la activación/desactivación  del  PIN"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:78
+msgid ""
+"Por favor, espera mientras se buscan las operadoras disponibles.\n"
+"Este proceso puede tardar varios minutos."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:79
+msgid "Buscando operadoras"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:81
+msgid ""
+"Se ha producido un error mientras se buscaban las operadoras disponibles."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:82
+msgid ""
+"Se ha producido un error mientras se configuraba la operadora seleccionada."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:84
+msgid ""
+"Por favor, espera mientras se configura la operadora\n"
+"seleccionada."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:85
+msgid "Configurando operadora"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:87
+msgid "Al reiniciar se eliminará la información del consumo acumulado."
+msgstr ""
+
+#. Bookmarks
+#: ../src/frontend/MSD/MSDMessages.py:91
+msgid "<b>Eliminar acceso directo</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:92
+#, python-format
+msgid "¿Deseas eliminar el acceso directo '%s'?"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:94
+msgid "Nuevo acceso directo"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:95
+msgid "Modificar acceso directo"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:97
+msgid "<b>Nombre de acceso directo</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:98
+msgid "Introduce un nombre para el acceso directo."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:100
+#, python-format
+msgid "<b>Ya existe un acceso directo con el nombre '%s'</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:101
+msgid "Por favor, elige otro nombre."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:103
+msgid "<b>No has seleccionado un archivo</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:104
+msgid "Por favor, selecciona un archivo para la creación del acceso directo."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:106
+msgid "<b>No has introducido la URL</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:107
+msgid "Por favor, introduce una URL para la creación del acceso directo."
+msgstr ""
+
+#. Connections
+#: ../src/frontend/MSD/MSDMessages.py:111
+msgid "<b>Eliminar conexión</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:112
+#, python-format
+msgid "¿Deseas eliminar la conexión '%s'?"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:114
+msgid "Nueva conexión"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:115
+msgid "Modificar conexión"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:117
+#, python-format
+msgid "<b>Ya existe una conexión con el nombre '%s'</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:118
+msgid "Por favor, elige otro nombre"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:120
+msgid "<b>Nombre de conexión</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:121
+msgid "Introduce un nombre para la conexión."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:123
+msgid "<b>Introduce un usuario</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:124
+msgid "No has introducido el nombre de usuario para la conexión."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:126
+msgid "<b>Introduce la contraseña</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:127
+msgid "No has introducido la contraseña de la conexión."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:129
+msgid "<b>El campo perfil personalizado está vacío</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:130
+msgid "Por favor, indica el perfil personalizado que deseas utilizar."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:132
+msgid "<b>La información de DNS no está completa</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:133
+msgid "Por favor, rellena debidamente los campos correspondientes."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:135
+msgid "<b>La dirección del Proxy no es válida</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:136
+msgid "Introduce una dirección válida."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:138
+msgid "<b>El puerto del Proxy no es válido</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:139
+msgid "Los valores permitidos son enteros positivos."
+msgstr ""
+
+#. Connections Manager
+#: ../src/frontend/MSD/MSDMessages.py:143
+msgid "<b>No es posible la comunicación con el PPP Manager</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:144
+msgid ""
+"La conexión a través del PPP Manager no ha podido ser realizada. Lo que "
+"significa que por el momento no es posible la conexión a Internet mediante "
+"esta aplicación."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:146
+#, python-format
+msgid "<b>Introduce la contraseña de usuario para la conexión '%s'</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:148
+msgid "<b>No es posible conectar</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:149
+msgid ""
+"La Tarjeta o Módem USB Internet Móvil no está preparada para conectar. Por "
+"favor insértala o enciéndela si se encuentra apagada y espera a que se "
+"registre en la red."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:151
+msgid "<b>Confirmar fin de la aplicación</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:152
+msgid ""
+"El Escritorio movistar está conectado. Si sales de la aplicación la conexión "
+"se cerrará. ¿Deseas continuar?."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:154
+msgid "<b>No hay ningún dispositivo seleccionado</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:155
+msgid ""
+"No se puede realizar la conexión solicitada debido a que no hay ningún "
+"dispositivo. Por favor, selecciona un dispositivo en la ventana de "
+"configuración."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:157
+msgid "<b>Error en la conexión</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:158
+msgid "No ha sido posible realizar la conexión. Por favor, inténtalo de nuevo."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:160
+msgid "<b>Se ha detectado otra conexión activa</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:162
+#, python-format
+msgid "<b>Abrir servicio '%s'</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:163
+#, python-format
+msgid "¿Deseas conectarte con la conexión asociada al servicio? (%s)"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:164
+#, python-format
+msgid ""
+"En este momento estás conectado con '%s'. ¿Deseas abrir el servicio "
+"cambiando a su conexión asociada '%s' o prefieres usar la conexión actual?\n"
+"Si cambias la conexión puedes perder información en otros servicios y "
+"accesos directos abiertos."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:165
+#, python-format
+msgid ""
+"En este momento estás conectado con '%s'. ¿Deseas abrir el servicio "
+"cambiando a su conexión por defecto '%s' o prefieres usar la conexión "
+"actual?\n"
+"Si cambias la conexión puedes perder información en otros servicios y "
+"accesos directos abiertos."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:168
+#, python-format
+msgid "<b>Abrir acceso directo '%s'</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:169
+#, python-format
+msgid "¿Deseas conectarte con la conexión asociada al acceso directo? (%s)"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:170
+#, python-format
+msgid ""
+"En este momento estás conectado con '%s'. ¿Deseas abrir el acceso directo "
+"cambiando a su conexión asociada '%s' o prefieres usar la conexión actual?\n"
+"Si cambias la conexión puedes perder información en otros servicios y "
+"accesos directos abiertos."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:171
+#, python-format
+msgid ""
+"En este momento estás conectado con '%s'. ¿Deseas abrir el acceso directo "
+"cambiando a su conexión por defecto '%s' o prefieres usar la conexión "
+"actual?\n"
+"Si cambias la conexión puedes perder información en otros servicios y "
+"accesos directos abiertos."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:173
+msgid "<b>Conectar con la conexión predeterminada</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:174
+#, python-format
+msgid ""
+"En este momento estás conectado con '%s'. ¿Deseas abrir la conexión '%s' o "
+"prefieres usar la conexión actual?\n"
+"Si cambias la conexión puedes perder información en otros servicios y "
+"accesos directos abiertos."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:176
+#, python-format
+msgid ""
+"¿Deseas conectarte con la conexión predeterminada para el Escritorio "
+"movistar (%s)?"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:178
+msgid "<b>El número de teléfono no es válido</b>"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDMessages.py:179
+msgid "Los valores permitidos son caracteres numéricos."
+msgstr ""
+
+#: ../src/frontend/MSD/MSDPreferencesDialog.py:115
+#: ../src/frontend/MSD/MSDPreferencesDialog.py:129
+#: ../src/frontend/MSD/MSDPreferencesDialog.py:135
+msgid "Servicios"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDRSSFeeder.py:67
+msgid "Leído"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDRSSFeeder.py:75
+msgid "Título"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDRSSFeeder.py:85
+msgid "Fecha"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDSecurityManager.py:75
+msgid "Creando nueva instancia"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDSecurityManager.py:86
+msgid "Sec mananager init"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDSecurityManager.py:101
+msgid "Ignorando parametros el objeto ya esta construido"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDSecurityManager.py:112
+msgid "lanzando URL NO segura"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDSecurityManager.py:135
+msgid "ERROR creando fichero temporal"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDSecurityManager.py:156
+#, python-format
+msgid "error creando temporal file url %s "
+msgstr ""
+
+#: ../src/frontend/MSD/MSDSystray.py:42 ../src/frontend/MSD/MSDSystray.py:91
+msgid "Escritorio movistar: no conectado"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDSystray.py:85
+msgid "Escritorio movistar:conectado"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDTrafficHistoryGraph.py:235
+msgid "Red movistar"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDTrafficHistoryGraph.py:249
+msgid "Roaming"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDTrafficHistoryGraph.py:312
+msgid "ene"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDTrafficHistoryGraph.py:312
+msgid "feb"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDTrafficHistoryGraph.py:312
+msgid "mar"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDTrafficHistoryGraph.py:312
+msgid "abr"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDTrafficHistoryGraph.py:312
+msgid "jun"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDTrafficHistoryGraph.py:312
+msgid "jul"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDTrafficHistoryGraph.py:312
+msgid "ago"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDTrafficHistoryGraph.py:312
+msgid "sep"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDTrafficHistoryGraph.py:312
+msgid "oct"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDTrafficHistoryGraph.py:312
+msgid "nov"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDTrafficHistoryGraph.py:312
+msgid "dic"
+msgstr ""
+
+#: ../src/frontend/MSD/MSDUpdateChecker.py:88
+msgid "No entries in RSS"
+msgstr ""

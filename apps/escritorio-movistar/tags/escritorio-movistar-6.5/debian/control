@@ -1,0 +1,15 @@
+Source: escritorio-movistar
+Section: net 
+Priority: optional
+Maintainer: Escritorio Movistar <escritorio_movistar@tid.es>
+Build-Depends: debhelper (>= 5), cdbs, python-dev, libc6-dev (>= 2.4), libusb-dev, python-gtk2-dev, python-dbus ,python-gnome2-extras-dev, python-gnome2-dev, python-sqlobject, python-sqlite, mobile-manager
+Standards-Version: 3.7.2
+
+Package: escritorio-movistar
+Architecture: any
+Depends: python2.5, python (>= 2.5), python (<< 2.6), mobile-manager, python-gtk2, python-gnome2, python-gnome2-extras, python-glade2, gnome-icon-theme, libgtk2.0-bin, libgnome2-0, libnotify-bin, python-dbus, python-sqlobject, python-sqlite, ${shlibs:Depends}, ${misc:Depends} 
+Description: Escritorio movistar (soporte para servicios movistar) 
+ Escritorio movistar es una aplicacion que permite la contectividad
+ con tarjetas GPRS/3G y dispositivos moviles. Dando acceso a servicios
+ propios de Telefonica Moviles. 
+

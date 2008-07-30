@@ -1,0 +1,37 @@
+
+OBJS =		Traffic.o
+
+LIBS =
+
+TARGET =	traffic.a
+
+CPPINCLUDES = -I../../sync/ptools
+	
+CPPFLAGS = $(CPPINCLUDES) $(CPPDEFINES)  
+
+CXXFLAGS =	-O2 -g -Wall -fmessage-length=0
+
+$(TARGET):	$(OBJS)
+	ar -r $(TARGET) $(OBJS)
+
+all:	$(TARGET)
+
+clean:
+	rm -f $(OBJS) $(TARGET)
+	
+distclean:
+	rm -f Makefile
+	rm -f config.h
+
+maintainer-clean:
+
+distdir:
+	cp -f configure.ac configure config.h.in Makefile.in NO-AUTO-GEN \
+		Traffic.h Traffic.cpp siteconfig.h $(distdir)
+
+TARG = install install-data install-exec uninstall install-info installdirs \
+	check installcheck mostlyclean \
+	dvi pdf ps info html tags ctags 
+.PHONY: $(TARG)
+$(TARG): 
+
