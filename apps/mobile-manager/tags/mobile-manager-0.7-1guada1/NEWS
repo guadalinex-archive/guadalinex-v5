@@ -1,0 +1,36 @@
+=== Mobile Manager 0.7 ===
+
+ * New Novatel , Sierra drivers
+ * New Option Globbertrotter support
+ * Many bug fixes in Wvdial Class
+ * Update es translations
+
+=== Mobile Manager 0.6 ===
+
+ * Support for HSDPA, HSUPA, HSPA
+ * Fix bug on stop connection
+ * Fix ui ui bug in Ask Pin Dialog
+ * Update translations: es
+
+=== Mobile Manager 0.5 ===
+
+ * Fix bug in Daemon script
+ * Fix bug when there isn't available devices
+ * Apport support
+
+=== Mobile Manager 0.4 ===
+
+ * Add some bubfixes to MobileDialWvdial
+ * UI fixes in MobileDeviceConf Widget
+ * Add icons support per device
+ * Widgets i18n support
+ * Spanish translation support
+ 
+
+=== Mobile Manager 0.3 ===
+
+ * New ussd commands support
+ * Add experimental support for usb-modeswitch
+ * Add new rules for udev
+ * Some bugfixes
+

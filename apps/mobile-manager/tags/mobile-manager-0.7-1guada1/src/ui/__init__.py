@@ -1,0 +1,45 @@
+#!/usr/bin/python
+# -*- coding: iso-8859-15 -*-
+#
+# Authors : Roberto Majadas <roberto.majadas@openshine.com>
+#           Oier Blasco <oierblasco@gmail.com>
+#           Alvaro Peña <alvaro.pena@openshine.com>
+#
+# Copyright (c) 2003-2008, Telefonica Móviles España S.A.U.
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this program; if not, write to the
+# Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+# Boston, MA 02111-1307, USA.
+#
+import os
+from MobilePukDialog import MobilePukDialog
+from MobilePinDialog import MobileAskPinDialog, MobileChangePinDialog, MobileManagePinDialog
+from MobileCarrierDialog import MobileCarrierSelectorDialog
+from MobileATOptionsButton import MobileATOptionsButton
+from MobileDeviceConf import MobileDeviceConfWidget
+
+mobilemanager_glade_path = os.path.join("/usr", "share/", "mobilemanager/", "glade")
+mobilemanager_locale_path = os.path.join("/usr", "share/", "locale")
+
+import gettext
+import __builtin__
+__builtin__._ = gettext.gettext
+
+def init_i18n():
+    GETTEXT_DOMAIN="mobile-manager"
+    import gtk.glade
+    import gettext
+    for module in gtk.glade, gettext:
+        module.bindtextdomain(GETTEXT_DOMAIN, mobilemanager_locale_path)
+        module.textdomain(GETTEXT_DOMAIN)
