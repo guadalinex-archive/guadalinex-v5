@@ -1,0 +1,878 @@
+# GNOME Volume Manager in Welsh.
+# This file is distributed under the same license as GNOME Volume Manager.
+# Rhys Jones <rhys@sucs.org>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-volume-manager\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-03-09 23:13+0000\n"
+"PO-Revision-Date: 2006-03-09 22:55-0000\n"
+"Last-Translator: Rhys Jones <rhys@sucs.org>\n"
+"Language-Team: Welsh <gnome-cy@lists.linux.org.uk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural= (n==1) ? 0 : (n==2) ? 1 : (n != 8 && n != "
+"11) ? 2 : 3;\n"
+
+#: ../gnome-volume-manager.schemas.in.h:1
+msgid "\"Always take this action\" checkbox for Autorun"
+msgstr ""
+"Blwch ticio \"Gwneud y weithred hon o hyd\" ar gyfer Rhedeg yn Awtomatig"
+
+#: ../gnome-volume-manager.schemas.in.h:2
+msgid "\"Always take this action\" checkbox for iPod Photos"
+msgstr "Blwch ticio \"Gwneud y weithred hon o hyd\" ar gyfer Ffotograffau iPod"
+
+#: ../gnome-volume-manager.schemas.in.h:3
+msgid "\"Always take this action\" checkbox for mixed Audio and Data CDs"
+msgstr ""
+"Blwch ticio \"Gwneud y weithred hon o hyd\" ar gyfer CDau cymysg Sain a Data"
+
+#: ../gnome-volume-manager.schemas.in.h:4
+msgid "\"Always take this action\" checkbox for photo import from a camera"
+msgstr ""
+"Blwch ticio \"Gwneud y weithred hon o hyd\" ar gyfer mewnforio ffotograffau "
+"o gamera"
+
+#: ../gnome-volume-manager.schemas.in.h:5
+msgid "\"Always take this action\" checkbox for photo import from a device"
+msgstr ""
+"Blwch ticio \"Gwneud y weithred hon o hyd\" ar gyfer mewnforio ffotograffau "
+"o ddyfais"
+
+#: ../gnome-volume-manager.schemas.in.h:6
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr ""
+"Rhestr o lwybrau, wedi'u gwahanu gan ':', i'w gwirio am sgriptiau a ffeiliau "
+"deuaidd er mwyn rhedeg yn awtomatig"
+
+#: ../gnome-volume-manager.schemas.in.h:7
+msgid "Action to take when a camera is plugged in."
+msgstr "Pa weithred i'w gwneud pan fo camera wedi ei blygio i mewn."
+
+#: ../gnome-volume-manager.schemas.in.h:8
+msgid "Action to take when a device containing photos is encountered."
+msgstr ""
+"Pa weithred i'w gwneud wrth ddod ar draws dyfais sy'n cynnwys ffotograffau."
+
+#: ../gnome-volume-manager.schemas.in.h:9
+msgid "Action to take when a device contains an autorun program/script."
+msgstr ""
+"Pa weithred i'w gwneud pan fo dyfais yn cynnwys rhaglen/sgript i'w rhedeg yn "
+"awtomatig."
+
+#: ../gnome-volume-manager.schemas.in.h:10
+msgid "Action to take when a mixed Audio and Data CD is encountered."
+msgstr "Pa weithred i'w gwneud wrth ddod ar draws CD cymysg Sain a Data."
+
+#: ../gnome-volume-manager.schemas.in.h:11
+msgid "Action to take when an iPod Photo is encountered."
+msgstr "Pa weithred i'w gwneud wrth ddod ar draws iPod Photo."
+
+#: ../gnome-volume-manager.schemas.in.h:12
+msgid "Audio CD burn command"
+msgstr "Gorchymyn llosgi CD sain"
+
+#: ../gnome-volume-manager.schemas.in.h:13
+msgid "Automount removable drives"
+msgstr "Gosod yn awtomatig y gyriannau a ellir eu tynnu"
+
+#: ../gnome-volume-manager.schemas.in.h:14
+msgid "Automount removable media"
+msgstr "Gosod yn awtomatig y disgiau a ellir eu tynnu"
+
+#: ../gnome-volume-manager.schemas.in.h:15
+msgid "Autorun nautilus"
+msgstr "Rhedeg nautilus yn awtomatig"
+
+#: ../gnome-volume-manager.schemas.in.h:16
+msgid "Autorun path"
+msgstr "Llwybr rhedeg yn awtomatig"
+
+#: ../gnome-volume-manager.schemas.in.h:17
+msgid "CD play command"
+msgstr "Gorchymyn chwarae CD"
+
+#: ../gnome-volume-manager.schemas.in.h:18
+msgid "Command to run when a Palm is connected."
+msgstr "Pa weithred i'w rhedeg pan fo Palm newydd gysylltu."
+
+#: ../gnome-volume-manager.schemas.in.h:19
+msgid "Command to run when a PocketPC is connected."
+msgstr "Pa weithred i'w rhedeg pan fo PocketPC newydd gysylltu."
+
+#: ../gnome-volume-manager.schemas.in.h:20
+msgid ""
+"Command to run when a digital camera is connected or media from a digital "
+"camera is inserted."
+msgstr ""
+"Pa weithred i'w rhedeg pan fo camera digidol, neu gyfrwng o gamera digidol, "
+"newydd gysylltu."
+
+#: ../gnome-volume-manager.schemas.in.h:21
+msgid "Command to run when a keyboard is connected."
+msgstr "Pa weithred i'w rhedeg pan fo allweddell newydd gysylltu."
+
+#: ../gnome-volume-manager.schemas.in.h:22
+msgid "Command to run when a mouse is connected."
+msgstr "Pa weithred i'w rhedeg pan fo llygoden newydd gysylltu."
+
+#: ../gnome-volume-manager.schemas.in.h:23
+msgid "Command to run when a printer is connected."
+msgstr "Pa weithred i'w rhedeg pan fo argraffydd newydd gysylltu."
+
+#: ../gnome-volume-manager.schemas.in.h:24
+msgid "Command to run when a scanner is connected."
+msgstr "Pa weithred i'w rhedeg pan fo sganiwr newydd gysylltu."
+
+#: ../gnome-volume-manager.schemas.in.h:25
+msgid "Command to run when a tablet is connected."
+msgstr "Pa weithred i'w rhedeg pan fo tabled newydd gysylltu."
+
+#: ../gnome-volume-manager.schemas.in.h:26
+msgid "Command to run when a video DVD is inserted."
+msgstr "Pa weithred i'w rhedeg pan fo DVD fideo newydd ei roi i mewn."
+
+#: ../gnome-volume-manager.schemas.in.h:27
+msgid "Command to run when a video VCD is inserted."
+msgstr "Pa weithred i'w rhedeg pan fo VCD fideo newydd ei roi i mewn."
+
+#: ../gnome-volume-manager.schemas.in.h:28
+msgid "Command to run when a video camera is connected."
+msgstr "Pa weithred i'w rhedeg pan fo camera fideo newydd gysylltu."
+
+#: ../gnome-volume-manager.schemas.in.h:29
+msgid "Command to run when an audio CD is inserted."
+msgstr "Pa weithred i'w rhedeg pan fo CD sain newydd ei roi i mewn."
+
+#: ../gnome-volume-manager.schemas.in.h:30
+msgid "Command to run when an iPod is connected."
+msgstr "Pa weithred i'w rhedeg pan fo iPod newydd gysylltu."
+
+#: ../gnome-volume-manager.schemas.in.h:31
+msgid "Command to run when the user wishes to burn a Data CD."
+msgstr "Pa weithred i'w rhedeg pan fo'r defnyddiwr am losgi CD Data."
+
+#: ../gnome-volume-manager.schemas.in.h:32
+msgid "Command to run when the user wishes to burn an Audio CD."
+msgstr "Pa weithred i'w rhedeg pan fo'r defnyddiwr am losgi CD Sain."
+
+#: ../gnome-volume-manager.schemas.in.h:33
+msgid "DVD play command"
+msgstr "Gorchymyn chwarae DVD"
+
+#: ../gnome-volume-manager.schemas.in.h:34
+msgid "Data CD burn command"
+msgstr "Gorchymyn llosgi CD data"
+
+#: ../gnome-volume-manager.schemas.in.h:35
+msgid "Low Disk Space notification threshold"
+msgstr "Trothwy hysbysu lle disg isel"
+
+#: ../gnome-volume-manager.schemas.in.h:36
+msgid "Open nautilus on removeable media insert."
+msgstr "Agor nautilus pan fo cyfrwng y gellir ei dynnu yn cael ei roi i mewn."
+
+#: ../gnome-volume-manager.schemas.in.h:37
+msgid "Perform autorun"
+msgstr "Gwneud y rhedeg yn awtomatig"
+
+#: ../gnome-volume-manager.schemas.in.h:38
+msgid "Photo management command"
+msgstr "Gorchymyn trefnu ffotograffau"
+
+#: ../gnome-volume-manager.schemas.in.h:39
+msgid "Play inserted audio CD's"
+msgstr "Chwarae CDau sain a roddir i mewn"
+
+#: ../gnome-volume-manager.schemas.in.h:40
+msgid "Play inserted video DVDs"
+msgstr "Chwarae DVDau fideo a roddir i mewn"
+
+#: ../gnome-volume-manager.schemas.in.h:41
+msgid "Play inserted video VCDs"
+msgstr "Chwarae VCDau fideo a roddir i mewn"
+
+#: ../gnome-volume-manager.schemas.in.h:42
+msgid "Run Palm-sync program"
+msgstr "Rhedeg rhaglen cysoni â Palm"
+
+#: ../gnome-volume-manager.schemas.in.h:43
+msgid "Run PocketPC-sync program"
+msgstr "Rhedeg rhaglen cysoni â PocketPC"
+
+#: ../gnome-volume-manager.schemas.in.h:44
+msgid "Run a program to burn CDs/DVDs"
+msgstr "Rhedeg rhaglen i losgi CDau/DVDau"
+
+#: ../gnome-volume-manager.schemas.in.h:45
+msgid "Run iPod program"
+msgstr "Rhedeg rhaglen iPod"
+
+#: ../gnome-volume-manager.schemas.in.h:46
+msgid "Run keyboard program"
+msgstr "Rhedeg rhaglen bysellfwrdd"
+
+#: ../gnome-volume-manager.schemas.in.h:47
+msgid "Run mouse program"
+msgstr "Rhedeg rhaglen llygoden"
+
+#: ../gnome-volume-manager.schemas.in.h:48
+msgid "Run photo management command"
+msgstr "Rhedeg gorchymyn trefnu ffotograffau"
+
+#: ../gnome-volume-manager.schemas.in.h:49
+msgid "Run printer program"
+msgstr "Rhedeg rhaglen argraffydd"
+
+#: ../gnome-volume-manager.schemas.in.h:50
+msgid "Run scanner program"
+msgstr "Rhedeg rhaglen sganiwr"
+
+#: ../gnome-volume-manager.schemas.in.h:51
+msgid "Run tablet program"
+msgstr "Rhedeg rhaglen tabled"
+
+#: ../gnome-volume-manager.schemas.in.h:52
+msgid "Run video editing program"
+msgstr "Rhedeg rhaglen golygu fideo"
+
+#: ../gnome-volume-manager.schemas.in.h:53
+msgid ""
+"The threshold value for whether or not to toggle the notification off, based "
+"on the amount of space freed up by the user since the last check."
+msgstr ""
+"Y gwerth trothwy ar gyfer toglu'r hysbysiad i ffwrdd ai peidio, yn seiliedig "
+"ar faint o le gafodd ei ryddhau gan y defnyddiwr ers y prawf diwethaf."
+
+#: ../gnome-volume-manager.schemas.in.h:54
+msgid ""
+"The threshold value for whether or not to toggle the notification on, based "
+"on the amount of additional space used since the last check."
+msgstr ""
+"Y gwerth trothwy ar gyfer toglu'r hysbysiad ymlaen ai peidio, yn seiliedig "
+"ar faint o le yn fwy a ddefnyddiwyd ers y prawf diwethaf."
+
+#: ../gnome-volume-manager.schemas.in.h:55
+msgid "Threshold for disk space being freed up, to toggle notification"
+msgstr "Trothwy faint o le ddylid ei ryddhau ar y ddisg, cyn toglu'r hysbysiad"
+
+#: ../gnome-volume-manager.schemas.in.h:56
+msgid "Threshold for notification of increased disk usage"
+msgstr "Trothwy hysbysu am ychwaneg o le disg wedi ei ddefnyddio"
+
+#: ../gnome-volume-manager.schemas.in.h:57
+msgid "Threshold percentage for notifying the user of low disk space."
+msgstr "Canran trothwy hysbysu'r defnyddiwr am brinder lle disg."
+
+#: ../gnome-volume-manager.schemas.in.h:58
+msgid "VCD play command"
+msgstr "gorchymyn chwarae VCD"
+
+#: ../gnome-volume-manager.schemas.in.h:59
+msgid ""
+"Whether autorun programs (binaries and scripts located in 'autorun_path') "
+"are run on newly mounted media."
+msgstr ""
+"A yw rhaglenni rhedeg yn awtomatig (ffeiliau deuaidd a sgriptiau sydd o fewn "
+"'autorun_path') yn cael eu rhedeg ar ddisgiau sydd newydd eu gosod."
+
+#: ../gnome-volume-manager.schemas.in.h:60
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"drives when they are inserted."
+msgstr ""
+"A ddylai gnome-volume-manager osod gyriannau a ellir eu tynnu yn awtomatig "
+"wrth iddyn nhw gael eu rhoi i mewn."
+
+#: ../gnome-volume-manager.schemas.in.h:61
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"media when they are inserted."
+msgstr ""
+"A ddylai gnome-volume-manager osod disgiau a ellir eu tynnu yn awtomatig "
+"wrth iddyn nhw gael eu rhoi i mewn."
+
+#: ../gnome-volume-manager.schemas.in.h:62
+msgid ""
+"Whether, when a Palm is connected, gnome-volume-manager should run "
+"'autopalmsync_command'."
+msgstr ""
+"A ddylai gnome-volume-manager redeg 'autopalmsync_command' yn awtomatig pan "
+"fo Palm newydd gysylltu."
+
+#: ../gnome-volume-manager.schemas.in.h:63
+msgid ""
+"Whether, when a PocketPC is connected, gnome-volume-manager should run "
+"'autopocketpc_command'."
+msgstr ""
+"A ddylai gnome-volume-manager redeg 'autopocketpc_command' yn awtomatig pan "
+"fo PocketPC newydd gysylltu."
+
+#: ../gnome-volume-manager.schemas.in.h:64
+msgid ""
+"Whether, when a blank CD or DVD is inserted, gnome-volume-manager should run "
+"one of the autoburn commands."
+msgstr ""
+"A ddylai gnome-volume-manager redeg un o'r gorchmynion llosgi awtomatig pan "
+"fo CD neu DVD gwag wedi ei roi i mewn."
+
+#: ../gnome-volume-manager.schemas.in.h:65
+msgid ""
+"Whether, when a digital camera is connected or media from a digital camera "
+"is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr ""
+"A ddylai gnome-volume-manager redeg 'autophoto_command' pan fo camera "
+"digidol newydd gysylltu neu gyfrwng o gamera digidol newydd ei roi i mewn."
+
+#: ../gnome-volume-manager.schemas.in.h:66
+msgid ""
+"Whether, when a digital video camera is connected, gnome-volume-manager "
+"should run 'autovideocam_command'."
+msgstr ""
+"A ddylai gnome-volume-manager redeg 'autovideocam_command' yn awtomatig pan "
+"fo camera fideo digidol newydd gysylltu."
+
+#: ../gnome-volume-manager.schemas.in.h:67
+msgid ""
+"Whether, when a keyboard is connected, gnome-volume-manager should run "
+"'autokeyboard_command'."
+msgstr ""
+"A ddylai gnome-volume-manager redeg 'autokeyboard_command' yn awtomatig pan "
+"fo allweddell newydd gysylltu."
+
+#: ../gnome-volume-manager.schemas.in.h:68
+msgid ""
+"Whether, when a mouse is connected, gnome-volume-manager should run "
+"'automouse_command'."
+msgstr ""
+"A ddylai gnome-volume-manager redeg 'automouse_command' yn awtomatig pan fo "
+"llygoden newydd gysylltu."
+
+#: ../gnome-volume-manager.schemas.in.h:69
+msgid ""
+"Whether, when a printer is connected, gnome-volume-manager should run "
+"'autoprinter_command'."
+msgstr ""
+"A ddylai gnome-volume-manager redeg 'autoprinter_command' yn awtomatig pan "
+"fo argraffydd newydd gysylltu."
+
+#: ../gnome-volume-manager.schemas.in.h:70
+msgid ""
+"Whether, when a scanner is connected, gnome-volume-manager should run "
+"'autoscanner_command'."
+msgstr ""
+"A ddylai gnome-volume-manager redeg 'autoscanner_command' yn awtomatig pan "
+"fo sganiwr newydd gysylltu."
+
+#: ../gnome-volume-manager.schemas.in.h:71
+msgid ""
+"Whether, when a tablet is connected, gnome-volume-manager should run "
+"'autotablet_command'."
+msgstr ""
+"A ddylai gnome-volume-manager redeg 'autotablet_command' yn awtomatig pan fo "
+"tabled newydd gysylltu."
+
+#: ../gnome-volume-manager.schemas.in.h:72
+msgid ""
+"Whether, when a video DVD is inserted, gnome-volume-manager should run "
+"'autoplay_dvd_command'."
+msgstr ""
+"A ddylai gnome-volume-manager redeg 'autoplay_dvd_command' yn awtomatig pan "
+"fo DVD fideo newydd ei roi i mewn."
+
+#: ../gnome-volume-manager.schemas.in.h:73
+msgid ""
+"Whether, when a video VCD is inserted, gnome-volume-manager should run "
+"'autoplay_vcd_command'."
+msgstr ""
+"A ddylai gnome-volume-manager redeg 'autoplay_vcd_command' yn awtomatig pan "
+"fo VCD fideo newydd ei roi i mewn."
+
+#: ../gnome-volume-manager.schemas.in.h:74
+msgid ""
+"Whether, when an audio CD is inserted, gnome-volume-manager should run "
+"'autoplay_cda_command'."
+msgstr ""
+"A ddylai gnome-volume-manager redeg 'autoplay_cda_command' yn awtomatig pan "
+"fo CD sain newydd ei roi i mewn."
+
+#: ../gnome-volume-manager.schemas.in.h:75
+msgid ""
+"Whether, when an iPod is connected, gnome-volume-manager should run "
+"'autoipod_command'."
+msgstr ""
+"A ddylai gnome-volume-manager redeg 'autoipod_command' yn awtomatig pan fo "
+"iPod newydd gysylltu."
+
+#: ../gnome-volume-manager.schemas.in.h:76
+msgid "iPod sync command"
+msgstr "gorchymyn cysoni ag iPod"
+
+#: ../gnome-volume-manager.schemas.in.h:77
+msgid "keyboard command"
+msgstr "gorchymyn bysellfwrdd"
+
+#: ../gnome-volume-manager.schemas.in.h:78
+msgid "mouse command"
+msgstr "gorchymyn llygoden"
+
+#: ../gnome-volume-manager.schemas.in.h:79
+msgid "palm sync command"
+msgstr "gorchymyn cysoni â Palm"
+
+#: ../gnome-volume-manager.schemas.in.h:80
+msgid "printer command"
+msgstr "gorchymyn argraffydd"
+
+#: ../gnome-volume-manager.schemas.in.h:81
+msgid "scanner command"
+msgstr "gorchymyn sganiwr"
+
+#: ../gnome-volume-manager.schemas.in.h:82
+msgid "tablet command"
+msgstr "gorchymyn tabled"
+
+#: ../gnome-volume-manager.schemas.in.h:83
+msgid "video camera command"
+msgstr "gorchymyn camera fideo"
+
+#: ../gnome-volume-manager.desktop.in.h:1
+msgid "Volume Manager"
+msgstr "Rheolwr Cyfrolau"
+
+#: ../gnome-volume-manager.desktop.in.h:2
+msgid "Volume manager for removable drives and media"
+msgstr "Rheolwr cyfrolau ar gyfer gyriannau a disgiau a ellir eu tynnu"
+
+#: ../gnome-volume-properties.desktop.in.h:1
+msgid "Configure management of removable drives and media"
+msgstr "Cyflunio rheolaeth gyriannau a disgiau a ellir eu tynnu"
+
+#: ../gnome-volume-properties.desktop.in.h:2
+msgid "Removable Drives and Media"
+msgstr "Gyriannau a Disgiau A ellir eu Tynnu"
+
+#: ../gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: ../gnome-volume-properties.glade.h:2
+msgid "<b>Audio CD Discs</b>"
+msgstr "<b>Disgiau CD Sain</b>"
+
+#: ../gnome-volume-properties.glade.h:3
+msgid "<b>Blank CD and DVD Discs</b>"
+msgstr "<b>Disgiau CD a DVD Gwag</b>"
+
+#: ../gnome-volume-properties.glade.h:4
+msgid "<b>Digital Camera</b>"
+msgstr "<b>Camera Digidol</b>"
+
+#: ../gnome-volume-properties.glade.h:5
+msgid "<b>Digital Video Camera</b>"
+msgstr "<b>Camera Fideo Digidol</b>"
+
+#: ../gnome-volume-properties.glade.h:6
+msgid "<b>Keyboards</b>"
+msgstr "<b>Allweddellau</b>"
+
+#: ../gnome-volume-properties.glade.h:7
+msgid "<b>Mice</b>"
+msgstr "<b>Llygod</b>"
+
+#: ../gnome-volume-properties.glade.h:8
+msgid "<b>Palm™</b>"
+msgstr "<b>Palm™</b>"
+
+#: ../gnome-volume-properties.glade.h:9
+msgid "<b>PocketPC</b>"
+msgstr "<b>PocketPC</b>"
+
+#: ../gnome-volume-properties.glade.h:10
+msgid "<b>Portable Music Players</b>"
+msgstr "<b>Chwaraewyr Cerddoriaeth Cludadwy</b>"
+
+#: ../gnome-volume-properties.glade.h:11
+msgid "<b>Printers</b>"
+msgstr "<b>Argraffwyr</b>"
+
+#: ../gnome-volume-properties.glade.h:12
+msgid "<b>Removable Storage</b>"
+msgstr "<b>Modd Storio Ellir ei Dynnu</b>"
+
+#: ../gnome-volume-properties.glade.h:13
+msgid "<b>Scanners</b>"
+msgstr "<b>Sganwyr</b>"
+
+#: ../gnome-volume-properties.glade.h:14
+msgid "<b>Tablets</b>"
+msgstr "<b>Tabledi</b>"
+
+#: ../gnome-volume-properties.glade.h:15
+msgid "<b>Video DVD Discs</b>"
+msgstr "<b>Disgiau Fideo DVD</b>"
+
+#: ../gnome-volume-properties.glade.h:16
+msgid "Automatically run a program when a USB _keyboard is connected"
+msgstr "Rhedeg rhaglen yn awtomatig wrth i _allweddell USB gysylltu"
+
+#: ../gnome-volume-properties.glade.h:17
+msgid "Automatically run a program when a USB _mouse is connected"
+msgstr "Rhedeg rhaglen yn awtomatig wrth i _lygoden USB gysylltu"
+
+#: ../gnome-volume-properties.glade.h:18
+msgid "Automatically run a program when a _printer is connected"
+msgstr "Rhedeg rhaglen yn awtomatig wrth i _argraffydd gysylltu"
+
+#: ../gnome-volume-properties.glade.h:19
+msgid "Automatically run a program when a _scanner is connected"
+msgstr "Rhedeg rhaglen yn awtomatig wrth i _sganiwr gysylltu"
+
+#: ../gnome-volume-properties.glade.h:20
+msgid "Automatically run a program when a _tablet is connected"
+msgstr "Rhedeg rhaglen yn awtomatig wrth i _dabled gysylltu"
+
+#: ../gnome-volume-properties.glade.h:21
+msgid "Browse _removable media when inserted"
+msgstr "Pori _disgiau a ellir eu tynnu wrth iddynt gael eu rhoi i mewn"
+
+#: ../gnome-volume-properties.glade.h:22
+msgid "C_ommand:"
+msgstr "_Gorchymyn:"
+
+#: ../gnome-volume-properties.glade.h:23
+msgid "Cameras"
+msgstr "Camerâu"
+
+#: ../gnome-volume-properties.glade.h:24
+msgid "Comman_d:"
+msgstr "Gorchym_yn:"
+
+#: ../gnome-volume-properties.glade.h:25
+msgid "Command for A_udio CDs:"
+msgstr "Gorchymyn ar gyfer CDau _Sain:"
+
+#: ../gnome-volume-properties.glade.h:26
+msgid "Command for _Data CDs: "
+msgstr "Gorchymyn ar gyfer CDau _Data:"
+
+#: ../gnome-volume-properties.glade.h:27
+msgid "Drives and Media Preferences"
+msgstr "Hoffterau Gyriannau a Disgiau"
+
+#: ../gnome-volume-properties.glade.h:28
+msgid "Input Devices"
+msgstr "Dyfeisiau Mewnbwn"
+
+#: ../gnome-volume-properties.glade.h:29
+msgid "Mount removable media when _inserted"
+msgstr "Gosod disgiau a ellir eu _tynnu wrth iddynt gael eu rhoi i mewn"
+
+#: ../gnome-volume-properties.glade.h:30
+msgid "Multimedia"
+msgstr "Amlgyfrwng"
+
+#: ../gnome-volume-properties.glade.h:31
+msgid "PDAs"
+msgstr "PDAau"
+
+#: ../gnome-volume-properties.glade.h:32
+msgid "Play _audio CD discs when inserted"
+msgstr "Chwarae disgiau CD _sain wrth iddynt gael eu rhoi i mewn"
+
+#: ../gnome-volume-properties.glade.h:33
+msgid "Play _music files when connected"
+msgstr "Chwarae _ffeiliau cerddoriaeth wrth iddynt gysylltu"
+
+#: ../gnome-volume-properties.glade.h:34
+msgid "Play _video DVD disks when inserted"
+msgstr "Chwarae disgiau _fideo DVD wrth iddynt gael eu rhoi i mewn"
+
+#: ../gnome-volume-properties.glade.h:35
+msgid "Printers & Scanners"
+msgstr "Argraffwyr a Sganwyr"
+
+#: ../gnome-volume-properties.glade.h:36
+msgid "Removable Drives and Media Preferences"
+msgstr "Hoffterau Gyriannau a Disgiau a Ellir eu Tynnu"
+
+#: ../gnome-volume-properties.glade.h:37
+msgid "Select program to burn audio CDs"
+msgstr "Dewis rhaglen i losgi CDau sain"
+
+#: ../gnome-volume-properties.glade.h:38
+msgid "Select program to burn data CDs"
+msgstr "Dewis rhaglen i losgi CDau fideo"
+
+#: ../gnome-volume-properties.glade.h:39
+msgid "Select program to edit videos"
+msgstr "Dewis rhaglen i olygu fideos"
+
+#: ../gnome-volume-properties.glade.h:40
+msgid "Select program to import photos"
+msgstr "Dewis rhaglen i fewnforio ffotograffau"
+
+#: ../gnome-volume-properties.glade.h:41
+msgid "Select program to play DVDs"
+msgstr "Dewis rhaglen i chwarae DVDau"
+
+#: ../gnome-volume-properties.glade.h:42
+msgid "Select program to play audio CDs"
+msgstr "Dewis rhaglen i chwarae CDau sain"
+
+#: ../gnome-volume-properties.glade.h:43
+msgid "Select program to play music files"
+msgstr "Dewis rhaglen i chwarae ffeiliau cerddoriaeth"
+
+#: ../gnome-volume-properties.glade.h:44
+msgid "Select program to run when a keyboard is plugged in"
+msgstr "Dewis rhaglen i gychwyn pan fo allweddell wedi ei phlygio i mewn"
+
+#: ../gnome-volume-properties.glade.h:45
+msgid "Select program to run when a mouse is plugged in"
+msgstr "Dewis rhaglen i gychwyn pan fo llygoden wedi ei phlygio i mewn"
+
+#: ../gnome-volume-properties.glade.h:46
+msgid "Select program to run when a printer is plugged in"
+msgstr "Dewis rhaglen i gychwyn pan fo argraffydd wedi ei blygio i mewn"
+
+#: ../gnome-volume-properties.glade.h:47
+msgid "Select program to run when a scanner is plugged in"
+msgstr "Dewis rhaglen i gychwyn pan fo sganiwr wedi ei blygio i mewn"
+
+#: ../gnome-volume-properties.glade.h:48
+msgid "Select program to run when a tablet is plugged in"
+msgstr "Dewis rhaglen i gychwyn pan fo tabled wedi ei blygio i mewn"
+
+#: ../gnome-volume-properties.glade.h:49
+msgid "Select program to sync Palm devices"
+msgstr "Dewis rhaglen i gysoni dyfeisiau Palm"
+
+#: ../gnome-volume-properties.glade.h:50
+msgid "Storage"
+msgstr "Offer Storio"
+
+#: ../gnome-volume-properties.glade.h:51
+msgid "Sync PocketP_C devices when connected"
+msgstr "Cysoni dyfeisiau PocketP_C wrth iddyn nhw gysylltu"
+
+#: ../gnome-volume-properties.glade.h:52
+msgid "Sync _Palm™ devices when connected"
+msgstr "Cysoni dyfeisiau _Palm™ wrth iddyn nhw gysylltu"
+
+#: ../gnome-volume-properties.glade.h:53
+msgid "_Auto-run programs on new drives and media"
+msgstr "_Rhedeg rhaglenni yn awtomatig ar ddisgiau a gyriannau newydd"
+
+#: ../gnome-volume-properties.glade.h:54
+msgid "_Burn a CD or DVD when a blank disc is inserted"
+msgstr "_Llosgi CD neu DVD wrth i ddisg wag gael ei rhoi i mewn"
+
+#: ../gnome-volume-properties.glade.h:55
+msgid "_Command:"
+msgstr "_Gorchymyn:"
+
+#: ../gnome-volume-properties.glade.h:56
+msgid "_Edit video when connected"
+msgstr "_Golygu fideo wedi cysylltu"
+
+#: ../gnome-volume-properties.glade.h:57
+msgid "_Import digital photographs when connected"
+msgstr "_Mewnforio ffotograffau digidol wedi cysylltu"
+
+#: ../gnome-volume-properties.glade.h:58
+msgid "_Mount removable drives when hot-plugged"
+msgstr ""
+"_Gosod yn awtomatig y gyriannau a ellir eu tynnu a'u gosod tra fo'r system "
+"ymlaen"
+
+#: ../src/manager.c:205 ../src/manager.c:210 ../src/manager.c:215
+#: ../src/manager.c:221 ../src/manager.c:227 ../src/manager.c:233
+#: ../src/manager.c:239
+msgid "Ig_nore"
+msgstr "_Anwybyddu"
+
+#: ../src/manager.c:206
+msgid "_Allow Auto-Run"
+msgstr "_Caniatáu Rhedeg yn Awtomatig"
+
+#: ../src/manager.c:211 ../src/manager.c:217 ../src/manager.c:222
+msgid "Import _Photos"
+msgstr "Mewnforio _Ffotograffau"
+
+#: ../src/manager.c:216
+msgid "_Open Folder"
+msgstr "Agor _Plygell"
+
+#: ../src/manager.c:223
+msgid "Manage _Music"
+msgstr "Trefnu _Cerddoriaeth"
+
+#: ../src/manager.c:228
+msgid "_Browse Files"
+msgstr "_Pori Ffeiliau"
+
+#: ../src/manager.c:229
+msgid "_Play CD"
+msgstr "_Chwarae CD"
+
+#: ../src/manager.c:234
+msgid "Make _Audio CD"
+msgstr "Creu CD _Sain"
+
+#: ../src/manager.c:235
+msgid "Make _Data CD"
+msgstr "Creu CD _Data"
+
+#: ../src/manager.c:240
+msgid "Make _DVD"
+msgstr "Creu _DVD"
+
+#: ../src/manager.c:292
+msgid "Auto-Run Confirmation"
+msgstr "Cadarnhau Rhedeg Awtomatig"
+
+#: ../src/manager.c:293
+msgid "Auto-run capability detected."
+msgstr "Gallu i redeg yn awtomatig wedi ei ganfod."
+
+#: ../src/manager.c:294
+msgid "Would you like to allow <b>'${0}'</b> to run?"
+msgstr "Hoffech chi adael i <b>'${0}'</b> i redeg?"
+
+#: ../src/manager.c:299 ../src/manager.c:306
+msgid "Camera Import"
+msgstr "Mewnforio Camera"
+
+#: ../src/manager.c:300 ../src/manager.c:307
+msgid "A camera has been detected."
+msgstr "Mae camera wedi ei ganfod."
+
+#: ../src/manager.c:301 ../src/manager.c:308
+msgid ""
+"There are photos on the camera. Would you like to add these pictures to your "
+"album?"
+msgstr ""
+"Mae ffotograffau ar y camera hwn. Hoffech chi ychwanegu'r lluniau yma at "
+"eich albwm?"
+
+#: ../src/manager.c:302 ../src/manager.c:309 ../src/manager.c:316
+#: ../src/manager.c:323 ../src/manager.c:330
+msgid "_Always perform this action"
+msgstr "_Gwneud y weithred hon o hyd"
+
+#: ../src/manager.c:313
+msgid "Photo Import"
+msgstr "Mewnforio Ffotograffau"
+
+#: ../src/manager.c:314
+msgid "A photo card has been detected."
+msgstr "Mae cerdyn ffoto wedi ei ganfod."
+
+#: ../src/manager.c:315
+msgid ""
+"There are photos on the card. Would you like to add these pictures to your "
+"album?"
+msgstr ""
+"Mae ffotograffau ar y cerdyn hwn. Hoffech chi ychwanegu'r lluniau yma at "
+"eich albwm?"
+
+#: ../src/manager.c:320
+msgid "Photos and Music"
+msgstr "Lluniau a Cherddoriaeth"
+
+#: ../src/manager.c:321
+msgid "Photos were found on your music device."
+msgstr "Canfuwyd ffotograffau ar eich dyfais cerddoriaeth."
+
+#: ../src/manager.c:322
+msgid "Would you like to import the photos or manage its music?"
+msgstr "Hoffech chi fewnforio'r ffotograffau neu reoli ei gerddoriaeth?"
+
+#: ../src/manager.c:327
+msgid "Audio / Data CD"
+msgstr "CD Sain / Data"
+
+#: ../src/manager.c:328
+msgid "The CD in the drive contains both music and files."
+msgstr "Mae'r CD yn y gyriant yn cynnwys sain a ffeiliau."
+
+#: ../src/manager.c:329
+msgid "Would you like to listen to music or browse the files?"
+msgstr "Hoffech chi wrando ar gerddoriaeth neu bori'r ffeiliau?"
+
+#: ../src/manager.c:334 ../src/manager.c:341
+msgid "Choose Disc Type"
+msgstr "Dewiswch Fath y Ddisg"
+
+#: ../src/manager.c:335 ../src/manager.c:342
+msgid "You have inserted a blank disc."
+msgstr "Rydych chi wedi rhoi disg wag i mewn."
+
+#: ../src/manager.c:336 ../src/manager.c:343
+msgid "What would you like to do?"
+msgstr "Beth hoffech chi ei wneud?"
+
+#: ../src/manager.c:2840
+#, c-format
+msgid "%d%% of the disk space on %s is in use"
+msgstr "Mae %d%% o'r lle disg ar %s yn cael ei ddefnyddio"
+
+#: ../src/manager.c:2923
+msgid "Print version and exit"
+msgstr "Argraffu'r fersiwn a gorffen"
+
+#: ../src/manager.c:2925
+msgid "Run as a daemon"
+msgstr "Rhedeg fel ellyll"
+
+#: ../src/manager.c:2927
+msgid "Don't run as a daemon"
+msgstr "Peidio â rhedeg fel ellyll"
+
+#: ../src/manager.c:2929
+msgid "Run in secret mode"
+msgstr "Rhedeg yn y modd cyfrin"
+
+#: ../src/manager.c:2961
+#, c-format
+msgid "Unrecognized --daemon argument: %s\n"
+msgstr "Arg --daemon heb ei hadnabod: %s\n"
+
+#: ../src/properties.c:305
+msgid "Could not load the main interface"
+msgstr "Methu llwytho'r prif ryngwyneb"
+
+#: ../src/properties.c:307
+msgid "Please make sure that the volume manager is properly installed"
+msgstr "Gwnewch yn siŵr fod y rheolwr cyfrolau wedi ei osod yn gywir"
+
+#: ../src/properties.c:466
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr ""
+"Gwall wrth gychwyn ellyll gnome-volume-manager:\n"
+"%s"
+
+#: ../src/properties.c:497
+msgid "Volume management not supported"
+msgstr "Ni chynhelir rheoli cyfrolau"
+
+#: ../src/properties.c:499
+msgid ""
+"The \"hald\" service is required but not currently running. Enable the "
+"service and rerun this application, or contact your system administrator.\n"
+"\n"
+"Note: You need Linux kernel 2.6 for volume management to work."
+msgstr ""
+"Mae angen y gwasanaeth \"hald\", ond nid yw'n rhedeg ar hyn o bryd. "
+"Galluogwch y gwasanaeth, ac ail-gychwynnwch y rhaglen hon, neu cysylltwch â "
+"gweinyddwr eich system.\n"
+"\n"
+"Sylwer: Mae angen cnewyllyn Linux 2.6 arnoch er mwyn i reolaeth cyfrolau "
+"weithio."

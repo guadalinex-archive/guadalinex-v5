@@ -1,0 +1,283 @@
+# translation of gnome-volume-manager.HEAD.az.po to Azerbaijani
+# translation of gnome-volume-manager.HEAD.po to Azerbaijani
+# This file is distributed under the same license as the gnome-volume-manager package.
+# Copyright (C) 2004 Mətin Əmirov
+# Mətin Əmirov <metin@karegen.com>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-volume-manager.HEAD.az\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-08-16 11:48+0200\n"
+"PO-Revision-Date: 2004-08-18 20:26+0300\n"
+"Last-Translator: Mətin Əmirov <metin@karegen.com>\n"
+"Language-Team: Azerbaijani <translation-team-az@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.3.1\n"
+
+#: gnome-volume-manager.schemas.in.h:1
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr ""
+"autorun icraçılarının və skriptlərinin axtarılacağı ':' ilə ayrılmış cığır "
+"siyahısı."
+
+#: gnome-volume-manager.schemas.in.h:2
+msgid "Automount removable drives"
+msgstr "Çıxarıla bilən avadanlıqları avtomatik bağla"
+
+#: gnome-volume-manager.schemas.in.h:3
+msgid "Automount removable media"
+msgstr "Çıxarıla bilən medianı avtomatik bağla"
+
+#: gnome-volume-manager.schemas.in.h:4
+msgid "Autorun nautilus"
+msgstr "Nautilus-u avtomatik başlat"
+
+#: gnome-volume-manager.schemas.in.h:5
+msgid "Autorun path"
+msgstr "Autorun cığırı"
+
+#: gnome-volume-manager.schemas.in.h:6
+msgid "CD burn command"
+msgstr "CD yazma əmri"
+
+#: gnome-volume-manager.schemas.in.h:7
+msgid "CD play command"
+msgstr "CD çalma əmri"
+
+#: gnome-volume-manager.schemas.in.h:8
+msgid ""
+"Command to run when a digital camera is connected or media from a digital "
+"camera is inserted."
+msgstr ""
+"Digital kamera ya da onun mediası kompüterə daxil edildiyində icra "
+"ediləcək əmr."
+
+#: gnome-volume-manager.schemas.in.h:9
+msgid "Command to run when a video DVD is inserted."
+msgstr "Kompüterə DVD daxil edildiyində icra ediləcək əmr."
+
+#: gnome-volume-manager.schemas.in.h:10
+msgid "Command to run when an audio CD is inserted."
+msgstr "Kompüterə audio CD daxil edildiyində icra ediləcək əmr."
+
+#: gnome-volume-manager.schemas.in.h:11
+msgid "Command to run when an empty CD is inserted."
+msgstr "Kompüterə boş CD daxil edildiyində icra ediləcək əmr."
+
+#: gnome-volume-manager.schemas.in.h:12
+msgid "Command to run when the eject button on a optical drive is pressed."
+msgstr "Optik sürücünün çıxart düyməsi basıldığında icra ediləcək əmr."
+
+#: gnome-volume-manager.schemas.in.h:13
+msgid "DVD play command"
+msgstr "DVD çalma əmri"
+
+#: gnome-volume-manager.schemas.in.h:14
+msgid "Eject command"
+msgstr "Çıxart əmri"
+
+#: gnome-volume-manager.schemas.in.h:15
+msgid "Open nautilus on removeable media insert."
+msgstr "Çıxarıla bilən media daxil edildiyində nautilus-u aç"
+
+#: gnome-volume-manager.schemas.in.h:16
+msgid "Perform autorun"
+msgstr "Autorun-ı işə sal"
+
+#: gnome-volume-manager.schemas.in.h:17
+msgid "Photo management command"
+msgstr "Foto idarə proqramı"
+
+#: gnome-volume-manager.schemas.in.h:18
+msgid "Play inserted audio CD's"
+msgstr "Daxil edilən audio CD-ləri çal"
+
+#: gnome-volume-manager.schemas.in.h:19
+msgid "Play inserted video DVDs"
+msgstr "Daxil edilən video DVD-ləri çal"
+
+#: gnome-volume-manager.schemas.in.h:20
+msgid "Run CD burn command"
+msgstr "CD Yazma əmrini icra et"
+
+#: gnome-volume-manager.schemas.in.h:21
+msgid "Run photo management command"
+msgstr "Foto idarə proqramını icra et"
+
+#: gnome-volume-manager.schemas.in.h:22
+msgid ""
+"Whether autorun programs (binaries and scripts located in 'autorun_path') "
+"are run on newly mounted media."
+msgstr ""
+"Whether autorun programs (binaries and scripts located in 'autorun_path') "
+"are run on newly mounted media."
+
+#: gnome-volume-manager.schemas.in.h:23
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"drives when they are inserted."
+msgstr ""
+"Çıxarıla bilən yaddaş sürücülərinin gnome-volume-manager tərəfindən "
+"avtomatik bağlanması."
+
+#: gnome-volume-manager.schemas.in.h:24
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"media when they are inserted."
+msgstr ""
+"Çıxarıla bilən yaddaş mediasının gnome-volume-manager tərəfindən avtomatik "
+"bağlanması."
+
+#: gnome-volume-manager.schemas.in.h:25
+msgid ""
+"Whether, when a blank CD is inserted, gnome-volume-manager should run "
+"'autoburn_cdr_command'."
+msgstr ""
+"Whether, when a blank CD is inserted, gnome-volume-manager should run "
+"'autoburn_cdr_command'."
+
+#: gnome-volume-manager.schemas.in.h:26
+msgid ""
+"Whether, when a digital camera is connected or media from a digital camera "
+"is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr ""
+"Whether, when a digital camera is connected or media from a digital camera "
+"is inserted, gnome-volume-manager should run 'autophoto_command'."
+
+#: gnome-volume-manager.schemas.in.h:27
+msgid ""
+"Whether, when a video DVD is inserted, gnome-volume-manager should run "
+"'autoplay_dvd_command'."
+msgstr ""
+"Whether, when a video DVD is inserted, gnome-volume-manager should run "
+"'autoplay_dvd_command'."
+
+#: gnome-volume-manager.schemas.in.h:28
+msgid ""
+"Whether, when an audio CD is inserted, gnome-volume-manager should run "
+"'autoplay_cda_command'."
+msgstr ""
+"Whether, when an audio CD is inserted, gnome-volume-manager should run "
+"'autoplay_cda_command'."
+
+#: gnome-volume-properties.desktop.in.h:1
+msgid "Configure Management of Removable Devices"
+msgstr "Çıxarıla Bilən Avadanlıqların İdarəsini Quraşdır"
+
+#: gnome-volume-properties.desktop.in.h:2
+msgid "Removable Storage"
+msgstr "Çıxarıla Bilən Yaddaş"
+
+#: gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: gnome-volume-properties.glade.h:2
+msgid " Perform action on _blank CDs when inserted"
+msgstr "Daxil edildiyində _boş CD-lər üçün həyata keçiriləcək gedişat"
+
+#: gnome-volume-properties.glade.h:3
+msgid "*"
+msgstr "*"
+
+#: gnome-volume-properties.glade.h:4
+msgid "<b>Audio CDs</b>"
+msgstr "<b>Audio CD-lər</b>"
+
+#: gnome-volume-properties.glade.h:5
+msgid "<b>Blank CDs</b>"
+msgstr "<b>Boş CD-lər</b>"
+
+#: gnome-volume-properties.glade.h:6
+msgid "<b>DVD Videos</b>"
+msgstr "<b>DVD Videoları</b>"
+
+#: gnome-volume-properties.glade.h:7
+msgid "<b>Digital Camera</b>"
+msgstr "<b>Digital Kamera</b>"
+
+#: gnome-volume-properties.glade.h:8
+msgid "<b>Removable Storage</b>"
+msgstr "<b>Çıxarıla Bilən Yaddaş</b>"
+
+#: gnome-volume-properties.glade.h:9
+msgid "Browse _removable media when inserted"
+msgstr "_Daxil edildiyində çıxarıla bilən medianı gəz"
+
+#: gnome-volume-properties.glade.h:10
+msgid "Command:"
+msgstr "Əmr:"
+
+#: gnome-volume-properties.glade.h:11
+msgid "Drives and Media Preferences"
+msgstr "Sürücülər və Media Seçimləri"
+
+#: gnome-volume-properties.glade.h:12
+msgid "Import digital _photo albums when connected"
+msgstr "Bağlananda digital _rəsim albomlarını idxal et"
+
+#: gnome-volume-properties.glade.h:13
+msgid "Mount removable media when _inserted"
+msgstr "_Daxil edildiyində çıxarıla bilən medianı bağla"
+
+#: gnome-volume-properties.glade.h:14
+msgid "Play DVD Videos when inserted"
+msgstr "Daxil edildiyində DVD Videolarını oxut"
+
+#: gnome-volume-properties.glade.h:15
+msgid "Play _DVD Videos when inserted"
+msgstr "Daxil edildiyində _DVD Videolarını oxut"
+
+#: gnome-volume-properties.glade.h:16
+msgid "Play a_udio CDs when inserted"
+msgstr "Daxil edildiyində a_udio CD-lərini oxut"
+
+#: gnome-volume-properties.glade.h:17
+msgid "Play audio CDs when inserted"
+msgstr "Daxil edildiyində audio CD-lərini oxut"
+
+#: gnome-volume-properties.glade.h:18
+msgid "_Auto-run programs on new drives and media"
+msgstr "Yeni sürücü və media üstündəki _auto-run proqramları"
+
+#: gnome-volume-properties.glade.h:19
+msgid "_Mount removable drives when hot-plugged"
+msgstr "Çıxarıla bilən sürücüləri taxıldığında _bağla"
+
+#: src/manager.c:199
+#, c-format
+msgid "Do you want to run %s?"
+msgstr "%s proqramını işə salmaq istəyirsiniz?"
+
+#: src/manager.c:287
+msgid "_Import"
+msgstr "_İdxal Et"
+
+#: src/manager.c:444
+msgid "_Play"
+msgstr "Ç_al"
+
+#: src/manager.c:445
+msgid "_Browse"
+msgstr "_Gəz"
+
+#: src/properties.c:187
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr ""
+"gnome-volume-manager demonu başladıla bilmədi:\n"
+"%s"
+
+#: src/properties.c:400
+msgid "Could not load the main interface"
+msgstr "Əsas ara üz yüklənə bilmədi"
+
+#: src/properties.c:402
+msgid "Please make sure that the volume manager is properly installed"
+msgstr "Xahiş edirik volume manager təminatının düzgün qurulduğunu yoxlayın"
+

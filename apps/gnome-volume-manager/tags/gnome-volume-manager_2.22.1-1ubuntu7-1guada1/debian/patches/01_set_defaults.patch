@@ -1,0 +1,84 @@
+diff -Nur -x '*.orig' -x '*~' gnome-volume-manager-2.22.1/gnome-volume-manager.schemas.in gnome-volume-manager-2.22.1.new/gnome-volume-manager.schemas.in
+--- gnome-volume-manager-2.22.1/gnome-volume-manager.schemas.in	2008-04-15 09:57:47.000000000 +0200
++++ gnome-volume-manager-2.22.1.new/gnome-volume-manager.schemas.in	2008-04-15 09:58:09.000000000 +0200
+@@ -109,7 +109,7 @@
+         <key>/schemas/desktop/gnome/volume_manager/autoplay_cda_command</key>
+ 	<applyto>/desktop/gnome/volume_manager/autoplay_cda_command</applyto>
+ 	<type>string</type>
+-	<default>gnome-cd --unique --play --device=%d</default>
++	<default>sound-juicer -d %d</default>
+ 	<locale name="C">
+ 	  <short>CD play command</short>
+ 	  <long>Command to run when an audio CD is inserted.</long>
+@@ -120,7 +120,7 @@
+         <key>/schemas/desktop/gnome/volume_manager/autoburn</key>
+ 	<applyto>/desktop/gnome/volume_manager/autoburn</applyto>
+ 	<type>bool</type>
+-	<default>false</default>
++	<default>true</default>
+ 	<locale name="C">
+ 	  <short>Run a program to burn CDs/DVDs</short>
+ 	  <long>Whether, when a blank CD or DVD is inserted, gnome-volume-manager
+@@ -132,7 +132,7 @@
+         <key>/schemas/desktop/gnome/volume_manager/autoburn_audio_cd_command</key>
+ 	<applyto>/desktop/gnome/volume_manager/autoburn_audio_cd_command</applyto>
+ 	<type>string</type>
+-	<default>nautilus --no-desktop burn:</default>
++	<default>brasero -a</default>
+ 	<locale name="C">
+ 	  <short>Audio CD burn command</short>
+ 	  <long>Command to run when the user wishes to burn an Audio CD.</long>
+@@ -200,7 +200,7 @@
+         <key>/schemas/desktop/gnome/volume_manager/autophoto</key>
+ 	<applyto>/desktop/gnome/volume_manager/autophoto</applyto>
+ 	<type>bool</type>
+-	<default>false</default>
++	<default>true</default>
+ 	<locale name="C">
+ 	  <short>Run photo management command</short>
+ 	  <long>Whether, when a digital camera is connected or media from a
+@@ -213,7 +213,7 @@
+         <key>/schemas/desktop/gnome/volume_manager/autophoto_command</key>
+ 	<applyto>/desktop/gnome/volume_manager/autophoto_command</applyto>
+ 	<type>string</type>
+-	<default></default>
++	<default>f-spot-import</default>
+ 	<locale name="C">
+ 	  <short>Photo management command</short>
+ 	  <long>Command to run when a digital camera is connected or media 
+@@ -225,7 +225,7 @@
+         <key>/schemas/desktop/gnome/volume_manager/autoipod</key>
+ 	<applyto>/desktop/gnome/volume_manager/autoipod</applyto>
+ 	<type>bool</type>
+-	<default>false</default>
++	<default>true</default>
+ 	<locale name="C">
+ 	  <short>Run iPod program</short>
+ 	  <long>Whether, when an iPod is connected, gnome-volume-manager should run
+@@ -237,7 +237,7 @@
+         <key>/schemas/desktop/gnome/volume_manager/autoipod_command</key>
+ 	<applyto>/desktop/gnome/volume_manager/autoipod_command</applyto>
+ 	<type>string</type>
+-	<default></default>
++	<default>rhythmbox</default>
+ 	<locale name="C">
+ 	  <short>iPod sync command</short>
+ 	  <long>Command to run when an iPod is connected.</long>
+@@ -260,7 +260,7 @@
+         <key>/schemas/desktop/gnome/volume_manager/autoprinter_command</key>
+ 	<applyto>/desktop/gnome/volume_manager/autoprinter_command</applyto>
+ 	<type>string</type>
+-	<default>gnome-printer-add hal://%h</default>
++	<default></default>
+ 	<locale name="C">
+ 	  <short>printer command</short>
+ 	  <long>Command to run when a printer is connected.</long>
+@@ -283,7 +283,7 @@
+         <key>/schemas/desktop/gnome/volume_manager/autoscanner_command</key>
+ 	<applyto>/desktop/gnome/volume_manager/autoscanner_command</applyto>
+ 	<type>string</type>
+-	<default></default>
++	<default>xsane</default>
+ 	<locale name="C">
+ 	  <short>scanner command</short>
+ 	  <long>Command to run when a scanner is connected.</long>

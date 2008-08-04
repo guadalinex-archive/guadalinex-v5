@@ -1,0 +1,75 @@
+diff -Nur gnome-volume-manager-2.17.0/src/manager.c gnome-volume-manager-2.17.0.new/src/manager.c
+--- gnome-volume-manager-2.17.0/src/manager.c	2006-11-15 16:40:34.000000000 -0800
++++ gnome-volume-manager-2.17.0.new/src/manager.c	2006-11-15 16:41:57.000000000 -0800
+@@ -2558,6 +2558,53 @@
+ 	libhal_free_string_array (capabilities);
+ }
+ 
++/** Check whether the device isn't existing any more (i. e. the
++ * user ripped it out without unmounting) 
++ */
++static void
++gvm_check_unclean_unmount (const char* udi)
++{
++	const char* device;
++	NotifyNotification *n;
++	GSList *l, *next;
++	gboolean mounted = FALSE;
++
++	/* check if device was mounted */
++	for (l = mounted_volumes; l != NULL; l = l->next)
++		if (strcmp (udi, (const char *) l->data) == 0) {
++			mounted = TRUE;
++			break;
++		}
++
++	if (!mounted)
++		return;
++
++	device = libhal_device_get_property_string(hal_ctx, udi, "block.device", NULL);
++	
++	if (!device || access (device, F_OK) != 0) {
++		dbg ("Unmounted URI's device %s does not exist any more, it was ripped out without proper unmounting\n", udi);
++		n = notify_notification_new (_("Unsafe device removal"), 
++		    _("To avoid serious data loss, disable removable \
++drives with the \"Eject\" option in the drive icon's context menu on the \
++desktop, Computer place, or drive applet."),
++		    "gnome-dev-removable-usb", NULL);
++		notify_notification_set_timeout (n, 20000);
++		notify_notification_show (n, NULL);
++		g_object_unref (n);
++	} 
++
++	/* remove device from mount queue */
++	for (l = mounted_volumes; l != NULL; l = next) {
++	        next = l->next;
++	        if (strcmp (udi, (const char *) l->data) == 0) {
++	                dbg("Removing ripped out %s from mounted list\n", udi);
++	                g_free (l->data);
++	                mounted_volumes = g_slist_delete_link (mounted_volumes, l);
++	                break;
++	        }
++	}
++}
++
+ /** Invoked when a device is removed from the Global Device List. 
+  *
+  *  @param  ctx                 LibHal context
+@@ -2571,6 +2618,8 @@
+ 	
+ 	dbg ("Device removed: %s\n", udi);
+ 	
++ 	gvm_check_unclean_unmount (udi);
++
+ 	if ((dialog = g_hash_table_lookup (dialogs, udi)))
+ 		gtk_dialog_response (dialog, GTK_RESPONSE_CANCEL);
+ }
+@@ -2648,6 +2697,8 @@
+ #endif
+ 	} else {
+ 		dbg ("Unmounted: %s\n", udi);
++
++		gvm_check_unclean_unmount (udi);
+ 		
+ #ifdef ENABLE_NOTIFY
+ 		/* remove the udi from the statfs_mounts list */

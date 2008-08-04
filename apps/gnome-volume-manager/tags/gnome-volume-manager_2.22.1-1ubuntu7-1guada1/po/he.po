@@ -1,0 +1,879 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-06-16 21:35+0200\n"
+"PO-Revision-Date: 2005-06-13 19:56+0200\n"
+"Last-Translator: Omri Strumza <blueomega@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Hebrew\n"
+"X-Poedit-Country: ISRAEL\n"
+"X-Poedit-SourceCharset: iso-8859-8\n"
+
+#: ../gnome-volume-manager.schemas.in.h:1
+msgid "\"Always take this action\" checkbox for Autorun"
+msgstr "\"תמיד בחר בפעולה זו\" תיבת סימון להרצה אוטומטית"
+
+#: ../gnome-volume-manager.schemas.in.h:2
+msgid "\"Always take this action\" checkbox for iPod Photos"
+msgstr "\"תמיד בחר בפעולה זו\" תיבת סימון לתמונות אייפוד"
+
+#: ../gnome-volume-manager.schemas.in.h:3
+msgid "\"Always take this action\" checkbox for mixed Audio and Data CDs"
+msgstr "תמיד בחר בפעולה זו\" תיבת סימון לתקליטורי מוזיקה ונתונים מעורבים"
+
+#: ../gnome-volume-manager.schemas.in.h:4
+msgid "\"Always take this action\" checkbox for photo import from a camera"
+msgstr "\"תמיד בחר בפעולה זו\" תיבת סימון לתמונה מיובאת ממצלמה"
+
+#: ../gnome-volume-manager.schemas.in.h:5
+msgid "\"Always take this action\" checkbox for photo import from a device"
+msgstr "\"תמיד בחר בפעולה זו\" תיבת סימון לתמונה מיובאת מהתקן"
+
+#: ../gnome-volume-manager.schemas.in.h:6
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr ""
+"':' קביעת גבולות הנתיבים לבדיקה בשביל קבצים בינארים הרצים אוטומטית וסקריפטים."
+
+#: ../gnome-volume-manager.schemas.in.h:7
+msgid "Action to take when a camera is plugged in."
+msgstr "פעולה לביצוע כאשר מצלמה מחוברת"
+
+#: ../gnome-volume-manager.schemas.in.h:8
+msgid "Action to take when a device containing photos is encountered."
+msgstr "פעולה לביצוע כאשר התקן המכיל תמונות מזוהה."
+
+#: ../gnome-volume-manager.schemas.in.h:9
+msgid "Action to take when a device contains an autorun program/script."
+msgstr "פעולה לביצוע כאשר התקן מכיר תוכנה/סקריפט להרצה אוטומטית"
+
+#: ../gnome-volume-manager.schemas.in.h:10
+msgid "Action to take when a mixed Audio and Data CD is encountered."
+msgstr "פעולה לביצוע כאשר תקליטור המכיל אודיו ונתונים מזוהה."
+
+#: ../gnome-volume-manager.schemas.in.h:11
+msgid "Action to take when an iPod Photo is encountered."
+msgstr "פעולה לביצוע כאשר iPod Photo מזוהה."
+
+#: ../gnome-volume-manager.schemas.in.h:12
+msgid "Audio CD burn command"
+msgstr "פקודה לצריבת תקליטור אודיו"
+
+#: ../gnome-volume-manager.schemas.in.h:13
+msgid "Automount removable drives"
+msgstr "עיגון אוטומטי של כוננים נשלפים"
+
+#: ../gnome-volume-manager.schemas.in.h:14
+msgid "Automount removable media"
+msgstr "עיגון אוטומטי של מדיה נשלפת"
+
+#: ../gnome-volume-manager.schemas.in.h:15
+msgid "Autorun nautilus"
+msgstr "הרץ נאוטילוס אוטומטית"
+
+#: ../gnome-volume-manager.schemas.in.h:16
+msgid "Autorun path"
+msgstr "הרץ נתיב אוטומטית"
+
+#: ../gnome-volume-manager.schemas.in.h:17
+msgid "CD play command"
+msgstr "פקודת השמעת תקליטור"
+
+#: ../gnome-volume-manager.schemas.in.h:18
+msgid "Command to run when a Palm is connected."
+msgstr "פקודה להרצה כאשר פאלם מחובר"
+
+#: ../gnome-volume-manager.schemas.in.h:19
+msgid "Command to run when a PocketPC is connected."
+msgstr "פקודה להרצה כאשר פוקט-פיסי מחוברת"
+
+#: ../gnome-volume-manager.schemas.in.h:20
+msgid ""
+"Command to run when a digital camera is connected or media from a digital "
+"camera is inserted."
+msgstr ""
+"פקודה להרצה כאשר מצלמה דיגיטלית התחברה או כאשר מדיה ממצלמה דיגיטלית הוכנסה."
+
+#: ../gnome-volume-manager.schemas.in.h:21
+msgid "Command to run when a keyboard is connected."
+msgstr "פקודה להרצה כאשר מקלדת מחוברת"
+
+#: ../gnome-volume-manager.schemas.in.h:22
+msgid "Command to run when a mouse is connected."
+msgstr "פקודה להרצה כאשר עכבר מחובר"
+
+#: ../gnome-volume-manager.schemas.in.h:23
+msgid "Command to run when a printer is connected."
+msgstr "פקודה להרצה כאשר מדפסת מחוברת"
+
+#: ../gnome-volume-manager.schemas.in.h:24
+msgid "Command to run when a scanner is connected."
+msgstr "פקודה להרצה כאשר סורק מחובר"
+
+#: ../gnome-volume-manager.schemas.in.h:25
+msgid "Command to run when a tablet is connected."
+msgstr "פקודה להרצה כאשר טאבלט מחובר"
+
+#: ../gnome-volume-manager.schemas.in.h:26
+msgid "Command to run when a video DVD is inserted."
+msgstr "פקודה להרצה כאשר וידאו DVD הוכנס."
+
+#: ../gnome-volume-manager.schemas.in.h:27
+msgid "Command to run when a video VCD is inserted."
+msgstr "פקודה להרצה כאשר וידאו VCD הוכנס."
+
+#: ../gnome-volume-manager.schemas.in.h:28
+msgid "Command to run when a video camera is connected."
+msgstr "פקודה להרצה כאשר מצלמת וידאו מחוברת"
+
+#: ../gnome-volume-manager.schemas.in.h:29
+msgid "Command to run when an audio CD is inserted."
+msgstr "פקודה להרצה כאשר תקליטור שמע הוכנס."
+
+#: ../gnome-volume-manager.schemas.in.h:30
+msgid "Command to run when an iPod is connected."
+msgstr "פקודה להרצה כאשר מכשיר iPod מחובר."
+
+#: ../gnome-volume-manager.schemas.in.h:31
+msgid "Command to run when the user wishes to burn a Data CD."
+msgstr "פקודה להרצה כאשר המשתמש מעוניין לצרוב תקליטור נתונים."
+
+#: ../gnome-volume-manager.schemas.in.h:32
+msgid "Command to run when the user wishes to burn an Audio CD."
+msgstr "פקודה להרצה כאשר המשתמש מעוניין לצרוב תקליטור אודיו."
+
+#: ../gnome-volume-manager.schemas.in.h:33
+msgid "DVD play command"
+msgstr "פקודת ניגון DVD"
+
+#: ../gnome-volume-manager.schemas.in.h:34
+msgid "Data CD burn command"
+msgstr "פקודה לצריבת תקליטור נתונים"
+
+#: ../gnome-volume-manager.schemas.in.h:35
+msgid "Low Disk Space notification threshold"
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:36
+msgid "Open nautilus on removeable media insert."
+msgstr "פתח נאוטילוס כאשר מדיה נשלפת הוכנסה."
+
+#: ../gnome-volume-manager.schemas.in.h:37
+msgid "Perform autorun"
+msgstr "בצע הפעלה אוטומטית"
+
+#: ../gnome-volume-manager.schemas.in.h:38
+msgid "Photo management command"
+msgstr "פקודת ניהול תמונות"
+
+#: ../gnome-volume-manager.schemas.in.h:39
+msgid "Play inserted audio CD's"
+msgstr "נגן תקליטורי שמע שהוכנסו"
+
+#: ../gnome-volume-manager.schemas.in.h:40
+msgid "Play inserted video DVDs"
+msgstr "נגן תקליטורי וידאו DVD שהוכנסו"
+
+#: ../gnome-volume-manager.schemas.in.h:41
+msgid "Play inserted video VCDs"
+msgstr "נגן תקליטור וידאו VCD שהוכנס"
+
+#: ../gnome-volume-manager.schemas.in.h:42
+msgid "Run Palm-sync program"
+msgstr "הרץ תוכנת Palm-sync"
+
+#: ../gnome-volume-manager.schemas.in.h:43
+msgid "Run PocketPC-sync program"
+msgstr "הרץ תוכנת PocketPC-sync"
+
+#: ../gnome-volume-manager.schemas.in.h:44
+msgid "Run a program to burn CDs/DVDs"
+msgstr "הרץ תוכנת לצריבת CD/DVD"
+
+#: ../gnome-volume-manager.schemas.in.h:45
+msgid "Run iPod program"
+msgstr "הרץ תוכנת iPod"
+
+#: ../gnome-volume-manager.schemas.in.h:46
+msgid "Run keyboard program"
+msgstr "הרץ תוכנת מקלדת"
+
+#: ../gnome-volume-manager.schemas.in.h:47
+msgid "Run mouse program"
+msgstr "הרץ תוכנת עכבר"
+
+#: ../gnome-volume-manager.schemas.in.h:48
+msgid "Run photo management command"
+msgstr "הרץ פקודת ניהול התמונות"
+
+#: ../gnome-volume-manager.schemas.in.h:49
+msgid "Run printer program"
+msgstr "הרץ תוכנת מדפסת"
+
+#: ../gnome-volume-manager.schemas.in.h:50
+msgid "Run scanner program"
+msgstr "הרץ תוכנת סורק"
+
+#: ../gnome-volume-manager.schemas.in.h:51
+msgid "Run tablet program"
+msgstr "הרץ תוכנת טאבלט"
+
+#: ../gnome-volume-manager.schemas.in.h:52
+msgid "Run video editing program"
+msgstr "הרץ תוכנת עריכת וידאו"
+
+#: ../gnome-volume-manager.schemas.in.h:53
+msgid ""
+"The threshold value for whether or not to toggle the notification on, based "
+"on the amount of additional space used since the last check."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:54
+msgid "Threshold for notification of increased disk usage"
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:55
+msgid "Threshold percentage for notifying the user of low disk space."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:56
+msgid "VCD play command"
+msgstr "פקודת הפעלת VCD"
+
+#: ../gnome-volume-manager.schemas.in.h:57
+msgid ""
+"Whether autorun programs (binaries and scripts located in 'autorun_path') "
+"are run on newly mounted media."
+msgstr ""
+"האם תכנות הרצה אוטומטית (בינריים או סקריפטים הממוקמים ב'autorun_path') ירוצו "
+"על מדיה מעוגנות חדשה?"
+
+#: ../gnome-volume-manager.schemas.in.h:58
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"drives when they are inserted."
+msgstr ""
+"האם gnome-volume-manager צריך לעגן אוטומטית את כונני אחסון נשלפים כאשר הם "
+"מוכנסים?"
+
+#: ../gnome-volume-manager.schemas.in.h:59
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"media when they are inserted."
+msgstr ""
+"האם gnome-volume-manager צריך לעגן אוטומטית את מדיה האחסון הנשלפת כאשר הם "
+"מוכנסת?"
+
+#: ../gnome-volume-manager.schemas.in.h:60
+#, fuzzy
+msgid ""
+"Whether, when a Palm is connected, gnome-volume-manager should run "
+"'autopalmsync_command'."
+msgstr ""
+"האם כאשר תקליטור שמע מוכנס אז gnome-volume-manager צריך להריץ "
+"'autoplay_cda_command'?"
+
+#: ../gnome-volume-manager.schemas.in.h:61
+#, fuzzy
+msgid ""
+"Whether, when a PocketPC is connected, gnome-volume-manager should run "
+"'autopocketpc_command'."
+msgstr ""
+"האם כאשר תקליטור שמע מוכנס אז gnome-volume-manager צריך להריץ "
+"'autoplay_cda_command'?"
+
+#: ../gnome-volume-manager.schemas.in.h:62
+#, fuzzy
+msgid ""
+"Whether, when a blank CD or DVD is inserted, gnome-volume-manager should run "
+"one of the autoburn commands."
+msgstr ""
+"האם, כאשר CD או DVD ריק הוכנס, gnome-volume-manager יריץ אחד מפקודות הצריבה "
+"האוטומטיות."
+
+#: ../gnome-volume-manager.schemas.in.h:63
+msgid ""
+"Whether, when a digital camera is connected or media from a digital camera "
+"is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr ""
+"האם כאשר מצלמה דיגיטלית מתחברת או מדיה במצלמה דיגיטלית מוכנסת אז gnome-"
+"volume-manager צריך להריץ 'autophoto_command'?"
+
+#: ../gnome-volume-manager.schemas.in.h:64
+msgid ""
+"Whether, when a digital video camera is connected, gnome-volume-manager "
+"should run 'autovideocam_command'."
+msgstr ""
+"האם, כאשר מצלמת וידאו דיגיטלית מחוברת, gnome-volume-manager יריץ "
+"'autovideocam_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:65
+msgid ""
+"Whether, when a keyboard is connected, gnome-volume-manager should run "
+"'autokeyboard_command'."
+msgstr ""
+"האם, כאשר מקלדת מחוברת, gnome-volume-manager יריץ 'autokeyboard_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:66
+msgid ""
+"Whether, when a mouse is connected, gnome-volume-manager should run "
+"'automouse_command'."
+msgstr ""
+"האם,כאשר עכבר מחובר, gnome-volume-manager יריץ 'automouse_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:67
+msgid ""
+"Whether, when a printer is connected, gnome-volume-manager should run "
+"'autoprinter_command'."
+msgstr ""
+"האם, כאשר מדפסת מחוברת, gnome-volume-manager יריץ את 'autoprinter_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:68
+msgid ""
+"Whether, when a scanner is connected, gnome-volume-manager should run "
+"'autoscanner_command'."
+msgstr ""
+"האם, כאשר סורק מחובר, gnome-volume-manager יריץ את 'autoscanner_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:69
+#, fuzzy
+msgid ""
+"Whether, when a tablet is connected, gnome-volume-manager should run "
+"'autotablet_command'."
+msgstr ""
+"האם כאשר תקליטור ריק נכנס לכונן gnome-volume-manager צריך להריץ "
+"'autoburn_cdr_command'?"
+
+#: ../gnome-volume-manager.schemas.in.h:70
+msgid ""
+"Whether, when a video DVD is inserted, gnome-volume-manager should run "
+"'autoplay_dvd_command'."
+msgstr ""
+"האם כאשר תקליטור וידאו DVD מוכנס אז gnome-volume-manager צריך להריץ "
+"'autoplay_dvd_command'?"
+
+#: ../gnome-volume-manager.schemas.in.h:71
+msgid ""
+"Whether, when a video VCD is inserted, gnome-volume-manager should run "
+"'autoplay_vcd_command'."
+msgstr ""
+"האם, כאשר תקליטור וידאו VCD מוכנס, gnome-volume-manager יריץ את "
+"'autoplay_vcd_command'."
+
+
+#: ../gnome-volume-manager.schemas.in.h:72
+msgid ""
+"Whether, when an audio CD is inserted, gnome-volume-manager should run "
+"'autoplay_cda_command'."
+msgstr ""
+"האם כאשר תקליטור שמע מוכנס אז gnome-volume-manager צריך להריץ "
+"'autoplay_cda_command'?"
+
+#: ../gnome-volume-manager.schemas.in.h:73
+msgid ""
+"Whether, when an iPod is connected, gnome-volume-manager should run "
+"'autoipod_command'."
+msgstr ""
+"האם, כאשר iPod מחובר, gnome-volume-manager יריץ את 'autoipod_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:74
+msgid "iPod sync command"
+msgstr "פקודת סנכרון iPod"
+
+#: ../gnome-volume-manager.schemas.in.h:75
+msgid "keyboard command"
+msgstr "פקודת מקלדת"
+
+#: ../gnome-volume-manager.schemas.in.h:76
+msgid "mouse command"
+msgstr "פקודת עכבר"
+
+#: ../gnome-volume-manager.schemas.in.h:77
+msgid "palm sync command"
+msgstr "פקודת סינכרון פאלם"
+
+#: ../gnome-volume-manager.schemas.in.h:78
+msgid "printer command"
+msgstr "פקודת מדפסת"
+
+#: ../gnome-volume-manager.schemas.in.h:79
+msgid "scanner command"
+msgstr "פקודת סורק"
+
+#: ../gnome-volume-manager.schemas.in.h:80
+msgid "tablet command"
+msgstr "פקודת טאבלט"
+
+#: ../gnome-volume-manager.schemas.in.h:81
+msgid "video camera command"
+msgstr "פקודת מצלמת וידאו"
+
+#: ../gnome-volume-manager.desktop.in.h:1
+msgid "Volume Manager"
+msgstr "מנהל הכרך"
+
+#: ../gnome-volume-manager.desktop.in.h:2
+#, fuzzy
+msgid "Volume manager for removable drives and media"
+msgstr "הגדר ניהול במדיה וכוננים נשלפים"
+
+#: ../gnome-volume-properties.desktop.in.h:1
+msgid "Configure management of removable drives and media"
+msgstr "הגדר ניהול במדיה וכוננים נשלפים"
+
+#: ../gnome-volume-properties.desktop.in.h:2
+msgid "Removable Drives and Media"
+msgstr "מדיה וכוננים נשלפים"
+
+#: ../gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: ../gnome-volume-properties.glade.h:2
+msgid "<b>Audio CD Discs</b>"
+msgstr "<b>תקליטורי שמע</b>"
+
+#: ../gnome-volume-properties.glade.h:3
+msgid "<b>Blank CD and DVD Discs</b>"
+msgstr "<b>תקליטורי CD וDVD ריקים</b>"
+
+#: ../gnome-volume-properties.glade.h:4
+msgid "<b>Digital Camera</b>"
+msgstr "<b>מצלמה דיגיטלית</b>"
+
+#: ../gnome-volume-properties.glade.h:5
+msgid "<b>Digital Video Camera</b>"
+msgstr "<b>מצלמת וידאו דיגיטלית</b>"
+
+#: ../gnome-volume-properties.glade.h:6
+msgid "<b>Keyboards</b>"
+msgstr "<b>מקלדות</b>"
+
+#: ../gnome-volume-properties.glade.h:7
+msgid "<b>Mice</b>"
+msgstr "<b>עכברים</b>"
+
+#: ../gnome-volume-properties.glade.h:8
+msgid "<b>Palm™</b>"
+msgstr "<b>פאלם</b>"
+
+#: ../gnome-volume-properties.glade.h:9
+msgid "<b>PocketPC</b>"
+msgstr "<b>פוקט-פיסי</b>"
+
+#: ../gnome-volume-properties.glade.h:10
+msgid "<b>Portable Music Players</b>"
+msgstr "<b>נגני מוזיקה ניידים</b>"
+
+#: ../gnome-volume-properties.glade.h:11
+msgid "<b>Printers</b>"
+msgstr "<b>מדפסות</b>"
+
+#: ../gnome-volume-properties.glade.h:12
+msgid "<b>Removable Storage</b>"
+msgstr "<b>התקני אחסון נשלף</b>"
+
+#: ../gnome-volume-properties.glade.h:13
+msgid "<b>Scanners</b>"
+msgstr "<b>סורקים</b>"
+
+#: ../gnome-volume-properties.glade.h:14
+msgid "<b>Tablets</b>"
+msgstr "<b>טאבלטים</b>"
+
+#: ../gnome-volume-properties.glade.h:15
+msgid "<b>Video DVD Discs</b>"
+msgstr "<b>תקליטורי וידאו DVD</b>"
+
+#: ../gnome-volume-properties.glade.h:16
+msgid "Automatically run a program when a USB _keyboard is connected"
+msgstr "הרץ אוטומטית תוכנית כאשר _מקלדת USB מחוברת"
+
+#: ../gnome-volume-properties.glade.h:17
+msgid "Automatically run a program when a USB _mouse is connected"
+msgstr "הרץ אוטומטית תוכנית כשאר _עכבר USB מחובר"
+
+#: ../gnome-volume-properties.glade.h:18
+msgid "Automatically run a program when a _printer is connected"
+msgstr "הרץ אוטומטית תוכנית כאשר _מדפסת מחוברת"
+
+#: ../gnome-volume-properties.glade.h:19
+msgid "Automatically run a program when a _scanner is connected"
+msgstr "הרץ אוטומטית תוכנית כאשר _סורק מחובר"
+
+#: ../gnome-volume-properties.glade.h:20
+msgid "Automatically run a program when a _tablet is connected"
+msgstr "הרץ אוטומטית תוכנית כאשר _טאבלט מחובר"
+
+#: ../gnome-volume-properties.glade.h:21
+msgid "Browse _removable media when inserted"
+msgstr "דפדף במדיה _נשלפת כאשר הוכנסה"
+
+#: ../gnome-volume-properties.glade.h:22
+msgid "C_ommand:"
+msgstr "פ_קודה:"
+
+#: ../gnome-volume-properties.glade.h:23
+msgid "Cameras"
+msgstr "מצלמות"
+
+#: ../gnome-volume-properties.glade.h:24
+msgid "Comman_d:"
+msgstr "פקוד_ה:"
+
+#: ../gnome-volume-properties.glade.h:25
+msgid "Command for A_udio CDs:"
+msgstr "פקודה לתקליטורי א_ודיו:"
+
+#: ../gnome-volume-properties.glade.h:26
+msgid "Command for _Data CDs: "
+msgstr "פקודה לתקליטור _נתונים: "
+
+#: ../gnome-volume-properties.glade.h:27
+msgid "Drives and Media Preferences"
+msgstr "העדפות מדיה וכוננים"
+
+#: ../gnome-volume-properties.glade.h:28
+msgid "Input Devices"
+msgstr "התקני קלט"
+
+#: ../gnome-volume-properties.glade.h:29
+msgid "Mount removable media when _inserted"
+msgstr "עגן מדיה נשלפת כאשר _מוכנסת"
+
+#: ../gnome-volume-properties.glade.h:30
+msgid "Multimedia"
+msgstr "מולטימדיה"
+
+#: ../gnome-volume-properties.glade.h:31
+msgid "PDAs"
+msgstr "PDAs"
+
+#: ../gnome-volume-properties.glade.h:32
+msgid "Play _audio CD discs when inserted"
+msgstr "נגן תקליטורי _שמע כאשר מוכנסים"
+
+#: ../gnome-volume-properties.glade.h:33
+#, fuzzy
+msgid "Play _music files when connected"
+msgstr "נגן תקליטורי _שמע כאשר מוכנסים"
+
+#: ../gnome-volume-properties.glade.h:34
+msgid "Play _video DVD disks when inserted"
+msgstr "נגן תקליטורי _וידאו DVD כאשר מוכנסים"
+
+#: ../gnome-volume-properties.glade.h:35
+msgid "Printers & Scanners"
+msgstr "מדפסות & סורקים"
+
+#: ../gnome-volume-properties.glade.h:36
+msgid "Removable Drives and Media Preferences"
+msgstr "הסר הגדרות מדיה וכוננים"
+
+#: ../gnome-volume-properties.glade.h:37
+msgid "Select program to burn audio CDs"
+msgstr "בחר תוכנית לצריבת תקליטורי אודיו"
+
+#: ../gnome-volume-properties.glade.h:38
+msgid "Select program to burn data CDs"
+msgstr "בחר תוכנית לצריבת תקליטורי נתונים"
+
+#: ../gnome-volume-properties.glade.h:39
+msgid "Select program to edit videos"
+msgstr "בחר תוכנית לעריכת וידאו"
+
+#: ../gnome-volume-properties.glade.h:40
+msgid "Select program to import photos"
+msgstr "בחר תוכנית לייבוא תמונות"
+
+#: ../gnome-volume-properties.glade.h:41
+msgid "Select program to play DVDs"
+msgstr "בחר תוכנית לניגון DVD"
+
+#: ../gnome-volume-properties.glade.h:42
+msgid "Select program to play audio CDs"
+msgstr "בחר תוכנית לניגון תקליטורי אודיו"
+
+#: ../gnome-volume-properties.glade.h:43
+msgid "Select program to play music files"
+msgstr "בחר תוכנית לניגון קבצי מוסיקה"
+
+#: ../gnome-volume-properties.glade.h:44
+msgid "Select program to run when a keyboard is plugged in"
+msgstr "בחר תוכנית להרצה כאשר מקלדת מחוברת"
+
+#: ../gnome-volume-properties.glade.h:45
+msgid "Select program to run when a mouse is plugged in"
+msgstr "בחר תוכנית להרצה כאשר עכבר מחובר"
+
+#: ../gnome-volume-properties.glade.h:46
+msgid "Select program to run when a printer is plugged in"
+msgstr "בחר תוכנית להרצה כאשר מדפסת מחוברת"
+
+#: ../gnome-volume-properties.glade.h:47
+msgid "Select program to run when a scanner is plugged in"
+msgstr "בחר תוכנית להרצה כאשר סורק מחובר"
+
+#: ../gnome-volume-properties.glade.h:48
+msgid "Select program to run when a tablet is plugged in"
+msgstr "בחר תוכנית להרצה כאשר טאבלט מחובר"
+
+#: ../gnome-volume-properties.glade.h:49
+msgid "Select program to sync Palm devices"
+msgstr "בחר תוכנית לסינכרון התקני פאלם"
+
+#: ../gnome-volume-properties.glade.h:50
+msgid "Storage"
+msgstr "אחסון"
+
+#: ../gnome-volume-properties.glade.h:51
+msgid "Sync PocketP_C devices when connected"
+msgstr "סינכרון התקני פוקט-פי_סי בעת חיבור"
+
+#: ../gnome-volume-properties.glade.h:52
+msgid "Sync _Palm™ devices when connected"
+msgstr "סינכרון _פאלם כאשר בעת חיבור"
+
+#: ../gnome-volume-properties.glade.h:53
+msgid "_Auto-run programs on new drives and media"
+msgstr "_הרץ אוטומטית תוכנות על מדיה וכוננים חדשים"
+
+#: ../gnome-volume-properties.glade.h:54
+msgid "_Burn a CD or DVD when a blank disc is inserted"
+msgstr "_צרוב תקליטור או DVD כאשר תקליטור ריק מוכנס"
+
+#: ../gnome-volume-properties.glade.h:55
+msgid "_Command:"
+msgstr ""
+"_פקודה:"
+
+#: ../gnome-volume-properties.glade.h:56
+msgid "_Edit video when connected"
+msgstr "_ערוך וידאו בעת חיבור"
+
+#: ../gnome-volume-properties.glade.h:57
+msgid "_Import digital photographs when connected"
+msgstr "יבא _תמונות דיגיטליות כאשר מחובר"
+
+#: ../gnome-volume-properties.glade.h:58
+msgid "_Mount removable drives when hot-plugged"
+msgstr "_עגן אוטומטית כוננים נשלפים"
+
+#: ../src/manager.c:205 ../src/manager.c:210 ../src/manager.c:215
+#: ../src/manager.c:221 ../src/manager.c:227 ../src/manager.c:233
+#: ../src/manager.c:239
+msgid "Ig_nore"
+msgstr "ה_תעלם"
+
+#: ../src/manager.c:206
+msgid "_Allow Auto-Run"
+msgstr "_אפשר הרצה-אוטומטית"
+
+#: ../src/manager.c:211 ../src/manager.c:217 ../src/manager.c:222
+msgid "Import _Photos"
+msgstr "_יבא תמונות"
+
+#: ../src/manager.c:216
+msgid "_Open Folder"
+msgstr "_פתח סיפרייה"
+
+#: ../src/manager.c:223
+msgid "Manage _Music"
+msgstr "נהל _מוזיקה"
+
+#: ../src/manager.c:228
+msgid "_Browse Files"
+msgstr "_דפדף בקבצים"
+
+#: ../src/manager.c:229
+msgid "_Play CD"
+msgstr "_נגן תקליטור"
+
+#: ../src/manager.c:234
+msgid "Make _Audio CD"
+msgstr "צור תקליטור _אודיו"
+
+#: ../src/manager.c:235
+msgid "Make _Data CD"
+msgstr "צור תקליטור _נתונים"
+
+#: ../src/manager.c:240
+msgid "Make _DVD"
+msgstr "צור _DVD"
+
+#: ../src/manager.c:292
+msgid "Auto-Run Confirmation"
+msgstr "אשר הרצה אוטומטית"
+
+#: ../src/manager.c:293
+msgid "Auto-run capability detected."
+msgstr "יכולת הרצה אוטומאטית התגלתה."
+
+#: ../src/manager.c:294
+msgid "Would you like to allow <b>'${0}'</b> to run?"
+msgstr "האם לאפשר הרצה של <b>'${0}'</b>"
+
+#: ../src/manager.c:299 ../src/manager.c:306
+msgid "Camera Import"
+msgstr "ייבוא מצלמה"
+
+#: ../src/manager.c:300 ../src/manager.c:307
+msgid "A camera has been detected."
+msgstr "זוהתה מצלמה."
+
+#: ../src/manager.c:301 ../src/manager.c:308
+msgid ""
+"There are photos on the camera. Would you like to add these pictures to your "
+"album?"
+msgstr ""
+"ישנן תמונות במצלמה. האם תרצה להוסיף אותן לאלבום התמונות שלך?"
+
+#: ../src/manager.c:302 ../src/manager.c:309 ../src/manager.c:316
+#: ../src/manager.c:323 ../src/manager.c:330
+msgid "_Always perform this action"
+msgstr "תמיד בצע פעולה זו"
+
+#: ../src/manager.c:313
+msgid "Photo Import"
+msgstr "ייבוא תמונה"
+
+#: ../src/manager.c:314
+msgid "A photo card has been detected."
+msgstr "כרטיס תמונה זוהה"
+
+#: ../src/manager.c:315
+msgid ""
+"There are photos on the card. Would you like to add these pictures to your "
+"album?"
+msgstr ""
+"ישנן תמונות על הכרטיס. האם תרצה להוסיף אותן לאלבום שלך?"
+
+#: ../src/manager.c:320
+msgid "Photos and Music"
+msgstr "תמונות ומוזיקה"
+
+#: ../src/manager.c:321
+msgid "Photos were found on your music device."
+msgstr "תמונות נמצאות בהתקן המוזיקה שלך"
+
+#: ../src/manager.c:322
+msgid "Would you like to import the photos or manage its music?"
+msgstr "האם תרצה לייבא את התמונות או לנהל את המוזיקה?"
+
+#: ../src/manager.c:327
+msgid "Audio / Data CD"
+msgstr "תקליטור אודיו / נתונים"
+
+#: ../src/manager.c:328
+msgid "The CD in the drive contains both music and files."
+msgstr "התקליטור שבכונן מכיל גם מוזיקה וגם קבצים."
+
+#: ../src/manager.c:329
+msgid "Would you like to listen to music or browse the files?"
+msgstr "האם תרצה להקשיב למוזיקה או לדפדף בקבצים?"
+
+#: ../src/manager.c:334 ../src/manager.c:341
+msgid "Choose Disc Type"
+msgstr "בחר סוג דיסק"
+
+#: ../src/manager.c:335 ../src/manager.c:342
+msgid "You have inserted a blank disc."
+msgstr "הכנסת דיסק ריק."
+
+#: ../src/manager.c:336 ../src/manager.c:343
+msgid "What would you like to do?"
+msgstr "מה תרצה לעשות?"
+
+#: ../src/manager.c:2871
+#, c-format
+msgid "%d%% of the disk space on %s is in use"
+msgstr ""
+
+#: ../src/manager.c:2973
+msgid "Print version and exit"
+msgstr "Print version and exit"
+
+#: ../src/manager.c:2975
+msgid "Run as a daemon"
+msgstr "Run as a daemon"
+
+#: ../src/manager.c:2977
+msgid "Don't run as a daemon"
+msgstr "Don't run as a daemon"
+
+#: ../src/manager.c:2979
+msgid "Run in secret mode"
+msgstr"Run in secret mode"
+
+#: ../src/manager.c:3011
+#, c-format
+msgid "Unrecognized --daemon argument: %s\n"
+msgstr "Unrecognized --daemon argument: %s\n"
+
+#: ../src/properties.c:305
+msgid "Could not load the main interface"
+msgstr "לא ניתן להעלות את הממשק הראשי"
+
+#: ../src/properties.c:307
+msgid "Please make sure that the volume manager is properly installed"
+msgstr "אנא וודא שהתכנה מותקנת היטב."
+
+#: ../src/properties.c:466
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr ""
+"שגיאה באתחול שרת הgnome-volume-manager:\n"
+"%s"
+
+#: ../src/properties.c:497
+msgid "Volume management not supported"
+msgstr "ניהול הכרכים איננו נתמך"
+
+#: ../src/properties.c:499
+msgid ""
+"The \"hald\" service is required but not currently running. Enable the "
+"service and rerun this application, or contact your system administrator.\n"
+"\n"
+"Note: You need Linux kernel 2.6 for volume management to work."
+msgstr ""
+"שירות ה \"hald\" דרוש אבל לא פועל כרגע. אפשר את השירות והרץ מחדש את היישום, "
+"או פנה למנהל המערכת שלך\n"
+"\n"
+"הערה: אתה צריך Linux kernel 2.6 בשביל שניהול הכרך יפעל."
+
+#~ msgid "Co_mmand:"
+#~ msgstr "פק_ודה:"
+
+#~ msgid "Perform action on _blank discs when inserted"
+#~ msgstr "בצע פעולה על תקליטורים _ריקים כאשר מוכנסים"
+
+#~ msgid "Run command from inserted media?"
+#~ msgstr "הרץ פקודה ממדיה שהוכנסה?"
+
+#~ msgid "Do you want to run the file \"%s?\""
+#~ msgstr "את/ה רוצה להריץ את הקובץ \"%s?\""
+
+#~ msgid "_Run Command"
+#~ msgstr "_הרץ פקודה"
+
+#~ msgid "Import photos from device?"
+#~ msgstr "יבא תמונות מההתקן?"
+
+#~ msgid "Import photos from camera?"
+#~ msgstr "לייבא תמונות מהמצלמה?"
+
+#~ msgid "Browse files or play tracks from disc?"
+#~ msgstr "דפדף בקבצים או נגן רצועות מהדיסק?"
+
+#~ msgid ""
+#~ "There are both audio tracks and data files on the inserted disc. Choose "
+#~ "if you want to play the audio tracks to listen to music or browse the "
+#~ "files to manage the stored data."
+#~ msgstr ""
+#~ "ישנם רצועות שמע ורצועות מידע על הדיסק שהוכנס. בחר אם ברצונך לנגן את "
+#~ "רצועות השמע ולהקשיב למוזיקה או לדפדף בקבצים לניהול מידע המאוחסן."

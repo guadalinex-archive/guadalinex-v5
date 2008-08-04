@@ -1,0 +1,245 @@
+# Duit PPRT siapa yang kebas????      
+# Copyright (C) 2001 Free Software Foundation, Inc.
+# Hasbullah Bin Pit (sebol) <sebol@ikhlas.com>, 200R31.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ms-longgok\n"
+"POT-Creation-Date: 2004-08-23 23:20+0800\n"
+"PO-Revision-Date: 2004-08-23 23:26+0730\n"
+"Last-Translator: Hasbullah Bin Pit <sebol@my-penguin.org>\n"
+"Language-Team: Projek Gabai <gabai-penyumbang@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: gnome-volume-manager.schemas.in.h:1
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr "senarai dipisahi ':' bagi laluan untuk diperiksa oleh binari atau skrip autolaksana."
+
+#: gnome-volume-manager.schemas.in.h:2
+msgid "Automount removable drives"
+msgstr "Autolekap Pemacu  bolehtanggal"
+
+#: gnome-volume-manager.schemas.in.h:3
+msgid "Automount removable media"
+msgstr "Autolekap media bolehtanggal"
+
+#: gnome-volume-manager.schemas.in.h:4
+msgid "Autorun nautilus"
+msgstr "Autolaksana nautilus"
+
+#: gnome-volume-manager.schemas.in.h:5
+msgid "Autorun path"
+msgstr "Laluan autolaksana"
+
+#: gnome-volume-manager.schemas.in.h:6
+msgid "CD burn command"
+msgstr "arahan pembakaran CD"
+
+#: gnome-volume-manager.schemas.in.h:7
+msgid "CD play command"
+msgstr "Arahan main CD"
+
+#: gnome-volume-manager.schemas.in.h:8
+msgid "Command to run when a digital camera is connected or media from a digital camera is inserted."
+msgstr "Arahan untuk dilaksanakan bila kamera digital disambung atau media drpd kamera digital diselitkan."
+
+#: gnome-volume-manager.schemas.in.h:9
+msgid "Command to run when a video DVD is inserted."
+msgstr "Arahan untuk dilaksanakan bila DVD diselit."
+
+#: gnome-volume-manager.schemas.in.h:10
+msgid "Command to run when an audio CD is inserted."
+msgstr "Arahan untuk dilaksanakan bila CD audio di klik."
+
+#: gnome-volume-manager.schemas.in.h:11
+msgid "Command to run when an empty CD is inserted."
+msgstr "Arahan untuk dilaksanakan CD kosong diselit."
+
+#: gnome-volume-manager.schemas.in.h:12
+msgid "Command to run when the eject button on a optical drive is pressed."
+msgstr "Arahan untuk dilaksanakan bila butang lenting pada pemacu optikal ditekan."
+
+#: gnome-volume-manager.schemas.in.h:13
+msgid "DVD play command"
+msgstr "Arahan memainkan DVD"
+
+#: gnome-volume-manager.schemas.in.h:14
+msgid "Eject command"
+msgstr "Arahan lenting"
+
+#: gnome-volume-manager.schemas.in.h:15
+msgid "Open nautilus on removeable media insert."
+msgstr "Buka nautilus pada penyelitan media bolehtanggal"
+
+#: gnome-volume-manager.schemas.in.h:16
+msgid "Perform autorun"
+msgstr "Lakukan autolaksana"
+
+#: gnome-volume-manager.schemas.in.h:17
+msgid "Photo management command"
+msgstr "Arahan pengurusan foto"
+
+#: gnome-volume-manager.schemas.in.h:18
+msgid "Play inserted audio CD's"
+msgstr "Mainkan CD audio yg diselitkan"
+
+#: gnome-volume-manager.schemas.in.h:19
+msgid "Play inserted video DVDs"
+msgstr "Mainkan DVD Video yg diselitkan"
+
+#: gnome-volume-manager.schemas.in.h:20
+msgid "Run CD burn command"
+msgstr "Laksanakan arahan pembakaran CD"
+
+#: gnome-volume-manager.schemas.in.h:21
+msgid "Run photo management command"
+msgstr "Lksana arahan pengurusan foto"
+
+#: gnome-volume-manager.schemas.in.h:22
+msgid "Whether autorun programs (binaries and scripts located in 'autorun_path') are run on newly mounted media."
+msgstr "Samada program autolaksana (binari dan skrip diletakkan pada 'autorun_path') adalah dilaksanakan pada media yg baru dilekapkan."
+
+#: gnome-volume-manager.schemas.in.h:23
+msgid "Whether gnome-volume-manager should automatically mount removable storage drives when they are inserted."
+msgstr "Samada gnome-volume-manager patut automatik lekap pemacu storan bolehtanggal yang diselitkan."
+
+#: gnome-volume-manager.schemas.in.h:24
+msgid "Whether gnome-volume-manager should automatically mount removable storage media when they are inserted."
+msgstr "Samada gnome-volume-manager patut automatik lekap media storan bolehtanggal bila ia diselitkan."
+
+#: gnome-volume-manager.schemas.in.h:25
+msgid "Whether, when a blank CD is inserted, gnome-volume-manager should run 'autoburn_cdr_command'."
+msgstr "Samada, bila CD kosong diselitkan, gnome-volume-manager patut melaksanakan 'autoburn_cdr_command'."
+
+#: gnome-volume-manager.schemas.in.h:26
+msgid "Whether, when a digital camera is connected or media from a digital camera is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr "Samada, bila kamera digital disambung atau media drpd kamera digital diselitkan, gnome-volume-manager patut melaksanakan 'autophoto_command'."
+
+#: gnome-volume-manager.schemas.in.h:27
+msgid "Whether, when a video DVD is inserted, gnome-volume-manager should run 'autoplay_dvd_command'."
+msgstr "Samada bila DVD video diselitkan, gnome-volume-manager patut melaksanakan 'autoplay_dvd_command'."
+
+#: gnome-volume-manager.schemas.in.h:28
+msgid "Whether, when an audio CD is inserted, gnome-volume-manager should run 'autoplay_cda_command'."
+msgstr "Samada, bila CD audio diselitkan, gnome-volume-manager patut melaksanakan 'autoplay_cda_command'."
+
+#: gnome-volume-properties.desktop.in.h:1
+msgid "Configure Management of Removable Devices"
+msgstr "Konfigurasikan Pengurusan bagi Peranti Bolehtanggal"
+
+#: gnome-volume-properties.desktop.in.h:2
+msgid "Removable Storage"
+msgstr "Storan boleh tanggal"
+
+#: gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: gnome-volume-properties.glade.h:2
+msgid " Perform action on _blank CDs when inserted"
+msgstr " Lakukan aksi pada CD _kosong bila ia diselitkan"
+
+#: gnome-volume-properties.glade.h:3
+msgid "*"
+msgstr "*"
+
+#: gnome-volume-properties.glade.h:4
+msgid "<b>Audio CDs</b>"
+msgstr "<b>CD Audio</b>"
+
+#: gnome-volume-properties.glade.h:5
+msgid "<b>Blank CDs</b>"
+msgstr "<b>CD Kosong</b>"
+
+#: gnome-volume-properties.glade.h:6
+msgid "<b>DVD Videos</b>"
+msgstr "<b>Video DVD</b>"
+
+#: gnome-volume-properties.glade.h:7
+msgid "<b>Digital Camera</b>"
+msgstr "<b>Kamera Digital</b>"
+
+#: gnome-volume-properties.glade.h:8
+msgid "<b>Removable Storage</b>"
+msgstr "<b>Storan Boleh Tanggal</b>"
+
+#: gnome-volume-properties.glade.h:9
+msgid "Browse _removable media when inserted"
+msgstr "Lungsuri media _bolehtanggal bila diselitkan"
+
+#: gnome-volume-properties.glade.h:10
+msgid "Command:"
+msgstr "Arahan:"
+
+#: gnome-volume-properties.glade.h:11
+msgid "Drives and Media Preferences"
+msgstr "Keutamaan Pemacu dan Media"
+
+#: gnome-volume-properties.glade.h:12
+msgid "Import digital _photo albums when connected"
+msgstr "Import album _foto digital bila disambung"
+
+#: gnome-volume-properties.glade.h:13
+msgid "Mount removable media when _inserted"
+msgstr "Lekap media bolehtanggal bila di_selitkan"
+
+#: gnome-volume-properties.glade.h:14
+msgid "Play DVD Videos when inserted"
+msgstr "Main Video DVD bila diselit"
+
+#: gnome-volume-properties.glade.h:15
+msgid "Play _DVD Videos when inserted"
+msgstr "Main Video _DVD bila diselit"
+
+#: gnome-volume-properties.glade.h:16
+msgid "Play a_udio CDs when inserted"
+msgstr "Main CD a_udio bila diselit"
+
+#: gnome-volume-properties.glade.h:17
+msgid "Play audio CDs when inserted"
+msgstr "Main CD audio bila diselt"
+
+#: gnome-volume-properties.glade.h:18
+msgid "_Auto-run programs on new drives and media"
+msgstr "_Auto-laksana program pada pemacu dan media baru"
+
+#: gnome-volume-properties.glade.h:19
+msgid "_Mount removable drives when hot-plugged"
+msgstr "_Lekap pemacu bolehtanggal bile dihot-plug"
+
+#: src/manager.c:207
+#, c-format
+msgid "Do you want to run %s?"
+msgstr "Adakah anda ingin melaksanakan %s?"
+
+#: src/manager.c:295
+msgid "_Import"
+msgstr "_Import"
+
+#: src/manager.c:486
+msgid "_Play"
+msgstr "_Main"
+
+#: src/manager.c:487
+msgid "_Browse"
+msgstr "_Lungsur"
+
+#: src/properties.c:187
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr ""
+"Ralat memulakan demon gnome-volume-manager:\n"
+"%s"
+
+#: src/properties.c:400
+msgid "Could not load the main interface"
+msgstr "Tak dapat memuatkan antaramuka utama"
+
+#: src/properties.c:402
+msgid "Please make sure that the volume manager is properly installed"
+msgstr "Sila pastikan pengurus volum dipasang dengan betul"
+

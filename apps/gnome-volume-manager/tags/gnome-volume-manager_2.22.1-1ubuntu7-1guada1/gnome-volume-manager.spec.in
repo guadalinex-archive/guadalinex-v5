@@ -1,0 +1,69 @@
+Summary: The GNOME Volume Manager
+Name: gnome-volume-manager
+Version: @VERSION@
+Release: 1
+License: GPL
+Group: Applications/System
+Source: gnome-volume-manager-%{version}.tar.gz
+URL: http://www.gnome.org/
+BuildRoot: %{_tmppath}/%{name}-%{version}-build
+BuildPrereq: libgnomeui-devel, libglade2-devel, hal-devel, dbus-1-devel >= 0.20
+Requires: gnome-mime-data, hal >= 0.2.98, kernel >= 2.6, control-center2 >= 2.0
+Requires: dbus-1 >= 0.20
+
+%define prefix /opt/gnome
+
+%description
+The GNOME Volume Manager monitors volume-related events and responds with
+user-specified policy.  The GNOME Volume Manager can automount hot-plugged
+drives, automount inserted removable media, autorun programs, automatically
+play audio CDs and video DVDs, and automatically import photos from a digital
+camera.  The GNOME Volume Manager does this entirely in user-space and without
+polling.
+
+The GNOME Voume Manager sits at the top end of a larger picture that aims to
+integrate the Linux system from the kernel on up through the deskto and its
+applications.
+
+%prep
+%setup -q
+
+%build
+./configure --prefix=%{prefix} --sysconfdir=/etc%{prefix}
+CCFLAGS=$RPM_OPT_FLAGS make
+
+%install
+rm -rf $RPM_BUILD_ROOT
+export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
+make install DESTDIR=$RPM_BUILD_ROOT
+unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
+%find_lang %name
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%post
+GCONF_CONFIG_SOURCE=`/opt/gnome/bin/gconftool-2 --get-default-source` /opt/gnome/bin/gconftool-2 --makefile-install-rule /etc/opt/gnome/gconf/schemas/gnome-volume-manager.schemas > /dev/null 2>&1
+
+%files -f %{name}.lang
+%defattr(-,root,root)
+%doc AUTHORS ChangeLog COPYING HACKING INSTALL NEWS README TODO
+%{prefix}/bin/*
+%{prefix}/share/applications/*
+%{prefix}/share/gnome-volume-manager
+/etc%{prefix}/gconf/schemas/*.schemas
+
+%changelog
+* Wed Mar 30 2005 Robert Love <rml@novell.com>
+- misc. updates
+
+* Fri Jan 23 2004 Robert Love <rml@ximian.com>
+- international support
+- misc. stuff
+
+* Tue Jan 13 2004 Robert Love <rml@ximian.com>
+- update BuildPrereq and Requires
+
+* Sat Jan 03 2004 Robert Love <rml@ximian.com>
+- initial packaging of 0.2
+
