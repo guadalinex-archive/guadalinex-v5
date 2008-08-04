@@ -1,0 +1,248 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GNOME-2.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-10-23 04:50+0200\n"
+"PO-Revision-Date: 2004-10-24 00:41-0800\n"
+"Last-Translator: Эрхэмбаатар Мөнгөнгадас <zealot_bo58@yahoo.com>\n"
+"Language-Team: OpenMN <zealot@openmn.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Mongolian\n"
+"X-Poedit-Country: MONGOLIA\n"
+
+#: gnome-volume-manager.schemas.in.h:1
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr ""
+
+#: gnome-volume-manager.schemas.in.h:2
+msgid "Automount removable drives"
+msgstr "Зөөврийн дикс төхөөрөмжүүдийг автоматаар холбох"
+
+#: gnome-volume-manager.schemas.in.h:3
+msgid "Automount removable media"
+msgstr "Зөөврийн медиаг автоматаар холбох"
+
+#: gnome-volume-manager.schemas.in.h:4
+msgid "Autorun nautilus"
+msgstr "Nautilus-ыг автоматаар ажиллуулах"
+
+#: gnome-volume-manager.schemas.in.h:5
+msgid "Autorun path"
+msgstr "Автоматаар ажиллах зам"
+
+#: gnome-volume-manager.schemas.in.h:6
+msgid "CD burn command"
+msgstr "CD бичих комманд"
+
+#: gnome-volume-manager.schemas.in.h:7
+msgid "CD play command"
+msgstr "CD тоглуулах комманд"
+
+#: gnome-volume-manager.schemas.in.h:8
+msgid "Command to run when a digital camera is connected or media from a digital camera is inserted."
+msgstr ""
+
+#: gnome-volume-manager.schemas.in.h:9
+msgid "Command to run when a video DVD is inserted."
+msgstr "видео DVD хийгдэхэд ажиллуулах комманд."
+
+#: gnome-volume-manager.schemas.in.h:10
+msgid "Command to run when an audio CD is inserted."
+msgstr "аудио СD хийгдэхэд ажиллуулах комманд."
+
+#: gnome-volume-manager.schemas.in.h:11
+msgid "Command to run when an empty CD is inserted."
+msgstr "Хоосон СD хийгдэхэд ажиллуулах комманд."
+
+#: gnome-volume-manager.schemas.in.h:12
+msgid "Command to run when the eject button on a optical drive is pressed."
+msgstr "Гадаад диск дэх eject товч дарагдахад ажиллуулах комманд."
+
+#: gnome-volume-manager.schemas.in.h:13
+msgid "DVD play command"
+msgstr "DVD тоглуулах комманд"
+
+#: gnome-volume-manager.schemas.in.h:14
+msgid "Eject command"
+msgstr "Eject комманд"
+
+#: gnome-volume-manager.schemas.in.h:15
+msgid "Open nautilus on removeable media insert."
+msgstr "Зөөврийн медиа хийгдэхэд nautilus-ыг нээх."
+
+#: gnome-volume-manager.schemas.in.h:16
+msgid "Perform autorun"
+msgstr ""
+
+#: gnome-volume-manager.schemas.in.h:17
+msgid "Photo management command"
+msgstr "Зургийн менежмент комманд"
+
+#: gnome-volume-manager.schemas.in.h:18
+msgid "Play inserted audio CD's"
+msgstr "Аудио CD-г тоглуулах"
+
+#: gnome-volume-manager.schemas.in.h:19
+msgid "Play inserted video DVDs"
+msgstr "видео DVD-г тоглуулах"
+
+#: gnome-volume-manager.schemas.in.h:20
+msgid "Run CD burn command"
+msgstr "CD бичих коммандыг ажиллуулах"
+
+#: gnome-volume-manager.schemas.in.h:21
+msgid "Run photo management command"
+msgstr "Зургийн менежмент коммандыг ажиллуулах"
+
+#: gnome-volume-manager.schemas.in.h:22
+msgid "Whether autorun programs (binaries and scripts located in 'autorun_path') are run on newly mounted media."
+msgstr ""
+
+#: gnome-volume-manager.schemas.in.h:23
+msgid "Whether gnome-volume-manager should automatically mount removable storage drives when they are inserted."
+msgstr ""
+
+#: gnome-volume-manager.schemas.in.h:24
+msgid "Whether gnome-volume-manager should automatically mount removable storage media when they are inserted."
+msgstr ""
+
+#: gnome-volume-manager.schemas.in.h:25
+msgid "Whether, when a blank CD is inserted, gnome-volume-manager should run 'autoburn_cdr_command'."
+msgstr ""
+
+#: gnome-volume-manager.schemas.in.h:26
+msgid "Whether, when a digital camera is connected or media from a digital camera is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr ""
+
+#: gnome-volume-manager.schemas.in.h:27
+msgid "Whether, when a video DVD is inserted, gnome-volume-manager should run 'autoplay_dvd_command'."
+msgstr ""
+
+#: gnome-volume-manager.schemas.in.h:28
+msgid "Whether, when an audio CD is inserted, gnome-volume-manager should run 'autoplay_cda_command'."
+msgstr ""
+
+#: gnome-volume-properties.desktop.in.h:1
+msgid "Configure Management of Removable Devices"
+msgstr "Зөөврийн Төхөөрөмжийн Удирдлагын Тохируулага"
+
+#: gnome-volume-properties.desktop.in.h:2
+msgid "Removable Storage"
+msgstr "Зөөврийн диск төхөөрөмж"
+
+#: gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: gnome-volume-properties.glade.h:2
+msgid " Perform action on _blank CDs when inserted"
+msgstr ""
+
+#: gnome-volume-properties.glade.h:3
+msgid "*"
+msgstr "*"
+
+#: gnome-volume-properties.glade.h:4
+msgid "<b>Audio CDs</b>"
+msgstr "<b>Aудио CD-нууд</b>"
+
+#: gnome-volume-properties.glade.h:5
+msgid "<b>Blank CDs</b>"
+msgstr "<b>Хоосон CD-нууд</b>"
+
+#: gnome-volume-properties.glade.h:6
+msgid "<b>DVD Videos</b>"
+msgstr "<b>DVD Видеонууд</b>"
+
+#: gnome-volume-properties.glade.h:7
+msgid "<b>Digital Camera</b>"
+msgstr "<b>Дижитал Камер</b>"
+
+#: gnome-volume-properties.glade.h:8
+msgid "<b>Removable Storage</b>"
+msgstr "<b>Зөөврийн Төхөөрөмж</b>"
+
+#: gnome-volume-properties.glade.h:9
+msgid "Browse _removable media when inserted"
+msgstr "Зөөврийн _медиа хийгдэхэд хөтлөх"
+
+#: gnome-volume-properties.glade.h:10
+msgid "Command:"
+msgstr "Комманд:"
+
+#: gnome-volume-properties.glade.h:11
+msgid "Drives and Media Preferences"
+msgstr "Диск болон Медиагийн Параметрүүд"
+
+#: gnome-volume-properties.glade.h:12
+msgid "Import digital _photo albums when connected"
+msgstr "Дижитал _фото албомь хийгдэхэд импортлох"
+
+#: gnome-volume-properties.glade.h:13
+msgid "Mount removable media when _inserted"
+msgstr "Зөөврийн медиа хийгдэхэд холбох"
+
+#: gnome-volume-properties.glade.h:14
+msgid "Play DVD Videos when inserted"
+msgstr "DVD Видео хийгдэхэд тоглуулах"
+
+#: gnome-volume-properties.glade.h:15
+msgid "Play _DVD Videos when inserted"
+msgstr "_DVD Видео хийгдэхэд тоглуулах"
+
+#: gnome-volume-properties.glade.h:16
+msgid "Play a_udio CDs when inserted"
+msgstr "_аудио СD хийгдэхэд тоглуулах"
+
+#: gnome-volume-properties.glade.h:17
+msgid "Play audio CDs when inserted"
+msgstr "аудио СD хийгдэхэд тоглуулах"
+
+#: gnome-volume-properties.glade.h:18
+msgid "_Auto-run programs on new drives and media"
+msgstr "Шинэ медиа болон драйв дахь программуудыг _автоматаар ажиллуулах"
+
+#: gnome-volume-properties.glade.h:19
+msgid "_Mount removable drives when hot-plugged"
+msgstr ""
+
+#: src/manager.c:228
+#, c-format
+msgid "Do you want to run %s?"
+msgstr "Та %s-ыг ажиллуулах уу?"
+
+#: src/manager.c:316
+#: src/manager.c:358
+msgid "_Import"
+msgstr "_Импорт"
+
+#: src/manager.c:548
+msgid "_Play"
+msgstr "_Тоглуулах"
+
+#: src/manager.c:549
+msgid "_Browse"
+msgstr "_Хөтлөх"
+
+#: src/properties.c:187
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr ""
+
+#: src/properties.c:400
+msgid "Could not load the main interface"
+msgstr "Үндсэн интерфэйсыг дуудаж чадсангүй"
+
+#: src/properties.c:402
+msgid "Please make sure that the volume manager is properly installed"
+msgstr ""
+

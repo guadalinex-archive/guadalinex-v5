@@ -1,0 +1,328 @@
+# Persian translation of gnome-volume-manager.
+# Copyright (C) 2005 Sharif FarsiWeb, Inc.
+# This file is distributed under the same license as the gnome-volume-manager package.
+# Elnaz Sarbar <elnaz@farsiweb.info>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-volume-manager\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-03-22 14:05+0100\n"
+"PO-Revision-Date: 2005-03-22 19:36+0330\n"
+"Last-Translator: Elnaz Sarbar <elnaz@farsiweb.info>\n"
+"Language-Team: Persian <farsi@lists.sharif.edu>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: gnome-volume-manager.schemas.in.h:1
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr ":' فهرست محدود شده‌ی مسیرها برای کنترل دودویی‌ها و کدهای اجرای خودکار"
+
+#: gnome-volume-manager.schemas.in.h:2
+msgid "Automount removable drives"
+msgstr "سوار کردن خودکار دیسک گردان‌های جدا شدنی"
+
+#: gnome-volume-manager.schemas.in.h:3
+msgid "Automount removable media"
+msgstr "سوار کردن خودکار رسانه‌های جدا شدنی"
+
+#: gnome-volume-manager.schemas.in.h:4
+msgid "Autorun nautilus"
+msgstr "اجرای خودکار ناتیلوس"
+
+#: gnome-volume-manager.schemas.in.h:5
+msgid "Autorun path"
+msgstr "مسیر اجرای خودکار"
+
+#: gnome-volume-manager.schemas.in.h:6
+msgid "CD burn command"
+msgstr "فرمان نوشتن سی‌دی"
+
+#: gnome-volume-manager.schemas.in.h:7
+msgid "CD play command"
+msgstr "فرمان پخش سی‌دی"
+
+#: gnome-volume-manager.schemas.in.h:8
+msgid ""
+"Command to run when a digital camera is connected or media from a digital "
+"camera is inserted."
+msgstr "فرمان اجرا شونده هنگام اتصال دوربین دیجیتال یا ورود یک رسانه از دوربین دیجیتال."
+
+#: gnome-volume-manager.schemas.in.h:9
+msgid "Command to run when a video DVD is inserted."
+msgstr "فرمان اجرا شونده هنگام ورود یک دی‌وی‌دی تصویری."
+
+#: gnome-volume-manager.schemas.in.h:10
+msgid "Command to run when an audio CD is inserted."
+msgstr "فرمان اجرا شونده هنگام ورود یک سی‌دی صوتی."
+
+#: gnome-volume-manager.schemas.in.h:11
+msgid "Command to run when an empty CD is inserted."
+msgstr "فرمان اجرا شونده هنگام ورود یک سی‌دی خالی."
+
+#: gnome-volume-manager.schemas.in.h:12
+msgid "Command to run when the eject button on a optical drive is pressed."
+msgstr "فرمان اجرا شونده هنگامی که دکمه‌ی بیرون دادن روی دیسک گردان نوری فشار داده می‌شود."
+
+#: gnome-volume-manager.schemas.in.h:13
+msgid "DVD play command"
+msgstr "فرمان پخش دی‌وی‌دی"
+
+#: gnome-volume-manager.schemas.in.h:14
+msgid "Eject command"
+msgstr "فرمان بیرون دادن"
+
+#: gnome-volume-manager.schemas.in.h:15
+msgid "Open nautilus on removeable media insert."
+msgstr "باز کردن ناتیلوس هنگام وارد شدن رسانه‌ی جدا شدنی"
+
+#: gnome-volume-manager.schemas.in.h:16
+msgid "Perform autorun"
+msgstr "انجام دادن اجرای خودکار"
+
+#: gnome-volume-manager.schemas.in.h:17
+msgid "Photo management command"
+msgstr "فرمان مدیریت عکس"
+
+#: gnome-volume-manager.schemas.in.h:18
+msgid "Play inserted audio CD's"
+msgstr "پخش سی‌دی صوتی وارد شده"
+
+#: gnome-volume-manager.schemas.in.h:19
+msgid "Play inserted video DVDs"
+msgstr "پخش دی‌وی‌دی تصویری وارد شده"
+
+#: gnome-volume-manager.schemas.in.h:20
+msgid "Run CD burn command"
+msgstr "اجرای فرمان نوشتن سی‌دی"
+
+#: gnome-volume-manager.schemas.in.h:21
+msgid "Run photo management command"
+msgstr "اجرای فرمان مدیریت عکس"
+
+#: gnome-volume-manager.schemas.in.h:22
+msgid ""
+"Whether autorun programs (binaries and scripts located in 'autorun_path') "
+"are run on newly mounted media."
+msgstr "این که برنامه‌های اجرای خودکار (دودویی‌ها یا کدهایی که در «autorun_path» قرار دارند) روی رسانه‌هایی که به تازگی سوار شده‌اند اجرا شوند یا نه."
+
+#: gnome-volume-manager.schemas.in.h:23
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"drives when they are inserted."
+msgstr "این که gnome-volume-manager باید دیسک گردان‌های حافظه‌ی جدا شدنی را هنگام ورود به طور خودکار سوار کند یا نه."
+
+#: gnome-volume-manager.schemas.in.h:24
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"media when they are inserted."
+msgstr "این که gnome-volume-manager باید رسانه‌ها حافظه‌ی جدا شدنی را هنگام ورود به طور خودکار سوار کند یا نه."
+
+#: gnome-volume-manager.schemas.in.h:25
+msgid ""
+"Whether, when a blank CD is inserted, gnome-volume-manager should run "
+"'autoburn_cdr_command'."
+msgstr "این که هنگام ورود یک سی‌دی خام ، gnome-volume-manager باید «autoburn_cdr_command» را اجرا کند یا نه."
+
+#: gnome-volume-manager.schemas.in.h:26
+msgid ""
+"Whether, when a digital camera is connected or media from a digital camera "
+"is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr "این که هنگام اتصال یک دوربین دیجیتال یا ورود یک رسانه از یک دوربین دیجیتال، gnome-volume-manager باید «autophoto_command» را اجرا کند یا نه."
+
+#: gnome-volume-manager.schemas.in.h:27
+msgid ""
+"Whether, when a video DVD is inserted, gnome-volume-manager should run "
+"'autoplay_dvd_command'."
+msgstr "این که هنگام ورود یک دی‌وی‌دی تصویری، gnome-volume-manager باید «autoplay_dvd_command» را اجرا کند یا نه."
+
+#: gnome-volume-manager.schemas.in.h:28
+msgid ""
+"Whether, when an audio CD is inserted, gnome-volume-manager should run "
+"'autoplay_cda_command'."
+msgstr "این که هنگام ورود یک سی‌دی صوتی، gnome-volume-manager باید «autoplay_cda_command» را اجرا کند یا نه."
+
+#: gnome-volume-properties.desktop.in.h:1
+msgid "Configure management of removable drives and media"
+msgstr "پیکربندی مدیریت رسانه‌ها و دیسک گردان‌های جدا شدنی"
+
+#: gnome-volume-properties.desktop.in.h:2
+msgid "Removable Drives and Media"
+msgstr "رسانه‌ها و دیسک گردان‌های جدا شدنی"
+
+#: gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: gnome-volume-properties.glade.h:2
+msgid "*"
+msgstr "*"
+
+#: gnome-volume-properties.glade.h:3
+msgid "<b>Audio CD Discs</b>"
+msgstr "<b>سی‌دی‌های صوتی</b>"
+
+#: gnome-volume-properties.glade.h:4
+msgid "<b>Blank CD and DVD Discs</b>"
+msgstr "<b>سی‌دی‌ها و دی‌وی‌دی‌های خام</b>"
+
+#: gnome-volume-properties.glade.h:5
+msgid "<b>Digital Camera</b>"
+msgstr "<b>دوربین دیجیتال</b>"
+
+#: gnome-volume-properties.glade.h:6
+msgid "<b>Removable Storage</b>"
+msgstr "<b>حافظه‌ی جدا شدنی</b>"
+
+#: gnome-volume-properties.glade.h:7
+msgid "<b>Video DVD Discs</b>"
+msgstr "<b>دی‌وی‌دی‌های تصویری</b>"
+
+#: gnome-volume-properties.glade.h:8
+msgid "Browse _removable media when inserted"
+msgstr "مرور رسانه‌ی جدا شدنی هنگام ورود"
+
+#: gnome-volume-properties.glade.h:9
+msgid "C_ommand:"
+msgstr "فرمان:"
+
+#: gnome-volume-properties.glade.h:10
+msgid "Co_mmand:"
+msgstr "فرمان:"
+
+#: gnome-volume-properties.glade.h:11
+msgid "Comman_d:"
+msgstr "فرمان:"
+
+#: gnome-volume-properties.glade.h:12
+msgid "Command:"
+msgstr "فرمان:"
+
+#: gnome-volume-properties.glade.h:13
+msgid "Drives and Media Preferences"
+msgstr "ترجیحات رسانه‌ها و دیسک گردان‌ها"
+
+#: gnome-volume-properties.glade.h:14
+msgid "Import digital _photographs when connected"
+msgstr "وارد کردن عکس‌های دیجیتال هنگام اتصال"
+
+#: gnome-volume-properties.glade.h:15
+msgid "Mount removable media when _inserted"
+msgstr "سوار کردن رسانه‌ی جدا شدنی هنگام ورود"
+
+#: gnome-volume-properties.glade.h:16
+msgid "Multimedia"
+msgstr "چندرسانه‌ای"
+
+#: gnome-volume-properties.glade.h:17
+msgid "Perform action on _blank discs when inserted"
+msgstr "انجام کنش روی دیسک‌های خام هنگام ورود"
+
+#: gnome-volume-properties.glade.h:18
+msgid "Play _audio CD discs when inserted"
+msgstr "پخش سی‌دی‌های صوتی هنگام ورود"
+
+#: gnome-volume-properties.glade.h:19
+msgid "Play _video DVD disks when inserted"
+msgstr "پخش دی‌وی‌دی‌های تصویری هنگام ورود"
+
+#: gnome-volume-properties.glade.h:20
+msgid "Removable Drives and Media Preferences"
+msgstr "ترجیحات رسانه‌ها و دیسک گردان‌های جدا شدنی"
+
+#: gnome-volume-properties.glade.h:21
+msgid "Storage"
+msgstr "حافظه"
+
+#: gnome-volume-properties.glade.h:22
+msgid "_Auto-run programs on new drives and media"
+msgstr "اجرای خودکار برنامه‌ها روی رسانه‌ها و دیسک گردان‌هاجدید"
+
+#: gnome-volume-properties.glade.h:23
+msgid "_Mount removable drives when hot-plugged"
+msgstr ""
+
+#: src/manager.c:229
+msgid "Run command from inserted media?"
+msgstr "فرمان از روی رسانه‌ی وارد شده اجرا شود؟"
+
+#: src/manager.c:232
+#, c-format
+msgid "The file \"%s\" on the inserted media is an auto-runfile."
+msgstr "پرونده‌ی «%s» روی رسانه‌ی وارد شده یک پرونده‌ی اجرای خودکار است."
+
+#: src/manager.c:237
+msgid "_Run Command"
+msgstr "اجرای فرمان"
+
+#: src/manager.c:319
+msgid "Import photos from device?"
+msgstr "عکس‌ها از دستگاه وارد شود؟"
+
+#: src/manager.c:321
+msgid ""
+"There are photos on the inserted media. Would you like to import these "
+"photos into your photo album?"
+msgstr "عکس‌هایی روی رسانه‌ی وارد شده وجود دارد. مایلید این عکس‌ها وارد آلبوم عکس‌تان شود؟"
+
+#: src/manager.c:327 src/manager.c:373
+msgid "_Import Photos"
+msgstr "وارد کردن عکس‌ها"
+
+#: src/manager.c:366
+msgid "Import photos from camera?"
+msgstr "وارد کردن عکس‌ها از دوربین"
+
+#: src/manager.c:368
+msgid ""
+"There are photos on the plugged-in camera. Would you like to import these "
+"photos into your photo album?"
+msgstr "عکس‌هایی روی دوربین متصل شده وجود دارد. مایلید این عکس‌ها در آلبوم عکس‌تان وارد شود؟"
+
+#: src/manager.c:556
+msgid "Browse files or play tracks from disc?"
+msgstr "پرونده‌ها یا شیارها از روی دیسک مرور یا پخش شوند؟"
+
+#: src/manager.c:559
+msgid ""
+"There are both audio tracks and data files on the inserted disc. Choose if "
+"you want to play the audio tracks to listen to music or browse the files to "
+"manage the stored data."
+msgstr ""
+"روی دیسک وارد شده هم شیار صوتی وجود دارد هم پرونده‌ی اطلاعاتی. انتخاب کنید که می‌خواهید برای گوش دادن به موسیقی شیارهای صوتی پخش شوند "
+"یا برای مدیریت داده‌های ذخیره شده پرونده‌ها مرور شوند."
+
+#: src/manager.c:565
+msgid "_Browse Files"
+msgstr "مرور پرونده‌ها"
+
+#: src/manager.c:567
+msgid "_Play Tracks"
+msgstr "پخش شیارها"
+
+#: src/properties.c:187
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr "خطای شروع شبح gnome-volume-manager:\n"
+"%s"
+
+#: src/properties.c:375
+msgid "Volume management not supported"
+msgstr "مدیریت حجم پشتیبانی نمی‌شود"
+
+#: src/properties.c:377
+msgid ""
+"The \"hald\" service is required but not currently running. Enable the "
+"service and rerun this applet, or contact your system administrator."
+msgstr ""
+
+#: src/properties.c:400
+msgid "Could not load the main interface"
+msgstr "رابط اصلی قابل بار شدن نیست"
+
+#: src/properties.c:403
+msgid "Please make sure that the volume manager is properly installed"
+msgstr "لطفاً اطمینان حاصل کنید که مدیریت حجم به درستی نصب شده است."

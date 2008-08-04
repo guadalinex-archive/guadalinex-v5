@@ -1,0 +1,24 @@
+Source: gnome-volume-manager
+Section: gnome
+Priority: optional
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+XSBC-Original-Maintainer: Sjoerd Simons <sjoerd@debian.org>
+Uploaders: Michael Biebl <biebl@debian.org>, Sebastian Dröge <slomo@debian.org>
+Build-Depends: cdbs, debhelper (>= 5.0.0), autotools-dev, libdbus-glib-1-dev (>=0.60), libhal-dev (>=0.5.4), libglade2-dev, libgnomeui-dev, libxml-parser-perl, libgtk2.0-dev (>= 2.6.0), libnotify-dev (>= 0.3.0)
+Standards-Version: 3.7.3
+Vcs-Svn: svn://svn.debian.org/svn/pkg-utopia/packages/unstable/gnome-volume-manager
+Vcs-Browser: http://svn.debian.org/wsvn/pkg-utopia/packages/unstable/gnome-volume-manager
+
+Package: gnome-volume-manager
+Architecture: any
+Conflicts: magicdev
+Depends: ${shlibs:Depends}, ${misc:Depends}, hal (>= 0.5.5.1), gnome-mount
+Recommends: nautilus-cd-burner, totem, sound-juicer
+Suggests: wine, xsane, rhythmbox
+Description: GNOME daemon to auto-mount and manage media devices
+ gnome-volume-manager is a GNOME daemon that acts as a policy agent on
+ top of the kernel, udev, D-Bus and HAL. It listens to HAL events and
+ reacts with user-configurable actions. Currently it supports automount
+ of new media and hot-plugged devices, autorun, autoplay for CDs and
+ DVDs, and automatic camera management. It is expected to be simple and
+ free of polling and other evil hacks.

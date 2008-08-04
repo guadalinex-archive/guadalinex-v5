@@ -1,0 +1,13 @@
+			Hacking the GNOME Volume Manager
+
+Branches
+--------
+This is the unstable branch (HEAD), which is currently 1.3.x.
+
+Approval
+--------
+Add patches to Bugzilla.
+
+Coding Style
+------------
+Coding style is supposed to be GNOME's.

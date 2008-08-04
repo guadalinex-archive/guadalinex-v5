@@ -1,0 +1,921 @@
+# translation of lt.po to Lithuanian
+# Lithuanian translation of gnome-volume-manager.
+# Copyright (C) 2004-2006, 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gnome-volume-manager package.
+#
+# Gonna be a Rock'n'Roll singer
+# Gonna be a Rock'n'Roll star
+#
+# Žygimantas Beručka <zygis@gnome.org>, 2004-2006.
+# Gintautas Miliauskas <gintas@akl.lt>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: lt\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-09-16 14:00+0300\n"
+"PO-Revision-Date: 2007-09-16 14:01+0300\n"
+"Last-Translator: Žygimantas Beručka <zygis@gnome.org>\n"
+"Language-Team: Lithuanian <gnome-lt@lists.akl.lt>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../gnome-volume-manager.schemas.in.h:1
+msgid "\"Always take this action\" checkbox for Autorun"
+msgstr "Automatinio paleidimo „Visada naudoti šį veiksmą“ žymimasis langelis"
+
+#: ../gnome-volume-manager.schemas.in.h:2
+msgid "\"Always take this action\" checkbox for iPod Photos"
+msgstr "iPod nuotraukų „Visada naudoti šį veiksmą“ žymimasis langelis"
+
+#: ../gnome-volume-manager.schemas.in.h:3
+msgid "\"Always take this action\" checkbox for mixed Audio and Data CDs"
+msgstr "Mišrių Audio ir duomenų CD „Visada naudoti šį veiksmą“ žymimasis langelis"
+
+#: ../gnome-volume-manager.schemas.in.h:4
+msgid "\"Always take this action\" checkbox for photo import from a camera"
+msgstr ""
+"Nuotraukų importavimo iš fotoaparato „Visada naudoti šį veiksmą“ žymimasis "
+"langelis"
+
+#: ../gnome-volume-manager.schemas.in.h:5
+msgid "\"Always take this action\" checkbox for photo import from a device"
+msgstr ""
+"Nuotraukų importavimo iš įrenginio „Visada naudoti šį veiksmą“ žymimasis "
+"langelis"
+
+#: ../gnome-volume-manager.schemas.in.h:6
+msgid "':' delimited list of paths to check for autoopen files."
+msgstr "„:“ atskirtų kelių sąrašas, kuriuose ieškoti automatiškai atveriamų failų."
+
+#: ../gnome-volume-manager.schemas.in.h:7
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr ""
+"':' atskirtų kelių sąrašas, kuriuose ieškoti auto paleidžiamų dvejetainių "
+"failų ar skriptų."
+
+#: ../gnome-volume-manager.schemas.in.h:8
+msgid "Action to take when a camera is plugged in."
+msgstr "Veiksmas naudojamas prijungus fotoaparatą."
+
+#: ../gnome-volume-manager.schemas.in.h:9
+msgid "Action to take when a device containing photos is encountered."
+msgstr "Veiksmas naudojamas aptikus įrenginį su nuotraukomis."
+
+#: ../gnome-volume-manager.schemas.in.h:10
+msgid "Action to take when a device contains an autorun program/script."
+msgstr "Veiksmas naudojamas, kai įrenginyje yra auto paleidimo programa/skriptas."
+
+#: ../gnome-volume-manager.schemas.in.h:11
+msgid "Action to take when a mixed Audio and Data CD is encountered."
+msgstr "Veikas naudojamas, kai aptinkamas mišrus Audio ir duomenų CD."
+
+#: ../gnome-volume-manager.schemas.in.h:12
+msgid "Action to take when an iPod Photo is encountered."
+msgstr "Veiksmas naudojamas aptikus iPod nuotraukas."
+
+#: ../gnome-volume-manager.schemas.in.h:13
+msgid "Audio CD burn command"
+msgstr "Audio CD įrašymo komandą"
+
+#: ../gnome-volume-manager.schemas.in.h:14
+msgid "Automount removable drives"
+msgstr "Automatiškai prijungti išimamus diskus"
+
+#: ../gnome-volume-manager.schemas.in.h:15
+msgid "Automount removable media"
+msgstr "Automatiškai prijungti išimamas laikmenas"
+
+#: ../gnome-volume-manager.schemas.in.h:16
+msgid "Autoopen path"
+msgstr "Automatinio atvėrimo kelias"
+
+#: ../gnome-volume-manager.schemas.in.h:17
+msgid "Autorun nautilus"
+msgstr "Automatiškai paleisti Nautilus"
+
+#: ../gnome-volume-manager.schemas.in.h:18
+msgid "Autorun path"
+msgstr "Autopaleidimo kelias"
+
+#: ../gnome-volume-manager.schemas.in.h:19
+msgid "CD play command"
+msgstr "CD grojimo komanda"
+
+#: ../gnome-volume-manager.schemas.in.h:20
+msgid "Command to run when a Palm is connected."
+msgstr "Komanda, įvykdoma prijungus Palm."
+
+#: ../gnome-volume-manager.schemas.in.h:21
+msgid "Command to run when a PocketPC is connected."
+msgstr "Komanda, įvykdoma prijungus PocketPC."
+
+#: ../gnome-volume-manager.schemas.in.h:22
+msgid ""
+"Command to run when a digital camera is connected or media from a digital "
+"camera is inserted."
+msgstr ""
+"Komanda, įvykdoma prijungus skaitmeninę kamerą arba įdėjus skaitmeninės "
+"kameros kaupiklį."
+
+#: ../gnome-volume-manager.schemas.in.h:23
+msgid "Command to run when a keyboard is connected."
+msgstr "Komanda, įvykdoma prijungus klaviatūrą."
+
+#: ../gnome-volume-manager.schemas.in.h:24
+msgid "Command to run when a mouse is connected."
+msgstr "Komanda, įvykdoma prijungus pelę."
+
+#: ../gnome-volume-manager.schemas.in.h:25
+msgid "Command to run when a printer is connected."
+msgstr "Komanda, įvykdoma prijungus spausdintuvą."
+
+#: ../gnome-volume-manager.schemas.in.h:26
+msgid "Command to run when a scanner is connected."
+msgstr "Komanda, įvykdoma prijungus skenerį."
+
+#: ../gnome-volume-manager.schemas.in.h:27
+msgid "Command to run when a tablet is connected."
+msgstr "Komanda, įvykdoma prijungus planšetą."
+
+#: ../gnome-volume-manager.schemas.in.h:28
+msgid "Command to run when a video DVD is inserted."
+msgstr "Komanda, įvykdoma įdėjus video DVD."
+
+#: ../gnome-volume-manager.schemas.in.h:29
+msgid "Command to run when a video VCD is inserted."
+msgstr "Komanda, įvykdoma įdėjus video VCD."
+
+#: ../gnome-volume-manager.schemas.in.h:30
+msgid "Command to run when a video camera is connected."
+msgstr "Komanda, įvykdoma prijungus vaizdo kamerą."
+
+#: ../gnome-volume-manager.schemas.in.h:31
+msgid "Command to run when a web camera is connected."
+msgstr "Komanda, įvykdoma prijungus pokalbių (web) kamerą."
+
+#: ../gnome-volume-manager.schemas.in.h:32
+msgid "Command to run when an audio CD is inserted."
+msgstr "Komanda, įvykdoma įdėjus audio CD."
+
+#: ../gnome-volume-manager.schemas.in.h:33
+msgid "Command to run when an iPod is connected."
+msgstr "Komanda, įvykdoma prijungus iPod."
+
+#: ../gnome-volume-manager.schemas.in.h:34
+msgid "Command to run when the user wishes to burn a Data CD."
+msgstr "Komanda, įvykdoma, kai naudotojas nori įrašyti duomenų CD."
+
+#: ../gnome-volume-manager.schemas.in.h:35
+msgid "Command to run when the user wishes to burn an Audio CD."
+msgstr "Komanda, įvykdoma, kai naudotojas nori įrašyti audio CD."
+
+#: ../gnome-volume-manager.schemas.in.h:36
+msgid "DVD play command"
+msgstr "DVD grojimo komanda"
+
+#: ../gnome-volume-manager.schemas.in.h:37
+msgid "Data CD burn command"
+msgstr "Duomenų CD rašymo komanda"
+
+#: ../gnome-volume-manager.schemas.in.h:38
+msgid "Low Disk Space notification threshold"
+msgstr "Diske laisvos vietos pranešimo riba"
+
+#: ../gnome-volume-manager.schemas.in.h:39
+msgid "Open nautilus on removeable media insert."
+msgstr "Atverti Nautilus, kai įdedamos naujos laikmenos."
+
+#: ../gnome-volume-manager.schemas.in.h:40
+msgid "Perform autoopen"
+msgstr "Vykdyti automatinį atvėrimą"
+
+#: ../gnome-volume-manager.schemas.in.h:41
+msgid "Perform autorun"
+msgstr "Vykdyti automatinį paleidimą"
+
+#: ../gnome-volume-manager.schemas.in.h:42
+msgid "Photo management command"
+msgstr "Fotografijų tvarkymo komanda"
+
+#: ../gnome-volume-manager.schemas.in.h:43
+msgid "Play inserted audio CD's"
+msgstr "Groti įdėtus audio CD"
+
+#: ../gnome-volume-manager.schemas.in.h:44
+msgid "Play inserted video DVDs"
+msgstr "Groti įdėtus video DVD"
+
+#: ../gnome-volume-manager.schemas.in.h:45
+msgid "Play inserted video VCDs"
+msgstr "Groti įdėtus video VCD"
+
+#: ../gnome-volume-manager.schemas.in.h:46
+msgid "Run Palm-sync program"
+msgstr "Paleisti Palm sinchronizavimo programą"
+
+#: ../gnome-volume-manager.schemas.in.h:47
+msgid "Run PocketPC-sync program"
+msgstr "Paleisti PocketPC sinchronizavimo programą"
+
+#: ../gnome-volume-manager.schemas.in.h:48
+msgid "Run a program to burn CDs/DVDs"
+msgstr "Paleisti CD/DVD rašymo programą"
+
+#: ../gnome-volume-manager.schemas.in.h:49
+msgid "Run iPod program"
+msgstr "Paleisti iPod programą"
+
+#: ../gnome-volume-manager.schemas.in.h:50
+msgid "Run keyboard program"
+msgstr "Paleisti klaviatūros programą"
+
+#: ../gnome-volume-manager.schemas.in.h:51
+msgid "Run mouse program"
+msgstr "Paleisti pelės programą"
+
+#: ../gnome-volume-manager.schemas.in.h:52
+msgid "Run photo management command"
+msgstr "Paleisti nuotraukų tvarkymo komandą"
+
+#: ../gnome-volume-manager.schemas.in.h:53
+msgid "Run printer program"
+msgstr "Paleisti spausdintuvo programą"
+
+#: ../gnome-volume-manager.schemas.in.h:54
+msgid "Run scanner program"
+msgstr "Paleisti skenerio programą"
+
+#: ../gnome-volume-manager.schemas.in.h:55
+msgid "Run tablet program"
+msgstr "Paleisti planšeto programą"
+
+#: ../gnome-volume-manager.schemas.in.h:56
+msgid "Run video editing program"
+msgstr "Paleisti vaizdo redagavimo programą"
+
+#: ../gnome-volume-manager.schemas.in.h:57
+msgid "Run webcam stream display program"
+msgstr "Paleisti pokalbių kameros srauto rodymo programą"
+
+#: ../gnome-volume-manager.schemas.in.h:58
+msgid ""
+"The threshold value for whether or not to toggle the notification on, based "
+"on the amount of additional space used since the last check."
+msgstr ""
+"Slenksčio reikšmė ar neįjungti pranešimo, atsižvelgiant į naudotojo naujai "
+"užimtos vietos dydį nuo praėjusio tikrinimo."
+
+#: ../gnome-volume-manager.schemas.in.h:59
+msgid "Threshold for notification of increased disk usage"
+msgstr "Slenksčio reikšmė pranešimui apie laisvos vietos mažėjimą"
+
+#: ../gnome-volume-manager.schemas.in.h:60
+msgid "Threshold percentage for notifying the user of low disk space."
+msgstr "Slenksčio reikšmė naudotojo perspėjimui apie mažėjančią vietą diske."
+
+#: ../gnome-volume-manager.schemas.in.h:61
+msgid "VCD play command"
+msgstr "VCD grojimo komanda"
+
+#: ../gnome-volume-manager.schemas.in.h:62
+msgid "Whether autoopen files should be opened on newly mounted media."
+msgstr "Ar automatiškai atverti autopaleidimo failus naujai prijungtose laikmenose."
+
+#: ../gnome-volume-manager.schemas.in.h:63
+msgid ""
+"Whether autorun programs (binaries and scripts located in 'autorun_path') "
+"are run on newly mounted media."
+msgstr ""
+"Ar automatiškai paleisti programas (dvejetainius failus arba scenarijus, "
+"esančius „autorun_path“) naujai prijungtose laikmenose."
+
+#: ../gnome-volume-manager.schemas.in.h:64
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"drives when they are inserted."
+msgstr ""
+"Ar gnome-volume-manager turėtų automatiškai prijungti išimamus diskinius "
+"kaupiklius, juos įdėjus."
+
+#: ../gnome-volume-manager.schemas.in.h:65
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"media when they are inserted."
+msgstr ""
+"Ar gnome-volume-manager turėtų automatiškai prijungti išimamas laimenas, jas "
+"įdėjus."
+
+#: ../gnome-volume-manager.schemas.in.h:66
+msgid ""
+"Whether, when a Palm is connected, gnome-volume-manager should run "
+"'autopalmsync_command'."
+msgstr ""
+"Ar gnome-volume-manager turėtų paleisti „autopalmsync_command“, prijungus "
+"Palm kompiuterį."
+
+#: ../gnome-volume-manager.schemas.in.h:67
+msgid ""
+"Whether, when a PocketPC is connected, gnome-volume-manager should run "
+"'autopocketpc_command'."
+msgstr ""
+"Ar gnome-volume-manager turėtų paleisti „autopocketpc_command“, prijungus "
+"PocketPC kompiuterį."
+
+#: ../gnome-volume-manager.schemas.in.h:68
+msgid ""
+"Whether, when a blank CD or DVD is inserted, gnome-volume-manager should run "
+"one of the autoburn commands."
+msgstr ""
+"Ar gnome-volume-manager turėtų paleisti vieną iš automatinio rašymo komanų, "
+"kai įdedamas tuščias CD ar DVD."
+
+#: ../gnome-volume-manager.schemas.in.h:69
+msgid ""
+"Whether, when a digital camera is connected or media from a digital camera "
+"is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr ""
+"Ar gnome-volume-manager turėtų paleisti „autophoto_command“, kai prijungiama "
+"skaitmeninė kamera arba įdedamas kaupiklis iš skaitmeninės kameros."
+
+#: ../gnome-volume-manager.schemas.in.h:70
+msgid ""
+"Whether, when a digital video camera is connected, gnome-volume-manager "
+"should run 'autovideocam_command'."
+msgstr ""
+"Ar gnome-volume-manager turėtų paleisti „autovideocam_command“, prijungus "
+"vaizdo kamerą."
+
+#: ../gnome-volume-manager.schemas.in.h:71
+msgid ""
+"Whether, when a keyboard is connected, gnome-volume-manager should run "
+"'autokeyboard_command'."
+msgstr ""
+"Ar gnome-volume-manager turėtų paleisti „autokeyboard_command“, prijungus "
+"klaviatūrą."
+
+#: ../gnome-volume-manager.schemas.in.h:72
+msgid ""
+"Whether, when a mouse is connected, gnome-volume-manager should run "
+"'automouse_command'."
+msgstr "Ar gnome-volume-manager turėtų paleisti „automouse_command“, prijungus pelę."
+
+#: ../gnome-volume-manager.schemas.in.h:73
+msgid ""
+"Whether, when a printer is connected, gnome-volume-manager should run "
+"'autoprinter_command'."
+msgstr ""
+"Ar gnome-volume-manager turėtų paleisti „autoprinter_command“, prijungus "
+"spaudintuvą."
+
+#: ../gnome-volume-manager.schemas.in.h:74
+msgid ""
+"Whether, when a scanner is connected, gnome-volume-manager should run "
+"'autoscanner_command'."
+msgstr ""
+"Ar gnome-volume-manager turėtų paleisti „autoscanner_command“, prijungus "
+"skenerį."
+
+#: ../gnome-volume-manager.schemas.in.h:75
+msgid ""
+"Whether, when a tablet is connected, gnome-volume-manager should run "
+"'autotablet_command'."
+msgstr ""
+"Ar gnome-volume-manager turėtų paleisti „autotablet_command“, prijungus "
+"planšetą."
+
+#: ../gnome-volume-manager.schemas.in.h:76
+msgid ""
+"Whether, when a video DVD is inserted, gnome-volume-manager should run "
+"'autoplay_dvd_command'."
+msgstr ""
+"Ar gnome-volume-manager turėtų paleisti „autoplay_dvd_command“, įdėjus video "
+"DVD."
+
+#: ../gnome-volume-manager.schemas.in.h:77
+msgid ""
+"Whether, when a video VCD is inserted, gnome-volume-manager should run "
+"'autoplay_vcd_command'."
+msgstr ""
+"Ar gnome-volume-manager turėtų paleisti „autoplay_vcd_command“, įdėjus video "
+"VCD."
+
+#: ../gnome-volume-manager.schemas.in.h:78
+msgid ""
+"Whether, when a web camera is connected, gnome-volume-manager should run "
+"'autowebcam_command'."
+msgstr ""
+"Ar gnome-volume-manager turėtų paleisti „autowebcam_command“ prijungus "
+"pokalbių kamerą."
+
+#: ../gnome-volume-manager.schemas.in.h:79
+msgid ""
+"Whether, when an audio CD is inserted, gnome-volume-manager should run "
+"'autoplay_cda_command'."
+msgstr ""
+"Ar gnome-volume-manager turėtų paleisti „autoplay_cda_command“, įdėjus audio "
+"CD."
+
+#: ../gnome-volume-manager.schemas.in.h:80
+msgid ""
+"Whether, when an iPod is connected, gnome-volume-manager should run "
+"'autoipod_command'."
+msgstr "Ar gnome-volume-manager turėtų paleisti „autoipod_command“, prijungus iPod."
+
+#: ../gnome-volume-manager.schemas.in.h:81
+msgid "iPod sync command"
+msgstr "iPod sinchronizavimo komanda"
+
+#: ../gnome-volume-manager.schemas.in.h:82
+msgid "keyboard command"
+msgstr "klaviatūros komanda"
+
+#: ../gnome-volume-manager.schemas.in.h:83
+msgid "mouse command"
+msgstr "pelės komanda"
+
+#: ../gnome-volume-manager.schemas.in.h:84
+msgid "palm sync command"
+msgstr "palm sinchronizavimo komanda"
+
+#: ../gnome-volume-manager.schemas.in.h:85
+msgid "printer command"
+msgstr "spausdintuvo komanda"
+
+#: ../gnome-volume-manager.schemas.in.h:86
+msgid "scanner command"
+msgstr "skenerio komanda"
+
+#: ../gnome-volume-manager.schemas.in.h:87
+msgid "tablet command"
+msgstr "planšeto komanda"
+
+#: ../gnome-volume-manager.schemas.in.h:88
+msgid "video camera command"
+msgstr "vaizdo kameros komanda"
+
+#: ../gnome-volume-manager.schemas.in.h:89
+msgid "web camera command"
+msgstr "Pokalbių kameros komanda"
+
+#: ../gnome-volume-manager.desktop.in.in.h:1
+msgid "Volume Manager"
+msgstr "Laikmenų valdyklė"
+
+#: ../gnome-volume-manager.desktop.in.in.h:2
+msgid "Volume manager for removable drives and media"
+msgstr "Išimamų diskų ir laikmenų valdyklė"
+
+#: ../gnome-volume-properties.desktop.in.h:1
+msgid "Configure management of removable drives and media"
+msgstr "Konfigūruoti išimamų diskų ir laikmenų valdymą"
+
+#: ../gnome-volume-properties.desktop.in.h:2
+msgid "Removable Drives and Media"
+msgstr "Išimami diskai ir laikmenos"
+
+#: ../gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: ../gnome-volume-properties.glade.h:2
+msgid "<b>Audio CD Discs</b>"
+msgstr "<b>Muzikiniai diskai</b>"
+
+#: ../gnome-volume-properties.glade.h:3
+msgid "<b>Blank CD and DVD Discs</b>"
+msgstr "<b>Tušti CD ir DVD diskai</b>"
+
+#: ../gnome-volume-properties.glade.h:4
+msgid "<b>Digital Camera</b>"
+msgstr "<b>Skaitmeninis fotoaparatas</b>"
+
+#: ../gnome-volume-properties.glade.h:5
+msgid "<b>Digital Video Camera</b>"
+msgstr "<b>Skaitmeninė vaizdo kamera</b>"
+
+#: ../gnome-volume-properties.glade.h:6
+msgid "<b>Keyboards</b>"
+msgstr "<b>Klaviatūros</b>"
+
+#: ../gnome-volume-properties.glade.h:7
+msgid "<b>Mice</b>"
+msgstr "<b>Pelės</b>"
+
+#: ../gnome-volume-properties.glade.h:8
+msgid "<b>Palm™</b>"
+msgstr "<b>Palm™</b>"
+
+#: ../gnome-volume-properties.glade.h:9
+msgid "<b>PocketPC</b>"
+msgstr "<b>PocketPC</b>"
+
+#: ../gnome-volume-properties.glade.h:10
+msgid "<b>Portable Music Players</b>"
+msgstr "<b>Nešiojamieji muzikos grotuvai</b>"
+
+#: ../gnome-volume-properties.glade.h:11
+msgid "<b>Printers</b>"
+msgstr "<b>Spausdintuvai</b>"
+
+#: ../gnome-volume-properties.glade.h:12
+msgid "<b>Removable Storage</b>"
+msgstr "<b>Išimamos laikmenos</b>"
+
+#: ../gnome-volume-properties.glade.h:13
+msgid "<b>Scanners</b>"
+msgstr "<b>Skeneriai</b>"
+
+#: ../gnome-volume-properties.glade.h:14
+msgid "<b>Tablets</b>"
+msgstr "<b>Planšetai</b>"
+
+#: ../gnome-volume-properties.glade.h:15
+msgid "<b>Video DVD Discs</b>"
+msgstr "<b>DVD video diskai</b>"
+
+#: ../gnome-volume-properties.glade.h:16
+msgid "<b>Web Camera</b>"
+msgstr "<b>Pokalbių kamera</b>"
+
+#: ../gnome-volume-properties.glade.h:17
+msgid "Auto-_open files on new drives and media"
+msgstr "Automatiškai at_verti failus naujuose kaupikliuose ir laikmenose"
+
+#: ../gnome-volume-properties.glade.h:18
+msgid "Automatically run a program when a USB _keyboard is connected"
+msgstr "Prijungus USB _klaviatūrą automatiškai paleisti programą"
+
+#: ../gnome-volume-properties.glade.h:19
+msgid "Automatically run a program when a USB _mouse is connected"
+msgstr "Prijungus USB _pelę automatiškai paleisti programą"
+
+#: ../gnome-volume-properties.glade.h:20
+msgid "Automatically run a program when a _printer is connected"
+msgstr "Prijungus _spausdintuvą automatiškai paleisti programą"
+
+#: ../gnome-volume-properties.glade.h:21
+msgid "Automatically run a program when a _scanner is connected"
+msgstr "Prijungus _skenerį automatiškai paleisti programą"
+
+#: ../gnome-volume-properties.glade.h:22
+msgid "Automatically run a program when a _tablet is connected"
+msgstr "Prijungus pla_nšetą automatiškai paleisti programą"
+
+#: ../gnome-volume-properties.glade.h:23
+msgid "Browse _removable media when inserted"
+msgstr "Atverti na_ršyklės langą prijungtoms laikmenoms"
+
+#: ../gnome-volume-properties.glade.h:24
+msgid "C_ommand:"
+msgstr "K_omanda:"
+
+#: ../gnome-volume-properties.glade.h:25
+msgid "Cameras"
+msgstr "Fotoaparatai"
+
+#: ../gnome-volume-properties.glade.h:26
+msgid "Comman_d:"
+msgstr "Koman_da:"
+
+#: ../gnome-volume-properties.glade.h:27
+msgid "Command for A_udio CDs:"
+msgstr "A_udio CD komanda:"
+
+#: ../gnome-volume-properties.glade.h:28
+msgid "Command for _Data CDs: "
+msgstr "_Duomenų CD komanda:"
+
+#: ../gnome-volume-properties.glade.h:29
+msgid "Drives and Media Preferences"
+msgstr "Diskų ir laikmenų nustatymai"
+
+#: ../gnome-volume-properties.glade.h:30
+msgid "Input Devices"
+msgstr "Įvesties įrenginiai"
+
+#: ../gnome-volume-properties.glade.h:31
+msgid "Mount removable media when _inserted"
+msgstr "Automatiškai prijungti _išimamas laikmenas"
+
+#: ../gnome-volume-properties.glade.h:32
+msgid "Multimedia"
+msgstr "Daugialypė terpė"
+
+#: ../gnome-volume-properties.glade.h:33
+msgid "PDAs"
+msgstr "Delniniai kompiuteriai"
+
+#: ../gnome-volume-properties.glade.h:34
+msgid "Play _audio CD discs when inserted"
+msgstr "Groti įdėtus _muzikinius diskus"
+
+#: ../gnome-volume-properties.glade.h:35
+msgid "Play _music files when connected"
+msgstr "Prijungus groti _muzikos failus"
+
+#: ../gnome-volume-properties.glade.h:36
+msgid "Play _video DVD discs when inserted"
+msgstr "Rodyti įdėtus DVD _video diskus"
+
+#: ../gnome-volume-properties.glade.h:37
+msgid "Printers & Scanners"
+msgstr "Spausdintuvai ir skeneriai"
+
+#: ../gnome-volume-properties.glade.h:38
+msgid "Removable Drives and Media Preferences"
+msgstr "Išimamų diskų ir laikmenų nustatymai"
+
+#: ../gnome-volume-properties.glade.h:39
+msgid "Select program to burn audio CDs"
+msgstr "Pasirinkite programą audio diskų rašymui"
+
+#: ../gnome-volume-properties.glade.h:40
+msgid "Select program to burn data CDs"
+msgstr "Pasirinkite programą duomenų diskų rašymui"
+
+#: ../gnome-volume-properties.glade.h:41
+msgid "Select program to edit videos"
+msgstr "Pasirinkite programą video redagavimui"
+
+#: ../gnome-volume-properties.glade.h:42
+msgid "Select program to import photos"
+msgstr "Pasirinkite programą importuoti nuotraukoms"
+
+#: ../gnome-volume-properties.glade.h:43
+msgid "Select program to play DVDs"
+msgstr "Pasirinkite programą DVD žiūrėjimui"
+
+#: ../gnome-volume-properties.glade.h:44
+msgid "Select program to play audio CDs"
+msgstr "Pasirinkite programą audio CD grojimui"
+
+#: ../gnome-volume-properties.glade.h:45
+msgid "Select program to play music files"
+msgstr "Pasirinkite programą muzikos failų grojimui"
+
+#: ../gnome-volume-properties.glade.h:46
+msgid "Select program to run when a keyboard is plugged in"
+msgstr "Pasirinkite programą, paleidžiamą prijungus klaviatūrą"
+
+#: ../gnome-volume-properties.glade.h:47
+msgid "Select program to run when a mouse is plugged in"
+msgstr "Pasirinkite programą, paleidžiamą prijungus pelę"
+
+#: ../gnome-volume-properties.glade.h:48
+msgid "Select program to run when a printer is plugged in"
+msgstr "Pasirinkite programą, paleidžiamą prijungus spausdintuvą"
+
+#: ../gnome-volume-properties.glade.h:49
+msgid "Select program to run when a scanner is plugged in"
+msgstr "Pasirinkite programą, paleidžiamą prijungus skenerį"
+
+#: ../gnome-volume-properties.glade.h:50
+msgid "Select program to run when a tablet is plugged in"
+msgstr "Pasirinkite programą, paleidžiamą prijungus planšetą"
+
+#: ../gnome-volume-properties.glade.h:51
+msgid "Select program to sync Palm devices"
+msgstr "Pasirinkite programą Palm įrenginių sinchronizavimui"
+
+#: ../gnome-volume-properties.glade.h:52
+msgid "Storage"
+msgstr "Kaupikliai"
+
+#: ../gnome-volume-properties.glade.h:53
+msgid "Sync PocketP_C devices when connected"
+msgstr "Prijungus sinchronizuoti PocketP_C įrenginius"
+
+#: ../gnome-volume-properties.glade.h:54
+msgid "Sync _Palm™ devices when connected"
+msgstr "Prijungus sinchronizuoti _Palm™ įrenginius"
+
+#: ../gnome-volume-properties.glade.h:55
+msgid "_Auto-run programs on new drives and media"
+msgstr "_Automatiškai paleisti programas naujuose kaupikliuose ir laikmenose"
+
+#: ../gnome-volume-properties.glade.h:56
+msgid "_Burn a CD or DVD when a blank disc is inserted"
+msgstr "Įdėjus tuščią diską _rašyti CD ar DVD"
+
+#: ../gnome-volume-properties.glade.h:57
+msgid "_Command:"
+msgstr "_Komanda:"
+
+#: ../gnome-volume-properties.glade.h:58
+msgid "_Edit video when connected"
+msgstr "Prijungus r_edaguoti video"
+
+#: ../gnome-volume-properties.glade.h:59
+msgid "_Import digital photographs when connected"
+msgstr "Prijungus _importuoti skaitmenines nuotraukas"
+
+#: ../gnome-volume-properties.glade.h:60
+msgid "_Mount removable drives when hot-plugged"
+msgstr "Automatiškai _prijungti išimamus kaupiklius"
+
+#: ../src/manager.c:221 ../src/manager.c:226 ../src/manager.c:231
+#: ../src/manager.c:236 ../src/manager.c:242 ../src/manager.c:248
+#: ../src/manager.c:254 ../src/manager.c:260
+msgid "Ig_nore"
+msgstr "_Ignoruoti"
+
+#: ../src/manager.c:222
+msgid "_Allow Auto-Run"
+msgstr "_Leisti automatinį paleidimą"
+
+#: ../src/manager.c:227
+msgid "_Open"
+msgstr "_Atverti"
+
+#: ../src/manager.c:232 ../src/manager.c:238 ../src/manager.c:243
+msgid "Import _Photos"
+msgstr "_Importuoti nuotraukas"
+
+#: ../src/manager.c:237
+msgid "_Open Folder"
+msgstr "_Atverti aplanką"
+
+#: ../src/manager.c:244
+msgid "Manage _Music"
+msgstr "Tvarkyti _muziką"
+
+#: ../src/manager.c:249
+msgid "_Browse Files"
+msgstr "_Naršyti failus"
+
+#: ../src/manager.c:250
+msgid "_Play CD"
+msgstr "_Groti CD"
+
+#: ../src/manager.c:255
+msgid "Make _Audio CD"
+msgstr "Sukurti _audio CD"
+
+#: ../src/manager.c:256
+msgid "Make _Data CD"
+msgstr "Sukurti _duomenų CD"
+
+#: ../src/manager.c:261
+msgid "Make _DVD"
+msgstr "Sukurti _DVD"
+
+#: ../src/manager.c:314
+msgid "Auto-Run Confirmation"
+msgstr "Automatinio paleidimo patvirtinimas"
+
+#: ../src/manager.c:315
+msgid "Auto-run capability detected."
+msgstr "Aptikta automatinio paleidimo galimybė."
+
+#: ../src/manager.c:316
+msgid "Would you like to allow <b>'${0}'</b> to run?"
+msgstr "Ar norite paleisti <b>„${0}“</b>?"
+
+#: ../src/manager.c:321
+msgid "Auto-Open Confirmation"
+msgstr "Automatinio atvėrimo patvirtinimas"
+
+#: ../src/manager.c:322
+msgid "Auto-Open capability detected."
+msgstr "Aptikta automatinio atvėrimo galimybė."
+
+#: ../src/manager.c:323
+msgid "Would you like to open <b>'${0}'</b>?"
+msgstr "Ar norite atverti <b>„${0}“</b>?"
+
+#: ../src/manager.c:328 ../src/manager.c:335
+msgid "Camera Import"
+msgstr "Importavimas iš fotoaparato"
+
+#: ../src/manager.c:329 ../src/manager.c:336
+msgid "A camera has been detected."
+msgstr "Aptiktas fotoaparatas."
+
+#: ../src/manager.c:330 ../src/manager.c:337
+msgid ""
+"There are photos on the camera. Would you like to add these pictures to your "
+"album?"
+msgstr "Fotoaparate yra nuotraukų. Ar norite importuoti šiuos paveikslėlius į albumą?"
+
+#: ../src/manager.c:331 ../src/manager.c:338 ../src/manager.c:345
+#: ../src/manager.c:352 ../src/manager.c:359
+msgid "_Always perform this action"
+msgstr "_Visada atlikti šį veiksmą"
+
+#: ../src/manager.c:342
+msgid "Photo Import"
+msgstr "Nuotraukų importavimas"
+
+#: ../src/manager.c:343
+msgid "A photo card has been detected."
+msgstr "Aptikta nuotraukų kortelė."
+
+#: ../src/manager.c:344
+msgid ""
+"There are photos on the card. Would you like to add these pictures to your "
+"album?"
+msgstr "Kortelėje yra nuotraukų. Ar norite importuoti šiuos paveikslėlius į albumą?"
+
+#: ../src/manager.c:349
+msgid "Photos and Music"
+msgstr "Nuotraukos ir muzika"
+
+#: ../src/manager.c:350
+msgid "Photos were found on your music device."
+msgstr "Jūsų muzikos įrenginyje rastos nuotraukos."
+
+#: ../src/manager.c:351
+msgid "Would you like to import the photos or manage its music?"
+msgstr "Ar norite importuoti nuotraukas ar tvarkyti muziką?"
+
+#: ../src/manager.c:356
+msgid "Mixed Audio and Data CD"
+msgstr "Kombinuotas audio ir duomenų CD"
+
+#: ../src/manager.c:357
+msgid "The CD in the drive contains both music and files."
+msgstr "Įrenginyje esančiame CD yra ir muzikos, ir failų."
+
+#: ../src/manager.c:358
+msgid "Would you like to listen to music or browse the files?"
+msgstr "Ar norite klausyti muzikos, ar naršyti failus?"
+
+#: ../src/manager.c:363
+msgid "Blank CD Inserted"
+msgstr "Įdėtas tuščias CD"
+
+#: ../src/manager.c:364 ../src/manager.c:371
+msgid "You have inserted a blank disc."
+msgstr "Įdėjote tuščią diską."
+
+#: ../src/manager.c:365 ../src/manager.c:372
+msgid "What would you like to do?"
+msgstr "Ką norite daryti?"
+
+#: ../src/manager.c:370
+msgid "Blank DVD Inserted"
+msgstr "Įdėtas tuščias DVD"
+
+#: ../src/manager.c:3566
+#, c-format
+msgid "%d%% of the disk space on %s is in use"
+msgstr "Naudojama %d%% disko vietos esančios %s"
+
+#: ../src/manager.c:3569
+msgid "Low Disk Space"
+msgstr "Diske mažai laisvos vietos"
+
+#: ../src/manager.c:3690
+msgid "Print version and exit"
+msgstr "Parašyti versiją ir išeiti"
+
+#: ../src/manager.c:3692
+msgid "Run as a daemon"
+msgstr "Paleisti kaip demoną"
+
+#: ../src/manager.c:3694
+msgid "Don't run as a daemon"
+msgstr "Nepaleisti kaip demono"
+
+#: ../src/manager.c:3696
+msgid "Run in secret mode"
+msgstr "Paleisti slaptame režime"
+
+#: ../src/manager.c:3728
+#, c-format
+msgid "Unrecognized --daemon argument: %s\n"
+msgstr "Neatpažintas --daemon argumentas: %s\n"
+
+#: ../src/properties.c:318
+msgid "Could not load the main interface"
+msgstr "Nepavyko įkelti pagrindinės sąsajos"
+
+#: ../src/properties.c:320
+msgid "Please make sure that the volume manager is properly installed"
+msgstr "Įsitikinkite, kad laikmenų tvarkyklė įdiegta tvarkingai"
+
+#: ../src/properties.c:479
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr ""
+"Paleidžiant gnome-volume-manager demoną įvyko klaida:\n"
+"%s"
+
+#: ../src/properties.c:510
+msgid "Volume management not supported"
+msgstr "Laikmenų valdymas nepalaikomas"
+
+#: ../src/properties.c:512
+msgid ""
+"The \"hald\" service is required but not currently running. Enable the "
+"service and rerun this application, or contact your system administrator."
+msgstr ""
+"Reikalinga „hald“ paslauga, bet ji šiuo metu nepaleista. Įjunkite šią "
+"paslaugą ir paleiskite šią programą iš naujo arba susisiekite su sistemos "
+"administratoriumi."
+

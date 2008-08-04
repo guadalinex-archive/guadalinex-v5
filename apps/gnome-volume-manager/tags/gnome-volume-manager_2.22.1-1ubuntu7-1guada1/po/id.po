@@ -1,0 +1,887 @@
+# Indonesian translation of gnome-volume-manager.
+# Copyright (C) 2004 THE gnome-volume-manager'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-volume-manager package.
+# Ahmad Riza H Nst  <rizahnst@gnome.org>, 2006
+# Mohammad DAMT <mdamt@bisnisweb.com>, 2004.
+# , fuzzy
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-volume-manager HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-06-13 13:35+0200\n"
+"PO-Revision-Date: 2006-06-13 22:58+0700\n"
+"Last-Translator: Mohammad DAMT <mdamt@bisnisweb.com>\n"
+"Language-Team: Indonesian <kontak@id.gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#: ../gnome-volume-manager.schemas.in.h:1
+msgid "\"Always take this action\" checkbox for Autorun"
+msgstr "Pilihan \"Selalu jalankan ini\" untuk Penjalanan Otomatis"
+
+#: ../gnome-volume-manager.schemas.in.h:2
+msgid "\"Always take this action\" checkbox for iPod Photos"
+msgstr "Pilihan \"Selalu jalankan ini\" untuk Foto iPod"
+
+#: ../gnome-volume-manager.schemas.in.h:3
+msgid "\"Always take this action\" checkbox for mixed Audio and Data CDs"
+msgstr "Pilihan \"Selalu jalankan ini\" untuk campuran CD Audio dan Data"
+
+#: ../gnome-volume-manager.schemas.in.h:4
+msgid "\"Always take this action\" checkbox for photo import from a camera"
+msgstr "Pilihan \"Selalu jalankan ini\" untuk impor foto dari kamera"
+
+#: ../gnome-volume-manager.schemas.in.h:5
+msgid "\"Always take this action\" checkbox for photo import from a device"
+msgstr "Pilihan \"Selalu jalankan ini\" untuk impor foto dari perangkat"
+
+#: ../gnome-volume-manager.schemas.in.h:6
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr ""
+"Daftar path untuk menjalankan binari dan skrip otomatis (gunakan karakter "
+"':' sebagai pembatas)"
+
+#: ../gnome-volume-manager.schemas.in.h:7
+msgid "Action to take when a camera is plugged in."
+msgstr "Aksi yang dijalankan saat kamera dipasang."
+
+#: ../gnome-volume-manager.schemas.in.h:8
+msgid "Action to take when a device containing photos is encountered."
+msgstr "Aksi yang dijalankan saat ada perangkat berisi foto dipasang."
+
+#: ../gnome-volume-manager.schemas.in.h:9
+msgid "Action to take when a device contains an autorun program/script."
+msgstr ""
+"Aksi yang dijalankan saat ada perangkat yang berisi program yang harus "
+"dijalankan otomatis."
+
+#: ../gnome-volume-manager.schemas.in.h:10
+msgid "Action to take when a mixed Audio and Data CD is encountered."
+msgstr "Aksi yang dijalankan saat ada CD berisi data dan audio."
+
+#: ../gnome-volume-manager.schemas.in.h:11
+msgid "Action to take when an iPod Photo is encountered."
+msgstr "Perintah yang dijalankan saat ada iPod berisi foto."
+
+#: ../gnome-volume-manager.schemas.in.h:12
+msgid "Audio CD burn command"
+msgstr "Perintah untuk merekam CD audio"
+
+#: ../gnome-volume-manager.schemas.in.h:13
+msgid "Automount removable drives"
+msgstr "Kaitkan perangkat lepas pasang"
+
+#: ../gnome-volume-manager.schemas.in.h:14
+msgid "Automount removable media"
+msgstr "Media lepas pasang otomatis"
+
+#: ../gnome-volume-manager.schemas.in.h:15
+msgid "Autorun nautilus"
+msgstr "Otomatis jalankan nautilus"
+
+#: ../gnome-volume-manager.schemas.in.h:16
+msgid "Autorun path"
+msgstr "Path program otomatis"
+
+#: ../gnome-volume-manager.schemas.in.h:17
+msgid "CD play command"
+msgstr "Perintah untuk memutar CD"
+
+#: ../gnome-volume-manager.schemas.in.h:18
+msgid "Command to run when a Palm is connected."
+msgstr "Perintah yang dijalankan saat Palm terhubung."
+
+#: ../gnome-volume-manager.schemas.in.h:19
+msgid "Command to run when a PocketPC is connected."
+msgstr "Perintah yang dijalankan saat PocketPC terpasang."
+
+#: ../gnome-volume-manager.schemas.in.h:20
+msgid ""
+"Command to run when a digital camera is connected or media from a digital "
+"camera is inserted."
+msgstr ""
+"Perintah yang dijalankan saat kamera digital tersambung atau saat media pada "
+"kamera digital dimasukkan."
+
+#: ../gnome-volume-manager.schemas.in.h:21
+msgid "Command to run when a keyboard is connected."
+msgstr "Perintah yang dijalankan saat papan ketik dipasang."
+
+#: ../gnome-volume-manager.schemas.in.h:22
+msgid "Command to run when a mouse is connected."
+msgstr "Perintah yang dijalankan saat mouse dipasang."
+
+#: ../gnome-volume-manager.schemas.in.h:23
+msgid "Command to run when a printer is connected."
+msgstr "Perintah yang dijalankan saat pencetak dipasang."
+
+#: ../gnome-volume-manager.schemas.in.h:24
+msgid "Command to run when a scanner is connected."
+msgstr "Perintah yang dijalankan saat pemindai dipasang."
+
+#: ../gnome-volume-manager.schemas.in.h:25
+msgid "Command to run when a tablet is connected."
+msgstr "Perintah yang dijalankan saat tablet terhubung."
+
+#: ../gnome-volume-manager.schemas.in.h:26
+msgid "Command to run when a video DVD is inserted."
+msgstr "Perintah yang dijalankan saat video DVD dimasukkan."
+
+#: ../gnome-volume-manager.schemas.in.h:27
+msgid "Command to run when a video VCD is inserted."
+msgstr "Perintah yang dijalankan saat VCD dipasang."
+
+#: ../gnome-volume-manager.schemas.in.h:28
+msgid "Command to run when a video camera is connected."
+msgstr "Perintah yang dijalankan saat kamera video dipasang."
+
+#: ../gnome-volume-manager.schemas.in.h:29
+msgid "Command to run when an audio CD is inserted."
+msgstr "Perintah yang dijalankan saat CD audio dimasukkan."
+
+#: ../gnome-volume-manager.schemas.in.h:30
+msgid "Command to run when an iPod is connected."
+msgstr "Perintah yang dijalankan saat iPod dipsaang."
+
+#: ../gnome-volume-manager.schemas.in.h:31
+msgid "Command to run when the user wishes to burn a Data CD."
+msgstr "Perintah yang dijalankan untuk merekam CD data."
+
+#: ../gnome-volume-manager.schemas.in.h:32
+msgid "Command to run when the user wishes to burn an Audio CD."
+msgstr "Perintah yang dijalankan untuk merekam CD Audio."
+
+#: ../gnome-volume-manager.schemas.in.h:33
+msgid "DVD play command"
+msgstr "Perintah pemutar DVD"
+
+#: ../gnome-volume-manager.schemas.in.h:34
+msgid "Data CD burn command"
+msgstr "Perintah untuk merekam CD Data"
+
+#: ../gnome-volume-manager.schemas.in.h:35
+msgid "Low Disk Space notification threshold"
+msgstr "Pemberitahuan batas Ruang Disk Sedikit"
+
+#: ../gnome-volume-manager.schemas.in.h:36
+msgid "Open nautilus on removeable media insert."
+msgstr "Jalankan nautilus saat media lepas pasang dimasukkan."
+
+#: ../gnome-volume-manager.schemas.in.h:37
+msgid "Perform autorun"
+msgstr "Jalankan program otomatis"
+
+#: ../gnome-volume-manager.schemas.in.h:38
+msgid "Photo management command"
+msgstr "Perintah manajemen foto"
+
+#: ../gnome-volume-manager.schemas.in.h:39
+msgid "Play inserted audio CD's"
+msgstr "Putar CD audio yang dimasukkan"
+
+#: ../gnome-volume-manager.schemas.in.h:40
+msgid "Play inserted video DVDs"
+msgstr "Putar video DVD yang dimasukkan"
+
+#: ../gnome-volume-manager.schemas.in.h:41
+msgid "Play inserted video VCDs"
+msgstr "Putar VCD yang dimasukkan"
+
+#: ../gnome-volume-manager.schemas.in.h:42
+msgid "Run Palm-sync program"
+msgstr "Jalankan program sinkronisasi Palm"
+
+#: ../gnome-volume-manager.schemas.in.h:43
+msgid "Run PocketPC-sync program"
+msgstr "Jalankan program sync PocketPC"
+
+#: ../gnome-volume-manager.schemas.in.h:44
+msgid "Run a program to burn CDs/DVDs"
+msgstr "Jalankan program untuk merekam CD/DVD"
+
+#: ../gnome-volume-manager.schemas.in.h:45
+msgid "Run iPod program"
+msgstr "Jalankan program iPod"
+
+#: ../gnome-volume-manager.schemas.in.h:46
+msgid "Run keyboard program"
+msgstr "Jalankan program papan ketik"
+
+#: ../gnome-volume-manager.schemas.in.h:47
+msgid "Run mouse program"
+msgstr "Jalankan program mouse"
+
+#: ../gnome-volume-manager.schemas.in.h:48
+msgid "Run photo management command"
+msgstr "Jalankan perintah manajemen foto"
+
+#: ../gnome-volume-manager.schemas.in.h:49
+msgid "Run printer program"
+msgstr "Jalankan program pencetak"
+
+#: ../gnome-volume-manager.schemas.in.h:50
+msgid "Run scanner program"
+msgstr "Jalankan program pemindai"
+
+#: ../gnome-volume-manager.schemas.in.h:51
+msgid "Run tablet program"
+msgstr "Jalankan program tablet"
+
+#: ../gnome-volume-manager.schemas.in.h:52
+msgid "Run video editing program"
+msgstr "Jalankan program penyunting video"
+
+#: ../gnome-volume-manager.schemas.in.h:53
+msgid ""
+"The threshold value for whether or not to toggle the notification on, based "
+"on the amount of additional space used since the last check."
+msgstr ""
+"Nilai batas untuk apakah mengubah pemberitahuan atau tidak, berdasarkan "
+"berapa banyak tambahan ruang sejak pemeriksaan terakhir."
+
+#: ../gnome-volume-manager.schemas.in.h:54
+msgid "Threshold for notification of increased disk usage"
+msgstr "Batas untuk pemberitahuan peningkatan penggunaan disk"
+
+#: ../gnome-volume-manager.schemas.in.h:55
+msgid "Threshold percentage for notifying the user of low disk space."
+msgstr "Batas persentasi untuk memberitahukan pengguna tentang ruang disk sedikit."
+
+#: ../gnome-volume-manager.schemas.in.h:56
+msgid "VCD play command"
+msgstr "Perintah untuk memutar VCD"
+
+#: ../gnome-volume-manager.schemas.in.h:57
+msgid ""
+"Whether autorun programs (binaries and scripts located in 'autorun_path') "
+"are run on newly mounted media."
+msgstr ""
+"Menentukan apakah program otomatis (binari dan skrip yang ada pada "
+"'autorun_path') akan dijalankan pada media yang baru diaktifkan."
+
+#: ../gnome-volume-manager.schemas.in.h:58
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"drives when they are inserted."
+msgstr ""
+"Menentukan apakah gnome-volume-manager akan melakukan pemasangan otomatis "
+"pada perangkat penyimpanan lepas pasang saat disambung ke komputer."
+
+#: ../gnome-volume-manager.schemas.in.h:59
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"media when they are inserted."
+msgstr ""
+"Menentukan apakah gnome-volume-manager akan melakukan pemasangan otomatis "
+"pada media penyimpanan lepas pasang saat disambung ke komputer."
+
+#: ../gnome-volume-manager.schemas.in.h:60
+msgid ""
+"Whether, when a Palm is connected, gnome-volume-manager should run "
+"'autopalmsync_command'."
+msgstr ""
+"Apakah, ketika Palm tersambung, gnome-volume-manager harus menjalankan "
+"'autopalmsync_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:61
+msgid ""
+"Whether, when a PocketPC is connected, gnome-volume-manager should run "
+"'autopocketpc_command'."
+msgstr ""
+"Apakah, ketika PocketPC tersambung, gnome-volume-manager harus menjalankan "
+"'autopocketpc_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:62
+msgid ""
+"Whether, when a blank CD or DVD is inserted, gnome-volume-manager should run "
+"one of the autoburn commands."
+msgstr ""
+"Menentukan apakah gnome-volume-manager akan menjalankan perintah yang "
+"ditentukan saat CD atau DVD kosong dimasukkan."
+
+#: ../gnome-volume-manager.schemas.in.h:63
+msgid ""
+"Whether, when a digital camera is connected or media from a digital camera "
+"is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr ""
+"Menentukan apakah gnome-volume-manager akan menjalankan perintah yang "
+"disebutkan dalam 'autophoto_command' saat kamera digital dipasang atau media "
+"pada kamera digital dimasukkan."
+
+#: ../gnome-volume-manager.schemas.in.h:64
+msgid ""
+"Whether, when a digital video camera is connected, gnome-volume-manager "
+"should run 'autovideocam_command'."
+msgstr ""
+"Menentukan apakah gnome-volume-manager akan menjalankan perintah yang "
+"ditentukan oleh 'autoplay_dvd_command' saat ada kamera video digital yang "
+"dipasang."
+
+#: ../gnome-volume-manager.schemas.in.h:65
+msgid ""
+"Whether, when a keyboard is connected, gnome-volume-manager should run "
+"'autokeyboard_command'."
+msgstr ""
+"Menentukan apakah gnome-volume-manager akan menjalankan perintah yang "
+"ditentukan oleh 'autokeyboard_command' saat ada papan ketik yang dipasang."
+
+#: ../gnome-volume-manager.schemas.in.h:66
+msgid ""
+"Whether, when a mouse is connected, gnome-volume-manager should run "
+"'automouse_command'."
+msgstr ""
+"Menentukan apakah gnome-volume-manager akan menjalankan perintah yang "
+"ditentukan oleh 'automouse_command' saat ada mouse yang dipasang."
+
+#: ../gnome-volume-manager.schemas.in.h:67
+msgid ""
+"Whether, when a printer is connected, gnome-volume-manager should run "
+"'autoprinter_command'."
+msgstr ""
+"Menentukan apakah gnome-volume-manager akan menjalankan perintah yang "
+"ditentukan oleh 'autoprinter_command' saat ada pencetak yang dipasang."
+
+#: ../gnome-volume-manager.schemas.in.h:68
+msgid ""
+"Whether, when a scanner is connected, gnome-volume-manager should run "
+"'autoscanner_command'."
+msgstr ""
+"Menentukan apakah gnome-volume-manager akan menjalankan perintah yang "
+"ditentukan oleh 'autoscanner_command' saat ada pemindai yang dipasang."
+
+#: ../gnome-volume-manager.schemas.in.h:69
+msgid ""
+"Whether, when a tablet is connected, gnome-volume-manager should run "
+"'autotablet_command'."
+msgstr ""
+"Apakah, ketika tablet tersambung, gnome-volume-manager harus menjalankan "
+"'autotablet_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:70
+msgid ""
+"Whether, when a video DVD is inserted, gnome-volume-manager should run "
+"'autoplay_dvd_command'."
+msgstr ""
+"Menentukan apakah gnome-volume-manager akan menjalankan perintah yang "
+"ditentukan oleh 'autoplay_dvd_command' saat ada DVD yang dimasukkan."
+
+#: ../gnome-volume-manager.schemas.in.h:71
+msgid ""
+"Whether, when a video VCD is inserted, gnome-volume-manager should run "
+"'autoplay_vcd_command'."
+msgstr ""
+"Menentukan apakah gnome-volume-manager akan menjalankan "
+"'autoplay_vcd_command' saat VCD dimasukkan."
+
+#: ../gnome-volume-manager.schemas.in.h:72
+msgid ""
+"Whether, when an audio CD is inserted, gnome-volume-manager should run "
+"'autoplay_cda_command'."
+msgstr ""
+"Menentukan apakah gnome-volume-manager akan menjalankan "
+"'autoplay_cda_command' saat CD audio dimasukkan."
+
+#: ../gnome-volume-manager.schemas.in.h:73
+msgid ""
+"Whether, when an iPod is connected, gnome-volume-manager should run "
+"'autoipod_command'."
+msgstr ""
+"Menentukan apakah gnome-volume-manager akan menjalankan perintah yang "
+"ditentukan oleh 'autoipod_command' saat ada iPod yang dipasang."
+
+#: ../gnome-volume-manager.schemas.in.h:74
+msgid "iPod sync command"
+msgstr "Perintah untuk melakukan sinkronisasi iPod"
+
+#: ../gnome-volume-manager.schemas.in.h:75
+msgid "keyboard command"
+msgstr "Perintah papan ketik"
+
+#: ../gnome-volume-manager.schemas.in.h:76
+msgid "mouse command"
+msgstr "Perintah mouse"
+
+#: ../gnome-volume-manager.schemas.in.h:77
+msgid "palm sync command"
+msgstr "Perintah sinkronisasi palm"
+
+#: ../gnome-volume-manager.schemas.in.h:78
+msgid "printer command"
+msgstr "Perintah pencetak"
+
+#: ../gnome-volume-manager.schemas.in.h:79
+msgid "scanner command"
+msgstr "Perintah pemindai"
+
+#: ../gnome-volume-manager.schemas.in.h:80
+msgid "tablet command"
+msgstr "perintah tablet"
+
+#: ../gnome-volume-manager.schemas.in.h:81
+msgid "video camera command"
+msgstr "Perintah kamera video"
+
+#: ../gnome-volume-manager.desktop.in.h:1
+msgid "Volume Manager"
+msgstr "Pengelola Isi"
+
+#: ../gnome-volume-manager.desktop.in.h:2
+msgid "Volume manager for removable drives and media"
+msgstr "Pengelola Isi untuk drive dan media lepas pasang"
+
+#: ../gnome-volume-properties.desktop.in.h:1
+msgid "Configure management of removable drives and media"
+msgstr "Atur pengelolaan perangkat lepas pasang"
+
+#: ../gnome-volume-properties.desktop.in.h:2
+msgid "Removable Drives and Media"
+msgstr "Perangkat dan Media Lepas Pasang"
+
+#: ../gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: ../gnome-volume-properties.glade.h:2
+msgid "<b>Audio CD Discs</b>"
+msgstr "<b>CD Audio</b>"
+
+#: ../gnome-volume-properties.glade.h:3
+msgid "<b>Blank CD and DVD Discs</b>"
+msgstr "<b>CD/DVD Kosong</b>"
+
+#: ../gnome-volume-properties.glade.h:4
+msgid "<b>Digital Camera</b>"
+msgstr "<b>Kamera Digital</b>"
+
+#: ../gnome-volume-properties.glade.h:5
+msgid "<b>Digital Video Camera</b>"
+msgstr "<b>Kamera Video Digital</b>"
+
+#: ../gnome-volume-properties.glade.h:6
+msgid "<b>Keyboards</b>"
+msgstr "<b>Papan Ketik</b>"
+
+#: ../gnome-volume-properties.glade.h:7
+msgid "<b>Mice</b>"
+msgstr "<b>Mouse</b>"
+
+#: ../gnome-volume-properties.glade.h:8
+msgid "<b>Palm™</b>"
+msgstr "<b>Palm™</b>"
+
+#: ../gnome-volume-properties.glade.h:9
+msgid "<b>PocketPC</b>"
+msgstr "<b>PocketPC</b>"
+
+#: ../gnome-volume-properties.glade.h:10
+msgid "<b>Portable Music Players</b>"
+msgstr "<b>Pemutar Musik Portabel</b>"
+
+#: ../gnome-volume-properties.glade.h:11
+msgid "<b>Printers</b>"
+msgstr "<b>Pencetak</b>"
+
+#: ../gnome-volume-properties.glade.h:12
+msgid "<b>Removable Storage</b>"
+msgstr "<b>Media Penyimpanan Lepas Pasang</b>"
+
+#: ../gnome-volume-properties.glade.h:13
+msgid "<b>Scanners</b>"
+msgstr "<b>Pemindai</b>"
+
+#: ../gnome-volume-properties.glade.h:14
+msgid "<b>Tablets</b>"
+msgstr "<b>Tablet</b>"
+
+#: ../gnome-volume-properties.glade.h:15
+msgid "<b>Video DVD Discs</b>"
+msgstr "<b>Video DVD</b>"
+
+#: ../gnome-volume-properties.glade.h:16
+msgid "Automatically run a program when a USB _keyboard is connected"
+msgstr "Jalankan program secara otomatis saat papan _ketik USB dipasang"
+
+#: ../gnome-volume-properties.glade.h:17
+msgid "Automatically run a program when a USB _mouse is connected"
+msgstr "Jalankan program secara otomatis saat _mouse USB dipasang"
+
+#: ../gnome-volume-properties.glade.h:18
+msgid "Automatically run a program when a _printer is connected"
+msgstr "Jalankan program secara otomatis saat _pencetak dipasang"
+
+#: ../gnome-volume-properties.glade.h:19
+msgid "Automatically run a program when a _scanner is connected"
+msgstr "Jalankan program secara otomatis saat _pemindai dipasang"
+
+#: ../gnome-volume-properties.glade.h:20
+msgid "Automatically run a program when a _tablet is connected"
+msgstr "Jalankan program secara otomatis saat _tablet dipasang"
+
+#: ../gnome-volume-properties.glade.h:21
+msgid "Browse _removable media when inserted"
+msgstr "_Buka media lepas pasang saat dimasukkan"
+
+#: ../gnome-volume-properties.glade.h:22
+msgid "C_ommand:"
+msgstr "_Perintah: "
+
+#: ../gnome-volume-properties.glade.h:23
+msgid "Cameras"
+msgstr "Kamera"
+
+#: ../gnome-volume-properties.glade.h:24
+msgid "Comman_d:"
+msgstr "Perinta_h:"
+
+#: ../gnome-volume-properties.glade.h:25
+msgid "Command for A_udio CDs:"
+msgstr "Perintah untuk CD A_udio:"
+
+#: ../gnome-volume-properties.glade.h:26
+msgid "Command for _Data CDs: "
+msgstr "Perintah untuk CD _Data:"
+
+#: ../gnome-volume-properties.glade.h:27
+msgid "Drives and Media Preferences"
+msgstr "Pengaturan Perangkat dan Media"
+
+#: ../gnome-volume-properties.glade.h:28
+msgid "Input Devices"
+msgstr "Perangkat Masukan"
+
+#: ../gnome-volume-properties.glade.h:29
+msgid "Mount removable media when _inserted"
+msgstr "Sambungkan media lepas pasang saat d_imasukkan"
+
+#: ../gnome-volume-properties.glade.h:30
+msgid "Multimedia"
+msgstr "Multimedia"
+
+#: ../gnome-volume-properties.glade.h:31
+msgid "PDAs"
+msgstr "PDA"
+
+#: ../gnome-volume-properties.glade.h:32
+msgid "Play _audio CD discs when inserted"
+msgstr "Mainkan CD _audio saat dimasukkan"
+
+#: ../gnome-volume-properties.glade.h:33
+msgid "Play _music files when connected"
+msgstr "Mainkan berkas _musik ketika tersambung"
+
+#: ../gnome-volume-properties.glade.h:34
+msgid "Play _video DVD disks when inserted"
+msgstr "Mainkan video _DVD saat dimasukkan"
+
+#: ../gnome-volume-properties.glade.h:35
+msgid "Printers & Scanners"
+msgstr "Pencetak & Pemindai"
+
+#: ../gnome-volume-properties.glade.h:36
+msgid "Removable Drives and Media Preferences"
+msgstr "Pengaturan Perangkat dan Media Lepas Pasang"
+
+#: ../gnome-volume-properties.glade.h:37
+msgid "Select program to burn audio CDs"
+msgstr "Pilih program untuk merekam CD audio"
+
+#: ../gnome-volume-properties.glade.h:38
+msgid "Select program to burn data CDs"
+msgstr "Pilih program untuk merekam CD data"
+
+#: ../gnome-volume-properties.glade.h:39
+msgid "Select program to edit videos"
+msgstr "Pilih program untuk menyunting video"
+
+#: ../gnome-volume-properties.glade.h:40
+msgid "Select program to import photos"
+msgstr "Pilih program untuk mengimpor foto"
+
+#: ../gnome-volume-properties.glade.h:41
+msgid "Select program to play DVDs"
+msgstr "Pilih program untuk memutar DVD"
+
+#: ../gnome-volume-properties.glade.h:42
+msgid "Select program to play audio CDs"
+msgstr "Pilih program untuk memutar CD audio"
+
+#: ../gnome-volume-properties.glade.h:43
+msgid "Select program to play music files"
+msgstr "Pilih program untuk memutar berkas musik"
+
+#: ../gnome-volume-properties.glade.h:44
+msgid "Select program to run when a keyboard is plugged in"
+msgstr "Pilih program yang akan dijalankan saat papan ketik dipasang"
+
+#: ../gnome-volume-properties.glade.h:45
+msgid "Select program to run when a mouse is plugged in"
+msgstr "Pilih program yang akan dijalankan saat mouse dipasang"
+
+#: ../gnome-volume-properties.glade.h:46
+msgid "Select program to run when a printer is plugged in"
+msgstr "Pilih program yang akan dijalankan saat pencetak dipasang"
+
+#: ../gnome-volume-properties.glade.h:47
+msgid "Select program to run when a scanner is plugged in"
+msgstr "Pilih program yang akan dijalankan saat pemindai dipasang"
+
+#: ../gnome-volume-properties.glade.h:48
+msgid "Select program to run when a tablet is plugged in"
+msgstr "Pilih program yang akan dijalankan saat tablet dipasang"
+
+#: ../gnome-volume-properties.glade.h:49
+msgid "Select program to sync Palm devices"
+msgstr "Pilih program untuk melakukan sinkronisasi Palm"
+
+#: ../gnome-volume-properties.glade.h:50
+msgid "Storage"
+msgstr "Penyimpanan"
+
+#: ../gnome-volume-properties.glade.h:51
+msgid "Sync PocketP_C devices when connected"
+msgstr "Sync perangkat PocketPC ketika tersambung"
+
+#: ../gnome-volume-properties.glade.h:52
+msgid "Sync _Palm™ devices when connected"
+msgstr "Sync perangkat _Palm™ saat tersambung"
+
+#: ../gnome-volume-properties.glade.h:53
+msgid "_Auto-run programs on new drives and media"
+msgstr "J_alankan program otomatis pada perangkat dan media"
+
+#: ../gnome-volume-properties.glade.h:54
+msgid "_Burn a CD or DVD when a blank disc is inserted"
+msgstr "_Rekam CD atau DVD saat ada disk kosong dimasukkan"
+
+#: ../gnome-volume-properties.glade.h:55
+msgid "_Command:"
+msgstr "_Perintah:"
+
+#: ../gnome-volume-properties.glade.h:56
+msgid "_Edit video when connected"
+msgstr "Sunting vid_eo saat tersambung"
+
+#: ../gnome-volume-properties.glade.h:57
+msgid "_Import digital photographs when connected"
+msgstr "Im_por foto digital saat tersambung"
+
+#: ../gnome-volume-properties.glade.h:58
+msgid "_Mount removable drives when hot-plugged"
+msgstr "Sa_mbungkan perangkat lepas pasang saat dicolokkan"
+
+#: ../src/manager.c:205 ../src/manager.c:210 ../src/manager.c:215
+#: ../src/manager.c:221 ../src/manager.c:227 ../src/manager.c:233
+#: ../src/manager.c:239
+msgid "Ig_nore"
+msgstr "Aba_ikan"
+
+#: ../src/manager.c:206
+msgid "_Allow Auto-Run"
+msgstr "J_alankan Otomatis"
+
+#: ../src/manager.c:211 ../src/manager.c:217 ../src/manager.c:222
+msgid "Import _Photos"
+msgstr "Impor _Foto"
+
+#: ../src/manager.c:216
+msgid "_Open Folder"
+msgstr "_Buka Folder"
+
+#: ../src/manager.c:223
+msgid "Manage _Music"
+msgstr "Atur _Musik"
+
+#: ../src/manager.c:228
+msgid "_Browse Files"
+msgstr "Ram_bah Berkas"
+
+#: ../src/manager.c:229
+msgid "_Play CD"
+msgstr "_Putar CD"
+
+#: ../src/manager.c:234
+msgid "Make _Audio CD"
+msgstr "Buat CD _Audio"
+
+#: ../src/manager.c:235
+msgid "Make _Data CD"
+msgstr "Buat CD _Data"
+
+#: ../src/manager.c:240
+msgid "Make _DVD"
+msgstr "Buat _DVD"
+
+#: ../src/manager.c:292
+msgid "Auto-Run Confirmation"
+msgstr "Konfirmasi Penjalanan Otomatis"
+
+#: ../src/manager.c:293
+msgid "Auto-run capability detected."
+msgstr "Penjalanan otomatis dapat dilakukan."
+
+#: ../src/manager.c:294
+msgid "Would you like to allow <b>'${0}'</b> to run?"
+msgstr "Perbolehkan <b>'${0}'</b> untuk dijalankan otomatis?"
+
+#: ../src/manager.c:299 ../src/manager.c:306
+msgid "Camera Import"
+msgstr "_Impor Kamera"
+
+#: ../src/manager.c:300 ../src/manager.c:307
+msgid "A camera has been detected."
+msgstr "Ada kamera terpasang."
+
+#: ../src/manager.c:301 ../src/manager.c:308
+msgid ""
+"There are photos on the camera. Would you like to add these pictures to your "
+"album?"
+msgstr "Ada foto dalam kamera. Masukkan foto-foto tersebut dalam album?"
+
+#: ../src/manager.c:302 ../src/manager.c:309 ../src/manager.c:316
+#: ../src/manager.c:323 ../src/manager.c:330
+msgid "_Always perform this action"
+msgstr "Sel_alu lakukan ini"
+
+#: ../src/manager.c:313
+msgid "Photo Import"
+msgstr "Impor Foto"
+
+#: ../src/manager.c:314
+msgid "A photo card has been detected."
+msgstr "Ada kartu foto yang terdeteksi."
+
+#: ../src/manager.c:315
+msgid ""
+"There are photos on the card. Would you like to add these pictures to your "
+"album?"
+msgstr "Ada foto dalam kartu ini. Masukkan foto-foto tersebut dalam album?"
+
+#: ../src/manager.c:320
+msgid "Photos and Music"
+msgstr "Foto dan Musik"
+
+#: ../src/manager.c:321
+msgid "Photos were found on your music device."
+msgstr "Ada foto dalam perangkat musik Anda."
+
+#: ../src/manager.c:322
+msgid "Would you like to import the photos or manage its music?"
+msgstr "Impor foto-foto tersebut? Atau atur berkas musik di dalamnya?"
+
+#: ../src/manager.c:327
+msgid "Audio / Data CD"
+msgstr "CD Audio/Data"
+
+#: ../src/manager.c:328
+msgid "The CD in the drive contains both music and files."
+msgstr "CD dalam perangkat CD berisi musik dan berkas."
+
+#: ../src/manager.c:329
+msgid "Would you like to listen to music or browse the files?"
+msgstr "Dengarkan musiknya atau lihat isi berkasnya?"
+
+#: ../src/manager.c:334 ../src/manager.c:341
+msgid "Choose Disc Type"
+msgstr "Pilih Jenis Cakram"
+
+#: ../src/manager.c:335 ../src/manager.c:342
+msgid "You have inserted a blank disc."
+msgstr "Anda memasukkan disk yang kosong."
+
+#: ../src/manager.c:336 ../src/manager.c:343
+msgid "What would you like to do?"
+msgstr "Apa yang hendak Anda lakukan?"
+
+#: ../src/manager.c:2871
+#, c-format
+msgid "%d%% of the disk space on %s is in use"
+msgstr "%d%% dari ruang disk pada %s sudah digunakan"
+
+#: ../src/manager.c:2973
+msgid "Print version and exit"
+msgstr "Cetak versi dan keluar"
+
+#: ../src/manager.c:2975
+msgid "Run as a daemon"
+msgstr "Jalankan sebagai daemon"
+
+#: ../src/manager.c:2977
+msgid "Don't run as a daemon"
+msgstr "Jangan jalan sebagai daemon"
+
+#: ../src/manager.c:2979
+msgid "Run in secret mode"
+msgstr "Jalankan dalam mode rahasia"
+
+#: ../src/manager.c:3011
+#, c-format
+msgid "Unrecognized --daemon argument: %s\n"
+msgstr "Tidak dikenali argumen --daemon: %s\n"
+
+#: ../src/properties.c:305
+msgid "Could not load the main interface"
+msgstr "Tidak dapat membuka antarmuka utama"
+
+#: ../src/properties.c:307
+msgid "Please make sure that the volume manager is properly installed"
+msgstr "Pastikan program ini telah terpasang dengan benar"
+
+#: ../src/properties.c:466
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr ""
+"Ada error saat menjalankan daemon gnome-volume-manager:\n"
+"%s"
+
+#: ../src/properties.c:497
+msgid "Volume management not supported"
+msgstr "Pengaturan volume tidak dapat dilakukan"
+
+#: ../src/properties.c:499
+msgid ""
+"The \"hald\" service is required but not currently running. Enable the "
+"service and rerun this application, or contact your system administrator.\n"
+"\n"
+"Note: You need Linux kernel 2.6 for volume management to work."
+msgstr ""
+"Layanan \"hald\" harus dijalankan terlebih dahulu. Aktifkan layanan ini dan "
+"ulangi jalankan aplikasi ini, atau hubungi administrator sistem/bagian TI "
+"Anda.\n"
+"\n"
+"Catatan: Untuk dapat berjalan baik, dibutuhkan kernel Linux 2.6."
+
+#~ msgid "Command to run when the eject button on a optical drive is pressed."
+#~ msgstr ""
+#~ "Perintah yang dijalankan saat tombol 'eject' pada perangkat optik ditekan."
+
+#~ msgid "<b>iPod™</b>"
+#~ msgstr "<b>iPod™</b>"
+
+#~ msgid "Comma_nd:"
+#~ msgstr "Peri_ntah:"
+
+#~ msgid "Command:"
+#~ msgstr "Perintah:"
+
+#~ msgid "Select program to sync iPod"
+#~ msgstr "Pilih program untuk melakukan sinkronisasi dengan iPod"
+
+#~ msgid " Perform action on _blank CDs when inserted"
+#~ msgstr " _Lakukan tindakan saat CD kosong dimasukkan"
+
+#~ msgid "*"
+#~ msgstr "*"
+
+#~ msgid "Play DVD Videos when inserted"
+#~ msgstr "Mainkan video DVD saat dimasukkan"
+
+#~ msgid "Play a_udio CDs when inserted"
+#~ msgstr "Mainkan CD a_udio saat dimasukkan"
+
+#~ msgid "Do you want to run %s?"
+#~ msgstr "Jalankan %s?"

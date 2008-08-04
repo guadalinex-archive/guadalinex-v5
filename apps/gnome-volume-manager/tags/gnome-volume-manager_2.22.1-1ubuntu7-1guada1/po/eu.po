@@ -1,0 +1,925 @@
+# translation of eu.po to Basque
+# Copyright (C) 2004, 2006, 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gnome-volume-manager package.
+#
+# Mikel Olasagasti <hey_neken@mundurat.net>, 2004.
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2004, 2006, 2007.
+# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: eu\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-08-04 17:13+0200\n"
+"PO-Revision-Date: 2007-08-04 17:15+0200\n"
+"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
+"Language-Team: Basque <eu@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"\n"
+
+#: ../gnome-volume-manager.schemas.in.h:1
+msgid "\"Always take this action\" checkbox for Autorun"
+msgstr "Autorun-en \"Beti egin ekintza hau\" kontrol-koadroa"
+
+#: ../gnome-volume-manager.schemas.in.h:2
+msgid "\"Always take this action\" checkbox for iPod Photos"
+msgstr "'iPod Photos'-en \"Beti egin ekintza hau\" kontrol-koadroa"
+
+#: ../gnome-volume-manager.schemas.in.h:3
+msgid "\"Always take this action\" checkbox for mixed Audio and Data CDs"
+msgstr "Audio eta datuen CD nahasiaren \"Beti egin ekintza hau\" kontrol-koadroa"
+
+#: ../gnome-volume-manager.schemas.in.h:4
+msgid "\"Always take this action\" checkbox for photo import from a camera"
+msgstr "Kameratik argazkiak inportatzeko \"Beti egin ekintza hau\" kontrol-koadroa"
+
+#: ../gnome-volume-manager.schemas.in.h:5
+msgid "\"Always take this action\" checkbox for photo import from a device"
+msgstr ""
+"Gailu batetik argazkiak inportatzeko  \"Beti egin ekintza hau\" kontrol-"
+"koadroa"
+
+#: ../gnome-volume-manager.schemas.in.h:6
+msgid "':' delimited list of paths to check for autoopen files."
+msgstr ""
+"':'-rekin bide-izenen zerrenda mugatzen du automatikoki irekitako "
+"fitxategiak egiaztatzeko."
+
+#: ../gnome-volume-manager.schemas.in.h:7
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr ""
+"':'-rekin delimitatutako bide-izenen zerrendak binario eta skript-en auto-"
+"exekuzioak egiaztatzeko."
+
+#: ../gnome-volume-manager.schemas.in.h:8
+msgid "Action to take when a camera is plugged in."
+msgstr "Landuko den ekintza kamera konektatzean."
+
+#: ../gnome-volume-manager.schemas.in.h:9
+msgid "Action to take when a device containing photos is encountered."
+msgstr "Landuko den ekintza argazkiak dituen gailua detektatzean."
+
+#: ../gnome-volume-manager.schemas.in.h:10
+msgid "Action to take when a device contains an autorun program/script."
+msgstr "Landuko den ekintza gailu batek Autorun programa/script-a duenean"
+
+#: ../gnome-volume-manager.schemas.in.h:11
+msgid "Action to take when a mixed Audio and Data CD is encountered."
+msgstr "Landuko den ekintza audio eta datuen CD nahasia aurkitzean."
+
+#: ../gnome-volume-manager.schemas.in.h:12
+msgid "Action to take when an iPod Photo is encountered."
+msgstr "Landuko den ekintza iPod Photo detektatzean."
+
+#: ../gnome-volume-manager.schemas.in.h:13
+msgid "Audio CD burn command"
+msgstr "Audio-CDa grabatzeko komandoa"
+
+#: ../gnome-volume-manager.schemas.in.h:14
+msgid "Automount removable drives"
+msgstr "Automatikoki muntatu unitate aldagarriak"
+
+#: ../gnome-volume-manager.schemas.in.h:15
+msgid "Automount removable media"
+msgstr "Automatikoki muntatu euskarri aldagarriak"
+
+#: ../gnome-volume-manager.schemas.in.h:16
+msgid "Autoopen path"
+msgstr "Auto-irekitzeko bide-izena"
+
+#: ../gnome-volume-manager.schemas.in.h:17
+msgid "Autorun nautilus"
+msgstr "Auto-exekutatu nautilus"
+
+#: ../gnome-volume-manager.schemas.in.h:18
+msgid "Autorun path"
+msgstr "Auto-exekuzioaren bide-izena"
+
+#: ../gnome-volume-manager.schemas.in.h:19
+msgid "CD play command"
+msgstr "CD erreproduzitzeko komandoa"
+
+#: ../gnome-volume-manager.schemas.in.h:20
+msgid "Command to run when a Palm is connected."
+msgstr "Exekutatuko den komandoa Palm bat konektatzean."
+
+#: ../gnome-volume-manager.schemas.in.h:21
+msgid "Command to run when a PocketPC is connected."
+msgstr "Exekutatuko den komandoa PocketPC bat konektatzean."
+
+#: ../gnome-volume-manager.schemas.in.h:22
+msgid ""
+"Command to run when a digital camera is connected or media from a digital "
+"camera is inserted."
+msgstr ""
+"Exekutatuko den komandoa kamera digital bat edo kamera digital baten "
+"euskarria sartzean."
+
+#: ../gnome-volume-manager.schemas.in.h:23
+msgid "Command to run when a keyboard is connected."
+msgstr "Exekutatuko den komandoa teklatu bat konektatzean."
+
+#: ../gnome-volume-manager.schemas.in.h:24
+msgid "Command to run when a mouse is connected."
+msgstr "Exekutatuko den komandoa sagu bat konektatzean."
+
+#: ../gnome-volume-manager.schemas.in.h:25
+msgid "Command to run when a printer is connected."
+msgstr "Exekutatuko den komandoa inprimagailu bat konektatzean."
+
+#: ../gnome-volume-manager.schemas.in.h:26
+msgid "Command to run when a scanner is connected."
+msgstr "Exekutatuko den komandoa eskaner bat konektatzean."
+
+#: ../gnome-volume-manager.schemas.in.h:27
+msgid "Command to run when a tablet is connected."
+msgstr "Exekutatuko den komandoa tableta bat konektatzean."
+
+#: ../gnome-volume-manager.schemas.in.h:28
+msgid "Command to run when a video DVD is inserted."
+msgstr "Exekutatuko den komandoa bideo DVD bat sartzean."
+
+#: ../gnome-volume-manager.schemas.in.h:29
+msgid "Command to run when a video VCD is inserted."
+msgstr "Exekutatuko den komandoa bideo VCD bat sartzean."
+
+#: ../gnome-volume-manager.schemas.in.h:30
+msgid "Command to run when a video camera is connected."
+msgstr "Exekutatuko den komandoa bideo-kamera bat konektatzean."
+
+#: ../gnome-volume-manager.schemas.in.h:31
+msgid "Command to run when a web camera is connected."
+msgstr "Exekutatuko den komandoa web-kamera konektatzean."
+
+#: ../gnome-volume-manager.schemas.in.h:32
+msgid "Command to run when an audio CD is inserted."
+msgstr "Exekutatuko den komandoa audio CD bat sartzean."
+
+#: ../gnome-volume-manager.schemas.in.h:33
+msgid "Command to run when an iPod is connected."
+msgstr "Exekutatuko den komandoa iPod bat konektatzean."
+
+#: ../gnome-volume-manager.schemas.in.h:34
+msgid "Command to run when the user wishes to burn a Data CD."
+msgstr "Exekutatuko den komandoa datuen CD bat grabatzeko"
+
+#: ../gnome-volume-manager.schemas.in.h:35
+msgid "Command to run when the user wishes to burn an Audio CD."
+msgstr "Exekutatuko den komandoa audioko CD bat grabatzeko."
+
+#: ../gnome-volume-manager.schemas.in.h:36
+msgid "DVD play command"
+msgstr "DVDa erreproduzitzeko komandoa"
+
+#: ../gnome-volume-manager.schemas.in.h:37
+msgid "Data CD burn command"
+msgstr "Datuen CDa grabatzeko komandoa"
+
+#: ../gnome-volume-manager.schemas.in.h:38
+msgid "Low Disk Space notification threshold"
+msgstr "Diskoak leku baxua duen jakinarazpenaren muga"
+
+#: ../gnome-volume-manager.schemas.in.h:39
+msgid "Open nautilus on removeable media insert."
+msgstr "Ireki nautilus euskarri aldagarriak sartzean"
+
+#: ../gnome-volume-manager.schemas.in.h:40
+msgid "Perform autoopen"
+msgstr "Burutu auto-irekitzea"
+
+#: ../gnome-volume-manager.schemas.in.h:41
+msgid "Perform autorun"
+msgstr "Burutu auto-exekuzioa"
+
+#: ../gnome-volume-manager.schemas.in.h:42
+msgid "Photo management command"
+msgstr "Argazki kudeatzailearen komandoa"
+
+#: ../gnome-volume-manager.schemas.in.h:43
+msgid "Play inserted audio CD's"
+msgstr "Erreproduzitu sartutako audio CDa"
+
+#: ../gnome-volume-manager.schemas.in.h:44
+msgid "Play inserted video DVDs"
+msgstr "Erreproduzitu sartutako bideo DVDak"
+
+#: ../gnome-volume-manager.schemas.in.h:45
+msgid "Play inserted video VCDs"
+msgstr "Erreproduzitu sartutako bideo VCDak"
+
+#: ../gnome-volume-manager.schemas.in.h:46
+msgid "Run Palm-sync program"
+msgstr "Exekutatu Palm-sync programa"
+
+#: ../gnome-volume-manager.schemas.in.h:47
+msgid "Run PocketPC-sync program"
+msgstr "Exekutatu PocketPC-sync programa"
+
+#: ../gnome-volume-manager.schemas.in.h:48
+msgid "Run a program to burn CDs/DVDs"
+msgstr "Exekutatu CDak/DVDak grabatzeko programa"
+
+#: ../gnome-volume-manager.schemas.in.h:49
+msgid "Run iPod program"
+msgstr "Exekutatu iPod-en programa"
+
+#: ../gnome-volume-manager.schemas.in.h:50
+msgid "Run keyboard program"
+msgstr "Exekutatu teklatuaren programa"
+
+#: ../gnome-volume-manager.schemas.in.h:51
+msgid "Run mouse program"
+msgstr "Exekutatu saguaren programa"
+
+#: ../gnome-volume-manager.schemas.in.h:52
+msgid "Run photo management command"
+msgstr "Exekutatu argazkiak kudeatzeko komandoa"
+
+#: ../gnome-volume-manager.schemas.in.h:53
+msgid "Run printer program"
+msgstr "Exekutatu inprimagailuaren programa"
+
+#: ../gnome-volume-manager.schemas.in.h:54
+msgid "Run scanner program"
+msgstr "Exekutatu eskanerraren programa"
+
+#: ../gnome-volume-manager.schemas.in.h:55
+msgid "Run tablet program"
+msgstr "Exekutatu tabletaren programa"
+
+#: ../gnome-volume-manager.schemas.in.h:56
+msgid "Run video editing program"
+msgstr "Exekutatu bideo-edizioaren programa"
+
+#: ../gnome-volume-manager.schemas.in.h:57
+msgid "Run webcam stream display program"
+msgstr "Exekutatu web-kameraren korrontea bistaratzeko programa"
+
+#: ../gnome-volume-manager.schemas.in.h:58
+msgid ""
+"The threshold value for whether or not to toggle the notification on, based "
+"on the amount of additional space used since the last check."
+msgstr ""
+"Mugaren balioa jakinarazpena aktibatzeko edo desaktibatzeko, egin zen azken "
+"egiaztaketatik erabilitako leku gehigarria."
+
+#: ../gnome-volume-manager.schemas.in.h:59
+msgid "Threshold for notification of increased disk usage"
+msgstr "Diskoaren erabilpena handitzearen jakinarazpenaren muga"
+
+#: ../gnome-volume-manager.schemas.in.h:60
+msgid "Threshold percentage for notifying the user of low disk space."
+msgstr "Diskoak leku gutxi duela erabiltzaileari jakinarazteko mugaren ehunekoa"
+
+#: ../gnome-volume-manager.schemas.in.h:61
+msgid "VCD play command"
+msgstr "VCD erreproduzitzeko komandoa"
+
+#: ../gnome-volume-manager.schemas.in.h:62
+msgid "Whether autoopen files should be opened on newly mounted media."
+msgstr ""
+"Euskarri berriak muntatzean fitxategiak automatikoki ireki behar diren edo "
+"ez."
+
+#: ../gnome-volume-manager.schemas.in.h:63
+msgid ""
+"Whether autorun programs (binaries and scripts located in 'autorun_path') "
+"are run on newly mounted media."
+msgstr ""
+"Euskarri berriak muntatzean programak ('auto-exekutableen bide-izena'-n "
+"dauden binario eta skript-ak) exekutatu behar diren ala ez."
+
+#: ../gnome-volume-manager.schemas.in.h:64
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"drives when they are inserted."
+msgstr ""
+"gnome-volume-manager-ek automatikoki biltegiratze unitate aldagarriak "
+"sartzean muntatu behar dituen  ala ez"
+
+#: ../gnome-volume-manager.schemas.in.h:65
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"media when they are inserted."
+msgstr ""
+"gnome-volume-manager-ek automatikoki biltegiratze euskarri aldagarriak "
+"sartzean muntatu behar dituen  ala ez."
+
+#: ../gnome-volume-manager.schemas.in.h:66
+msgid ""
+"Whether, when a Palm is connected, gnome-volume-manager should run "
+"'autopalmsync_command'."
+msgstr ""
+"Palm bat konektatzean gnome-volume-manager-ek 'autopalmsync_command' "
+"exekutatu behar duen ala ez"
+
+#: ../gnome-volume-manager.schemas.in.h:67
+msgid ""
+"Whether, when a PocketPC is connected, gnome-volume-manager should run "
+"'autopocketpc_command'."
+msgstr ""
+"PocketPC bat konektatzean gnome-volume-manager-ek 'autopocketpc_command' "
+"exekutatu behar duen ala ez"
+
+#: ../gnome-volume-manager.schemas.in.h:68
+msgid ""
+"Whether, when a blank CD or DVD is inserted, gnome-volume-manager should run "
+"one of the autoburn commands."
+msgstr ""
+"CD edo DVD huts bat sartzean, gnome-volume-manager-ek grabazio-"
+"automatikorako komandoetariko bat exekutatu behar duen ala ez."
+
+#: ../gnome-volume-manager.schemas.in.h:69
+msgid ""
+"Whether, when a digital camera is connected or media from a digital camera "
+"is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr ""
+"Kamera digital bat konektatzean edo kamera digital baten euskarria sartzean, "
+"gnome-volume-manager-ek 'autophoto_command' exekutatu behar duen ala ez."
+
+#: ../gnome-volume-manager.schemas.in.h:70
+msgid ""
+"Whether, when a digital video camera is connected, gnome-volume-manager "
+"should run 'autovideocam_command'."
+msgstr ""
+"Bideo-kamera digital bat konektatzean gnome-volume-manager-ek "
+"'autovideocam_command' exekutatu behar duen ala ez."
+
+#: ../gnome-volume-manager.schemas.in.h:71
+msgid ""
+"Whether, when a keyboard is connected, gnome-volume-manager should run "
+"'autokeyboard_command'."
+msgstr ""
+"Teklatu bat konektatzean gnome-volume-manager-ek 'autokeyboard_command' "
+"exekutatu behar duen ala ez."
+
+#: ../gnome-volume-manager.schemas.in.h:72
+msgid ""
+"Whether, when a mouse is connected, gnome-volume-manager should run "
+"'automouse_command'."
+msgstr ""
+"Sagu bat konektatzean gnome-volume-manager-ek 'automouse_command' exekutatu "
+"behar duen ala ez."
+
+#: ../gnome-volume-manager.schemas.in.h:73
+msgid ""
+"Whether, when a printer is connected, gnome-volume-manager should run "
+"'autoprinter_command'."
+msgstr ""
+"Inprimagailu bat konektatzean gnome-volume-manager-ek 'autoprinter_command' "
+"exekutatu behar duen ala ez."
+
+#: ../gnome-volume-manager.schemas.in.h:74
+msgid ""
+"Whether, when a scanner is connected, gnome-volume-manager should run "
+"'autoscanner_command'."
+msgstr ""
+"Eskaner bat konektatzean gnome-volume-manager-ek 'autoscanner_command' "
+"exekutatu behar duen ala ez."
+
+#: ../gnome-volume-manager.schemas.in.h:75
+msgid ""
+"Whether, when a tablet is connected, gnome-volume-manager should run "
+"'autotablet_command'."
+msgstr ""
+"Tableta bat konektatzean gnome-volume-manager-ek 'autotablet_command' "
+"exekutatu behar duen ala ez."
+
+#: ../gnome-volume-manager.schemas.in.h:76
+msgid ""
+"Whether, when a video DVD is inserted, gnome-volume-manager should run "
+"'autoplay_dvd_command'."
+msgstr ""
+"Bideo DVD bat sartzean, gnome-volume-manager-ek 'autoplay_dvd_command' "
+"exekutatu behar duen ala ez"
+
+#: ../gnome-volume-manager.schemas.in.h:77
+msgid ""
+"Whether, when a video VCD is inserted, gnome-volume-manager should run "
+"'autoplay_vcd_command'."
+msgstr ""
+"Bideo VCD bat sartzean, gnome-volume-manager-ek 'autoplay_vcd_command' "
+"exekutatu behar duen ala ez"
+
+#: ../gnome-volume-manager.schemas.in.h:78
+msgid ""
+"Whether, when a web camera is connected, gnome-volume-manager should run "
+"'autowebcam_command'."
+msgstr ""
+"Web-kamera konektatzean gnome-volume-manager-ek 'autowebcam_command' "
+"exekutatu behar duen ala ez."
+
+#: ../gnome-volume-manager.schemas.in.h:79
+msgid ""
+"Whether, when an audio CD is inserted, gnome-volume-manager should run "
+"'autoplay_cda_command'."
+msgstr ""
+"Audio CD bat sartzean, gnome-volume-manager-ek 'autoplay_cda' exekutatu "
+"behar duen ala ez"
+
+#: ../gnome-volume-manager.schemas.in.h:80
+msgid ""
+"Whether, when an iPod is connected, gnome-volume-manager should run "
+"'autoipod_command'."
+msgstr ""
+"iPod bat konektatzean gnome-volume-manager-ek 'autoipod_command' exekutatu "
+"behar duen ala ez"
+
+#: ../gnome-volume-manager.schemas.in.h:81
+msgid "iPod sync command"
+msgstr "iPod-ekin sinkronizatzeko komandoa"
+
+#: ../gnome-volume-manager.schemas.in.h:82
+msgid "keyboard command"
+msgstr "Teklatuaren komandoa"
+
+#: ../gnome-volume-manager.schemas.in.h:83
+msgid "mouse command"
+msgstr "Saguaren komandoa"
+
+#: ../gnome-volume-manager.schemas.in.h:84
+msgid "palm sync command"
+msgstr "Palm-ekin sinkronizatzeko komandoa"
+
+#: ../gnome-volume-manager.schemas.in.h:85
+msgid "printer command"
+msgstr "Inprimagailuaren komandoa"
+
+#: ../gnome-volume-manager.schemas.in.h:86
+msgid "scanner command"
+msgstr "Eskanerraren komandoa"
+
+#: ../gnome-volume-manager.schemas.in.h:87
+msgid "tablet command"
+msgstr "Tabletaren komandoa"
+
+#: ../gnome-volume-manager.schemas.in.h:88
+msgid "video camera command"
+msgstr "Bideo-kameraren komandoa"
+
+#: ../gnome-volume-manager.schemas.in.h:89
+msgid "web camera command"
+msgstr "Web-kameraren komandoa"
+
+#: ../gnome-volume-manager.desktop.in.in.h:1
+msgid "Volume Manager"
+msgstr "Bolumen-kudeatzailea"
+
+#: ../gnome-volume-manager.desktop.in.in.h:2
+msgid "Volume manager for removable drives and media"
+msgstr "Unitate eta euskarri aldagarrien bolumen-kudeatzailea"
+
+#: ../gnome-volume-properties.desktop.in.h:1
+msgid "Configure management of removable drives and media"
+msgstr "Konfiguratu unitate eta euskarri aldagarrien kudeatzailea"
+
+#: ../gnome-volume-properties.desktop.in.h:2
+msgid "Removable Drives and Media"
+msgstr "Unitate eta euskarri aldagarriak"
+
+#: ../gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: ../gnome-volume-properties.glade.h:2
+msgid "<b>Audio CD Discs</b>"
+msgstr "<b>Audio CD diskoak</b>"
+
+#: ../gnome-volume-properties.glade.h:3
+msgid "<b>Blank CD and DVD Discs</b>"
+msgstr "<b>CD eta DVD disko hutsak</b>"
+
+#: ../gnome-volume-properties.glade.h:4
+msgid "<b>Digital Camera</b>"
+msgstr "<b>Kamera digitala</b>"
+
+#: ../gnome-volume-properties.glade.h:5
+msgid "<b>Digital Video Camera</b>"
+msgstr "<b>Bideo-kamera digitala</b>"
+
+#: ../gnome-volume-properties.glade.h:6
+msgid "<b>Keyboards</b>"
+msgstr "<b>Teklatuak</b>"
+
+#: ../gnome-volume-properties.glade.h:7
+msgid "<b>Mice</b>"
+msgstr "<b>Saguak</b>"
+
+#: ../gnome-volume-properties.glade.h:8
+msgid "<b>Palm™</b>"
+msgstr "<b>Palm™</b>"
+
+#: ../gnome-volume-properties.glade.h:9
+msgid "<b>PocketPC</b>"
+msgstr "<b>PocketPC</b>"
+
+#: ../gnome-volume-properties.glade.h:10
+msgid "<b>Portable Music Players</b>"
+msgstr "<b>Musika erreproduzigailu eramangarriak</b>"
+
+#: ../gnome-volume-properties.glade.h:11
+msgid "<b>Printers</b>"
+msgstr "<b>Inprimagailuak</b>"
+
+#: ../gnome-volume-properties.glade.h:12
+msgid "<b>Removable Storage</b>"
+msgstr "<b>Biltegiratze aldagarria</b>"
+
+#: ../gnome-volume-properties.glade.h:13
+msgid "<b>Scanners</b>"
+msgstr "<b>Eskanerrak</b>"
+
+#: ../gnome-volume-properties.glade.h:14
+msgid "<b>Tablets</b>"
+msgstr "<b>Tabletak</b>"
+
+#: ../gnome-volume-properties.glade.h:15
+msgid "<b>Video DVD Discs</b>"
+msgstr "<b>Bideo DVD diskoak</b>"
+
+#: ../gnome-volume-properties.glade.h:16
+msgid "<b>Web Camera</b>"
+msgstr "<b>Web-kamera</b>"
+
+#: ../gnome-volume-properties.glade.h:17
+msgid "Auto-_open files on new drives and media"
+msgstr "Auto-_ireki fitxategiak unitate eta euskarri berriak daudenean"
+
+#: ../gnome-volume-properties.glade.h:18
+msgid "Automatically run a program when a USB _keyboard is connected"
+msgstr "Exekutatu automatikoki programa bat USB motako _teklatua konektatzean"
+
+#: ../gnome-volume-properties.glade.h:19
+msgid "Automatically run a program when a USB _mouse is connected"
+msgstr "Exekutatu automatikoki programa bat USB motako _sagua konektatzean"
+
+#: ../gnome-volume-properties.glade.h:20
+msgid "Automatically run a program when a _printer is connected"
+msgstr "Exekutatu automatikoki programa bat _inprimagailua konektatzean"
+
+#: ../gnome-volume-properties.glade.h:21
+msgid "Automatically run a program when a _scanner is connected"
+msgstr "Exekutatu automatikoki programa bat _eskanerra konektatzean"
+
+#: ../gnome-volume-properties.glade.h:22
+msgid "Automatically run a program when a _tablet is connected"
+msgstr "Exekutatu automatikoki programa bat ta_bleta konektatzean"
+
+#: ../gnome-volume-properties.glade.h:23
+msgid "Browse _removable media when inserted"
+msgstr "Arakatu euska_rri aldagarriak sartzean"
+
+#: ../gnome-volume-properties.glade.h:24
+msgid "C_ommand:"
+msgstr "_Komandoa:"
+
+#: ../gnome-volume-properties.glade.h:25
+msgid "Cameras"
+msgstr "Kamerak"
+
+#: ../gnome-volume-properties.glade.h:26
+msgid "Comman_d:"
+msgstr "Koman_doa:"
+
+#: ../gnome-volume-properties.glade.h:27
+msgid "Command for A_udio CDs:"
+msgstr "Komandoa Audio CDentzako:"
+
+#: ../gnome-volume-properties.glade.h:28
+msgid "Command for _Data CDs: "
+msgstr "Komandoa _datuen CDentzako:"
+
+#: ../gnome-volume-properties.glade.h:29
+msgid "Drives and Media Preferences"
+msgstr "Unitateen eta euskarrien hobespenak"
+
+#: ../gnome-volume-properties.glade.h:30
+msgid "Input Devices"
+msgstr "Sarrerako gailuak"
+
+#: ../gnome-volume-properties.glade.h:31
+msgid "Mount removable media when _inserted"
+msgstr "Muntatu euskarri aldagarriak sartzean"
+
+#: ../gnome-volume-properties.glade.h:32
+msgid "Multimedia"
+msgstr "Multimedia"
+
+#: ../gnome-volume-properties.glade.h:33
+msgid "PDAs"
+msgstr "PDAk"
+
+#: ../gnome-volume-properties.glade.h:34
+msgid "Play _audio CD discs when inserted"
+msgstr "Erreproduzitu _Audio CDak sartzean"
+
+#: ../gnome-volume-properties.glade.h:35
+msgid "Play _music files when connected"
+msgstr "Erreproduzitu _musika-fitxategiak konektatzean"
+
+#: ../gnome-volume-properties.glade.h:36
+msgid "Play _video DVD discs when inserted"
+msgstr "Erreproduzitu _DVD bideo diskoak sartzean"
+
+#: ../gnome-volume-properties.glade.h:37
+msgid "Printers & Scanners"
+msgstr "Inprimagailuak eta eskanerrak"
+
+#: ../gnome-volume-properties.glade.h:38
+msgid "Removable Drives and Media Preferences"
+msgstr "Unitate eta euskarri aldagarrien hobespenak"
+
+#: ../gnome-volume-properties.glade.h:39
+msgid "Select program to burn audio CDs"
+msgstr "Hautatu programa Audio CDak grabatzeko"
+
+#: ../gnome-volume-properties.glade.h:40
+msgid "Select program to burn data CDs"
+msgstr "Hautatu programa datuen CDak grabatzeko"
+
+#: ../gnome-volume-properties.glade.h:41
+msgid "Select program to edit videos"
+msgstr "Hautatu programa bideoak editatzeko"
+
+#: ../gnome-volume-properties.glade.h:42
+msgid "Select program to import photos"
+msgstr "Hautatu programa argazkiak inportatzeko"
+
+#: ../gnome-volume-properties.glade.h:43
+msgid "Select program to play DVDs"
+msgstr "Hautatu programa DVDak erreproduzitzeko"
+
+#: ../gnome-volume-properties.glade.h:44
+msgid "Select program to play audio CDs"
+msgstr "Hautatu programa Audio CDak erreproduzitzeko"
+
+#: ../gnome-volume-properties.glade.h:45
+msgid "Select program to play music files"
+msgstr "Hautatu programa musika-fitxategiak erreproduzitzeko"
+
+#: ../gnome-volume-properties.glade.h:46
+msgid "Select program to run when a keyboard is plugged in"
+msgstr "Hautatu programa teklatua konektatzean exekutatzeko"
+
+#: ../gnome-volume-properties.glade.h:47
+msgid "Select program to run when a mouse is plugged in"
+msgstr "Hautatu programa sagua konektatzean exekutatzeko"
+
+#: ../gnome-volume-properties.glade.h:48
+msgid "Select program to run when a printer is plugged in"
+msgstr "Hautatu programa inprimagailua konektatzean exekutatzeko"
+
+#: ../gnome-volume-properties.glade.h:49
+msgid "Select program to run when a scanner is plugged in"
+msgstr "Hautatu programa eskanerra konektatzean exekutatzeko"
+
+#: ../gnome-volume-properties.glade.h:50
+msgid "Select program to run when a tablet is plugged in"
+msgstr "Hautatu programa tableta konektatzean exekutatzeko"
+
+#: ../gnome-volume-properties.glade.h:51
+msgid "Select program to sync Palm devices"
+msgstr "Hautatu programa Palm gailuekin sinkronizatzeko"
+
+#: ../gnome-volume-properties.glade.h:52
+msgid "Storage"
+msgstr "Biltegia"
+
+#: ../gnome-volume-properties.glade.h:53
+msgid "Sync PocketP_C devices when connected"
+msgstr "Sinkronizatu PocketP_C gailuak konektatzean"
+
+#: ../gnome-volume-properties.glade.h:54
+msgid "Sync _Palm™ devices when connected"
+msgstr "Sinkronizatu _Palm™ gailuak konektatzean"
+
+#: ../gnome-volume-properties.glade.h:55
+msgid "_Auto-run programs on new drives and media"
+msgstr "_Automatikoki exekutatu programak unitate edo euskarri berriak daudenean"
+
+#: ../gnome-volume-properties.glade.h:56
+msgid "_Burn a CD or DVD when a blank disc is inserted"
+msgstr "_Grabatu CD edo DVD bat disko hutsa sartzean"
+
+#: ../gnome-volume-properties.glade.h:57
+msgid "_Command:"
+msgstr "_Komandoa:"
+
+#: ../gnome-volume-properties.glade.h:58
+msgid "_Edit video when connected"
+msgstr "_Editatu bideoa konektatzean"
+
+#: ../gnome-volume-properties.glade.h:59
+msgid "_Import digital photographs when connected"
+msgstr "_Inportatu argazki digitalak konektatzean"
+
+#: ../gnome-volume-properties.glade.h:60
+msgid "_Mount removable drives when hot-plugged"
+msgstr "_Muntatu unitate aldagarriak modu beroan sartzean"
+
+#: ../src/manager.c:220 ../src/manager.c:225 ../src/manager.c:230
+#: ../src/manager.c:235 ../src/manager.c:241 ../src/manager.c:247
+#: ../src/manager.c:253 ../src/manager.c:259
+msgid "Ig_nore"
+msgstr "Ez _ikusi egin"
+
+#: ../src/manager.c:221
+msgid "_Allow Auto-Run"
+msgstr "_Baimendu automatikoki exekutatzea"
+
+#: ../src/manager.c:226
+msgid "_Open"
+msgstr "_Ireki"
+
+#: ../src/manager.c:231 ../src/manager.c:237 ../src/manager.c:242
+msgid "Import _Photos"
+msgstr "Inportatu _argazkiak"
+
+#: ../src/manager.c:236
+msgid "_Open Folder"
+msgstr "_Ireki karpeta"
+
+#: ../src/manager.c:243
+msgid "Manage _Music"
+msgstr "Kudeatu _musika"
+
+#: ../src/manager.c:248
+msgid "_Browse Files"
+msgstr "_Arakatu fitxategiak"
+
+#: ../src/manager.c:249
+msgid "_Play CD"
+msgstr "_Erreproduzitu CDa"
+
+#: ../src/manager.c:254
+msgid "Make _Audio CD"
+msgstr "Sortu Audio CDa"
+
+#: ../src/manager.c:255
+msgid "Make _Data CD"
+msgstr "Sortu _Datuen CDa"
+
+#: ../src/manager.c:260
+msgid "Make _DVD"
+msgstr "Sortu _DVDa"
+
+#: ../src/manager.c:313
+msgid "Auto-Run Confirmation"
+msgstr "Auto-exekutatzek baieztapena"
+
+#: ../src/manager.c:314
+msgid "Auto-run capability detected."
+msgstr "Auto-exekutatzeko gaitasuna detektatuta."
+
+#: ../src/manager.c:315
+msgid "Would you like to allow <b>'${0}'</b> to run?"
+msgstr "Nahi duzu <b>'${0}'</b> baimentzea exekutatzeko?"
+
+#: ../src/manager.c:320
+msgid "Auto-Open Confirmation"
+msgstr "Auto-irekitzeko baieztapena"
+
+#: ../src/manager.c:321
+msgid "Auto-Open capability detected."
+msgstr "Auto-irekitzeko gaitasuna detektatuta."
+
+#: ../src/manager.c:322
+msgid "Would you like to open <b>'${0}'</b>?"
+msgstr "Nahi duzu <b>'${0}'</b> irekitzea?"
+
+#: ../src/manager.c:327 ../src/manager.c:334
+msgid "Camera Import"
+msgstr "Kameraren inportazioa"
+
+#: ../src/manager.c:328 ../src/manager.c:335
+msgid "A camera has been detected."
+msgstr "Kamera bat detektatu da."
+
+#: ../src/manager.c:329 ../src/manager.c:336
+msgid ""
+"There are photos on the camera. Would you like to add these pictures to your "
+"album?"
+msgstr "Argazkiak daude kameran. Nahi duzu irudiok zure albumean gehitzea?"
+
+#: ../src/manager.c:330 ../src/manager.c:337 ../src/manager.c:344
+#: ../src/manager.c:351 ../src/manager.c:358
+msgid "_Always perform this action"
+msgstr "_Beti landu ekintza hau"
+
+#: ../src/manager.c:341
+msgid "Photo Import"
+msgstr "Argazkiak inportatzea"
+
+#: ../src/manager.c:342
+msgid "A photo card has been detected."
+msgstr "Argazkien txartel bat detektatu da."
+
+#: ../src/manager.c:343
+msgid ""
+"There are photos on the card. Would you like to add these pictures to your "
+"album?"
+msgstr "Argazkiak daude txartelean. Nahi duzu irudiok zure albumari gehitzea?"
+
+#: ../src/manager.c:348
+msgid "Photos and Music"
+msgstr "Argazkiak eta musika"
+
+#: ../src/manager.c:349
+msgid "Photos were found on your music device."
+msgstr "Argazkiak aurkitu dira musika-gailuan."
+
+#: ../src/manager.c:350
+msgid "Would you like to import the photos or manage its music?"
+msgstr "Nahiago duzu argazkiak inportatzea edo musika kudeatzea?"
+
+#: ../src/manager.c:355
+msgid "Mixed Audio and Data CD"
+msgstr "Audio eta datuen CD nahastua"
+
+#: ../src/manager.c:356
+msgid "The CD in the drive contains both music and files."
+msgstr "Unitateko CDak bai musika bai fitxategiak ditu."
+
+#: ../src/manager.c:357
+msgid "Would you like to listen to music or browse the files?"
+msgstr "Nahiago duzu musika entzutea edo fitxategiak arakatzea?"
+
+#: ../src/manager.c:362
+msgid "Blank CD Inserted"
+msgstr "CD hutsa sartua "
+
+#: ../src/manager.c:363 ../src/manager.c:370
+msgid "You have inserted a blank disc."
+msgstr "Disko hutsa sartu duzu."
+
+#: ../src/manager.c:364 ../src/manager.c:371
+msgid "What would you like to do?"
+msgstr "Zer egitea nahi duzu?"
+
+#: ../src/manager.c:369
+msgid "Blank DVD Inserted"
+msgstr "DVD hutsa sartua"
+
+#: ../src/manager.c:3251
+#, c-format
+msgid "%d%% of the disk space on %s is in use"
+msgstr "%2$s partizioan erabilitako lekua: %%%1$d"
+
+#: ../src/manager.c:3254
+msgid "Low Disk Space"
+msgstr "Leku baxuko diskoa"
+
+#: ../src/manager.c:3372
+msgid "Print version and exit"
+msgstr "Bistaratu bertsioa eta irten"
+
+#: ../src/manager.c:3374
+msgid "Run as a daemon"
+msgstr "Exekutatu daemon gisa"
+
+#: ../src/manager.c:3376
+msgid "Don't run as a daemon"
+msgstr "Ez exekutatu daemon gisa"
+
+#: ../src/manager.c:3378
+msgid "Run in secret mode"
+msgstr "Exekutatu ezkutuko moduan"
+
+#: ../src/manager.c:3410
+#, c-format
+msgid "Unrecognized --daemon argument: %s\n"
+msgstr "Ezezaguna -- daemon-aren argumentua: %s\n"
+
+#: ../src/properties.c:318
+msgid "Could not load the main interface"
+msgstr "Ezin izan da interfaze nagusia kargatu"
+
+#: ../src/properties.c:320
+msgid "Please make sure that the volume manager is properly installed"
+msgstr "Ziurtatu bolumen-kudeatzailea zuzen instalatu dela"
+
+#: ../src/properties.c:479
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr ""
+"Errorea gnome-volume-manager-en daemona abiaratzean:\n"
+"%s"
+
+#: ../src/properties.c:510
+msgid "Volume management not supported"
+msgstr "Bolumen-kudeatzailea ez dago onartuta"
+
+#: ../src/properties.c:512
+msgid ""
+"The \"hald\" service is required but not currently running. Enable the "
+"service and rerun this application, or contact your system administrator."
+msgstr ""
+"\"Hald\" zerbitzua behar da baina unean ez da exekutatzen ari. Gaitu "
+"zrbitzua eta exekutatu berriro aplikazio hau, edo jar zaitez sistemako "
+"administratzailearekin harremanetan."
+

@@ -1,0 +1,232 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SamÃºel JÃ³n Gunnarsson  <sammi@techattack.nu>, 2004.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-volume-manager\n"
+"POT-Creation-Date: 2004-08-05 22:40+0000\n"
+"PO-Revision-Date: 2004-08-05 23:36-0000\n"
+"Last-Translator: Samuel Jon Gunnarsson <sammi@techattack.nu>\n"
+"Language-Team: ICELANDIC <gnome@techattack.nu>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: gnome-volume-manager.schemas.in.h:1
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr "':' aðskilinn listi yfir slóðir þar sem leita á að keyrsluskrám og skriftum."
+
+#: gnome-volume-manager.schemas.in.h:2
+msgid "Automount removable drives"
+msgstr "Sjálftengja fjarlægjanleg drif"
+
+#: gnome-volume-manager.schemas.in.h:3
+msgid "Automount removable media"
+msgstr "Sjálftengja fjarlægjanlega miðla"
+
+#: gnome-volume-manager.schemas.in.h:4
+msgid "Autorun path"
+msgstr "Sjálfkeyrsluslóð"
+
+#: gnome-volume-manager.schemas.in.h:5
+msgid "CD burn command"
+msgstr "Brennsluskipun f. geisladiska"
+
+#: gnome-volume-manager.schemas.in.h:6
+msgid "CD play command"
+msgstr "Afspilunarskipun f. hljóðdiska"
+
+#: gnome-volume-manager.schemas.in.h:7
+msgid "Command to run when a digital camera is connected or media from a digital camera is inserted."
+msgstr "Sú skipun sem keyra við tengingu stafrænnar myndavélar eða innsetningu á gagnahirslu frá myndavél."
+
+#: gnome-volume-manager.schemas.in.h:8
+msgid "Command to run when a video DVD is inserted."
+msgstr "Sú skipun sem keyra á við innsetningu á DVD mynd."
+
+#: gnome-volume-manager.schemas.in.h:9
+msgid "Command to run when an audio CD is inserted."
+msgstr "Sú skipun sem keyra á við innsetningu á hljóðdiskum."
+
+#: gnome-volume-manager.schemas.in.h:10
+msgid "Command to run when an empty CD is inserted."
+msgstr "Sú skipun sem keyra á við innsetningu á tómum geisladisk."
+
+#: gnome-volume-manager.schemas.in.h:11
+msgid "DVD play command"
+msgstr "Afspilunarskipun fyrir DVD"
+
+#: gnome-volume-manager.schemas.in.h:12
+msgid "Perform autorun"
+msgstr "Framkvæma sjálfkeyrslu"
+
+#: gnome-volume-manager.schemas.in.h:13
+msgid "Photo management command"
+msgstr "Skipun f. ljósmyndaumsýslu"
+
+#: gnome-volume-manager.schemas.in.h:14
+msgid "Play inserted audio CD's"
+msgstr "Afspila innsetta hljóðdiska"
+
+#: gnome-volume-manager.schemas.in.h:15
+msgid "Play inserted video DVDs"
+msgstr "Afspila innsetta DVD mynddiska"
+
+#: gnome-volume-manager.schemas.in.h:16
+msgid "Run CD burn command"
+msgstr "Keyra skipun f. brennslu á geisladisk"
+
+#: gnome-volume-manager.schemas.in.h:17
+msgid "Run photo management command"
+msgstr "Keyra skipun f. umsýslun á ljósmyndum"
+
+#: gnome-volume-manager.schemas.in.h:18
+msgid "Whether autorun programs (binaries and scripts located in 'autorun_path') are run on newly mounted media."
+msgstr "Hvort keyra eigi sjáfkeyrsluforrit (tvíundarforrit eða skriftur staðsettar í 'autorun_path') við tengingu á gagnahirslu."
+
+#: gnome-volume-manager.schemas.in.h:19
+msgid "Whether gnome-volume-manager should automatically mount removable storage drives when they are inserted."
+msgstr "Hvort gome-volume-manager eigi að sjálfvirkt tengja fjarlægjanleg geymsludrif er þau eru sett í samband."
+
+#: gnome-volume-manager.schemas.in.h:20
+msgid "Whether gnome-volume-manager should automatically mount removable storage media when they are inserted."
+msgstr "Hvort gnome-volume-manager eigi að sjálfvirkt tengja fjarlægjanlega gagnamiðla við innsetningu."
+
+#: gnome-volume-manager.schemas.in.h:21
+msgid "Whether, when a blank CD is inserted, gnome-volume-manager should run 'autoburn_cdr_command'."
+msgstr "Hvort gnome-volume-manager eigi að keyra 'autoburn_cdr_command' við innsetningu á tómum geisladisk."
+
+#: gnome-volume-manager.schemas.in.h:22
+msgid "Whether, when a digital camera is connected or media from a digital camera is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr "Hvort að gnome-volume-manager eigi að keyra 'autophoto_command' við tengingu á stafrænni myndavél eða miðli úr stafrænni myndavél."
+
+#: gnome-volume-manager.schemas.in.h:23
+msgid "Whether, when a video DVD is inserted, gnome-volume-manager should run 'autoplay_dvd_command'."
+msgstr "Hvort að gnome-volume-manager eigi að keyra 'autoplay_dvd_command' við innsetningu á DVD myndum."
+
+#: gnome-volume-manager.schemas.in.h:24
+msgid "Whether, when an audio CD is inserted, gnome-volume-manager should run 'autoplay_cda_command'."
+msgstr "Hvort að gnome-volume-manager eigi að keyra 'autoplay_cda_command' við innsetningu á hljóðdisk."
+
+#: gnome-volume-properties.desktop.in.h:1
+msgid "Configure Management of Removable Devices"
+msgstr "Stilla meðhöndlun á fjarlægjanlegum einingum"
+
+#: gnome-volume-properties.desktop.in.h:2
+msgid "Removable Storage"
+msgstr "Fjarlægjanleg gagnahirsla"
+
+#: gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr " "
+
+#: gnome-volume-properties.glade.h:2
+msgid " Perform action on _blank CDs when inserted"
+msgstr "Framkvæma aðgerð við innsetningu á _tómum diskum"
+
+#: gnome-volume-properties.glade.h:3
+msgid "*"
+msgstr "*"
+
+#: gnome-volume-properties.glade.h:4
+msgid "<b>Audio CDs</b>"
+msgstr "<b>Hljóðdiskar</b>"
+
+#: gnome-volume-properties.glade.h:5
+msgid "<b>Blank CDs</b>"
+msgstr "<b>Tómir diskar</b>"
+
+#: gnome-volume-properties.glade.h:6
+msgid "<b>DVD Videos</b>"
+msgstr "<b>DVD mynddiskar</b>"
+
+#: gnome-volume-properties.glade.h:7
+msgid "<b>Digital Camera</b>"
+msgstr "<b>Stafræn myndavél</b>"
+
+#: gnome-volume-properties.glade.h:8
+msgid "<b>Removable Storage</b>"
+msgstr "<b>Fjarlægjanleg gagnahirsla</b>"
+
+#: gnome-volume-properties.glade.h:9
+msgid "Auto-run programs on new drives and media"
+msgstr "Sjálfkeyrslu-forrit á nýjum drifum eða miðlum"
+
+#: gnome-volume-properties.glade.h:10
+msgid "Command:"
+msgstr "Skipun:"
+
+#: gnome-volume-properties.glade.h:11
+msgid "Drives and Media Preferences"
+msgstr "Stillingar f. drif og miðla"
+
+#: gnome-volume-properties.glade.h:12
+msgid "Import digital _photo albums when connected"
+msgstr "Innflytja stafrænar _ljósmyndir við tengingu"
+
+#: gnome-volume-properties.glade.h:13
+msgid "Mount removable media when _inserted"
+msgstr "Tengja fjarlægjanlegan miðil við _innsetningu"
+
+#: gnome-volume-properties.glade.h:14
+msgid "Play DVD Videos when inserted"
+msgstr "Afspila DVD myndir við innsetningu"
+
+#: gnome-volume-properties.glade.h:15
+msgid "Play _DVD Videos when inserted"
+msgstr "Afspila _DVD myndir við innsetningu"
+
+#: gnome-volume-properties.glade.h:16
+msgid "Play a_udio CDs when inserted"
+msgstr "Afspila _hljóðdiska við innsetningu"
+
+#: gnome-volume-properties.glade.h:17
+msgid "Play audio CDs when inserted"
+msgstr "Afspila hljóðdiska við innsetningu"
+
+#: gnome-volume-properties.glade.h:18
+msgid "_Auto-run programs on new drives and media"
+msgstr "_Sjálfkeyra forrit á nýuppgötvuð drif og miðla"
+
+#: gnome-volume-properties.glade.h:19
+#, fuzzy
+msgid "_Mount removable drives when hot-plugged"
+msgstr "_Tengja fjarlægjanleg drif við heittengingu"
+
+#: src/manager.c:192
+#, c-format
+msgid "Do you want to run %s?"
+msgstr "Viltu ræsa %s?"
+
+#: src/manager.c:280
+msgid "_Import"
+msgstr "_Innflytja"
+
+#: src/manager.c:429
+msgid "_Play"
+msgstr "_Spila"
+
+#: src/manager.c:430
+msgid "_Browse"
+msgstr "_Vafra"
+
+#: src/properties.c:181
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr ""
+"Villa kom upp við ræsingu á gnome-volume-manager þjónustunni:\n"
+"%s"
+
+#: src/properties.c:340
+msgid "Could not load the main interface"
+msgstr "Ekki tókst að hlaða inn aðalvalmynd"
+
+#: src/properties.c:342
+#, fuzzy
+msgid "Please make sure that the volume manager is properly installed"
+msgstr "Vinsamlegast gangið úr skugga um að volume manager-inn sé réttilega innsettur"
+
