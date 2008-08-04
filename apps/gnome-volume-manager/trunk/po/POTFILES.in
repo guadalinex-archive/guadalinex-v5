@@ -1,9 +1,0 @@
-# List of source files containing translatable strings.
-# Please keep this file sorted alphabetically.
-[encoding: UTF-8]
-gnome-volume-manager.schemas.in
-gnome-volume-manager.desktop.in.in
-gnome-volume-properties.desktop.in
-gnome-volume-properties.glade
-src/manager.c
-src/properties.c
