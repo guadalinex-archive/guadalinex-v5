@@ -1,0 +1,960 @@
+# German gnome-volume-manager translation
+# Copyright (C) 2003, 2004 Robert Love <rml@ximian.com>
+# Christian Neumair <chris@gnome-de.org>, 2004.
+# Hendrik Brandt <heb@gnome-de.org>, 2005, 2006.
+# Hendrik Richter <hendrikr@gnome.org>, 2004, 2005, 2006, 2007.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-volume-manager HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-07-20 20:06+0200\n"
+"PO-Revision-Date: 2007-07-20 20:08+0200\n"
+"Last-Translator: Hendrik Richter <hendrikr@gnome.org>\n"
+"Language-Team: German <gnome-de@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../gnome-volume-manager.schemas.in.h:1
+msgid "\"Always take this action\" checkbox for Autorun"
+msgstr "Option »Immer diese Aktion anwenden« für Automatisches Ausführen"
+
+#: ../gnome-volume-manager.schemas.in.h:2
+msgid "\"Always take this action\" checkbox for iPod Photos"
+msgstr "Option »Immer diese Aktion anwenden« für iPod-Fotos"
+
+#: ../gnome-volume-manager.schemas.in.h:3
+msgid "\"Always take this action\" checkbox for mixed Audio and Data CDs"
+msgstr ""
+"Option »Immer diese Aktion anwenden« für gemischte Audio- und Daten-CDs"
+
+#: ../gnome-volume-manager.schemas.in.h:4
+msgid "\"Always take this action\" checkbox for photo import from a camera"
+msgstr ""
+"Option »Immer diese Aktion anwenden« für das Importieren der Fotos von einer "
+"Kamera"
+
+#: ../gnome-volume-manager.schemas.in.h:5
+msgid "\"Always take this action\" checkbox for photo import from a device"
+msgstr ""
+"Option »Immer diese Aktion anwenden« für das Importieren der Fotos von einem "
+"Gerät"
+
+#: ../gnome-volume-manager.schemas.in.h:6
+msgid "':' delimited list of paths to check for autoopen files."
+msgstr ""
+"»:«-unterteilte Liste der Pfade, die nach automatisch zu öffnenden Dateien "
+"durchsucht werden sollen."
+
+#: ../gnome-volume-manager.schemas.in.h:7
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr ""
+"»:«-unterteilte Liste der Pfade, die nach automatisch auszuführenden "
+"Binärdateien und Skripten durchsucht werden sollen."
+
+#: ../gnome-volume-manager.schemas.in.h:8
+msgid "Action to take when a camera is plugged in."
+msgstr "Auszuführende Aktion, wenn eine Kamera eingesteckt wird."
+
+#: ../gnome-volume-manager.schemas.in.h:9
+msgid "Action to take when a device containing photos is encountered."
+msgstr ""
+"Auszuführende Aktion, wenn eine Gerät, das Fotos enthält entdeckt wird."
+
+#: ../gnome-volume-manager.schemas.in.h:10
+msgid "Action to take when a device contains an autorun program/script."
+msgstr ""
+"Auszuführende Aktion, wenn ein Gerät automatisch auszuführende Programme "
+"oder Skripte enthält."
+
+#: ../gnome-volume-manager.schemas.in.h:11
+msgid "Action to take when a mixed Audio and Data CD is encountered."
+msgstr ""
+"Auszuführende Aktion, wenn eine gemischte Audio- und Daten-CD entdeckt wird."
+
+#: ../gnome-volume-manager.schemas.in.h:12
+msgid "Action to take when an iPod Photo is encountered."
+msgstr "Auszuführende Aktion, wenn eine iPod photo entdeckt wird."
+
+#: ../gnome-volume-manager.schemas.in.h:13
+msgid "Audio CD burn command"
+msgstr "Audio-CD-Brennbefehl"
+
+#: ../gnome-volume-manager.schemas.in.h:14
+msgid "Automount removable drives"
+msgstr "Automatisches Einhängen von Wechseldatenträgern"
+
+#: ../gnome-volume-manager.schemas.in.h:15
+msgid "Automount removable media"
+msgstr "Automatisches Einhängen von Wechselmedien"
+
+#: ../gnome-volume-manager.schemas.in.h:16
+msgid "Autoopen path"
+msgstr "Pfad für Automatisches Öffnen"
+
+#: ../gnome-volume-manager.schemas.in.h:17
+msgid "Autorun nautilus"
+msgstr "Automatischer Start von Nautilus"
+
+#: ../gnome-volume-manager.schemas.in.h:18
+msgid "Autorun path"
+msgstr "Pfad für Automatisches Ausführen"
+
+#: ../gnome-volume-manager.schemas.in.h:19
+msgid "CD play command"
+msgstr "CD-Wiedergabebefehl"
+
+#: ../gnome-volume-manager.schemas.in.h:20
+msgid "Command to run when a Palm is connected."
+msgstr "Beim Anschließen eines Palms auszuführender Befehl."
+
+#: ../gnome-volume-manager.schemas.in.h:21
+msgid "Command to run when a PocketPC is connected."
+msgstr "Beim Anschließen eines PocketPCs auszuführender Befehl."
+
+#: ../gnome-volume-manager.schemas.in.h:22
+msgid ""
+"Command to run when a digital camera is connected or media from a digital "
+"camera is inserted."
+msgstr ""
+"Beim Anschließen einer Digitalkamera bzw. Einlegen eines "
+"Digitalkameramediums auszuführender Befehl."
+
+#: ../gnome-volume-manager.schemas.in.h:23
+msgid "Command to run when a keyboard is connected."
+msgstr "Beim Anschließen einer Tastatur auszuführender Befehl."
+
+#: ../gnome-volume-manager.schemas.in.h:24
+msgid "Command to run when a mouse is connected."
+msgstr "Beim Anschließen einer Maus auszuführender Befehl."
+
+#: ../gnome-volume-manager.schemas.in.h:25
+msgid "Command to run when a printer is connected."
+msgstr "Beim Anschließen eines Druckers auszuführender Befehl."
+
+#: ../gnome-volume-manager.schemas.in.h:26
+msgid "Command to run when a scanner is connected."
+msgstr "Beim Anschließen eines Scanners auszuführender Befehl."
+
+#: ../gnome-volume-manager.schemas.in.h:27
+msgid "Command to run when a tablet is connected."
+msgstr "Beim Anschließen eines Grafiktabletts auszuführender Befehl."
+
+#: ../gnome-volume-manager.schemas.in.h:28
+msgid "Command to run when a video DVD is inserted."
+msgstr "Beim Einlegen einer Video-DVD auszuführender Befehl."
+
+#: ../gnome-volume-manager.schemas.in.h:29
+msgid "Command to run when a video VCD is inserted."
+msgstr "Beim Einlegen einer Video-VCD auszuführender Befehl."
+
+#: ../gnome-volume-manager.schemas.in.h:30
+msgid "Command to run when a video camera is connected."
+msgstr "Beim Anschließen einer Videokamera auszuführender Befehl."
+
+#: ../gnome-volume-manager.schemas.in.h:31
+msgid "Command to run when a web camera is connected."
+msgstr "Beim Anschließen einer Webcam auszuführender Befehl."
+
+#: ../gnome-volume-manager.schemas.in.h:32
+msgid "Command to run when an audio CD is inserted."
+msgstr "Beim Einlegen einer Audio-CD auszuführender Befehl."
+
+#: ../gnome-volume-manager.schemas.in.h:33
+msgid "Command to run when an iPod is connected."
+msgstr "Beim Anschließen eines iPods auszuführender Befehl."
+
+#: ../gnome-volume-manager.schemas.in.h:34
+msgid "Command to run when the user wishes to burn a Data CD."
+msgstr "Auszuführender Befehl, wenn der Benutzer eine Daten-CD brennen möchte."
+
+#: ../gnome-volume-manager.schemas.in.h:35
+msgid "Command to run when the user wishes to burn an Audio CD."
+msgstr "Auszuführender Befehl, wenn der Benutzer eine Musik-CD brennen möchte."
+
+#: ../gnome-volume-manager.schemas.in.h:36
+msgid "DVD play command"
+msgstr "DVD-Wiedergabebefehl"
+
+#: ../gnome-volume-manager.schemas.in.h:37
+msgid "Data CD burn command"
+msgstr "Daten-CD-Brennbefehl"
+
+#: ../gnome-volume-manager.schemas.in.h:38
+msgid "Low Disk Space notification threshold"
+msgstr "Schwellwert für Benachrichtigung über wenig freien Speicherplatz"
+
+#: ../gnome-volume-manager.schemas.in.h:39
+msgid "Open nautilus on removeable media insert."
+msgstr "Nautilus beim Einlegen von Wechselmedien ausführen."
+
+#: ../gnome-volume-manager.schemas.in.h:40
+msgid "Perform autoopen"
+msgstr "Automatisches Öffnen"
+
+#: ../gnome-volume-manager.schemas.in.h:41
+msgid "Perform autorun"
+msgstr "Automatisches Ausführen"
+
+#: ../gnome-volume-manager.schemas.in.h:42
+msgid "Photo management command"
+msgstr "Fotoverwaltungsbefehl"
+
+#: ../gnome-volume-manager.schemas.in.h:43
+msgid "Play inserted audio CD's"
+msgstr "Eingelegte Musik-CDs wiedergeben"
+
+#: ../gnome-volume-manager.schemas.in.h:44
+msgid "Play inserted video DVDs"
+msgstr "Eingelegte Video-DVDs wiedergeben"
+
+#: ../gnome-volume-manager.schemas.in.h:45
+msgid "Play inserted video VCDs"
+msgstr "Eingelegte Video-VCDs wiedergeben"
+
+#: ../gnome-volume-manager.schemas.in.h:46
+msgid "Run Palm-sync program"
+msgstr "Datenabgleich mit Palm durchführen"
+
+#: ../gnome-volume-manager.schemas.in.h:47
+msgid "Run PocketPC-sync program"
+msgstr "Datenabgleich mit PocketPC durchführen"
+
+#: ../gnome-volume-manager.schemas.in.h:48
+msgid "Run a program to burn CDs/DVDs"
+msgstr "Ein Programm ausführen, um CDs/DVDs zu brennen"
+
+#: ../gnome-volume-manager.schemas.in.h:49
+msgid "Run iPod program"
+msgstr "iPod-Anwendung ausführen"
+
+#: ../gnome-volume-manager.schemas.in.h:50
+msgid "Run keyboard program"
+msgstr "Tastaturanwendung ausführen"
+
+#: ../gnome-volume-manager.schemas.in.h:51
+msgid "Run mouse program"
+msgstr "Mausanwendung ausführen"
+
+#: ../gnome-volume-manager.schemas.in.h:52
+msgid "Run photo management command"
+msgstr "Fotoverwaltungsbefehl ausführen"
+
+#: ../gnome-volume-manager.schemas.in.h:53
+msgid "Run printer program"
+msgstr "Druckeranwendung ausführen"
+
+#: ../gnome-volume-manager.schemas.in.h:54
+msgid "Run scanner program"
+msgstr "Scanner-Anwendung ausführen"
+
+#: ../gnome-volume-manager.schemas.in.h:55
+msgid "Run tablet program"
+msgstr "Grafiktablettanwendung ausführen"
+
+#: ../gnome-volume-manager.schemas.in.h:56
+msgid "Run video editing program"
+msgstr "Videobearbeitungsprogramm ausführen"
+
+#: ../gnome-volume-manager.schemas.in.h:57
+msgid "Run webcam stream display program"
+msgstr "Webcam-Programm ausführen"
+
+#: ../gnome-volume-manager.schemas.in.h:58
+msgid ""
+"The threshold value for whether or not to toggle the notification on, based "
+"on the amount of additional space used since the last check."
+msgstr ""
+"Schwellwert, der abhängig vom seit der letzten Überprüfung zusätzlich "
+"verbrauchten Speicherplatz festlegt, ob die Benachrichtigung angezeigt wird "
+"oder nicht."
+
+#: ../gnome-volume-manager.schemas.in.h:59
+msgid "Threshold for notification of increased disk usage"
+msgstr ""
+"Schwellwert für zusätzlich verbrauchten Speicherplatz, ab dem "
+"Benachrichtigung angezeigt wird"
+
+#: ../gnome-volume-manager.schemas.in.h:60
+msgid "Threshold percentage for notifying the user of low disk space."
+msgstr ""
+"Schwellwert in Prozent, ab dem Benutzer über wenig freien Platz "
+"benachrichtigt werden."
+
+#: ../gnome-volume-manager.schemas.in.h:61
+msgid "VCD play command"
+msgstr "VCD-Wiedergabebefehl"
+
+#: ../gnome-volume-manager.schemas.in.h:62
+msgid "Whether autoopen files should be opened on newly mounted media."
+msgstr ""
+"Legt fest, ob beim Einhängen neuer Medien automatisch zu öffnende Dateien "
+"geöffnet werden sollen."
+
+#: ../gnome-volume-manager.schemas.in.h:63
+msgid ""
+"Whether autorun programs (binaries and scripts located in 'autorun_path') "
+"are run on newly mounted media."
+msgstr ""
+"Legt fest, ob beim Einhängen neuer Medien automatisch auszuführende "
+"Programme (Binärdateien und Skripte in »autorun_path«) ausgeführt werden "
+"sollen."
+
+#: ../gnome-volume-manager.schemas.in.h:64
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"drives when they are inserted."
+msgstr ""
+"Legt fest, ob gnome-volume-manager Wechseldatenträger beim Einlegen "
+"einhängen soll."
+
+#: ../gnome-volume-manager.schemas.in.h:65
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"media when they are inserted."
+msgstr ""
+"Legt fest, ob gnome-volume-manager Wechseldatenträger beim Einlegen "
+"einhängen soll."
+
+#: ../gnome-volume-manager.schemas.in.h:66
+msgid ""
+"Whether, when a Palm is connected, gnome-volume-manager should run "
+"'autopalmsync_command'."
+msgstr ""
+"Legt fest, ob beim Anschließen eines Palms der Befehl »autopalmsync_command« "
+"ausgeführt werden soll."
+
+#: ../gnome-volume-manager.schemas.in.h:67
+msgid ""
+"Whether, when a PocketPC is connected, gnome-volume-manager should run "
+"'autopocketpc_command'."
+msgstr ""
+"Legt fest, ob beim Anschließen eines PocketPCs der Befehl "
+"»autopocketpc_command« ausgeführt werden soll."
+
+#: ../gnome-volume-manager.schemas.in.h:68
+msgid ""
+"Whether, when a blank CD or DVD is inserted, gnome-volume-manager should run "
+"one of the autoburn commands."
+msgstr ""
+"Legt fest, ob beim Einlegen einer leeren CD oder DVD einer der Befehle für "
+"das automatische Brennen ausgeführt werden soll."
+
+#: ../gnome-volume-manager.schemas.in.h:69
+msgid ""
+"Whether, when a digital camera is connected or media from a digital camera "
+"is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr ""
+"Legt fest, ob beim Anschließen einer Digitalkamera der Befehl "
+"»autophoto_command« ausgeführt werden soll."
+
+#: ../gnome-volume-manager.schemas.in.h:70
+msgid ""
+"Whether, when a digital video camera is connected, gnome-volume-manager "
+"should run 'autovideocam_command'."
+msgstr ""
+"Legt fest, ob beim Anschließen einer Videokamera der Befehl "
+"»autovideocam_command« ausgeführt werden soll."
+
+#: ../gnome-volume-manager.schemas.in.h:71
+msgid ""
+"Whether, when a keyboard is connected, gnome-volume-manager should run "
+"'autokeyboard_command'."
+msgstr ""
+"Legt fest, ob beim Anschließen einer Tastatur der Befehl "
+"»autokeyboard_command« ausgeführt werden soll."
+
+#: ../gnome-volume-manager.schemas.in.h:72
+msgid ""
+"Whether, when a mouse is connected, gnome-volume-manager should run "
+"'automouse_command'."
+msgstr ""
+"Legt fest, ob beim Anschließen einer Maus der Befehl »automouse_command« "
+"ausgeführt werden soll."
+
+#: ../gnome-volume-manager.schemas.in.h:73
+msgid ""
+"Whether, when a printer is connected, gnome-volume-manager should run "
+"'autoprinter_command'."
+msgstr ""
+"Legt fest, ob beim Anschließen eines Druckers der Befehl "
+"»autoprinter_command« ausgeführt werden soll."
+
+#: ../gnome-volume-manager.schemas.in.h:74
+msgid ""
+"Whether, when a scanner is connected, gnome-volume-manager should run "
+"'autoscanner_command'."
+msgstr ""
+"Legt fest, ob beim Anschließen eines Scanners der Befehl "
+"»autoscanner_command« ausgeführt werden soll."
+
+#: ../gnome-volume-manager.schemas.in.h:75
+msgid ""
+"Whether, when a tablet is connected, gnome-volume-manager should run "
+"'autotablet_command'."
+msgstr ""
+"Legt fest, ob beim Anschließen eines Grafiktabletts der Befehl "
+"»autotablet_command« ausgeführt werden soll."
+
+#: ../gnome-volume-manager.schemas.in.h:76
+msgid ""
+"Whether, when a video DVD is inserted, gnome-volume-manager should run "
+"'autoplay_dvd_command'."
+msgstr ""
+"Legt fest, ob beim Einlegen einer Video-DVD der Befehl "
+"»autoplay_dvd_command« ausgeführt werden soll."
+
+#: ../gnome-volume-manager.schemas.in.h:77
+msgid ""
+"Whether, when a video VCD is inserted, gnome-volume-manager should run "
+"'autoplay_vcd_command'."
+msgstr ""
+"Legt fest, ob beim Einlegen einer Video-VCD der Befehl "
+"»autoplay_vcd_command« ausgeführt werden soll."
+
+#: ../gnome-volume-manager.schemas.in.h:78
+msgid ""
+"Whether, when a web camera is connected, gnome-volume-manager should run "
+"'autowebcam_command'."
+msgstr ""
+"Legt fest, ob beim Anschließen einer Webcam der Befehl "
+"»autowebcam_command« ausgeführt werden soll."
+
+#: ../gnome-volume-manager.schemas.in.h:79
+msgid ""
+"Whether, when an audio CD is inserted, gnome-volume-manager should run "
+"'autoplay_cda_command'."
+msgstr ""
+"Legt fest, ob beim Einlegen einer Musik-CD der Befehl »autoburn_cda_command« "
+"ausgeführt werden soll."
+
+#: ../gnome-volume-manager.schemas.in.h:80
+msgid ""
+"Whether, when an iPod is connected, gnome-volume-manager should run "
+"'autoipod_command'."
+msgstr ""
+"Legt fest, ob beim Anschließen eines iPods der Befehl »autoipod_command« "
+"ausgeführt werden soll."
+
+#: ../gnome-volume-manager.schemas.in.h:81
+msgid "iPod sync command"
+msgstr "Befehl zum Abgleichen des iPods"
+
+#: ../gnome-volume-manager.schemas.in.h:82
+msgid "keyboard command"
+msgstr "Tastaturbefehl"
+
+#: ../gnome-volume-manager.schemas.in.h:83
+msgid "mouse command"
+msgstr "Mausbefehl"
+
+#: ../gnome-volume-manager.schemas.in.h:84
+msgid "palm sync command"
+msgstr "Befehl zum Abgleichen des Palms"
+
+#: ../gnome-volume-manager.schemas.in.h:85
+msgid "printer command"
+msgstr "Druckerbefehl"
+
+#: ../gnome-volume-manager.schemas.in.h:86
+msgid "scanner command"
+msgstr "Scanner-Befehl"
+
+#: ../gnome-volume-manager.schemas.in.h:87
+msgid "tablet command"
+msgstr "Grafiktablettbefehl"
+
+#: ../gnome-volume-manager.schemas.in.h:88
+msgid "video camera command"
+msgstr "Videokamera-Befehl"
+
+#: ../gnome-volume-manager.schemas.in.h:89
+msgid "web camera command"
+msgstr "Webcam-Befehl"
+
+#: ../gnome-volume-manager.desktop.in.in.h:1
+msgid "Volume Manager"
+msgstr "Datenträgerverwaltung"
+
+#: ../gnome-volume-manager.desktop.in.in.h:2
+msgid "Volume manager for removable drives and media"
+msgstr "Verwaltung von Wechseldatenträgern und -medien"
+
+#: ../gnome-volume-properties.desktop.in.h:1
+msgid "Configure management of removable drives and media"
+msgstr "Die Verwaltung von Wechseldatenträgern und -medien konfigurieren"
+
+#: ../gnome-volume-properties.desktop.in.h:2
+msgid "Removable Drives and Media"
+msgstr "Wechseldatenträger und -medien"
+
+#: ../gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: ../gnome-volume-properties.glade.h:2
+msgid "<b>Audio CD Discs</b>"
+msgstr "<b>Musik-CDs</b>"
+
+#: ../gnome-volume-properties.glade.h:3
+msgid "<b>Blank CD and DVD Discs</b>"
+msgstr "<b>Leere CDs und DVDs</b>"
+
+#: ../gnome-volume-properties.glade.h:4
+msgid "<b>Digital Camera</b>"
+msgstr "<b>Digitalkamera</b>"
+
+#: ../gnome-volume-properties.glade.h:5
+msgid "<b>Digital Video Camera</b>"
+msgstr "<b>Digitale Videokamera</b>"
+
+#: ../gnome-volume-properties.glade.h:6
+msgid "<b>Keyboards</b>"
+msgstr "<b>Tastaturen</b>"
+
+#: ../gnome-volume-properties.glade.h:7
+msgid "<b>Mice</b>"
+msgstr "<b>Mäuse</b>"
+
+#: ../gnome-volume-properties.glade.h:8
+msgid "<b>Palm™</b>"
+msgstr "<b>Palm</b>"
+
+#: ../gnome-volume-properties.glade.h:9
+msgid "<b>PocketPC</b>"
+msgstr "<b>PocketPC</b>"
+
+#: ../gnome-volume-properties.glade.h:10
+msgid "<b>Portable Music Players</b>"
+msgstr "<b>Tragbare Musik-Player</b>"
+
+#: ../gnome-volume-properties.glade.h:11
+msgid "<b>Printers</b>"
+msgstr "<b>Drucker</b>"
+
+#: ../gnome-volume-properties.glade.h:12
+msgid "<b>Removable Storage</b>"
+msgstr "<b>Wechseldatenträger</b>"
+
+#: ../gnome-volume-properties.glade.h:13
+msgid "<b>Scanners</b>"
+msgstr "<b>Scanner</b>"
+
+#: ../gnome-volume-properties.glade.h:14
+msgid "<b>Tablets</b>"
+msgstr "<b>Grafiktablett</b>"
+
+#: ../gnome-volume-properties.glade.h:15
+msgid "<b>Video DVD Discs</b>"
+msgstr "<b>Video-DVDs</b>"
+
+#: ../gnome-volume-properties.glade.h:16
+msgid "<b>Web Camera</b>"
+msgstr "<b>Webcam</b>"
+
+#: ../gnome-volume-properties.glade.h:17
+msgid "Auto-_open files on new drives and media"
+msgstr "Dateien auf neuen Laufwerken und Medien automatisch ö_ffnen"
+
+#: ../gnome-volume-properties.glade.h:18
+msgid "Automatically run a program when a USB _keyboard is connected"
+msgstr ""
+"Automatisch ein Programm ausführen, wenn eine USB-_Tastatur eingesteckt wird"
+
+#: ../gnome-volume-properties.glade.h:19
+msgid "Automatically run a program when a USB _mouse is connected"
+msgstr ""
+"Automatisch ein Programm ausführen, wenn eine USB-_Maus eingesteckt wird"
+
+#: ../gnome-volume-properties.glade.h:20
+msgid "Automatically run a program when a _printer is connected"
+msgstr "Automatisch ein Programm ausführen, wenn ein _Drucker eingesteckt wird"
+
+#: ../gnome-volume-properties.glade.h:21
+msgid "Automatically run a program when a _scanner is connected"
+msgstr "Automatisch ein Programm ausführen, wenn ein S_canner eingesteckt wird"
+
+#: ../gnome-volume-properties.glade.h:22
+msgid "Automatically run a program when a _tablet is connected"
+msgstr ""
+"Automatisch ein Programm ausführen, wenn ein _Grafiktablett eingesteckt wird"
+
+#: ../gnome-volume-properties.glade.h:23
+msgid "Browse _removable media when inserted"
+msgstr "Wechselmedien beim _Einlegen öffnen"
+
+#: ../gnome-volume-properties.glade.h:24
+msgid "C_ommand:"
+msgstr "_Befehl:"
+
+#: ../gnome-volume-properties.glade.h:25
+msgid "Cameras"
+msgstr "Kameras"
+
+#: ../gnome-volume-properties.glade.h:26
+msgid "Comman_d:"
+msgstr "Befeh_l:"
+
+#: ../gnome-volume-properties.glade.h:27
+msgid "Command for A_udio CDs:"
+msgstr "Befehl für A_udio-CDs:"
+
+#: ../gnome-volume-properties.glade.h:28
+msgid "Command for _Data CDs: "
+msgstr "Befehl für _Daten-CDs: "
+
+#: ../gnome-volume-properties.glade.h:29
+msgid "Drives and Media Preferences"
+msgstr "Laufwerk- und Medieneinstellungen"
+
+#: ../gnome-volume-properties.glade.h:30
+msgid "Input Devices"
+msgstr "Eingabegeräte"
+
+#: ../gnome-volume-properties.glade.h:31
+msgid "Mount removable media when _inserted"
+msgstr "Wechselmedien beim Einlegen ein_binden"
+
+#: ../gnome-volume-properties.glade.h:32
+msgid "Multimedia"
+msgstr "Unterhaltungsmedien"
+
+#: ../gnome-volume-properties.glade.h:33
+msgid "PDAs"
+msgstr "PDAs"
+
+#: ../gnome-volume-properties.glade.h:34
+msgid "Play _audio CD discs when inserted"
+msgstr "_Musik-CDs beim Einlegen wiedergeben"
+
+#: ../gnome-volume-properties.glade.h:35
+msgid "Play _music files when connected"
+msgstr "Nach dem Verbinden _Musikdateien abspielen"
+
+#: ../gnome-volume-properties.glade.h:36
+msgid "Play _video DVD discs when inserted"
+msgstr "_Video-DVDs beim Einlegen wiedergeben"
+
+#: ../gnome-volume-properties.glade.h:37
+msgid "Printers & Scanners"
+msgstr "Drucker & Scanner"
+
+#: ../gnome-volume-properties.glade.h:38
+msgid "Removable Drives and Media Preferences"
+msgstr "Wechseldatenträger- und Medieneinstellungen"
+
+#: ../gnome-volume-properties.glade.h:39
+msgid "Select program to burn audio CDs"
+msgstr "Programm zum Brennen von Musik-CDs auswählen"
+
+#: ../gnome-volume-properties.glade.h:40
+msgid "Select program to burn data CDs"
+msgstr "Programm zum Brennen von Daten-CDs auswählen"
+
+#: ../gnome-volume-properties.glade.h:41
+msgid "Select program to edit videos"
+msgstr "Programm zum Bearbeiten von Filmen"
+
+#: ../gnome-volume-properties.glade.h:42
+msgid "Select program to import photos"
+msgstr "Programm zum Importieren von Fotos"
+
+#: ../gnome-volume-properties.glade.h:43
+msgid "Select program to play DVDs"
+msgstr "Programm zum Abspielen von DVDs"
+
+#: ../gnome-volume-properties.glade.h:44
+msgid "Select program to play audio CDs"
+msgstr "Programm zum Abspielen von Musik-CDs"
+
+#: ../gnome-volume-properties.glade.h:45
+msgid "Select program to play music files"
+msgstr "Programm zum Abspielen von Musikdateien"
+
+#: ../gnome-volume-properties.glade.h:46
+msgid "Select program to run when a keyboard is plugged in"
+msgstr "Auszuführendes Programm beim Anschließen einer Tastatur"
+
+#: ../gnome-volume-properties.glade.h:47
+msgid "Select program to run when a mouse is plugged in"
+msgstr "Auszuführendes Programm beim Anschließen einer Maus"
+
+#: ../gnome-volume-properties.glade.h:48
+msgid "Select program to run when a printer is plugged in"
+msgstr "Auszuführendes Programm beim Anschließen eines Druckers"
+
+#: ../gnome-volume-properties.glade.h:49
+msgid "Select program to run when a scanner is plugged in"
+msgstr "Auszuführendes Programm beim Anschließen eines Scanners"
+
+#: ../gnome-volume-properties.glade.h:50
+msgid "Select program to run when a tablet is plugged in"
+msgstr "Auszuführendes Programm beim Anschließen eines Grafiktabletts"
+
+#: ../gnome-volume-properties.glade.h:51
+msgid "Select program to sync Palm devices"
+msgstr "Programm zum Abgleich des Palms"
+
+# CHECK
+#: ../gnome-volume-properties.glade.h:52
+msgid "Storage"
+msgstr "Speicherort"
+
+#: ../gnome-volume-properties.glade.h:53
+msgid "Sync PocketP_C devices when connected"
+msgstr "Nach dem Verbinden Daten mit _PocketPCs abgleichen"
+
+#: ../gnome-volume-properties.glade.h:54
+msgid "Sync _Palm™ devices when connected"
+msgstr "Nach dem Verbinden Daten mit Pa_lms abgleichen"
+
+#: ../gnome-volume-properties.glade.h:55
+msgid "_Auto-run programs on new drives and media"
+msgstr "_Programme auf neuen Laufwerken und Medien automatisch ausführen"
+
+#: ../gnome-volume-properties.glade.h:56
+msgid "_Burn a CD or DVD when a blank disc is inserted"
+msgstr "Eine CD oder DVD _brennen, wenn ein leeres Medium eingelegt wird"
+
+#: ../gnome-volume-properties.glade.h:57
+msgid "_Command:"
+msgstr "_Befehl:"
+
+#: ../gnome-volume-properties.glade.h:58
+msgid "_Edit video when connected"
+msgstr "Nach dem Verbinden Film b_earbeiten"
+
+#: ../gnome-volume-properties.glade.h:59
+msgid "_Import digital photographs when connected"
+msgstr "Nach dem Verbinden Fotos _importieren"
+
+#: ../gnome-volume-properties.glade.h:60
+msgid "_Mount removable drives when hot-plugged"
+msgstr "_Hotplug-Wechsellaufwerke automatisch einhängen"
+
+#: ../src/manager.c:220 ../src/manager.c:225 ../src/manager.c:230
+#: ../src/manager.c:235 ../src/manager.c:241 ../src/manager.c:247
+#: ../src/manager.c:253 ../src/manager.c:259
+msgid "Ig_nore"
+msgstr "_Ignorieren"
+
+#: ../src/manager.c:221
+msgid "_Allow Auto-Run"
+msgstr "_Automatisches Ausführen erlauben"
+
+#: ../src/manager.c:226
+msgid "_Open"
+msgstr "Ö_ffnen"
+
+#: ../src/manager.c:231 ../src/manager.c:237 ../src/manager.c:242
+msgid "Import _Photos"
+msgstr "Fotos _Importieren"
+
+#: ../src/manager.c:236
+msgid "_Open Folder"
+msgstr "_Ordner öffnen"
+
+#: ../src/manager.c:243
+msgid "Manage _Music"
+msgstr "_Musik verwalten"
+
+#: ../src/manager.c:248
+msgid "_Browse Files"
+msgstr "_Dateien anzeigen"
+
+#: ../src/manager.c:249
+msgid "_Play CD"
+msgstr "_CD wiedergeben"
+
+#: ../src/manager.c:254
+msgid "Make _Audio CD"
+msgstr "_Musik-CD brennen"
+
+#: ../src/manager.c:255
+msgid "Make _Data CD"
+msgstr "_Daten-CD brennen"
+
+#: ../src/manager.c:260
+msgid "Make _DVD"
+msgstr "_DVD brennen"
+
+#: ../src/manager.c:313
+msgid "Auto-Run Confirmation"
+msgstr "Automatisches Ausführen bestätigen"
+
+#: ../src/manager.c:314
+msgid "Auto-run capability detected."
+msgstr "Unterstützung für Automatisches Ausführen erkannt."
+
+#: ../src/manager.c:315
+msgid "Would you like to allow <b>'${0}'</b> to run?"
+msgstr "Soll <b>»${0}«</b> ausgeführt werden?"
+
+#: ../src/manager.c:320
+msgid "Auto-Open Confirmation"
+msgstr "Automatisches Öffnen bestätigen"
+
+#: ../src/manager.c:321
+msgid "Auto-Open capability detected."
+msgstr "Unterstützung für Automatisches Öffnen erkannt."
+
+#: ../src/manager.c:322
+msgid "Would you like to open <b>'${0}'</b>?"
+msgstr "Soll <b>»${0}«</b> geöffnet werden?"
+
+#: ../src/manager.c:327 ../src/manager.c:334
+msgid "Camera Import"
+msgstr "Kamera importieren"
+
+#: ../src/manager.c:328 ../src/manager.c:335
+msgid "A camera has been detected."
+msgstr "Eine Kamera wurde erkannt."
+
+#: ../src/manager.c:329 ../src/manager.c:336
+msgid ""
+"There are photos on the camera. Would you like to add these pictures to your "
+"album?"
+msgstr ""
+"Auf dieser Kamera sind Fotos vorhanden. Sollen diese Ihrem Fotoalbum "
+"hinzugefügt werden?"
+
+#: ../src/manager.c:330 ../src/manager.c:337 ../src/manager.c:344
+#: ../src/manager.c:351 ../src/manager.c:358
+msgid "_Always perform this action"
+msgstr "I_mmer diese Aktion anwenden"
+
+#: ../src/manager.c:341
+msgid "Photo Import"
+msgstr "Fotos importieren"
+
+#: ../src/manager.c:342
+msgid "A photo card has been detected."
+msgstr "Ein Medium mit Fotos wurde erkannt."
+
+#: ../src/manager.c:343
+msgid ""
+"There are photos on the card. Would you like to add these pictures to your "
+"album?"
+msgstr ""
+"Auf diesem Medium sind Fotos vorhanden. Sollen diese Ihrem Fotoalbum "
+"hinzugefügt werden?"
+
+#: ../src/manager.c:348
+msgid "Photos and Music"
+msgstr "Fotos und Musik"
+
+#: ../src/manager.c:349
+msgid "Photos were found on your music device."
+msgstr "Auf diesem Gerät wurden Fotos und Musik entdeckt."
+
+#: ../src/manager.c:350
+msgid "Would you like to import the photos or manage its music?"
+msgstr "Sollen die Fotos importiert oder die Musik verwaltet werden?"
+
+#: ../src/manager.c:355
+msgid "Mixed Audio and Data CD"
+msgstr "Gemischte Audio-/Daten-CD"
+
+#: ../src/manager.c:356
+msgid "The CD in the drive contains both music and files."
+msgstr "Die CD im Laufwerk enthält sowohl Musik als auch Dateien."
+
+#: ../src/manager.c:357
+msgid "Would you like to listen to music or browse the files?"
+msgstr "Soll die Musik wiedergegeben oder die Dateien angezeigt werden?"
+
+#: ../src/manager.c:362
+msgid "Blank CD Inserted"
+msgstr "Leere CD eingelegt"
+
+#: ../src/manager.c:363 ../src/manager.c:370
+msgid "You have inserted a blank disc."
+msgstr "Ein leeres Medium wurde eingelegt."
+
+#: ../src/manager.c:364 ../src/manager.c:371
+msgid "What would you like to do?"
+msgstr "Welche Aktion soll ausgeführt werden?"
+
+#: ../src/manager.c:369
+msgid "Blank DVD Inserted"
+msgstr "Leere DVD eingelegt"
+
+#: ../src/manager.c:3251
+#, c-format
+msgid "%d%% of the disk space on %s is in use"
+msgstr "%d%% des Speicherplatzes von %s sind belegt"
+
+#: ../src/manager.c:3254
+msgid "Low Disk Space"
+msgstr "Wenig freier Speicherplatz"
+
+#: ../src/manager.c:3372
+msgid "Print version and exit"
+msgstr "Version ausgeben und beenden"
+
+#: ../src/manager.c:3374
+msgid "Run as a daemon"
+msgstr "Als Dienst ausführen"
+
+#: ../src/manager.c:3376
+msgid "Don't run as a daemon"
+msgstr "Nicht als Dienst ausführen"
+
+# CHECK: Was bewirkt dieser Schalter?
+#: ../src/manager.c:3378
+msgid "Run in secret mode"
+msgstr "Im »secret«-Modus ausführen"
+
+#: ../src/manager.c:3410
+#, c-format
+msgid "Unrecognized --daemon argument: %s\n"
+msgstr "Unbekanntes --daemon-Argument: %s\n"
+
+#: ../src/properties.c:318
+msgid "Could not load the main interface"
+msgstr "Die Hauptoberfläche konnte nicht geladen werden"
+
+#: ../src/properties.c:320
+msgid "Please make sure that the volume manager is properly installed"
+msgstr ""
+"Bitte stellen Sie sicher, dass die Datenträgerverwaltung korrekt installiert "
+"ist"
+
+#: ../src/properties.c:479
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr ""
+"Fehler beim Starten des gnome-volume-manager-Daemon:\n"
+"%s"
+
+#: ../src/properties.c:510
+msgid "Volume management not supported"
+msgstr "Datenträgerverwaltung wird nicht unterstützt"
+
+#: ../src/properties.c:512
+msgid ""
+"The \"hald\" service is required but not currently running. Enable the "
+"service and rerun this application, or contact your system administrator."
+msgstr ""
+"Der »hald«-Service wird benötigt, ist zurzeit aber nicht gestartet. "
+"Aktivieren Sie diesen Service und starten Sie diese Anwendung neu, oder "
+"kontaktieren Sie Ihren Systemadministrator"
+
+#~ msgid "Choose Disc Type"
+#~ msgstr "Medientyp auswählen"
+
+#~ msgid ""
+#~ "The threshold value for whether or not to toggle the notification off, "
+#~ "based on the amount of space freed up by the user since the last check."
+#~ msgstr ""
+#~ "Schwellwert, der abhängig vom seit der letzten Überprüfung vom Benutzer "
+#~ "freigegebenen Speicherplatz festlegt, ob die Benachrichtigung angezeigt "
+#~ "wird oder nicht."
+
+#~ msgid "Threshold for disk space being freed up, to toggle notification"
+#~ msgstr ""
+#~ "Schwellwert für freigegebenen Speicherplatz, ab dem Benachrichtigung "
+#~ "angezeigt wird"

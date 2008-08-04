@@ -1,0 +1,950 @@
+# Biełaruski pierakład gnome-volume-manager
+# Copyright (C) 2007 Ihar Hrachyshka
+# This file is distributed under the same license
+# as the gnome-volume-manager package.
+# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-volume-manager.HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-10-19 00:48+0300\n"
+"PO-Revision-Date: 2007-10-19 00:48+0300\n"
+"Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
+"Language-Team: Belarusian Latin <be-latin.open-tran.eu>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../gnome-volume-manager.schemas.in.h:1
+msgid "\"Always take this action\" checkbox for Autorun"
+msgstr "Opcyja \"Zaŭsiody vykonvaj hetaje dziejańnie\" dla Aŭtastartu"
+
+#: ../gnome-volume-manager.schemas.in.h:2
+msgid "\"Always take this action\" checkbox for iPod Photos"
+msgstr "Opcyja \"Zaŭsiody vykonvaj hetaje dziejańnie\" dla fatazdymkaŭ z iPodu"
+
+#: ../gnome-volume-manager.schemas.in.h:3
+msgid "\"Always take this action\" checkbox for mixed Audio and Data CDs"
+msgstr ""
+"Opcyja \"Zaŭsiody vykonvaj hetaje dziejańnie\" dla CD z aŭdyjo j danymi"
+
+#: ../gnome-volume-manager.schemas.in.h:4
+msgid "\"Always take this action\" checkbox for photo import from a camera"
+msgstr ""
+"Opcyja \"Zaŭsiody vykonvaj hetaje dziejańnie\" dla impartavańnia fatazdymkaŭ "
+"z kamery"
+
+#: ../gnome-volume-manager.schemas.in.h:5
+msgid "\"Always take this action\" checkbox for photo import from a device"
+msgstr ""
+"Opcyja \"Zaŭsiody vykonvaj hetaje dziejańnie\" dla impartavańnia fatazdymkaŭ "
+"z pryłady"
+
+#: ../gnome-volume-manager.schemas.in.h:6
+msgid "':' delimited list of paths to check for autoopen files."
+msgstr ""
+"Śpis ściežak, padzielenych znakam ':', dzie šukać fajły aŭtaadčynieńnia."
+
+#: ../gnome-volume-manager.schemas.in.h:7
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr ""
+"Śpis ściežak, padzielenych znakam ':', dzie šukać dvajkovyja fajły j skrypty "
+"aŭtaŭruchamleńnia."
+
+#: ../gnome-volume-manager.schemas.in.h:8
+msgid "Action to take when a camera is plugged in."
+msgstr "Dziejańnie pry padłučeńni kamery."
+
+#: ../gnome-volume-manager.schemas.in.h:9
+msgid "Action to take when a device containing photos is encountered."
+msgstr ""
+"Dziejańnie, kali znojdzienaja pryłada, na jakoj źmieščanyja fatazdymki."
+
+#: ../gnome-volume-manager.schemas.in.h:10
+msgid "Action to take when a device contains an autorun program/script."
+msgstr "Dziejańnie, kali pryłada ŭtrymvaje prahramu/skrypt aŭtaŭruchamleńnia."
+
+#: ../gnome-volume-manager.schemas.in.h:11
+msgid "Action to take when a mixed Audio and Data CD is encountered."
+msgstr "Dziejańnie, kali znojdzieny CD z aŭdyjo j danymi."
+
+#: ../gnome-volume-manager.schemas.in.h:12
+msgid "Action to take when an iPod Photo is encountered."
+msgstr "Dziejańnie, kali znojdzienaja pryłada iPod z fatazdymkami."
+
+#: ../gnome-volume-manager.schemas.in.h:13
+msgid "Audio CD burn command"
+msgstr "Zahad zapisu CD z aŭdyjo"
+
+#: ../gnome-volume-manager.schemas.in.h:14
+msgid "Automount removable drives"
+msgstr "Aŭtamatyčna mantuj pieranosnyja pryłady"
+
+#: ../gnome-volume-manager.schemas.in.h:15
+msgid "Automount removable media"
+msgstr "Aŭtamatyčna mantuj źmiennyja nośbity"
+
+#: ../gnome-volume-manager.schemas.in.h:16
+msgid "Autoopen path"
+msgstr "Aŭtamatyčna adčyniaj ściežku"
+
+#: ../gnome-volume-manager.schemas.in.h:17
+msgid "Autorun nautilus"
+msgstr "Aŭtamatyčna ŭruchamlaj Nautilus"
+
+#: ../gnome-volume-manager.schemas.in.h:18
+msgid "Autorun path"
+msgstr "Aŭtamatyčna adčyniaj ściežku"
+
+#: ../gnome-volume-manager.schemas.in.h:19
+msgid "CD play command"
+msgstr "Zahad hrańnia CD"
+
+#: ../gnome-volume-manager.schemas.in.h:20
+msgid "Command to run when a Palm is connected."
+msgstr "Zahad dla ŭruchamleńnia pry padłučeńni Palmu."
+
+#: ../gnome-volume-manager.schemas.in.h:21
+msgid "Command to run when a PocketPC is connected."
+msgstr "Zahad dla ŭruchamleńnia pry padłučeńni PocketPC."
+
+#: ../gnome-volume-manager.schemas.in.h:22
+msgid ""
+"Command to run when a digital camera is connected or media from a digital "
+"camera is inserted."
+msgstr ""
+"Zahad dla ŭruchamleńnia pry padłučeńni ličbavaj kamery albo ŭstaŭcy nośbitu "
+"ad ličbavaj kamery."
+
+#: ../gnome-volume-manager.schemas.in.h:23
+msgid "Command to run when a keyboard is connected."
+msgstr "Zahad dla ŭruchamleńnia pry padłučeńni klavijatury."
+
+#: ../gnome-volume-manager.schemas.in.h:24
+msgid "Command to run when a mouse is connected."
+msgstr "Zahad dla ŭruchamleńnia pry padłučeńni myšy."
+
+#: ../gnome-volume-manager.schemas.in.h:25
+msgid "Command to run when a printer is connected."
+msgstr "Zahad dla ŭruchamleńnia pry padłučeńni drukarki."
+
+#: ../gnome-volume-manager.schemas.in.h:26
+msgid "Command to run when a scanner is connected."
+msgstr "Zahad dla ŭruchamleńnia pry padłučeńni skanera."
+
+#: ../gnome-volume-manager.schemas.in.h:27
+msgid "Command to run when a tablet is connected."
+msgstr "Zahad dla ŭruchamleńnia pry padłučeńni tabletu."
+
+#: ../gnome-volume-manager.schemas.in.h:28
+msgid "Command to run when a video DVD is inserted."
+msgstr "Zahad dla ŭruchamleńnia pry ŭstaŭcy DVD z videa."
+
+#: ../gnome-volume-manager.schemas.in.h:29
+msgid "Command to run when a video VCD is inserted."
+msgstr "Zahad dla ŭruchamleńnia pry ŭstaŭcy VCD z videa."
+
+#: ../gnome-volume-manager.schemas.in.h:30
+msgid "Command to run when a video camera is connected."
+msgstr "Zahad dla ŭruchamleńnia pry padłučeńni videakamery."
+
+#: ../gnome-volume-manager.schemas.in.h:31
+msgid "Command to run when a web camera is connected."
+msgstr "Zahad dla ŭruchamleńnia pry padłučeńni webkamery."
+
+#: ../gnome-volume-manager.schemas.in.h:32
+msgid "Command to run when an audio CD is inserted."
+msgstr "Zahad dla ŭruchamleńnia pry ŭstaŭcy CD z aŭdyjo."
+
+#: ../gnome-volume-manager.schemas.in.h:33
+msgid "Command to run when an iPod is connected."
+msgstr "Zahad dla ŭruchamleńnia pry padłučeńni iPodu."
+
+#: ../gnome-volume-manager.schemas.in.h:34
+msgid "Command to run when the user wishes to burn a Data CD."
+msgstr "Zahad dla ŭruchamleńnia, kali karystalnik choča zapisać CD z danymi."
+
+#: ../gnome-volume-manager.schemas.in.h:35
+msgid "Command to run when the user wishes to burn an Audio CD."
+msgstr "Zahad dla ŭruchamleńnia, kali karystalnik choča zapisać CD z aŭdyjo."
+
+#: ../gnome-volume-manager.schemas.in.h:36
+msgid "Command to use when launching the file manager."
+msgstr "Zahad, kali ŭruchamlajecca kiraŭnik fajłaŭ."
+
+#: ../gnome-volume-manager.schemas.in.h:37
+msgid "DVD play command"
+msgstr "Zahad hrańnia DVD"
+
+#: ../gnome-volume-manager.schemas.in.h:38
+msgid "Data CD burn command"
+msgstr "Zahad zapisu CD z danymi"
+
+#: ../gnome-volume-manager.schemas.in.h:39
+msgid "File Manager command"
+msgstr "Zahad kiraŭnika fajłaŭ"
+
+#: ../gnome-volume-manager.schemas.in.h:40
+msgid "Low Disk Space notification threshold"
+msgstr "Paroh dla pačatku nahadvańnia ab niastačy dyskavaj prastory."
+
+#: ../gnome-volume-manager.schemas.in.h:41
+msgid "Open nautilus on removeable media insert."
+msgstr "Adčyni Nautilus pry ŭstaŭcy źmiennaha nośbitu."
+
+#: ../gnome-volume-manager.schemas.in.h:42
+msgid "Perform autoopen"
+msgstr "Vykanaj aŭtaadčynieńnie"
+
+#: ../gnome-volume-manager.schemas.in.h:43
+msgid "Perform autorun"
+msgstr "Vykanaj aŭtaŭruchamleńnie"
+
+#: ../gnome-volume-manager.schemas.in.h:44
+msgid "Photo management command"
+msgstr "Zahad pracy z fatazdymkami"
+
+#: ../gnome-volume-manager.schemas.in.h:45
+msgid "Play inserted audio CD's"
+msgstr "Hraj ustaŭlenyja CD z aŭdyjo"
+
+#: ../gnome-volume-manager.schemas.in.h:46
+msgid "Play inserted video DVDs"
+msgstr "Hraj ustaŭlenyja DVD ź videa"
+
+#: ../gnome-volume-manager.schemas.in.h:47
+msgid "Play inserted video VCDs"
+msgstr "Hraj ustaŭlenyja VCD ź videa"
+
+#: ../gnome-volume-manager.schemas.in.h:48
+msgid "Run Palm-sync program"
+msgstr "Uruchamlaj prahramu dla synchranizacyi Palmu"
+
+#: ../gnome-volume-manager.schemas.in.h:49
+msgid "Run PocketPC-sync program"
+msgstr "Uruchamlaj prahramu dla synchranizacyi PocketPC"
+
+#: ../gnome-volume-manager.schemas.in.h:50
+msgid "Run a program to burn CDs/DVDs"
+msgstr "Uruchom prahramu, kab zapisać CD/DVD"
+
+#: ../gnome-volume-manager.schemas.in.h:51
+msgid "Run iPod program"
+msgstr "Uruchom prahramu dla iPodu"
+
+#: ../gnome-volume-manager.schemas.in.h:52
+msgid "Run keyboard program"
+msgstr "Uruchom prahramu dla klavijatury"
+
+#: ../gnome-volume-manager.schemas.in.h:53
+msgid "Run mouse program"
+msgstr "Uruchom prahramu dla myšy"
+
+#: ../gnome-volume-manager.schemas.in.h:54
+msgid "Run photo management command"
+msgstr "Uruchom prahramu dla pracy z fatazdymkami"
+
+#: ../gnome-volume-manager.schemas.in.h:55
+msgid "Run printer program"
+msgstr "Uruchom prahramu dla drukarki"
+
+#: ../gnome-volume-manager.schemas.in.h:56
+msgid "Run scanner program"
+msgstr "Uruchom prahramu dla skanera"
+
+#: ../gnome-volume-manager.schemas.in.h:57
+msgid "Run tablet program"
+msgstr "Uruchom prahramu dla tabletu"
+
+#: ../gnome-volume-manager.schemas.in.h:58
+msgid "Run video editing program"
+msgstr "Uruchom prahramu dla redahavańnia videa"
+
+#: ../gnome-volume-manager.schemas.in.h:59
+msgid "Run webcam stream display program"
+msgstr "Uruchom prahramu dla pakazu płyni z webkamery"
+
+#: ../gnome-volume-manager.schemas.in.h:60
+msgid ""
+"The threshold value for whether or not to toggle the notification on, based "
+"on the amount of additional space used since the last check."
+msgstr ""
+"Parohavaja vartaść, kali treba ŭklučać/vyklučać nahadvańnie ab niastačy "
+"dyskavaj prastory, zasnavanaja na kolkaści volnaha miesca ad apošniaj "
+"pravierki."
+
+#: ../gnome-volume-manager.schemas.in.h:61
+msgid "Threshold for notification of increased disk usage"
+msgstr "Paroh dla pačatku nahadvańnia ab pavieličeńni vykarystańnia dysku"
+
+#: ../gnome-volume-manager.schemas.in.h:62
+msgid "Threshold percentage for notifying the user of low disk space."
+msgstr ""
+"Paroh u pracentach dla pačatku nahadvańnia karystalniku ab niastačy dyskavaj "
+"prastory."
+
+#: ../gnome-volume-manager.schemas.in.h:63
+msgid "VCD play command"
+msgstr "Zahad hrańnia VCD"
+
+#: ../gnome-volume-manager.schemas.in.h:64
+msgid "Whether autoopen files should be opened on newly mounted media."
+msgstr "Ci adčyniać fajły aŭtaadčynieńnia dla novych prymantavanych nośbitaŭ."
+
+#: ../gnome-volume-manager.schemas.in.h:65
+msgid ""
+"Whether autorun programs (binaries and scripts located in 'autorun_path') "
+"are run on newly mounted media."
+msgstr ""
+"Ci ŭruchamlać prahramu aŭtaŭruchamleńnia (dvajkovyja fajły j skrypty, jakija "
+"znachodziacca ŭ 'autorun_path') dla novych prymantavanych nośbitaŭ."
+
+#: ../gnome-volume-manager.schemas.in.h:66
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"drives when they are inserted."
+msgstr ""
+"Ci pavinny kiraŭnik masivaŭ danych Gnome aŭtamatyčna mantavać pieranosnyja "
+"dyskavyja pryłady pry ŭstaŭcy."
+
+#: ../gnome-volume-manager.schemas.in.h:67
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"media when they are inserted."
+msgstr ""
+"Ci pavinny kiraŭnik masivaŭ danych Gnome aŭtamatyčna mantavać źmiennyja "
+"nośbity pry ŭstaŭcy."
+
+#: ../gnome-volume-manager.schemas.in.h:68
+msgid ""
+"Whether, when a Palm is connected, gnome-volume-manager should run "
+"'autopalmsync_command'."
+msgstr ""
+"Ci pavinny kiraŭnik masivaŭ danych Gnome ŭruchamlać 'autopalmsync_command' "
+"pry padłučeńni Palmu."
+
+#: ../gnome-volume-manager.schemas.in.h:69
+msgid ""
+"Whether, when a PocketPC is connected, gnome-volume-manager should run "
+"'autopocketpc_command'."
+msgstr ""
+"Ci pavinny kiraŭnik masivaŭ danych Gnome ŭruchamlać 'autopocketpc_command' "
+"pry padłučeńni PocketPC."
+
+#: ../gnome-volume-manager.schemas.in.h:70
+msgid ""
+"Whether, when a blank CD or DVD is inserted, gnome-volume-manager should run "
+"one of the autoburn commands."
+msgstr ""
+"Ci pavinny kiraŭnik masivaŭ danych Gnome ŭruchamlać adzin z zahadaŭ "
+"aŭtamatyčnaha zapisu pry ŭstaŭcy čystaha CD albo DVD."
+
+#: ../gnome-volume-manager.schemas.in.h:71
+msgid ""
+"Whether, when a digital camera is connected or media from a digital camera "
+"is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr ""
+"Ci pavinny kiraŭnik masivaŭ danych Gnome ŭruchamlać 'autophoto_command' pry "
+"padłučeńni ličbavaj kamery albo ŭstaŭcy nośbitu ad ličbavaj kamery."
+
+#: ../gnome-volume-manager.schemas.in.h:72
+msgid ""
+"Whether, when a digital video camera is connected, gnome-volume-manager "
+"should run 'autovideocam_command'."
+msgstr ""
+"Ci pavinny kiraŭnik masivaŭ danych Gnome ŭruchamlać 'autovideocam_command' "
+"pry padłučeńni ličbavaj videakamery."
+
+#: ../gnome-volume-manager.schemas.in.h:73
+msgid ""
+"Whether, when a keyboard is connected, gnome-volume-manager should run "
+"'autokeyboard_command'."
+msgstr ""
+"Ci pavinny kiraŭnik masivaŭ danych Gnome ŭruchamlać 'autokeyboard_command' "
+"pry padłučeńni klavijatury."
+
+#: ../gnome-volume-manager.schemas.in.h:74
+msgid ""
+"Whether, when a mouse is connected, gnome-volume-manager should run "
+"'automouse_command'."
+msgstr ""
+"Ci pavinny kiraŭnik masivaŭ danych Gnome ŭruchamlać 'automouse_command' pry "
+"padłučeńni myšy."
+
+#: ../gnome-volume-manager.schemas.in.h:75
+msgid ""
+"Whether, when a printer is connected, gnome-volume-manager should run "
+"'autoprinter_command'."
+msgstr ""
+"Ci pavinny kiraŭnik masivaŭ danych Gnome ŭruchamlać 'autoprinter_command' "
+"pry padłučeńni drukarki."
+
+#: ../gnome-volume-manager.schemas.in.h:76
+msgid ""
+"Whether, when a scanner is connected, gnome-volume-manager should run "
+"'autoscanner_command'."
+msgstr ""
+"Ci pavinny kiraŭnik masivaŭ danych Gnome ŭruchamlać 'autoscanner_command' "
+"pry padłučeńni skanera."
+
+#: ../gnome-volume-manager.schemas.in.h:77
+msgid ""
+"Whether, when a tablet is connected, gnome-volume-manager should run "
+"'autotablet_command'."
+msgstr ""
+"Ci pavinny kiraŭnik masivaŭ danych Gnome ŭruchamlać 'autotablet_command' pry "
+"padłučeńni tabletu."
+
+#: ../gnome-volume-manager.schemas.in.h:78
+msgid ""
+"Whether, when a video DVD is inserted, gnome-volume-manager should run "
+"'autoplay_dvd_command'."
+msgstr ""
+"Ci pavinny kiraŭnik masivaŭ danych Gnome ŭruchamlać 'autoplay_dvd_command' "
+"pry ŭstaŭcy DVD ź videa."
+
+#: ../gnome-volume-manager.schemas.in.h:79
+msgid ""
+"Whether, when a video VCD is inserted, gnome-volume-manager should run "
+"'autoplay_vcd_command'."
+msgstr ""
+"Ci pavinny kiraŭnik masivaŭ danych Gnome ŭruchamlać 'autoplay_vcd_command' "
+"pry ŭstaŭcy VCD ź videa."
+
+#: ../gnome-volume-manager.schemas.in.h:80
+msgid ""
+"Whether, when a web camera is connected, gnome-volume-manager should run "
+"'autowebcam_command'."
+msgstr ""
+"Ci pavinny kiraŭnik masivaŭ danych Gnome ŭruchamlać 'autowebcam_command' pry "
+"padłučeńni webkamery."
+
+#: ../gnome-volume-manager.schemas.in.h:81
+msgid ""
+"Whether, when an audio CD is inserted, gnome-volume-manager should run "
+"'autoplay_cda_command'."
+msgstr ""
+"Ci pavinny kiraŭnik masivaŭ danych Gnome ŭruchamlać 'autoplay_cda_command' "
+"pry ŭstaŭcy CD z aŭdyjo."
+
+#: ../gnome-volume-manager.schemas.in.h:82
+msgid ""
+"Whether, when an iPod is connected, gnome-volume-manager should run "
+"'autoipod_command'."
+msgstr ""
+"Ci pavinny kiraŭnik masivaŭ danych Gnome ŭruchamlać 'autoipod_command' pry "
+"padłučeńni iPodu."
+
+#: ../gnome-volume-manager.schemas.in.h:83
+msgid "iPod sync command"
+msgstr "Zahad synchranizacyi iPodu"
+
+#: ../gnome-volume-manager.schemas.in.h:84
+msgid "keyboard command"
+msgstr "zahad dla klavijatury"
+
+#: ../gnome-volume-manager.schemas.in.h:85
+msgid "mouse command"
+msgstr "zahad dla myšy"
+
+#: ../gnome-volume-manager.schemas.in.h:86
+msgid "palm sync command"
+msgstr "zahad synchranizacyi Palmu"
+
+#: ../gnome-volume-manager.schemas.in.h:87
+msgid "printer command"
+msgstr "zahad dla drukarki"
+
+#: ../gnome-volume-manager.schemas.in.h:88
+msgid "scanner command"
+msgstr "zahad dla skanera"
+
+#: ../gnome-volume-manager.schemas.in.h:89
+msgid "tablet command"
+msgstr "zahad dla tabletu"
+
+#: ../gnome-volume-manager.schemas.in.h:90
+msgid "video camera command"
+msgstr "zahad dla videakamery"
+
+#: ../gnome-volume-manager.schemas.in.h:91
+msgid "web camera command"
+msgstr "zahad dla webkamery"
+
+#: ../gnome-volume-manager.desktop.in.in.h:1
+msgid "Volume Manager"
+msgstr "Kiraŭnik masivaŭ danych"
+
+#: ../gnome-volume-manager.desktop.in.in.h:2
+msgid "Volume manager for removable drives and media"
+msgstr "Kiraŭnik masivaŭ danych dla pieranosnych pryładaŭ i źmiennych nośbitaŭ"
+
+#: ../gnome-volume-properties.desktop.in.h:1
+msgid "Configure management of removable drives and media"
+msgstr "Kanfihuruj pieranosnyja pryłady j źmiennyja nośbity"
+
+#: ../gnome-volume-properties.desktop.in.h:2
+msgid "Removable Drives and Media"
+msgstr "Pieranosnyja pryłady j źmiennyja nośbity"
+
+#: ../gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: ../gnome-volume-properties.glade.h:2
+msgid "<b>Audio CD Discs</b>"
+msgstr "<b>CD z aŭdyjo</b>"
+
+#: ../gnome-volume-properties.glade.h:3
+msgid "<b>Blank CD and DVD Discs</b>"
+msgstr "<b>Čystyja CD i DVD</b>"
+
+#: ../gnome-volume-properties.glade.h:4
+msgid "<b>Digital Camera</b>"
+msgstr "<b>Ličbavaja kamera</b>"
+
+#: ../gnome-volume-properties.glade.h:5
+msgid "<b>Digital Video Camera</b>"
+msgstr "<b>Ličbavaja videakamera</b>"
+
+#: ../gnome-volume-properties.glade.h:6
+msgid "<b>Keyboards</b>"
+msgstr "<b>Klavijatury</b>"
+
+#: ../gnome-volume-properties.glade.h:7
+msgid "<b>Mice</b>"
+msgstr "<b>Myšy</b>"
+
+#: ../gnome-volume-properties.glade.h:8
+msgid "<b>Palm™</b>"
+msgstr "<b>Palm™</b>"
+
+#: ../gnome-volume-properties.glade.h:9
+msgid "<b>PocketPC</b>"
+msgstr "<b>PocketPC</b>"
+
+#: ../gnome-volume-properties.glade.h:10
+msgid "<b>Portable Music Players</b>"
+msgstr "<b>Pieranosnyja muzyčnyja prajhravalniki<b>"
+
+#: ../gnome-volume-properties.glade.h:11
+msgid "<b>Printers</b>"
+msgstr "<b>Drukarki</b>"
+
+#: ../gnome-volume-properties.glade.h:12
+msgid "<b>Removable Storage</b>"
+msgstr "<b>Pieranosnyja pryłady z danymi</b>"
+
+#: ../gnome-volume-properties.glade.h:13
+msgid "<b>Scanners</b>"
+msgstr "<b>Skanery</b>"
+
+#: ../gnome-volume-properties.glade.h:14
+msgid "<b>Tablets</b>"
+msgstr "<b>Tablety</b>"
+
+#: ../gnome-volume-properties.glade.h:15
+msgid "<b>Video DVD Discs</b>"
+msgstr "<b>DVD ź videa</b>"
+
+#: ../gnome-volume-properties.glade.h:16
+msgid "<b>Web Camera</b>"
+msgstr "<b>Webkamera</b>"
+
+#: ../gnome-volume-properties.glade.h:17
+msgid "Auto-_open files on new drives and media"
+msgstr "_Aŭtamatyčna adčyniaj fajły z novych pryładaŭ i nośbitaŭ"
+
+#: ../gnome-volume-properties.glade.h:18
+msgid "Automatically run a program when a USB _keyboard is connected"
+msgstr "Aŭtamatyčna ŭruchamlaj prahramu pry padłučeńni _klavijatury USB"
+
+#: ../gnome-volume-properties.glade.h:19
+msgid "Automatically run a program when a USB _mouse is connected"
+msgstr "Aŭtamatyčna ŭruchamlaj prahramu pry padłučeńni _myšy USB"
+
+#: ../gnome-volume-properties.glade.h:20
+msgid "Automatically run a program when a _printer is connected"
+msgstr "Aŭtamatyčna ŭruchamlaj prahramu pry padłučeńni _drukarki"
+
+#: ../gnome-volume-properties.glade.h:21
+msgid "Automatically run a program when a _scanner is connected"
+msgstr "Aŭtamatyčna ŭruchamlaj prahramu pry padłučeńni _skanera"
+
+#: ../gnome-volume-properties.glade.h:22
+msgid "Automatically run a program when a _tablet is connected"
+msgstr "Aŭtamatyčna ŭruchamlaj prahramu pry padłučeńni _tabletu"
+
+#: ../gnome-volume-properties.glade.h:23
+msgid "Browse _removable media when inserted"
+msgstr "Ahladaj _źmienny nośbit pry ŭstaŭcy"
+
+#: ../gnome-volume-properties.glade.h:24
+msgid "C_ommand:"
+msgstr "_Zahad:"
+
+#: ../gnome-volume-properties.glade.h:25
+msgid "Cameras"
+msgstr "Kamery"
+
+#: ../gnome-volume-properties.glade.h:26
+msgid "Co_mmand:"
+msgstr "_Zahad:"
+
+#: ../gnome-volume-properties.glade.h:27
+msgid "Comma_nd:"
+msgstr "Za_had:"
+
+#: ../gnome-volume-properties.glade.h:28
+msgid "Comman_d:"
+msgstr "Zaha_d:"
+
+#: ../gnome-volume-properties.glade.h:29
+msgid "Command for A_udio CDs:"
+msgstr "Zahad dla CD z a_ŭdyjo:"
+
+#: ../gnome-volume-properties.glade.h:30
+msgid "Command for _Data CDs: "
+msgstr "Zahad dla CD z _danymi: "
+
+#: ../gnome-volume-properties.glade.h:31
+msgid "Drives and Media Preferences"
+msgstr "Nałady pryładaŭ i nośbitaŭ danych"
+
+#: ../gnome-volume-properties.glade.h:32
+msgid "E_dit video when connected"
+msgstr "_Redahuj videa pry padłučeńni"
+
+#: ../gnome-volume-properties.glade.h:33
+msgid "Input Devices"
+msgstr "Pryłady ŭvodu"
+
+#: ../gnome-volume-properties.glade.h:34
+msgid "Mount removable media when _inserted"
+msgstr "Mantuj źmiennyja nośbity pry _ŭstaŭcy"
+
+#: ../gnome-volume-properties.glade.h:35
+msgid "Multimedia"
+msgstr "Multymedyja"
+
+#: ../gnome-volume-properties.glade.h:36
+msgid "PDAs"
+msgstr "PDA"
+
+#: ../gnome-volume-properties.glade.h:37
+msgid "Play _audio CD discs when inserted"
+msgstr "Hraj Cd z _aŭdyjo pry ŭstaŭcy"
+
+#: ../gnome-volume-properties.glade.h:38
+msgid "Play _music files when connected"
+msgstr "Hraj _muzyčnyja fajły pry padłučeńni"
+
+#: ../gnome-volume-properties.glade.h:39
+msgid "Play _video DVD discs when inserted"
+msgstr "Hraj DVD ź _videa pry ŭstaŭcy"
+
+#: ../gnome-volume-properties.glade.h:40
+msgid "Printers & Scanners"
+msgstr "Drukarki j skanery"
+
+#: ../gnome-volume-properties.glade.h:41
+msgid "Removable Drives and Media Preferences"
+msgstr "Nałady dla pieranosnych pryładaŭ i nośbitaŭ danych"
+
+#: ../gnome-volume-properties.glade.h:42
+msgid "Select program to burn audio CDs"
+msgstr "Abiary prahramu dla zapisu CD z aŭdyjo"
+
+#: ../gnome-volume-properties.glade.h:43
+msgid "Select program to burn data CDs"
+msgstr "Abiary prahramu dla zapisu CD z danymi"
+
+#: ../gnome-volume-properties.glade.h:44
+msgid "Select program to edit videos"
+msgstr "Abiary prahramu dla redahavańnia videa"
+
+#: ../gnome-volume-properties.glade.h:45
+msgid "Select program to import photos"
+msgstr "Abiary prahramu dla impartavańnia fatazdymkaŭ"
+
+#: ../gnome-volume-properties.glade.h:46
+msgid "Select program to play DVDs"
+msgstr "Abiary prahramu dla hrańnia DVD"
+
+#: ../gnome-volume-properties.glade.h:47
+msgid "Select program to play audio CDs"
+msgstr "Abiary prahramu dla hrańnia CD z aŭdyjo"
+
+#: ../gnome-volume-properties.glade.h:48
+msgid "Select program to play music files"
+msgstr "Abiary prahramu dla hrańnia muzyčnych fajłaŭ"
+
+#: ../gnome-volume-properties.glade.h:49
+msgid "Select program to run when a keyboard is plugged in"
+msgstr "Abiary prahramu dla ŭruchamleńnia pry padłučeńni klavijatury"
+
+#: ../gnome-volume-properties.glade.h:50
+msgid "Select program to run when a mouse is plugged in"
+msgstr "Abiary prahramu dla ŭruchamleńnia pry padłučeńni myšy"
+
+#: ../gnome-volume-properties.glade.h:51
+msgid "Select program to run when a printer is plugged in"
+msgstr "Abiary prahramu dla ŭruchamleńnia pry padłučeńni drukarki"
+
+#: ../gnome-volume-properties.glade.h:52
+msgid "Select program to run when a scanner is plugged in"
+msgstr "Abiary prahramu dla ŭruchamleńnia pry padłučeńni skanera"
+
+#: ../gnome-volume-properties.glade.h:53
+msgid "Select program to run when a tablet is plugged in"
+msgstr "Abiary prahramu dla ŭruchamleńnia pry padłučeńni tabletu"
+
+#: ../gnome-volume-properties.glade.h:54
+msgid "Select program to sync Palm devices"
+msgstr "Abiary prahramu dla ŭruchamleńnia pry synchranizacyi Palmu"
+
+#: ../gnome-volume-properties.glade.h:55
+msgid "Storage"
+msgstr "Pryłada z danymi"
+
+#: ../gnome-volume-properties.glade.h:56
+msgid "Sync Poc_ketPC devices when connected"
+msgstr "Synchranizuj pryłady _PocketPC pry padłučeńni"
+
+#: ../gnome-volume-properties.glade.h:57
+msgid "Sync _Palm™ devices when connected"
+msgstr "Synchranizuj pryłady P_alm™ pry padłučeńni"
+
+#: ../gnome-volume-properties.glade.h:58
+msgid "_Auto-run programs on new drives and media"
+msgstr "_Aŭtamatyčna ŭruchamlaj prahramy z novych pryładaŭ i nośbitaŭ"
+
+#: ../gnome-volume-properties.glade.h:59
+msgid "_Burn a CD or DVD when a blank disc is inserted"
+msgstr "_Zapisvaj CD/DVD pry ŭstaŭcy čystaha dysku"
+
+#: ../gnome-volume-properties.glade.h:60
+msgid "_Edit video when connected"
+msgstr "_Redahuj videa pry padłučeńni"
+
+#: ../gnome-volume-properties.glade.h:61
+msgid "_Import digital photographs when connected"
+msgstr "_Impartuj ličbavyja fatazdymki pry padłučeńni"
+
+#: ../gnome-volume-properties.glade.h:62
+msgid "_Mount removable drives when hot-plugged"
+msgstr "_Mantuj pieranosnyja pryłady z danymi pry haračym padłučeńni"
+
+#: ../src/manager.c:223 ../src/manager.c:228 ../src/manager.c:233
+#: ../src/manager.c:238 ../src/manager.c:244 ../src/manager.c:250
+#: ../src/manager.c:256 ../src/manager.c:262
+msgid "Ig_nore"
+msgstr "_Ihnaruj"
+
+#: ../src/manager.c:224
+msgid "_Allow Auto-Run"
+msgstr "_Dazvol aŭtaŭruchamleńnie"
+
+#: ../src/manager.c:229
+msgid "_Open"
+msgstr "_Adčyni"
+
+#: ../src/manager.c:234 ../src/manager.c:240 ../src/manager.c:245
+msgid "Import _Photos"
+msgstr "Impartuj _fatazdymki"
+
+#: ../src/manager.c:239
+msgid "_Open Folder"
+msgstr "_Adčyni kataloh"
+
+#: ../src/manager.c:246
+msgid "Manage _Music"
+msgstr "Pracuj z _muzykaj"
+
+#: ../src/manager.c:251
+msgid "_Browse Files"
+msgstr "_Ahladaj fajły"
+
+#: ../src/manager.c:252
+msgid "_Play CD"
+msgstr "_Hraj CD"
+
+#: ../src/manager.c:257
+msgid "Make _Audio CD"
+msgstr "Stvary CD z _aŭdyjo"
+
+#: ../src/manager.c:258
+msgid "Make _Data CD"
+msgstr "Stvary CD z _danymi"
+
+#: ../src/manager.c:263
+msgid "Make _DVD"
+msgstr "Stvary _DVD"
+
+#: ../src/manager.c:316
+msgid "Auto-Run Confirmation"
+msgstr "Paćvierdžańnie aŭtaŭruchamleńnia"
+
+#: ../src/manager.c:317
+msgid "Auto-run capability detected."
+msgstr "Znojdzienaja mahčymaść aŭtaŭruchamleńnia."
+
+#: ../src/manager.c:318
+msgid "Would you like to allow <b>'${0}'</b> to run?"
+msgstr "Chočaš dać dazvoł na ŭruchamleńnie <b>'${0}'</b>?"
+
+#: ../src/manager.c:323
+msgid "Auto-Open Confirmation"
+msgstr "Paćvierdžańnie aŭtaadčynieńnia"
+
+#: ../src/manager.c:324
+msgid "Auto-Open capability detected."
+msgstr "Znojdzienaja mahčymaść aŭtaadčynieńnia."
+
+#: ../src/manager.c:325
+msgid "Would you like to open <b>'${0}'</b>?"
+msgstr "Chočaš adčynić <b>'${0}'</b>?"
+
+#: ../src/manager.c:330 ../src/manager.c:337
+msgid "Camera Import"
+msgstr "Impartavańnie z kamery"
+
+#: ../src/manager.c:331 ../src/manager.c:338
+msgid "A camera has been detected."
+msgstr "Znojdzienaja kamera."
+
+#: ../src/manager.c:332 ../src/manager.c:339
+msgid ""
+"There are photos on the camera. Would you like to add these pictures to your "
+"album?"
+msgstr ""
+"Na kamery jość fatazdymki. Chočaš dadać hetyja vyjavy da svajho albomu?"
+
+#: ../src/manager.c:333 ../src/manager.c:340 ../src/manager.c:347
+#: ../src/manager.c:354 ../src/manager.c:361
+msgid "_Always perform this action"
+msgstr "_Zaŭsiody vykonvaj hetaje dziejańnie"
+
+#: ../src/manager.c:344
+msgid "Photo Import"
+msgstr "Impartavańnie fatazdymkaŭ"
+
+#: ../src/manager.c:345
+msgid "A photo card has been detected."
+msgstr "Znojdzienaja karta z fatazdymkami."
+
+#: ../src/manager.c:346
+msgid ""
+"There are photos on the card. Would you like to add these pictures to your "
+"album?"
+msgstr ""
+"Na karcie jość fatazdymki. Chočaš dadać hetyja vyjavy da svajho albomu?"
+
+#: ../src/manager.c:351
+msgid "Photos and Music"
+msgstr "Fatazdymki j muzyka"
+
+#: ../src/manager.c:352
+msgid "Photos were found on your music device."
+msgstr "Na tvajoj muzyčnaj pryładzie znojdzienyja fatazdymki."
+
+#: ../src/manager.c:353
+msgid "Would you like to import the photos or manage its music?"
+msgstr "Chočaš zympartavać fatazdymki ci pracavać z muzykaj?"
+
+#: ../src/manager.c:358
+msgid "Mixed Audio and Data CD"
+msgstr "CD z aŭdyjo j danymi"
+
+#: ../src/manager.c:359
+msgid "The CD in the drive contains both music and files."
+msgstr "CD ŭ pryładzie źmiaščaje i muzyku, i fajły."
+
+#: ../src/manager.c:360
+msgid "Would you like to listen to music or browse the files?"
+msgstr "Chočaš pasłuchać muzyku ci ahladać fajły?"
+
+#: ../src/manager.c:365
+msgid "Blank CD Inserted"
+msgstr "Ustaŭleny čysty CD"
+
+#: ../src/manager.c:366 ../src/manager.c:373
+msgid "You have inserted a blank disc."
+msgstr "Ty ŭstaviŭ čysty dysk."
+
+#: ../src/manager.c:367 ../src/manager.c:374
+msgid "What would you like to do?"
+msgstr "Što ty chočaš zrabić?"
+
+#: ../src/manager.c:372
+msgid "Blank DVD Inserted"
+msgstr "Ustaŭleny čysty DVD"
+
+#: ../src/manager.c:3585
+#, c-format
+msgid "%d%% of the disk space on the root partition is in use"
+msgstr "%d%% dyskavaj prastory na karaniovaj partycyi zaniata"
+
+#: ../src/manager.c:3587
+#, c-format
+msgid "%d%% of the disk space on `%s' is in use"
+msgstr "%d%% dyskavaj prastory na \"%s\" zaniata"
+
+#: ../src/manager.c:3592 ../src/manager.c:3594
+msgid "Low Disk Space"
+msgstr "Niastača dyskavaj prastory"
+
+#: ../src/manager.c:3716
+msgid "Print version and exit"
+msgstr "Pakažy versiju j vyjdzi"
+
+#: ../src/manager.c:3718
+msgid "Run as a daemon"
+msgstr "Uruchom jak demana"
+
+#: ../src/manager.c:3720
+msgid "Don't run as a daemon"
+msgstr "Nie ŭruchamlaj jak demana"
+
+#: ../src/manager.c:3722
+msgid "Run in secret mode"
+msgstr "Uruchom u sakretnym režymie"
+
+#: ../src/manager.c:3754
+#, c-format
+msgid "Unrecognized --daemon argument: %s\n"
+msgstr "Nieviadomy arhument dla --daemon: %s\n"
+
+#: ../src/properties.c:324
+msgid "Could not load the main interface"
+msgstr "Niemahčyma zahruzić hałoŭny interfejs"
+
+#: ../src/properties.c:326
+msgid "Please make sure that the volume manager is properly installed"
+msgstr "Upeŭnisia, što kiraŭnik masivaŭ danych pravilna zainstalavany"
+
+#: ../src/properties.c:485
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr ""
+"Pamyłka ŭruchamleńnia demana gnome-volume-manager:\n"
+"%s"
+
+#: ../src/properties.c:516
+msgid "Volume management not supported"
+msgstr "Kiravańnie masivami danych nie padtrymvajecca"
+
+#: ../src/properties.c:518
+msgid ""
+"The \"hald\" service is required but not currently running. Enable the "
+"service and rerun this application, or contact your system administrator."
+msgstr ""
+"Patrebnaja pasłuha \"hald\", ale jana nie ŭruchomlenaja. Uklučy pasłuhu j "
+"pieraŭruchom hetuju aplikacyju, albo źviarnisia da tvajho systemnaha "
+"administratara."
+
+#~ msgid "_Command:"
+#~ msgstr "_Zahad:"

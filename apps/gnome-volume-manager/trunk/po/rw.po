@@ -1,0 +1,403 @@
+# translation of gnome-volume-manager to Kinyarwanda.
+# Copyright (C) 2005 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gnome-volume-manager package.
+# Steve Murphy <murf@e-tools.com>, 2005
+# Steve performed initial rough translation from compendium built from translations provided by the following translators:
+# Philibert Ndandali  <ndandali@yahoo.fr>, 2005.
+# Viateur MUGENZI <muvia1@yahoo.fr>, 2005.
+# Noëlla Mupole <s24211045@tuks.co.za>, 2005.
+# Carole Karema <karemacarole@hotmail.com>, 2005.
+# JEAN BAPTISTE NGENDAHAYO <ngenda_denis@yahoo.co.uk>, 2005.
+# Augustin KIBERWA  <akiberwa@yahoo.co.uk>, 2005.
+# Donatien NSENGIYUMVA <ndonatienuk@yahoo.co.uk>, 2005..
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-volume-manager HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-03-31 23:12-0700\n"
+"PO-Revision-Date: 2005-03-31 20:55-0700\n"
+"Last-Translator: Steve Murphy <murf@e-tools.com>\n"
+"Language-Team: Kinyarwanda <translation-team-rw@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"ULL NAME <EMAIL@ADDRESS>\n"
+
+#: gnome-volume-manager.schemas.in.h:1
+#, fuzzy
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr ""
+"':'Urutonde Bya Inzira Kuri Kugenzura... kugirango Na Inyandikoporogaramu"
+
+#: gnome-volume-manager.schemas.in.h:2
+msgid "Automount removable drives"
+msgstr ""
+
+#: gnome-volume-manager.schemas.in.h:3
+#, fuzzy
+msgid "Automount removable media"
+msgstr "Ibitangazamakuru"
+
+#: gnome-volume-manager.schemas.in.h:4
+msgid "Autorun nautilus"
+msgstr ""
+
+#: gnome-volume-manager.schemas.in.h:5
+#, fuzzy
+msgid "Autorun path"
+msgstr "Inzira"
+
+#: gnome-volume-manager.schemas.in.h:6
+#, fuzzy
+msgid "CD burn command"
+msgstr "Komandi:"
+
+#: gnome-volume-manager.schemas.in.h:7
+#, fuzzy
+msgid "CD play command"
+msgstr "Gukina Komandi:"
+
+#: gnome-volume-manager.schemas.in.h:8
+#, fuzzy
+msgid ""
+"Command to run when a digital camera is connected or media from a digital "
+"camera is inserted."
+msgstr ""
+"Kuri Gukoresha Ryari: a Kamera ni Cyangwa Ibitangazamakuru Bivuye a Kamera "
+"ni Byinjijwemo"
+
+#: gnome-volume-manager.schemas.in.h:9
+#, fuzzy
+msgid "Command to run when a video DVD is inserted."
+msgstr "Kuri Gukoresha Ryari: a Videwo... ni Byinjijwemo"
+
+#: gnome-volume-manager.schemas.in.h:10
+#, fuzzy
+msgid "Command to run when an audio CD is inserted."
+msgstr "Kuri Gukoresha Ryari: ni Byinjijwemo"
+
+#: gnome-volume-manager.schemas.in.h:11
+#, fuzzy
+msgid "Command to run when an empty CD is inserted."
+msgstr "Kuri Gukoresha Ryari: ubusa ni Byinjijwemo"
+
+#: gnome-volume-manager.schemas.in.h:12
+#, fuzzy
+msgid "Command to run when the eject button on a optical drive is pressed."
+msgstr "Kuri Gukoresha Ryari: i Akabuto ku a Porogaramu- shoboza ni"
+
+#: gnome-volume-manager.schemas.in.h:13
+#, fuzzy
+msgid "DVD play command"
+msgstr "Gukina Komandi:"
+
+#: gnome-volume-manager.schemas.in.h:14
+#, fuzzy
+msgid "Eject command"
+msgstr "Komandi:"
+
+#: gnome-volume-manager.schemas.in.h:15
+#, fuzzy
+msgid "Open nautilus on removeable media insert."
+msgstr "ku Ibitangazamakuru Kongeramo"
+
+#: gnome-volume-manager.schemas.in.h:16
+msgid "Perform autorun"
+msgstr ""
+
+#: gnome-volume-manager.schemas.in.h:17
+#, fuzzy
+msgid "Photo management command"
+msgstr "Komandi:"
+
+#: gnome-volume-manager.schemas.in.h:18
+#, fuzzy
+msgid "Play inserted audio CD's"
+msgstr "Byinjijwemo"
+
+#: gnome-volume-manager.schemas.in.h:19
+#, fuzzy
+msgid "Play inserted video DVDs"
+msgstr "Byinjijwemo Videwo..."
+
+#: gnome-volume-manager.schemas.in.h:20
+#, fuzzy
+msgid "Run CD burn command"
+msgstr "Komandi:"
+
+#: gnome-volume-manager.schemas.in.h:21
+#, fuzzy
+msgid "Run photo management command"
+msgstr "Ifoto Komandi:"
+
+#: gnome-volume-manager.schemas.in.h:22
+#, fuzzy
+msgid ""
+"Whether autorun programs (binaries and scripts located in 'autorun_path') "
+"are run on newly mounted media."
+msgstr "Porogaramu Na Inyandikoporogaramu in Gukoresha ku Ibitangazamakuru"
+
+#: gnome-volume-manager.schemas.in.h:23
+#, fuzzy
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"drives when they are inserted."
+msgstr "Igice Muyobozi ku buryo bwikora Ryari: Byinjijwemo"
+
+#: gnome-volume-manager.schemas.in.h:24
+#, fuzzy
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"media when they are inserted."
+msgstr "Igice Muyobozi ku buryo bwikora Ibitangazamakuru Ryari: Byinjijwemo"
+
+#: gnome-volume-manager.schemas.in.h:25
+#, fuzzy
+msgid ""
+"Whether, when a blank CD is inserted, gnome-volume-manager should run "
+"'autoburn_cdr_command'."
+msgstr "Ryari: a Ahatanditseho ni Byinjijwemo Igice Muyobozi Gukoresha"
+
+#: gnome-volume-manager.schemas.in.h:26
+#, fuzzy
+msgid ""
+"Whether, when a digital camera is connected or media from a digital camera "
+"is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr ""
+"Ryari: a Kamera ni Cyangwa Ibitangazamakuru Bivuye a Kamera ni Byinjijwemo "
+"Igice Muyobozi Gukoresha"
+
+#: gnome-volume-manager.schemas.in.h:27
+#, fuzzy
+msgid ""
+"Whether, when a video DVD is inserted, gnome-volume-manager should run "
+"'autoplay_dvd_command'."
+msgstr "Ryari: a Videwo... ni Byinjijwemo Igice Muyobozi Gukoresha"
+
+#: gnome-volume-manager.schemas.in.h:28
+#, fuzzy
+msgid ""
+"Whether, when an audio CD is inserted, gnome-volume-manager should run "
+"'autoplay_cda_command'."
+msgstr "Ryari: ni Byinjijwemo Igice Muyobozi Gukoresha"
+
+#: gnome-volume-properties.desktop.in.h:1
+#, fuzzy
+msgid "Configure management of removable drives and media"
+msgstr "Bya Na Ibitangazamakuru"
+
+#: gnome-volume-properties.desktop.in.h:2
+#, fuzzy
+msgid "Removable Drives and Media"
+msgstr "Na"
+
+#: gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr ""
+
+#: gnome-volume-properties.glade.h:2
+msgid "*"
+msgstr "*"
+
+#: gnome-volume-properties.glade.h:3
+#, fuzzy
+msgid "<b>Audio CD Discs</b>"
+msgstr "<B B"
+
+#: gnome-volume-properties.glade.h:4
+#, fuzzy
+msgid "<b>Blank CD and DVD Discs</b>"
+msgstr "<B Na B"
+
+#: gnome-volume-properties.glade.h:5
+#, fuzzy
+msgid "<b>Digital Camera</b>"
+msgstr "<B B"
+
+#: gnome-volume-properties.glade.h:6
+#, fuzzy
+msgid "<b>Removable Storage</b>"
+msgstr "<B B"
+
+#: gnome-volume-properties.glade.h:7
+#, fuzzy
+msgid "<b>Video DVD Discs</b>"
+msgstr "<B B"
+
+#: gnome-volume-properties.glade.h:8
+#, fuzzy
+msgid "Browse _removable media when inserted"
+msgstr "Ibitangazamakuru Ryari: Byinjijwemo"
+
+# padmin/source\padialog.src:RID_PADIALOG.RID_PA_TXT_COMMAND.text
+#: gnome-volume-properties.glade.h:9
+#, fuzzy
+msgid "C_ommand:"
+msgstr "Komandi:"
+
+# padmin/source\padialog.src:RID_PADIALOG.RID_PA_TXT_COMMAND.text
+#: gnome-volume-properties.glade.h:10
+#, fuzzy
+msgid "Co_mmand:"
+msgstr "Komandi:"
+
+# padmin/source\padialog.src:RID_PADIALOG.RID_PA_TXT_COMMAND.text
+#: gnome-volume-properties.glade.h:11
+#, fuzzy
+msgid "Comman_d:"
+msgstr "Komandi:"
+
+# padmin/source\padialog.src:RID_PADIALOG.RID_PA_TXT_COMMAND.text
+#: gnome-volume-properties.glade.h:12
+msgid "Command:"
+msgstr "Komandi:"
+
+#: gnome-volume-properties.glade.h:13
+#, fuzzy
+msgid "Drives and Media Preferences"
+msgstr "Na"
+
+#: gnome-volume-properties.glade.h:14
+#, fuzzy
+msgid "Import digital _photographs when connected"
+msgstr "Amafoto Ryari:"
+
+#: gnome-volume-properties.glade.h:15
+#, fuzzy
+msgid "Mount removable media when _inserted"
+msgstr "Ibitangazamakuru Ryari: Byinjijwemo"
+
+#: gnome-volume-properties.glade.h:16
+msgid "Multimedia"
+msgstr ""
+
+#: gnome-volume-properties.glade.h:17
+#, fuzzy
+msgid "Perform action on _blank discs when inserted"
+msgstr "Igikorwa ku Ahatanditseho Ryari: Byinjijwemo"
+
+#: gnome-volume-properties.glade.h:18
+#, fuzzy
+msgid "Play _audio CD discs when inserted"
+msgstr "Ryari: Byinjijwemo"
+
+#: gnome-volume-properties.glade.h:19
+#, fuzzy
+msgid "Play _video DVD disks when inserted"
+msgstr "Videwo... Ryari: Byinjijwemo"
+
+#: gnome-volume-properties.glade.h:20
+#, fuzzy
+msgid "Removable Drives and Media Preferences"
+msgstr "Na"
+
+#: gnome-volume-properties.glade.h:21
+msgid "Storage"
+msgstr ""
+
+#: gnome-volume-properties.glade.h:22
+#, fuzzy
+msgid "_Auto-run programs on new drives and media"
+msgstr "Gukoresha Porogaramu ku Gishya Na Ibitangazamakuru"
+
+#: gnome-volume-properties.glade.h:23
+#, fuzzy
+msgid "_Mount removable drives when hot-plugged"
+msgstr "Ryari:"
+
+#: src/manager.c:229
+#, fuzzy
+msgid "Run command from inserted media?"
+msgstr "Komandi: Bivuye Byinjijwemo Ibitangazamakuru"
+
+#: src/manager.c:233
+#, fuzzy, c-format
+msgid "Do you want to run the file \"%s?\""
+msgstr "Kuri Gukoresha i IDOSIYE"
+
+#: src/manager.c:238
+msgid "_Run Command"
+msgstr ""
+
+#: src/manager.c:327
+#, fuzzy
+msgid "Import photos from device?"
+msgstr "Bivuye APAREYE"
+
+#: src/manager.c:330
+#, fuzzy
+msgid ""
+"There are photos on the inserted media. Would you like to import these "
+"photographs into your album?"
+msgstr "ku i Byinjijwemo Ibitangazamakuru nka Kuri Kuzana Amafoto"
+
+#: src/manager.c:336 src/manager.c:383
+msgid "_Import Photos"
+msgstr ""
+
+#: src/manager.c:375
+#, fuzzy
+msgid "Import photos from camera?"
+msgstr "Bivuye Kamera"
+
+#: src/manager.c:378
+#, fuzzy
+msgid ""
+"There are photos on the plugged-in camera. Would you like to import these "
+"photographs into your album?"
+msgstr "ku i in Kamera nka Kuri Kuzana Amafoto"
+
+#: src/manager.c:584
+#, fuzzy
+msgid "Browse files or play tracks from disc?"
+msgstr "Idosiye Cyangwa Gukina Bivuye DISIKI"
+
+#: src/manager.c:588
+#, fuzzy
+msgid ""
+"There are both audio tracks and data files on the inserted disc. Choose if "
+"you want to play the audio tracks to listen to music or browse the files to "
+"manage the stored data."
+msgstr ""
+"Byombi Na Ibyatanzwe Idosiye ku i Byinjijwemo DISIKI NIBA Kuri Gukina i Kuri "
+"Kuri Cyangwa Gushakisha... i Idosiye Kuri kuyobora i Ibyatanzwe"
+
+#: src/manager.c:594
+msgid "_Browse Files"
+msgstr ""
+
+#: src/manager.c:596
+msgid "_Play Tracks"
+msgstr ""
+
+#: src/properties.c:187
+#, fuzzy, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr "Igice Muyobozi"
+
+#: src/properties.c:395
+#, fuzzy
+msgid "Volume management not supported"
+msgstr "OYA"
+
+#: src/properties.c:397
+#, fuzzy
+msgid ""
+"The \"hald\" service is required but not currently running. Enable the "
+"service and rerun this applet, or contact your system administrator."
+msgstr ""
+"Serivisi ni Bya ngombwa OYA i Serivisi Na iyi Apuleti... Cyangwa Umuntu "
+"Sisitemu umuyobozi/ uyobora"
+
+#: src/properties.c:420
+#, fuzzy
+msgid "Could not load the main interface"
+msgstr "OYA Ibirimo i"
+
+#: src/properties.c:423
+#, fuzzy
+msgid "Please make sure that the volume manager is properly installed"
+msgstr "Ubwoko i Igice Muyobozi ni"

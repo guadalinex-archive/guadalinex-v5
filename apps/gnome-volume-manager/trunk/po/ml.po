@@ -1,0 +1,846 @@
+# translation of ml.po to Malayalam
+# translation of gnome-volume-manager.HEAD.ml.po to Malayalam
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Ani Peter <apeter@redhat.com>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ml\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-08-07 07:57+0200\n"
+"PO-Revision-Date: 2006-08-18 23:12+0530\n"
+"Last-Translator: Ani Peter <apeter@redhat.com>\n"
+"Language-Team: Malayalam\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
+
+#: ../gnome-volume-manager.schemas.in.h:1
+msgid "\"Always take this action\" checkbox for Autorun"
+msgstr "സ്വയം പ്രവര്‍ത്തിക്കുന്നതിനായി \"എപ്പോഴും ഈ പ്രവര്‍ത്തി ചെയ്യുക\" ചെക്ക് ബോക്സ് തിരഞ്ഞെടുക്കുക"
+
+#: ../gnome-volume-manager.schemas.in.h:2
+msgid "\"Always take this action\" checkbox for iPod Photos"
+msgstr "iPod ഫോട്ടോകള്‍ക്കായി \"എപ്പോഴും ഈ പ്രവര്‍ത്തി ചെയ്യുക\" ചെക്ക് ബോക്സ് തിരഞ്ഞെടുക്കുക"
+
+#: ../gnome-volume-manager.schemas.in.h:3
+msgid "\"Always take this action\" checkbox for mixed Audio and Data CDs"
+msgstr "പലതരം ഓഡിയോയും സി.ഡികള്‍ക്കുമായി \"എപ്പോഴും ഈ പ്രവര്‍ത്തി ചെയ്യുക\" ചെക്ക് ബോക്സ് തിരഞ്ഞെടുക്കുക"
+
+#: ../gnome-volume-manager.schemas.in.h:4
+msgid "\"Always take this action\" checkbox for photo import from a camera"
+msgstr "ക്യാമറയില്‍ നിന്നും ഫോട്ടോ ലഭ്യമാക്കുന്നതിനായി \"എപ്പോഴും ഈ പ്രവര്‍ത്തി ചെയ്യുക\" ചെക്ക് ബോക്സ് തിരഞ്ഞെടുക്കുക"
+
+#: ../gnome-volume-manager.schemas.in.h:5
+msgid "\"Always take this action\" checkbox for photo import from a device"
+msgstr "ഡിവൈസില്‍ നിന്നും ഫോട്ടോ ലഭ്യമാക്കുന്നതിനായി \"എപ്പോഴും ഈ പ്രവര്‍ത്തി ചെയ്യുക\" ചെക്ക് ബോക്സ് തിരഞ്ഞെടുക്കുക"
+
+#: ../gnome-volume-manager.schemas.in.h:6
+msgid "':' delimited list of paths to check for autoopen files."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:7
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:8
+msgid "Action to take when a camera is plugged in."
+msgstr "ഒരു ക്യാമറാ കംപ്യൂട്ടറില്‍ കണക്ട് ചെയ്യുന്പോള്‍ സംഭവിക്കേണ്ട പ്രവര്‍ത്തി."
+
+#: ../gnome-volume-manager.schemas.in.h:9
+msgid "Action to take when a device containing photos is encountered."
+msgstr "ഫോട്ടോകള്‍ അടങ്ങുന്ന ഒരു ഡിവൈസിനെ എതിരിടുന്പോള്‍ സംഭവിക്കേണ്ട പ്രവര്‍ത്തി."
+
+#: ../gnome-volume-manager.schemas.in.h:10
+msgid "Action to take when a device contains an autorun program/script."
+msgstr "സ്വയെ പ്രവര്‍ത്തിക്കുന്ന ഒരു ഡിവൈസില്‍ പ്രോഗ്രാം/സ്ക്രിപ്റ്റ് അടങ്ങുന്നെങ്കില്‍ സംഭവിക്കേണ്ട പ്രവര്‍ത്തി."
+
+#: ../gnome-volume-manager.schemas.in.h:11
+msgid "Action to take when a mixed Audio and Data CD is encountered."
+msgstr "പലതരം ഓഡിയോയും സി.ഡിയും എതിരിടുന്പോള്‍ സംഭവിക്കേണ്ട പ്രവര്‍ത്തി."
+
+#: ../gnome-volume-manager.schemas.in.h:12
+msgid "Action to take when an iPod Photo is encountered."
+msgstr "iPod ഫോട്ടോ എതിരിടുന്പോള്‍ സംഭവിക്കേണ്ട പ്രവര്‍ത്തി."
+
+#: ../gnome-volume-manager.schemas.in.h:13
+msgid "Audio CD burn command"
+msgstr "ഓഡിയോ സി.ഡിയിലേക്ക് കംപ്യൂട്ടറില്‍ നിന്നുളള ഡേറ്റാ പകര്‍ത്തുന്നതിനുളള നിര്‍ദ്ദേശം"
+
+#: ../gnome-volume-manager.schemas.in.h:14
+msgid "Automount removable drives"
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:15
+msgid "Automount removable media"
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:16
+msgid "Autoopen path"
+msgstr "ഓട്ടോ ഓപ്പണ്‍ പാഥ്"
+
+#: ../gnome-volume-manager.schemas.in.h:17
+msgid "Autorun nautilus"
+msgstr "സ്വയമേ പ്രവര്‍ത്തിക്കുന്ന നോട്ടിലസ്"
+
+#: ../gnome-volume-manager.schemas.in.h:18
+msgid "Autorun path"
+msgstr "ഓട്ടോ റണ്‍ പാഥ്"
+
+#: ../gnome-volume-manager.schemas.in.h:19
+msgid "CD play command"
+msgstr "സി.ഡി പ്രവര്‍ത്തിപ്പിക്കുന്നതിനുളള നിര്‍ദ്ദേശം"
+
+#: ../gnome-volume-manager.schemas.in.h:20
+msgid "Command to run when a Palm is connected."
+msgstr "ഒരു Palm-നെ എതിരിടുന്പോള്‍ പ്രവര്‍ത്തിക്കേണ്ട നിര്‍ദ്ദേശം."
+
+#: ../gnome-volume-manager.schemas.in.h:21
+msgid "Command to run when a PocketPC is connected."
+msgstr "ഒരു പോക്കറ്റ് പി.സി കംപ്യൂട്ടറിലേക്ക് ഘടിപ്പിക്കുന്പോള്‍ പ്രവര്‍ത്തിക്കേണ്ട നിര്‍ദ്ദേശം."
+
+#: ../gnome-volume-manager.schemas.in.h:22
+msgid ""
+"Command to run when a digital camera is connected or media from a digital "
+"camera is inserted."
+msgstr ""
+"ഡിജിറ്റല്‍ ക്യാമറാ കണക്ട് ചെയ്യുന്പോള്‍ അല്ലെങ്കില്‍ അതില്‍ നിന്നും ഒരു മീഡിയാ കംപ്യൂട്ടറില്‍ "
+"ഉളളപ്പോള്‍ പ്രവര്‍ത്തിപ്പിക്കേണ്ട നിര്‍ദ്ദേശം."
+
+#: ../gnome-volume-manager.schemas.in.h:23
+msgid "Command to run when a keyboard is connected."
+msgstr "ഒരു കീബോര്‍ഡ് കംപ്യൂട്ടറിലേക്ക് ഘടിപ്പിക്കുന്പോള്‍ പ്രവര്‍ത്തിക്കേണ്ട നിര്‍ദ്ദേശം."
+
+#: ../gnome-volume-manager.schemas.in.h:24
+msgid "Command to run when a mouse is connected."
+msgstr "ഒരു മൌസ് കംപ്യൂട്ടറിലേക്ക് ഘടിപ്പിക്കുന്പോള്‍ പ്രവര്‍ത്തിക്കേണ്ട നിര്‍ദ്ദേശം."
+
+#: ../gnome-volume-manager.schemas.in.h:25
+msgid "Command to run when a printer is connected."
+msgstr "ഒരു പ്രിന്‍റര്‍ കംപ്യൂട്ടറിലേക്ക് ഘടിപ്പിക്കുന്പോള്‍ പ്രവര്‍ത്തിക്കേണ്ട നിര്‍ദ്ദേശം."
+
+#: ../gnome-volume-manager.schemas.in.h:26
+msgid "Command to run when a scanner is connected."
+msgstr "ഒരു സ്കാനര്‍ കംപ്യൂട്ടറിലേക്ക് ഘടിപ്പിക്കുന്പോള്‍ പ്രവര്‍ത്തിക്കേണ്ട നിര്‍ദ്ദേശം."
+
+#: ../gnome-volume-manager.schemas.in.h:27
+msgid "Command to run when a tablet is connected."
+msgstr "ഒരു ടാബ്ലറ്റ് കംപ്യൂട്ടറിലേക്ക് ഘടിപ്പിക്കുന്പോള്‍ പ്രവര്‍ത്തിക്കേണ്ട നിര്‍ദ്ദേശം."
+
+#: ../gnome-volume-manager.schemas.in.h:28
+msgid "Command to run when a video DVD is inserted."
+msgstr "ഒരു വീഡിയോ ഡി.വി.ഡി കംപ്യൂട്ടറിന്‍റെ ഡ്രൈവില്‍ ഇടുന്പോള്‍ പ്രവര്‍ത്തിക്കേണ്ട നിര്‍ദ്ദേശം."
+
+#: ../gnome-volume-manager.schemas.in.h:29
+msgid "Command to run when a video VCD is inserted."
+msgstr "ഒരു വീഡിയോ വി.സി.ഡി കംപ്യൂട്ടറിന്‍റെ ഡ്രൈവില്‍ ഇടുന്പോള്‍ പ്രവര്‍ത്തിക്കേണ്ട നിര്‍ദ്ദേശം."
+
+#: ../gnome-volume-manager.schemas.in.h:30
+msgid "Command to run when a video camera is connected."
+msgstr "ഒരു വീഡിയോ ക്യാമറാ കംപ്യൂട്ടറിലേക്ക് ഘടിപ്പിക്കുന്പോള്‍ പ്രവര്‍ത്തിക്കേണ്ട നിര്‍ദ്ദേശം."
+
+#: ../gnome-volume-manager.schemas.in.h:31
+msgid "Command to run when an audio CD is inserted."
+msgstr "ഒരു ഓഡിയോ സി.ഡി കംപ്യൂട്ടറിന്‍റെ ഡ്രൈവില്‍ ഇടുന്പോള്‍ പ്രവര്‍ത്തിക്കേണ്ട നിര്‍ദ്ദേശം."
+
+#: ../gnome-volume-manager.schemas.in.h:32
+msgid "Command to run when an iPod is connected."
+msgstr "ഒരു iPod കംപ്യൂട്ടറിലേക്ക് ഘടിപ്പിക്കുന്പോള്‍ പ്രവര്‍ത്തിക്കേണ്ട നിര്‍ദ്ദേശം."
+
+#: ../gnome-volume-manager.schemas.in.h:33
+msgid "Command to run when the user wishes to burn a Data CD."
+msgstr "സി.ഡിയിലേക്ക് കംപ്യൂട്ടറില്‍ നിന്നുളള ഡേറ്റാ പകര്‍ത്തുന്നതിനായി ഉപയോക്താവിനുളള നിര്‍ദ്ദേശം."
+
+#: ../gnome-volume-manager.schemas.in.h:34
+msgid "Command to run when the user wishes to burn an Audio CD."
+msgstr "ഓഡിയോ സി.ഡിയിലേക്ക് കംപ്യൂട്ടറില്‍ നിന്നുളള ഡേറ്റാ പകര്‍ത്തുന്നതിനായി ഉപയോക്താവിനുളള നിര്‍ദ്ദേശം."
+
+#: ../gnome-volume-manager.schemas.in.h:35
+msgid "DVD play command"
+msgstr "DVD പ്രവര്‍ത്തിപ്പിക്കുവാനുളള നിര്‍ദ്ദേശം"
+
+#: ../gnome-volume-manager.schemas.in.h:36
+msgid "Data CD burn command"
+msgstr "സി.ഡിയിലേക്ക് കംപ്യൂട്ടറില്‍ നിന്നുളള ഡേറ്റാ പകര്‍ത്തുന്നതിനായുളള നിര്‍ദ്ദേശം"
+
+#: ../gnome-volume-manager.schemas.in.h:37
+msgid "Low Disk Space notification threshold"
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:38
+msgid "Open nautilus on removeable media insert."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:39
+msgid "Perform autoopen"
+msgstr "ഓട്ടോ ഓപ്പണ്‍ പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#: ../gnome-volume-manager.schemas.in.h:40
+msgid "Perform autorun"
+msgstr "ഓട്ടോ റണ്ട പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#: ../gnome-volume-manager.schemas.in.h:41
+msgid "Photo management command"
+msgstr "ഫോട്ടോ കൈകാര്യം ചെയ്യുവാനുളള നിര്‍ദ്ദേശം"
+
+#: ../gnome-volume-manager.schemas.in.h:42
+msgid "Play inserted audio CD's"
+msgstr "കംപ്യൂട്ടറിന്‍റെ ഡ്രൈവിലുളള ഓഡിയോ സി.ഡികള്‍ പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#: ../gnome-volume-manager.schemas.in.h:43
+msgid "Play inserted video DVDs"
+msgstr "കംപ്യൂട്ടറിന്‍റെ ഡ്രൈവിലുളള വീഡിയോ ഡി.വി.ഡികള്‍ പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#: ../gnome-volume-manager.schemas.in.h:44
+msgid "Play inserted video VCDs"
+msgstr "കംപ്യൂട്ടറിന്‍റെ ഡ്രൈവിലുളള വീഡിയോ വി.സി.ഡികള്‍ പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#: ../gnome-volume-manager.schemas.in.h:45
+msgid "Run Palm-sync program"
+msgstr "Palm-sync പ്രോഗ്രാം പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#: ../gnome-volume-manager.schemas.in.h:46
+msgid "Run PocketPC-sync program"
+msgstr "PocketPC-sync പ്രോഗ്രാം പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#: ../gnome-volume-manager.schemas.in.h:47
+msgid "Run a program to burn CDs/DVDs"
+msgstr "സി.ഡി/ഡി.വി.ഡിയിലേക്ക് കംപ്യൂട്ടറില്‍ നിന്നുളള ഡേറ്റാ പകര്‍ത്തുന്നതിനായുളള പ്രോഗ്രാം"
+
+#: ../gnome-volume-manager.schemas.in.h:48
+msgid "Run iPod program"
+msgstr "iPod പ്രോഗ്രാം പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#: ../gnome-volume-manager.schemas.in.h:49
+msgid "Run keyboard program"
+msgstr "കീബോര്‍ഡ് പ്രോഗ്രാം പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#: ../gnome-volume-manager.schemas.in.h:50
+msgid "Run mouse program"
+msgstr "മൌസ് പ്രോഗ്രാം പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#: ../gnome-volume-manager.schemas.in.h:51
+msgid "Run photo management command"
+msgstr "ഫോട്ടോ കൈകാര്യം ചെയ്യുവാനുളള നിര്‍ദ്ദേശം പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#: ../gnome-volume-manager.schemas.in.h:52
+msgid "Run printer program"
+msgstr "പ്രിന്‍ററിനുളള പ്രോഗ്രാം പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#: ../gnome-volume-manager.schemas.in.h:53
+msgid "Run scanner program"
+msgstr "സ്കാനറിനുളള പ്രോഗ്രാം പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#: ../gnome-volume-manager.schemas.in.h:54
+msgid "Run tablet program"
+msgstr "ടാബ്ലറ്റിനുളള പ്രോഗ്രാം പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#: ../gnome-volume-manager.schemas.in.h:55
+msgid "Run video editing program"
+msgstr "വീഡിയോ എഡിറ്റിങിനുളള പ്രോഗ്രാം പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#: ../gnome-volume-manager.schemas.in.h:56
+msgid ""
+"The threshold value for whether or not to toggle the notification on, based "
+"on the amount of additional space used since the last check."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:57
+msgid "Threshold for notification of increased disk usage"
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:58
+msgid "Threshold percentage for notifying the user of low disk space."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:59
+msgid "VCD play command"
+msgstr "വി.സി.ഡി പ്രവര്‍ത്തിപ്പിക്കുന്നതിനുളള നിര്‍ദ്ദേശം"
+
+#: ../gnome-volume-manager.schemas.in.h:60
+msgid "Whether autoopen files should be opened on newly mounted media."
+msgstr "പുതുതായി മൌണ്ട് ചെയ്ത മീഡിയയിലേക്ക് ഓട്ടോ ഓപ്പണ്‍ ചെയ്ത ഫയലുകള്‍ തുറക്കണമോ എന്ന്."
+
+#: ../gnome-volume-manager.schemas.in.h:61
+msgid ""
+"Whether autorun programs (binaries and scripts located in 'autorun_path') "
+"are run on newly mounted media."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:62
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"drives when they are inserted."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:63
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"media when they are inserted."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:64
+msgid ""
+"Whether, when a Palm is connected, gnome-volume-manager should run "
+"'autopalmsync_command'."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:65
+msgid ""
+"Whether, when a PocketPC is connected, gnome-volume-manager should run "
+"'autopocketpc_command'."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:66
+msgid ""
+"Whether, when a blank CD or DVD is inserted, gnome-volume-manager should run "
+"one of the autoburn commands."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:67
+msgid ""
+"Whether, when a digital camera is connected or media from a digital camera "
+"is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:68
+msgid ""
+"Whether, when a digital video camera is connected, gnome-volume-manager "
+"should run 'autovideocam_command'."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:69
+msgid ""
+"Whether, when a keyboard is connected, gnome-volume-manager should run "
+"'autokeyboard_command'."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:70
+msgid ""
+"Whether, when a mouse is connected, gnome-volume-manager should run "
+"'automouse_command'."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:71
+msgid ""
+"Whether, when a printer is connected, gnome-volume-manager should run "
+"'autoprinter_command'."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:72
+msgid ""
+"Whether, when a scanner is connected, gnome-volume-manager should run "
+"'autoscanner_command'."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:73
+msgid ""
+"Whether, when a tablet is connected, gnome-volume-manager should run "
+"'autotablet_command'."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:74
+msgid ""
+"Whether, when a video DVD is inserted, gnome-volume-manager should run "
+"'autoplay_dvd_command'."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:75
+msgid ""
+"Whether, when a video VCD is inserted, gnome-volume-manager should run "
+"'autoplay_vcd_command'."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:76
+msgid ""
+"Whether, when an audio CD is inserted, gnome-volume-manager should run "
+"'autoplay_cda_command'."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:77
+msgid ""
+"Whether, when an iPod is connected, gnome-volume-manager should run "
+"'autoipod_command'."
+msgstr ""
+
+#: ../gnome-volume-manager.schemas.in.h:78
+msgid "iPod sync command"
+msgstr "iPod sync നിര്‍ദ്ദേശം"
+
+#: ../gnome-volume-manager.schemas.in.h:79
+msgid "keyboard command"
+msgstr "കീബോര്‍ഡ് നിര്‍ദ്ദേശം"
+
+#: ../gnome-volume-manager.schemas.in.h:80
+msgid "mouse command"
+msgstr "മൌസ് നിര്‍ദ്ദേശം"
+
+#: ../gnome-volume-manager.schemas.in.h:81
+msgid "palm sync command"
+msgstr "palm sync നിര്‍ദ്ദേശം"
+
+#: ../gnome-volume-manager.schemas.in.h:82
+msgid "printer command"
+msgstr "പ്രിന്‍റര്‍ നിര്‍ദ്ദേശം"
+
+#: ../gnome-volume-manager.schemas.in.h:83
+msgid "scanner command"
+msgstr "സ്കാനര്‍ നിര്‍ദ്ദേശം"
+
+#: ../gnome-volume-manager.schemas.in.h:84
+msgid "tablet command"
+msgstr "ടാബ്ലറ്റ് നിര്‍ദ്ദേശം"
+
+#: ../gnome-volume-manager.schemas.in.h:85
+msgid "video camera command"
+msgstr "വീഡിയോ ക്യാമറാ നിര്‍ദ്ദേശം"
+
+#: ../gnome-volume-manager.desktop.in.h:1
+msgid "Volume Manager"
+msgstr "വോള്യം മാനേജര്‍"
+
+#: ../gnome-volume-manager.desktop.in.h:2
+msgid "Volume manager for removable drives and media"
+msgstr ""
+
+#: ../gnome-volume-properties.desktop.in.h:1
+msgid "Configure management of removable drives and media"
+msgstr ""
+
+#: ../gnome-volume-properties.desktop.in.h:2
+msgid "Removable Drives and Media"
+msgstr ""
+
+#: ../gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: ../gnome-volume-properties.glade.h:2
+msgid "<b>Audio CD Discs</b>"
+msgstr "<b>ഓഡിയോ സി.ഡി ഡിസ്കുകള്‍</b>"
+
+#: ../gnome-volume-properties.glade.h:3
+msgid "<b>Blank CD and DVD Discs</b>"
+msgstr "<b>ശൂന്യമായ സി.ഡിയും ഡി.വി.ഡി ഡിസ്കുകള്‍</b>"
+
+#: ../gnome-volume-properties.glade.h:4
+msgid "<b>Digital Camera</b>"
+msgstr "<b>ഡിജിറ്റല്‍ ക്യമറാ</b>"
+
+#: ../gnome-volume-properties.glade.h:5
+msgid "<b>Digital Video Camera</b>"
+msgstr "<b>ഡിജിറ്റല്‍ വീഡിയോ ക്യമറാ</b>"
+
+#: ../gnome-volume-properties.glade.h:6
+msgid "<b>Keyboards</b>"
+msgstr "<b>കീബോര്‍ഡുകള്‍</b>"
+
+#: ../gnome-volume-properties.glade.h:7
+msgid "<b>Mice</b>"
+msgstr ""
+
+#: ../gnome-volume-properties.glade.h:8
+msgid "<b>Palm™</b>"
+msgstr "<b>Palm™</b>"
+
+#: ../gnome-volume-properties.glade.h:9
+msgid "<b>PocketPC</b>"
+msgstr "<b>പോക്കറ്റ് പി.സി</b>"
+
+#: ../gnome-volume-properties.glade.h:10
+msgid "<b>Portable Music Players</b>"
+msgstr ""
+
+#: ../gnome-volume-properties.glade.h:11
+msgid "<b>Printers</b>"
+msgstr "<b>പ്രിന്‍ററുകള്‍</b>"
+
+#: ../gnome-volume-properties.glade.h:12
+msgid "<b>Removable Storage</b>"
+msgstr ""
+
+#: ../gnome-volume-properties.glade.h:13
+msgid "<b>Scanners</b>"
+msgstr "<b>സ്കാനറുകള്‍</b>"
+
+#: ../gnome-volume-properties.glade.h:14
+msgid "<b>Tablets</b>"
+msgstr "<b>ടാബ്ലറ്റുകള്‍</b>"
+
+#: ../gnome-volume-properties.glade.h:15
+msgid "<b>Video DVD Discs</b>"
+msgstr "<b>വീഡിയോ ഡി.വി.ഡി ഡിസ്കുകള്‍</b>"
+
+#: ../gnome-volume-properties.glade.h:16
+msgid "Auto-_open files on new drives and media"
+msgstr ""
+
+#: ../gnome-volume-properties.glade.h:17
+msgid "Automatically run a program when a USB _keyboard is connected"
+msgstr "USB കീബോര്‍ഡ് കംപ്യൂട്ടറിലേക്ക് കണക്ട് ചെയ്യുന്പോള്‍ ഓട്ടോമാറ്റിക്കായി പ്രവര്‍ത്തിപ്പിക്കണ്ട പ്രോഗ്രാം (_k)"
+
+#: ../gnome-volume-properties.glade.h:18
+msgid "Automatically run a program when a USB _mouse is connected"
+msgstr "USB മൌസ് കംപ്യൂട്ടറിലേക്ക് കണക്ട് ചെയ്യുന്പോള്‍ ഓട്ടോമാറ്റിക്കായി പ്രവര്‍ത്തിപ്പിക്കണ്ട പ്രോഗ്രാം (_m)"
+
+#: ../gnome-volume-properties.glade.h:19
+msgid "Automatically run a program when a _printer is connected"
+msgstr "ഒരു പ്രിന്‍റര്‍ കംപ്യൂട്ടറിലേക്ക് കണക്ട് ചെയ്യുന്പോള്‍ ഓട്ടോമാറ്റിക്കായി പ്രവര്‍ത്തിപ്പിക്കണ്ട പ്രോഗ്രാം (_p)"
+
+#: ../gnome-volume-properties.glade.h:20
+msgid "Automatically run a program when a _scanner is connected"
+msgstr "ഒരു സ്കാനര്‍ കംപ്യൂട്ടറിലേക്ക് കണക്ട് ചെയ്യുന്പോള്‍ ഓട്ടോമാറ്റിക്കായി പ്രവര്‍ത്തിപ്പിക്കണ്ട പ്രോഗ്രാം (_s)"
+
+#: ../gnome-volume-properties.glade.h:21
+msgid "Automatically run a program when a _tablet is connected"
+msgstr "ഒരു ടാബ്ലറ്റ് കംപ്യൂട്ടറിലേക്ക് കണക്ട് ചെയ്യുന്പോള്‍ ഓട്ടോമാറ്റിക്കായി പ്രവര്‍ത്തിപ്പിക്കണ്ട പ്രോഗ്രാം (_t)"
+
+#: ../gnome-volume-properties.glade.h:22
+msgid "Browse _removable media when inserted"
+msgstr ""
+
+#: ../gnome-volume-properties.glade.h:23
+msgid "C_ommand:"
+msgstr "നിര്‍ദ്ദേശം: (_m)"
+
+#: ../gnome-volume-properties.glade.h:24
+msgid "Cameras"
+msgstr "ക്യാമറകള്‍"
+
+#: ../gnome-volume-properties.glade.h:25
+msgid "Comman_d:"
+msgstr "നിര്‍ദ്ദേശം: (_d)"
+
+#: ../gnome-volume-properties.glade.h:26
+msgid "Command for A_udio CDs:"
+msgstr "ഓഡിയോ സി.ഡികള്‍ക്കുളള നിര്‍ദ്ദേശം: (_u)"
+
+#: ../gnome-volume-properties.glade.h:27
+msgid "Command for _Data CDs: "
+msgstr "ഡേറ്റാ സി.ഡികള്‍ക്കുളള നിര്‍ദ്ദേശം: (_D)"
+
+#: ../gnome-volume-properties.glade.h:28
+msgid "Drives and Media Preferences"
+msgstr "ഡ്രൈവുകളും മീഡിയാ ഇഷ്ടാനിഷ്ടങ്ങള്‍"
+
+#: ../gnome-volume-properties.glade.h:29
+msgid "Input Devices"
+msgstr "ഇന്‍പുട്ട് ഡിവൈസുകള്‍"
+
+#: ../gnome-volume-properties.glade.h:30
+msgid "Mount removable media when _inserted"
+msgstr ""
+
+#: ../gnome-volume-properties.glade.h:31
+msgid "Multimedia"
+msgstr "മള്‍ട്ടീമീഡിയാ"
+
+#: ../gnome-volume-properties.glade.h:32
+msgid "PDAs"
+msgstr "PDA"
+
+#: ../gnome-volume-properties.glade.h:33
+msgid "Play _audio CD discs when inserted"
+msgstr "ഓഡിയോ സി.ഡികള്‍ കംപ്യൂട്ടര്‍ ഡ്രൈവില്‍ ഇടുന്പോള്‍ പ്രവര്‍ത്തിപ്പിക്കുക (_a)"
+
+#: ../gnome-volume-properties.glade.h:34
+msgid "Play _music files when connected"
+msgstr "മ്യൂസിക് ഫയലുകള്‍ കംപ്യൂട്ടറിലേക്ക് കണക്ട് ചെയ്യുന്പോള്‍ പ്രവര്‍ത്തിപ്പിക്കുക (_m)"
+
+#: ../gnome-volume-properties.glade.h:35
+msgid "Play _video DVD discs when inserted"
+msgstr "വീഡിയോ ഡിസ്കുകള്‍ കംപ്യൂട്ടര്‍ ഡ്രൈവില്‍ ഇടുന്പോള്‍ പ്രവര്‍ത്തിപ്പിക്കുക (_v)"
+
+#: ../gnome-volume-properties.glade.h:36
+msgid "Printers & Scanners"
+msgstr "പ്രിന്‍ററുകളും സ്രാനറുകളും"
+
+#: ../gnome-volume-properties.glade.h:37
+msgid "Removable Drives and Media Preferences"
+msgstr ""
+
+#: ../gnome-volume-properties.glade.h:38
+msgid "Select program to burn audio CDs"
+msgstr "ഓഡിയോ സി.ഡിയിലേക്ക് കംപ്യൂട്ടറില്‍ നിന്നുളള ഡേറ്റാ പകര്‍ത്തുന്നതിനുളള പ്രോഗ്രാം തിരഞ്ഞെടുക്കുക"
+
+#: ../gnome-volume-properties.glade.h:39
+msgid "Select program to burn data CDs"
+msgstr "സി.ഡിയിലേക്ക് കംപ്യൂട്ടറില്‍ നിന്നുളള ഡേറ്റാ പകര്‍ത്തുന്നതിനുളള പ്രോഗ്രാം തിരഞ്ഞെടുക്കുക"
+
+#: ../gnome-volume-properties.glade.h:40
+msgid "Select program to edit videos"
+msgstr "വീഡിയോകള്‍ എഡിറ്റ് ചെയ്യുന്നതിനായി പ്രോഗ്രാം തിരഞ്ഞെടുക്കുക"
+
+#: ../gnome-volume-properties.glade.h:41
+msgid "Select program to import photos"
+msgstr ""
+
+#: ../gnome-volume-properties.glade.h:42
+msgid "Select program to play DVDs"
+msgstr "ഡി.വി.ഡികള്‍ പ്രവര്‍ത്തിപ്പിക്കുന്നതിനായി ഉളള പ്രോഗ്രാം തിരഞ്ഞെടുക്കുക"
+
+#: ../gnome-volume-properties.glade.h:43
+msgid "Select program to play audio CDs"
+msgstr "ഓഡിയോ സി.ഡികള്‍ പ്രവര്‍ത്തിപ്പിക്കുന്നതിനായി ഉളള പ്രോഗ്രാം തിരഞ്ഞെടുക്കുക"
+
+#: ../gnome-volume-properties.glade.h:44
+msgid "Select program to play music files"
+msgstr "മ്യൂസിക് ഫയലുകള്‍ പ്രവര്‍ത്തിപ്പിക്കുന്നതിനായി ഉളള പ്രോഗ്രാം തിരഞ്ഞെടുക്കുക"
+
+#: ../gnome-volume-properties.glade.h:45
+msgid "Select program to run when a keyboard is plugged in"
+msgstr "ഒരു കീബോര്‍ഡ് പ്ളഗിന്‍ ചെയ്യുന്പോള്‍ പ്രവര്‍ത്തിപ്പിക്കുന്നതിനായി ഉളള പ്രോഗ്രാം തിരഞ്ഞെടുക്കുക"
+
+#: ../gnome-volume-properties.glade.h:46
+msgid "Select program to run when a mouse is plugged in"
+msgstr "ഒരു മൌസ് പ്ളഗിന്‍ ചെയ്യുന്പോള്‍ പ്രവര്‍ത്തിപ്പിക്കുന്നതിനായി ഉളള പ്രോഗ്രാം തിരഞ്ഞെടുക്കുക"
+
+#: ../gnome-volume-properties.glade.h:47
+msgid "Select program to run when a printer is plugged in"
+msgstr "ഒരു പ്രിന്‍റര്‍ പ്ളഗിന്‍ ചെയ്യുന്പോള്‍ പ്രവര്‍ത്തിപ്പിക്കുന്നതിനായി ഉളള പ്രോഗ്രാം തിരഞ്ഞെടുക്കുക"
+
+#: ../gnome-volume-properties.glade.h:48
+msgid "Select program to run when a scanner is plugged in"
+msgstr "ഒരു സ്കാനര്‍ പ്ളഗിന്‍ ചെയ്യുന്പോള്‍ പ്രവര്‍ത്തിപ്പിക്കുന്നതിനായി ഉളള പ്രോഗ്രാം തിരഞ്ഞെടുക്കുക"
+
+#: ../gnome-volume-properties.glade.h:49
+msgid "Select program to run when a tablet is plugged in"
+msgstr "ഒരു ടാബ്ലറ്റ് പ്ളഗിന്‍ ചെയ്യുന്പോള്‍ പ്രവര്‍ത്തിപ്പിക്കുന്നതിനായി ഉളള പ്രോഗ്രാം തിരഞ്ഞെടുക്കുക"
+
+#: ../gnome-volume-properties.glade.h:50
+msgid "Select program to sync Palm devices"
+msgstr "Palm ഡിവൈസുകള്‍ സിന്‍ക് ചെയ്യുന്നതിനുളള പ്രോഗ്രാം തിരഞ്ഞെടുക്കുക"
+
+#: ../gnome-volume-properties.glade.h:51
+msgid "Storage"
+msgstr "സംരക്ഷണം"
+
+#: ../gnome-volume-properties.glade.h:52
+msgid "Sync PocketP_C devices when connected"
+msgstr "പോക്കറ്റ് പി സി ഡിവൈസുകള്‍ കണക്ട് ചെയ്യുന്പോള്‍ സിന്‍ക് ചെയ്യുക (_C)"
+
+#: ../gnome-volume-properties.glade.h:53
+msgid "Sync _Palm™ devices when connected"
+msgstr "Palm™ ഡിവൈസുകള്‍ കണക്ട് ചെയ്യുന്പോള്‍ സിന്‍ക് ചെയ്യുക (_P)"
+
+#: ../gnome-volume-properties.glade.h:54
+msgid "_Auto-run programs on new drives and media"
+msgstr ""
+
+#: ../gnome-volume-properties.glade.h:55
+msgid "_Burn a CD or DVD when a blank disc is inserted"
+msgstr ""
+
+#: ../gnome-volume-properties.glade.h:56
+msgid "_Command:"
+msgstr "നിര്‍ദ്ദേശം: (_C)"
+
+#: ../gnome-volume-properties.glade.h:57
+msgid "_Edit video when connected"
+msgstr "വീഡിയോ കണക്ട് ചെയ്യുന്പോള്‍ എഡിറ്റ് ചെയ്യുക (_E)"
+
+#: ../gnome-volume-properties.glade.h:58
+msgid "_Import digital photographs when connected"
+msgstr ""
+
+#: ../gnome-volume-properties.glade.h:59
+msgid "_Mount removable drives when hot-plugged"
+msgstr ""
+
+#: ../src/manager.c:211 ../src/manager.c:216 ../src/manager.c:221
+#: ../src/manager.c:226 ../src/manager.c:232 ../src/manager.c:238
+#: ../src/manager.c:244 ../src/manager.c:250
+msgid "Ig_nore"
+msgstr "അവഗണിക്കുക (_n)"
+
+#: ../src/manager.c:212
+msgid "_Allow Auto-Run"
+msgstr "ഓട്ടോ-റണ്‍ അനുവദിക്കുക (_A)"
+
+#: ../src/manager.c:217
+msgid "_Open"
+msgstr "തുറക്കുക (_O)"
+
+#: ../src/manager.c:222 ../src/manager.c:228 ../src/manager.c:233
+msgid "Import _Photos"
+msgstr ""
+
+#: ../src/manager.c:227
+msgid "_Open Folder"
+msgstr "ഫോള്‍ഡര്‍ തുറക്കുക (_O)"
+
+#: ../src/manager.c:234
+msgid "Manage _Music"
+msgstr ""
+
+#: ../src/manager.c:239
+msgid "_Browse Files"
+msgstr "ഫയലുകള്‍ തിരയുക (_B)"
+
+#: ../src/manager.c:240
+msgid "_Play CD"
+msgstr "സി. ഡി പ്രവര്‍ത്തിപ്പിക്കുക (_P)"
+
+#: ../src/manager.c:245
+msgid "Make _Audio CD"
+msgstr "ഓഡിയോ സി.ഡി നിര്‍മ്മിക്കുക (_A)"
+
+#: ../src/manager.c:246
+msgid "Make _Data CD"
+msgstr "ഡേറ്റാ സി.ഡി നിര്‍മ്മിക്കുക (_D)"
+
+#: ../src/manager.c:251
+msgid "Make _DVD"
+msgstr "ഡി.വി.ഡി നിര്‍മ്മിക്കുക (_D)"
+
+#: ../src/manager.c:304
+msgid "Auto-Run Confirmation"
+msgstr "ഓട്ടോ-റണ്‍ ഉറപ്പ് വരുത്തുക"
+
+#: ../src/manager.c:305
+msgid "Auto-run capability detected."
+msgstr ""
+
+#: ../src/manager.c:306
+msgid "Would you like to allow <b>'${0}'</b> to run?"
+msgstr "<b>'${0}'</b> പ്രവര്‍ത്തിക്കുവാന്‍ അനുവദിക്കണമോ?"
+
+#: ../src/manager.c:311
+msgid "Auto-Open Confirmation"
+msgstr "ഓട്ടോ-ഓപ്പണ്‍ ഉറപ്പ് വരുത്തുക"
+
+#: ../src/manager.c:312
+msgid "Auto-Open capability detected."
+msgstr ""
+
+#: ../src/manager.c:313
+msgid "Would you like to open <b>'${0}'</b>?"
+msgstr "<b>'${0}'</b> നിങ്ങള്‍ക്ക് തുറക്കണമോ?"
+
+#: ../src/manager.c:318 ../src/manager.c:325
+msgid "Camera Import"
+msgstr ""
+
+#: ../src/manager.c:319 ../src/manager.c:326
+msgid "A camera has been detected."
+msgstr "ഒരു ക്യാമറാ കണ്ടുകിട്ടിയിരിക്കുന്നു."
+
+#: ../src/manager.c:320 ../src/manager.c:327
+msgid ""
+"There are photos on the camera. Would you like to add these pictures to your "
+"album?"
+msgstr "ക്യാമറയില്‍ ഫോട്ടോ ഉണ്ട്. നിങ്ങളുടെ ആല്‍ബത്തിലേക്ക് ഈ ചിത്രങ്ങള്‍ ചേര്‍ക്കണമോ?"
+
+#: ../src/manager.c:321 ../src/manager.c:328 ../src/manager.c:335
+#: ../src/manager.c:342 ../src/manager.c:349
+msgid "_Always perform this action"
+msgstr "എപ്പോഴും ഇത് പ്രവര്‍ത്തിപ്പിക്കുക (_A)"
+
+#: ../src/manager.c:332
+msgid "Photo Import"
+msgstr ""
+
+#: ../src/manager.c:333
+msgid "A photo card has been detected."
+msgstr "ഒരു ഫോട്ടോ കാര്‍ഡ് കണ്ടുകിട്ടിയിരിക്കുന്നു."
+
+#: ../src/manager.c:334
+msgid ""
+"There are photos on the card. Would you like to add these pictures to your "
+"album?"
+msgstr "കാര്‍ഡില്‍ ഫോട്ടോ ഉണ്ട്. നിങ്ങളുടെ ആല്‍ബത്തിലേക്ക് ഈ ചിത്രങ്ങള്‍ ചേര്‍ക്കണമോ?"
+
+#: ../src/manager.c:339
+msgid "Photos and Music"
+msgstr "ഫോട്ടോയും സംഗീതവും"
+
+#: ../src/manager.c:340
+msgid "Photos were found on your music device."
+msgstr "നിങ്ങളുടെ മ്യൂസിക് ഡിവൈസില്‍ ഫോട്ടോകള്‍ കണ്ടുകിട്ടിയിരിക്കുന്നു."
+
+#: ../src/manager.c:341
+msgid "Would you like to import the photos or manage its music?"
+msgstr ""
+
+#: ../src/manager.c:346
+msgid "Audio / Data CD"
+msgstr "ഓഡിയോ / ഡേറ്റാ സി.ഡി"
+
+#: ../src/manager.c:347
+msgid "The CD in the drive contains both music and files."
+msgstr "ഡ്രൈവിലുളള സി.ഡിയില്‍ സംഗീതവും ഫയലുകളും ഉണ്ട്."
+
+#: ../src/manager.c:348
+msgid "Would you like to listen to music or browse the files?"
+msgstr ""
+
+#: ../src/manager.c:353 ../src/manager.c:360
+msgid "Choose Disc Type"
+msgstr "ഏത് തരം ഡിസ്ക് എന്ന് തിരഞ്ഞെടുക്കുക"
+
+#: ../src/manager.c:354 ../src/manager.c:361
+msgid "You have inserted a blank disc."
+msgstr "നിങ്ങള്‍ ഒരു ശൂന്യമായ ഡിസ്കാണ് ഡ്രൈവില്‍ ഇട്ടിരിക്കുന്നത്."
+
+#: ../src/manager.c:355 ../src/manager.c:362
+msgid "What would you like to do?"
+msgstr "നിങ്ങള്‍ക്ക് എന്താണ് ചെയ്യേണ്ടത്?"
+
+#: ../src/manager.c:3043
+#, c-format
+msgid "%d%% of the disk space on %s is in use"
+msgstr "%d%% ഡിസ്കിന്‍റെ സ്ഥലവും (%s-ലുളള) ഉപയോഗത്തിലാണ്"
+
+#: ../src/manager.c:3131
+msgid "Print version and exit"
+msgstr "വേര്‍ഷന്‍ പ്രിന്‍റ് ചെയ്ത് പുറത്ത് കടക്കുക"
+
+#: ../src/manager.c:3133
+msgid "Run as a daemon"
+msgstr "ഒരു ഡെമണ്‍ ആയി പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#: ../src/manager.c:3135
+msgid "Don't run as a daemon"
+msgstr "ഡെമണ്‍ ആയി പ്രവര്‍ത്തിപ്പിക്കേണ്ട"
+
+#: ../src/manager.c:3137
+msgid "Run in secret mode"
+msgstr "രഹസ്യ രീതിയില്‍ പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#: ../src/manager.c:3169
+#, c-format
+msgid "Unrecognized --daemon argument: %s\n"
+msgstr "തിരിച്ചറിയാന്‍ കഴിയാത്ത --daemon ആര്‍ഗ്യുമെന്‍റ്: %s\n"
+
+#: ../src/properties.c:310
+msgid "Could not load the main interface"
+msgstr "പ്രധാനമായ സംയോജനഘടകം ലോഡ് ചെയ്യുവാന്‍ സാധ്യമായില്ല"
+
+#: ../src/properties.c:312
+msgid "Please make sure that the volume manager is properly installed"
+msgstr "വോള്യം മാനേജര്‍ ശരിയായിട്ടാണ് ഇന്‍സ്റ്റോള്‍ ചെയ്തിരിക്കുന്നത് എന്ന് ഉറപ്പ് വരുത്തുക"
+
+#: ../src/properties.c:471
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr ""
+"gnome-volume-manager ഡെമണ്‍ ആരംഭിക്കുന്നതില്‍ പിശക്:\n"
+"%s"
+
+#: ../src/properties.c:502
+msgid "Volume management not supported"
+msgstr "വോള്യം മാനേജ്മന്‍റ് പിന്തുണയ്കുന്നില്ല"
+
+#: ../src/properties.c:504
+msgid ""
+"The \"hald\" service is required but not currently running. Enable the "
+"service and rerun this application, or contact your system administrator.\n"
+"\n"
+"Note: You need Linux kernel 2.6 for volume management to work."
+msgstr ""
+

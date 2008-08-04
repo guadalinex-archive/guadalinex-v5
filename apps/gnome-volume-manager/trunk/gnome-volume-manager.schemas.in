@@ -1,0 +1,535 @@
+<gconfschemafile>
+    <schemalist>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/filemanager</key>
+	<applyto>/desktop/gnome/volume_manager/filemanager</applyto>
+	<type>string</type>
+	<default>nautilus -n --no-desktop %m</default>
+	<locale name="C">
+	  <short>File Manager command</short>
+	  <long>Command to use when launching the file manager.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/automount_drives</key>
+        <applyto>/desktop/gnome/volume_manager/automount_drives</applyto>
+        <type>bool</type>
+        <default>true</default>
+        <locale name="C">
+          <short>Automount removable drives</short>
+          <long>Whether gnome-volume-manager should automatically mount
+                removable storage drives when they are inserted.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/automount_media</key>
+        <applyto>/desktop/gnome/volume_manager/automount_media</applyto>
+        <type>bool</type>
+        <default>true</default>
+        <locale name="C">
+          <short>Automount removable media</short>
+          <long>Whether gnome-volume-manager should automatically mount
+                removable storage media when they are inserted.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autobrowse</key>
+        <applyto>/desktop/gnome/volume_manager/autobrowse</applyto>
+        <type>bool</type>
+        <default>true</default>
+        <locale name="C">
+          <short>Autorun nautilus</short>
+          <long>Open nautilus on removeable media insert.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autorun</key>
+        <applyto>/desktop/gnome/volume_manager/autorun</applyto>
+        <type>bool</type>
+        <default>false</default>
+        <locale name="C">
+          <short>Perform autorun</short>
+          <long>Whether autorun programs (binaries and scripts located in 
+                'autorun_path') are run on newly mounted media.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autorun_path</key>
+	<applyto>/desktop/gnome/volume_manager/autorun_path</applyto>
+	<type>string</type>
+	<default>.autorun:autorun:autorun.sh:autorun.exe:Autorun.exe</default>
+	<locale name="C">
+	  <short>Autorun path</short>
+	  <long>':' delimited list of paths to check for autorun binaries and
+	        scripts.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autoopen</key>
+        <applyto>/desktop/gnome/volume_manager/autoopen</applyto>
+        <type>bool</type>
+        <default>false</default>
+        <locale name="C">
+          <short>Perform autoopen</short>
+          <long>Whether autoopen files should be opened on newly mounted media.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autoopen_path</key>
+	<applyto>/desktop/gnome/volume_manager/autoopen_path</applyto>
+	<type>string</type>
+	<default>.autoopen:autoopen</default>
+	<locale name="C">
+	  <short>Autoopen path</short>
+	  <long>':' delimited list of paths to check for autoopen files.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autoplay_cda</key>
+	<applyto>/desktop/gnome/volume_manager/autoplay_cda</applyto>
+	<type>bool</type>
+	<default>true</default>
+	<locale name="C">
+	  <short>Play inserted audio CD's</short>
+	  <long>Whether, when an audio CD is inserted, gnome-volume-manager
+                should run 'autoplay_cda_command'.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autoplay_cda_command</key>
+	<applyto>/desktop/gnome/volume_manager/autoplay_cda_command</applyto>
+	<type>string</type>
+	<default>gnome-cd --unique --play --device=%d</default>
+	<locale name="C">
+	  <short>CD play command</short>
+	  <long>Command to run when an audio CD is inserted.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autoburn</key>
+	<applyto>/desktop/gnome/volume_manager/autoburn</applyto>
+	<type>bool</type>
+	<default>false</default>
+	<locale name="C">
+	  <short>Run a program to burn CDs/DVDs</short>
+	  <long>Whether, when a blank CD or DVD is inserted, gnome-volume-manager
+	        should run one of the autoburn commands.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autoburn_audio_cd_command</key>
+	<applyto>/desktop/gnome/volume_manager/autoburn_audio_cd_command</applyto>
+	<type>string</type>
+	<default>nautilus --no-desktop burn:</default>
+	<locale name="C">
+	  <short>Audio CD burn command</short>
+	  <long>Command to run when the user wishes to burn an Audio CD.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autoburn_data_cd_command</key>
+	<applyto>/desktop/gnome/volume_manager/autoburn_data_cd_command</applyto>
+	<type>string</type>
+	<default>nautilus --no-desktop burn:</default>
+	<locale name="C">
+	  <short>Data CD burn command</short>
+	  <long>Command to run when the user wishes to burn a Data CD.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autoplay_dvd</key>
+	<applyto>/desktop/gnome/volume_manager/autoplay_dvd</applyto>
+	<type>bool</type>
+	<default>true</default>
+	<locale name="C">
+	  <short>Play inserted video DVDs</short>
+	  <long>Whether, when a video DVD is inserted,
+                gnome-volume-manager should run 'autoplay_dvd_command'.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autoplay_dvd_command</key>
+	<applyto>/desktop/gnome/volume_manager/autoplay_dvd_command</applyto>
+	<type>string</type>
+	<default>totem %d</default>
+	<locale name="C">
+	  <short>DVD play command</short>
+	  <long>Command to run when a video DVD is inserted.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autoplay_vcd</key>
+	<applyto>/desktop/gnome/volume_manager/autoplay_vcd</applyto>
+	<type>bool</type>
+	<default>true</default>
+	<locale name="C">
+	  <short>Play inserted video VCDs</short>
+	  <long>Whether, when a video VCD is inserted,
+                gnome-volume-manager should run 'autoplay_vcd_command'.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autoplay_vcd_command</key>
+	<applyto>/desktop/gnome/volume_manager/autoplay_vcd_command</applyto>
+	<type>string</type>
+	<default>totem %d</default>
+	<locale name="C">
+	  <short>VCD play command</short>
+	  <long>Command to run when a video VCD is inserted.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autophoto</key>
+	<applyto>/desktop/gnome/volume_manager/autophoto</applyto>
+	<type>bool</type>
+	<default>false</default>
+	<locale name="C">
+	  <short>Run photo management command</short>
+	  <long>Whether, when a digital camera is connected or media from a
+	        digital camera is inserted, gnome-volume-manager should run
+		'autophoto_command'.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autophoto_command</key>
+	<applyto>/desktop/gnome/volume_manager/autophoto_command</applyto>
+	<type>string</type>
+	<default></default>
+	<locale name="C">
+	  <short>Photo management command</short>
+	  <long>Command to run when a digital camera is connected or media 
+                from a digital camera is inserted.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autoipod</key>
+	<applyto>/desktop/gnome/volume_manager/autoipod</applyto>
+	<type>bool</type>
+	<default>false</default>
+	<locale name="C">
+	  <short>Run iPod program</short>
+	  <long>Whether, when an iPod is connected, gnome-volume-manager should run
+		'autoipod_command'.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autoipod_command</key>
+	<applyto>/desktop/gnome/volume_manager/autoipod_command</applyto>
+	<type>string</type>
+	<default></default>
+	<locale name="C">
+	  <short>iPod sync command</short>
+	  <long>Command to run when an iPod is connected.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autoprinter</key>
+	<applyto>/desktop/gnome/volume_manager/autoprinter</applyto>
+	<type>bool</type>
+	<default>true</default>
+	<locale name="C">
+	  <short>Run printer program</short>
+	  <long>Whether, when a printer is connected, gnome-volume-manager should run
+		'autoprinter_command'.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autoprinter_command</key>
+	<applyto>/desktop/gnome/volume_manager/autoprinter_command</applyto>
+	<type>string</type>
+	<default>gnome-printer-add hal://%h</default>
+	<locale name="C">
+	  <short>printer command</short>
+	  <long>Command to run when a printer is connected.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autoscanner</key>
+	<applyto>/desktop/gnome/volume_manager/autoscanner</applyto>
+	<type>bool</type>
+	<default>false</default>
+	<locale name="C">
+	  <short>Run scanner program</short>
+	  <long>Whether, when a scanner is connected, gnome-volume-manager should run
+		'autoscanner_command'.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autoscanner_command</key>
+	<applyto>/desktop/gnome/volume_manager/autoscanner_command</applyto>
+	<type>string</type>
+	<default></default>
+	<locale name="C">
+	  <short>scanner command</short>
+	  <long>Command to run when a scanner is connected.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autovideocam</key>
+	<applyto>/desktop/gnome/volume_manager/autovideocam</applyto>
+	<type>bool</type>
+	<default>false</default>
+	<locale name="C">
+	  <short>Run video editing program</short>
+	  <long>Whether, when a digital video camera is connected, gnome-volume-manager should run
+		'autovideocam_command'.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autovideocam_command</key>
+	<applyto>/desktop/gnome/volume_manager/autovideocam_command</applyto>
+	<type>string</type>
+	<default></default>
+	<locale name="C">
+	  <short>video camera command</short>
+	  <long>Command to run when a video camera is connected.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autowebcam</key>
+	<applyto>/desktop/gnome/volume_manager/autowebcam</applyto>
+	<type>bool</type>
+	<default>false</default>
+	<locale name="C">
+	  <short>Run webcam stream display program</short>
+	  <long>Whether, when a web camera is connected, gnome-volume-manager should run
+		'autowebcam_command'.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autowebcam_command</key>
+	<applyto>/desktop/gnome/volume_manager/autowebcam_command</applyto>
+	<type>string</type>
+	<default>cheese --hal-device=%h</default>
+	<locale name="C">
+	  <short>web camera command</short>
+	  <long>Command to run when a web camera is connected.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autokeyboard</key>
+	<applyto>/desktop/gnome/volume_manager/autokeyboard</applyto>
+	<type>bool</type>
+	<default>false</default>
+	<locale name="C">
+	  <short>Run keyboard program</short>
+	  <long>Whether, when a keyboard is connected, gnome-volume-manager should run
+		'autokeyboard_command'.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autokeyboard_command</key>
+	<applyto>/desktop/gnome/volume_manager/autokeyboard_command</applyto>
+	<type>string</type>
+	<default></default>
+	<locale name="C">
+	  <short>keyboard command</short>
+	  <long>Command to run when a keyboard is connected.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/automouse</key>
+	<applyto>/desktop/gnome/volume_manager/automouse</applyto>
+	<type>bool</type>
+	<default>false</default>
+	<locale name="C">
+	  <short>Run mouse program</short>
+	  <long>Whether, when a mouse is connected, gnome-volume-manager should run
+		'automouse_command'.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/automouse_command</key>
+	<applyto>/desktop/gnome/volume_manager/automouse_command</applyto>
+	<type>string</type>
+	<default></default>
+	<locale name="C">
+	  <short>mouse command</short>
+	  <long>Command to run when a mouse is connected.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autotablet</key>
+	<applyto>/desktop/gnome/volume_manager/autotablet</applyto>
+	<type>bool</type>
+	<default>false</default>
+	<locale name="C">
+	  <short>Run tablet program</short>
+	  <long>Whether, when a tablet is connected, gnome-volume-manager should run
+		'autotablet_command'.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autotablet_command</key>
+	<applyto>/desktop/gnome/volume_manager/autotablet_command</applyto>
+	<type>string</type>
+	<default></default>
+	<locale name="C">
+	  <short>tablet command</short>
+	  <long>Command to run when a tablet is connected.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autopalmsync</key>
+	<applyto>/desktop/gnome/volume_manager/autopalmsync</applyto>
+	<type>bool</type>
+	<default>false</default>
+	<locale name="C">
+	  <short>Run Palm-sync program</short>
+	  <long>Whether, when a Palm is connected, gnome-volume-manager should run
+		'autopalmsync_command'.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autopalmsync_command</key>
+	<applyto>/desktop/gnome/volume_manager/autopalmsync_command</applyto>
+	<type>string</type>
+	<default>gpilotd-control-applet</default>
+	<locale name="C">
+	  <short>palm sync command</short>
+	  <long>Command to run when a Palm is connected.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autopocketpc</key>
+	<applyto>/desktop/gnome/volume_manager/autopocketpc</applyto>
+	<type>bool</type>
+	<default>false</default>
+	<locale name="C">
+	  <short>Run PocketPC-sync program</short>
+	  <long>Whether, when a PocketPC is connected, gnome-volume-manager should run
+		'autopocketpc_command'.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/autopocketpc_command</key>
+	<applyto>/desktop/gnome/volume_manager/autopocketpc_command</applyto>
+	<type>string</type>
+	<default>multisync</default>
+	<locale name="C">
+	  <short>palm sync command</short>
+	  <long>Command to run when a PocketPC is connected.</long>
+	</locale>
+      </schema>
+
+      <!-- "Which action to take?" prompts -->
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/prompts/autorun</key>
+	<applyto>/desktop/gnome/volume_manager/prompts/autorun</applyto>
+	<type>int</type>
+	<default>0</default>
+	<locale name="C">
+	  <short>"Always take this action" checkbox for Autorun</short>
+	  <long>Action to take when a device contains an autorun program/script.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/prompts/camera_import_photos</key>
+	<applyto>/desktop/gnome/volume_manager/prompts/camera_import_photos</applyto>
+	<type>int</type>
+	<default>0</default>
+	<locale name="C">
+	  <short>"Always take this action" checkbox for photo import from a camera</short>
+	  <long>Action to take when a camera is plugged in.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/prompts/device_import_photos</key>
+	<applyto>/desktop/gnome/volume_manager/prompts/device_import_photos</applyto>
+	<type>int</type>
+	<default>0</default>
+	<locale name="C">
+	  <short>"Always take this action" checkbox for photo import from a device</short>
+	  <long>Action to take when a device containing photos is encountered.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/prompts/ipod_photo</key>
+	<applyto>/desktop/gnome/volume_manager/prompts/ipod_photo</applyto>
+	<type>int</type>
+	<default>0</default>
+	<locale name="C">
+	  <short>"Always take this action" checkbox for iPod Photos</short>
+	  <long>Action to take when an iPod Photo is encountered.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/prompts/cd_mixed</key>
+	<applyto>/desktop/gnome/volume_manager/prompts/cd_mixed</applyto>
+	<type>int</type>
+	<default>0</default>
+	<locale name="C">
+	  <short>"Always take this action" checkbox for mixed Audio and Data CDs</short>
+	  <long>Action to take when a mixed Audio and Data CD is encountered.</long>
+	</locale>
+      </schema>
+
+      <!-- Schemas for the low disk notification frobnication -->
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/percent_threshold</key>
+	<applyto>/desktop/gnome/volume_manager/percent_threshold</applyto>
+	<type>float</type>
+	<default>0.05</default>
+	<locale name="C">
+	  <short>Low Disk Space notification threshold</short>
+	  <long>Threshold percentage for notifying the user of low disk space.</long>
+	</locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/desktop/gnome/volume_manager/percent_used</key>
+	<applyto>/desktop/gnome/volume_manager/percent_used</applyto>
+	<type>float</type>
+	<default>0.01</default>
+	<locale name="C">
+	  <short>Threshold for notification of increased disk usage</short>
+	  <long>The threshold value for whether or not to toggle the notification on, based on the amount of additional space used since the last check.</long>
+	</locale>
+      </schema>
+
+  </schemalist>
+</gconfschemafile>

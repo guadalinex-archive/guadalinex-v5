@@ -1,0 +1,954 @@
+# GNOME kettaseadmete halduri eesti keele tõlge.
+# Estonian translation for GNOME Volume Manager.
+#
+# Copyright (C) 2005, 2006 Free Software Foundation, Inc.
+# Copyright (C) 2007 The GNOME Project.
+# This file is distributed under the same license as the gnome-volume-manager
+# package.
+#
+# Priit Laes <amd store20 com>, 2005-2007.
+# Ivar Smolin <okul@linux.ee>, 2005-2007.
+# Sven Sapelson <sven.sapelson@gmail.com>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Gnome Volume Manager HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-10-29 17:26+0000\n"
+"PO-Revision-Date: 2007-11-10 20:19+0200\n"
+"Last-Translator: Ivar Smolin <okul@linux.ee>\n"
+"Language-Team: Estonian <gnome-et@linux.ee>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../gnome-volume-manager.schemas.in.h:1
+msgid "\"Always take this action\" checkbox for Autorun"
+msgstr "\"Alati kasuta seda tegevust\" valikukast automaatkäivituse jaoks"
+
+#: ../gnome-volume-manager.schemas.in.h:2
+msgid "\"Always take this action\" checkbox for iPod Photos"
+msgstr "\"Alati kasuta seda tegevust\" valikukast iPod Photo jaoks"
+
+#: ../gnome-volume-manager.schemas.in.h:3
+msgid "\"Always take this action\" checkbox for mixed Audio and Data CDs"
+msgstr ""
+"\"Alati kasuta seda tegevust\" valikukast audio-, andme- sega-CD jaoks."
+
+#: ../gnome-volume-manager.schemas.in.h:4
+msgid "\"Always take this action\" checkbox for photo import from a camera"
+msgstr ""
+"\"Alati kasuta seda tegevust\" valikukast fotode importimiseks kaamerast"
+
+#: ../gnome-volume-manager.schemas.in.h:5
+msgid "\"Always take this action\" checkbox for photo import from a device"
+msgstr ""
+"\"Alati kasuta seda tegevust\" valikukast fotode importimiseks seadmelt"
+
+#: ../gnome-volume-manager.schemas.in.h:6
+msgid "':' delimited list of paths to check for autoopen files."
+msgstr ""
+"':' eraldatud nimekiri asukohtadest, kust otsitakse automaatselt avatavaid "
+"faile."
+
+#: ../gnome-volume-manager.schemas.in.h:7
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr ""
+"':' eraldatud nimekiri asukohtadest, kust otsitakse automaatselt "
+"käivitatavaid binaarfaile ja skripte."
+
+#: ../gnome-volume-manager.schemas.in.h:8
+msgid "Action to take when a camera is plugged in."
+msgstr "Tegevus mida täita kaamera külgeühendamisel."
+
+#: ../gnome-volume-manager.schemas.in.h:9
+msgid "Action to take when a device containing photos is encountered."
+msgstr "Tegevus mida täita kui seade sisaldab fotosid."
+
+#: ../gnome-volume-manager.schemas.in.h:10
+msgid "Action to take when a device contains an autorun program/script."
+msgstr ""
+"Tegevus mida täita kui seade sisaldab automaatkäivituse programmi/skripti."
+
+#: ../gnome-volume-manager.schemas.in.h:11
+msgid "Action to take when a mixed Audio and Data CD is encountered."
+msgstr "Tegevus mida täita kui CD sisaldab nii audiot kui andmeid."
+
+#: ../gnome-volume-manager.schemas.in.h:12
+msgid "Action to take when an iPod Photo is encountered."
+msgstr "Tegevus mida täita kui seade on iPod Photo."
+
+#: ../gnome-volume-manager.schemas.in.h:13
+msgid "Audio CD burn command"
+msgstr "Audio-CD kirjutamise käsk"
+
+#: ../gnome-volume-manager.schemas.in.h:14
+msgid "Automount removable drives"
+msgstr "Eemaldatavate kettaseadmete automaatne ühendamine"
+
+#: ../gnome-volume-manager.schemas.in.h:15
+msgid "Automount removable media"
+msgstr "Eemaldatavate andmekandjate automaatne ühendamine"
+
+#: ../gnome-volume-manager.schemas.in.h:16
+msgid "Autoopen path"
+msgstr "Automaatavamise rada"
+
+#: ../gnome-volume-manager.schemas.in.h:17
+msgid "Autorun nautilus"
+msgstr "Käivita nautilus automaatselt"
+
+#: ../gnome-volume-manager.schemas.in.h:18
+msgid "Autorun path"
+msgstr "Käivitatav käsk"
+
+#: ../gnome-volume-manager.schemas.in.h:19
+msgid "CD play command"
+msgstr "CD-de esitamise käsk"
+
+#: ../gnome-volume-manager.schemas.in.h:20
+msgid "Command to run when a Palm is connected."
+msgstr "Käsk, mis käivitatakse pärast Palmi ühendamist."
+
+#: ../gnome-volume-manager.schemas.in.h:21
+msgid "Command to run when a PocketPC is connected."
+msgstr "Käsk, mis käivitatakse pärast PocketPC ühendamist."
+
+#: ../gnome-volume-manager.schemas.in.h:22
+msgid ""
+"Command to run when a digital camera is connected or media from a digital "
+"camera is inserted."
+msgstr ""
+"Käsk, mis käivitatakse pärast digikaamera või selle andmekandja ühendamist."
+
+#: ../gnome-volume-manager.schemas.in.h:23
+msgid "Command to run when a keyboard is connected."
+msgstr "Käsk, mis käivitatakse pärast klaviatuuri ühendamist."
+
+#: ../gnome-volume-manager.schemas.in.h:24
+msgid "Command to run when a mouse is connected."
+msgstr "Käsk, mis käivitatakse pärast hiire ühendamist."
+
+#: ../gnome-volume-manager.schemas.in.h:25
+msgid "Command to run when a printer is connected."
+msgstr "Käsk, mis käivitatakse pärast printeri ühendamist."
+
+#: ../gnome-volume-manager.schemas.in.h:26
+msgid "Command to run when a scanner is connected."
+msgstr "Käsk, mis käivitatakse pärast skänneri ühendamist."
+
+#: ../gnome-volume-manager.schemas.in.h:27
+msgid "Command to run when a tablet is connected."
+msgstr "Käivitatav käsk digitahvli ühendamisel."
+
+#: ../gnome-volume-manager.schemas.in.h:28
+msgid "Command to run when a video DVD is inserted."
+msgstr "Käsk, mis käivitatakse pärast video DVD sisestamist."
+
+#: ../gnome-volume-manager.schemas.in.h:29
+msgid "Command to run when a video VCD is inserted."
+msgstr "Käsk, mis käivitatakse pärast video VCD sisestamist."
+
+#: ../gnome-volume-manager.schemas.in.h:30
+msgid "Command to run when a video camera is connected."
+msgstr "Käsk, mis käivitatakse pärast videokaamera ühendamist."
+
+#: ../gnome-volume-manager.schemas.in.h:31
+msgid "Command to run when a web camera is connected."
+msgstr "Käsk, mis käivitatakse pärast videokaamera ühendamist."
+
+#: ../gnome-volume-manager.schemas.in.h:32
+msgid "Command to run when an audio CD is inserted."
+msgstr "Käsk, mis käivitatakse pärast audio CD sisestamist."
+
+#: ../gnome-volume-manager.schemas.in.h:33
+msgid "Command to run when an iPod is connected."
+msgstr "Käsk, mis käivitatakse pärast iPod'i ühendamist."
+
+#: ../gnome-volume-manager.schemas.in.h:34
+msgid "Command to run when the user wishes to burn a Data CD."
+msgstr "Käsk, mis käivitatakse kui kasutaja soovib andme-CD'd kirjutada."
+
+#: ../gnome-volume-manager.schemas.in.h:35
+msgid "Command to run when the user wishes to burn an Audio CD."
+msgstr "Käsk, mis käivitatakse kui kasutaja soovib audio CD'd kirjutada."
+
+#: ../gnome-volume-manager.schemas.in.h:36
+msgid "Command to use when launching the file manager."
+msgstr "Käsk mida kasutada failihalduri käivitamiseks."
+
+#: ../gnome-volume-manager.schemas.in.h:37
+msgid "DVD play command"
+msgstr "DVD-de esitamise käsk"
+
+#: ../gnome-volume-manager.schemas.in.h:38
+msgid "Data CD burn command"
+msgstr "Andme-CD kirjutamise käsk"
+
+#: ../gnome-volume-manager.schemas.in.h:39
+msgid "File Manager command"
+msgstr "Failihalduri käsk"
+
+#: ../gnome-volume-manager.schemas.in.h:40
+msgid "Low Disk Space notification threshold"
+msgstr "Vähesest kettaruumist teavitamise lävi"
+
+#: ../gnome-volume-manager.schemas.in.h:41
+msgid "Open nautilus on removeable media insert."
+msgstr "Ava Nautilus eemaldatava andmekandja sisestamisel."
+
+#: ../gnome-volume-manager.schemas.in.h:42
+msgid "Perform autoopen"
+msgstr "Automaatavamine"
+
+#: ../gnome-volume-manager.schemas.in.h:43
+msgid "Perform autorun"
+msgstr "Käivita automaatselt"
+
+#: ../gnome-volume-manager.schemas.in.h:44
+msgid "Photo management command"
+msgstr "Fotode haldamise käsk"
+
+#: ../gnome-volume-manager.schemas.in.h:45
+msgid "Play inserted audio CD's"
+msgstr "Mängi sisestatud CD-plaate"
+
+#: ../gnome-volume-manager.schemas.in.h:46
+msgid "Play inserted video DVDs"
+msgstr "Mängi sisestatud DVD-plaate"
+
+#: ../gnome-volume-manager.schemas.in.h:47
+msgid "Play inserted video VCDs"
+msgstr "Mängi sisestatud VCD-plaate"
+
+#: ../gnome-volume-manager.schemas.in.h:48
+msgid "Run Palm-sync program"
+msgstr "Käivita Palmi sünkroniseerimisprogramm"
+
+#: ../gnome-volume-manager.schemas.in.h:49
+msgid "Run PocketPC-sync program"
+msgstr "Käivita PocketPC sünkroniseerimisprogramm"
+
+#: ../gnome-volume-manager.schemas.in.h:50
+msgid "Run a program to burn CDs/DVDs"
+msgstr "Käivita programm CD/DVD'de kirjutamiseks"
+
+#: ../gnome-volume-manager.schemas.in.h:51
+msgid "Run iPod program"
+msgstr "Käivita iPod'i programm"
+
+#: ../gnome-volume-manager.schemas.in.h:52
+msgid "Run keyboard program"
+msgstr "Käivita klaviatuuri programm"
+
+#: ../gnome-volume-manager.schemas.in.h:53
+msgid "Run mouse program"
+msgstr "Käivita hiire programm"
+
+#: ../gnome-volume-manager.schemas.in.h:54
+msgid "Run photo management command"
+msgstr "Käivita fotode haldamise käsk"
+
+#: ../gnome-volume-manager.schemas.in.h:55
+msgid "Run printer program"
+msgstr "Käivita printeri programm"
+
+#: ../gnome-volume-manager.schemas.in.h:56
+msgid "Run scanner program"
+msgstr "Käivita skänneri programm"
+
+#: ../gnome-volume-manager.schemas.in.h:57
+msgid "Run tablet program"
+msgstr "Käivita digitahvli programm"
+
+#: ../gnome-volume-manager.schemas.in.h:58
+msgid "Run video editing program"
+msgstr "Käivita video redigeerimise programm"
+
+#: ../gnome-volume-manager.schemas.in.h:59
+msgid "Run webcam stream display program"
+msgstr "Käivita veebikaamera pildi kuvamisprogramm"
+
+#: ../gnome-volume-manager.schemas.in.h:60
+msgid ""
+"The threshold value for whether or not to toggle the notification on, based "
+"on the amount of additional space used since the last check."
+msgstr ""
+"Kettakasutuse suurenemise protsent (võrreldes viimase kontrolliga), millest "
+"alates kasutajat teavitatakse kettakasutuse suurenemisest."
+
+#: ../gnome-volume-manager.schemas.in.h:61
+msgid "Threshold for notification of increased disk usage"
+msgstr "Suurenenud kettakasutusest teavitamise lävi"
+
+#: ../gnome-volume-manager.schemas.in.h:62
+msgid "Threshold percentage for notifying the user of low disk space."
+msgstr "Protsent, millest alates kasutajat teavitatakse vähesest kettaruumist."
+
+#: ../gnome-volume-manager.schemas.in.h:63
+msgid "VCD play command"
+msgstr "VCD-de esitamise käsk"
+
+#: ../gnome-volume-manager.schemas.in.h:64
+msgid "Whether autoopen files should be opened on newly mounted media."
+msgstr ""
+"Kas automaatselt avatavad failid tuleb värskelt sisestatud meedia puhul "
+"avada."
+
+#: ../gnome-volume-manager.schemas.in.h:65
+msgid ""
+"Whether autorun programs (binaries and scripts located in 'autorun_path') "
+"are run on newly mounted media."
+msgstr ""
+"Kas automaatselt käivitatavad programmid ('autorun_path' rajal asuvad "
+"binaarid ja skriptid) käivitatakse pärast meedia külgehaakimist või mitte."
+
+#: ../gnome-volume-manager.schemas.in.h:66
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"drives when they are inserted."
+msgstr ""
+"Sätestab, kas gnome-volume-manager ühendab pärast eemaldatava kettaseadme "
+"sisestamist selle automaatselt või mitte."
+
+#: ../gnome-volume-manager.schemas.in.h:67
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"media when they are inserted."
+msgstr ""
+"Sätestab, kas gnome-volume-manager ühendab pärast eemaldatava andmekandja "
+"sisestamist selle automaatselt või mitte."
+
+#: ../gnome-volume-manager.schemas.in.h:68
+msgid ""
+"Whether, when a Palm is connected, gnome-volume-manager should run "
+"'autopalmsync_command'."
+msgstr ""
+"Kas gnome-volume-manager peaks käivitama pärast Palm pihuarvuti ühendamist "
+"käsu 'autopalmsync_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:69
+msgid ""
+"Whether, when a PocketPC is connected, gnome-volume-manager should run "
+"'autopocketpc_command'."
+msgstr ""
+"Kas gnome-volume-manager peaks käivitama pärast PocketPC pihuarvuti "
+"ühendamist käsu 'autopalmsync_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:70
+msgid ""
+"Whether, when a blank CD or DVD is inserted, gnome-volume-manager should run "
+"one of the autoburn commands."
+msgstr ""
+"Kas gnome-volume-manager peaks pärast CD või DVD sisestamist käivitama ühe "
+"automaatse plaadikirjutamise käskudest."
+
+#: ../gnome-volume-manager.schemas.in.h:71
+msgid ""
+"Whether, when a digital camera is connected or media from a digital camera "
+"is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr ""
+"Sätestab, kas gnome-volume-manager käivitab digikaamera ühendamisel käsu "
+"'autophoto_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:72
+msgid ""
+"Whether, when a digital video camera is connected, gnome-volume-manager "
+"should run 'autovideocam_command'."
+msgstr ""
+"Kas gnome-volume-manager peaks käivitama pärast digitaalse videokaamera "
+"ühendamist käsu 'autovideocam_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:73
+msgid ""
+"Whether, when a keyboard is connected, gnome-volume-manager should run "
+"'autokeyboard_command'."
+msgstr ""
+"Kas gnome-volume-manager peaks käivitama pärast klaviatuuri ühendamist käsu "
+"'autokeyboard_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:74
+msgid ""
+"Whether, when a mouse is connected, gnome-volume-manager should run "
+"'automouse_command'."
+msgstr ""
+"Kas gnome-volume-manager peaks käivitama pärast hiire ühendamist käsu "
+"'automouse_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:75
+msgid ""
+"Whether, when a printer is connected, gnome-volume-manager should run "
+"'autoprinter_command'."
+msgstr ""
+"Kas gnome-volume-manager peaks käivitama pärast printeri ühendamist käsu "
+"'autoprinter_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:76
+msgid ""
+"Whether, when a scanner is connected, gnome-volume-manager should run "
+"'autoscanner_command'."
+msgstr ""
+"Kas gnome-volume-manager peaks käivitama pärast skänneri ühendamist käsu "
+"'autoscanner_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:77
+msgid ""
+"Whether, when a tablet is connected, gnome-volume-manager should run "
+"'autotablet_command'."
+msgstr ""
+"Kas digitahvli ühendamisel peaks gnome-volume-manager käivitama "
+"'autotablet_command' käsu."
+
+#: ../gnome-volume-manager.schemas.in.h:78
+msgid ""
+"Whether, when a video DVD is inserted, gnome-volume-manager should run "
+"'autoplay_dvd_command'."
+msgstr ""
+"Sätestab, kas gnome-volume-manager käivitab pärast DVD videoplaadi "
+"sisestamist käsu 'autoplay_dvd_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:79
+msgid ""
+"Whether, when a video VCD is inserted, gnome-volume-manager should run "
+"'autoplay_vcd_command'."
+msgstr ""
+"Sätestab, kas gnome-volume-manager käivitab pärast VCD videoplaadi "
+"sisestamist käsu 'autoplay_vcd_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:80
+msgid ""
+"Whether, when a web camera is connected, gnome-volume-manager should run "
+"'autowebcam_command'."
+msgstr ""
+"Kas gnome-volume-manager peaks käivitama pärast veebikaamera ühendamist käsu "
+"'autowebcam_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:81
+msgid ""
+"Whether, when an audio CD is inserted, gnome-volume-manager should run "
+"'autoplay_cda_command'."
+msgstr ""
+"Sätestab, kas gnome-volume-manager käivitab pärast CD-heliplaadi sisestamist "
+"käsu 'autoplay_cda_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:82
+msgid ""
+"Whether, when an iPod is connected, gnome-volume-manager should run "
+"'autoipod_command'."
+msgstr ""
+"Kas gnome-volume-manager peaks käivitama pärast iPod'i ühendamist käsu "
+"'autoipod_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:83
+msgid "iPod sync command"
+msgstr "iPod'i sünkroniseerimise käsk"
+
+#: ../gnome-volume-manager.schemas.in.h:84
+msgid "keyboard command"
+msgstr "klaviatuuri käsk"
+
+#: ../gnome-volume-manager.schemas.in.h:85
+msgid "mouse command"
+msgstr "hiire käsk"
+
+#: ../gnome-volume-manager.schemas.in.h:86
+msgid "palm sync command"
+msgstr "palmi sünkroniseerimiskäsk"
+
+#: ../gnome-volume-manager.schemas.in.h:87
+msgid "printer command"
+msgstr "printeri käsk"
+
+#: ../gnome-volume-manager.schemas.in.h:88
+msgid "scanner command"
+msgstr "skänneri käsk"
+
+#: ../gnome-volume-manager.schemas.in.h:89
+msgid "tablet command"
+msgstr "digitahvli käsk"
+
+#: ../gnome-volume-manager.schemas.in.h:90
+msgid "video camera command"
+msgstr "videokaamera käsk"
+
+#: ../gnome-volume-manager.schemas.in.h:91
+msgid "web camera command"
+msgstr "veebikaamera käsk"
+
+#: ../gnome-volume-manager.desktop.in.in.h:1
+msgid "Volume Manager"
+msgstr "Seadmehaldur"
+
+#: ../gnome-volume-manager.desktop.in.in.h:2
+msgid "Volume manager for removable drives and media"
+msgstr "Eemaldatavate ketaste ja andmekandjate seadmehaldur"
+
+#: ../gnome-volume-properties.desktop.in.h:1
+msgid "Configure management of removable drives and media"
+msgstr "Eemaldatavate ketaste ja andmekandjate halduse seadistamine"
+
+#: ../gnome-volume-properties.desktop.in.h:2
+msgid "Removable Drives and Media"
+msgstr "Eemaldatavad kettad ja andmekandjad"
+
+#: ../gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: ../gnome-volume-properties.glade.h:2
+msgid "<b>Audio CD Discs</b>"
+msgstr "<b>CD-heliplaadid</b>"
+
+#: ../gnome-volume-properties.glade.h:3
+msgid "<b>Blank CD and DVD Discs</b>"
+msgstr "<b>Tühjad CD- ja DVD-plaadid</b>"
+
+#: ../gnome-volume-properties.glade.h:4
+msgid "<b>Digital Camera</b>"
+msgstr "<b>Digitaalkaamera</b>"
+
+#: ../gnome-volume-properties.glade.h:5
+msgid "<b>Digital Video Camera</b>"
+msgstr "<b>Digitaalne videokaamera</b>"
+
+#: ../gnome-volume-properties.glade.h:6
+msgid "<b>Keyboards</b>"
+msgstr "<b>Klaviatuurid</b>"
+
+#: ../gnome-volume-properties.glade.h:7
+msgid "<b>Mice</b>"
+msgstr "<b>Hiired</b>"
+
+#: ../gnome-volume-properties.glade.h:8
+msgid "<b>Palm™</b>"
+msgstr "<b>Palm™</b>"
+
+#: ../gnome-volume-properties.glade.h:9
+msgid "<b>PocketPC</b>"
+msgstr "<b>PocketPC</b>"
+
+#: ../gnome-volume-properties.glade.h:10
+msgid "<b>Portable Music Players</b>"
+msgstr "<b>Kaasaskantavad muusikaesitajad</b>"
+
+#: ../gnome-volume-properties.glade.h:11
+msgid "<b>Printers</b>"
+msgstr "<b>Printerid</b>"
+
+#: ../gnome-volume-properties.glade.h:12
+msgid "<b>Removable Storage</b>"
+msgstr "<b>Eemaldatavad salvestusseadmed</b>"
+
+#: ../gnome-volume-properties.glade.h:13
+msgid "<b>Scanners</b>"
+msgstr "<b>Skännerid</b>"
+
+#: ../gnome-volume-properties.glade.h:14
+msgid "<b>Tablets</b>"
+msgstr "<b>Digilauad</b>"
+
+#: ../gnome-volume-properties.glade.h:15
+msgid "<b>Video DVD Discs</b>"
+msgstr "<b>DVD-videoplaadid</b>"
+
+#: ../gnome-volume-properties.glade.h:16
+msgid "<b>Web Camera</b>"
+msgstr "<b>Veebikaamera</b>"
+
+#: ../gnome-volume-properties.glade.h:17
+msgid "Auto-_open files on new drives and media"
+msgstr "_Failide automaatavamine uutelt seadmetelt ja meedialt"
+
+#: ../gnome-volume-properties.glade.h:18
+msgid "Automatically run a program when a USB _keyboard is connected"
+msgstr "Programmi automaatne käivitamine USB _klaviatuuri ühendamisel"
+
+#: ../gnome-volume-properties.glade.h:19
+msgid "Automatically run a program when a USB _mouse is connected"
+msgstr "Programmi automaatne käivitamine USB _hiire ühendamisel"
+
+#: ../gnome-volume-properties.glade.h:20
+msgid "Automatically run a program when a _printer is connected"
+msgstr "Programmi automaatne käivitamine _printeri ühendamisel"
+
+#: ../gnome-volume-properties.glade.h:21
+msgid "Automatically run a program when a _scanner is connected"
+msgstr "Programmi automaatne käivitamine _skänneri ühendamisel"
+
+#: ../gnome-volume-properties.glade.h:22
+msgid "Automatically run a program when a _tablet is connected"
+msgstr "Programmi automaatne käivitamine _digitahvli ühendamisel"
+
+#: ../gnome-volume-properties.glade.h:23
+msgid "Browse _removable media when inserted"
+msgstr "Eemaldatavat andmekandjat si_rvitakse pärast sisestamist"
+
+#: ../gnome-volume-properties.glade.h:24
+msgid "C_ommand:"
+msgstr "K_äsk:"
+
+#: ../gnome-volume-properties.glade.h:25
+msgid "Cameras"
+msgstr "Kaamerad"
+
+#: ../gnome-volume-properties.glade.h:26
+msgid "Co_mmand:"
+msgstr "_Käsk:"
+
+#: ../gnome-volume-properties.glade.h:27
+msgid "Comma_nd:"
+msgstr "K_äsk:"
+
+#: ../gnome-volume-properties.glade.h:28
+msgid "Comman_d:"
+msgstr "Kä_sk:"
+
+#: ../gnome-volume-properties.glade.h:29
+msgid "Command for A_udio CDs:"
+msgstr "Käsk a_udio-CD'de jaoks:"
+
+#: ../gnome-volume-properties.glade.h:30
+msgid "Command for _Data CDs: "
+msgstr "Käsk _andme-CD'de jaoks: "
+
+#: ../gnome-volume-properties.glade.h:31
+msgid "Drives and Media Preferences"
+msgstr "Andmekandjate eelistused"
+
+#: ../gnome-volume-properties.glade.h:32
+msgid "E_dit video when connected"
+msgstr "Pärast ühendamist _redigeeritakse videot"
+
+#: ../gnome-volume-properties.glade.h:33
+msgid "Input Devices"
+msgstr "Sisendseadmed"
+
+#: ../gnome-volume-properties.glade.h:34
+msgid "Mount removable media when _inserted"
+msgstr "Eemaldatavad andmekandjad ü_hendatakse pärast sisestamist"
+
+#: ../gnome-volume-properties.glade.h:35
+msgid "Multimedia"
+msgstr "Multimeedia"
+
+#: ../gnome-volume-properties.glade.h:36
+msgid "PDAs"
+msgstr "Pihuarvutid"
+
+#: ../gnome-volume-properties.glade.h:37
+msgid "Play _audio CD discs when inserted"
+msgstr "Pärast _audioplaadi sisestamist esitatakse plaadil olevaid lugusid"
+
+#: ../gnome-volume-properties.glade.h:38
+msgid "Play _music files when connected"
+msgstr "Pärast seadme ühendamist esitatakse seadmel olevaid _muusikafaile"
+
+#: ../gnome-volume-properties.glade.h:39
+msgid "Play _video DVD discs when inserted"
+msgstr "Pärast DVD-v_ideoplaadi sisestamist esitatakse plaadil olevat videot"
+
+#: ../gnome-volume-properties.glade.h:40
+msgid "Printers & Scanners"
+msgstr "Printerid ja skännerid"
+
+#: ../gnome-volume-properties.glade.h:41
+msgid "Removable Drives and Media Preferences"
+msgstr "Eemaldatavate andmekandjate eelistused"
+
+#: ../gnome-volume-properties.glade.h:42
+msgid "Select program to burn audio CDs"
+msgstr "Vali programm audio-CD'de kirjutamiseks"
+
+#: ../gnome-volume-properties.glade.h:43
+msgid "Select program to burn data CDs"
+msgstr "Vali programm andme-CD'de kirjutamiseks"
+
+#: ../gnome-volume-properties.glade.h:44
+msgid "Select program to edit videos"
+msgstr "Vali programm videode töötlemiseks"
+
+#: ../gnome-volume-properties.glade.h:45
+msgid "Select program to import photos"
+msgstr "Vali programm fotode importimiseks"
+
+#: ../gnome-volume-properties.glade.h:46
+msgid "Select program to play DVDs"
+msgstr "Vali programm DVD'de esitamiseks"
+
+#: ../gnome-volume-properties.glade.h:47
+msgid "Select program to play audio CDs"
+msgstr "Vali programm audio-CD'de esitamiseks"
+
+#: ../gnome-volume-properties.glade.h:48
+msgid "Select program to play music files"
+msgstr "Vali programm muusikafailide esitamiseks"
+
+#: ../gnome-volume-properties.glade.h:49
+msgid "Select program to run when a keyboard is plugged in"
+msgstr "Vali programm mida käivitatakse klaviatuuri külgeühendamisel"
+
+#: ../gnome-volume-properties.glade.h:50
+msgid "Select program to run when a mouse is plugged in"
+msgstr "Vali programm mida käivitatakse hiire külgeühendamisel"
+
+#: ../gnome-volume-properties.glade.h:51
+msgid "Select program to run when a printer is plugged in"
+msgstr "Vali programm mida käivitatakse printeri külgeühendamisel"
+
+#: ../gnome-volume-properties.glade.h:52
+msgid "Select program to run when a scanner is plugged in"
+msgstr "Vali programm mida käivitatakse skänneri külgeühendamisel"
+
+#: ../gnome-volume-properties.glade.h:53
+msgid "Select program to run when a tablet is plugged in"
+msgstr "Vali programm mida käivitatakse digitahvli külgeühendamisel"
+
+#: ../gnome-volume-properties.glade.h:54
+msgid "Select program to sync Palm devices"
+msgstr "Vali programm Palmi sünkroniseerimiseks"
+
+#: ../gnome-volume-properties.glade.h:55
+msgid "Storage"
+msgstr "Salvestusseadmed"
+
+#: ../gnome-volume-properties.glade.h:56
+msgid "Sync Poc_ketPC devices when connected"
+msgstr "PocketP_C sünkroniseeritakse pärast ühendamist"
+
+#: ../gnome-volume-properties.glade.h:57
+msgid "Sync _Palm™ devices when connected"
+msgstr "_Palm™-seadmed sünkroniseeritakse pärast ühendamist"
+
+#: ../gnome-volume-properties.glade.h:58
+msgid "_Auto-run programs on new drives and media"
+msgstr ""
+"Uutel ke_tastel ja andmekandjatel asuvad rakendused käivitatakse automaatselt"
+
+#: ../gnome-volume-properties.glade.h:59
+msgid "_Burn a CD or DVD when a blank disc is inserted"
+msgstr "Tühja CD- või DVD-plaadi sisestamisel _kirjutatakse plaadile"
+
+#: ../gnome-volume-properties.glade.h:60
+msgid "_Edit video when connected"
+msgstr "Pärast ühendamist _redigeeritakse videot"
+
+#: ../gnome-volume-properties.glade.h:61
+msgid "_Import digital photographs when connected"
+msgstr "Pärast ühendamist _imporditakse kaamerast digifotod"
+
+#: ../gnome-volume-properties.glade.h:62
+msgid "_Mount removable drives when hot-plugged"
+msgstr "_Eemaldatavad seadmeid ühendatakse automaatselt"
+
+#: ../src/manager.c:223 ../src/manager.c:228 ../src/manager.c:233
+#: ../src/manager.c:238 ../src/manager.c:244 ../src/manager.c:250
+#: ../src/manager.c:256 ../src/manager.c:262
+msgid "Ig_nore"
+msgstr "_Eira"
+
+#: ../src/manager.c:224
+msgid "_Allow Auto-Run"
+msgstr "_Luba auto-käivitus"
+
+#: ../src/manager.c:229
+msgid "_Open"
+msgstr "A_va"
+
+#: ../src/manager.c:234 ../src/manager.c:240 ../src/manager.c:245
+msgid "Import _Photos"
+msgstr "_Fotode import"
+
+#: ../src/manager.c:239
+msgid "_Open Folder"
+msgstr "_Ava kaust"
+
+#: ../src/manager.c:246
+msgid "Manage _Music"
+msgstr "_Muusikahaldus"
+
+#: ../src/manager.c:251
+msgid "_Browse Files"
+msgstr "_Failide sirvimine"
+
+#: ../src/manager.c:252
+msgid "_Play CD"
+msgstr "CD-_plaadi esitamine"
+
+#: ../src/manager.c:257
+msgid "Make _Audio CD"
+msgstr "_Kirjuta audio-CD"
+
+#: ../src/manager.c:258
+msgid "Make _Data CD"
+msgstr "Kirjuta _andme-CD"
+
+#: ../src/manager.c:263
+msgid "Make _DVD"
+msgstr "_DVD loomine"
+
+#: ../src/manager.c:316
+msgid "Auto-Run Confirmation"
+msgstr "Auto-käivituse kinnitus"
+
+#: ../src/manager.c:317
+msgid "Auto-run capability detected."
+msgstr "Auto-käivitusvõimalus tuvastatud."
+
+#: ../src/manager.c:318
+msgid "Would you like to allow <b>'${0}'</b> to run?"
+msgstr "Kas lubad käivitada <b>'${0}'</b>?"
+
+#: ../src/manager.c:323
+msgid "Auto-Open Confirmation"
+msgstr "Automaatavamise kinnitus"
+
+#: ../src/manager.c:324
+msgid "Auto-Open capability detected."
+msgstr "Automaatavamise võimalus tuvastatud."
+
+#: ../src/manager.c:325
+msgid "Would you like to open <b>'${0}'</b>?"
+msgstr "Kas lubad avada <b>'${0}'</b>?"
+
+#: ../src/manager.c:330 ../src/manager.c:337
+msgid "Camera Import"
+msgstr "Kaamera importimine"
+
+#: ../src/manager.c:331 ../src/manager.c:338
+msgid "A camera has been detected."
+msgstr "Tuvastati kaamera."
+
+#: ../src/manager.c:332 ../src/manager.c:339
+msgid ""
+"There are photos on the camera. Would you like to add these pictures to your "
+"album?"
+msgstr "Kaameras on pilte. Kas soovid need tõsta oma pildialbumisse?"
+
+#: ../src/manager.c:333 ../src/manager.c:340 ../src/manager.c:347
+#: ../src/manager.c:354 ../src/manager.c:361
+msgid "_Always perform this action"
+msgstr "_Alati kasuta seda tegevust"
+
+#: ../src/manager.c:344
+msgid "Photo Import"
+msgstr "Fotode importimine"
+
+#: ../src/manager.c:345
+msgid "A photo card has been detected."
+msgstr "Tuvastati fotosid sisaldav mälukaart."
+
+#: ../src/manager.c:346
+msgid ""
+"There are photos on the card. Would you like to add these pictures to your "
+"album?"
+msgstr ""
+"Sisestatud andmekandjal on fotosid. Kas soovid need tõsta oma fotoalbumisse?"
+
+#: ../src/manager.c:351
+msgid "Photos and Music"
+msgstr "Fotod ja muusika"
+
+#: ../src/manager.c:352
+msgid "Photos were found on your music device."
+msgstr "Sinu heliseadmelt leiti pilte."
+
+#: ../src/manager.c:353
+msgid "Would you like to import the photos or manage its music?"
+msgstr "Kas soovid importida fotod või hallata muusikat?"
+
+#: ../src/manager.c:358
+msgid "Mixed Audio and Data CD"
+msgstr "Miksitud Audio- ja andme-CD"
+
+#: ../src/manager.c:359
+msgid "The CD in the drive contains both music and files."
+msgstr "Seadmes olev CD-plaat sisaldab nii muusikat kui faile."
+
+#: ../src/manager.c:360
+msgid "Would you like to listen to music or browse the files?"
+msgstr "Kas sa sooviksid kuulata muusikat või sirvida faile?"
+
+#: ../src/manager.c:365
+msgid "Blank CD Inserted"
+msgstr "Sahtlis on tühi CD"
+
+#: ../src/manager.c:366 ../src/manager.c:373
+msgid "You have inserted a blank disc."
+msgstr "Sa sisestasid tühja plaadi."
+
+#: ../src/manager.c:367 ../src/manager.c:374
+msgid "What would you like to do?"
+msgstr "Mida sa sooviksid teha?"
+
+#: ../src/manager.c:372
+msgid "Blank DVD Inserted"
+msgstr "Sahtlis on tühi DVD"
+
+#: ../src/manager.c:3585
+#, c-format
+msgid "%d%% of the disk space on the root partition is in use"
+msgstr "Juurkettal on kasutatusel %d%% kettaruumist"
+
+#: ../src/manager.c:3587
+#, c-format
+msgid "%d%% of the disk space on `%s' is in use"
+msgstr "Seadmel '%2$s' on kasutusel %1$d%% kettaruumist"
+
+#: ../src/manager.c:3592 ../src/manager.c:3594
+msgid "Low Disk Space"
+msgstr "Vähe kettaruumi"
+
+#: ../src/manager.c:3716
+msgid "Print version and exit"
+msgstr "Versiooni printimine ja töö lõpetamine"
+
+#: ../src/manager.c:3718
+msgid "Run as a daemon"
+msgstr "Käivitamine deemonina"
+
+#: ../src/manager.c:3720
+msgid "Don't run as a daemon"
+msgstr "Käivitamine mittedeemonina"
+
+#: ../src/manager.c:3722
+msgid "Run in secret mode"
+msgstr "Käivitamine turvalises režiimis"
+
+#: ../src/manager.c:3754
+#, c-format
+msgid "Unrecognized --daemon argument: %s\n"
+msgstr "Tundmatu argument --daemon võtmele: %s\n"
+
+#: ../src/properties.c:324
+msgid "Could not load the main interface"
+msgstr "Põhiliidest ei saa laadida"
+
+#: ../src/properties.c:326
+msgid "Please make sure that the volume manager is properly installed"
+msgstr "Palun kontrolli, kas kettaseadmete haldur on korralikult paigaldatud"
+
+#: ../src/properties.c:485
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr ""
+"Viga gnome-volume-manager'i deemoni käivitamisel:\n"
+"%s"
+
+#: ../src/properties.c:516
+msgid "Volume management not supported"
+msgstr "Kettaseadmete haldus ei ole toetatud"
+
+#: ../src/properties.c:518
+msgid ""
+"The \"hald\" service is required but not currently running. Enable the "
+"service and rerun this application, or contact your system administrator."
+msgstr ""
+"Selle rakendi tööks on vajal \"hald\" teenust, kuid see ei paista töötavat. "
+"Käivita see teenus ja taaskäivita rakendus või võta ühendust oma "
+"süsteemihalduriga."
+
+#~ msgid "_Command:"
+#~ msgstr "_Käsk:"

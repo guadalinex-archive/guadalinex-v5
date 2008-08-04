@@ -1,0 +1,358 @@
+# Xhosa translation of gnome-volume-manager
+# Copyright (C) 2005 Canonical Ltd.
+# This file is distributed under the same license as the gnome-volume-manager package.
+# Translation by Canonical Ltd <translations@canonical.com> with thanks to
+# Translation World CC in South Africa, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-volume-manager\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-03-23 17:47+0200\n"
+"PO-Revision-Date: 2005-03-23 11:42+0200\n"
+"Last-Translator: Canonical Ltd <translations@canonical.com>\n"
+"Language-Team: Xhosa <xh-translate@ubuntu.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../gnome-volume-manager.schemas.in.h:1
+msgid "':' delimited list of paths to check for autorun binaries and scripts."
+msgstr ""
+"':' uluhlu olungenamda lweendlela ukukhangela izibini eziqhubeka "
+"ngokuzenzekelayo nezikripti."
+
+#: ../gnome-volume-manager.schemas.in.h:2
+msgid "Automount removable drives"
+msgstr "Iidrayivi ezisukayo ze-automount"
+
+#: ../gnome-volume-manager.schemas.in.h:3
+msgid "Automount removable media"
+msgstr "I-media esukayo ye-automount"
+
+#: ../gnome-volume-manager.schemas.in.h:4
+msgid "Autorun nautilus"
+msgstr "I-Autorun nautilus"
+
+#: ../gnome-volume-manager.schemas.in.h:5
+msgid "Autorun path"
+msgstr "Indlela ye-autorun"
+
+#: ../gnome-volume-manager.schemas.in.h:6
+msgid "CD burn command"
+msgstr "Umyalelo we-CD burn"
+
+#: ../gnome-volume-manager.schemas.in.h:7
+msgid "CD play command"
+msgstr "Umyalelo wokudlala kwe-CD"
+
+#: ../gnome-volume-manager.schemas.in.h:8
+msgid ""
+"Command to run when a digital camera is connected or media from a digital "
+"camera is inserted."
+msgstr ""
+"Umyalelo omawuqhutywe xa ikhamera yedijithali idityanisiwe okanye i-media "
+"kwikhamera yemivo ifakiwe."
+
+#: ../gnome-volume-manager.schemas.in.h:9
+msgid "Command to run when a video DVD is inserted."
+msgstr "Umyalelo omawuqhutywe xa i-DVD yevidiyo ifakiwe."
+
+#: ../gnome-volume-manager.schemas.in.h:10
+msgid "Command to run when an audio CD is inserted."
+msgstr "Umyalelo omawuqhutywe xa i-audio CD ifakiwe."
+
+#: ../gnome-volume-manager.schemas.in.h:11
+msgid "Command to run when an empty CD is inserted."
+msgstr "Umyalelo omawuqhutywe xa i-CD engenanto ifakiwe."
+
+#: ../gnome-volume-manager.schemas.in.h:12
+msgid "Command to run when the eject button on a optical drive is pressed."
+msgstr ""
+"Umyalelo omawuqhutywe xa iqhosha lokukhupha kwi-optical drive licofiwe."
+
+#: ../gnome-volume-manager.schemas.in.h:13
+msgid "DVD play command"
+msgstr "Umyalelo wokudlala i-DVD"
+
+#: ../gnome-volume-manager.schemas.in.h:14
+msgid "Eject command"
+msgstr "Umyalelo wokukhupha"
+
+#: ../gnome-volume-manager.schemas.in.h:15
+msgid "Open nautilus on removeable media insert."
+msgstr "Vula i-nautilus kufako lwe-media esukayo."
+
+#: ../gnome-volume-manager.schemas.in.h:16
+msgid "Perform autorun"
+msgstr "Yenza i-autorun"
+
+#: ../gnome-volume-manager.schemas.in.h:17
+msgid "Photo management command"
+msgstr "Umyalelo wolawulo lwefoto"
+
+#: ../gnome-volume-manager.schemas.in.h:18
+msgid "Play inserted audio CD's"
+msgstr "Dlala ii-CD ze-audio ezifakiweyo"
+
+#: ../gnome-volume-manager.schemas.in.h:19
+msgid "Play inserted video DVDs"
+msgstr "Dlala ii-DVD zevidiyo ezifakiweyo"
+
+#: ../gnome-volume-manager.schemas.in.h:20
+msgid "Run CD burn command"
+msgstr "Qhuba umyalelo we-CD burn"
+
+#: ../gnome-volume-manager.schemas.in.h:21
+msgid "Run photo management command"
+msgstr "Qhuba umyalelo wolawulo lwefoto"
+
+#: ../gnome-volume-manager.schemas.in.h:22
+msgid ""
+"Whether autorun programs (binaries and scripts located in 'autorun_path') "
+"are run on newly mounted media."
+msgstr ""
+"Nokuba ngaba iinkqubo ze-autorun (izibini nezikripti ezikwi'autorun_path') "
+"ziqhutywa kwii-media ezisanda kufakwa kwisakhelo."
+
+#: ../gnome-volume-manager.schemas.in.h:23
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"drives when they are inserted."
+msgstr ""
+"Nokuba ngaba i-gnome-volume-manager kufuneka ifake kwisakhelo "
+"ngokuzenzekelayo xa iidrayivi zesigcini zifakiwe."
+
+#: ../gnome-volume-manager.schemas.in.h:24
+msgid ""
+"Whether gnome-volume-manager should automatically mount removable storage "
+"media when they are inserted."
+msgstr ""
+"Nokuba ngaba i-gnome-volume-manager kufuneka ifake kwisakhelo "
+"ngokuzenzekelayo xa ii-media zesigcini zifakiwe."
+
+#: ../gnome-volume-manager.schemas.in.h:25
+msgid ""
+"Whether, when a blank CD is inserted, gnome-volume-manager should run "
+"'autoburn_cdr_command'."
+msgstr ""
+"Nokuba ngaba, xa i-CD engenanto ifakiwe, i-gnome-volume-manager kufuneka "
+"iqhube 'i-autoburn_cdr_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:26
+msgid ""
+"Whether, when a digital camera is connected or media from a digital camera "
+"is inserted, gnome-volume-manager should run 'autophoto_command'."
+msgstr ""
+"Nokuba ngaba, xa ikhamera yedijithali idityanisiwe okanye i-media ukusuka "
+"kwikhamera yegijithali ifakiwe, i-gnome-volume-manager kufuneka iqhube 'i-"
+"autophoto_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:27
+msgid ""
+"Whether, when a video DVD is inserted, gnome-volume-manager should run "
+"'autoplay_dvd_command'."
+msgstr ""
+"Nokuba ngaba, xa i-DVD yevidiyo ifakiwe, i-gnome-volume-manager kufuneka "
+"iqhube 'i-autoplay_dvd_command'."
+
+#: ../gnome-volume-manager.schemas.in.h:28
+msgid ""
+"Whether, when an audio CD is inserted, gnome-volume-manager should run "
+"'autoplay_cda_command'."
+msgstr ""
+"Nokuba ngaba, xa i-audio CD ifakiwe, i-gnome-volume-manager kufuneka iqhube "
+"'i-autoplay_cda_command'."
+
+#: ../gnome-volume-properties.desktop.in.h:1
+msgid "Configure management of removable drives and media"
+msgstr "Misela ulawulo lweedrayivi ezisukayo ne-media"
+
+#: ../gnome-volume-properties.desktop.in.h:2
+msgid "Removable Drives and Media"
+msgstr "IiDrayivi eziSukayo nee-Media"
+
+#: ../gnome-volume-properties.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: ../gnome-volume-properties.glade.h:2
+msgid "*"
+msgstr "*"
+
+#: ../gnome-volume-properties.glade.h:3
+msgid "<b>Audio CD Discs</b>"
+msgstr "<b>IiDiski ze-Audio CD</b>"
+
+#: ../gnome-volume-properties.glade.h:4
+msgid "<b>Blank CD and DVD Discs</b>"
+msgstr "<b>I-CD engeNanto kunye neeDiski ze-DVD</b>"
+
+#: ../gnome-volume-properties.glade.h:5
+msgid "<b>Digital Camera</b>"
+msgstr "<b>IKhamera yeDijithali</b>"
+
+#: ../gnome-volume-properties.glade.h:6
+msgid "<b>Removable Storage</b>"
+msgstr "<b>IsiGcini esiSukayo</b>"
+
+#: ../gnome-volume-properties.glade.h:7
+msgid "<b>Video DVD Discs</b>"
+msgstr "<b>iiDiski ze-DVD yeVidiyo</b>"
+
+#: ../gnome-volume-properties.glade.h:8
+msgid "Browse _removable media when inserted"
+msgstr "khangela ii-media _ezisukayo xa zifakiwe"
+
+#: ../gnome-volume-properties.glade.h:9
+msgid "C_ommand:"
+msgstr "U_myalelo:"
+
+#: ../gnome-volume-properties.glade.h:10
+msgid "Co_mmand:"
+msgstr "Um_yalelo:"
+
+#: ../gnome-volume-properties.glade.h:11
+msgid "Comman_d:"
+msgstr "Umyalel_o:"
+
+#: ../gnome-volume-properties.glade.h:12
+msgid "Command:"
+msgstr "Umyalelo:"
+
+#: ../gnome-volume-properties.glade.h:13
+msgid "Drives and Media Preferences"
+msgstr "IiDrayivi kunye noLuhlu lwezinto ezikhethwayo ze-Media"
+
+#: ../gnome-volume-properties.glade.h:14
+msgid "Import digital _photographs when connected"
+msgstr "Ngenisa _iifoto zemivo xa zidityanisiwe"
+
+#: ../gnome-volume-properties.glade.h:15
+msgid "Mount removable media when _inserted"
+msgstr "Faka kwisakhelo ii-media ezisukayo xa_zifakiwe"
+
+#: ../gnome-volume-properties.glade.h:16
+msgid "Multimedia"
+msgstr "I-Multimedia"
+
+#: ../gnome-volume-properties.glade.h:17
+msgid "Perform action on _blank discs when inserted"
+msgstr "Yenza isenzo kwiidiski _ezingenanto xa zifakiwe"
+
+#: ../gnome-volume-properties.glade.h:18
+msgid "Play _audio CD discs when inserted"
+msgstr "Dlala iidiski ze-CD ze-_audio xa zifakiwe"
+
+#: ../gnome-volume-properties.glade.h:19
+msgid "Play _video DVD disks when inserted"
+msgstr "Dlala iidiski ze-DVD ye_vidiyo xa zifakiwe"
+
+#: ../gnome-volume-properties.glade.h:20
+msgid "Removable Drives and Media Preferences"
+msgstr "IiDrayivi ezisukayo noLuhlu lwezinto ezikhethwayo ze-Media"
+
+#: ../gnome-volume-properties.glade.h:21
+msgid "Storage"
+msgstr "Isigcini"
+
+#: ../gnome-volume-properties.glade.h:22
+msgid "_Auto-run programs on new drives and media"
+msgstr "Iinkqubo _eziziqhubekelayo kwiidrayivi ezintsha ne-media"
+
+#: ../gnome-volume-properties.glade.h:23
+msgid "_Mount removable drives when hot-plugged"
+msgstr "_Faka kwisakhelo iidrayivi ezisukayo xa zifakwe ngobushushu"
+
+#: ../src/manager.c:229
+msgid "Run command from inserted media?"
+msgstr "Uqhuba umyalelo ukusuka kwi-media efakiweyo?"
+
+#: ../src/manager.c:232
+#, c-format
+msgid "The file \"%s\" on the inserted media is an auto-runfile."
+msgstr "Ifayili \"%s\" kwi-media efakiweyo yi-auto-runfile."
+
+#: ../src/manager.c:237
+msgid "_Run Command"
+msgstr "_Qhuba uMyalelo"
+
+#: ../src/manager.c:326
+msgid "Import photos from device?"
+msgstr "Ungenisa iifoto ukusuka kwinkqubo?"
+
+#: ../src/manager.c:328
+msgid ""
+"There are photos on the inserted media. Would you like to import these "
+"photos into your photo album?"
+msgstr ""
+"Kukho iifoto kwi-media efakiweyo. Ingaba ufuna ukuzingenisa ezi foto kwi-"
+"albham yakho yeefoto?"
+
+#: ../src/manager.c:334 ../src/manager.c:380
+msgid "_Import Photos"
+msgstr "_Ngenisa iiFoto"
+
+#: ../src/manager.c:373
+msgid "Import photos from camera?"
+msgstr "Ungenisa iifoto ukusuka kwikhamera?"
+
+#: ../src/manager.c:375
+msgid ""
+"There are photos on the plugged-in camera. Would you like to import these "
+"photos into your photo album?"
+msgstr ""
+"Kukho iifoto kwikhamera engenisiweyo. Ingaba ufuna ukuzingenisa ezi foto kwi-"
+"albham yakho yeefoto?"
+
+#: ../src/manager.c:581
+msgid "Browse files or play tracks from disc?"
+msgstr "Ukhangela iifayili okanye udlala iingoma kwi-disc?"
+
+#: ../src/manager.c:584
+msgid ""
+"There are both audio tracks and data files on the inserted disc. Choose if "
+"you want to play the audio tracks to listen to music or browse the files to "
+"manage the stored data."
+msgstr ""
+"Kukhona iingoma kunye neefayili ze-data zombini kwi-disc efakiweyo. Khetha "
+"ukuba ufuna ukudlala iingoma ze-audio ukumamela umculo okanye khangela "
+"iifayili ukulawula i-data egciniweyo."
+
+#: ../src/manager.c:590
+msgid "_Browse Files"
+msgstr "_Khangela iiFayili"
+
+#: ../src/manager.c:592
+msgid "_Play Tracks"
+msgstr "_Dlala iiNgoma"
+
+#: ../src/properties.c:187
+#, c-format
+msgid ""
+"Error starting gnome-volume-manager daemon:\n"
+"%s"
+msgstr ""
+"Impazamo ekuqaliseni i-gnome-volume-manager daemon:\n"
+"%s"
+
+#: ../src/properties.c:395
+msgid "Volume management not supported"
+msgstr "Ulawulo lwesandi aluxhaswanga"
+
+#: ../src/properties.c:397
+msgid ""
+"The \"hald\" service is required but not currently running. Enable the "
+"service and rerun this applet, or contact your system administrator."
+msgstr ""
+"Inkonzo ye\"hald\" iyafuneka kodwa ayiqhubeki ngoku. Yenza ukuba inkonzo "
+"isebenze uze uqhube kwakhona le nkqutyana, okanye nxibelelana nomlawuli "
+"wenkqubo."
+
+#: ../src/properties.c:420
+msgid "Could not load the main interface"
+msgstr "Akukwazekanga ukufaka umdibaniso wemida ongundoqo"
+
+#: ../src/properties.c:423
+msgid "Please make sure that the volume manager is properly installed"
+msgstr "Nceda qinisekisa ukuba umlawuli wesandi usekwe ngokukuko"
