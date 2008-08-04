@@ -1,14 +1,14 @@
 diff -Nur -x '*.orig' -x '*~' gnome-volume-manager-2.22.1/po/es.po gnome-volume-manager-2.22.1.new/po/es.po
 --- gnome-volume-manager-2.22.1/po/es.po	2007-12-07 18:55:47.000000000 +0100
-+++ gnome-volume-manager-2.22.1.new/po/es.po	2008-06-18 11:20:25.000000000 +0200
++++ gnome-volume-manager-2.22.1.new/po/es.po	2008-08-04 09:56:29.000000000 +0200
 @@ -7,15 +7,14 @@
  msgstr ""
  "Project-Id-Version: gnome-volume-manager.HEAD.es\n"
  "Report-Msgid-Bugs-To: \n"
 -"POT-Creation-Date: 2007-10-13 19:24+0100\n"
 -"PO-Revision-Date: 2007-10-16 14:25+0200\n"
-+"POT-Creation-Date: 2008-06-18 10:58+0200\n"
-+"PO-Revision-Date: 2008-06-18 11:19+0200\n"
++"POT-Creation-Date: 2008-06-05 11:21+0200\n"
++"PO-Revision-Date: 2008-08-04 09:56+0200\n"
  "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
  "Language-Team: Spanish <traductores@es.gnome.org>\n"
  "MIME-Version: 1.0\n"
@@ -40,7 +40,7 @@ diff -Nur -x '*.orig' -x '*~' gnome-volume-manager-2.22.1/po/es.po gnome-volume-
  
  #: ../gnome-volume-manager.schemas.in.h:10
  msgid "Action to take when a device contains an autorun program/script."
-@@ -492,438 +491,397 @@
+@@ -492,438 +491,394 @@
  msgstr "    "
  
  #: ../gnome-volume-properties.glade.h:2
@@ -62,9 +62,8 @@ diff -Nur -x '*.orig' -x '*~' gnome-volume-manager-2.22.1/po/es.po gnome-volume-
  
 -#: ../gnome-volume-properties.glade.h:6
 +#: ../gnome-volume-properties.glade.h:4
-+#, fuzzy
 +msgid "<b>General options</b>"
-+msgstr "<b>Tablas digitales</b>"
++msgstr "<b>Opciones generales</b>"
 +
 +#: ../gnome-volume-properties.glade.h:5
  msgid "<b>Keyboards</b>"
@@ -112,9 +111,8 @@ diff -Nur -x '*.orig' -x '*~' gnome-volume-manager-2.22.1/po/es.po gnome-volume-
 -msgid "<b>Video DVD Discs</b>"
 -msgstr "<b>Discos de vídeo DVD</b>"
 +#: ../gnome-volume-properties.glade.h:12
-+#, fuzzy
 +msgid "<b>Warnings options</b>"
-+msgstr "<b>Impresoras</b>"
++msgstr "<b>Opciones de aviso</b>"
  
 -#: ../gnome-volume-properties.glade.h:16
 +#: ../gnome-volume-properties.glade.h:13
@@ -323,19 +321,19 @@ diff -Nur -x '*.orig' -x '*~' gnome-volume-manager-2.22.1/po/es.po gnome-volume-
 +#: ../gnome-volume-properties.glade.h:40
 +msgid "Systray icon"
 +msgstr "Icono de notificación"
-+
+ 
+-#: ../gnome-volume-properties.glade.h:60
 +#: ../gnome-volume-properties.glade.h:41
 +msgid "Warn every"
-+msgstr "Avisar cada"
++msgstr "Avisa cada"
 +
 +#: ../gnome-volume-properties.glade.h:42
 +msgid "When click on device:"
-+msgstr "Cuando pulse sobre un dispositivo"
- 
--#: ../gnome-volume-properties.glade.h:60
++msgstr "Cuando pulse en un dispositivo:"
++
 +#: ../gnome-volume-properties.glade.h:43
 +msgid "_Blink all time when some device is mounted."
-+msgstr "_Parpadear todo el tiempo cuando haya montado un dispositivo"
++msgstr "_Parpadea todo el tiempo cuando haya algún dispositivo montado."
 +
 +#: ../gnome-volume-properties.glade.h:44
  msgid "_Edit video when connected"
@@ -344,8 +342,7 @@ diff -Nur -x '*.orig' -x '*~' gnome-volume-manager-2.22.1/po/es.po gnome-volume-
 -#: ../gnome-volume-properties.glade.h:61
 +#: ../gnome-volume-properties.glade.h:45
 +msgid "_Hide system try icon when no devices mounted."
-+msgstr ""
-+"_Esconder el icono de notificación cuando no haya dispositivos montados."
++msgstr "_Oculta el icono de la barra de estado cuando no haya dispositivos montados."
 +
 +#: ../gnome-volume-properties.glade.h:46
  msgid "_Import digital photographs when connected"
@@ -360,11 +357,11 @@ diff -Nur -x '*.orig' -x '*~' gnome-volume-manager-2.22.1/po/es.po gnome-volume-
 -#: ../src/manager.c:256 ../src/manager.c:262
 +#: ../gnome-volume-properties.glade.h:47
 +msgid "_Notify when new device detected."
-+msgstr "_Avisar cuando un nuevo dispositivo sea detectado."
++msgstr "_Notifica cuando un nuevo dispositivo es detectado."
 +
 +#: ../gnome-volume-properties.glade.h:48
 +msgid "_Show a notification."
-+msgstr "_Mostrar una notificación."
++msgstr "_Muestra una notificación."
 +
 +#: ../gnome-volume-properties.glade.h:49
 +msgid "minutes."
@@ -613,7 +610,7 @@ diff -Nur -x '*.orig' -x '*~' gnome-volume-manager-2.22.1/po/es.po gnome-volume-
  #, c-format
  msgid ""
  "Error starting gnome-volume-manager daemon:\n"
-@@ -932,11 +890,11 @@
+@@ -932,11 +887,11 @@
  "Error al iniciar el demonio gnome-volume-manager:\n"
  "%s"
  
@@ -627,7 +624,7 @@ diff -Nur -x '*.orig' -x '*~' gnome-volume-manager-2.22.1/po/es.po gnome-volume-
  msgid ""
  "The \"hald\" service is required but not currently running. Enable the "
  "service and rerun this application, or contact your system administrator."
-@@ -945,3 +903,71 @@
+@@ -945,3 +900,71 @@
  "el servicio y vuelva a ejecutar esta miniaplicación, o contacte con su "
  "administrador de sistemas."
  
