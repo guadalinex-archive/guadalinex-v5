@@ -16,7 +16,7 @@ Guadalinex no es sólo lo que contiene este CD. Todavía hay más.
 
 """
 check_text = "No volver a mostrar este diálogo"
-image_src = "/usr/share/first_start/imagen.jpg"
+image_src = "/usr/share/first_start/imagen.png"
 
 class FirstStart:
 
