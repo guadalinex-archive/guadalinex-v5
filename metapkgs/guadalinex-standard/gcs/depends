@@ -18,6 +18,7 @@ man-db
 memtest86+
 mime-support
 nano
+openssh-server
 parted
 pmount
 popularity-contest
