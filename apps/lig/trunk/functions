@@ -302,6 +302,7 @@ function umount_virtualfs ()
     umount devpts-live
     echo "" > ${sources_dir}/etc/resolv.conf
     echo "guadalinex" > ${sources_dir}/etc/hostname
+    touch ${sources_dir}/etc/ssh/sshd_not_to_be_run
 }
 
 function mount_mirror ()
