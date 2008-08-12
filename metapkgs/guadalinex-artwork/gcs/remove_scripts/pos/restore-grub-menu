@@ -1,0 +1,6 @@
+#!/bin/bash
+
+MENU_LST="/boot/grub/menu.lst"
+
+rm -f $MENU_LST
+dpkg-divert --package guadalinex-artwork --rename --quiet --remove $MENU_LST
