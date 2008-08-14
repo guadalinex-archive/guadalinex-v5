@@ -20,6 +20,20 @@ newline="
 
 db_capb backup
 
+menu_lst_conversion() {
+	menu_file="/target/boot/grub/menu.lst"
+	if [ ! -e "$menu_file" ]; then
+		error "$menu_file doesn't exist"
+	else
+		sed -e 's/### BEGIN AUTOMAGIC KERNELS LIST/# Guadalinex Grub theme config\n\nforeground ffffff\nbackground 004174\nviewport 1 0 80 30\nshadow 0\n\n### BEGIN AUTOMAGIC KERNELS LIST/g' $menu_file  > /target/boot/grub/menu.lst.gv5
+		cd /target/boot/grub
+		test -f $menu_file && rm $menu_file
+		ln -fs menu.lst.gv5 menu.lst 
+		cd -
+	fi
+
+}
+
 log() {
 	logger -t grub-installer "$@"
 }
@@ -1004,6 +1018,8 @@ if [ -z "$(grep update-grub $ROOT/etc/kernel-img.conf)" ]; then
 		echo "postrm_hook   = update-grub"
 	) >> $ROOT/etc/kernel-img.conf
 fi
+
+menu_lst_conversion
 
 db_progress STEP 1
 db_progress STOP
