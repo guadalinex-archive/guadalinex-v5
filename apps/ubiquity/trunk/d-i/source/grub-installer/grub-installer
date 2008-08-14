@@ -27,7 +27,7 @@ menu_lst_conversion() {
 	else
 		sed -e 's/### BEGIN AUTOMAGIC KERNELS LIST/# Guadalinex Grub theme config\n\nforeground ffffff\nbackground 004174\nviewport 1 0 80 30\nshadow 0\n\n### BEGIN AUTOMAGIC KERNELS LIST/g' $menu_file  > /target/boot/grub/menu.lst.gv5
 		cd /target/boot/grub
-		test -f $menu_file && rm $menu_file
+		test -f $menu_file && mv $menu_file menu.lst.distrib
 		ln -fs menu.lst.gv5 menu.lst 
 		cd -
 	fi
