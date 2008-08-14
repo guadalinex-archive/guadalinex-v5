@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+<wallpapers>
+  <wallpaper deleted="false">
+    <name>Ubuntu</name>
+    <filename>/usr/share/backgrounds/warty-final-ubuntu.png</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#8f8f4a4a1c1c</pcolor>
+    <scolor>#8f8f4a4a1c1c</scolor>
+  </wallpaper>
+  <wallpaper deleted="false">
+    <name>Sin tapiz</name>
+    <filename>(none)</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#36369090dcdc</pcolor>
+    <scolor>#36369090dcdc</scolor>
+  </wallpaper>
+  <wallpaper deleted="false">
+    <name>Guadalinex V5</name>
+    <filename>/usr/share/backgrounds/guadalinex_v5_bg.png</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#36369090dcdc</pcolor>
+    <scolor>#36369090dcdc</scolor>
+  </wallpaper>
+  <wallpaper deleted="false">
+    <name>Elephant</name>
+    <filename>/usr/share/backgrounds/simple-ubuntu.png</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#dadab0b08282</pcolor>
+    <scolor>#dadab0b08282</scolor>
+  </wallpaper>
+  <wallpaper deleted="false">
+    <name>Ubuntu</name>
+    <filename>/usr/share/backgrounds/heron-simple.png</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#8f8f4a4a1c1c</pcolor>
+    <scolor>#8f8f4a4a1c1c</scolor>
+  </wallpaper>
+  <wallpaper deleted="false">
+    <name>Guadalinex V5 Panoramico</name>
+    <filename>/usr/share/backgrounds/guadalinex_v5_bg_panoramico.png</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#36369090dcdc</pcolor>
+    <scolor>#36369090dcdc</scolor>
+  </wallpaper>
+</wallpapers>
