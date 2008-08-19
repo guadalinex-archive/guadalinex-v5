@@ -6,7 +6,10 @@
 #
 
 LOG=/var/log/guadalinex-asistente-usb
-rm $LOG
+if [ -e "$LOG" ];then 
+    rm $LOG
+fi
+
 exec 2> >(while read a; do echo "$(date):" "$a"; done >>$LOG) 
 
 DEVICE=$1
@@ -59,7 +62,6 @@ if [ $? != 0 ]; then
 fi
 
 copiar_guadalinex() {
-  (
   echo " * Copiando archivos de Guadalinex... (tarda un rato)"
 #  cp -a /cdrom/* /mnt/guadav5/
 #  los llaveros generados con cp dan problemas al arrancar
@@ -67,15 +69,14 @@ copiar_guadalinex() {
   mv /mnt/guadav5/isolinux/* /mnt/guadav5/
   rm -rf /mnt/guadav5/isolinux/
   cp /usr/share/guadalinex-asistente-usb/syslinux.cfg /mnt/guadav5/
-  )| zenity --progress --auto-close --pulsate --text="Copiando Guadalinex...(tarda un rato)"
 }
 
 prepare_partitions(){
-        sfdisk -q -uM $1 <<EOF 
+        sfdisk -q -uM $1 <<EOF 2>> $LOG
 ,750,b
 ,,L
 EOF
-        fdisk $1 <<EOF 
+        fdisk $1 <<EOF 2>> $LOG 
 a
 1
 w
