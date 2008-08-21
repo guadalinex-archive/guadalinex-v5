@@ -1,3 +1,10 @@
+guadalinex-asistente-usb (0.2) hardy; urgency=low
+
+  * Added progress bar when copying files for better user experience
+  * Modifyed do-install script, cleaned out stream redirecting something to
+    LOG
+
+ -- David Teyssiere <dteyssiere@emergya.es>  Thu, 21 Aug 2008 14:00:46 +0200
 guadalinex-asistente-usb (0.1guada1) hardy; urgency=low
 
   * Changed cp to rsync
