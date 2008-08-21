@@ -65,18 +65,18 @@ copiar_guadalinex() {
   echo " * Copiando archivos de Guadalinex... (tarda un rato)"
 #  cp -a /cdrom/* /mnt/guadav5/
 #  los llaveros generados con cp dan problemas al arrancar
-  rsync -Pazv /cdrom/ /mnt/guadav5/
+  rsync -Pazv /cdrom/ /mnt/guadav5/  >&2
   mv /mnt/guadav5/isolinux/* /mnt/guadav5/
   rm -rf /mnt/guadav5/isolinux/
   cp /usr/share/guadalinex-asistente-usb/syslinux.cfg /mnt/guadav5/
 }
 
 prepare_partitions(){
-        sfdisk -q -uM $1 <<EOF 2>> $LOG
+        sfdisk -q -uM $1 <<EOF >&2
 ,750,b
 ,,L
 EOF
-        fdisk $1 <<EOF 2>> $LOG 
+        fdisk $1 <<EOF >&2 
 a
 1
 w
@@ -86,15 +86,17 @@ EOF
 
 
 # borrar MBR
-dd if=/dev/zero of=$DEVICE bs=512 count=1 >/dev/null 2>&1
+dd if=/dev/zero of=$DEVICE bs=512 count=1 >/dev/null 
 
 mkdir -p /mnt/guadav5
 
 ## particionado
+echo " * Formateando el dispositivo USB..."
 prepare_partitions $DEVICE
 sleep 1
-mkfs.vfat -F 32 -n "guadav5" "${1}1"
-mkfs.ext2 -b 4096 -L "home-rw" "${1}2"
+echo " * Creando particiones..."
+mkfs.vfat -F 32 -n "guadav5" "${1}1" >&2
+mkfs.ext2 -b 4096 -L "home-rw" "${1}2" >&2
 mount -t vfat -o noatime,rw ${DEVICE}1 /mnt/guadav5
 copiar_guadalinex
 echo " * Sincronizando... (puede tardar un rato)"
@@ -105,10 +107,11 @@ install-mbr -e1 ${DEVICE}
 
 gconf_active_automount 1
 
-zenity --info --text="Ya esta lista su Guadalinex USB live!, inicie su equipo desde el dispositivo USB."
-
 echo " * Borrando directorios temporales"
 rm -rf /mnt/guadav5
+
+zenity --info --text="Ya esta lista su Guadalinex USB live!, inicie su equipo desde el dispositivo USB."
+
 
 exit 0
 
