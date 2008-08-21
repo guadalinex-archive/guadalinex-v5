@@ -7,6 +7,7 @@ Basado en el código del instalador Nanomax de la distribución MAX (Comunidad d
 Copyright 2008, Mario Izquierdo mariodebian@gmail.com
 
 Changelog
+  20080821 - Added progress bar when copying files
   20080512 - First usable version
 
 """
@@ -34,7 +35,6 @@ if getattr(dbus, 'version', (0,0,0)) >= (0,41,0):
     import dbus.glib
 
 
-
 class GuadalinexInstaladorUsb (object):
 
     def __init__(self,):
@@ -44,6 +44,7 @@ class GuadalinexInstaladorUsb (object):
         self.mainloop = gobject.MainLoop()
         self.hal=DeviceManager(self.insert_row)
         self.selected=None
+        self.progressbar=gtk.ProgressBar()
 
 
     def initgui(self):
@@ -62,6 +63,7 @@ class GuadalinexInstaladorUsb (object):
         
         # disable aceptar button
         self.widgets['aceptar_button'].set_sensitive(False)
+        self.widgets['frame1'].add(self.progressbar)
         
 
         self._columns = [ 
@@ -140,14 +142,28 @@ class GuadalinexInstaladorUsb (object):
         th=threading.Thread(target=self.install, args=(cmd,))
         th.start()
 
+    def progress(self):
+        gtk.gdk.threads_enter()
+        self.progressbar.pulse()
+        gtk.gdk.threads_leave()
+
+	     return True
+
 
     def install(self, cmd):
         self.installing=True
-        p=Popen(cmd, shell=True, bufsize=0, stdout=PIPE, stderr=STDOUT, close_fds=True)
+#        p=Popen(cmd, shell=True, bufsize=0, stdout=PIPE, stderr=STDOUT, close_fds=True)
+        p=Popen(cmd, shell=True, bufsize=0,stdout=PIPE, close_fds=True)
         while self.installing:
             if p.poll() != None: self.installing=False
             line=p.stdout.readline()
             print "do: %s"%line.strip()
+            if str(line.strip()) == "* Copiando archivos de Guadalinex... (tarda un rato)":
+                self.widgets['frame1'].show_all()
+                self.timer=gobject.timeout_add(100,self.progress)
+            if str(line.strip()) == "* Borrando directorios temporales":
+                self.widgets['frame1'].hide()
+                gobject.source_remove(self.timer)
             gtk.gdk.threads_enter()
             self.insert_salida(line.strip())
             gtk.gdk.threads_leave()
