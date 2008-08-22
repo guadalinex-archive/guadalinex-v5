@@ -245,7 +245,7 @@ msgstr "Modos"
 #. txt_modes_help
 msgid "Press F4 to select alternative start-up and installation modes."
 msgstr ""
-"Pulse F4 para seleccionar una arranque alternativos y los modos de "
+"Pulse F4 para seleccionar un arranque alternativo y los modos de "
 "instalación."
 
 #. label for d-i mode menu
