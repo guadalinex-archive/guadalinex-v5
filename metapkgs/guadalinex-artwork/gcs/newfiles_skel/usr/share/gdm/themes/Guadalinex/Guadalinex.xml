@@ -11,29 +11,39 @@
   <!-- guadalinex logo -->
     <item type="pixmap">
         <normal file="guadalinexv5.png" alpha="1.0"/>
-        <pos x="50%" y="33%" width="scale" height="18%" anchor="c"/>
+        <pos x="50%" y="33%" width="200" height="scale" anchor="c"/>
     </item>
-
+<!--
   <item type="pixmap">
      <normal file="gdm_barras.svg"/>
      <pos y="0" x="0" width="100%" height="100%"/>
   </item>
+-->
 
+  <item type="pixmap">
+     <normal file="gdm_barra_sup.svg"/>
+     <pos y="0" x="0" width="100%" height="45px"/>
+  </item>
+
+  <item type="pixmap">
+     <normal file="gdm_barra_inf.svg"/>
+     <pos anchor="sw" y="100%" x="0" width="100%" height="28px"/>
+  </item>
 
   <!-- halt -->
   <item type="rect" id="halt_button" button="true">
     <show type="halt" modes="console"/>
     <pos y="0" width="box" height="box" anchor="nw"/>
-    <box xpadding="10" ypadding="5" spacing="2" orientation="horizontal">
+    <box xpadding="10%" ypadding="12%" spacing="2" orientation="horizontal">
       <item type="pixmap">
         <normal file="icon-shutdown.png"/>
         <prelight file="icon-shutdown-prelight.png"/>
         <active file="icon-shutdown-active.png"/>
       </item>
       <item type="label">
-        <normal font="FrancophilSans 11" color="#ffffff"/>
-        <prelight font="FrancophilSans 11" color="#CFDEFE"/>
-        <active font="FrancophilSans 11" color="#ffffff"/>
+        <normal font="FrancophilSans Bold 11" color="#ffffff"/>
+        <prelight font="FrancophilSans Bold 11" color="#CFDEFE"/>
+        <active font="FrancophilSans Bold 11" color="#ffffff"/>
         <pos x="8" y="40%" anchor="w"/>
         <stock type="halt"/>
       </item>
@@ -44,16 +54,16 @@
   <item type="rect" id="reboot_button" button="true">
     <show type="reboot" modes="console"/>
     <pos x="12%" y="0" width="box" height="box" anchor="nw"/>
-    <box xpadding="10" ypadding="5" spacing="2" orientation="horizontal">
+    <box xpadding="10%" ypadding="12%" spacing="2" orientation="horizontal">
       <item type="pixmap">
         <normal file="icon-reboot.png"/>
         <prelight file="icon-reboot-prelight.png"/>
         <active file="icon-reboot-active.png"/>
       </item>
       <item type="label">
-        <normal font="FrancophilSans 11" color="#ffffff"/>
-        <prelight font="FrancophilSans 11" color="#CFDEFE"/>
-        <active font="FrancophilSans 11" color="#ffffff"/>
+        <normal font="FrancophilSans Bold 11" color="#ffffff"/>
+        <prelight font="FrancophilSans Bold 11" color="#CFDEFE"/>
+        <active font="FrancophilSans Bold 11" color="#ffffff"/>
         <pos x="8" y="40%" anchor="w"/>
         <stock type="reboot"/>
       </item>
@@ -89,39 +99,40 @@
   <!-- password box -->
   
   <item type="pixmap">
-      <pos x="50%" y="58%" width="box" height="box" anchor="c" />
-      <normal file="main_password_bar.svg" alpha="0.5"/>
+      <!-- <pos x="50%" y="58%" width="box" height="box" anchor="c" />-->
+      <pos x="50%" y="54%" width="360" height="130" anchor="c" />
+      <normal file="boundingbox.svg" alpha="1"/>
       <box xpadding="5" ypadding="0" spacing="0" orientation="vertical">
 
-      <item type="pixmap">
+      <item type="rect">
         <pos x="0" y="5" width="100%" height="box" expand="true"/>
-        <normal file="access_bar.svg"/>
-        <box xpadding="20" ypadding="15" spacing="10" orientation="vertical">
+        <!-- <normal file="access_bar.svg"/> -->
+        <box xpadding="20" ypadding="10" spacing="0" orientation="vertical">
          <item type="label" id="title">
            <pos x="0" y="0" width="box" height="box" expand="true"/>
-           <normal font="FrancophilSans 11" color="#ffffff"/>
+           <normal font="FrancophilSans Bold 11" color="#ffffff"/>
            <text>Acceso al sistema</text>
          </item>
         </box>
       </item>
 
-      <item type="pixmap">
+      <item type="rect">
          <pos x="0" y="0" width="100%" height="box" expand="true"/>
-         <normal file="login_bar.svg" alpha="0.5"/>
+         <!-- <normal file="login_bar.svg" alpha="0.5"/> -->
 
-         <box xpadding="0" ypadding="20" spacing="10" orientation="horizontal">
+         <box xpadding="0" ypadding="10" spacing="0" orientation="horizontal">
            <item type="label" id="pam-prompt">
-             <pos y="2" x="20" width="box" height="box"  />
-             <normal font="FrancophilSans Bold 11" color="#212a3d"/>
+             <pos x="30" y="2" width="box" height="box"  />
+             <normal font="FrancophilSans Bold 11" color="#ffffff"/>
              <stock type="username-label"/>
            </item>
 
            <item type="rect">
-             <pos width="250" height="24"/>
+             <pos width="210" height="24"/>
              <fixed>
               <item type="entry" id="user-pw-entry">
                 <normal color="#000000" font="FrancophilSans 11"/>
-                <pos y="0" x="70" width="100%" height="100%" anchor="nw"/>
+                <pos y="0" x="70" width="100%" height="80%" anchor="nw"/>
               </item>
              </fixed>
            </item>
@@ -135,7 +146,7 @@
          <box xpadding="0" ypadding="20" spacing="0" orientation="horizontal" homogeneous="true">
            <!-- language -->
            <item type="rect" id="language_button" button="true">
-             <pos x="20%" y="75%" width="box" height="box" anchor="c"/>
+             <pos x="40%" y="15%" width="box" height="box" anchor="c"/>
              <box xpadding="0" spacing="2" orientation="horizontal">
                <item type="pixmap">
                  <pos width="24" height="24"/>
@@ -144,9 +155,9 @@
                  <active file="icon-language-active.png"/>
                </item>
                <item type="label">
-                 <normal font="FrancophilSans 11" color="#212a3d"/>
-                 <prelight font="FrancophilSans 11" color="#647fb8"/>
-                 <active font="FrancophilSans 11" color="#212a3d"/>
+                 <normal font="FrancophilSans Bold 11" color="#ffffff"/>
+                 <prelight font="FrancophilSans Bold 11" color="#647fb8"/>
+                 <active font="FrancophilSans Bold 11" color="#ffffff"/>
                  <pos x="10" y="50%" anchor="w"/>
                  <stock type="language"/>
                </item>
@@ -154,7 +165,7 @@
            </item>
            <!-- session -->
            <item type="rect" id="session_button" button="true">
-             <pos x="60%" y="75%" width="box" height="box" anchor="c"/>
+             <pos x="40%" y="15%" width="box" height="box" anchor="c"/>
              <box xpadding="0" spacing="2" orientation="horizontal">
                <item type="pixmap">
                  <pos width="24" height="24"/>
@@ -163,9 +174,9 @@
                  <active file="icon-session-active.png"/>
                </item>
                <item type="label">
-                 <normal font="FrancophilSans 11" color="#212a3d"/>
-                 <prelight font="FrancophilSans 11" color="#647fb8"/>
-                 <active font="FrancophilSans 11" color="#212a3d"/>
+                 <normal font="FrancophilSans Bold 11" color="#ffffff"/>
+                 <prelight font="FrancophilSans Bold 11" color="#647fb8"/>
+                 <active font="FrancophilSans Bold 11" color="#ffffff"/>
                  <pos x="10" y="50%" anchor="w"/>
                  <stock type="session"/>
                </item>
@@ -181,7 +192,7 @@
 
   <!-- caps lock warning -->
   <item type="label" id="caps-lock-warning">
-    <pos x="50%" y="80%" anchor="c"/>
+    <pos x="50%" y="70%" anchor="c"/>
     <normal font="FrancophilSans Bold 11" color="#dc292b"/>
     <stock type="caps-lock-warning"/>
   </item>
@@ -189,7 +200,7 @@
 
   <!-- pam error -->
   <item type="label" id="pam-error">
-    <pos x="50%" y="85%" anchor="c" />
+    <pos x="50%" y="75%" anchor="c" />
     <normal font="FrancophilSans Bold 11" color="#dc292b"/>
     <text></text>
   </item>
