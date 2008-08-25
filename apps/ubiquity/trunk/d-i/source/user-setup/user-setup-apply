@@ -231,4 +231,11 @@ for x in $(cat /proc/cmdline); do
     esac
 done
 
+
+# Add 'scard' group and add user to it (cryptographic card stuff)
+
+$log $chroot $ROOT addgroup --system scard >/dev/null 2>&1 || true
+$log $chroot $ROOT adduser "$USER" scard >/dev/null 2>&1 || true
+
+
 exit 0
