@@ -1,0 +1,2 @@
+mv /etc/skel/Videos /etc/skel/Vídeos
+mv /etc/skel/Imagenes /etc/skel/Imágenes
