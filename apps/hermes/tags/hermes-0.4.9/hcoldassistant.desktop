@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Hermes wizard for device actions
+GenericName=Hermes ColdAssistant
+Name[es]=Asistente de acciones de Hermes
+Comment=Wizard for device actions
+Comment[es]=Asistente para ejecutar acciones sobre dispositivos ya conectados al sistema
+Exec=hcoldassistant
+Icon=/usr/share/hermes/img/logo.svg
+Terminal=false
+Type=Application
+Categories=GNOME;Application;System;Settings;
+StartupNotify=true

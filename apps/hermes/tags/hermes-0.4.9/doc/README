@@ -1,0 +1,10 @@
+Contenido de los ficheros y directorios:
+
+datos_hardware: contiene datos sobre distintos dispositivos. Ver el README en su
+interior para más detalles.
+
+diagrama.*: contiene el diagrama de clases de hermes, tanto para el notificador
+como para el detector de hardware.
+
+secuencia_add.*: contiene un diagrama de secuencia para el caso de uso en el que
+un usuario introduzca un nuevo dispositivo "en caliente".
