@@ -44,7 +44,7 @@ style "clearlooks-default"
   base[INSENSITIVE] = "#e8e5de" # beige
 #
   text[NORMAL]      = "#000000" # black
-  text[PRELIGHT]    = "#ffffff" # black
+  text[PRELIGHT]    = "#548b95" # black
 #  text[ACTIVE]      = "#ffffff" # white
 #  text[SELECTED]    = "#ffffff" # white
 #  text[INSENSITIVE] = "#b5b3ac" # dark beige
