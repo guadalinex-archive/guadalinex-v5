@@ -1,0 +1,126 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>Nuestro_servidor_en_Internet</title>
+
+    <link / REL="shortcut icon" HREF="imgs/favicon.ico">
+    <link / REL="stylesheet" TYPE="text/css" MEDIA="screen,projection" HREF="css/main.css">
+    <link / REL="stylesheet" TYPE="text/css" MEDIA="print" HREF="css/commonPrint.css">
+    <script SRC="css/script.js" TYPE="text/javascript"></script>
+    <script SRC="css/wikibits.js" TYPE="text/javascript"></script>
+    
+  </head>
+  <body class="ns-0">
+  <div ID="globalWrapper">
+
+<div id="content">
+<a name="top" id="contentTop"></a>
+<h1 class="firstHeading">Guia v5/Nuestro servidor en Internet</h1>
+<div id="bodyContent">
+<h3 id="siteSub">De Guadapedia, la enciclopedia libre.</h3>
+<div id="contentSub"></div>
+<!-- start content -->
+<table border="0" id="toc"><tr id="toctitle"><td align="center">
+<b>Tabla de contenidos</b> <script type="text/javascript">showTocToggle("mostrar","esconder")</script></td></tr><tr id="tocinside"><td>
+<div class="tocline"><a href="#Nuestro_servidor_en_Internet">1 Nuestro servidor en Internet</a><br /></div>
+<div class="tocindent">
+<p><a href="#Nuestra_IP_p.C3.BAblica">1.1 Nuestra IP pública</a><br />
+</p>
+<div class="tocindent">
+<p><a href="#Lidiando_con_IPs_din.C3.A1micas">1.1.1 Lidiando con IPs dinámicas</a><br />
+</p>
+</div>
+<p><a href="#Un_dominio_que_se_debe_recordar">1.2 Un dominio que se debe recordar</a><br />
+</p>
+<div class="tocindent">
+<p><a href="#Dominio_gratuito_o_de_pago">1.2.1 Dominio gratuito o de pago</a><br />
+</p>
+</div>
+<p><a href="#Configurando_el_servicio_de_DNS">1.3 Configurando el servicio de DNS</a><br />
+<a href="#Un_ejemplo_pr.C3.A1ctico">1.4 Un ejemplo práctico</a><br />
+</p>
+</div>
+</td></tr></table>
+<a name="Nuestro_servidor_en_Internet"></a><h1> Nuestro servidor en Internet </h1>
+<p>Esta historia empieza con un ordenador que tras haber prestado sus servicios durante unos años entra en una posible fase de jubilación. Las opciones son colocárselo/donarlo a algún familiar, amigo, colectivo social o acción benéfica digital... y hay quien lo deja al lado de un contenedor, o dentro, sin más. 
+</p><p>Si no tenemos mayores planes con este ordenador pero disponemos de algún tipo de conexión de banda ancha (ADSL, cable) y tarifa plana 24h, en vez de jubilarlo podemos reciclarlo y encargarle una importante misión: ser nuestro servidor personal de Internet. 
+</p><p>Un ordenador que cumpla los requerimientos mínimos de Guadalinex nos puede servir perfectamente como servidor. Si hemos podido completar con él el proceso de instalación y hemos llegado hasta el escritorio podemos confiar en que va a ser un buen servidor para nuestros primeros pasos de auto-proveedores de Internet. El resto ya dependerá del tráfico y número de accesos que generen los contenidos que ofrezcamos, pero para un rendimiento normal, sin mayores pretensiones, tendremos suficiente.
+</p><p>Probablemente querremos tener el servidor continuamente en funcionamiento para conseguir una presencia continua en Internet. Por ello, cuanto menos consuma y menos ruido haga mejor. Le buscaremos un lugar apartado de manos, pies y fregonas. Por lo regular va a estar allí sólo la caja y los cables, ya que la mayor parte del tiempo vamos a acceder remotamente a él y no va a ser necesario un teclado o monitor.
+</p><p><br />
+</p>
+<a name="Nuestra_IP_p.C3.BAblica"></a><h2> Nuestra IP pública </h2>
+<p>Una dirección IP es un número que identifica en Internet o en una red local a nuestro equipo de conexión, ya sea éste una tarjeta de red, un módem, un <em>router</em> u otro dispositivo. Comúnmente tienen un aspecto de este tipo: 192.168.0.1.
+</p><p>Dependiendo de nuestro contrato de banda ancha, nuestra dirección IP en Internet puede ser de dos tipos:
+</p>
+<ul><li> <strong>Estática</strong> - Nuestro proveedor de Internet nos proporciona una dirección IP fija que es la que siempre usamos. Aparece en el contrato o en la documentación que nos hayan facilitado y nos ahorra mil problemas a la hora de montar nuestro servidor público.
+</li><li> <strong>Dinámica</strong>: La dirección IP proporcionada por nuestro proveedor es variable, y cambia cada vez que nos conectamos a Internet. Comúnmente es lo que sucede si nos conectamos a través de un módem.
+</li></ul>
+<p>Para mantener un servicio en Internet es siempre más recomendable tener direccionamiento estático, una IP fija bien conocida que identifique nuestro servicio desde Internet. Con una IP dinámica todo es más incómodo, como si cambiáramos continuamente de número de teléfono: a la gente le va a costar un poco más localizarnos.
+</p><p>No debemos confundir las direcciones IP públicas, las utilizadas y visibles en Internet, y las direcciones IP privadas, usadas sólo internamente en redes locales sin visibilidad externa. Estas últimas, al no ser públicas, se pueden repetir y reusar entre una red local y otra, y tiene un aspecto de este tipo: 10.0.0.0, 172.20.0.0 o 192.168.0.0. La IP que nos interesa en nuestro proyecto personal de servidor es la pública.
+</p><p><br />
+</p>
+<a name="Lidiando_con_IPs_din.C3.A1micas"></a><h3> Lidiando con IPs dinámicas </h3>
+<p>Si nuestro direccionamiento es estático, el proveedor de Internet nos habrá proporcionado la dirección IP con el contrato. Si el direccionamiento es dinámico la cosa se complica, pero posiblemente no haya nada que no se pueda resolver. Dependiendo del dispositivo que nos proporcione la conexión a Internet será más fácil o más complicado saber cuál es nuestra dirección IP en cada momento. 
+</p><p>Si disponemos de un dispositivo integrado al servidor, por ejemplo una tarjeta de red o un módem USB, podemos saber la IP pública con el comando del terminal:
+</p><p><strong>/sbin/ifconfig</strong>
+</p><p>Pero si realizamos la conexión a través de un <em>router</em> tendremos que acceder a él para saber la dirección IP. Algunos <em>routers</em> proporcionan una forma más sencilla de obtener estas información, otros no. Como último recurso siempre podemos comprobar nuestra dirección IP pública accediendo a servicios web externos como WhatIsMyIP.com <a href="http://www.whatismyip.com/" class="external" title="http://www.whatismyip.com/">[1]</a><span class="urlexpansion"> (<i>http://www.whatismyip.com/</i>)</span>.
+</p><p><br />
+</p>
+<a name="Un_dominio_que_se_debe_recordar"></a><h2> Un dominio que se debe recordar </h2>
+<p>Aunque tengamos una dirección IP que nos identifique en Internet, memorizarla y trabaja con ella no es muy cómodo. Teclear en el navegador direcciones del tipo <a href="http://192.168.1.203/" class="external" title="http://192.168.1.203/">http://192.168.1.203/</a> funciona, pero no es muy práctico. Es complicado de memorizar para nosotros mismos y no digamos para nuestros usuarios potenciales. Por este motivo es mejor usar nombres.
+</p><p>Debemos recurrir al DNS, un servicio de nombres que se encarga de establecer equivalencias entre dominios y direcciones IP. Gracias al DNS podemos acceder a webs y demás servicios en línea usando nombres como fulanito.com en vez de direcciones IP.
+</p><p>Los servidores de DNS se encargan de resolvernos las dudas en cuanto a direccionamiento; es como si les preguntáramos continuamente sobre las direcciones IP de los nombres de los servidores a los que nos queremos conectar. Es como una gran guía de teléfonos a la que hacemos consultas con nombres y obtenemos números (direcciones IP) que son los que realmente utilizan los ordenadores para comunicarse entre ellos.
+</p><p>Un nombre de dominio está formado por varias partes separadas por puntos: fulanito.com, www.fulanito.com, ftp.fulanito.com, wiki.fulanito.com, etc. 
+</p><p>A la terminación de la derecha se le conoce como dominio de nivel superior, los típicos .com, .org, .net, .es...
+Le antecede un subdominio ('fulanito' en nuestros ejemplos) y un nombre de máquina ('www', 'ftp', 'wiki'...).
+</p><p><br />
+</p>
+<a name="Dominio_gratuito_o_de_pago"></a><h3> Dominio gratuito o de pago</h3>
+<p>Lo primero que debemos decidir es si queremos pagar anualmente unos euros por tener un dominio propio o si nos conformamos con uno gratuito, quizás menos elegante y más difícil de recordar.
+</p><p>La segunda opción es la más sencilla y económica. Se trata de reservar un subdominio tipo 'midominio.fulanito.com' de alguna empresa que los proporcione gratuitamente. El inconveniente es que el dominio probablemente no será muy significativo. Al registrarlo tenemos que proporcionar nuestra dirección IP de forma que incluyan en su servicio de nombres la equivalencia entre nuestro dominio y nuestra IP, y cuando alguien les consulte, nos envíen a nuestra dirección IP adecuadamente.
+</p><p>Podemos encontrar servicios gratuitos de este tipo en el directorio dmoz.org <a href="http://dmoz.org/Computers/Software/Internet/Servers/Address_Management/Dynamic_DNS_Services/" class="external" title="http://dmoz.org/Computers/Software/Internet/Servers/Address Management/Dynamic DNS Services/">[2]</a><span class="urlexpansion"> (<i>http://dmoz.org/Computers/Software/Internet/Servers/Address_Management/Dynamic_DNS_Services/</i>)</span>.
+</p><p>La opción de tener nuestro propio dominio es más onerosa y también más laboriosa de configurar. Requiere que reservemos un dominio no reservado anteriormente en algún registrador de nombres autorizado. Para dominios .es NIC <a href="http://www.nic.es" class="external" title="http://www.nic.es">[3]</a><span class="urlexpansion"> (<i>http://www.nic.es</i>)</span> puede ser un buen punto de partida, y para dominios .org, .com, etc, Internic <a href="http://www.internic.net" class="external" title="http://www.internic.net">[4]</a><span class="urlexpansion"> (<i>http://www.internic.net</i>)</span> proporciona información sobre diferentes registradores de nombres locales, así como sobre la disponibilidad de dominios. 
+</p><p>Hay muchos registradores y sus servicios y precios son muy variables, desde la reserva mínima del nombre, hasta el alojamiento de servicios más avanzados como web, correo, etc. Hay que elegir uno que se ajuste a nuestras necesidades y nos convenza más.
+</p><p><br />
+</p>
+<a name="Configurando_el_servicio_de_DNS"></a><h2> Configurando el servicio de DNS </h2>
+<p>Teniendo un dominio y sabiendo nuestra dirección IP pública, nos queda relacionar a ambos. Un servidor de DNS tiene que saber responder a una dirección IP cuando le pregunten por el dominio. Y este servidor de DNS lo podemos contratar, puede ser gratuito o lo podemos configurar nosotros mismos en nuestro sistema, lo cual es más laborioso.
+</p><p>Si el dominio es gratuito no nos preocuparemos de configurar ningún servicio de DNS, ya lo hacen ellos cuando registramos nuestro dominio, a partir de la IP pública que les indicamos. Si tenemos un dominio propio, nuestro registrador de nombres puede proporcionarnos el servicio de DNS adicionalmente. También hay servicios gratuitos de DNS como xname.org <a href="http://www.xname.org" class="external" title="http://www.xname.org">[5]</a><span class="urlexpansion"> (<i>http://www.xname.org</i>)</span>, que nos pueden proporcionar el servicio de una forma fácil. Podemos gestionar nuestro propio servidor de nombres, pero es algo que no recomendamos a neófitos. 
+</p><p>Esto aplica si nuestra dirección IP es estática. Si el direccionamiento es dinámico, el servidor de DNS tendrá que actualizarse cada vez que cambiemos de dirección IP. Como hemos dicho y como es fácil de entender, esto complica la cosa. Es como si cambiáramos frecuentemente de teléfono, hay que indicarle a la guía de teléfonos cual es nuestro nuevo número cada vez que cambia. 
+</p><p>Para saber más sobre DNS y direccionamiento dinámico, y para obtener una lista de proveedores capaces de lidiar con estas IPs, recomendamos consultar la Dynamic DNS Provider List <a href="http://www.technopagan.org/dynamic/" class="external" title="http://www.technopagan.org/dynamic/">[6]</a><span class="urlexpansion"> (<i>http://www.technopagan.org/dynamic/</i>)</span> o el enlace al directorio Dmoz mencionado anteriormente.
+</p><p><br />
+</p>
+<a name="Un_ejemplo_pr.C3.A1ctico"></a><h2> Un ejemplo práctico </h2>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Dns-dinamico-1.png" class="internal" title="Reservando un dominio gratuito"><img src="imgs/180px-180px-Dns-dinamico-1.png" alt="Reservando un dominio gratuito" width="180" height="107" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Dns-dinamico-1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Reservando un dominio gratuito</div></div></div>
+<p>Vamos a detallar un poco cómo reservaríamos un dominio gratuito y como configuraríamos el servicio de DNS con una dirección IP dinámica.
+</p><p>Para este ejemplo elegimos a dyndns.com <a href="http://www.dyndns.com" class="external" title="http://www.dyndns.com">[7]</a><span class="urlexpansion"> (<i>http://www.dyndns.com</i>)</span> pero hay otras empresas e iniciativas que proporcionan dominios gratuitos, como hemos comentado. Durante el registro indicamos el nombre que queremos usar y el dominio del que dependerá (en nuestro ejemplo 'guias-ubuntu.dyndns.org'), así como nuestra dirección IP pública.
+</p><p>Como nuestra IP es dinámica, tenemos que encontrar la forma de actualizar nuestro nombre con nuestra dirección IP pública sin mucho esfuerzo.
+</p>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Dns-dinamico-2.png" class="internal" title="Configurando la actualización de la IP dinámica del dominio (I)"><img src="imgs/180px-180px-Dns-dinamico-2.png" alt="Configurando la actualización de la IP dinámica del dominio (I)" width="180" height="108" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Dns-dinamico-2.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Configurando la actualización de la IP dinámica del dominio (I)</div></div></div>
+<p>Para eso nos ayudamos del paquete <strong>ddclient</strong>, que instalamos desde línea de comandos:
+</p><p><strong>sudo apt-get install ddclient</strong>
+</p><p>Durante la instalación, la aplicación nos pregunta el proveedor de nuestro dominio. Elegimos Dyndns, siguiendo con el ejemplo. 
+</p>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Dns-dinamico-3.png" class="internal" title="Configurando la actualización de la IP dinámica del dominio (II)"><img src="imgs/180px-180px-Dns-dinamico-3.png" alt="Configurando la actualización de la IP dinámica del dominio (II)" width="180" height="108" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Dns-dinamico-3.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Configurando la actualización de la IP dinámica del dominio (II)</div></div></div>
+<p>Luego introducimos otra serie de datos, tales como nuestro dominio (en el ejemplo 'guias-ubuntu.dyndns.org'), nuestro usuario en Dyndns, contraseña y, en el último paso, el interfaz de nuestro servidor que se conecta a Internet, es decir, el que en principio tiene la dirección IP pública.
+</p><p>El paquete 'ddclient' arrancará:
+</p><p><strong> * Starting dynamic DNS service update utility...</strong>
+<strong>   ...done.</strong>
+</p><p>y notificará a Dyndns de los cambios de nuestra dirección IP pública, según la detecte y sin tenernos que preocupar más.
+</p><p>La cosa se puede complicar aun más si nuestro servidor no tiene la IP pública en su interfaz, sino que la tiene nuestro <em>router</em> de conexión a Internet. Entonces hay que hacer una configuración del paquete 'ddclient' de una forma casi manual. Para ello recomendamos leer la documentación de ddclient local [file:///usr/share/doc/ddclient/ ]. Y suerte.
+</p><p><br />
+Si hemos dados todos los pasos correctos, tendremos el ordenador que estuvimos a punto de jubilar convertido en servidor conectado a Internet, con un dominio que apuntará a nuestra dirección IP pública. Ahora ya podemos instalar servicios: empezaremos por montar una web propia.
+</p>
+<pre>Sigue: <a href="Hospedar_y_gestionar_una_web.html" title="Guia v5/Hospedar y gestionar una web">Hospedar y gestionar una web</a>
+</pre><div class="printfooter">
+Obtenido de "<a href="http://www.guadalinex.org/guadapedia/index.php/Guia_v5/Nuestro_servidor_en_Internet">http://www.guadalinex.org/guadapedia/index.php/Guia_v5/Nuestro_servidor_en_Internet</a>"</div>
+<!-- end content -->
+<div class="visualClear"></div>
+</div>
+</div>
+</div>
+</body>
+</html>

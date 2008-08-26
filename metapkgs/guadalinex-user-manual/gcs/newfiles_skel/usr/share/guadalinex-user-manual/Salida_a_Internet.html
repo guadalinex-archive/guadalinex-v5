@@ -1,0 +1,232 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>Salida_a_Internet</title>
+
+    <link / REL="shortcut icon" HREF="imgs/favicon.ico">
+    <link / REL="stylesheet" TYPE="text/css" MEDIA="screen,projection" HREF="css/main.css">
+    <link / REL="stylesheet" TYPE="text/css" MEDIA="print" HREF="css/commonPrint.css">
+    <script SRC="css/script.js" TYPE="text/javascript"></script>
+    <script SRC="css/wikibits.js" TYPE="text/javascript"></script>
+    
+  </head>
+  <body class="ns-0">
+  <div ID="globalWrapper">
+
+<div id="content">
+<a name="top" id="contentTop"></a>
+<h1 class="firstHeading">Guia v5/Salida a Internet</h1>
+<div id="bodyContent">
+<h3 id="siteSub">De Guadapedia, la enciclopedia libre.</h3>
+<div id="contentSub"></div>
+<!-- start content -->
+<table border="0" id="toc"><tr id="toctitle"><td align="center">
+<b>Tabla de contenidos</b> <script type="text/javascript">showTocToggle("mostrar","esconder")</script></td></tr><tr id="tocinside"><td>
+<div class="tocline"><a href="#Salida_a_Internet">1 Salida a Internet</a><br /></div>
+<div class="tocindent">
+<p><a href="#Conexi.C3.B3n_sin_hilos">1.1 Conexión sin hilos</a><br />
+</p>
+<div class="tocindent">
+<p><a href="#Instalar_una_tarjeta_inal.C3.A1mbrica">1.1.1 Instalar una tarjeta inalámbrica</a><br />
+</p>
+<div class="tocindent">
+<p><a href="#Tarjetas_con_drivers_para_GNU.2FLinux">1.1.1.1 Tarjetas con drivers para GNU/Linux</a><br />
+<a href="#El_envoltorio_NDIS">1.1.1.2 El envoltorio NDIS</a><br />
+</p>
+</div>
+<p><a href="#Configuraci.C3.B3n_de_la_red_en_.22modo_f.C3.A1cil.22">1.1.2 Configuración de la red en "modo fácil"</a><br />
+<a href="#Configuraciones_adicionales">1.1.3 Configuraciones adicionales</a><br />
+</p>
+</div>
+<p><a href="#Cable_de_red">1.2 Cable de red</a><br />
+<a href="#M.C3.B3dem">1.3 Módem</a><br />
+</p>
+<div class="tocindent">
+<p><a href="#Los_m.C3.B3dems_de_toda_la_vida">1.3.1 Los módems de toda la vida</a><br />
+<a href="#M.C3.B3dem_ADSL">1.3.2 Módem ADSL</a><br />
+<a href="#Marcar_y_colgar_f.C3.A1cilmente">1.3.3 Marcar y colgar fácilmente</a><br />
+</p>
+</div>
+<p><a href="#Combinar_diferentes_ubicaciones">1.4 Combinar diferentes ubicaciones</a><br />
+</p>
+</div>
+</td></tr></table>
+<a name="Salida_a_Internet"></a><h1> Salida a Internet </h1>
+<p>GNU/Linux es un sistema operativo plenamente integrado en la redes. Nació por y para la red, ha sido desarrollado en red y a través de Internet y su difusión, evolución y futuro casi son inconcebibles sin la existencia de las redes. Y a la inversa, la Internet que conocemos sería casi inconcebible sin el software libre y los sistemas operativos descendientes de UNIX, entre ellos GNU/Linux de forma destacada.
+</p><p>Cuando instalamos GNU/Linux en un ordenador, la primera acción que realiza, una vez que tiene el ordenador controlado, es ir a buscar la salida y conexión a la red; como la tortuga recién nacida que tras romper el cascarón en la playa va directa a su encuentro con el mar. El software libre lleva las redes y concretamente Internet en sus instintos más profundos.
+</p><p>Internet es también una pieza básica para la evolución de nuestro sistema. Una vez que éste ha sido instalado, mantiene contacto regular con el repositorio de programas, al cual los desarrolladores añaden vía Internet nuevas versiones de los programas que utilizamos, así como parches de seguridad cada vez que se detecta un problema en alguna aplicación. Siempre que queramos, podemos contrastar a través de Internet las versiones de los programas que tenemos instalados con las del repositorio, con objeto de realizar las actualizaciones oportunas.
+</p><p>Todo esto a través de las redes. Y no sólo GNU/Linux, sino también el escritorio GNOME ha sido concebido en red y para la red. No en vano el origen de su nombre es un acrónimo en el que la <em>N</em> responde a <em>Network</em> (<em>red</em>, en inglés).
+</p><p>Por todos estos motivos nuestro sistema está preparado como el mejor para conectarse a la redes y concretamente a Internet. Dependiendo del tipo de conexión, esta sección de la Guía no tiene nada que aportar a un buen número de usuarios: el sistema encontrará de forma automática la salida a Internet, lo que se puede comprobar fácilmente abriendo un navegador o cualquiera de las numerosas utilidades que nuestro sistema trae instaladas de serie. 
+</p><p>Pero pueden aparecer problemas por el camino. Al igual que ocurría con los dispositivos, los inconvenientes se deberán principalmente a la incompatibilidad de hardware, a la no disponibilidad de alternativas para GNU/Linux de los <em>drivers</em> no-libres que los fabricantes ponen a punto para MS Windows o Mac OS X. La vacuna a este problema sigue siendo la misma: hemos de informarnos sobre la compatibilidad antes de comprar un módem, una tarjeta inalámbrica o cualquier otro dispositivo de salida a la red. También, antes de contratar una conexión a Internet con una operadora o un proveedor de servicios de acceso, hemos de consultar la viabilidad de sus productos para salir a Internet desde Linux.
+</p><p><br />
+</p>
+<a name="Conexi.C3.B3n_sin_hilos"></a><h2> Conexión sin hilos </h2>
+<p>Movilidad y banda ancha son los dos valores en alza en el mercado mixto de la informática de consumo y las telecomunicaciones domésticas. El producto de masas más pujante a raíz de esta convergencia es el ordenador portátil conectado a una red sin hilos (<em>wireless</em>). Al principio los portátiles eran cosa de nómadas y obreros de la tecla resignados a llevarse el trabajo de la oficina a casa, pero en la actualidad posiblemente los sedentarios sean mayoría. 
+</p><p>La burbuja inmobiliaria y sus exorbitados precios por metro cuadrado contribuye a la pujanza de los portátiles. Muchos usuarios los prefieren a los ordenadores de sobremesa por el hecho de ocupar menos espacio y poder ser apartados de la vista. Estudiantes en pisos compartidos, parejas jóvenes en viviendas de reducido tamaño, hijos de clase media confinados en su cuarto y padres de todas las clases víctimas del marketing se suman día a día al universo de usuarios poseedores de un portátil.
+</p><p>Quienes descubren las bondades de las tarjetas inalámbricas (<em>wireless</em>) casi nunca vuelven atrás. La demanda incluso se incrementa en los ordenadores de sobremesa. A nadie le gusta tener cables mal escondidos por la casa. Pero otro factor clave es la magia que rodea a esto del <em>wireless</em>: conectas y funciona. La buena noticia es que en GNU/Linux los desarrolladores de software libre figuran en la punta de lanza de la adopción de esta tecnología.
+</p><p><br />
+</p>
+<a name="Instalar_una_tarjeta_inal.C3.A1mbrica"></a><h3> Instalar una tarjeta inalámbrica </h3>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Configuraci%C3%B3n_de_la_red.png" class="internal" title="Un usuario afortunado cuya tarjeta inalámbrica ha sido detectada y configurada automáticamente."><img src="imgs/180px-Configuraci%C3%B3n_de_la_red.png" alt="Un usuario afortunado cuya tarjeta inalámbrica ha sido detectada y configurada automáticamente." width="180" height="140" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Configuraci%C3%B3n_de_la_red.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Un usuario afortunado cuya tarjeta inalámbrica ha sido detectada y configurada automáticamente.</div></div></div>
+<p>Si disponemos de una tarjeta <em>wireless</em> compatible y la red sin hilos es abierta y está debidamente configurada, la lectura de este apartado casi sobra. Instalando el sistema operativo con la tarjeta conectada, ésta será detectada y configurada, conectándose ella solita a Internet.
+</p><p>Desgraciadamente, hoy día no son muchos los fabricantes que se molestan en explicitar su compatibilidad con GNU/Linux, aunque cada vez encontramos más dispositivos compatibles, y en las tiendas de informática lo más probable es que obtengamos un <em>no sé / no contesto</em> por parte de los vendedores. Hay listados bastante completos de modelos de tarjetas compatibles con GNU/Linux sobre soporte pleno desde el kernel. Posiblemente la más completa es la mantenida en Linux wireless LAN Support <a href="http://linux-wless.passys.nl/" class="external" title="http://linux-wless.passys.nl/">[1]</a><span class="urlexpansion"> (<i>http://linux-wless.passys.nl/</i>)</span>. Una estrategia social bastante infalible es la de preguntar a otros usuarios de software libre satisfechos con su tarjeta inalámbrica y optar por alguna de ellas.
+</p><p>La clave de la compatibilidad de una tarjeta inalámbrica se basa en su <em>chipset</em> o microchip que la controla y que debe dialogar fluidamente con nuestro sistema operativo. Este dato aparece en sus características técnicas, a veces incluso en la caja del fabricante. Un buen vendedor debería conocer el <em>chipset</em> de las tarjetas que ofrece. Conociendo el <em>chipset</em> podemos saber qué grado de compatibilidad podemos esperar de la tarjeta.
+</p><p>Desde el punto de vista del usuario, vamos a hablar de tres grupos de compatibilidad: 
+</p>
+<ul><li> Tarjetas que disponen de drivers (libres o no) empaquetados y a punto de ser integrados al kernel: funcionan de maravilla.
+</li><li> Tarjetas que no disponen de drivers para GNU/Linux pero sí soporte NDIS para MS Windows: hay un truco para hacerlas funcionar. Aun así, mejor optar por las primeras.
+</li><li> Resto de tarjetas: quizás un usuario avanzado podrá ponerlas en marcha, pero si estás leyendo esta Guía posiblemente este tipo de emociones fuertes no sea para ti. Las posibilidades de fracaso son enormes.
+</li></ul>
+<p>Veamos los dos primeros grupos con más detalle.
+</p><p><br />
+</p>
+<a name="Tarjetas_con_drivers_para_GNU.2FLinux"></a><h4> Tarjetas con <em>drivers</em> para GNU/Linux </h4>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/DSC00401.JPG.JPG" class="internal" title="Típico aspecto de una tarjeta inalámbrica."><img src="imgs/180px-DSC00401.JPG.JPG" alt="Típico aspecto de una tarjeta inalámbrica." width="180" height="135" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/DSC00401.JPG.JPG" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Típico aspecto de una tarjeta inalámbrica.</div></div></div>
+<p>Lo más sencillo es disponer de una tarjeta con driver disponible para GNU/Linux, ya empaquetado y listo para operar con el kernel. Algunos <em>chipsets</em> disponen de controladores libres ya integrados en el kernel, que permitirán que la tarjeta sea reconocida y configurada si la tenemos insertada durante la instalación del sistema operativo o incluso si las conectamos en frío, antes de encender el ordenador. Son los más recomendados.
+</p><p>En otros casos dispondremos de controladores no libres pero sí disponibles en los repositorios. Si tenemos suerte, este tipo de tarjetas también serán inmediatamente reconocidas y, en el peor de los casos, funcionarán cuando hayamos compilado manualmente el paquete con el correspondiente <em>driver</em>. Una vez instalado el paquete, funcionan sin problemas.
+</p><p>Si podemos relacionar a nuestra tarjeta con nombres como Prism54, Atheros/MadWifi, Intel Pro Wireless, Atmel, Ralink/Rt2x00, Orinoco, Airo, HostAP, TI/Acx o Wlan-NG vamos por el buen camino.
+</p>
+<a name="El_envoltorio_NDIS"></a><h4> El envoltorio NDIS </h4>
+<p>Si el anterior paso no es posible, nos queda la esperanza de poner en funcionamiento nuestra tarjeta con el llamado NdisWrapper <a href="http://ndiswrapper.sourceforge.net/" class="external" title="http://ndiswrapper.sourceforge.net/">[2]</a><span class="urlexpansion"> (<i>http://ndiswrapper.sourceforge.net/</i>)</span>. NDIS es, resumiendo mucho, un <em>driver</em> general de Microsoft utilizado para las comunicaciones en red con MS Windows. Muchos fabricantes de tarjetas inalámbricas se preocupan en ofrecer un soporte NDIS. NdisWrapper consigue una ingeniosa rama de compatibilidad envolviendo (<em>wrap</em>) este <em>driver</em> para convertirlo en un controlador operativo para GNU/Linux. 
+</p><p>Esta solución es criticada por contener un elemento no-libre en su seno, y sobretodo por no fomentar el que los fabricantes desarrollen controladores libres para sus tarjetas. Además, podemos tener problemas imprevistos por el hecho de depender de un factor externo como es un <em>driver</em> para MS Windows. Si podemos escoger, mejor tirar por el grupo anterior pero si no hay más remedio... 
+</p><p>Para utilizar este envoltorio basta con abrir:
+</p><p><strong>Sistema</strong> > <strong>Administración</strong> > <strong>Windows Wireless Drivers</strong>
+</p>
+<a name="Configuraci.C3.B3n_de_la_red_en_.22modo_f.C3.A1cil.22"></a><h3> Configuración de la red en "modo fácil" </h3>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Networkmanager.png" class="internal" title="Aquí es donde se encuentra nuestro amigo "><img src="imgs/180px-Networkmanager.png" alt="Aquí es donde se encuentra nuestro amigo " width="180" height="59" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Networkmanager.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Aquí es donde se encuentra nuestro amigo </div></div></div>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Networkmanager2.png" class="internal" title="Listado de las redes a las que nos podemos conectar"><img src="imgs/180px-Networkmanager2.png" alt="Listado de las redes a las que nos podemos conectar" width="180" height="150" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Networkmanager2.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Listado de las redes a las que nos podemos conectar</div></div></div>
+<p>En la versión v5 de Guadalinex se ha incluido un ayudante que nos lleva de la mano en la configuración de los dispositivos que nos abren las puertas a internet. Este ayudante es conocido por el nombre, en inglés, de <em>NetworkManager</em>. Reside en el panel superior, junto a la fecha y hora del sistema. Si hacemos click sobre él, nos mostrará un menú con todas las opciones de las que disponemos para salir al exterior. 
+</p><p>Por ejemplo, si disponemos de una tarjeta de red inalámbrica, nos mostrará un listado con los puntos de acceso disponibles en nuestro entorno, pudiendo seleccionar cómo al que queramos conectarnos. Tras esto, se nos preguntará por la clave (si la red está protegida) y, tras indicársela, estaremos conectados.
+</p>
+<a name="Configuraciones_adicionales"></a><h3> Configuraciones adicionales </h3>
+<p>Aunque en determinadas circunstancias la tarjeta sabrá conectarse sola, lo más probable es que debamos especificar una configuración determinada para que su entrada sea aceptada por la red. En principio, lo más lógico es que la red requiera una contraseña de acceso. También puede suceder que haya varias redes disponibles y nos interese entrar en una de ellas en concreto. Finalmente, también se puede dar el caso de que el protocolo de acceso a la red no sea DHCP, el más habitual y cómodo ya que automatiza todo el proceso.
+</p><p>También es posible (de hecho, bastante posible) que la primera vez que intentemos conectar a través de la tarjeta inalámbrica o <em>wireless</em> tengamos que activarla, para lo cual hay que ir a la misma ventana de configuración. Es decir, para operar con una tarjeta no sólo debemos tenerla instalada y reconocida por el sistema, sino que también debe estar activada con los datos propios de la conexión.
+</p><p>Si tenemos los datos a mano, configurar el acceso a la red sin hilos es una tarea sencilla: 
+</p><p><strong>Sistema</strong> > <strong>Administración</strong> > <strong>Redes</strong>
+</p>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Propiedades_del_interfaz.png" class="internal" title="Configuración de la tarjeta inalámbrica para una red encriptada."><img src="imgs/180px-Propiedades_del_interfaz.png" alt="Configuración de la tarjeta inalámbrica para una red encriptada." width="180" height="144" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Propiedades_del_interfaz.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Configuración de la tarjeta inalámbrica para una red encriptada.</div></div></div>
+<p>Veremos los tipos de conexiones que tenemos disponibles en función de lo que el sistema haya detectado durante el proceso de instalación del mismo, de los otros tipos de conexión que hayamos instalado manualmente a posteriori y los cables o dispositivos que hayamos conectado antes del último arranque o en caliente. Puede aparecer una conexión de red, de módem convencional, módem ADSL o RDSI... 
+</p><p>Debería aparecer una <strong>Conexión inalámbrica</strong>. Si no es así debemos volver al punto anterior y comprobar que nuestra tarjeta es compatible y que están instalados los paquetes necesarios para hacerla funcionar.
+</p><p>Si nos aparece la conexión sin hilos, nos aseguraremos de que el resto de tipos de conexión están desactivados, para garantizar que la conexión se está produciendo a través de la tarjeta <em>wireless</em> y no mediante otra vía. Para su configuración daremos los siguientes pasos:
+</p>
+<ol><li> Seleccionamos la <strong>Conexión inalámbrica</strong> y si está desactivada clicamos en <strong>Activar</strong>. 
+</li><li> Comprobamos si hay red abriendo el navegador de Internet. Si hemos llegado hasta aquí lo más probable es que el navegador no descargue página alguna, pero por probar...
+</li><li> Si no hay conexión clicamos en <strong>Propiedades</strong>.
+</li><li> Clicamos en la opción <strong>Activar esta conexión</strong> para poder editar los campos.
+</li><li> En <strong>Nombre de la red (ESSID)</strong> nos aparecerán las redes disponibles en ese momento y como mínimo debería haber una, la nuestra. La seleccionamos. Si no aparece ninguna red, o aparece sólo la de algún vecino, es que estamos fuera de cobertura (asumiendo que hay linea telefónica y que el punto de acceso está encendido y funciona correctamente, claro). Deberemos aproximarnos al punto de acceso de la red sin hilos, que acostumbra a ser un aparato con luces verdes o naranjas y una antena corta y gordota. Aunque las ondas atraviesan paredes, puertas y ventanas, todo tiene un límite. En casas o edificios grandes podemos perder cobertura si hay un piso entero por medio, paredes gruesas, etc. Hay que ir probando, o también se puede incrementar la potencia del punto de acceso con el hardware correspondiente. 
+</li><li> El <strong>Tipo de clave</strong> suele ser hexadecimal, y si no en texto corriente.
+</li><li> En <strong>Clave WEP</strong> introducimos la contraseña, si la hay, y si no, la dejamos en blanco. Nosotros o nuestro administrador debería conocer la clave en caso de que la red use señal encriptada. Al principio, las claves domésticas eran casi siempre del tipo <em>1234567890</em>, puesto que era difícil que hubiera alguien dentro de la cobertura que intentara aprovecharse de nuestra red. Hoy día, y especialmente en bloques de pisos y oficinas, la probabilidad ya es más alta. Parasitar redes sin autorización se ha convertido en algo bastante habitual; incluso hay virus que saltan de una red a otra de forma incontrolada. Por todo esto las claves se han reforzado, convirtiéndose en secuencias más largas y menos lógicas.
+</li><li> En <strong>Configuración</strong> debemos seleccionar el protocolo de red utilizado. Si se trata de <strong>DHCP</strong> (acrónimo), el punto de acceso nos asignará el resto de datos automáticamente y no tendremos que rellenar más, pudiendo clicar a <strong>Aceptar</strong>. Si accedemos a la red mediante una dirección <strong>IP estática</strong> deberemos introducir el resto de campos con los datos que nos suministre el administrador de la red.
+</li><li> La <strong>Dirección IP</strong> es un número del tipo 192.168.0.23, viene a ser nuestro DNI o nuestra matrícula en la red.
+</li><li> La <strong>Máscara de sub-red</strong> es casi siempre 255.255.255.0.
+</li><li> La <strong>Dirección de la puerta de enlace</strong> acostumbra a ser un número similar al anterior y se corresponde con la dirección IP del punto de acceso. Dependiendo de la red, nos podremos permitir algún pequeño error con la dirección IP y la conexión funcionará, pero sin la dirección de pasarela correcta no llegaremos a la red ni a Internet.
+</li><li> Una vez rellenados los campos clicamos en <strong>Aceptar</strong>, y tras unos pocos segundos volvemos a probar con el navegador.
+</li></ol>
+<p>Si ya podemos acceder a Internet, perfecto. Si aún no, es posible que falte por configurar el servidor de DNS, encargado de convertir las direcciones numéricas de los servidores (ej. 193.127.103.92) en los dominios de Internet a los que estamos acostumbrados (ej. guias-ubuntu.ourproject.org). Si nos hemos conectado vía <strong>DHCP</strong> la conexión debería funcionar y deberíamos tener asignado un servidor de DNS. Y si hemos introducido una <strong>IP estática</strong> nuestro administrador debería habernos facilitado la dirección del servidor DNS también.
+</p><p>Podemos probar introduciendo en la barra de direcciones del navegador <a href="http://216.239.57.104/" class="external" title="http://216.239.57.104/">http://216.239.57.104/</a> o <a href="http://212.85.32.12/" class="external" title="http://212.85.32.12/">http://212.85.32.12/</a> , lo que debería devolver páginas web concretas. Si esto no sucede tenemos un problema. Repasemos los pasos dados y si vemos que no funciona busquemos un administrador o entorno de soporte consultable. Aunque antes conviene probar con un cable de red, siguiendo las instrucciones que se explican más adelante.
+</p><p>Para activar los nombres de dominios debemos acceder a la pestaña <strong>DNS</strong> e introducir el o los <strong>Servidores DNS</strong>. Pueden referirse a direcciones numéricas de la propia red local, como la IP del punto de acceso (tipo 192.168.2.1), o bien a direcciones numéricas externas, proporcionadas, generalmente, por las empresas proveedoras de servicios de acceso a Internet.
+</p>
+<a name="Cable_de_red"></a><h2> Cable de red </h2>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Propiedades_del_interfaz2.png" class="internal" title="Si la red local opera con el protocolo DHCP la configuración es elemental."><img src="imgs/180px-Propiedades_del_interfaz2.png" alt="Si la red local opera con el protocolo DHCP la configuración es elemental." width="180" height="97" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Propiedades_del_interfaz2.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Si la red local opera con el protocolo DHCP la configuración es elemental.</div></div></div>
+<p>Aunque lo <em>wireless</em> esté de moda, muchos preferirán la conexión mediante cable de red de toda la vida. De hecho, si tenemos problemas con la conexión sin hilos la medicina más inmediata es hacernos con un cable de red, ya que la mayoría de puntos de acceso vienen equipados con enchufes de red. Partimos de la base de que nuestro ordenador también dispone de puerto de red, claro.
+</p><p>La conexión a través de cable de red es posiblemente la que comporta una mayor probabilidad de acierto. Como comentábamos, casi lo primero que hace el kernel una vez que ha montado un sistema operativo mínimo es ir a buscar el puerto de red para, desde allí, zarpar hacia el hogar de su distribución madre en Internet. Para tener la conexión de red (<em>ethernet</em>) activada y configurada no hay nada como conectar el cable con el <em>hub</em> o punto de acceso encendidos y conectados a la línea telefónica antes de iniciar la instalación del sistema operativo.
+</p><p>Si la conexión de red está configurada, sólo tendremos que enchufar el cable de red en frío o incluso en caliente para tener acceso a Internet. Si tenemos el cable enchufado y todo el hardware en orden pero aun así no conseguimos bajar páginas de Internet con el navegador, deberemos seguir casi las mismas <strong>Configuraciones adicionales</strong> detalladas anteriormente con las redes sin hilos. La única diferencia es que, obviamente, no vamos a tener que definir redes ESSID ni contraseñas WEP, ya que nuestro acceso al <em>hub</em> o <em>punto de acceso</em> es directo vía cable. Pero a partir del punto octavo, <strong>Configuración</strong>, procedemos a activar nuestra conexión exactamente igual que hicimos para los dispositivos inalámbricos.
+</p>
+<a name="M.C3.B3dem"></a><h2> Módem </h2>
+<p>La conexión a través de módem fue la habitual y casi única para la primera generación de usuarios particulares de la Internet con World Wide Web. Hoy día sigue siendo la opción básica allí donde no llega la banda ancha o el presupuesto para acceder a ella la hace inviable. También hay usuarios de módem de alta velocidad conectados a líneas ADSL o incluso RDSI. 
+</p><p>Vamos a tratar los dos tipos de conexión con módem más habituales, el de linea telefónica convencional y el de ADSL. 
+</p><p><br />
+</p>
+<a name="Los_m.C3.B3dems_de_toda_la_vida"></a><h3> Los módems de toda la vida </h3>
+<p><em>Piiiiiiiiii-poooooooooo-prfxfrfxffrxxx.... [silencio]</em>
+</p><p>Para algunos esto es una onomatopeya que evoca la nostalgia de sus primeros tiempos de Internet. Otros nunca oyeron este ruido en directo y quizás tan sólo en alguna película o documental. Pero un buen número de usuarios siguen iniciando su paseo por Internet con esta <em>piccolissima serenata</em> (si no es que desactivaron el volumen).
+</p><p>El módem convencional se conecta a Internet llamando a un ISP o proveedor de Internet a través del cable telefónico de toda la vida. Hay módems internos insertados en la estructura del ordenador y hay módems externos con colores y formas varias y, casi siempre, con sus características lucecitas. A través de un módem externo se puede conectar uno o varios ordenadores, y varios ordenadores pueden acceder a una misma linea desde sus módems internos siempre y cuando no llamen dos al mismo tiempo. Hay mil combinaciones más, algunas realmente <em>low tech</em> (<em>chapuzas</em> en una traducción libre al español), pero funcionales. Y es que la falta de mayores recursos ha despertado la creatividad de muchos administradores de profesión o afición durante los años en los que los ordenadores se abrían con destornillador como si nada por cualquier motivo.
+</p><p>El problema es que mientras esto sucedía, la emergente comunidad de desarrolladores de software libre se conectaba a Internet básicamente a través de redes universitarias o empresariales. Los módems eran poco utilizados por estos pioneros bajo GNU/Linux, en parte por la disponibilidad de más ancho de banda vía red, también por el hecho de que la mayoría de fabricantes de módems mantuvieron cerrado el código de sus <em>drivers</em> propietarios, complicando el desarrollo de alternativas libres.
+</p><p>Hoy día se pueden establecer tras claros grados de compatibilidad de módems con GNU/Linux:
+</p>
+<ul><li> Los módems externos conectados al puerto serie son compatibles con GNU/Linux.
+</li><li> Si van conectados al puerto USB, el grado de compatibilidad se reduce sensiblemente.
+</li><li> Si el módem es interno, toquemos madera, armémonos de valor y en última instancia visitemos el sitio de Linmodems.org <a href="http://www.linmodems.org/" class="external" title="http://www.linmodems.org/">[3]</a><span class="urlexpansion"> (<i>http://www.linmodems.org/</i>)</span> donde encontraremos información útil para afrontar una instalación que se antoja compleja.
+</li></ul>
+<p>Si nuestro módem se encuentra soportado por GNU/Linux estos son los pasos a seguir:
+</p><p><strong>Sistema</strong> > <strong>Administración</strong> > <strong>Red</strong>
+</p>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Propiedades_del_interfaz3.png" class="internal" title="Los datos a introducir son los facilitados por el proveedor de Internet."><img src="imgs/180px-Propiedades_del_interfaz3.png" alt="Los datos a introducir son los facilitados por el proveedor de Internet." width="180" height="122" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Propiedades_del_interfaz3.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Los datos a introducir son los facilitados por el proveedor de Internet.</div></div></div>
+<ol><li> Si tenemos un módem interno (o externo y conectado) compatible, veremos una <strong>Conexión módem</strong>. La seleccionamos y clicamos en <strong>Propiedades</strong>. Si no aparece, oremos a nuestro misterio preferido y dirijámonos al entorno de soporte que más alegrías nos haya reportado. Vamos a necesitar suerte y ánimos.
+</li><li> En la pestaña <strong>General</strong> clicamos en <strong>Activar esta conexión</strong>. Los siguientes datos son obvios y nos los debe haber facilitado nuestro proveedor de acceso a Internet:
+<ol><li> <strong>Número de teléfono</strong> al que hay que llamar para establecer la conexión.
+</li><li> <strong>Prefijo</strong> no se refiere tanto al prefijo de provincia o país como a los números que debamos marcar para obtener tono de llamada si nos encontramos detrás de una centralita. Si no hay centralita por medio lo dejamos en blanco.
+</li><li> <strong>Usuario</strong> y <strong>Contraseña</strong>, los que nos hayan asignado.
+</li></ol>
+</li><li> Pasamos a la pestaña <strong>Módem</strong>. Asegurémonos que el módem está encendido.
+<ol><li> <strong>Puerto del módem</strong> se refiere a la conexión entre nuestro ordenador y el módem. Mejor empezar por <strong>Autodetectar</strong>. Si no da resultado habrá que probar con las opciones que nos aparezcan en el menú desplegable. Si no funciona con ninguna quiere decir que nuestro ordenador no es capaz de encontrar el módem, y si es interno o externo y todo está bien conectado y encendido ya podemos empezar con el proceso de oraciones y encomiendas.
+</li><li> <strong>Tipo de marcaje</strong> se refiere a cómo marca números nuestro teléfono. Normalmente son tonos (el moderno <em>pi-po-pe-po-po-po-pa</em>) aunque puede suceder que aún sean pulsos (el <em>tactac-tactactac-tac...</em> de los teléfonos de época).
+</li><li> <strong>Volumen</strong> nos permite escoger si queremos escuchar o no la <em>piccolíssima serenata</em> o regular el volumen de reproducción de la simpática melodía. Para empezar mejor tenerlo activado y medio-alto, con lo que sabremos cómo va el proceso de conexión. Aunque de entrada pueda sonar todo lo mismo, hay quien se atreve a diagnosticar un problema nada más que por el ruido de la conexión (por fortuna, en caso de existir problemas el sistema nos reporta los informes en una ventana).
+</li></ol>
+</li><li> Pasamos a la última pestaña de <strong>Configuración</strong>, donde tenemos un par de opciones.
+<ol><li> <strong>Establezca el módem como la ruta predeterminada a Internet</strong> nos interesa si el módem es nuestro único medio de acceso a la red. Si lo tenemos sólo para casos de emergencia en favor de otras conexiones es mejor dejarla desactivada.
+</li><li> <strong>Reintenta la conexión en caso de que se corte o falle la conexión</strong> hace eso mismo, y es útil si nuestro proveedor tiene un servicio que deja algo que desear.
+</li></ol>
+</li></ol>
+<p>Una vez completado el paseo, clicamos a <strong>Aceptar</strong> y en la ventana inicial seleccionamos la <strong>Conexión módem</strong> y clicamos en <strong>Activar</strong>. La serenata debería empezar. 
+</p><p><br />
+</p>
+<a name="M.C3.B3dem_ADSL"></a><h3> Módem ADSL </h3>
+<p>Los módems ADSL acostumbran a utilizarse cuando hay un único usuario tras una conexión de banda ancha. En los entornos GNU/Linux no se encuentran muchos usuarios que utilicen este tipo de conexión, sobre todo por la escasez de <em>drivers</em> libres y sus consiguientes problemas de incompatibilidades. Lo normal es que un usuario con ADSL tenga un punto de acceso o un <em>hub</em>. No obstante este tipo de módems han sido relativamente frecuentes en los primeros años de servicios ADSL y es posible que sus propietarios usuarios de MS Windows los quieran reutilizar en su paso al software libre.
+</p><p>Como siempre, el principal escollo es la compatibilidad de hardware. En el momento de escribir estas líneas se puede afirmar que todos los módems ADSL funcionan gracias a <em>firmware</em> no-libre, aunque esto no impide que desarrolladores de buena voluntad hayan encontrado vías para hacer funcionar un buen número de ellos bajo GNU/Linux.  Además, la configuración sencilla de estos aparatos depende también del proveedor de servicios de Internet (ISP) que usemos para conectarnos, ya que son esos mismos proveedores los que acostumbran a suministrarlos. Por tanto, a la hora de preguntar a amistades, foros, etc, deberemos tener en cuenta no sólo el modelo del módem sino también nuestro proveedor.
+</p>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Asistente_de_Banda_Ancha.png" class="internal" title="Elección del modelo de módem ADSL."><img src="imgs/180px-Asistente_de_Banda_Ancha.png" alt="Elección del modelo de módem ADSL." width="180" height="111" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Asistente_de_Banda_Ancha.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Elección del modelo de módem ADSL.</div></div></div>
+<p>Guadalinex, desde la versión v3, incluye un <strong>Asistente de Banda Ancha</strong> que permite la configuración de una conexión a través de varios modelos de módem ADSL con la operadora Telefónica, desarrolladora de esta aplicación. Si somos clientes de una línea de este tipo con esa operadora, ésta puede ser nuestra tabla de salvación. Este mismo asistente nos puede servir para configurar determinados modelos de <em>router</em> ADSL.
+</p><p><br />
+<strong>Sistema</strong> > <strong>Administración</strong> > <strong>Asistente de banda ancha</strong>
+</p>
+<ol><li> Empezamos con una pantalla de presentación. Seguimos adelante.
+</li><li> La aplicación nos avisa de que va a realizar una inspección a nuestro hardware para ver si tiene todo lo necesario para trabajar. Adelante.
+</li><li> Tras la inspección, el asistente nos informa de las configuraciones y puertos detectados. Si tenemos lo suficiente (y lo normal es que lo tengamos) podemos seguir adelante.
+</li><li> Hasta ahora ha observado únicamente nuestro ordenador; en los siguientes pasos se va a centrar en el módem. Una vez que lo tengamos encendido y conectado podemos seguir adelante.
+</li><li> Debemos seleccionar la operadora. En su primera versión sólo hay una opción: <strong>Telefónica de España</strong>. La intención es que las otras operadoras añadan los controladores de sus modelos y las configuraciones de conexión a sus redes, aprovechando que esto es software libre.
+</li><li> A continuación escogemos el modelo de módem en un menú desplegable. Cada módem sale retratado, para facilitarnos su reconocimiento.
+</li><li> Llegados a este punto debemos configurarlo en modo Monopuesto (estático o dinámico). Estático se refiere a una IP fija y, generalmente, a un mismo lugar físico de conexión. Dinámico se refiere a un acceso con IP dinámica, mediante usuario y contraseña. Esto depende del contrato con la operadora.
+</li><li> En la siguiente pantalla debemos introducir los datos de acceso, también facilitados por la operadora.
+</li><li> Una vez completados estos pasos el asistente aplicará la configuración, lo que puede llevar un buen rato.
+</li></ol>
+<p>Si todo ha ido bien, ya tendremos nuestro módem ADSL debidamente configurado. Para activarlo o desactivarlo seguiremos el mismo procedimiento que con un módem convencional, mediante la herramienta de administración de dispositivos en red o la miniaplicación que explicamos a continuación.
+</p>
+<a name="Marcar_y_colgar_f.C3.A1cilmente"></a><h3> Marcar y colgar fácilmente </h3>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Modempanel.png" class="internal" title="Clicando el elemento de módem en el panel podemos conectar y desconectar."><img src="imgs/180px-Modempanel.png" alt="Clicando el elemento de módem en el panel podemos conectar y desconectar." width="180" height="36" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Modempanel.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Clicando el elemento de módem en el panel podemos conectar y desconectar.</div></div></div>
+<p>Aunque podemos gestionar la activación o no del módem a través de la repasada ventana de configuración de redes, lo más cómodo y adecuado es hacerlo a través de su correspondiente miniaplicación de panel. Para ello daremos los siguientes pasos:
+</p>
+<ol><li> Ubicamos el puntero del ratón en el espacio libre del panel en el que queramos ubicar el icono de gestión del módem y clicamos con la tecla derecha del ratón. 
+</li><li> Seleccionamos la opción <strong>Añadir al panel</strong> en el menú contextual.
+</li><li> Buscamos el <strong>Monitor del módem</strong> y lo seleccionamos. Nos aparecerá un clásico teléfono rojo en el panel.
+</li><li> Si lo clicamos con la tecla derecha del ratón veremos las opciones <strong>Activa</strong> e <strong>Inactiva</strong> para marcar y colgar, respectivamente. Desde aquí también podemos editar y modificar las <strong>Propiedades</strong> de la conexión.
+</li></ol>
+<a name="Combinar_diferentes_ubicaciones"></a><h2> Combinar diferentes ubicaciones </h2>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Configuraci%C3%B3n_de_la_red1.png" class="internal" title=""><img src="imgs/180px-Configuraci%C3%B3n_de_la_red1.png" alt="" width="180" height="140" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Configuraci%C3%B3n_de_la_red1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div></div></div></div> <div class="thumb tright"><div style="width:182px;"><a href="imgs/Configuraci%C3%B3n_de_la_red2.png" class="internal" title="Ejemplos de ubicaciones diferentes bajo la misma herramienta de configuración de red."><img src="imgs/180px-Configuraci%C3%B3n_de_la_red2.png" alt="Ejemplos de ubicaciones diferentes bajo la misma herramienta de configuración de red." width="180" height="140" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Configuraci%C3%B3n_de_la_red2.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Ejemplos de ubicaciones diferentes bajo la misma herramienta de configuración de red.</div></div></div>
+<p>Si somos usuarios nómadas y nos conectamos con el mismo ordenador desde varios lugares lo recomendable es utilizar varias ubicaciones para guardar las configuraciones de cada lugar. Por ejemplo, igual en el trabajo tenemos una red cableada con IP fija, en casa tenemos <em>wireless</em> con contraseña, con el vecino tenemos un convenio para utilizar la red del otro en caso de emergencia con su otra contra contraseña, a veces vamos a casa de amigos y guardamos sus configuraciones para llegar y conectar sin tener que pedir datos de nuevo o buscar en chuletillas viejas...
+</p><p>Si utilizamos un módem convencional también nos puede interesar tener varias ubicaciones, una con nuestro proveedor de Internet habitual y otras con accesos de otros proveedores para casos de emergencia.
+</p><p>Partimos de la misma ventana de <strong>Sistema</strong> > <strong>Administración</strong> > <strong>Redes</strong>
+</p>
+<ol><li> Clicamos en el desplegable superior <strong>Ubicación</strong>
+</li><li> Seleccionamos <strong>Crea una ubicación</strong>
+</li><li> Introducimos el <strong>Nombre de la ubicación</strong>, tipo <em>casa</em>, <em>trabajo</em>, etc, y clicamos en <strong>Aceptar</strong>.
+</li><li> La configuración que hagamos a partir de ese momento se asignará a esa ubicación. Una vez configuradas las conexiones clicamos en <strong>Aceptar</strong> y se cerrará la ventana de <strong>Redes</strong>, guardando nuestros datos
+</li></ol>
+<p>Podemos tener tantas ubicaciones como deseemos. Para editar una ubicación sólo tenemos que seleccionarla, realizar los cambios convenientes y guardar. También podemos eliminar ubicaciones seleccionando <strong>Suprime esta ubicación</strong> en el mismo menú desplegable con el que la creamos.
+</p><p><br />
+Si llegados a este punto hemos conseguido conectar a Internet ya nos podemos plantear una red doméstica (incluso con sólo un ordenador en casa).
+</p><p><br />
+</p>
+<pre>Sigue: <a href="La_red_dom%C3%A9stica.html" title="Guia v5/La red doméstica">La red doméstica</a>
+</pre><div class="printfooter">
+Obtenido de "<a href="http://www.guadalinex.org/guadapedia/index.php/Guia_v5/Salida_a_Internet">http://www.guadalinex.org/guadapedia/index.php/Guia_v5/Salida_a_Internet</a>"</div>
+<!-- end content -->
+<div class="visualClear"></div>
+</div>
+</div>
+</div>
+</body>
+</html>

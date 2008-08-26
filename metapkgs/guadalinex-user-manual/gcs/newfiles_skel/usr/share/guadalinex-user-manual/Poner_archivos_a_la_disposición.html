@@ -1,0 +1,295 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>Poner_archivos_a_la_disposición</title>
+
+    <link / REL="shortcut icon" HREF="imgs/favicon.ico">
+    <link / REL="stylesheet" TYPE="text/css" MEDIA="screen,projection" HREF="css/main.css">
+    <link / REL="stylesheet" TYPE="text/css" MEDIA="print" HREF="css/commonPrint.css">
+    <script SRC="css/script.js" TYPE="text/javascript"></script>
+    <script SRC="css/wikibits.js" TYPE="text/javascript"></script>
+    
+  </head>
+  <body class="ns-0">
+  <div ID="globalWrapper">
+
+<div id="content">
+<a name="top" id="contentTop"></a>
+<h1 class="firstHeading">Guia v5/Poner archivos a la disposición</h1>
+<div id="bodyContent">
+<h3 id="siteSub">De Guadapedia, la enciclopedia libre.</h3>
+<div id="contentSub"></div>
+<!-- start content -->
+<table border="0" id="toc"><tr id="toctitle"><td align="center">
+<b>Tabla de contenidos</b> <script type="text/javascript">showTocToggle("mostrar","esconder")</script></td></tr><tr id="tocinside"><td>
+<div class="tocline"><a href="#Poner_archivos_a_disposici.C3.B3n_de_la_comunidad">1 Poner archivos a disposición de la comunidad</a><br /></div>
+<div class="tocindent">
+<p><a href="#Publicar_nuestras_carpetas_tal_cual">1.1 Publicar nuestras carpetas tal cual</a><br />
+<a href="#FTP:_un_cl.C3.A1sico">1.2 FTP: un clásico</a><br />
+<a href="#SSH:_a_lo_seguro">1.3 SSH: a lo seguro</a><br />
+<a href="#Compartiendo_mediante_WebDAV">1.4 Compartiendo mediante WebDAV</a><br />
+<a href="#Un_nodo_en_las_redes_de_intercambio_P2P">1.5 Un nodo en las redes de intercambio P2P</a><br />
+<a href="#Bittorrent">1.6 Bittorrent</a><br />
+</p>
+<div class="tocindent">
+<p><a href="#Usando_un_Cliente_Bittorrent">1.6.1 Usando un Cliente Bittorrent</a><br />
+<a href="#Compartiendo_nuestros_ficheros_con_Bittorrent">1.6.2 Compartiendo nuestros ficheros con Bittorrent</a><br />
+</p>
+</div>
+<p><a href="#Y_de_colof.C3.B3n:_Jabber">1.7 Y de colofón: Jabber</a><br />
+</p>
+</div>
+</td></tr></table>
+<a name="Poner_archivos_a_disposici.C3.B3n_de_la_comunidad"></a><h1> Poner archivos a disposición de la comunidad </h1>
+<p>La publicación a través de un gestor de contenidos es un método elegante para poner textos, fotos y demás materiales a disposición del público mediante una web que puede llegar a tener un aspecto profesional. En este apartado vamos a dar un repaso a otras formas de publicar y ofrecer nuestros archivos en la red, algunas de ellas no tan conocidas aunque no por ello menos eficientes. 
+</p>
+<a name="Publicar_nuestras_carpetas_tal_cual"></a><h2> Publicar nuestras carpetas tal cual </h2>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Apache-dir-compartido.png" class="internal" title="Directorio con nuestros contenidos compartidos usando Apache"><img src="imgs/180px-180px-Apache-dir-compartido.png" alt="Directorio con nuestros contenidos compartidos usando Apache" width="180" height="116" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Apache-dir-compartido.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Directorio con nuestros contenidos compartidos usando Apache</div></div></div>
+<p>Podemos crear una carpeta en nuestro servidor web y copiar contenidos en dicha carpeta, dejándola así pública de una forma sencilla:
+</p>
+<pre>
+$ sudo mkdir /var/www/compartida
+$ sudo cp Desktop/fichero.zip /var/www/compartida/
+</pre>
+<p>De esta forma si accedemos a <a href="http://guias-ubuntu.dyndns.org/compartida/" class="external" title="http://guias-ubuntu.dyndns.org/compartida/">http://guias-ubuntu.dyndns.org/compartida/</a>
+</p><p>nos mostrará el contenido del directorio sin formato de diseño alguno y podremos descargar todo lo que allí se ofrezca. No muy elegante pero tremendamente sencillo de montar.
+</p>
+<a name="FTP:_un_cl.C3.A1sico"></a><h2> FTP: un clásico </h2>
+<p>FTP (del inglés <em>File Transfer Protocol</em>) es un protocolo de transferencia de ficheros en redes IP. Para tener este servicio debemos instalar un servidor de FTP al que se accederá desde el exterior a través de clientes FTP para obtener sus contenidos.
+</p><p>El protocolo FTP es inseguro en su diseño, así que inicialmente sólo es recomendable para configurar uno anónimo, es decir, un FTP al que se acceda fácilmente sin introducir usuarios y contraseñas reales. El problema radica en que si usásemos FTP con usuarios reales de nuestro servidor, sus nombres de usuario y contraseñas circularían por Internet y serían visibles para todo el mundo, lo cual no es nada recomendable.
+</p><p>Vamos a montar un servidor FTP instalando el paquete <strong>vsftpd</strong>, <em>The Very Secure FTP Daemon</em>, un servidor de FTP que usaremos sólo anónimamente. Tras la instalación arranca el servidor, sin necesidad de más configuraciones.
+</p><p>Para ofrecer contenidos públicos debemos dejarlos en la carpeta del usuario ftp que crea el paquete. Todo archivo que soltemos en ella serán públicamente accesibles. 
+</p>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Ftp1.png" class="internal" title="El contenido inicial de nuestro servidor FTP"><img src="imgs/180px-180px-Ftp1.png" alt="El contenido inicial de nuestro servidor FTP" width="180" height="140" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Ftp1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>El contenido inicial de nuestro servidor FTP</div></div></div>
+<p>Si abrimos nuestro navegador, y lo usamos como cliente de FTP, accediendo a <a href=".html" class="external" title="ftp://guias-ubuntu.dyndns.org/">ftp://guias-ubuntu.dyndns.org/</a>
+accederemos anónimamente al contenido de nuestro servidor de FTP.
+</p><p>Si usamos un cortafuegos debemos asegurarnos que dejamos pasar el tráfico FTP a nuestro servidor.
+</p><p><br />
+</p>
+<a name="SSH:_a_lo_seguro"></a><h2> SSH: a lo seguro </h2>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Ssh-scp.png" class="internal" title="Aspecto típico de una sesión con SSH."><img src="imgs/180px-180px-Ssh-scp.png" alt="Aspecto típico de una sesión con SSH." width="180" height="126" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Ssh-scp.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Aspecto típico de una sesión con SSH.</div></div></div>
+<p>Si queremos dejar accesible contenidos sólo a ciertas personas y de una forma segura, una buena opción es usar el servidor de SSH (<em>Secure SHell</em>), un protocolo seguro para acceder a máquinas remotas. Para instalar este servicio, instalamos el paquete <strong>openssh-server</strong>, que dejará accesible nuestra máquina de forma segura a través de los usuarios y sus contraseñas que tengamos creadas en nuestro servidor.
+</p><p>Si usamos un cortafuegos debemos habilitar el trafico de SSH hacia nuestro servidor.
+</p><p>Ahora podemos instalar en nuestra máquina o en otra el paquete <strong>openssh-client</strong> y acceder a nuestro servidor mediante los comandos ssh, scp o incluso de forma gráfica con GNOME, como hemos explicado en el apartado <strong>La red doméstica</strong> del capítulo <strong>5. Conecta (a) tu ordenador</strong>.
+</p><p>Podemos abrir una sesión remotamente en nuestra máquina por medio de ssh:
+</p><p><strong>$ ssh -l miusuario guias-ubuntu.dyndns.org</strong>
+</p><p>De esta forma podemos tomar control de nuestro servidor desde otra localización. Muchos desarrolladores y administradores acceden así a sus servidores desde el portátil, estén donde estén. De hecho la mayoría de las veces dichos servidores se encuentran en un lugar que nunca han visitado, accediendo al servidor de forma remota para cualquier acción.
+</p><p>scp es un comando para hacer copias remotas sobre SSH, es decir, de forma segura. La sintaxis de scp es similar a la del comando de copia "cp", pero al que se le añade el usuario y nombre de la máquina remota.
+</p><p><strong>scp mifichero miusuario@guias-ubuntu.dyndns.org:</strong>
+</p><p>Esta instrucción nos copiaría 'mifichero' en el servidor. También se puede copiar directorios enteros con el parámetro "-r" (de recursivo):
+</p><p><strong>scp -r midirectorio miusuario@guias-ubuntu.dyndns.org:</strong>
+</p><p><br />
+</p>
+<a name="Compartiendo_mediante_WebDAV"></a><h2> Compartiendo mediante WebDAV </h2>
+<p>Como hemos visto, podemos habilitar un directorio en nuestro servidor apache con nuestros contenidos públicos. Esto es de alguna forma limitado ya que es sólo un directorio de descarga, los usuarios que acceden a él no tienen forma de subir archivos o editar los archivos disponibles.
+</p><p>WebDAV <a href="http://en.wikipedia.org/wiki/Webdav" class="external" title="http://en.wikipedia.org/wiki/Webdav">[1]</a><span class="urlexpansion"> (<i>http://en.wikipedia.org/wiki/Webdav</i>)</span> es un protocolo que permite que, a través de nuestra web, ciertas carpetas y ficheros de nuestro servidor sean accesibles y modificables desde el exterior de una forma sencilla. De esta forma, la carpeta compartida se muestra en nuestro escritorio y en el de otros usuarios como una carpeta local más, permitiendo editar su contenido.
+</p><p>Una ventaja que tiene WebDAV es que permite bloquear ficheros para prevenir que dos personas editen el mismo contenido al mismo tiempo. Otra ventaja es que se accede al servicio a través de la web por lo que es sencillo de usar a través de cortafuegos y proxys.
+</p><p>Vamos a añadir soporte a Webdav a nuestro servidor apache. Suponiendo que ya hemos instalado 'apache2' habilitamos los siguiente módulos:
+</p><p><strong>$ sudo a2enmod dav</strong>
+</p><p><strong>$ sudo a2enmod dav_fs</strong>
+</p><p><strong>$ sudo a2enmod auth_digest</strong>
+</p><p>Creamos un usuario y contraseña para acceder a la carpeta:
+</p>
+<pre>
+$ sudo htdigest -c /home/miusuario/mi-password mi-webdav miusuario
+Adding password for miusuario in realm mi-webdav.
+New password:
+Re-type new password:
+</pre>
+<p>Ahora creamos un nuevo espacio en nuestro web para compartir por WebDAV:
+</p><p><strong>$ sudo nano /etc/apache2/sites-available/webdav</strong>
+</p><p>Y finalmente incluimos esto:
+</p>
+<pre>
+&lt;Directory /home/miusuario/compartida&gt;
+  Options Indexes MultiViews
+  AllowOverride None
+  Order allow,deny
+  allow from all
+&lt;/Directory&gt;
+
+Alias /webdav /home/miusuario/compartida
+
+&lt;Location /webdav&gt;
+   DAV On
+   AuthType Digest
+   AuthName &quot;mi-webdav&quot;
+   AuthDigestFile  /home/miusuario/mi-password
+   Require valid-user
+&lt;/Location&gt;
+</pre>
+<p>Creamos el directorio y le decimos que pertenezca al servidor web (para que este pueda escribir en ese directorio):
+</p>
+<pre>
+$ mkdir /home/miusuario/compartida
+$ sudo chown www-data /home/miusuario/compartida
+</pre>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Pantallazo-Conectar_con_el_servidor.png" class="internal" title="Conectando a nuestro servidor por WebDAV"><img src="imgs/180px-180px-Pantallazo-Conectar_con_el_servidor.png" alt="Conectando a nuestro servidor por WebDAV" width="180" height="109" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Pantallazo-Conectar_con_el_servidor.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Conectando a nuestro servidor por WebDAV</div></div></div>
+<p>Habilitamos nuestro nuevo espacio web:
+</p>
+<pre>
+$ sudo a2ensite webdav
+$ sudo /etc/init.d/apache2 reload
+</pre>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Webdav2.png" class="internal" title="Nuestra carpeta compartida por WebDAV después de crear un fichero nuevo"><img src="imgs/180px-180px-Webdav2.png" alt="Nuestra carpeta compartida por WebDAV después de crear un fichero nuevo" width="180" height="121" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Webdav2.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Nuestra carpeta compartida por WebDAV después de crear un fichero nuevo</div></div></div>
+<p>Y ya tendríamos compartida la carpeta mediante WebDAV. Ahora en nuestro menú GNOME de otra máquina remota seleccionamos Lugares > Conectar con el Servidor ...  y WebDAV (http), como servidor 'guias-ubuntu.dyndns.org' (u otro dominio que tengamos configurado) como carpeta 'webdav' tal como la hemos llamado en el Alias de apache y el usuario que hemos configurado 'miusuario'.
+</p><p>De esta forma se nos creará en el escritorio un acceso directo a la carpeta WebDAV, y si la abrimos, nos pedirá la contraseña. A partir de ahí podremos editar el contenido, crear ficheros, copiarlos, borrarlos, etc, simultáneamente con otros usuarios.
+</p><p>También se puede securizar más añadiendo soporte SSL a nuestro servidor apache.
+</p><p><br />
+</p>
+<a name="Un_nodo_en_las_redes_de_intercambio_P2P"></a><h2> Un nodo en las redes de intercambio P2P </h2>
+<p>mldonkey es una aplicación de software libre que soporta multitud de protocolos de P2P.
+</p><p>Para instalarlo, instalamos el paquete 'mldonkey-server':
+</p>
+<pre>
+$ sudo apt-get install mldonkey-server
+</pre>
+<p>y luego lo reconfiguramos con más detalle:
+</p>
+<pre>
+$ sudo dpkg-reconfigure -plow mldonkey-server
+</pre>
+<p>Esto nos solicitará diversos datos sobre el servidor, si se arrancará el servicio cuando iniciemos el servidor, el ancho de banda que se va a usar, protocolos que se van a soportar, uso de recursos del servidor que utilizará, contraseña, etc., nos pedirá si sobreescribimos el fichero de configuración de mldonkey '/etc/default/mldonkey-server' a lo que responderemos que sí, y finalmente arrancará el mldonkey.
+</p><p>El mldonkey viene con un interfaz Web y de escritorio incorporada. Vamos a habilitar el acceso Web desde otra máquina diferente al servidor, para ello paramos el servicio:
+</p>
+<pre>
+$ sudo /etc/init.d/mldonkey-server stop
+</pre>
+<p>editaremos el fichero 'downloads.ini' del usuario que hayamos indicado en la reconfiguración (en nuestro caso mldonkey):
+</p>
+<pre>
+$ sudo nano /home/mldonkey/downloads.ini
+</pre>
+<p>y en el apartado de IPs permitidas:
+</p>
+<pre>
+allowed_ips = [
+  &quot;127.0.0.1&quot;;]
+</pre>
+<p>añadimos las IP de la máquina desde donde nos queremos conectar, por ejemplo:
+</p>
+<pre>
+allowed_ips = [
+  &quot;10.0.0.6&quot;;
+  &quot;127.0.0.1&quot;;]
+</pre>
+<p>Finalmente arrancamos de nuevo el servidor:
+</p>
+<pre>
+$ sudo /etc/init.d/mldonkey-server start
+</pre>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Mldonkey1.png" class="internal" title="Interfaz Web de nuestro servidor mldonkey"><img src="imgs/180px-180px-Mldonkey1.png" alt="Interfaz Web de nuestro servidor mldonkey" width="180" height="116" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Mldonkey1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Interfaz Web de nuestro servidor mldonkey</div></div></div>
+<p>y ya podríamos acceder al servidor vía web, por la dirección:
+</p>
+<ul><li> <a href="http://guias-ubuntu.dyndns.org:4080/" class="external" title="http://guias-ubuntu.dyndns.org:4080/">http://guias-ubuntu.dyndns.org:4080/</a>
+</li></ul>
+<p>introduciendo como usuario a 'admin' y la contraseña introducida anteriormente.
+</p><p>Esto nos dará acceso al interfaz web, donde podremos gestionar búsquedas, descargas, subidas, etc.
+</p><p>Todos estos contenidos se mantendrán en el 'home' del usuario que hemos seleccionado en la reconfiguración del paquete (en nuestro ejemplo 'mldonkey').
+</p><p><br />
+</p>
+<a name="Bittorrent"></a><h2> Bittorrent </h2>
+<p>Bittorrent es un protocolo P2P de intercambio de ficheros. En este protocolo, un servidor ofrece un fichero a los clientes, y los clientes descargan el fichero del servidor y simultáneamente de otros clientes, de forma que el servidor puede llegar a transferir una copia del fichero, mientras que los clientes se descargan el resto intercambiando entre ellos. La ventaja principal es que el consumo de ancho de banda se reparte, y no recae únicamente en el servidor.
+</p>
+<a name="Usando_un_Cliente_Bittorrent"></a><h3> Usando un Cliente Bittorrent </h3>
+<p>Es relativamente sencillo descargarse un fichero por Bittorrent si se dispone de un cliente como GNOME BitTorrent.
+</p><p>Por ejemplo, podemos descargarnos un fichero .torrent desde nuestro navegador y si éste está configurado adecuadamente abrirá la aplicación 'gnome-btdownload' de GNOME BitTorrent (u otra similar) que nos indicará dónde queremos dejar el fichero final una vez descargado. El archivo se empezará a descargar en el disco duro como si fuera un enlace cualquiera, aunque la descarga se esté produciendo de forma distribuida entre otros ordenadores como el nuestro que contengan ese archivo o partes distribuibles de él. Al mismo tiempo, nosotros también compartimos lo que ya hemos descargado del fichero.
+</p><p>GNOME BitTorrent no llega a aplicación, es una simple ventana de diálogo que nos permite ver el estado de nuestras descargas y subidas BitTorrent.
+</p><p>Finalmente, se terminará de bajar el contenido del fichero, y si mantenemos el cliente abierto, continuaremos dejando que otros clientes descarguen nuestra copia del fichero y nos convertiremos en semillas del fichero. Para usuarios avanzados: Para poder ser una semilla es necesario que no tengamos filtrados el rango de puertos IP del 6881 al 6889 y así permitir conexiones externas.
+</p>
+<a name="Compartiendo_nuestros_ficheros_con_Bittorrent"></a><h3> Compartiendo nuestros ficheros con Bittorrent </h3>
+<p>Este apartado configuraremos nuestro servidor web para que comparta los ficheros que queramos a través de Bittorrent.
+</p><p>Para ello usaremos Blog Torrent <a href="http://www.blogtorrent.com/" class="external" title="http://www.blogtorrent.com/">[2]</a><span class="urlexpansion"> (<i>http://www.blogtorrent.com/</i>)</span> un software que nos facilitará el trabajo.
+</p><p>No existe un paquete Debian de este software, así que descargaremos del anterior web el software, lo descomprimiremos:
+</p>
+<pre>
+$ unzip BlogTorrent-preview-0.92.zip
+</pre>
+<p>y moveremos lo descomprimido en nuestro servidor www:
+</p>
+<pre>
+sudo mv bt/ /var/www/
+</pre>
+<p>luego crearemos los directorios de descarga y daremos los permisos adecuados:
+</p>
+<pre>
+$ sudo mkdir /var/www/bt/torrents
+$ sudo mkdir /var/www/bt/data
+$ sudo chmod 777 /var/www/bt/torrents
+$ sudo chmod 777 /var/www/bt/data
+$ sudo chown -R www-data:www-data /var/www/bt/
+</pre>
+<p>De esta forma tendremos ya nuestra aplicación web disponible en:
+</p>
+<ul><li> <a href="http://guias-ubuntu.dyndns.org/bt/" class="external" title="http://guias-ubuntu.dyndns.org/bt/">http://guias-ubuntu.dyndns.org/bt/</a>
+</li></ul>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Bittorrent1.png" class="internal" title="Pantalla Inicial de Bittorrent"><img src="imgs/180px-180px-Bittorrent1.png" alt="Pantalla Inicial de Bittorrent" width="180" height="116" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Bittorrent1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Pantalla Inicial de Bittorrent</div></div></div>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Bittorrent2.png" class="internal" title="Ya tenemos un fichero torrent"><img src="imgs/180px-180px-Bittorrent2.png" alt="Ya tenemos un fichero torrent" width="180" height="116" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Bittorrent2.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Ya tenemos un fichero torrent</div></div></div>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Bittorrent3.png" class="internal" title="Abriendo el cliente Bittorrent"><img src="imgs/180px-180px-Bittorrent3.png" alt="Abriendo el cliente Bittorrent" width="180" height="98" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Bittorrent3.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Abriendo el cliente Bittorrent</div></div></div>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Bittorrent4.png" class="internal" title="Subiendo el archivo"><img src="imgs/180px-180px-Bittorrent4.png" alt="Subiendo el archivo" width="180" height="65" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Bittorrent4.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Subiendo el archivo</div></div></div>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Bittorrent5.png" class="internal" title="El archivo se ha completado y hacemos de semilla"><img src="imgs/180px-180px-Bittorrent5.png" alt="El archivo se ha completado y hacemos de semilla" width="180" height="124" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Bittorrent5.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>El archivo se ha completado y hacemos de semilla</div></div></div>
+<p>Esta forma de instalar sin paquetes no es muy ortodoxa, y hará nuestro sistema menos seguro, ya que si se descubre algún problema de seguridad en este software no se actualizará automáticamente como el resto del servidor. Debemos estar atentos a los problemas de seguridad de este software para mantenerlo actualizado.
+</p><p>Continuemos. El siguiente paso es crearnos un usuario que será el usuario de administración, con una cuenta de correo válida, ya que nos enviará a ésta la confirmación con la que activaremos esta cuenta de administración.
+</p><p>Una vez que recibamos el correo de confirmación, accedemos al enlace indicado en el correo y activaremos la cuenta.
+</p><p>Si entramos con este usuario, podremos cambiar las opciones del servidor de Torrents, en el enlace <em>Settings</em>
+</p>
+<ul><li> <a href="http://guias-ubuntu.dyndns.org/bt/settings.php" class="external" title="http://guias-ubuntu.dyndns.org/bt/settings.php">http://guias-ubuntu.dyndns.org/bt/settings.php</a>
+</li></ul>
+<p>Allí habilitamos la compartición de ficheros "Enable server sharing" e indicamos la localización de python: '/usr/bin/python'. Salvamos la configuración, y nuestro servidor estará listo para compartir ficheros.
+</p><p>Empecemos a subir un fichero desde nuestro cliente, preparando un fichero .torrent del fichero en cuestión que queremos compartir:
+</p>
+<pre>
+$ btmakemetafile 01.ogg http://guias-ubuntu.dyndns.org/blogtorrent/announce.php 
+</pre>
+<p>esto nos creará un 01.ogg.torrent que es el que introduciremos manualmente en la página de <em>Upload File</em>.
+</p><p>Si volvemos a cargar la página inicial de Blog Torrent:
+</p>
+<ul><li> <a href="http://guias-ubuntu.dyndns.org/bt/" class="external" title="http://guias-ubuntu.dyndns.org/bt/">http://guias-ubuntu.dyndns.org/bt/</a>
+</li></ul>
+<p>veremos nuestro primer Torrent, que no tiene ningún 'seeder' es decir que nadie dispone de una copia.
+</p><p>Así que desde el cliente donde tenemos el fichero que se comparte, descargamos el .torrent que arrancará nuestro cliente Bittorrent. Entonces seleccionaremos la carpeta donde tenemos el fichero compartido, y al estar ya en local, nos convertiremos en semilla (<em>seed</em>) del fichero y permitiremos al servidor que suba todo el contenido del fichero.
+Una vez que el servidor descargue por completo el fichero, se mantendrá como semilla para otros clientes.
+</p><p>Así que si otro cliente quiere descargarse el fichero, se bajará el .torrent, verá que la semilla es nuestro servidor y comenzará a bajarse partes del fichero. Y de la misma forma otros clientes, a la vez que comparten entre ellos las partes ya descargadas, no sobrecargando la conexión a Internet del servidor.
+</p><p>Para más información sobre Bittorrent, Wikipedia mantiene una buen explicación de <a href="http://en.wikipedia.org/wiki/Bittorrent" class="external" title="http://en.wikipedia.org/wiki/Bittorrent">Bittorrent</a><span class="urlexpansion"> (<i>http://en.wikipedia.org/wiki/Bittorrent</i>)</span> y también es interesante <a href="http://www.bittorrent.com/guide.html" class="external" title="http://www.bittorrent.com/guide.html">la guía en la página oficial de Bittorrent</a><span class="urlexpansion"> (<i>http://www.bittorrent.com/guide.html</i>)</span>.
+</p><p><br />
+</p>
+<a name="Y_de_colof.C3.B3n:_Jabber"></a><h2> Y de colofón: Jabber </h2>
+<p>La red Jabber es una red libre, descentralizada, autogestionada, en la que se promueve la privacidad y la libertad de sus usuarios, diferente en estos aspectos a lo que otros servicios más populares de Mensajería Instantánea (Microsoft Messenger, Yahoo Messenger, etc) realizan, ya que son centralizados, no basados en estándares, llenos de publicidad, de uso cuestionable de nuestros datos privados, etc.
+</p><p>Instalar un servidor Jabber propio donde alojar nuestras cuentas y las de nuestros amigos y que se comunique con otros servidores Jabber del mundo es bastante trivial  (de ahi su descentralización). Basta con instalar el paquete <strong>jabber</strong>. En la instalación de este paquete ya se arranca nuestro servidor Jabber. Ahora editamos el fichero de configuración <strong>jabber.cfg</strong>:
+</p>
+<pre>
+$ sudo nano /etc/jabber/jabber.cfg
+</pre>
+<p>y establecemos el dominio que usaremos para nuestras cuentas jabber:
+</p>
+<pre>
+JABBER_HOSTNAME=guias-ubuntu.dyndns.org
+</pre>
+<p>Es decir que nuestros usuarios serán del tipo fulanito@guias-ubuntu.dyndns.org. Rearrancamos el servidor Jabber para que tenga en cuenta el cambio de configuración:
+</p>
+<pre>
+$ sudo /etc/init.d/jabber restart
+</pre>
+<p>y ya está nuestro servidor jabber funcional para nuestro dominio. 
+</p>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Gaim-jabber-1.png" class="internal" title="Creación de una cuenta de pruebas en nuestro servidor jabber"><img src="imgs/180px-180px-Gaim-jabber-1.png" alt="Creación de una cuenta de pruebas en nuestro servidor jabber" width="180" height="205" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Gaim-jabber-1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Creación de una cuenta de pruebas en nuestro servidor jabber</div></div></div>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Gaim-jabber-2.png" class="internal" title="Mensaje de bienvenida de nuestro servidor una vez que registramos inicialmente nuestra cuenta"><img src="imgs/180px-180px-Gaim-jabber-2.png" alt="Mensaje de bienvenida de nuestro servidor una vez que registramos inicialmente nuestra cuenta" width="180" height="143" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Gaim-jabber-2.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Mensaje de bienvenida de nuestro servidor una vez que registramos inicialmente nuestra cuenta</div></div></div>
+<p>Ahora podemos usar nuestro cliente de mensajería instantánea preferido, por ejemplo 'gaim', para crearnos una cuenta en nuestro nuevo servidor jabber. 
+</p><p>Si usamos un cortafuegos debemos asegurarnos que dejamos pasar el tráfico tcp/udp a los puertos 5222, 5223, 5269 que usa nuestro servidor Jabber.
+</p><p>Para más información sobre como mejorar nuestra instalación de jabber, podemos profundizar en la Guía de Administración de Jabber 1.4 <a href="http://jabberd.jabberstudio.org/1.4/doc/adminguide" class="external" title="http://jabberd.jabberstudio.org/1.4/doc/adminguide">[3]</a><span class="urlexpansion"> (<i>http://jabberd.jabberstudio.org/1.4/doc/adminguide</i>)</span>. Entre las cosas interesantes que podemos hacer con nuestro servidor, están la de crear salas para hablar simultáneamente con varias personas (habría que instalar el paquete <strong>jabber-muc</strong>) o hacer que las comunicaciones con nuestro servidor sean seguras a través de SSL. También se pueden tender puentes con otros servicios de mensajería instantánea de forma que podamos hablar con usuarios que no usan Jabber.
+</p><p><br />
+</p><p><br />
+</p>
+<pre>   Sigue: <a href="Rutinas_del_sysadmin_amateur.html" title="Guia v5/Rutinas del sysadmin amateur">Rutinas del <em>sysadmin</em> amateur</a>
+</pre><div class="printfooter">
+Obtenido de "<a href="http://www.guadalinex.org/guadapedia/index.php/Guia_v5/Poner_archivos_a_la_disposici%C3%B3n">http://www.guadalinex.org/guadapedia/index.php/Guia_v5/Poner_archivos_a_la_disposici%C3%B3n</a>"</div>
+<!-- end content -->
+<div class="visualClear"></div>
+</div>
+</div>
+</div>
+</body>
+</html>

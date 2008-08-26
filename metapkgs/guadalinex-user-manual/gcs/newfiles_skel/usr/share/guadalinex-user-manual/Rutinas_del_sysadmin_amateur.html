@@ -1,0 +1,210 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>Rutinas_del_sysadmin_amateur</title>
+
+    <link / REL="shortcut icon" HREF="imgs/favicon.ico">
+    <link / REL="stylesheet" TYPE="text/css" MEDIA="screen,projection" HREF="css/main.css">
+    <link / REL="stylesheet" TYPE="text/css" MEDIA="print" HREF="css/commonPrint.css">
+    <script SRC="css/script.js" TYPE="text/javascript"></script>
+    <script SRC="css/wikibits.js" TYPE="text/javascript"></script>
+    
+  </head>
+  <body class="ns-0">
+  <div ID="globalWrapper">
+
+<div id="content">
+<a name="top" id="contentTop"></a>
+<h1 class="firstHeading">Guia v5/Rutinas del sysadmin amateur</h1>
+<div id="bodyContent">
+<h3 id="siteSub">De Guadapedia, la enciclopedia libre.</h3>
+<div id="contentSub"></div>
+<!-- start content -->
+<table border="0" id="toc"><tr id="toctitle"><td align="center">
+<b>Tabla de contenidos</b> <script type="text/javascript">showTocToggle("mostrar","esconder")</script></td></tr><tr id="tocinside"><td>
+<div class="tocline"><a href="#Rutinas_del_sysadmin_amateur">1 Rutinas del sysadmin amateur</a><br /></div>
+<div class="tocindent">
+<p><a href="#Mantener_seguro_nuestro_servidor">1.1 Mantener seguro nuestro servidor</a><br />
+</p>
+<div class="tocindent">
+<p><a href="#Paquetes_que_cuidan_del_servidor">1.1.1 Paquetes que cuidan del servidor</a><br />
+</p>
+</div>
+<p><a href="#Estad.C3.ADsticas_de_acceso_con_Webalizer">1.2 Estadísticas de acceso con Webalizer</a><br />
+<a href="#Administraci.C3.B3n_web_de_bases_de_datos">1.3 Administración web de bases de datos</a><br />
+<a href="#Monitorizar_el_tr.C3.A1fico">1.4 Monitorizar el tráfico</a><br />
+<a href="#Monitorizar_el_estado_del_servidor">1.5 Monitorizar el estado del servidor</a><br />
+<a href="#Administraci.C3.B3n_v.C3.ADa_web">1.6 Administración vía web</a><br />
+<a href="#Gestionando_backups">1.7 Gestionando backups</a><br />
+</p>
+</div>
+</td></tr></table>
+<a name="Rutinas_del_sysadmin_amateur"></a><h1> Rutinas del sysadmin amateur </h1>
+<p>Una vez que tengamos nuestro servidor en funcionamiento nos daremos cuenta de que esta historia no ha hecho más que empezar. Si hemos disfrutado llegando hasta donde hemos llegado y obteniendo los resultados que hemos obtenido, más disfrutaremos con lo que viene a continuación. Posiblemente.
+</p><p><br />
+</p>
+<a name="Mantener_seguro_nuestro_servidor"></a><h2> Mantener seguro nuestro servidor </h2>
+<p>Tener un servidor totalmente seguro requiere un elevado nivel de conocimientos y bastante trabajo, por lo que nos vamos a centrar en cómo tener un servidor medianamente seguro. 
+</p><p>Al igual que ocurre con nuestra casa, debemos seguir una pautas para mantener un servidor medianamente seguro. Aunque técnicamente es difícil mantener una casa totalmente protegida frente a robos, tampoco vivimos agobiados constantemente por este hecho y seguimos siempre una serie de recomendaciones básicas para prevenir la entrada de intrusos (como no dejar la puerta abierta o las llaves de la puerta puestas).
+</p><p>Con el servidor sucede prácticamente lo mismo:
+</p>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Asistente-gnome-lokkit.png" class="internal" title="Un paso del Asistente Gnome-lokkit para configuración sencilla de nuestro cortafuegos"><img src="imgs/180px-180px-Asistente-gnome-lokkit.png" alt="Un paso del Asistente Gnome-lokkit para configuración sencilla de nuestro cortafuegos" width="180" height="135" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Asistente-gnome-lokkit.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Un paso del Asistente Gnome-lokkit para configuración sencilla de nuestro cortafuegos</div></div></div>
+<ul><li> Mantener el sistema continuamente actualizado. Si todo lo que instalamos es a través de paquetes de los repositorios estándares, tendremos un sistema bastante seguro frente a vulnerabilidades. Hay que tener mucho cuidado con las aplicaciones que se instalan a mano, no a través de los repositorios, porque es fácil que queden desactualizadas y que expongamos nuestro servidor a ataques. Una forma sencilla de estar al tanto de los paquetes que se necesitan actualizar en nuestro sistema es tener instalado el paquete <strong>apticron</strong> que nos avisará por correo sobre las actualizaciones pendientes en nuestro servidor.
+</li><li> Cuantos menos programas tengamos instalados y cuantos menos servicios disponibles desde Internet, menos posibilidad de ser atacados. Si no vamos a usar el escritorio gráfico, mejor desinstalarlo (<strong>sudo apt-get remove gnome-* xserver-* xorg-*</strong>, se dice rápido pero mejor ir con cuidado con esta operación). Los servidores habitualmente no instalan escritorio por motivos de seguridad.
+</li><li> Mantener un cortafuegos o <em>firewall</em> instalado y configurado en el servidor, sólo permitirá el tráfico autorizado de los servicios que tenemos. La aplicación <strong>gnome-lookit'<em> configura nuestro cortafuegos de una forma sencilla mendiante un asistente. Para una configuración más elaborada, existen otras aplicaciones gráficas como </em></strong><em>fwbuilder<strong> o </strong>firestarter</em>.
+</li><li> Hacer copias de seguridad regularmente de la información que creamos valiosa. Si podemos dejar los <em>backups</em> en otra localización diferente, siempre será mejor.
+</li><li> Usar contraseñas seguras para todos los usuarios de la máquina. Una contraseña sencilla puede equivaler a dejar las llaves puestas en la puerta de nuestra casa.
+</li><li> Si queremos estar al tanto de posibles problemas, es recomendable suscribirse a listas de anuncios de seguridad o listas que informen sobre la seguridad del software de los servicios que usamos.
+</li></ul>
+<p>Además tenemos que tener en cuenta que si detrás de nuestro servidor tenemos otras máquinas locales, podemos también comprometerlas a ellas si el servidor no es seguro.
+</p><p>Muchos de los ataques que se reciben desde Internet suelen basarse en un rastreo de los servicios que un servidor tiene habilitados, y una posterior búsqueda de debilidades de los servicios disponibles. Ningún software es totalmente seguro frente a ataques y continuamente se actualizan frente a debilidades que se van encontrando. La conclusión a esto es que una puesta al día del sistema siempre es una buena medida contra ataques.
+</p><p>El documento Debian Security Howto <a href="http://www.debian.org/doc/manuals/securing-debian-howto/index.en.html" class="external" title="http://www.debian.org/doc/manuals/securing-debian-howto/index.en.html">[1]</a><span class="urlexpansion"> (<i>http://www.debian.org/doc/manuals/securing-debian-howto/index.en.html</i>)</span> es una buena referencia para profundizar conocimientos y mejorar y endurecer la seguridad de nuestro servidor.
+</p><p><br />
+</p>
+<a name="Paquetes_que_cuidan_del_servidor"></a><h3> Paquetes que cuidan del servidor </h3>
+<p>A continuación enunciamos paquetes disponibles en nuestra distribución que pueden ayudarnos en las tareas de securización de nuestro servidor:
+</p>
+<ul><li> <strong>logcheck</strong> - Notifica por correo las anomalías en los logs de cualquier aplicación. Esta aplicación necesita una configuración muy precisa según nuestro sistema, pero una vez ajustada es muy útil para detectar ataques, intrusiones, etc. En Ubuntu y distribuciones derivadas dicha configuración se hace llevadera.
+</li><li> <strong>fcheck</strong> - Comprueba si se han modificado ficheros en nuestro servidor y detectar así ataques. Se guarda inicialmente el MD5 (una especie de comprobante de integridad) de los ficheros del sistema de nuestro servidor y periódicamente se comprueba si ha habido alguna modificación, notificándonos por correo cualquier anomalía. 
+</li><li> <strong>Snort</strong> - Un IDS (<em>Intrusion Detection System</em>) para análisis en tiempo real de paquetes en redes IP. Es muy configurable y existe bastante documentación y libros sobre su uso. A modo de ejemplo, puede detectar ataques a webs, DNS, y otros servicios habituales, escaneos de puertos, tráfico de bases de datos malicioso, ataques de denegación de servicio (DOS), etc. 
+</li><li> <strong>acidlab</strong> - Una consola PHP para analizar bases de datos de intrusiones (Analisys Console for Intrusion Databases), para buscar y procesar los eventos de seguridad generados por varios IDS como snort.
+</li><li> <strong>oinkmaster</strong> - Script para mantener las reglas de snort al día fácilmente.
+</li><li> <strong>Módulos para Apache</strong> - Apache dispone de varios módulos para mejorar la seguridad de nuestro servicio web como <strong>mod-ssl</strong>, <strong>mod-chroot</strong>, <strong>mod-security</strong>, <strong>mod-suphp</strong> y varios de autenticación. Todos ellos están empaquetados en nuestra distribución.
+</li></ul>
+<p><br />
+</p>
+<a name="Estad.C3.ADsticas_de_acceso_con_Webalizer"></a><h2> Estadísticas de acceso con Webalizer </h2>
+<p>Webalizer es un software de análisis de logs de servidores web. Nos muestra estadísticas de visitas a nuestras web, páginas más visitadas, etc. Realiza unas vistosas gráficas y las deja accesibles vía web.
+</p><p>Para usarlo instalamos el paquete 'webalizer':
+</p>
+<pre>
+$ sudo apt-get install webalizer
+</pre>
+<p>Editamos el fichero de configuración:
+</p>
+<pre>
+$ sudo nano /etc/webalizer.conf
+</pre>
+<p>para que analice los logs de apache2 en vez de apache (como está configurado por defecto):
+</p>
+<pre>
+LogFile         /var/log/apache2/access.log.1
+</pre>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Webalizer1.png" class="internal" title="Webalizer mostrando nuestras primeras estadísticas"><img src="imgs/180px-180px-Webalizer1.png" alt="Webalizer mostrando nuestras primeras estadísticas" width="180" height="123" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Webalizer1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Webalizer mostrando nuestras primeras estadísticas</div></div></div>
+<p>Ejecutamos el script (normalmente se encargará el servidor de hacerlo diariamente pero queremos ver incialmente el resultado):
+</p>
+<pre>
+$ sudo /etc/cron.daily/webalizer
+</pre>
+<p>y analizará los logs que tengamos en nuestro servidor web y dejará accesible el resultado en la carpeta webalizer de nuestro servidor: <a href="http://guias-ubuntu.dyndns.org/webalizer/" class="external" title="http://guias-ubuntu.dyndns.org/webalizer/">http://guias-ubuntu.dyndns.org/webalizer/</a>
+</p>
+<a name="Administraci.C3.B3n_web_de_bases_de_datos"></a><h2> Administración web de bases de datos </h2>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Phpmyadmin1.png" class="internal" title="administración de nuestra base de datos del CMS drupal a través de phpmyadmin"><img src="imgs/180px-180px-Phpmyadmin1.png" alt="administración de nuestra base de datos del CMS drupal a través de phpmyadmin" width="180" height="116" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Phpmyadmin1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>administración de nuestra base de datos del CMS drupal a través de phpmyadmin</div></div></div>
+<p>Para una gestión web de nuestra base de datos, instalamos el paquete <strong>phpmyadmin</strong>:
+</p>
+<pre>
+$ sudo apt-get install phpmyadmin
+</pre>
+<p>Nos dejará accesible su interfaz web, para administrar cómoda y remotamente nuestras base de datos MySQL: <a href="http://guias-ubuntu.dyndns.org/phpmyadmin/" class="external" title="http://guias-ubuntu.dyndns.org/phpmyadmin/">http://guias-ubuntu.dyndns.org/phpmyadmin/</a>
+</p><p>Es recomendable añadir soporte de SSL a nuestro servidor Apache y a esta instalación si vamos a acceder desde Internet a la gestión de las Base de Datos, ya que si no las contraseñas circularían transparentemente por Internet.
+</p>
+<a name="Monitorizar_el_tr.C3.A1fico"></a><h2> Monitorizar el tráfico </h2>
+<p>Las aplicaciones <strong>iptraf</strong> y <strong>tcptrack</strong> nos ayudan a analizar en tiempo real el tráfico IP de nuestro servidor.
+</p><p>Su instalación es sencilla:
+</p>
+<pre>
+$ sudo apt-get install tcptrack iptraf
+</pre>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Tcptrack1.png" class="internal" title="tcptrack en acción"><img src="imgs/180px-180px-Tcptrack1.png" alt="tcptrack en acción" width="180" height="138" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Tcptrack1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>tcptrack en acción</div></div></div>
+<p>Para arrancar tcptrack indicamos como parámetro el interfaz que hay que analizar:
+</p>
+<pre>
+$ sudo tcptrack -i eth0
+</pre>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Iptraf1.png" class="internal" title="iptraf en acción"><img src="imgs/180px-180px-Iptraf1.png" alt="iptraf en acción" width="180" height="138" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Iptraf1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>iptraf en acción</div></div></div>
+<p><strong>Iptraf</strong> es más interactivo, permitiendo más opciones por medio de menús en modo texto:
+</p>
+<pre>
+$ sudo iptraf
+</pre>
+<p>Con ayuda de estos programas podemos identificar cómo se usa el tráfico de nuestra red, identificar abusos, etc.
+</p>
+<a name="Monitorizar_el_estado_del_servidor"></a><h2> Monitorizar el estado del servidor </h2>
+<p>Es importante llevar un control de los recursos que consume nuestro servidor: el uso que tiene de memoria, de CPU, de red, de swap. Esta tarea la podemos hacer con herramientas de línea de comando (como <strong>top</strong> o <strong>htop</strong>), pero es interesante llevar un historial del uso de estos recursos de una forma gráfica, de forma que podamos ver cuál es la progresión, detectar problemas en el pasado, tener suficientes datos para actuar frente a problemas, etc.
+</p><p>Una herramienta muy completa que nos puede ayudar en esta labor es <strong>cacti</strong>, que permite monitorizar sistemas y servicios de una forma gráfica.
+</p><p>Para instalarla:
+</p>
+<pre>
+$ sudo apt-get install cacti php-pear librrds-perl
+</pre>
+<p>Durante la instalación nos pregunta una serie de informaciones que luego deberemos recordar a la hora de crear manualmente la base de datos en el siguiente paso:
+</p>
+<pre>
+$ mysql -u root -p -e &quot;create database cacti&quot;
+$ mysql -u root -p -e &quot;grant all privileges on cacti.* to cacti@localhost identified by 'contrasenyaanterior'; flush privileges&quot;
+$ zcat /usr/share/doc/cacti/cacti.sql.gz | mysql -u cacti -p cacti
+</pre>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Cacti.png" class="internal" title="Monitorización de nuestro servidor a través de cacti"><img src="imgs/180px-180px-Cacti.png" alt="Monitorización de nuestro servidor a través de cacti" width="180" height="116" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Cacti.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Monitorización de nuestro servidor a través de cacti</div></div></div>
+<p>Una vez hecho esto, podemos acceder a <a href="http://guias-ubuntu.dyndns.org/cacti/" class="external" title="http://guias-ubuntu.dyndns.org/cacti/">http://guias-ubuntu.dyndns.org/cacti/</a>
+</p><p>Allí completaremos la instalación. Nos solicitará un usuario (admin/admin inicialmente) y luego nos pedirá que cambiemos la contraseña de este usuario. Completado este paso accederemos al interfaz web de cacti donde podremos ya administrar la monitorización de nuestro sistema.
+</p><p>Por defecto, la propia máquina donde se instala se configura para ser monitorizada, por lo que si esperamos unos minutos, veremos los primeros gráficos de nuestro servidor.
+</p><p><br />
+</p>
+<a name="Administraci.C3.B3n_v.C3.ADa_web"></a><h2> Administración vía web </h2>
+<p><strong>Webmin</strong> es un sistema de administración a través de una interfaz web. Para usarlo, instalamos todos los módulos que creamos interesantes con base en lo visto en apartados anteriores.
+</p><p>Pero antes vamos a configurar la contraseña del superusuario 'root' en nuestro servidor si no lo hemos hecho ya:
+</p>
+<pre>
+$ sudo passwd
+</pre>
+<p>ya que webmin usará esta contraseña inicialmente y porque siempre es conveniente que en nuestro servidor conozcamos la contraseña de 'root'.
+Seguidamente instalamos los paquetes que nos interesan:
+</p>
+<pre>
+$ sudo apt-get install webmin webmin-apache webmin-jabber webmin-mysql webmin-samba webmin-sshd webmin-firewall webmin-core libmailtools-perl libhtml-format-perl libcompress-zlib-perl libio-socket-ssl-perl libmail-audit-perl mail-audit-tools
+</pre>
+<p>También instalamos algunos paquetes adicionales que nos sugiere apt-get para que webmin funcione de una forma más completa.
+</p><p>Esto levantará un servidor web específico para webmin en el puerto 10000 (si usamos un cortafuegos, debemos habilitar este tráfico) en concreto podemos apuntar nuestro navegador a <a href="https://guias-ubuntu.dyndns.org:10000/" class="external" title="https://guias-ubuntu.dyndns.org:10000/">https://guias-ubuntu.dyndns.org:10000/</a>
+</p><p>Si no estamos accediendo localmente, nos dará un mensaje de error, indicando que nuestra dirección IP no tiene permisos para acceder a webmin. Es necesario acceder en local o habilitar nuestra dirección editando el fichero:
+</p>
+<pre>
+$ sudo nano /etc/webmin/miniserv.conf
+</pre>
+<p>añadiendo nuestra dirección IP, por ejemplo:
+</p>
+<pre>
+allow=127.0.0.1 10.0.0.6
+</pre>
+<p>y rearrancado nuestro servidor de webmin:
+</p>
+<pre>
+$ sudo /etc/init.d/webmin restart              
+</pre>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Webmin1.png" class="internal" title="Webmin listo par ser usado"><img src="imgs/180px-180px-Webmin1.png" alt="Webmin listo par ser usado" width="180" height="116" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Webmin1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Webmin listo par ser usado</div></div></div>Esto ya hará accesible webmin desde nuestra dirección. Podemos entrar usando el usuario 'root' e introduciendo su contraseña.
+<p>Webmin tiene una gestión de usuarios de forma que podemos crear nuevos usuarios que puedan acceder a webmin. Organizados en pestañas, veremos todos los módulos de webmin que hemos instalado y podremos gestionar sus servicios asociados.
+</p><p>Como usamos apache2, el módulo de apache de nuestro webmin tiene que ser ajustado para acceder a la configuración de apache2, en vez de a la configuración de apache versión 1. Básicamente hay que cambiar las menciones a 'apache' por 'apache2' en la configuración del módulo.
+</p>
+<a name="Gestionando_backups"></a><h2> Gestionando backups </h2>
+<p>Una tarea importante que debemos realizar es la de hacer copias de seguridad de la información importante de nuestro servidor. Vamos a encargarle esta tarea al software <strong>slbackup</strong>, que con el módulo correspondiente de webmin nos permitirá hacer y restaurar copias de seguridad, de una máquina local de forma sencilla.
+</p><p>Para ello instalaremos los paquetes <strong>slbackup</strong> y <strong>webmin-slbackup</strong>:
+</p>
+<pre>
+$ sudo apt-get install slbackup webmin-slbackup
+</pre>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Slbackup1.png" class="internal" title="Una de las pantallas de administración de slbackup desde webmin"><img src="imgs/180px-180px-Slbackup1.png" alt="Una de las pantallas de administración de slbackup desde webmin" width="180" height="116" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Slbackup1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Una de las pantallas de administración de slbackup desde webmin</div></div></div>
+<p>Ya desde el interfaz web de webmin podremos gestionar de una forma sencilla que directorios se salvan, de qué máquinas, con qué periodicidad, cómo acceder de una forma segura a las máquinas remotas, así como la restauración de copias de seguridad.
+</p><p><br />
+</p>
+<pre>   Sigue: <a href="Quiero_m%C3%A1s.html" title="Guia v5/Quiero más">Quiero más</a>
+</pre><div class="printfooter">
+Obtenido de "<a href="http://www.guadalinex.org/guadapedia/index.php/Guia_v5/Rutinas_del_sysadmin_amateur">http://www.guadalinex.org/guadapedia/index.php/Guia_v5/Rutinas_del_sysadmin_amateur</a>"</div>
+<!-- end content -->
+<div class="visualClear"></div>
+</div>
+</div>
+</div>
+</body>
+</html>
