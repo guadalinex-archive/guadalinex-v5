@@ -7,7 +7,7 @@ Standards-Version: 3.7.2
 
 Package: extras-installer
 Architecture: any
-Depends: zenity, firefox, xapi
+Depends: zenity, guadafox 
 Description: Utilidad para instalación de software extra
  Script con zenity para la instalación de software extra no incluido
  en Guadalinex v5.
