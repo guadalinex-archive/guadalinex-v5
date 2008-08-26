@@ -1,3 +1,9 @@
+ubiquity (1.8.12guada6) hardy; urgency=low
+
+  * Added default user addition to group 'scard'.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Mon, 25 Aug 2008 14:30:47 +0200
+
 ubiquity (1.8.12guada5) hardy; urgency=low
 
   * 'd-i/grub-installer' use viewport 3 0 80 30 to center the dialog.
