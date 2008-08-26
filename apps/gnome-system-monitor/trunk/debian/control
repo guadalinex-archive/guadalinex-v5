@@ -1,0 +1,40 @@
+Source: gnome-system-monitor
+Section: gnome
+Priority: optional
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+XSBC-Original-Maintainer: Sebastien Bacher <seb128@debian.org>
+Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Sebastian Dröge <slomo@debian.org>
+Build-Depends: cdbs (>= 0.4.0),
+               debhelper (>= 5),
+               libgtk2.0-dev (>= 2.12.0),
+               docbook-to-man,
+               libgconf2-dev (>= 2.6.0),
+               libwnck-dev (>= 2.9.92),
+               libxml2-dev,
+               libgtop2-dev (>= 2.19.3),
+               gettext,
+               scrollkeeper,
+               gnome-pkg-tools (>= 0.10),
+               libxml-parser-perl,
+               libgnomevfs2-dev (>= 2.6.0),
+               libglib2.0-dev (>= 2.9.1),
+               pkg-config (>= 0.19),
+               gnome-icon-theme (>= 2.15.3),
+               libglibmm-2.4-dev (>= 2.14),
+               libgtkmm-2.4-dev (>= 2.8),
+               librsvg2-dev (>= 2.12),
+               gnome-doc-utils,
+               quilt,
+               liblaunchpad-integration-dev (>= 0.1.17)
+Standards-Version: 3.7.3
+
+Package: gnome-system-monitor
+Architecture: any
+Depends: ${shlibs:Depends},
+         scrollkeeper,
+         ${misc:Depends}
+Recommends: libgksu2-0
+Description: Process viewer and system resource monitor for GNOME 2
+ This package allows you to graphically view and manipulate the running
+ processes on your system.  It also provides an overview of available
+ resources such as CPU and memory.

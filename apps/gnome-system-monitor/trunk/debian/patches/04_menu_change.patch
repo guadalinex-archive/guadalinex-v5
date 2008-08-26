@@ -1,0 +1,12 @@
+diff -Nur gnome-system-monitor-2.18.0/gnome-system-monitor.desktop.in.in gnome-system-monitor-2.18.0.new/gnome-system-monitor.desktop.in.in
+--- gnome-system-monitor-2.18.0/gnome-system-monitor.desktop.in.in	2007-03-12 07:37:24.000000000 +0100
++++ gnome-system-monitor-2.18.0.new/gnome-system-monitor.desktop.in.in	2007-03-14 10:44:18.000000000 +0100
+@@ -8,7 +8,7 @@
+ Terminal=false
+ Type=Application
+ StartupNotify=true
+-Categories=GNOME;GTK;System;Monitor;
++Categories=GNOME;GTK;System;Settings;Monitor;
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=system-monitor
+ X-GNOME-Bugzilla-Component=general

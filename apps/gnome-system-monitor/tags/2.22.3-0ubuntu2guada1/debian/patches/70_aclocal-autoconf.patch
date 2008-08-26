@@ -1,0 +1,718 @@
+Generated with:
+    aclocal-1.9 && \
+    autoconf && \
+    rm -rf autom4te.cache
+
+Index: gnome-system-monitor-2.22.3/configure
+===================================================================
+--- gnome-system-monitor-2.22.3.orig/configure	2008-06-30 23:50:34.000000000 +0200
++++ gnome-system-monitor-2.22.3/configure	2008-07-03 11:17:43.000000000 +0200
+@@ -873,9 +873,6 @@
+ FFLAGS
+ ac_ct_F77
+ LIBTOOL
+-INTLTOOL_UPDATE
+-INTLTOOL_MERGE
+-INTLTOOL_EXTRACT
+ INTLTOOL_DESKTOP_RULE
+ INTLTOOL_DIRECTORY_RULE
+ INTLTOOL_KEYS_RULE
+@@ -898,6 +895,9 @@
+ XGETTEXT
+ MSGMERGE
+ MSGFMT
++INTLTOOL_EXTRACT
++INTLTOOL_MERGE
++INTLTOOL_UPDATE
+ INTLTOOL_PERL
+ ALL_LINGUAS
+ DATADIRNAME
+@@ -19838,8 +19838,8 @@
+ echo $ECHO_N "checking for intltool >= 0.35.0... $ECHO_C" >&6; }
+ 
+     INTLTOOL_REQUIRED_VERSION_AS_INT=`echo 0.35.0 | awk -F. '{ print $ 1 * 1000 + $ 2 * 100 + $ 3; }'`
+-    INTLTOOL_APPLIED_VERSION=`intltool-update --version | head -1 | cut -d" " -f3`
+-    INTLTOOL_APPLIED_VERSION_AS_INT=`echo $INTLTOOL_APPLIED_VERSION | awk -F. '{ print $ 1 * 1000 + $ 2 * 100 + $ 3; }'`
++    INTLTOOL_APPLIED_VERSION=`awk -F\" '/\\$VERSION / { print $ 2; }' ${ac_aux_dir}/intltool-update.in`
++    INTLTOOL_APPLIED_VERSION_AS_INT=`awk -F\" '/\\$VERSION / { split($ 2, VERSION, "."); print VERSION[1] * 1000 + VERSION[2] * 100 + VERSION[3];}' ${ac_aux_dir}/intltool-update.in`
+ 
+     { echo "$as_me:$LINENO: result: $INTLTOOL_APPLIED_VERSION found" >&5
+ echo "${ECHO_T}$INTLTOOL_APPLIED_VERSION found" >&6; }
+@@ -19849,132 +19849,6 @@
+    { (exit 1); exit 1; }; }
+ fi
+ 
+-# Extract the first word of "intltool-update", so it can be a program name with args.
+-set dummy intltool-update; ac_word=$2
+-{ echo "$as_me:$LINENO: checking for $ac_word" >&5
+-echo $ECHO_N "checking for $ac_word... $ECHO_C" >&6; }
+-if test "${ac_cv_path_INTLTOOL_UPDATE+set}" = set; then
+-  echo $ECHO_N "(cached) $ECHO_C" >&6
+-else
+-  case $INTLTOOL_UPDATE in
+-  [\\/]* | ?:[\\/]*)
+-  ac_cv_path_INTLTOOL_UPDATE="$INTLTOOL_UPDATE" # Let the user override the test with a path.
+-  ;;
+-  *)
+-  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+-for as_dir in $PATH
+-do
+-  IFS=$as_save_IFS
+-  test -z "$as_dir" && as_dir=.
+-  for ac_exec_ext in '' $ac_executable_extensions; do
+-  if { test -f "$as_dir/$ac_word$ac_exec_ext" && $as_test_x "$as_dir/$ac_word$ac_exec_ext"; }; then
+-    ac_cv_path_INTLTOOL_UPDATE="$as_dir/$ac_word$ac_exec_ext"
+-    echo "$as_me:$LINENO: found $as_dir/$ac_word$ac_exec_ext" >&5
+-    break 2
+-  fi
+-done
+-done
+-IFS=$as_save_IFS
+-
+-  ;;
+-esac
+-fi
+-INTLTOOL_UPDATE=$ac_cv_path_INTLTOOL_UPDATE
+-if test -n "$INTLTOOL_UPDATE"; then
+-  { echo "$as_me:$LINENO: result: $INTLTOOL_UPDATE" >&5
+-echo "${ECHO_T}$INTLTOOL_UPDATE" >&6; }
+-else
+-  { echo "$as_me:$LINENO: result: no" >&5
+-echo "${ECHO_T}no" >&6; }
+-fi
+-
+-
+-# Extract the first word of "intltool-merge", so it can be a program name with args.
+-set dummy intltool-merge; ac_word=$2
+-{ echo "$as_me:$LINENO: checking for $ac_word" >&5
+-echo $ECHO_N "checking for $ac_word... $ECHO_C" >&6; }
+-if test "${ac_cv_path_INTLTOOL_MERGE+set}" = set; then
+-  echo $ECHO_N "(cached) $ECHO_C" >&6
+-else
+-  case $INTLTOOL_MERGE in
+-  [\\/]* | ?:[\\/]*)
+-  ac_cv_path_INTLTOOL_MERGE="$INTLTOOL_MERGE" # Let the user override the test with a path.
+-  ;;
+-  *)
+-  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+-for as_dir in $PATH
+-do
+-  IFS=$as_save_IFS
+-  test -z "$as_dir" && as_dir=.
+-  for ac_exec_ext in '' $ac_executable_extensions; do
+-  if { test -f "$as_dir/$ac_word$ac_exec_ext" && $as_test_x "$as_dir/$ac_word$ac_exec_ext"; }; then
+-    ac_cv_path_INTLTOOL_MERGE="$as_dir/$ac_word$ac_exec_ext"
+-    echo "$as_me:$LINENO: found $as_dir/$ac_word$ac_exec_ext" >&5
+-    break 2
+-  fi
+-done
+-done
+-IFS=$as_save_IFS
+-
+-  ;;
+-esac
+-fi
+-INTLTOOL_MERGE=$ac_cv_path_INTLTOOL_MERGE
+-if test -n "$INTLTOOL_MERGE"; then
+-  { echo "$as_me:$LINENO: result: $INTLTOOL_MERGE" >&5
+-echo "${ECHO_T}$INTLTOOL_MERGE" >&6; }
+-else
+-  { echo "$as_me:$LINENO: result: no" >&5
+-echo "${ECHO_T}no" >&6; }
+-fi
+-
+-
+-# Extract the first word of "intltool-extract", so it can be a program name with args.
+-set dummy intltool-extract; ac_word=$2
+-{ echo "$as_me:$LINENO: checking for $ac_word" >&5
+-echo $ECHO_N "checking for $ac_word... $ECHO_C" >&6; }
+-if test "${ac_cv_path_INTLTOOL_EXTRACT+set}" = set; then
+-  echo $ECHO_N "(cached) $ECHO_C" >&6
+-else
+-  case $INTLTOOL_EXTRACT in
+-  [\\/]* | ?:[\\/]*)
+-  ac_cv_path_INTLTOOL_EXTRACT="$INTLTOOL_EXTRACT" # Let the user override the test with a path.
+-  ;;
+-  *)
+-  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+-for as_dir in $PATH
+-do
+-  IFS=$as_save_IFS
+-  test -z "$as_dir" && as_dir=.
+-  for ac_exec_ext in '' $ac_executable_extensions; do
+-  if { test -f "$as_dir/$ac_word$ac_exec_ext" && $as_test_x "$as_dir/$ac_word$ac_exec_ext"; }; then
+-    ac_cv_path_INTLTOOL_EXTRACT="$as_dir/$ac_word$ac_exec_ext"
+-    echo "$as_me:$LINENO: found $as_dir/$ac_word$ac_exec_ext" >&5
+-    break 2
+-  fi
+-done
+-done
+-IFS=$as_save_IFS
+-
+-  ;;
+-esac
+-fi
+-INTLTOOL_EXTRACT=$ac_cv_path_INTLTOOL_EXTRACT
+-if test -n "$INTLTOOL_EXTRACT"; then
+-  { echo "$as_me:$LINENO: result: $INTLTOOL_EXTRACT" >&5
+-echo "${ECHO_T}$INTLTOOL_EXTRACT" >&6; }
+-else
+-  { echo "$as_me:$LINENO: result: no" >&5
+-echo "${ECHO_T}no" >&6; }
+-fi
+-
+-
+-if test -z "$INTLTOOL_UPDATE" -o -z "$INTLTOOL_MERGE" -o -z "$INTLTOOL_EXTRACT"; then
+-    { { echo "$as_me:$LINENO: error: The intltool scripts were not found. Please install intltool." >&5
+-echo "$as_me: error: The intltool scripts were not found. Please install intltool." >&2;}
+-   { (exit 1); exit 1; }; }
+-fi
+-
+   INTLTOOL_DESKTOP_RULE='%.desktop:   %.desktop.in   $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; LC_ALL=C $(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@'
+ INTLTOOL_DIRECTORY_RULE='%.directory: %.directory.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; LC_ALL=C $(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@'
+      INTLTOOL_KEYS_RULE='%.keys:      %.keys.in      $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; LC_ALL=C $(INTLTOOL_MERGE) -k -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@'
+@@ -20150,6 +20024,14 @@
+    { (exit 1); exit 1; }; }
+ fi
+ 
++# Use the tools built into the package, not the ones that are installed.
++INTLTOOL_EXTRACT='$(top_builddir)/intltool-extract'
++
++INTLTOOL_MERGE='$(top_builddir)/intltool-merge'
++
++INTLTOOL_UPDATE='$(top_builddir)/intltool-update'
++
++
+ # Extract the first word of "perl", so it can be a program name with args.
+ set dummy perl; ac_word=$2
+ { echo "$as_me:$LINENO: checking for $ac_word" >&5
+@@ -20362,6 +20244,10 @@
+ 
+ 
+ 
++ac_config_commands="$ac_config_commands intltool"
++
++
++
+ 
+ 
+ if test "x$ac_cv_env_PKG_CONFIG_set" != "xset"; then
+@@ -22476,12 +22362,12 @@
+         pkg_cv_PROCMAN_CFLAGS="$PROCMAN_CFLAGS"
+     else
+         if test -n "$PKG_CONFIG" && \
+-    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"glib-2.0 >= \$GLIB_REQUIRED gconf-2.0 >= \$GCONF_REQUIRED libgtop-2.0 >= \$LIBGTOP_REQUIRED libwnck-1.0 >= \$LIBWNCK_REQUIRED gtk+-2.0 >= \$GTK_REQUIRED gnome-vfs-2.0 >= \$GNOME_VFS_REQUIRED gnome-icon-theme >= \$GNOME_ICON_THEME_REQUIRED gtkmm-2.4 >= \$GTKMM_REQUIRED libxml-2.0 >= \$LIBXML_REQUIRED librsvg-2.0 >= \$RSVG_REQUIRED glibmm-2.4 >= \$GLIBMM_REQUIRED\"") >&5
+-  ($PKG_CONFIG --exists --print-errors "glib-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libgtop-2.0 >= $LIBGTOP_REQUIRED libwnck-1.0 >= $LIBWNCK_REQUIRED gtk+-2.0 >= $GTK_REQUIRED gnome-vfs-2.0 >= $GNOME_VFS_REQUIRED gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED gtkmm-2.4 >= $GTKMM_REQUIRED libxml-2.0 >= $LIBXML_REQUIRED librsvg-2.0 >= $RSVG_REQUIRED glibmm-2.4 >= $GLIBMM_REQUIRED") 2>&5
++    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"glib-2.0 >= \$GLIB_REQUIRED gconf-2.0 >= \$GCONF_REQUIRED libgtop-2.0 >= \$LIBGTOP_REQUIRED libwnck-1.0 >= \$LIBWNCK_REQUIRED gtk+-2.0 >= \$GTK_REQUIRED launchpad-integration gnome-vfs-2.0 >= \$GNOME_VFS_REQUIRED gnome-icon-theme >= \$GNOME_ICON_THEME_REQUIRED gtkmm-2.4 >= \$GTKMM_REQUIRED libxml-2.0 >= \$LIBXML_REQUIRED librsvg-2.0 >= \$RSVG_REQUIRED glibmm-2.4 >= \$GLIBMM_REQUIRED\"") >&5
++  ($PKG_CONFIG --exists --print-errors "glib-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libgtop-2.0 >= $LIBGTOP_REQUIRED libwnck-1.0 >= $LIBWNCK_REQUIRED gtk+-2.0 >= $GTK_REQUIRED launchpad-integration gnome-vfs-2.0 >= $GNOME_VFS_REQUIRED gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED gtkmm-2.4 >= $GTKMM_REQUIRED libxml-2.0 >= $LIBXML_REQUIRED librsvg-2.0 >= $RSVG_REQUIRED glibmm-2.4 >= $GLIBMM_REQUIRED") 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-  pkg_cv_PROCMAN_CFLAGS=`$PKG_CONFIG --cflags "glib-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libgtop-2.0 >= $LIBGTOP_REQUIRED libwnck-1.0 >= $LIBWNCK_REQUIRED gtk+-2.0 >= $GTK_REQUIRED gnome-vfs-2.0 >= $GNOME_VFS_REQUIRED gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED gtkmm-2.4 >= $GTKMM_REQUIRED libxml-2.0 >= $LIBXML_REQUIRED librsvg-2.0 >= $RSVG_REQUIRED glibmm-2.4 >= $GLIBMM_REQUIRED" 2>/dev/null`
++  pkg_cv_PROCMAN_CFLAGS=`$PKG_CONFIG --cflags "glib-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libgtop-2.0 >= $LIBGTOP_REQUIRED libwnck-1.0 >= $LIBWNCK_REQUIRED gtk+-2.0 >= $GTK_REQUIRED launchpad-integration gnome-vfs-2.0 >= $GNOME_VFS_REQUIRED gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED gtkmm-2.4 >= $GTKMM_REQUIRED libxml-2.0 >= $LIBXML_REQUIRED librsvg-2.0 >= $RSVG_REQUIRED glibmm-2.4 >= $GLIBMM_REQUIRED" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -22494,12 +22380,12 @@
+         pkg_cv_PROCMAN_LIBS="$PROCMAN_LIBS"
+     else
+         if test -n "$PKG_CONFIG" && \
+-    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"glib-2.0 >= \$GLIB_REQUIRED gconf-2.0 >= \$GCONF_REQUIRED libgtop-2.0 >= \$LIBGTOP_REQUIRED libwnck-1.0 >= \$LIBWNCK_REQUIRED gtk+-2.0 >= \$GTK_REQUIRED gnome-vfs-2.0 >= \$GNOME_VFS_REQUIRED gnome-icon-theme >= \$GNOME_ICON_THEME_REQUIRED gtkmm-2.4 >= \$GTKMM_REQUIRED libxml-2.0 >= \$LIBXML_REQUIRED librsvg-2.0 >= \$RSVG_REQUIRED glibmm-2.4 >= \$GLIBMM_REQUIRED\"") >&5
+-  ($PKG_CONFIG --exists --print-errors "glib-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libgtop-2.0 >= $LIBGTOP_REQUIRED libwnck-1.0 >= $LIBWNCK_REQUIRED gtk+-2.0 >= $GTK_REQUIRED gnome-vfs-2.0 >= $GNOME_VFS_REQUIRED gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED gtkmm-2.4 >= $GTKMM_REQUIRED libxml-2.0 >= $LIBXML_REQUIRED librsvg-2.0 >= $RSVG_REQUIRED glibmm-2.4 >= $GLIBMM_REQUIRED") 2>&5
++    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"glib-2.0 >= \$GLIB_REQUIRED gconf-2.0 >= \$GCONF_REQUIRED libgtop-2.0 >= \$LIBGTOP_REQUIRED libwnck-1.0 >= \$LIBWNCK_REQUIRED gtk+-2.0 >= \$GTK_REQUIRED launchpad-integration gnome-vfs-2.0 >= \$GNOME_VFS_REQUIRED gnome-icon-theme >= \$GNOME_ICON_THEME_REQUIRED gtkmm-2.4 >= \$GTKMM_REQUIRED libxml-2.0 >= \$LIBXML_REQUIRED librsvg-2.0 >= \$RSVG_REQUIRED glibmm-2.4 >= \$GLIBMM_REQUIRED\"") >&5
++  ($PKG_CONFIG --exists --print-errors "glib-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libgtop-2.0 >= $LIBGTOP_REQUIRED libwnck-1.0 >= $LIBWNCK_REQUIRED gtk+-2.0 >= $GTK_REQUIRED launchpad-integration gnome-vfs-2.0 >= $GNOME_VFS_REQUIRED gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED gtkmm-2.4 >= $GTKMM_REQUIRED libxml-2.0 >= $LIBXML_REQUIRED librsvg-2.0 >= $RSVG_REQUIRED glibmm-2.4 >= $GLIBMM_REQUIRED") 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-  pkg_cv_PROCMAN_LIBS=`$PKG_CONFIG --libs "glib-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libgtop-2.0 >= $LIBGTOP_REQUIRED libwnck-1.0 >= $LIBWNCK_REQUIRED gtk+-2.0 >= $GTK_REQUIRED gnome-vfs-2.0 >= $GNOME_VFS_REQUIRED gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED gtkmm-2.4 >= $GTKMM_REQUIRED libxml-2.0 >= $LIBXML_REQUIRED librsvg-2.0 >= $RSVG_REQUIRED glibmm-2.4 >= $GLIBMM_REQUIRED" 2>/dev/null`
++  pkg_cv_PROCMAN_LIBS=`$PKG_CONFIG --libs "glib-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libgtop-2.0 >= $LIBGTOP_REQUIRED libwnck-1.0 >= $LIBWNCK_REQUIRED gtk+-2.0 >= $GTK_REQUIRED launchpad-integration gnome-vfs-2.0 >= $GNOME_VFS_REQUIRED gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED gtkmm-2.4 >= $GTKMM_REQUIRED libxml-2.0 >= $LIBXML_REQUIRED librsvg-2.0 >= $RSVG_REQUIRED glibmm-2.4 >= $GLIBMM_REQUIRED" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -22518,14 +22404,14 @@
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        PROCMAN_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "glib-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libgtop-2.0 >= $LIBGTOP_REQUIRED libwnck-1.0 >= $LIBWNCK_REQUIRED gtk+-2.0 >= $GTK_REQUIRED gnome-vfs-2.0 >= $GNOME_VFS_REQUIRED gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED gtkmm-2.4 >= $GTKMM_REQUIRED libxml-2.0 >= $LIBXML_REQUIRED librsvg-2.0 >= $RSVG_REQUIRED glibmm-2.4 >= $GLIBMM_REQUIRED"`
++	        PROCMAN_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "glib-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libgtop-2.0 >= $LIBGTOP_REQUIRED libwnck-1.0 >= $LIBWNCK_REQUIRED gtk+-2.0 >= $GTK_REQUIRED launchpad-integration gnome-vfs-2.0 >= $GNOME_VFS_REQUIRED gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED gtkmm-2.4 >= $GTKMM_REQUIRED libxml-2.0 >= $LIBXML_REQUIRED librsvg-2.0 >= $RSVG_REQUIRED glibmm-2.4 >= $GLIBMM_REQUIRED"`
+         else
+-	        PROCMAN_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "glib-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libgtop-2.0 >= $LIBGTOP_REQUIRED libwnck-1.0 >= $LIBWNCK_REQUIRED gtk+-2.0 >= $GTK_REQUIRED gnome-vfs-2.0 >= $GNOME_VFS_REQUIRED gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED gtkmm-2.4 >= $GTKMM_REQUIRED libxml-2.0 >= $LIBXML_REQUIRED librsvg-2.0 >= $RSVG_REQUIRED glibmm-2.4 >= $GLIBMM_REQUIRED"`
++	        PROCMAN_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "glib-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libgtop-2.0 >= $LIBGTOP_REQUIRED libwnck-1.0 >= $LIBWNCK_REQUIRED gtk+-2.0 >= $GTK_REQUIRED launchpad-integration gnome-vfs-2.0 >= $GNOME_VFS_REQUIRED gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED gtkmm-2.4 >= $GTKMM_REQUIRED libxml-2.0 >= $LIBXML_REQUIRED librsvg-2.0 >= $RSVG_REQUIRED glibmm-2.4 >= $GLIBMM_REQUIRED"`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$PROCMAN_PKG_ERRORS" >&5
+ 
+-	{ { echo "$as_me:$LINENO: error: Package requirements (glib-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libgtop-2.0 >= $LIBGTOP_REQUIRED libwnck-1.0 >= $LIBWNCK_REQUIRED gtk+-2.0 >= $GTK_REQUIRED gnome-vfs-2.0 >= $GNOME_VFS_REQUIRED gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED gtkmm-2.4 >= $GTKMM_REQUIRED libxml-2.0 >= $LIBXML_REQUIRED librsvg-2.0 >= $RSVG_REQUIRED glibmm-2.4 >= $GLIBMM_REQUIRED) were not met:
++	{ { echo "$as_me:$LINENO: error: Package requirements (glib-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libgtop-2.0 >= $LIBGTOP_REQUIRED libwnck-1.0 >= $LIBWNCK_REQUIRED gtk+-2.0 >= $GTK_REQUIRED launchpad-integration gnome-vfs-2.0 >= $GNOME_VFS_REQUIRED gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED gtkmm-2.4 >= $GTKMM_REQUIRED libxml-2.0 >= $LIBXML_REQUIRED librsvg-2.0 >= $RSVG_REQUIRED glibmm-2.4 >= $GLIBMM_REQUIRED) were not met:
+ 
+ $PROCMAN_PKG_ERRORS
+ 
+@@ -22536,7 +22422,7 @@
+ and PROCMAN_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ " >&5
+-echo "$as_me: error: Package requirements (glib-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libgtop-2.0 >= $LIBGTOP_REQUIRED libwnck-1.0 >= $LIBWNCK_REQUIRED gtk+-2.0 >= $GTK_REQUIRED gnome-vfs-2.0 >= $GNOME_VFS_REQUIRED gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED gtkmm-2.4 >= $GTKMM_REQUIRED libxml-2.0 >= $LIBXML_REQUIRED librsvg-2.0 >= $RSVG_REQUIRED glibmm-2.4 >= $GLIBMM_REQUIRED) were not met:
++echo "$as_me: error: Package requirements (glib-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libgtop-2.0 >= $LIBGTOP_REQUIRED libwnck-1.0 >= $LIBWNCK_REQUIRED gtk+-2.0 >= $GTK_REQUIRED launchpad-integration gnome-vfs-2.0 >= $GNOME_VFS_REQUIRED gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED gtkmm-2.4 >= $GTKMM_REQUIRED libxml-2.0 >= $LIBXML_REQUIRED librsvg-2.0 >= $RSVG_REQUIRED glibmm-2.4 >= $GLIBMM_REQUIRED) were not met:
+ 
+ $PROCMAN_PKG_ERRORS
+ 
+@@ -24925,6 +24811,9 @@
+ # INIT-COMMANDS
+ #
+ AMDEP_TRUE="$AMDEP_TRUE" ac_aux_dir="$ac_aux_dir"
++INTLTOOL_PERL='${INTLTOOL_PERL}' ac_aux_dir='${ac_aux_dir}'
++prefix="$prefix" exec_prefix="$exec_prefix" INTLTOOL_LIBDIR="$libdir"
++INTLTOOL_EXTRACT='${INTLTOOL_EXTRACT}'
+ 
+ 
+ _ACEOF
+@@ -24937,6 +24826,7 @@
+   case $ac_config_target in
+     "config.h") CONFIG_HEADERS="$CONFIG_HEADERS config.h" ;;
+     "depfiles") CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
++    "intltool") CONFIG_COMMANDS="$CONFIG_COMMANDS intltool" ;;
+     "default-1") CONFIG_COMMANDS="$CONFIG_COMMANDS default-1" ;;
+     "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
+     "src/Makefile") CONFIG_FILES="$CONFIG_FILES src/Makefile" ;;
+@@ -25152,9 +25042,6 @@
+ FFLAGS!$FFLAGS$ac_delim
+ ac_ct_F77!$ac_ct_F77$ac_delim
+ LIBTOOL!$LIBTOOL$ac_delim
+-INTLTOOL_UPDATE!$INTLTOOL_UPDATE$ac_delim
+-INTLTOOL_MERGE!$INTLTOOL_MERGE$ac_delim
+-INTLTOOL_EXTRACT!$INTLTOOL_EXTRACT$ac_delim
+ INTLTOOL_DESKTOP_RULE!$INTLTOOL_DESKTOP_RULE$ac_delim
+ INTLTOOL_DIRECTORY_RULE!$INTLTOOL_DIRECTORY_RULE$ac_delim
+ INTLTOOL_KEYS_RULE!$INTLTOOL_KEYS_RULE$ac_delim
+@@ -25177,6 +25064,9 @@
+ XGETTEXT!$XGETTEXT$ac_delim
+ MSGMERGE!$MSGMERGE$ac_delim
+ MSGFMT!$MSGFMT$ac_delim
++INTLTOOL_EXTRACT!$INTLTOOL_EXTRACT$ac_delim
++INTLTOOL_MERGE!$INTLTOOL_MERGE$ac_delim
++INTLTOOL_UPDATE!$INTLTOOL_UPDATE$ac_delim
+ INTLTOOL_PERL!$INTLTOOL_PERL$ac_delim
+ ALL_LINGUAS!$ALL_LINGUAS$ac_delim
+ DATADIRNAME!$DATADIRNAME$ac_delim
+@@ -25773,6 +25663,23 @@
+   done
+ done
+  ;;
++    "intltool":C)
++
++for file in intltool-extract intltool-merge intltool-update; do
++  sed -e "s|@INTLTOOL_EXTRACT@|`pwd`/intltool-extract|g" \
++      -e "s|@INTLTOOL_LIBDIR@|${INTLTOOL_LIBDIR}|g" \
++      -e "s|@INTLTOOL_PERL@|${INTLTOOL_PERL}|g" \
++	< ${ac_aux_dir}/${file}.in > ${file}.out
++  if cmp -s ${file} ${file}.out 2>/dev/null; then
++    rm -f ${file}.out
++  else
++    mv -f ${file}.out ${file}
++  fi
++  chmod ugo+x ${file}
++  chmod u+w ${file}
++done
++
++ ;;
+     "default-1":C) case "$CONFIG_FILES" in *po/Makefile.in*)
+         sed -e "/POTFILES =/r po/POTFILES" po/Makefile.in > po/Makefile
+       esac ;;
+Index: gnome-system-monitor-2.22.3/aclocal.m4
+===================================================================
+--- gnome-system-monitor-2.22.3.orig/aclocal.m4	2008-06-30 23:49:51.000000000 +0200
++++ gnome-system-monitor-2.22.3/aclocal.m4	2008-07-03 11:17:36.000000000 +0200
+@@ -484,6 +484,148 @@
+ fi])
+ 
+ 
++dnl GNOME_COMPILE_WARNINGS
++dnl Turn on many useful compiler warnings
++dnl For now, only works on GCC
++AC_DEFUN([GNOME_COMPILE_WARNINGS],[
++    dnl ******************************
++    dnl More compiler warnings
++    dnl ******************************
++
++    AC_ARG_ENABLE(compile-warnings, 
++                  AC_HELP_STRING([--enable-compile-warnings=@<:@no/minimum/yes/maximum/error@:>@],
++                                 [Turn on compiler warnings]),,
++                  [enable_compile_warnings="m4_default([$1],[yes])"])
++
++    warnCFLAGS=
++    if test "x$GCC" != xyes; then
++	enable_compile_warnings=no
++    fi
++
++    warning_flags=
++    realsave_CFLAGS="$CFLAGS"
++
++    case "$enable_compile_warnings" in
++    no)
++	warning_flags=
++	;;
++    minimum)
++	warning_flags="-Wall"
++	;;
++    yes)
++	warning_flags="-Wall -Wmissing-prototypes"
++	;;
++    maximum|error)
++	warning_flags="-Wall -Wmissing-prototypes -Wnested-externs -Wpointer-arith"
++	CFLAGS="$warning_flags $CFLAGS"
++	for option in -Wno-sign-compare; do
++		SAVE_CFLAGS="$CFLAGS"
++		CFLAGS="$CFLAGS $option"
++		AC_MSG_CHECKING([whether gcc understands $option])
++		AC_TRY_COMPILE([], [],
++			has_option=yes,
++			has_option=no,)
++		CFLAGS="$SAVE_CFLAGS"
++		AC_MSG_RESULT($has_option)
++		if test $has_option = yes; then
++		  warning_flags="$warning_flags $option"
++		fi
++		unset has_option
++		unset SAVE_CFLAGS
++	done
++	unset option
++	if test "$enable_compile_warnings" = "error" ; then
++	    warning_flags="$warning_flags -Werror"
++	fi
++	;;
++    *)
++	AC_MSG_ERROR(Unknown argument '$enable_compile_warnings' to --enable-compile-warnings)
++	;;
++    esac
++    CFLAGS="$realsave_CFLAGS"
++    AC_MSG_CHECKING(what warning flags to pass to the C compiler)
++    AC_MSG_RESULT($warning_flags)
++
++    AC_ARG_ENABLE(iso-c,
++                  AC_HELP_STRING([--enable-iso-c],
++                                 [Try to warn if code is not ISO C ]),,
++                  [enable_iso_c=no])
++
++    AC_MSG_CHECKING(what language compliance flags to pass to the C compiler)
++    complCFLAGS=
++    if test "x$enable_iso_c" != "xno"; then
++	if test "x$GCC" = "xyes"; then
++	case " $CFLAGS " in
++	    *[\ \	]-ansi[\ \	]*) ;;
++	    *) complCFLAGS="$complCFLAGS -ansi" ;;
++	esac
++	case " $CFLAGS " in
++	    *[\ \	]-pedantic[\ \	]*) ;;
++	    *) complCFLAGS="$complCFLAGS -pedantic" ;;
++	esac
++	fi
++    fi
++    AC_MSG_RESULT($complCFLAGS)
++
++    WARN_CFLAGS="$warning_flags $complCFLAGS"
++    AC_SUBST(WARN_CFLAGS)
++])
++
++dnl For C++, do basically the same thing.
++
++AC_DEFUN([GNOME_CXX_WARNINGS],[
++  AC_ARG_ENABLE(cxx-warnings,
++                AC_HELP_STRING([--enable-cxx-warnings=@<:@no/minimum/yes@:>@]
++                               [Turn on compiler warnings.]),,
++                [enable_cxx_warnings="m4_default([$1],[minimum])"])
++
++  AC_MSG_CHECKING(what warning flags to pass to the C++ compiler)
++  warnCXXFLAGS=
++  if test "x$GXX" != xyes; then
++    enable_cxx_warnings=no
++  fi
++  if test "x$enable_cxx_warnings" != "xno"; then
++    if test "x$GXX" = "xyes"; then
++      case " $CXXFLAGS " in
++      *[\ \	]-Wall[\ \	]*) ;;
++      *) warnCXXFLAGS="-Wall -Wno-unused" ;;
++      esac
++
++      ## -W is not all that useful.  And it cannot be controlled
++      ## with individual -Wno-xxx flags, unlike -Wall
++      if test "x$enable_cxx_warnings" = "xyes"; then
++	warnCXXFLAGS="$warnCXXFLAGS -Wshadow -Woverloaded-virtual"
++      fi
++    fi
++  fi
++  AC_MSG_RESULT($warnCXXFLAGS)
++
++   AC_ARG_ENABLE(iso-cxx,
++                 AC_HELP_STRING([--enable-iso-cxx],
++                                [Try to warn if code is not ISO C++ ]),,
++                 [enable_iso_cxx=no])
++
++   AC_MSG_CHECKING(what language compliance flags to pass to the C++ compiler)
++   complCXXFLAGS=
++   if test "x$enable_iso_cxx" != "xno"; then
++     if test "x$GXX" = "xyes"; then
++      case " $CXXFLAGS " in
++      *[\ \	]-ansi[\ \	]*) ;;
++      *) complCXXFLAGS="$complCXXFLAGS -ansi" ;;
++      esac
++
++      case " $CXXFLAGS " in
++      *[\ \	]-pedantic[\ \	]*) ;;
++      *) complCXXFLAGS="$complCXXFLAGS -pedantic" ;;
++      esac
++     fi
++   fi
++  AC_MSG_RESULT($complCXXFLAGS)
++
++  WARN_CXXFLAGS="$CXXFLAGS $warnCXXFLAGS $complCXXFLAGS"
++  AC_SUBST(WARN_CXXFLAGS)
++])
++
+ dnl Do not call GNOME_DOC_DEFINES directly.  It is split out from
+ dnl GNOME_DOC_INIT to allow gnome-doc-utils to bootstrap off itself.
+ AC_DEFUN([GNOME_DOC_DEFINES],
+@@ -539,7 +681,7 @@
+ 
+ 
+ dnl IT_PROG_INTLTOOL([MINIMUM-VERSION], [no-xml])
+-# serial 40 IT_PROG_INTLTOOL
++# serial 36 IT_PROG_INTLTOOL
+ AC_DEFUN([IT_PROG_INTLTOOL],
+ [AC_PREREQ([2.50])dnl
+ 
+@@ -555,21 +697,14 @@
+     AC_MSG_CHECKING([for intltool >= $1])
+ 
+     INTLTOOL_REQUIRED_VERSION_AS_INT=`echo $1 | awk -F. '{ print $ 1 * 1000 + $ 2 * 100 + $ 3; }'`
+-    INTLTOOL_APPLIED_VERSION=`intltool-update --version | head -1 | cut -d" " -f3`
+-    [INTLTOOL_APPLIED_VERSION_AS_INT=`echo $INTLTOOL_APPLIED_VERSION | awk -F. '{ print $ 1 * 1000 + $ 2 * 100 + $ 3; }'`
++    INTLTOOL_APPLIED_VERSION=`awk -F\" '/\\$VERSION / { print $ 2; }' ${ac_aux_dir}/intltool-update.in`
++    [INTLTOOL_APPLIED_VERSION_AS_INT=`awk -F\" '/\\$VERSION / { split($ 2, VERSION, "."); print VERSION[1] * 1000 + VERSION[2] * 100 + VERSION[3];}' ${ac_aux_dir}/intltool-update.in`
+     ]
+     AC_MSG_RESULT([$INTLTOOL_APPLIED_VERSION found])
+     test "$INTLTOOL_APPLIED_VERSION_AS_INT" -ge "$INTLTOOL_REQUIRED_VERSION_AS_INT" ||
+ 	AC_MSG_ERROR([Your intltool is too old.  You need intltool $1 or later.])
+ fi
+ 
+-AC_PATH_PROG(INTLTOOL_UPDATE, [intltool-update])
+-AC_PATH_PROG(INTLTOOL_MERGE, [intltool-merge])
+-AC_PATH_PROG(INTLTOOL_EXTRACT, [intltool-extract])
+-if test -z "$INTLTOOL_UPDATE" -o -z "$INTLTOOL_MERGE" -o -z "$INTLTOOL_EXTRACT"; then
+-    AC_MSG_ERROR([The intltool scripts were not found. Please install intltool.])
+-fi
+-
+   INTLTOOL_DESKTOP_RULE='%.desktop:   %.desktop.in   $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; LC_ALL=C $(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< [$]@' 
+ INTLTOOL_DIRECTORY_RULE='%.directory: %.directory.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; LC_ALL=C $(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< [$]@' 
+      INTLTOOL_KEYS_RULE='%.keys:      %.keys.in      $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; LC_ALL=C $(INTLTOOL_MERGE) -k -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< [$]@' 
+@@ -624,7 +759,12 @@
+     AC_MSG_ERROR([GNU gettext tools not found; required for intltool])
+ fi
+ 
+-AC_PATH_PROG(INTLTOOL_PERL, [perl])
++# Use the tools built into the package, not the ones that are installed.
++AC_SUBST(INTLTOOL_EXTRACT, '$(top_builddir)/intltool-extract')
++AC_SUBST(INTLTOOL_MERGE, '$(top_builddir)/intltool-merge')
++AC_SUBST(INTLTOOL_UPDATE, '$(top_builddir)/intltool-update')
++
++AC_PATH_PROG(INTLTOOL_PERL, perl)
+ if test -z "$INTLTOOL_PERL"; then
+    AC_MSG_ERROR([perl not found; required for intltool])
+ fi
+@@ -670,6 +810,42 @@
+ 
+ IT_PO_SUBDIR([po])
+ 
++dnl The following is very similar to
++dnl
++dnl	AC_CONFIG_FILES([intltool-extract intltool-merge intltool-update])
++dnl
++dnl with the following slight differences:
++dnl  - the *.in files are in ac_aux_dir,
++dnl  - if the file haven't changed upon reconfigure, it's not touched,
++dnl  - the evaluation of the third parameter enables a hack which computes
++dnl    the actual value of $libdir,
++dnl  - the user sees "executing intltool commands", instead of
++dnl    "creating intltool-extract" and such.
++dnl
++dnl Nothing crucial here, and we could use AC_CONFIG_FILES, if there were
++dnl a reason for it.
++
++AC_CONFIG_COMMANDS([intltool], [
++
++for file in intltool-extract intltool-merge intltool-update; do
++  sed -e "s|@INTLTOOL_EXTRACT@|`pwd`/intltool-extract|g" \
++      -e "s|@INTLTOOL_LIBDIR@|${INTLTOOL_LIBDIR}|g" \
++      -e "s|@INTLTOOL_PERL@|${INTLTOOL_PERL}|g" \
++	< ${ac_aux_dir}/${file}.in > ${file}.out
++  if cmp -s ${file} ${file}.out 2>/dev/null; then
++    rm -f ${file}.out
++  else
++    mv -f ${file}.out ${file}
++  fi
++  chmod ugo+x ${file}
++  chmod u+w ${file}
++done
++
++],
++[INTLTOOL_PERL='${INTLTOOL_PERL}' ac_aux_dir='${ac_aux_dir}'
++prefix="$prefix" exec_prefix="$exec_prefix" INTLTOOL_LIBDIR="$libdir" 
++INTLTOOL_EXTRACT='${INTLTOOL_EXTRACT}'])
++
+ ])
+ 
+ 
+@@ -717,7 +893,7 @@
+ 
+ # libtool.m4 - Configure libtool for the host system. -*-Autoconf-*-
+ 
+-# serial 52 Debian 1.5.26-4 AC_PROG_LIBTOOL
++# serial 52 Debian 1.5.26-1ubuntu1 AC_PROG_LIBTOOL
+ 
+ 
+ # AC_PROVIDE_IFELSE(MACRO-NAME, IF-PROVIDED, IF-NOT-PROVIDED)
+@@ -8385,145 +8561,3 @@
+ AC_SUBST([am__untar])
+ ]) # _AM_PROG_TAR
+ 
+-dnl GNOME_COMPILE_WARNINGS
+-dnl Turn on many useful compiler warnings
+-dnl For now, only works on GCC
+-AC_DEFUN([GNOME_COMPILE_WARNINGS],[
+-    dnl ******************************
+-    dnl More compiler warnings
+-    dnl ******************************
+-
+-    AC_ARG_ENABLE(compile-warnings, 
+-                  AC_HELP_STRING([--enable-compile-warnings=@<:@no/minimum/yes/maximum/error@:>@],
+-                                 [Turn on compiler warnings]),,
+-                  [enable_compile_warnings="m4_default([$1],[yes])"])
+-
+-    warnCFLAGS=
+-    if test "x$GCC" != xyes; then
+-	enable_compile_warnings=no
+-    fi
+-
+-    warning_flags=
+-    realsave_CFLAGS="$CFLAGS"
+-
+-    case "$enable_compile_warnings" in
+-    no)
+-	warning_flags=
+-	;;
+-    minimum)
+-	warning_flags="-Wall"
+-	;;
+-    yes)
+-	warning_flags="-Wall -Wmissing-prototypes"
+-	;;
+-    maximum|error)
+-	warning_flags="-Wall -Wmissing-prototypes -Wnested-externs -Wpointer-arith"
+-	CFLAGS="$warning_flags $CFLAGS"
+-	for option in -Wno-sign-compare; do
+-		SAVE_CFLAGS="$CFLAGS"
+-		CFLAGS="$CFLAGS $option"
+-		AC_MSG_CHECKING([whether gcc understands $option])
+-		AC_TRY_COMPILE([], [],
+-			has_option=yes,
+-			has_option=no,)
+-		CFLAGS="$SAVE_CFLAGS"
+-		AC_MSG_RESULT($has_option)
+-		if test $has_option = yes; then
+-		  warning_flags="$warning_flags $option"
+-		fi
+-		unset has_option
+-		unset SAVE_CFLAGS
+-	done
+-	unset option
+-	if test "$enable_compile_warnings" = "error" ; then
+-	    warning_flags="$warning_flags -Werror"
+-	fi
+-	;;
+-    *)
+-	AC_MSG_ERROR(Unknown argument '$enable_compile_warnings' to --enable-compile-warnings)
+-	;;
+-    esac
+-    CFLAGS="$realsave_CFLAGS"
+-    AC_MSG_CHECKING(what warning flags to pass to the C compiler)
+-    AC_MSG_RESULT($warning_flags)
+-
+-    AC_ARG_ENABLE(iso-c,
+-                  AC_HELP_STRING([--enable-iso-c],
+-                                 [Try to warn if code is not ISO C ]),,
+-                  [enable_iso_c=no])
+-
+-    AC_MSG_CHECKING(what language compliance flags to pass to the C compiler)
+-    complCFLAGS=
+-    if test "x$enable_iso_c" != "xno"; then
+-	if test "x$GCC" = "xyes"; then
+-	case " $CFLAGS " in
+-	    *[\ \	]-ansi[\ \	]*) ;;
+-	    *) complCFLAGS="$complCFLAGS -ansi" ;;
+-	esac
+-	case " $CFLAGS " in
+-	    *[\ \	]-pedantic[\ \	]*) ;;
+-	    *) complCFLAGS="$complCFLAGS -pedantic" ;;
+-	esac
+-	fi
+-    fi
+-    AC_MSG_RESULT($complCFLAGS)
+-
+-    WARN_CFLAGS="$warning_flags $complCFLAGS"
+-    AC_SUBST(WARN_CFLAGS)
+-])
+-
+-dnl For C++, do basically the same thing.
+-
+-AC_DEFUN([GNOME_CXX_WARNINGS],[
+-  AC_ARG_ENABLE(cxx-warnings,
+-                AC_HELP_STRING([--enable-cxx-warnings=@<:@no/minimum/yes@:>@]
+-                               [Turn on compiler warnings.]),,
+-                [enable_cxx_warnings="m4_default([$1],[minimum])"])
+-
+-  AC_MSG_CHECKING(what warning flags to pass to the C++ compiler)
+-  warnCXXFLAGS=
+-  if test "x$GXX" != xyes; then
+-    enable_cxx_warnings=no
+-  fi
+-  if test "x$enable_cxx_warnings" != "xno"; then
+-    if test "x$GXX" = "xyes"; then
+-      case " $CXXFLAGS " in
+-      *[\ \	]-Wall[\ \	]*) ;;
+-      *) warnCXXFLAGS="-Wall -Wno-unused" ;;
+-      esac
+-
+-      ## -W is not all that useful.  And it cannot be controlled
+-      ## with individual -Wno-xxx flags, unlike -Wall
+-      if test "x$enable_cxx_warnings" = "xyes"; then
+-	warnCXXFLAGS="$warnCXXFLAGS -Wshadow -Woverloaded-virtual"
+-      fi
+-    fi
+-  fi
+-  AC_MSG_RESULT($warnCXXFLAGS)
+-
+-   AC_ARG_ENABLE(iso-cxx,
+-                 AC_HELP_STRING([--enable-iso-cxx],
+-                                [Try to warn if code is not ISO C++ ]),,
+-                 [enable_iso_cxx=no])
+-
+-   AC_MSG_CHECKING(what language compliance flags to pass to the C++ compiler)
+-   complCXXFLAGS=
+-   if test "x$enable_iso_cxx" != "xno"; then
+-     if test "x$GXX" = "xyes"; then
+-      case " $CXXFLAGS " in
+-      *[\ \	]-ansi[\ \	]*) ;;
+-      *) complCXXFLAGS="$complCXXFLAGS -ansi" ;;
+-      esac
+-
+-      case " $CXXFLAGS " in
+-      *[\ \	]-pedantic[\ \	]*) ;;
+-      *) complCXXFLAGS="$complCXXFLAGS -pedantic" ;;
+-      esac
+-     fi
+-   fi
+-  AC_MSG_RESULT($complCXXFLAGS)
+-
+-  WARN_CXXFLAGS="$CXXFLAGS $warnCXXFLAGS $complCXXFLAGS"
+-  AC_SUBST(WARN_CXXFLAGS)
+-])
+-

@@ -1,0 +1,48 @@
+--- gnome-system-monitor/src/util.cpp.old	2008-03-14 12:12:56.000000000 +0100
++++ gnome-system-monitor/src/util.cpp	2008-03-14 12:15:52.000000000 +0100
+@@ -136,11 +136,6 @@
+ 
+ 
+ 
+-#define KIBIBYTE_FACTOR (1UL << 10)
+-#define MEBIBYTE_FACTOR (1UL << 20)
+-#define GIBIBYTE_FACTOR (1UL << 30)
+-
+-
+ /**
+  * SI_gnome_vfs_format_file_size_for_display:
+  * @size:
+@@ -155,32 +150,9 @@
+ gchar*
+ SI_gnome_vfs_format_file_size_for_display (GnomeVFSFileSize size, GnomeVFSFileSize max_size)
+ {
+-	if (max_size == 0)
+-		max_size = size;
+-
+-	if (max_size < (GnomeVFSFileSize) KIBIBYTE_FACTOR) {
+-		return g_strdup_printf (dngettext(GETTEXT_PACKAGE, "%u byte", "%u bytes",(guint) size), (guint) size);
+-	} else {
+-		guint factor;
+-		const char* format;
+-
+-		if (max_size < (GnomeVFSFileSize) MEBIBYTE_FACTOR) {
+-		  factor = KIBIBYTE_FACTOR;
+-		  format = N_("%.1f KiB");
+-		} else if (max_size < (GnomeVFSFileSize) GIBIBYTE_FACTOR) {
+-		  factor = MEBIBYTE_FACTOR;
+-		  format = N_("%.1f MiB");
+-		} else {
+-		  factor = GIBIBYTE_FACTOR;
+-		  format = N_("%.1f GiB");
+-		}
+-
+-		return g_strdup_printf(_(format), size / (double)factor);
+-	}
++        return gnome_vfs_format_file_size_for_display (size);
+ }
+ 
+-
+-
+ gboolean
+ load_symbols(const char *module, ...)
+ {
