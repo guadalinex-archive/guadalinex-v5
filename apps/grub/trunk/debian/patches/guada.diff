@@ -1,0 +1,67 @@
+diff -aNur grub-0.97.orig/stage2/stage2.c grub-0.97/stage2/stage2.c
+--- grub-0.97.orig/stage2/stage2.c	2008-08-26 12:20:29.000000000 +0200
++++ grub-0.97/stage2/stage2.c	2008-08-26 12:23:33.000000000 +0200
+@@ -328,27 +328,30 @@
+ 	print_border (3 + row_start, box_size);
+ 
+       grub_printf ("\n\
+-    Use the %c and %c keys to select which entry is highlighted.\n",
++    Use las teclas %c y %c para seleccionar una entrada.\n",
+ 		   DISP_UP, DISP_DOWN);
+       
+       if (! auth && password)
+ 	{
+ 	  printf ("\
+-    Press enter to boot the selected OS or \'p\' to enter a\n\
+-    password to unlock the next set of features.");
++    Pulse intro para arrancar el sistema operativo seleccionado\n\
++    o \'p\' para introducir una contrasena y desbloquear las\n\
++    opciones avanzadas.");
+ 	}
+       else
+ 	{
+ 	  if (config_entries)
+ 	    printf ("\
+-    Press enter to boot the selected OS, \'e\' to edit the\n\
+-    commands before booting, or \'c\' for a command-line.");
++    Pulse intro para arrancar el sistema operativo seleccionado,\n\
++    \'e\' para editar los comandos antes de arrancar, o \'c\'\n\
++    para mostrar la linea de comandos");
+ 	  else
+ 	    printf ("\
+-    Press \'b\' to boot, \'e\' to edit the selected command in the\n\
+-    boot sequence, \'c\' for a command-line, \'o\' to open a new line\n\
+-    after (\'O\' for before) the selected line, \'d\' to remove the\n\
+-    selected line, or escape to go back to the main menu.");
++    Pulse \'b\' para arrancar, \'e\' para editar el comando\n\
++    seleccionado en la secuencia de arranque, \'c\' para mostrar\n\
++    la linea de comandos, \'o\' para abrir una nueva linea\n\
++    a continuacion (\'O\' para la anterior) de la linea selecionada\n\
++    ,\'d\' para borrar la linea seleccionada,o Esc para volver al menu.");
+ 	}
+ 
+       if (current_term->flags & TERM_DUMB)
+@@ -377,12 +380,12 @@
+ 	  time2 = time1;
+ 
+ 	  if (current_term->flags & TERM_DUMB)
+-	      grub_printf ("\r    Entry %d will be booted automatically in %d seconds.   ", 
++	      grub_printf ("\r    %d arrancara automaticamente en %d segundos.  ", 
+ 			   entryno, grub_timeout);
+ 	  else
+ 	    {
+ 	      gotoxy (3 + col_start, 10 + box_size + row_start);
+-	      grub_printf (" The highlighted entry will be booted automatically in %d seconds.   ",
++	      grub_printf (" El sistema operativo seleccionado arrancara en %d segundos.   ",
+ 			   grub_timeout);
+ 	      gotoxy ((col_end - 6), 4 + entryno + row_start);
+ 	  }
+@@ -401,7 +404,7 @@
+ 	     since we're comming in here also on GRUB_TIMEOUT == -1 and
+ 	     hang in GETKEY */
+ 	  if (current_term->flags & TERM_DUMB)
+-	    grub_printf ("\r    Highlighted entry is %d: ", entryno);
++	    grub_printf ("\r    La entrada seleccionada es %d: ", entryno);
+ 
+ 	  c = ASCII_CHAR (getkey ());
+ 

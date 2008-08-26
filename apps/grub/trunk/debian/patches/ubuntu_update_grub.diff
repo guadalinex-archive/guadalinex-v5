@@ -1,0 +1,28 @@
+=== modified file 'debian/update-grub'
+--- a/debian/update-grub	
++++ b/debian/update-grub	
+@@ -765,6 +765,11 @@
+ echo -n "Searching for splash image ... "
+ current_splash=`grep '^splashimage=' ${grub_dir}/menu.lst || true`
+ splashimage_path="splashimage=${grub_root_device}${grub_dir##${boot_device:+/boot}}/splash.xpm.gz"
++# the distro default splash
++distro_splash="${grub_dir}/default-splash.xpm.gz" 
++if [ "$current_splash" = "splashimage=${grub_root_device}$distro_splash" ];then
++    current_splash=""
++fi
+ if [ -f "${grub_dir}/splash.xpm.gz" ]  && [ "$current_splash" = "" ]; then
+        echo "found: /boot/grub/splash.xpm.gz"
+        echo "$splashimage_path" >> $buffer
+@@ -776,6 +781,11 @@
+ elif [ "$current_splash" != "" ] && [ "$current_splash" != "$splashimage_path" ]; then
+        echo "found but preserving previous setting: $(grep '^splashimage=' /boot/grub/menu.lst)"
+        echo "$current_splash" >> $buffer
++       echo >> $buffer
++elif [ -f "$distro_splash" ]; then
++       echo "found distro default splash: $distro_splash"
++       echo "splashimage=${grub_root_device}${grub_dir##${boot_device:+/boot}}/default-splash.xpm.gz" >> $buffer
++       echo "background=800000" >> $buffer
+        echo >> $buffer
+ else
+        echo "none found, skipping ..."
+

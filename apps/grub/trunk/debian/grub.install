@@ -1,0 +1,5 @@
+debian/update-grub	usr/sbin
+debian/grub-floppy	usr/sbin
+debian/grub-reboot	usr/sbin
+debian/mkbimage		usr/bin
+debian/presubj		usr/share/bug/grub

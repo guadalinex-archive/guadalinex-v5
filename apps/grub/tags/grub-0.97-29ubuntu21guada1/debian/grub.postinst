@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if [ "$1" = "configure" ]; then
+	if dpkg --compare-versions "$2" lt-nl "0.97-29ubuntu6"; then
+		update-grub
+	fi
+fi
+
+if [ "x$1" = xtriggered ] ; then
+	/usr/sbin/update-grub
+fi
+
+#DEBHELPER#

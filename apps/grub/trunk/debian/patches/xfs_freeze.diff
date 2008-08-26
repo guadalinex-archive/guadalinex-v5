@@ -1,0 +1,39 @@
+
+Copyright: rmh
+Upstream: waiting to commit untill known to work
+
+diff -ur svn.old/util/grub-install.in svn/util/grub-install.in
+--- svn.old/util/grub-install.in	2004-07-23 00:48:23.000000000 +0200
++++ svn/util/grub-install.in	2004-07-26 23:25:59.000000000 +0200
+@@ -450,6 +450,20 @@
+ # Create a safe temporary file.
+ test -n "$mklog" && log_file=`$mklog`
+ 
++# Sync to prevent GRUB from not finding stage files (notably, on XFS)
++sync
++
++# XFS needs special magic
++xfs_frozen=false
++if which xfs_freeze > /dev/null ; then
++  cat << EOF
++Due to a bug in xfs_freeze, the following command might produce a segmentation
++fault when ${grubdir} is not in an XFS filesystem. This error is harmless and
++can be ignored.
++EOF
++  if xfs_freeze -f ${grubdir} ; then xfs_frozen=true ; fi
++fi
++
+ # Now perform the installation.
+ $grub_shell --batch $no_floppy --device-map=$device_map <<EOF >$log_file
+ root $root_drive
+@@ -457,6 +471,10 @@
+ quit
+ EOF
+ 
++if ${xfs_frozen} ; then
++  xfs_freeze -u ${grubdir}
++fi
++
+ if grep "Error [0-9]*: " $log_file >/dev/null || test $debug = yes; then
+     cat $log_file 1>&2
+     exit 1
