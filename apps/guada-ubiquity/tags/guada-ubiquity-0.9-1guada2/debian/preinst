@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ install = "$1"  ]; then
+    dpkg-divert --package guada-ubiquity --add --rename \
+             --divert /usr/lib/ubiquity/ubiquity/frontend/__init__.py.real /usr/lib/ubiquity/ubiquity/frontend/__init__.py
+    ln -s /usr/lib/guada-ubiquity/ubiquity/frontend/__init__.py /usr/lib/ubiquity/ubiquity/frontend/__init__.py
+fi
+
