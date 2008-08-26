@@ -195,7 +195,7 @@ a, a.external, a.new, a.stub {
 
 img { border: none; }
 img.tex { vertical-align: middle; }
-span.texhtml { font-family: serif; }
+span.texhtml { font-family: sans , serif; }
 
 /* Show some stuff */
 .urlexpansion {

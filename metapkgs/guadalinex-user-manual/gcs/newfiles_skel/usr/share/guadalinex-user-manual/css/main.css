@@ -16,14 +16,15 @@
     padding:0;
 }
 #content {
-    margin: 0;
-    padding: 0em 1em 1.5em 1em;
-    background: White;
-    border: 1px solid #aaaaaa;
-    border-right: none;
-    line-height: 1.5em;
-    position: relative;
-    z-index: 2;
+    	margin-top: 0;
+    	padding: 0em 1em 1.5em 1em;
+    	background: White;
+    	border: 1px solid #aaaaaa;
+    	border-right: none;
+    	line-height: 1.5em;
+    	position: relative;
+    	z-index: 2;
+    	background: url(../img/background.gif) top left repeat-x;
 }
 #column-one { padding-top: 160px; }
 /* the left column width is specified in class .portlet */
@@ -35,11 +36,14 @@
 */
 
 body {
-    font: x-small sans-serif;
-    background: #f9f9f9 url("headbg.jpg") 0px 0px no-repeat;
-    color: Black;
-    margin: 0;
-    padding: 0;
+    	font: x-small freesans;
+   	heigth:100%;
+	margin: 0;
+    	padding: 0;
+	font-size: 0.7em; 
+   	font-weight: normal;
+	color:#212a3d;
+	/*background:url(../img/pie.gif) right bottom repeat-x;*/
 }
 
 /* scale back up to a sane default */
@@ -62,7 +66,7 @@ a {
     color: #002bb8;
     background: none;
 }
-a:visited { color: #5a3696; }
+a:visited { color: #002bb8; }
 a:active { color: Orange; }
 a:hover { text-decoration: underline; }
 a.stub { color: #772233; }
@@ -97,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding-top: 0.5em;
     padding-bottom: 0.17em;
-    border-bottom: 1px solid #aaaaaa;
+    border-bottom: 1px solid #212a3d;
 }
 h1 { font-size: 188%; }
 h2 { font-size: 150%; }
@@ -194,7 +198,7 @@ abbr, acronym, .explain {
     cursor: help;
 }
 q {
-    font-family: Times, "Times New Roman", serif;
+    font-family: freesans;
     font-style: italic;
 }
 /* disabled for now
@@ -233,7 +237,13 @@ span.subpages { display: block; }
 #bodyContent h5 {
     margin-bottom: 0.3em;
 }
-.firstHeading { margin-bottom:0.1em; }
+.firstHeading {
+	margin-top: 12px;
+	margin-bottom:0.1em; 
+}
+
+.firstHeading a{color: #ffffff;}
+.firstHeading a:hover { text-decoration: none; }
 
 /* user notification thing */
 .usermessage {
@@ -298,10 +308,11 @@ table.small { font-size: 100% }
 
 #toc { 
     /*border:1px solid #2f6fab;*/
-    border:1px solid #aaaaaa;
-    background-color:#f9f9f9;
-    padding:5px;
-    font-size: 95%;
+    	border:1px solid #aaaaaa;
+    	background-color:#f9f9f9;
+    	padding:5px;
+    	font-size: 95%;
+	background: url(../img/backgroundp.gif) top left repeat-x #fff;}
 }
 #toc .tocindent { margin-left: 2em; }
 #toc .tocline { margin-bottom: 0px; }
@@ -378,7 +389,7 @@ div.tleft {
     display: none;
 }
 img.tex { vertical-align: middle; }
-span.texhtml { font-family: serif; }
+span.texhtml { font-family: freesans; }
 
 /*
 ** classes for special content elements like town boxes
@@ -509,7 +520,7 @@ span.diffchange { color: red; }
     background: none;
     padding: 0;
 }
-#bodyContent a.external { color: #3366bb; }
+#bodyContent a.external { color: #002bb8; }
 /* this can be used in the content area to switch off
 special external link styling */
 #bodyContent .plainlinks a {
