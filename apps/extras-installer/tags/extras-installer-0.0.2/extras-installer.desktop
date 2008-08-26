@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Not included extras
+Name[es]=Extras no incluidos
+Comment=Install not included extra software
+Comment[es]=Instalar software extra no incluido
+Exec=/usr/bin/extras-installer
+Icon=synaptic.png
+Terminal=false
+MultipleArgs=false
+Type=Application
+Encoding=UTF-8
+Categories=PackageManager;GTK;

@@ -1,0 +1,11 @@
+extras-installer (0.0.2) hardy; urgency=low
+
+  * Import V5 version 
+
+ -- Alfredo Matas <amatas@emergya.es>  Tue, 26 Aug 2008 10:46:37 +0200
+
+extras-installer (0.0.1) edgy; urgency=low
+
+  * Initial Release.
+
+ -- Junta de Andalucía <packmaster@guadalinex.org>  Wed, 14 Feb 2007 10:51:57 +0100

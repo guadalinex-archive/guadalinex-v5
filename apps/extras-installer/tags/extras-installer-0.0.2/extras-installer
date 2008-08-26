@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Este dialogo informa al usuario de que algunos programas no se han incluido
+# en el CD por problemas de licencia, espacio o estabilidad.
+# Redirige a una página web desde donde se pueden instalar.
+
+TEXT="Algunos programas y contenidos no han podido incluirse en el disco de instalación por diversos motivos.\n\nSi dispone de conexión a Internet, puede revisar ahora esta lista de aplicaciones complementarias y decidir si quiere instalarlas en su ordenador."
+URL="http://www.guadalinex.org/distro/V5/extras/"
+
+if /usr/bin/zenity --question  --title  "Extras no incluidos"  --text "$TEXT"; then
+	firefox $URL
+fi
