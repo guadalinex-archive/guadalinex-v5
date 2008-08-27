@@ -318,6 +318,9 @@ class FireFoxApp(Application):
     def _is_app_running(self):
         return self._ff.is_firefox_running()
 
+    def _is_siemens_supported(self):
+	return os.path.exists(SIEMENS_PKCS11_LIB)
+
     def setup(self,
               user_certificates=[],
               install_dnie=False,
@@ -356,14 +359,14 @@ class FireFoxApp(Application):
             if abort:
                 return False, ''
 
-	if install_dnie or install_ceres:
-	    try:
-	        card_types = self.check_smartcards()
+		if install_dnie or install_ceres:
+		    try:
+			card_types = self.check_smartcards()
 	    except FireFoxAppError, e:
 	        print e.errno, e.desc
 	        return False, ''
 
-	    if SIEMENS_ATR in card_types:
+	    if SIEMENS_ATR in card_types and self._is_siemens_supported():
 	        print "Detected Siemens Smartcard"
                 if self._ff.has_security_method('Tarjeta Inteligente'):
 	   	    self._ff.remove_security_method('Tarjeta Inteligente')

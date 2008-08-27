@@ -1,3 +1,10 @@
+guadalinex-eadmin (v5-0.4) hardy; urgency=low
+
+  * Siemens card are conditionally supported to the
+    siemens-hipath-sicurity-card-api installation
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Mon, 24 Jun 2008 10:12:23 +0100
+
 guadalinex-eadmin (v5-0.3) hardy; urgency=low
 
   * Fixed firefox.js preferences file to prevent EULA on fist run
