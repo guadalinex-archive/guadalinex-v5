@@ -1,0 +1,4 @@
+# 1. Configurar grab-a-pedia.py en sus primeras lineas
+# 2. Comprobar que en el mismo directorio donde se encuentra grab-a-pedia.py
+#    existe un directorio 'manual'
+# 3. Ejecutar grab-a-pedia.py
