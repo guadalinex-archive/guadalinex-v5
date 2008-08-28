@@ -3,7 +3,7 @@ anjuta
 anjuta-common
 atlas3-base
 autoconf
-automake1.4
+automake1.9
 autotools-dev
 cabextract
 cdparanoia
@@ -94,14 +94,14 @@ scilab-bin
 squeak-image
 squeak-sources
 squeak-vm
-tcl8.3
+tcl8.5
 tetex-base
 tetex-bin
 tetex-extra
 texinfo
 tidy
 timidity
-tk8.3
+tk8.5
 tkgate
 tuxmath
 tuxpaint
