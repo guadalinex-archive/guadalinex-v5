@@ -252,7 +252,7 @@ dokuwiki
 zope2.10
 plone-site
 linux-source
-linux-headers-386
+linux-headers-generic
 gambas2
 phpmyadmin
 pgadmin3
