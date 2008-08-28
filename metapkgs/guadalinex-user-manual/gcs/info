@@ -5,7 +5,7 @@
 name: guadalinex-user-manual
 
 # Autor 
-author: David Teyssiere Rubio <dteyssiere@emergya.es>
+author: Roberto C. Morano <rcmorano@emergya.es>
 
 # Priority
 priority: optional
@@ -14,13 +14,13 @@ priority: optional
 section: help
 
 # Descripción corta
-shortdesc: "Guía de usuario de Guadalinex v4"
+shortdesc: "Guía de usuario de Guadalinex v5"
 
 # Descipción larga, las lineas han de estar separadas por "\n "
 longdesc: "Esta guía hace un repaso y una breve introducción a Guadalinex,\n el sistema operativo de la Junta de Andalucía."
 
 # Versión del paquete
-version: 0.1
+version: v5
 
 # Cambios en esta versión
 changes:
