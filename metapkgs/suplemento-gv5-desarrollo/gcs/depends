@@ -224,13 +224,13 @@ python-testresources
 python-tunepimp
 samba
 python-rpy
-python-wxgtk2.6
+python-wxgtk2.8
 python-moinmoin
 python-wmi
 python-avahi
 python-rpm
 python-uno
-j2sdk1.4
+sun-java6-jdk
 bison
 flex
 build-essential
@@ -253,7 +253,7 @@ zope2.10
 plone-site
 linux-source
 linux-headers-386
-gambas
+gambas2
 phpmyadmin
 pgadmin3
 subversion
