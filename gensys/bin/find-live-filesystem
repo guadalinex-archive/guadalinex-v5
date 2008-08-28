@@ -28,7 +28,7 @@ case $CPUARCH in
 		FLAVOURS='hppa32 hppa64'
 		;;
 	i386)
-		LIVECD=ftp://gensys
+		LIVECD=ftp://localhost
 		case $DIST in
 			warty|hoary|breezy|dapper)
 				FLAVOURS=386 ;;
@@ -125,6 +125,19 @@ case $ITEM in
 			exit 1
 		fi
 		case $PROJECT in
+			guadalinex)
+				case $DIST in
+					lobo)
+						case $CPUARCH in
+							i386)
+								echo ftp://localhost/ubuntu-winfoss-7.10.tar.gz
+								;;
+							*)	exit 1 ;;
+						esac
+						;;
+					*)	exit 1 ;;
+				esac
+				;;
 			ubuntu)
 				case $DIST in
 					hoary)
@@ -173,7 +186,7 @@ case $ITEM in
 					gutsy|hardy)
 						case $CPUARCH in
 							i386|amd64)
-								echo ftp://gensys/ubuntu-winfoss-7.10.tar.gz
+								echo ftp://localhost/ubuntu-winfoss-7.10.tar.gz
 								;;
 							*)	exit 1 ;;
 						esac
