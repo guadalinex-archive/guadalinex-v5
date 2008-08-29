@@ -35,23 +35,9 @@
 <p><a href="#Monitor_del_sistema">1.3.1 Monitor del sistema</a><br />
 <a href="#Servicios">1.3.2 Servicios</a><br />
 <a href="#Registro_de_actividad_del_sistema">1.3.3 Registro de actividad del sistema</a><br />
-<a href="#Gestor_de_dispositivos">1.3.4 Gestor de dispositivos</a><br />
 </p>
 </div>
-<p><a href="#Convertirse_en_root_u_otro_usuario">1.4 Convertirse en root u otro usuario</a><br />
-</p>
-<div class="tocindent">
-<p><a href="#Ejecutar_como_otro_usuario">1.4.1 Ejecutar como otro usuario</a><br />
-</p>
-</div>
-<p><a href="#Gestionar_discos_y_particiones">1.5 Gestionar discos y particiones</a><br />
-</p>
-<div class="tocindent">
-<p><a href="#GParted">1.5.1 GParted</a><br />
-<a href="#Gestor_de_discos">1.5.2 Gestor de discos</a><br />
-</p>
-</div>
-<p><a href="#..._y_mucho_m.C3.A1s">1.6 ... y mucho más</a><br />
+<p><a href="#..._y_mucho_m.C3.A1s">1.4 ... y mucho más</a><br />
 </p>
 </div>
 </td></tr></table>
@@ -77,11 +63,12 @@
 <a name="Sincronizar_los_relojes"></a><h2>Sincronizar los relojes</h2>
 <p><strong>Sistema</strong> > <strong>Administración</strong> > <strong>Hora y fecha</strong>
 </p>
+<ul><li> Para poder realizar las tareas deberemos clicar en Desbloquear e introducir nuestra contraseña.
+</li></ul>
 <div class="thumb tright"><div style="width:182px;"><a href="imgs/Zona_horaria.png" class="internal" title="La selección de zona horaria es todo un examen de geografía"><img src="imgs/180px-Zona_horaria.png" alt="La selección de zona horaria es todo un examen de geografía" width="180" height="157" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Zona_horaria.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>La selección de zona horaria es todo un examen de geografía</div></div></div>
-<p><br />
-Seguimos con otra prueba sin mayores riesgos: ajustar la hora y fecha. Tenemos tres variantes para una opción tan sencilla:
+<p>Seguimos con otra prueba sin mayores riesgos: ajustar la hora y fecha. Tenemos tres variantes para una opción tan sencilla:
 </p>
-<ul><li><strong>Sincronizar periódicamente la hora con servidores de Internet</strong>: lo más práctico si tenemos el ordenador conectado regularmente. Seleccionando esta opción el sistema nos invitará a instalar el soporte NTP (<em>Network Time Protocol</em> o <em>protocolo de tiempo de la red</em>) que nos permitirá conectar con la red internacional de servidores de tiempo. Mediante esta opción tendremos siempre el reloj a la hora, sin el más mínimo retraso, ajustándose automáticamente a los cambios horarios de verano e invierno. Debemos asegurarnos de que al final del proceso están marcadas la cajita de <strong>Sincronizar...</strong> y la de algún servidor en <strong>Seleccionar servidores</strong>. 
+<ul><li><strong>Mantener sincronicado con los servidores de Internet</strong>: lo más práctico si tenemos el ordenador conectado regularmente. Seleccionando esta opción el sistema nos invitará a instalar el soporte NTP (<em>Network Time Protocol</em> o <em>protocolo de tiempo de la red</em>) que nos permitirá conectar con la red internacional de servidores de tiempo. Mediante esta opción tendremos siempre el reloj a la hora, sin el más mínimo retraso, ajustándose automáticamente a los cambios horarios de verano e invierno. Debemos asegurarnos de que al final del proceso están marcadas la cajita de <strong>Sincronizar...</strong> y la de algún servidor en <strong>Seleccionar servidores</strong>. 
 </li><li>Si nuestra conexión a Internet es sólo esporádica podemos sincronizar manualmente el reloj cuando estemos en línea clicando al botón <strong>Sincronizar ahora</strong>.
 </li><li>Como último recurso siempre nos queda ajustar manualmente la hora y fecha.
 </li></ul>
@@ -105,7 +92,7 @@ El <strong>Monitor del sistema</strong> es una aplicación muy didáctica, espec
 </li><li>La intermedia muestra el volumen de memoria RAM utilizado, así como de memoria de intercambio (partición del disco duro creada para socorrer a la RAM). Es normal que se vea bastante plana y cuanto más bajos sean los porcentajes más holgado irá el sistema.
 </li><li>La inferior expresa el tráfico de la red, ya sea hacia Internet u otros ordenadores en nuestra red. 
 </li></ul>
-</li><li>En <strong>Dispositivos</strong> podemos ver las particiones gestionadas por el sistema y su porcentaje de utilización. Si las aplicaciones empiezan a ralentizarse y dar errores es aconsejable venir aquí a ver si tenemos algún dispositivo saturado.
+</li><li>En <strong>Sistemas de Archivos</strong> podemos ver las particiones gestionadas por el sistema y su porcentaje de utilización. Si las aplicaciones empiezan a ralentizarse y dar errores es aconsejable venir aquí a ver si tenemos algún dispositivo saturado.
 </li></ul>
 <a name="Servicios"></a><h3> Servicios </h3>
 <p><strong>Sistema</strong> > <strong>Administración</strong> > <strong>Servicios</strong>
@@ -121,50 +108,8 @@ El <strong>Monitor del sistema</strong> es una aplicación muy didáctica, espec
 <div class="thumb tright"><div style="width:182px;"><a href="imgs/Visor_del_registro_del_sistema.png" class="internal" title="No apto para todos los públicos"><img src="imgs/180px-Visor_del_registro_del_sistema.png" alt="No apto para todos los públicos" width="180" height="133" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Visor_del_registro_del_sistema.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>No apto para todos los públicos</div></div></div>
 <p>Esta aplicación ya se encuentra a otro nivel. Sólo los expertos saben interpretar toda la información que genera el sistema en sus <em>logs</em> (<em>registros</em>, en español) pero incluso un usuario primerizo puede entender algunas de las cosas que se nos explican allí.
 </p><p>Los amantes del perfeccionismo se sorprenderán de la cantidad de errores que un sistema corriente digiere por lo regular. Quienes piensen que un ordenador es un bicho que se queja todo el rato podrán comprobar que de hecho sólo nos avisa de que algo va mal cuando no tiene otro remedio. El resto de usuarios puede vivir tranquilamente sin revisar los registros del sistema.
-</p>
-<a name="Gestor_de_dispositivos"></a><h3>Gestor de dispositivos</h3>
-<p><strong>Sistema</strong> > <strong>Administración</strong> > <strong>Administrador de dispositivos</strong>
-</p><p><br />
-Aplicación aún más oscura que la anterior para los ojos de casi cualquier mortal, útil para saber si hay alguna pieza de hardware que el sistema no haya detectado o reconocido. Lo que este gestor de dispositivos nos muestra es una capa de abstracción de hardware (en inglés <em>Hardware Abstraction Layer</em>, o HAL) que le permite al sistema operar correctamente con los dispositivos. No está de más echarle un vistazo para conocer su punto de vista sobre nuestro ordenador. Y poco más.
-</p>
-<div class="thumb tright"><div style="width:182px;"><a href="imgs/Administrador_de_dispositivos.png" class="internal" title="Administrador de dispositivos"><img src="imgs/180px-Administrador_de_dispositivos.png" alt="Administrador de dispositivos" width="180" height="126" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Administrador_de_dispositivos.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Administrador de dispositivos</div></div></div>
-<a name="Convertirse_en_root_u_otro_usuario"></a><h2>Convertirse en <em>root</em> u otro usuario</h2>
-<p>Lo mínimo que necesitamos para realizar tareas de administración es obtener privilegios de <em>root</em>. Eventualmente nos puede servir también el ponernos en la piel de otros usuarios. 
-</p><p><br />
-</p>
-<a name="Ejecutar_como_otro_usuario"></a><h3>Ejecutar como otro usuario</h3>
-<p><strong>Aplicaciones</strong> > <strong>Herramientas del sistema</strong> > <strong>Ejecutar como otro usuario</strong>
-</p><p>Esta aplicación nos permite <strong>hacer sudo</strong> sin tener que abrir el terminal de línea de comandos. En el anterior apartado ya la utilizamos para acceder a las carpetas personales de otros usuarios y toquetear sus permisos. El principal uso de esta herramienta es el de ejecutar aplicaciones como <em>root</em>, con plenos poderes. Las instrucciones son aparentemente sencillas: tan sólo tenemos que introducir el nombre del programa a ejecutar y seleccionar el usuario <strong>root</strong>. 
-</p><p>El problema puede venir a la hora de introducir el nombre de la aplicación, ya que técnicamente estamos introduciendo su comando de ejecución, que se corresponde con su denominación original en inglés. Siguiendo con el ejemplo del apartado anterior, de poco nos sirve introducir <strong>Administrador de archivos</strong> en el campo <strong>Ejecutar:</strong>, ya que la instrucción entendible por nuestro sistema para lanzar este programa va a ser <strong>nautilus</strong>. Por otro lado, es relativamente razonable exigir hoy día a un usuario que conozca las denominaciones originales de las aplicaciones con las que pretende operar como <em>root</em>.
 </p><p><br />
 </p><p><br />
-</p>
-<a name="Gestionar_discos_y_particiones"></a><h2>Gestionar discos y particiones</h2>
-<p>El manejo de particiones es uno de los procesos de administración más delicados. <strong>Su uso incorrecto nos puede borrar el disco duro sin remedio</strong>. Para gestionar particiones debemos saber antes de qué estamos hablando. En caso de duda es recomendable repasar el capítulo <strong>3. Saboreo e instalación en 3 clics</strong>, donde explicamos los conceptos básicos.
-</p><p><br />
-</p>
-<a name="GParted"></a><h3>GParted</h3>
-<p><strong>Aplicaciones</strong> > <strong>Herramientas del sistema</strong> > <strong>GParted</strong>
-</p>
-<div class="thumb tright"><div style="width:182px;"><a href="imgs/GParted.png" class="internal" title="Típico aspecto de un disco duro con GNU/Linux y MS Windows en convivencia"><img src="imgs/180px-GParted.png" alt="Típico aspecto de un disco duro con GNU/Linux y MS Windows en convivencia" width="180" height="122" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/GParted.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Típico aspecto de un disco duro con GNU/Linux y MS Windows en convivencia</div></div></div>
-<p>Para gestionar particiones utilizamos la joven aunque estable aplicación <strong>GParted</strong>. En el momento de redactar estas líneas no hay disponible documentación de uso de esta aplicación, aunque con un poco de conocimientos y sentido común se puede operar fácilmente con ella. Más información en su web <a href="http://gparted.sf.net/" class="external" title="http://gparted.sf.net/">[1]</a><span class="urlexpansion"> (<i>http://gparted.sf.net/</i>)</span>. 
-</p><p>La pantalla inicial de <strong>GParted</strong> nos muestra una radiografía de las particiones existentes en nuestro disco duro. En el caso de disponer de más de un disco se activa un menú de selección en la barra principal. La aplicación ofrece información sobre cada partición: nombre, sistema de archivos utilizado, tamaño total, espacio usado, espacio libre y las opciones relativas a la partición, por ejemplo si se trata de una partición arrancable. Además tenemos el espacio libre remanente e inutilizado en el disco.
-</p><p>Para editar una partición hay que seleccionarla a través del gráfico o el listado. Clicando en la partición se activarán en la barra principal las tareas que podemos realizar en este momento sobre ella. Veremos que las particiones montadas no permiten mucho más que ser borradas, a veces ni eso. Esto se debe a que operar con particiones montadas es extremamente arriesgado. 
-</p><p>Si queremos redimensionar una partición desde la cual estamos trabajando, podemos hacerlo también mediante GParted, pero no desde nuestro sistema arrancado sino desde el LiveCD de nuestra distribución. 
-</p><p>Las tareas más habituales son: 
-</p>
-<ul><li><strong>Borrar una partición</strong>: operación utilizada para obtener más espacio libre de disco y/o borrar de un tirón un buen volumen de datos. Sólo hay que seleccionar la partición y clicar el icono <strong>Borrar</strong>. Mucho ojo.
-</li><li><strong>Crear una partición</strong>: clicamos en el <strong>Espacio libre</strong> y luego en <strong>Nuevo</strong>. Establecemos el <strong>Tamaño nuevo</strong>, el tipo de partición (primaria, lógica o extendida) y el sistema de ficheros deseado.
-</li><li><strong>Redimensionar una partición</strong>: clicamos en la partición y a continuación en <strong>Redimensionar/Mover</strong>. Modificamos el tamaño que deseamos para la partición o el espacio que queremos liberar.
-</li></ul>
-<div class="thumb tright"><div style="width:182px;"><a href="imgs/Ejecutar_operaciones_al_disco_duro.png" class="internal" title="A partir de aquí casi no hay marcha atrás"><img src="imgs/180px-Ejecutar_operaciones_al_disco_duro.png" alt="A partir de aquí casi no hay marcha atrás" width="180" height="75" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Ejecutar_operaciones_al_disco_duro.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>A partir de aquí casi no hay marcha atrás</div></div></div>
-<p>La aplicación va anotando los cambios, pero estos no se ejecutan hasta que clicamos el botón <strong>Guardar</strong> después de <strong>Aplicar</strong> los cambios. Una ventana nos recomienda hacer copias de seguridad antes de operar con particiones con datos. En principio el proceso es seguro, pero en el caso de que suceda algo irreparable no vamos a poder reclamar a nadie. 
-</p><p>Es especialmente recomendable hacer esta copia de seguridad cuando operamos con la partición que contiene nuestra carpeta personal o cualquier información sensible. Si se dañan los datos de una partición con software, de una forma u otra la podremos restituir, pero nuestra información personal no. Total, nunca está de mas tener una copia de nuestros datos más queridos.
-</p>
-<a name="Gestor_de_discos"></a><h3>Gestor de discos</h3>
-<p><strong>Sistema</strong> > <strong>Administración</strong> > <strong>Discos</strong>
-</p><p>El <strong>Gestor de discos</strong> también es capaz de lidiar con particiones, aunque de una forma elemental. Sirve para montar y desmontar particiones, cambiar su ruta de acceso, formatearlas... También nos muestra las características de los dispositivos de lectura o grabación de CDs y DVDs, así como la disquetera.
-</p><p>Si sabemos utilizar <strong>GParted</strong> no tendremos problemas con esta aplicación.
 </p><p><br />
 </p>
 <a name="..._y_mucho_m.C3.A1s"></a><h2>... y mucho más</h2>
