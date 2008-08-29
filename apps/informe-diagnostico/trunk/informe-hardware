@@ -25,10 +25,10 @@ fi
 # Constants
 FICHERO_FINAL='informe_hardware'
 if [ -n "$SUDO_USER" ]; then
-        DIRECTORIO_FINAL=/home/$SUDO_USER/Desktop
+        DIRECTORIO_FINAL=/home/$SUDO_USER/Escritorio
 	REAL_USER=$SUDO_USER
 else
-	DIRECTORIO_FINAL=$HOME/Desktop
+	DIRECTORIO_FINAL=$HOME/Escritorio
 	REAL_USER=$USER
 fi
 [ ! -d $DIRECTORIO_FINAL ] && mkdir -p $DIRECTORIO_FINAL
