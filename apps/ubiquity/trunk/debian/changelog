@@ -1,3 +1,9 @@
+ubiquity (1.8.12guada8) hardy; urgency=low
+
+  * Reverted changes done on 1.8.12guada6 
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Fri, 29 Aug 2008 13:31:39 +0200
+
 ubiquity (1.8.12guada7) hardy; urgency=low
 
   * typo fix
