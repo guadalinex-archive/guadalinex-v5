@@ -1,0 +1,113 @@
+<?xml version="1.0" standalone="yes"?>
+<rhythmdb version="1.3">
+  <entry type="iradio">
+    <title>Kiss FM</title>
+    <genre>Desconocido</genre>
+    <artist></artist>
+    <album></album>
+    <location>http://pointers.audiovideoweb.com/asxfiles-live/ny60winlive7001.asx</location>
+    <date>0</date>
+    <mimetype>application/octet-stream</mimetype>
+    <mb-trackid></mb-trackid>
+  </entry>
+  <entry type="iradio">
+    <title>M&#xE1;xima FM</title>
+    <genre>Desconocido</genre>
+    <artist></artist>
+    <album></album>
+    <location>http://www.los40.com/nuevo_player/maxima.asx</location>
+    <date>0</date>
+    <mimetype>application/octet-stream</mimetype>
+    <mb-trackid></mb-trackid>
+  </entry>
+  <entry type="iradio">
+    <title>40 Principales</title>
+    <genre>Desconocido</genre>
+    <artist></artist>
+    <album></album>
+    <location>http://www.los40.com/nuevo_player/40Principales.asx</location>
+    <date>0</date>
+    <mimetype>application/octet-stream</mimetype>
+    <mb-trackid></mb-trackid>
+  </entry>
+  <entry type="iradio">
+    <title>RNE Cl&#xE1;sica</title>
+    <genre>Desconocido</genre>
+    <artist></artist>
+    <album></album>
+    <location>mms://a1247.l910622804.c9106.e.lm.akamaistream.net/D/1247/9106/v0001/reflector:22804</location>
+    <date>0</date>
+    <mimetype>application/octet-stream</mimetype>
+    <mb-trackid></mb-trackid>
+  </entry>
+  <entry type="iradio">
+    <title>Cadena Dial</title>
+    <genre>Desconocido</genre>
+    <artist></artist>
+    <album></album>
+    <location>http://www.los40.com/nuevo_player/dial.asx</location>
+    <date>0</date>
+    <mimetype>application/octet-stream</mimetype>
+    <mb-trackid></mb-trackid>
+  </entry>
+  <entry type="iradio">
+    <title>RNE 3</title>
+    <genre>Desconocido</genre>
+    <artist></artist>
+    <album></album>
+    <location>mms://a1830.l830120550.c8301.e.lm.akamaistream.net/D/1830/8301/v0001/reflector:20550</location>
+    <date>0</date>
+    <mimetype>application/octet-stream</mimetype>
+    <mb-trackid></mb-trackid>
+  </entry>
+  <entry type="iradio">
+    <title>RNE 1</title>
+    <genre>Desconocido</genre>
+    <artist></artist>
+    <album></album>
+    <location>mms://a729.l830022151.c8300.e.lm.akamaistream.net/D/729/8300/v0001/reflector:22151</location>
+    <date>0</date>
+    <mimetype>application/octet-stream</mimetype>
+    <mb-trackid></mb-trackid>
+  </entry>
+  <entry type="iradio">
+    <title>RNE 5</title>
+    <genre>Desconocido</genre>
+    <artist></artist>
+    <album></album>
+    <location>mms://a1360.l910520572.c9105.e.lm.akamaistream.net/D/1360/9105/v0001/reflector:20572</location>
+    <date>0</date>
+    <mimetype>application/octet-stream</mimetype>
+    <mb-trackid></mb-trackid>
+  </entry>
+  <entry type="iradio">
+    <title>M80</title>
+    <genre>Desconocido</genre>
+    <artist></artist>
+    <album></album>
+    <location>http://www.los40.com/nuevo_player/m80.asx</location>
+    <date>0</date>
+    <mimetype>application/octet-stream</mimetype>
+    <mb-trackid></mb-trackid>
+  </entry>
+  <entry type="iradio">
+    <title>Cadena 100</title>
+    <genre>Desconocido</genre>
+    <artist></artist>
+    <album></album>
+    <location>mms://live.c100.edgestreams.net/reflector:34743</location>
+    <date>0</date>
+    <mimetype>application/octet-stream</mimetype>
+    <mb-trackid></mb-trackid>
+  </entry>
+  <entry type="iradio">
+    <title>RNE 4</title>
+    <genre>Desconocido</genre>
+    <artist></artist>
+    <album></album>
+    <location>mms://a783.l1041530780.c10415.e.lm.akamaistream.net/D/783/10415/v0001/reflector:30780</location>
+    <date>0</date>
+    <mimetype>application/octet-stream</mimetype>
+    <mb-trackid></mb-trackid>
+  </entry>
+</rhythmdb>

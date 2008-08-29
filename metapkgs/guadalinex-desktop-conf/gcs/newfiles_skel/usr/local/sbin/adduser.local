@@ -1,0 +1,29 @@
+#!/bin/bash
+# file herited from gv4
+
+adduser $1 scard 
+adduser $1 scanner
+# these are already added by default in hardy
+#adduser $1 adm
+#adduser $1 dialout
+#adduser $1 cdrom
+#adduser $1 floppy
+#adduser $1 audio
+#adduser $1 dip
+#adduser $1 video
+#adduser $1 plugdev
+#adduser $1 users
+#adduser $1 lpadmin
+
+# Creating symlinks
+ln -s /home/$1/.fonts "/home/$1/Tipos de Letra"
+ln -s /home/compartido "/home/$1/Compartido"
+ln -s /home/$1/.aMule/Incoming "/home/$1/P2P/Incoming"
+ln -s /home/$1/.aMule/Temp "/home/$1/P2P/Temp"
+
+[ ! -d "$4"/.gnome2/gthumb ] && su $1 -c "mkdir -p $4/.gnome2/gthumb"
+echo "\"file://$4/Imagenes\"" > "$4"/.gnome2/gthumb/bookmarks
+su $1 -c "gconftool-2 --type string -s /apps/dasher4/AlphabetID 'Español / Spanish  (combining accents) with numerals and punctuation'"
+
+
+chown -R $1:$2 "$4"/.gnome2/gthumb/
