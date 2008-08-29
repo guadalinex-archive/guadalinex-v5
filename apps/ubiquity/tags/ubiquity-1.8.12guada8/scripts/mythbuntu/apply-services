@@ -1,0 +1,195 @@
+#! /bin/sh -e
+#Passes on the information gathered in ubiquity
+#about additional services
+# Written by Mario Limonciello <superm1@ubuntu.com>
+# Copyright (C) 2007 Mario Limonciello
+
+. /usr/share/debconf/confmodule
+
+if [ "$1" ]; then
+    ROOT="$1"
+    chroot=chroot
+    log='log-output -t mythbuntu'
+fi
+
+samba_config()
+# $1 = videos
+# $2 = music
+# $3 = pictures
+{
+    cat > /tmp/smb.conf << EOF
+[global]
+workgroup = MSHOME
+server string = %h server (Samba, Mythbuntu)
+log file = /var/log/samba/log.%m
+max log size = 1000
+syslog = 0
+panic action = /usr/share/samba/panic-action %d
+dns proxy = no
+security = share
+
+[recordings]
+comment = TV Recordings
+path = /var/lib/mythtv/recordings
+public = yes
+writable = no
+create mask = 0777
+directory mask = 0777
+force user = nobody
+force group = nogroup
+
+EOF
+    if [ "$1" = true ]; then
+        #videos
+        cat >> /tmp/smb.conf << EOF
+[videos]
+comment = Videos
+path = /var/lib/mythtv/videos
+public = yes
+writable = yes
+create mask = 0660
+directory mask = 0770
+force user = mythtv
+force group = mythtv
+
+EOF
+    fi
+    if [ "$2" = true ]; then
+        #music
+        cat >> /tmp/smb.conf << EOF
+[music]
+comment = Music
+path = /var/lib/mythtv/music
+public = yes
+writable = yes
+create mask = 0660
+directory mask = 0770
+force user = mythtv
+force group = mythtv
+
+EOF
+    fi
+    if [ "$3" = true ]; then
+        #pictures
+        cat >> /tmp/smb.conf << EOF
+[pictures]
+comment = Pictures
+path = /var/lib/mythtv/pictures
+public = yes
+writable = yes
+create mask = 0660
+directory mask = 0770
+force user = mythtv
+force group = mythtv
+
+EOF
+    fi
+}
+
+nfs_config()
+# $1 = videos
+# $2 = music
+# $3 = pictures
+{
+    cat > /tmp/exports << EOF
+/var/lib/mythtv/recordings    *(ro,async,no_root_squash,no_subtree_check)
+EOF
+    if [ "$1" = true ]; then
+        #videos
+        cat >> /tmp/exports << EOF
+/var/lib/mythtv/videos    *(ro,async,no_root_squash,no_subtree_check)
+EOF
+    fi
+    if [ "$2" = true ]; then
+        #music
+        cat >> /tmp/exports << EOF
+/var/lib/mythtv/music    *(ro,async,no_root_squash,no_subtree_check)
+EOF
+    fi
+    if [ "$3" = true ]; then
+        #pictures
+        cat >> /tmp/exports << EOF
+/var/lib/mythtv/pictures    *(ro,async,no_root_squash,no_subtree_check)
+EOF
+    fi
+}
+
+vnc_config()
+{
+    db_get mythbuntu/vnc_password
+    VNC_PASS="$RET"
+    cat > /tmp/vnc_pass_script <<EOF
+#!/usr/bin/expect
+set PASS "$VNC_PASS"
+spawn vncpasswd /tmp/vnc-passwd
+expect Password: { send \$PASS; send "\r" }
+expect Verify: { send \$PASS; send "\r"}
+expect eof exit 0
+EOF
+    chmod +x /tmp/vnc_pass_script
+    /tmp/vnc_pass_script
+    mkdir -p $ROOT/root/.vnc
+    mv /tmp/vnc-passwd $ROOT/root/.vnc/passwd
+    chmod a+r $ROOT/root/.vnc/passwd
+    rm /tmp/vnc_pass_script
+}
+
+ssh_config()
+{
+    rm $ROOT/etc/ssh/*host*
+    cat > $ROOT/tmp/ssh_setup <<EOF
+#!/bin/sh
+/var/lib/dpkg/info/openssh-server.postinst configure
+/etc/init.d/ssh stop
+EOF
+        chmod +x $ROOT/tmp/ssh_setup
+        mount -t proc none $ROOT/proc
+        $log $chroot $ROOT /tmp/ssh_setup
+        umount $ROOT/proc
+        rm $ROOT/tmp/ssh_setup
+}
+
+mysql_config()
+{
+    MYSQLCONFIG="${ROOT}/etc/mysql/conf.d/mythtv.cnf"
+    sed s/^\#bind-address/bind-address/ ${MYSQLCONFIG} | tee ${MYSQLCONFIG}.new > /dev/null
+    mv ${MYSQLCONFIG}.new ${MYSQLCONFIG}
+}
+
+db_get mythbuntu/sambaservice
+SAMBA="$RET"
+db_get mythbuntu/nfsservice
+NFS="$RET"
+db_get mythbuntu/vncservice
+VNC="$RET"
+db_get mythbuntu/sshservice
+SSH="$RET"
+db_get mythbuntu/mysqlservice
+MYSQL="$RET"
+if [ "$SAMBA" = true ] || [ "$NFS" = true ]; then
+    db_get mythbuntu/mythvideo
+    VIDEO="$RET"
+    db_get mythbuntu/mythgallery
+    PICTURES="$RET"
+    db_get mythbuntu/mythmusic
+    MUSIC="$RET"
+    if [ "$SAMBA" = true ]; then
+        samba_config $VIDEO $MUSIC $PICTURES
+        mv /tmp/smb.conf $ROOT/etc/samba
+    fi
+    if [ "$NFS" = true ]; then
+        nfs_config $VIDEO $MUSIC $PICTURES
+        mv /tmp/exports $ROOT/etc
+    fi
+fi
+if [ "$VNC" = true ]; then
+    vnc_config
+fi
+if [ "$SSH" = true ]; then
+    ssh_config
+fi
+if [ "$MYSQL" = true ]; then
+    mysql_config
+fi
+
+exit 0
