@@ -1,3 +1,9 @@
+informe-diagnostico (1.4) hardy; urgency=low
+
+  * Changed output dir from "~/Desktop" to "~/Escritorio"
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Fri, 29 Ago 2008 11:34:08 +0200
+
 informe-diagnostico (1.3) hardy; urgency=low
 
   * Name changed to informe-diagnostico
