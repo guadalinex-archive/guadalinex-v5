@@ -22,7 +22,7 @@ ln -s /home/$1/.aMule/Incoming "/home/$1/P2P/Incoming"
 ln -s /home/$1/.aMule/Temp "/home/$1/P2P/Temp"
 
 [ ! -d "$4"/.gnome2/gthumb ] && su $1 -c "mkdir -p $4/.gnome2/gthumb"
-echo "\"file://$4/Imagenes\"" > "$4"/.gnome2/gthumb/bookmarks
+echo "\"file://$4/Imágenes\"" > "$4"/.gnome2/gthumb/bookmarks
 su $1 -c "gconftool-2 --type string -s /apps/dasher4/AlphabetID 'Español / Spanish  (combining accents) with numerals and punctuation'"
 
 
