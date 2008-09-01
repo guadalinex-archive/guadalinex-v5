@@ -1,3 +1,12 @@
+guadalinex-supplement-installer (0.3.0) lobo; urgency=low
+
+  * Changed 'gnome-app-install' code heritance in favor of using its
+    '--addon-cd' feature (/usr/bin/guadalinex-app-install wraps the call to
+    gnome-app-install --addon-cd).
+  * Sources cleaned up
+
+ -- Roberto C. Morano Vazquez <rcmorano@emergya.es>  Mon, 1 Sep 2008 13:15:12 +0100
+
 guadalinex-supplement-installer (0.2.3) lobo; urgency=low
 
   * Initial Guadalinex v5 version: Fixed dependences
