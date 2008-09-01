@@ -1,0 +1,24 @@
+PDgen software
+
+Pool Dist Generator
+
+TODO
+
+ - gen .disk dir
+ - improve heriarchy of pool
+	- add lib* directories instead of alwais a single char.
+ - check that apt-cdrom detect the repository
+
+
+ Files:
+
+    glsuppletory.py. Contains an Hermes Actor for Guadalinex Suppletory Disk detection.
+
+
+
+El directorio "gsd" contiene toda la estructura necesaria para configurar
+synaptic de forma exclusiva para los suplementos, sin afectar en nada a la co
+nfiguración del sistema.
+
+El fichero gsd/sources.list se tendrá que crear dinámicamente con la
+configuración de los repositorios cada suplemento.

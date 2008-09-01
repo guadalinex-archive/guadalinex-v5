@@ -1,0 +1,16 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Guadalinex Supplements System
+Name[es]=Instalador de suplementos
+Comment=Install a Guadalinex supplement
+Comment[es]=Instale un suplemento de Guadalinex
+GenericName=Supplement installer
+GenericName[es]=Instalador de suplementos
+Exec=gksudo guadalinex-app-install
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=gsd.png
+Categories=GNOME;Application;System;Settings;
+StartupWMClass=guadalinex-app-install
+StartupNotify=true

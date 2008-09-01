@@ -1,0 +1,3 @@
+#!/bin/bash
+
+gnome-app-install --addon-cd=$1

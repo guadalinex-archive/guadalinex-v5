@@ -1,0 +1,43 @@
+guadalinex-supplement-installer (0.3.0) lobo; urgency=low
+
+  * Changed 'gnome-app-install' code heritance in favor of using its
+    '--addon-cd' feature (/usr/bin/guadalinex-app-install wraps the call to
+    gnome-app-install --addon-cd).
+  * Sources cleaned up
+
+ -- Roberto C. Morano Vazquez <rcmorano@emergya.es>  Mon, 1 Sep 2008 13:15:12 +0100
+
+guadalinex-supplement-installer (0.2.3) lobo; urgency=low
+
+  * Initial Guadalinex v5 version: Fixed dependences
+    for Guadalinex v5.
+
+ -- Roberto C. Morano Vazquez <rcmorano@emergya.es>  Wed, 21 Mar 2007 12:11:30 +0100
+
+guadalinex-supplement-installer (0.2.2) unstable; urgency=low
+
+  * Exporting features to world: added public method
+    gsdutils.SupplementCustomizer#apt_get_update 
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Wed, 21 Mar 2007 12:11:30 +0100
+
+guadalinex-supplement-installer (0.2.1) unstable; urgency=low
+
+  * Fixed some issues.
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Mon,  5 Mar 2007 16:42:26 +0100
+
+guadalinex-supplement-installer (0.2) unstable; urgency=low
+
+  * Initial release for gv4.
+  * Hook system implemented.
+  * New GUI (hermes indepent).
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Fri, 29 Dec 2006 13:42:52 +0100
+
+guadalinex-suppletory-system (0.1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Gumersindo Coronel Pérez <gcoronel@localhost.localdomain>  Tue, 25 Oct 2005 12:51:00 +0200
+
