@@ -33,7 +33,7 @@
 <p><a href="#Ataque_combinado_a_virus_y_spam">1.1.1 Ataque combinado a virus y spam</a><br />
 <a href="#Organizaci.C3.B3n_autom.C3.A1tica_de_mensajes">1.1.2 Organización automática de mensajes</a><br />
 <a href="#Potentes_opciones_de_b.C3.BAsqueda">1.1.3 Potentes opciones de búsqueda</a><br />
-<a href="#Firma_y_encriptaci.C3.B3n_de_correo">1.1.4 Firma y encriptación de correo</a><br />
+<a href="#Firma_y_cifrado_de_correo">1.1.4 Firma y cifrado de correo</a><br />
 </p>
 <div class="tocindent">
 <p><a href="#C.C3.B3mo_crear_una_clave_GPG">1.1.4.1 Cómo crear una clave GPG</a><br />
@@ -60,7 +60,7 @@
 <a name="Correo_y_agenda_con_Evolution"></a><h1> Correo y agenda con Evolution </h1>
 <div class="thumb tright"><div style="width:182px;"><a href="imgs/Gv5-evolution-mail.png" class="internal" title="Composición de un mensaje con Evolution"><img src="imgs/180px-Gv5-evolution-mail.png" alt="Composición de un mensaje con Evolution" width="180" height="140" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Gv5-evolution-mail.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Composición de un mensaje con Evolution</div></div></div>
 <p>Siendo MS Windows el sistema operativo utilizado por la mayoría de usuarios y siendo MS Outlook el principal programa de correo que estos usuarios utilizan, es natural que dichos usuarios sientan una cierta preocupación cuando soplan vientos de migración a software libre. ¿Qué le sucederá a todo mi correo archivado? ¿Podré responder allí todos los correos pendientes que tengo aquí? ¿Y todos mis contactos, coleccionados con tesón? ¿Y todas las funciones de trabajo en grupo, podré llevarlas a cabo bajo GNU/Linux? Son preguntas que se hacen muchas personas y también muchas organizaciones que dependen en buena parte del <em>groupware</em>, el software de trabajo en grupo.
-</p><p>Pues bien, no hay que preocuparse. Los usuarios de MS Outlook y cualquiera que esté interesado en una buena herramienta libre de trabajo en grupo pueden aterrizar sin problemas en Evolution. Con ella podrán gestionar su correo, contactos, calendario y tareas. También dejarán atrás los problemas de virus y dispondrán de potentes herramientas de filtrado de spam, búsqueda de mensajes y encriptación de correo, entre otras funciones. 
+</p><p>Pues bien, no hay que preocuparse. Los usuarios de MS Outlook y cualquiera que esté interesado en una buena herramienta libre de trabajo en grupo pueden aterrizar sin problemas en Evolution. Con ella podrán gestionar su correo, contactos, calendario y tareas. También dejarán atrás los problemas de virus y dispondrán de potentes herramientas de filtrado de spam, búsqueda de mensajes y cifrado de correo, entre otras funciones. 
 </p><p>Evolution es un peso pesado en su categoría, indicado especialmente para quienes manejen grandes cantidades de correo y para quienes vayan a hacer uso de sus funcionalidades de agenda y calendario. Quienes tengan pretensiones más modestas o deseen únicamente un gestor de correo electrónico ligero, pueden probar con <strong>Thunderbird</strong>, el hermano de <strong>Firefox</strong>.
 </p><p><br />
 </p>
@@ -97,20 +97,19 @@
 </p><p>Para búsquedas puntuales Evolution dispone de un potente motor de búsqueda que nos permite definir múltiples parámetros y que realiza escaneos exaustivos, ya que la aplicación indexa todos los contenidos de los mensajes (sin contar los ficheros adjuntos).
 </p><p><br />
 </p>
-<a name="Firma_y_encriptaci.C3.B3n_de_correo"></a><h3> Firma y encriptación de correo </h3>
+<a name="Firma_y_cifrado_de_correo"></a><h3> Firma y cifrado de correo </h3>
 <div class="thumb tright"><div style="width:182px;"><a href="imgs/Editor_de_cuentas.png" class="internal" title="Pestaña de configuración de GPG."><img src="imgs/180px-Editor_de_cuentas.png" alt="Pestaña de configuración de GPG." width="180" height="153" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Editor_de_cuentas.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Pestaña de configuración de GPG.</div></div></div>
 <p>No vamos a entrar en mayores explicaciones sobre la firma digital y la encriptación de correos y archivos, pero sí vamos a dejar claro que conocer estas técnicas y ponerlas en práctica es recomendable hoy; y va a serlo más en el día de mañana. Sobre todo si estamos haciendo un uso profesional del correo y estamos manejando datos confidenciales. Es necesario que, como mínimo, seamos conscientes de los sencillo que es manejar comunicaciones firmadas y encriptadas y, también, lo relativamente sencillo que es interceptar nuestro correo abierto para alguien que realmente se lo proponga y tenga los conocimientos o el presupuesto para conseguirlo.
-</p><p>Puede sonar a paranoia pero ¿acaso dejamos el coche abierto en plena ciudad, cuando entramos un momento en una tienda? El riesgo de que nos lo roben en esos dos minutos es escaso pero... con lo sencillo que es cerrar la puerta vaya ganas de correr riesgos. Un principio similar se puede aplicar con la firma y encriptación de correo.
+</p><p>Puede sonar a paranoia pero ¿acaso dejamos el coche abierto en plena ciudad, cuando entramos un momento en una tienda? El riesgo de que nos lo roben en esos dos minutos es escaso pero... con lo sencillo que es cerrar la puerta vaya ganas de correr riesgos. Un principio similar se puede aplicar con la firma y cifrado de correo.
 </p><p>Por ejemplo, si la firma de correos con nuestra clave personal fuera una práctica extendida, sería muy sencillo separar el grano de la paja automáticamente en el spam que recibimos con remitentes de conocidos (obtenidos principalmente gracias a virus de MS Outlook). La firma digital está asociada también a toda una serie de servicios y una cobertura legal cuya legislación y aplicación está en lento pero seguro proceso.
-</p><p>Con Evolution es sencillo firmar o encriptar mensajes con nuestra clave personal (denominada clave GPG).
+</p><p>Con Evolution es sencillo firmar o cifrar mensajes con nuestra clave personal (denominada clave GPG).
 </p><p><br />
 </p>
 <a name="C.C3.B3mo_crear_una_clave_GPG"></a><h4> Cómo crear una clave GPG </h4>
-<div class="thumb tright"><div style="width:182px;"><a href="imgs/Administrador_de_claves_de_encriptaci%C3%B3n.png" class="internal" title="Ventana inicial del Administrador de claves de encriptación"><img src="imgs/180px-Administrador_de_claves_de_encriptaci%C3%B3n.png" alt="Ventana inicial del Administrador de claves de encriptación" width="180" height="139" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Administrador_de_claves_de_encriptaci%C3%B3n.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Ventana inicial del Administrador de claves de encriptación</div></div></div>
-<p>Lo ideal sería poder crear nuestra clave GPG con Evolution, pero esta funcionalidad aún no ha sido incorporada. Hay varias formas de crear una clave personal para firmar y encriptar nuestros correos, explicamos cómo llevar a cabo esta tarea con <strong>Seahorse</strong>, un administrador de claves de encriptación.
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Seahorse.png" class="internal" title="Ventana inicial del Administrador de claves de cifrado"><img src="imgs/180px-Seahorse.png" alt="Ventana inicial del Administrador de claves de cifrado" width="180" height="141" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Seahorse.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Ventana inicial del Administrador de claves de cifrado</div></div></div>
+<p>Lo ideal sería poder crear nuestra clave GPG con Evolution, pero esta funcionalidad aún no ha sido incorporada. Hay varias formas de crear una clave personal para firmar y cifrar nuestros correos, explicamos cómo llevar a cabo esta tarea con <strong>Seahorse</strong>, un administrador de claves de cifrado.
 </p>
-<ol><li> Instalamos el paquete <strong>seahorse</strong> con sus dependencias.
-</li><li> Vamos a <strong>Aplicaciones</strong> > <strong>Accesorios</strong> > <strong>Claves de encriptación</strong>. Si no aparece aún en el menú de <strong>Aplicaciones</strong>, la opción más sencilla aunque no la más rápida es cerrar la sesión y volver a entrar.
+<ol><li> Vamos a <strong>Aplicaciones</strong> > <strong>Accesorios</strong> > <strong>Contraseñas y claves de cifrado</strong>. Si no aparece aún en el menú de <strong>Aplicaciones</strong>, la opción más sencilla aunque no la más rápida es cerrar la sesión y volver a entrar.
 </li><li> En la pantalla inicial de la aplicación veremos la opción <strong>Generar una nueva clave para usted</strong>. Clicamos en <strong>Nuevo</strong>. Esta acción abrirá un asistente sin pérdida:
 <ol><li> Pantalla inicial del asistente. <strong>Adelante</strong>.
 </li><li> Escogemos un <strong>Nivel de seguridad medio</strong>, a menos que queramos iniciar una exitosa carrera de <em>hacker</em> con esta clave o trabajemos para alguna agencia de espionaje. <strong>Adelante</strong>.
@@ -121,13 +120,13 @@
 </li></ol>
 </li></ol>
 <p>Y ya tendremos nuestra clave creada, a la vista en la pantalla inicial. Veremos que nuestra clave tiene un identificador (<strong>Key ID</strong>) del tipo 01424304. No hay dos identificadores de clave iguales en el mundo, y éste es el nuestro. A diferencia de la contraseña, nuestro identificador de clave sí es un número que podemos publicitar tanto o más que nuestro número de teléfono o nuestra dirección de correo.
-</p><p>Para firmar y encriptar correos deberemos introducir este mismo identificador de clave en las preferencias de esa misma cuenta de correo en Evolution:
+</p><p>Para firmar y cifrar correos deberemos introducir este mismo identificador de clave en las preferencias de esa misma cuenta de correo en Evolution:
 </p>
 <ol><li> <strong>Editar</strong> > <strong>Preferencias</strong>
 </li><li> Seleccionamos la cuenta de correo asociadada a la clave y clicamos en <strong>Editar</strong>. 
 </li><li> Vamos a la pestaña <strong>Seguridad</strong> e introducimos la clave en el campo <strong>ID de clave GPG</strong>.
 </li></ol>
-<p>Si hemos dado este paso es recomendable consultar la <strong>Ayuda</strong> tanto de Evolution como del <strong>Administrador de claves de encriptación</strong> para conocer las posibilidades de uso de claves de encriptación.
+<p>Si hemos dado este paso es recomendable consultar la <strong>Ayuda</strong> tanto de Evolution como del <strong>Administrador de claves de cifrado</strong> para conocer las posibilidades de uso de claves de cifrado.
 </p>
 <a name="Importaci.C3.B3n_de_calendarios_web"></a><h3> Importación de calendarios web </h3>
 <p>Evolution incorpora un calendario perpetuo en el que podemos hacer anotaciones como haríamos en una agenda del presente año. Podemos mantener varios calendarios de forma simultánea pero no revuelta: cumpleaños de familiares y amistades, entregas en el contexto de un proyecto, festividades oficiales... Podemos consultar el calendario teniendo todas las entradas a la vista o sólo la de uno o varios calendarios.
@@ -139,11 +138,9 @@
 </p><p>En la actualidad hay tres funciones de integración:
 </p>
 <ul><li> Los eventos del calendario de Evolution se pueden mostrar también en el calendario del escritorio, ubicado en el panel. De esta forma no es necesario que abramos Evolution si lo único que deseamos ver es cómo tenemos el día.
-</li><li> Los contactos de nuestra agenda pueden ser añadidos como amigos en el cliente de mensajería instantánea <strong>Gaim</strong>, que repasamos en el siguiente apartado.
+</li><li> Los contactos de nuestra agenda pueden ser añadidos como amigos en el cliente de mensajería instantánea <strong>Pidgin</strong>, que repasamos en el siguiente apartado.
 </li><li> La aplicación de gestión de proyectos <strong>Planner</strong> también puede importar automáticamente nuestros contactos, y en próximas versiones podrá importar también tareas, funcionalidad que está siendo actualmente desarrollada.
 </li></ul>
-<p><br />
-</p>
 <a name="Integracion_con_MS_Exchange_y_otros"></a><h3> Integracion con MS Exchange y otros </h3>
 <p>En organizaciones públicas y privadas es probable que se utilice algún tipo de herramienta para compartir agenda de contactos, calendarios, etc. Posiblemente la aplicación más implantada sea MS Exchange, aunque hay otras posibilidades como Groupwise o la gestión de datos a través de un servidor LDAP. No poder compartir datos con estos entornos sería motivo suficiente para frenar cualquier migración individual o colectiva a software libre, pero Evolution es capaz de operar con estos entornos.
 </p><p>Un trabajador puede conectarse desde Evolution a un servidor de MS Exchange y operar como cualquier otro en la ejecución de tareas tales como:
