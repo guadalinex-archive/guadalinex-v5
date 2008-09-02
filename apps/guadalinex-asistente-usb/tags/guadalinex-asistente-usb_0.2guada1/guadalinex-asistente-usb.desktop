@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Generador de Guadalinex-USB live
+Comment=Instala un sistema live en un dispositivo de almacenamiento USB.
+Exec=gksu /usr/sbin/guadalinex-asistente-usb
+Icon=/usr/share/pixmaps/usb-assistant.png
+Terminal=false
+MultipleArgs=false
+Type=Application
+Encoding=UTF-8
+Categories=GTK;System;Settings;
