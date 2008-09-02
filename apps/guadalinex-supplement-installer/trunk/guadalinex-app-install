@@ -1,3 +1,14 @@
 #!/bin/bash
+SOURCES=/etc/apt/sources.list
+
+mv "$SOURCES" "$SOURCES.original"
+
+cat > $SOURCES <<EOF
+deb file://$1 lobo main
+EOF
+
+apt-get update
 
 gnome-app-install --addon-cd=$1
+
+mv "$SOURCES.original" "$SOURCES"
