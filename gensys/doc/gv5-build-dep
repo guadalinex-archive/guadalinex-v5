@@ -1,0 +1,45 @@
+# Lista de dependencias para construir los paquetes de Gv5.
+# Se sacó del resultado de ejecutar un 'compile-svn'.
+# Para instalarlas facilmente usando este fichero ejecutar:
+# $ sudo apt-get install $(echo $(for pkg in $(cat gv5-build-dep|grep -v -e ^#);do echo $pkg;done))
+python-dev
+libusb-dev
+python-gtk2-dev
+python-dbus
+python-glade2
+python-gtk2
+python-sqlobject
+python-sqlite
+python-gnome2-extras-dev
+python-gnome2-dev
+mobile-manager
+python-gtk2-dev
+unzip
+unixodbc
+libxp6
+libxtst6
+gedit-dev
+fp-compiler
+iso-codes
+libhal-dev
+automake1.9
+texinfo
+libncurses5-dev
+texi2html
+python-all-dev
+dpatch
+patchutils
+libnautilus-extension-dev
+libiw-dev
+gfxboot
+libusplash-dev
+libgtop2-dev
+quilt
+python-setuptools
+libpcsclite-dev
+dctrl-tools
+iso-codes
+fp-compiler
+libnss3-dev
+mozilla-devscripts
+zip
