@@ -147,7 +147,7 @@ class GuadalinexInstaladorUsb (object):
         self.progressbar.pulse()
         gtk.gdk.threads_leave()
 
-	     return True
+        return True
 
 
     def install(self, cmd):
