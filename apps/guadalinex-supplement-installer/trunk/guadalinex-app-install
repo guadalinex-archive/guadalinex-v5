@@ -1,14 +1,19 @@
 #!/bin/bash
 SOURCES=/etc/apt/sources.list
+MOUNTPOINT=$1
+
+if [ -z "$MOUNTPOINT" ];then
+    MOUNTPOINT=$(mount|grep GSD|awk '{print $3}')
+   fi
 
 mv "$SOURCES" "$SOURCES.original"
 
 cat > $SOURCES <<EOF
-deb file://$1 lobo main
+deb file://$MOUNTPOINT lobo main
 EOF
 
 apt-get update
 
-gnome-app-install --addon-cd=$1
+gnome-app-install --addon-cd=$MOUNTPOINT
 
 mv "$SOURCES.original" "$SOURCES"
