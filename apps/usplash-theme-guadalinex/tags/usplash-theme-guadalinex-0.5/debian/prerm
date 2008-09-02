@@ -1,9 +1,0 @@
-#!/bin/sh
-
-set -e
-
-#DEBHELPER#
-
-if [ "$1" = remove ]; then
-    update-alternatives --remove usplash-artwork.so /usr/lib/usplash/usplash-theme-guadalinex.so
-fi
