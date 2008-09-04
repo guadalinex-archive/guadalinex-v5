@@ -1,0 +1,13 @@
+Source: guadalinex-supplement-installer
+Section: devel
+Priority: optional
+Maintainer: Junta de Andalucía <packmaster@guadalinex.org>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.1
+
+Package: guadalinex-supplement-installer
+Architecture: any
+Replaces: guadalinex-suppletory-system
+Depends: python2.4, gnome-app-install, hermeshardware
+Description: Herramienta para la instalación de supplementos para Guadalinex
+    El sistema de suplementos de Guadalinex es una herramienta que permite la detección e instalación de suplementos contenidos en diversos soportes, como Cd-roms o DVD.

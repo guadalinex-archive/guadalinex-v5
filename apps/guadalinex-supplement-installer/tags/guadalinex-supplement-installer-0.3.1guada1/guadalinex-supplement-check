@@ -1,0 +1,20 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import sys
+sys.path.insert(0, '/usr/share/gsd')
+
+from appinstall import Finder
+
+supp_exists = False
+
+for result in Finder().get_devices():
+    mount_point = result.get('volume.mount_point', '')
+    if mount_point:
+        print mount_point
+        supp_exists = True
+
+if supp_exists:
+    sys.exit(0)
+else:
+    sys.exit(1)

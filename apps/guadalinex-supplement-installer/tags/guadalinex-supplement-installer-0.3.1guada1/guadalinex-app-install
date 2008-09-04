@@ -1,0 +1,11 @@
+#!/bin/bash
+
+MOUNTPOINT=$(mount |grep iso9660|awk '{print $3}')
+LABEL=$(volname|grep GSD)
+
+if [ ! -z "$LABEL" ];then
+    gnome-app-install --addon-cd=$MOUNTPOINT
+else
+    zenity --error --text "No hay ningún disco de suplementos en la unidad"
+fi
+
