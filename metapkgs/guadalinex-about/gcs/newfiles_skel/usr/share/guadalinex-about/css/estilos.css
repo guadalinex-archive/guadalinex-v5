@@ -1,0 +1,155 @@
+
+body{
+font-size: 0.70em;
+font-family: sans,Serif;
+font-weight: normal;
+color: #fff;
+margin: 0;
+padding:0;
+background:#3396df url(../img/bg5.jpg) no-repeat center center;
+text-align:center;
+
+}
+.clear{
+clear:both;}
+
+.pie{
+padding:26px 0 0 0 ;
+width:100%;
+clear:both;
+position:relative;
+text-align:left;
+background-image:url(../img/barrita_bg.png);
+background-repeat: repeat-x;
+background-position: right bottom;
+height:95px;
+
+}
+.oculto{
+display:none;
+visibility:hidden;
+}
+h2{
+font-size: 3em;
+margin-bottom:0;
+margin-top:10px;
+}
+
+
+.contenido{
+
+width:85%;
+margin-left:auto;
+margin-right:auto;
+margin-top:25px;
+text-align:left;
+
+}
+.titular{
+background-image:url(../img/logo_guadalinex_v5.png);
+background-repeat: no-repeat;
+background-position: right center;
+height:100px;
+padding-bottom:0.5%;
+
+}
+ul{
+display:block;
+margin:0px;
+padding:0px;
+list-style:none;
+
+}
+ul li{
+display:block;
+float:left;
+width:100%;
+}
+.l1{
+
+background-image:url(../img/logito_enlace_guadalinex.png);
+background-repeat: no-repeat;
+background-position: left top;
+
+}
+.l2{
+
+background-image:url(../img/logito_enlace_guadalpedia.png);
+background-repeat: no-repeat;
+background-position: left top;
+}
+.l3{
+
+background-image:url(../img/logito_enlace_forja.png);
+background-repeat: no-repeat;
+background-position: left top;
+}
+.l4{
+
+background-image:url(../img/logito_enlace_wikipedia.png);
+background-repeat: no-repeat;
+background-position: left top;
+}
+
+a.e1{
+display:block;
+float:left;
+width:85px;
+height:74px;
+
+
+}
+.desc{
+background-position: left top;
+line-height:145%;
+margin-left:85px;
+background-color:#fff;
+-moz-border-radius:10px;
+-moz-opacity:0.85;
+padding:15px 25px;
+}
+
+.descripcion{
+
+color:#212A3D;
+
+
+
+}
+.logo{
+background-image:url(../img/andatuz.png);
+background-repeat: no-repeat;
+background-position: right top;
+width:148px;
+height:95px;
+}
+
+.logo_junta{
+width:180px;
+height:67px;
+position:absolute;
+right:70px;
+bottom:50px;
+}
+
+
+
+.enlaces_texto{text-decoration:none;color:#333;}
+.enlaces_texto:hover{text-decoration:underline;}
+
+#newsticker {
+	position: relative;
+}
+#newsticker ul {
+	list-style: none;
+	min-height: 1.6em;
+	padding: 1px 1px 25px;
+}
+
+* html #newsticker ul {
+	height: 1.6em;
+	overflow: visible;
+}
+#newsticker li.error {
+	color: #f00;
+}
