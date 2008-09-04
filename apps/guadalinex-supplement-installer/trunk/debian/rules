@@ -50,7 +50,6 @@ install: build
 	dh_install guadalinex-supplement-check /usr/bin
 	dh_install gsd.png /usr/share/pixmaps
 	dh_install gsd	/usr/share/
-	dh_install glsuppletory.py	/usr/share/hermes/actors
 	dh_install guadalinex-app-install.desktop /usr/share/applications/
 
 
