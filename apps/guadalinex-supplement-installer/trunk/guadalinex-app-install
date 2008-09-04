@@ -1,19 +1,11 @@
 #!/bin/bash
-SOURCES=/etc/apt/sources.list
-MOUNTPOINT=$1
 
-if [ -z "$MOUNTPOINT" ];then
-    MOUNTPOINT=$(mount|grep GSD|awk '{print $3}')
-   fi
+MOUNTPOINT=$(mount |grep iso9660|awk '{print $3}')
+LABEL=$(volname|grep GSD)
 
-mv "$SOURCES" "$SOURCES.original"
+if [ ! -z "$LABEL" ];then
+    gnome-app-install --addon-cd=$MOUNTPOINT
+else
+    zenity --error --text "No hay ningún disco de suplementos en la unidad"
+fi
 
-cat > $SOURCES <<EOF
-deb file://$MOUNTPOINT lobo main
-EOF
-
-apt-get update
-
-gnome-app-install --addon-cd=$MOUNTPOINT
-
-mv "$SOURCES.original" "$SOURCES"
