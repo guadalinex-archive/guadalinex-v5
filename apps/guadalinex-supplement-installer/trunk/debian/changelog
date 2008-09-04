@@ -1,3 +1,10 @@
+guadalinex-supplement-installer (0.3.1guada1) lobo; urgency=low
+
+  * Changed guadalinex-app-install: scan supplements cdroms and lauch
+    gnome-app-install
+  * Deleted glsuppletory hermes actor not needed
+
+ -- David Teyssiere <dteyssiere@emergya.es>  Thu, 4 Sep 2008 12:55:12 +0100
 guadalinex-supplement-installer (0.3.1) lobo; urgency=low
 
   * Changed guadalinex-app-install, added sources.list update from cdrom
