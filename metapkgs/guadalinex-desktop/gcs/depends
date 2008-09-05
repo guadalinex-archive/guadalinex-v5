@@ -55,6 +55,7 @@ evince
 evolution
 evolution-exchange
 evolution-plugins
+escritorio-movistar
 extras-installer
 fast-user-switch-applet
 file-roller
@@ -209,6 +210,7 @@ update-notifier
 usplash
 vlc
 vlc-plugin-sdl
+vodafone-mobile-connect-card-driver-for-linux
 watermain
 xdg-user-dirs
 xdg-user-dirs-gtk
