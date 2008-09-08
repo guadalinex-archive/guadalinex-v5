@@ -1,0 +1,15 @@
+Guadafox
+--------
+
+Guadafox es una customización del paquete ubufox.
+
+Cambios
+-------
+
+* Principalmente todo los cambios del paquete ubufox sobre el codigo los hace el script debian/ubufox2guadafox.py . Este script parsea todo el codigo del paquete y produce los cambios sobre el codigo para ser adaptados a las necesidades de guadalinex.
+
+* Bookmarks: Los bookmarks estan alojados en bookmark/bookmarks.html. Este fichero esta customizado para que aparezcan todos los enlaces de guadalinex.
+
+* Search Engines : Se han incluido search engines propias para guadalinex. Que estan definidas en los xml dentro de directorio searchplugins/
+
+* Soporte de ed2k : Se han incluido soporte para ed2k dentro de las preferencias de defaults/preferences/guadalinex.js
