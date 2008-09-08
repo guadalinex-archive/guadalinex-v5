@@ -1,3 +1,4 @@
 [Default Applications]
 audio/x-musepack=rhythmbox.desktop
 video/x-ogg=vlc.desktop
+audio/x-ogg=rhythmbox.desktop
