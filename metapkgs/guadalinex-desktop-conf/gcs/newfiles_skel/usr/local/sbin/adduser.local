@@ -3,6 +3,7 @@
 
 adduser $1 scard 
 adduser $1 scanner
+adduser $1 sambashare
 # these are already added by default in hardy
 #adduser $1 adm
 #adduser $1 dialout
