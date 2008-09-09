@@ -1,0 +1,24 @@
+guadafox (0.2-3) hardy; urgency=low
+
+  * Added 'laSexta' bookmark.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Tue, 09 Sep 2008 16:10:55 +0200
+
+guadafox (0.2-2) hardy; urgency=low
+
+  * Fixed default homepage URL.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Tue, 26 Ago 2008 09:10:55 +0200
+
+guadafox (0.2-1) hardy; urgency=low
+
+  * Add ed2k support 
+
+ -- Roberto Majadas <roberto.majadas@openshine.com>  Thu, 12 Jun 2008 14:00:55 +0200
+
+guadafox (0.1-1) unstable; urgency=low
+
+  * Initial release. Sync with ubufox version ubufox-0.5~rc1 
+
+ -- Roberto Majadas <roberto.majadas@openshine.com>  Mon, 14 Apr 2008 00:16:53 +0200
+
