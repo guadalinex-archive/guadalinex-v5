@@ -1,0 +1,9 @@
+#!/bin/bash
+
+CHROOT="/var/guadalinexV5/hardy-chroot"
+GENSYS="/var/opt/cdimage/gensys.sh" # relative to $CHROOT
+FROM_ISO="/var/guadalinexV5/hardy-chroot/var/opt/cdimage/scratch/guadalinex/daily-live/debian-cd/i386/lobo-desktop-i386.raw"
+TO_ISO="/var/www/guadalinex-desktop-i386-$(date +%Y%m%d%H%M%S).iso"
+
+chroot $CHROOT su - gensys -c "$GENSYS --distro lobo --project guadalinex" > /var/log/gensys-$(date +%Y%m%d%H%M%S).log 2> /var/log/gensys-$(date +%Y%m%d%H%M%S).errors.log
+mv $FROM_ISO $TO_ISO
