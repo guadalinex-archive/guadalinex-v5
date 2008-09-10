@@ -1,0 +1,12 @@
+#!/bin/sh
+#DEBHELPER#
+
+dpkg-divert --package guadalinex-eadmin --rename --quiet --add /usr/share/opensc-ceres/inst_gnome_pkcs11_cert.pl
+ln -fs /usr/share/opensc-ceres/inst_gnome_pkcs11_cert.pl.gv5 /usr/share/opensc-ceres/inst_gnome_pkcs11_cert.pl
+dpkg-divert --package guadalinex-eadmin --rename --quiet --add /usr/share/opensc-ceres/inst_kde_pkcs11_cert.pl
+ln -fs /usr/share/opensc-ceres/inst_kde_pkcs11_cert.pl.gv5 /usr/share/opensc-ceres/inst_kde_pkcs11_cert.pl
+
+dpkg-divert --package guadalinex-eadmin --rename --quiet --add /usr/share/opensc-dnie/inst_gnome_pkcs11_cert.pl
+ln -fs /usr/share/opensc-dnie/inst_gnome_pkcs11_cert.pl.gv5 /usr/share/opensc-dnie/inst_gnome_pkcs11_cert.pl
+dpkg-divert --package guadalinex-eadmin --rename --quiet --add /usr/share/opensc-dnie/inst_kde_pkcs11_cert.pl
+ln -fs /usr/share/opensc-dnie/inst_kde_pkcs11_cert.pl.gv5 /usr/share/opensc-dnie/inst_kde_pkcs11_cert.pl

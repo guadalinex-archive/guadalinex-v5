@@ -1,0 +1,16 @@
+#!/bin/sh
+#DEBHELPER#
+
+dpkg-divert --package guadalinex-eadmin --rename --quiet --add /etc/firefox-3.0/pref/firefox.js
+ln -fs /etc/firefox-3.0/pref/firefox.js.gv5 /etc/firefox-3.0/pref/firefox.js
+
+dpkg-divert --package guadalinex-eadmin --rename --quiet --add /usr/share/applications/gscriptor.desktop
+ln -fs /usr/share/applications/gscriptor.desktop.gv5 /usr/share/applications/gscriptor.desktop
+
+rm /usr/share/applications/gscriptor.desktop
+cp /usr/share/applications/gscriptor.desktop.gv5 /usr/share/applications/gscriptor.desktop
+
+/bin/chmod 755 /usr/lib/jvm/java-6-sun/jre/lib/i386/client/libjss3.so
+/bin/chmod 644 /usr/lib/jvm/java-6-sun/jre/lib/ext/jss33.jar
+
+/usr/share/guadalinex-eadmin/change_default_session.py
