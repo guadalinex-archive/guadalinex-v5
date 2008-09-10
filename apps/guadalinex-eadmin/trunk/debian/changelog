@@ -1,3 +1,9 @@
+guadalinex-eadmin (v5-0.5) hardy; urgency=low
+
+  * Indentation bugfix on certmanager
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Wed, 10 Sep 2008 17:17:42 +0100
+
 guadalinex-eadmin (v5-0.4) hardy; urgency=low
 
   * Siemens card are conditionally supported to the
