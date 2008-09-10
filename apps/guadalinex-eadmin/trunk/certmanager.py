@@ -359,12 +359,12 @@ class FireFoxApp(Application):
             if abort:
                 return False, ''
 
-		if install_dnie or install_ceres:
-		    try:
-			card_types = self.check_smartcards()
-	    except FireFoxAppError, e:
-	        print e.errno, e.desc
-	        return False, ''
+            if install_dnie or install_ceres:
+	        try:
+		    card_types = self.check_smartcards()
+	        except FireFoxAppError, e:
+	            print e.errno, e.desc
+	            return False, ''
 
 	    if SIEMENS_ATR in card_types and self._is_siemens_supported():
 	        print "Detected Siemens Smartcard"
