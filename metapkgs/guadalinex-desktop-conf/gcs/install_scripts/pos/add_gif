@@ -1,0 +1,2 @@
+gconftool-2 -s --type string /apps/metacity/global_keybindings/run_command_5 '<Control><Shift><Alt>5'
+gconftool-2 -s --type string /apps/metacity/keybinding_commands/command_5 'me_mola_guadalinex'
