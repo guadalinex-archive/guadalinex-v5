@@ -1,0 +1,231 @@
+#!/usr/bin/env python
+# -*- coding: utf8 -*-
+
+# G u a d a l i n e x  E a s t e r  E g g  v5
+# by Alfonso E.M.
+# Free (GPL) but a bit obfuscated code :-)
+#
+# Original work coded by Jan "Opi" Danihelka (opicacek@seznam.cz) for Pyweek 2007
+
+
+
+import pygame
+import sys
+import math,string
+import random
+
+import base64
+
+def stuff():
+        return '''
+CgoKQ1JFRElUT1MKCgoKCgpVbiBwZXF1ZcOxbyBob21lbmFqZSBhIGxvcyBxdWUgaGFuIHRyYWJh
+amFkbyBlbiBlc3RhIGVkaWNpw7NuIGRlIEd1YWRhbGluZXggKE5vbWJyZSBlbiBDw7NkaWdvOiBM
+b2JvKQoKCkRlc2RlIGxhIENvbnNlamVyw61hIGRlIElubm92YWNpw7NuLCBDaWVuY2lhIHkgRW1w
+cmVzYTogSnVhbiB5IEplc8O6cwoKRWwgZXF1aXBvIEd1YWRhbGluZXg6IEx1aXNvdG9wbywgS2lr
+ZSwgQ2FybG9zLCBJYm9uLCBKb3NlIEFudG9uaW8gTS1CIHkuLi4KQWxmb25zbyBFLk0uCgpEZXNk
+ZSBFbWVyZ3lhOiBSYWZhIE1hcnTDrW4sIENhcmxvcyBQYXJyYSwgQWxmcmVkbyBNYXRhcywgSnVh
+bmplIE9qZWRhLCBHw7ptZXIgQ29yb25lbCwgRsOpbGl4IE9udGHDscOzbiwgUm9iZXJ0byBNb3Jh
+bm8sIERhdmlkIFRleXNzaWVyZSB5IENhcmxvcyBQw6lyZXoKCkRlc2RlIE9wZW5TaGluZTogUm9i
+ZXJ0byBNYWphZGFzIHkgQWx2YXJvIFBlw7FhCgpFbCB0b3F1ZSBkZSBjYWxpZGFkIGxvIHBvbmUg
+SW5nZW55Y29tOiBBbGZvbnNvIEFyam9uYSB5IGNvbXBhw7HDrWEKClkgbGEgcGFydGUgYXJ0w61z
+dGljYSBlcyBjb3NhIGRlIEV4cGFuc2l2YTogV2VuY2VzbGFvIHkgQWJlbAoKQXVucXVlIGxhIG1h
+c2NvdGEgQW5kYXR1eiBzZSBsZSBvY3VycmnDsyBhIEpvc2UgQS4gR2lsCgoKClJlc3BldHVvc29z
+IHNhbHVkb3MgYSBsYXMgY29tdW5pZGFkZXMgZGUgVWJ1bnR1IHkgRGViaWFuIAoKWSBhIGxvcyBx
+dWUgbWFzIHBhcnRpY2lwYW4gZW4gbGEgY29tdW5pZGFkIEd1YWRhbGluZXg6IGluZGlvY2FicmVh
+bywgYW1iaWVudGFsLCBhbGZhYmV0LCBzZW1hbnVlLCBiYXNvYWx0bywgYWR2b2NhdHV4LCBlaGl0
+bWFuLCBzYW5hdGFzLCBlc3BhcnRhY28sIGhhdHRlcmFzLCBtYXJkdWssIHRydW5rcywgZ3VhZGFm
+YW4sIGFudG9ueWFsaWNhLCBtYXJyYWpvCgoKKioqIENvcHlsZWZ0IDIwMDggSnVudGEgZGUgQW5k
+YWx1Y2lhICoqKgoKCkVzdGEgdmVyc2nDs24gZGUgbGEgZGVkaWNhZGFtb3MgY29uIGNhcmnDsW8g
+YSBWw61jdG9yIEZlcm7DoW5kZXosIHF1ZSBzZSBsbyBoYSBnYW5hZG8uIAoKClRlIGVzcGVyYW1v
+cyBlbiBHRU5URSBHVUFEQSwgZWwganVlZ28gZGUgbGEgY29tdW5pZGFkIEd1YWRhbGluZXggZG9u
+ZGUgcHVlZGVzIGVuY29udHJhciBwcmVtaW9zIHJlYWxlcyBleHBsb3JhbmRvIHVuIG11bmRvIHZp
+cnR1YWwuCgoKVCBIIEUgICBFIE4gRCAKCgpJTlNUUlVDQ0lPTkVTOiB1c2EgbGFzIGZsZWNoYXMg
+aXpxdWllcmRhIHkgZGVyZWNoYSBwYXJhIG1hbnRlbmVyIGxhIHZhZ29uZXRhIGJham8gZWwgcGlu
+Z3Vpbm8uIEFwaWxhIHBpbmd1aW5vcyBoYXN0YSBjb2dlciBlbCBwZXouIExvcyBjcsOpZGl0b3Mg
+aXLDoW4gbcOhcyByw6FwaWRvIHB1bHNhbmRvICArICB5IG3DoXMgbGVudG9zIChzZWd1cm8gcXVl
+IGxvIGFkaXZpbmFzdGUpIHB1bHNhbmRvICAtIAoKCg==
+
+'''
+
+
+pygame.init()
+
+startX = 300
+startY = 550
+
+fps = 20
+
+mapXY= (480, 600)
+screen = pygame.display.set_mode(mapXY)
+pygame.display.set_caption('Andatuz Tower')
+
+
+tux_img = pygame.image.load("/lib/A/l/m/e/r/i/a/C/a/d/i/z/C/o/r/d/o/b/a/G/r/a/n/a/d/a/H/u/e/l/v/a/J/a/e/n/M/a/l/a/g/a/S/e/v/i/l/l/a/images/andatuz.png")
+bg = pygame.image.load("/lib/A/l/m/e/r/i/a/C/a/d/i/z/C/o/r/d/o/b/a/G/r/a/n/a/d/a/H/u/e/l/v/a/J/a/e/n/M/a/l/a/g/a/S/e/v/i/l/l/a/images/bg.png")
+vagon = pygame.image.load("/lib/A/l/m/e/r/i/a/C/a/d/i/z/C/o/r/d/o/b/a/G/r/a/n/a/d/a/H/u/e/l/v/a/J/a/e/n/M/a/l/a/g/a/S/e/v/i/l/l/a/images/vagon.png")
+fish = pygame.image.load("/lib/A/l/m/e/r/i/a/C/a/d/i/z/C/o/r/d/o/b/a/G/r/a/n/a/d/a/H/u/e/l/v/a/J/a/e/n/M/a/l/a/g/a/S/e/v/i/l/l/a/images/fish.png")
+
+fnt = pygame.font.Font(None, 30)
+
+text=base64.decodestring(stuff())
+text=string.replace(text,"\n","        ")
+text=unicode(text,'utf8')
+
+text_scrolled = fnt.render(text,1,(10,10,100))
+twidth,theight=text_scrolled.get_size()
+scroll=0
+inc_scroll=2
+
+
+
+pygame.display.set_icon(tux_img)
+
+
+class Penguin:
+
+    def __init__(self, pos, img):
+        self.pos = pos
+        self.img = img
+
+    def draw(self):
+        screen.blit(self.img, self.pos)
+     
+penguins = []
+
+tux = Penguin([startX,startY], vagon)
+
+penguins.append(tux)
+
+watch = pygame.time.Clock()
+
+tux = Penguin([penguins[-1].pos[0],startY-38*len(penguins)], tux_img)
+penguins.append(tux)
+
+acc = 0
+time = 0
+time2 = 0
+time3 = 0
+done = 0
+
+while done == 0:
+    
+    watch.tick(fps)
+    time += 1
+    time3 += 1
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            sys.exit()
+    keys = pygame.key.get_pressed()
+    if keys[pygame.K_ESCAPE]:
+        sys.exit()
+
+    if time > 60:
+        if len(penguins) < 21:
+            tux = Penguin([penguins[-1].pos[0],startY-38*len(penguins)], tux_img)
+            penguins.append(tux)
+            time = 0
+
+    if keys[pygame.K_LEFT]:
+        acc -= 1
+        
+    if keys[pygame.K_RIGHT]:
+        acc += 1
+
+    if keys[pygame.K_PLUS]:
+        inc_scroll += 1
+
+    if keys[pygame.K_MINUS]:
+        inc_scroll -= 1
+
+        
+    if acc > 20:
+        acc = 20
+
+    penguins[0].pos[0] += acc
+
+    if penguins[0].pos[0] < 0:
+        penguins[0].pos[0] = 0
+    if penguins[0].pos[0] > 560:
+        penguins[0].pos[0] = 560
+
+    if len(penguins) == 2:
+        penguins[-1].pos[0] = penguins[0].pos[0]
+
+    # wind
+    if len(penguins) > 2:
+        wind = random.randrange(-2*len(penguins),2*len(penguins)+1)
+        penguins[-1].pos[0] += wind
+        if penguins[-1].pos[0] < 0:
+            penguins[-1].pos[0] = 0
+        elif penguins[-1].pos[0] > 570:
+            penguins[-1].pos[0] = 570
+
+    # move all penguins
+    leng = len(penguins)
+
+    if leng > 2:
+        index = -2
+        while penguins[index] != penguins[0]:         
+            
+            penguins[index].pos[0] -= (penguins[index].pos[0] - penguins[index+1].pos[0])/3
+
+            index -= 1
+
+    # check fall
+    if len(penguins) > 2:
+        if abs((penguins[0].pos[0]+20) - (penguins[1].pos[0]+15)) > 34:
+            time2 += 1
+
+        if time2 > 6:
+            del penguins[-1]
+            time2 = 0
+                     
+
+    # check win
+    if len(penguins) > 16:
+        if 260 < penguins[16].pos[0] < 310:
+            done = 1 
+
+
+    penguins[0].draw()
+
+    for one in penguins[1:-1]:
+        one.draw()
+
+
+    rot = pygame.transform.rotate(fish, random.randrange(-15,16))
+    obrRect = rot.get_rect()
+    obrRect.centerx = 285 + random.randrange(-4,5) 
+    obrRect.centery = 30 + random.randrange(-5,6)
+    screen.blit(rot, obrRect)
+
+    screen.blit(bg, (0,580))
+
+    scroll=scroll+inc_scroll;
+    if scroll > twidth:
+       scroll = 0
+    screen.blit(text_scrolled, (0-scroll,250))
+
+
+    pygame.display.flip()
+    screen.fill((90, 90, 115))
+
+
+
+total = unicode(str(time3/10)+" segundos", 'iso8859-2')	
+
+fontik = pygame.font.Font(None, 50)
+text = fontik.render(total, 1, (10, 10, 200))
+
+screen.blit(text, (190, 530))
+pygame.display.flip()
+
+while 1:
+    
+    watch.tick(fps)
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            sys.exit()
+    keys = pygame.key.get_pressed()
+    if keys[pygame.K_ESCAPE]:
+        sys.exit()
