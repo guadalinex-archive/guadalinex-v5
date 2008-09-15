@@ -1,0 +1,182 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>Hospedar_y_gestionar_una_web</title>
+
+    <link / REL="shortcut icon" HREF="imgs/favicon.ico">
+    <link / REL="stylesheet" TYPE="text/css" MEDIA="screen,projection" HREF="css/main.css">
+    <link / REL="stylesheet" TYPE="text/css" MEDIA="print" HREF="css/commonPrint.css">
+    <script SRC="css/script.js" TYPE="text/javascript"></script>
+    <script SRC="css/wikibits.js" TYPE="text/javascript"></script>
+    
+  </head>
+  <body class="ns-0">
+  <div ID="globalWrapper">
+
+<div id="content">
+<a name="top" id="contentTop"></a>
+<h1 class="firstHeading">Guía v5/Hospedar y gestionar una web</h1>
+<div id="bodyContent">
+<h3 id="siteSub">De Guadapedia, la enciclopedia libre.</h3>
+<div id="contentSub"></div>
+<!-- start content -->
+<table border="0" id="toc"><tr id="toctitle"><td align="center">
+<b>Tabla de contenidos</b> <script type="text/javascript">showTocToggle("mostrar","esconder")</script></td></tr><tr id="tocinside"><td>
+<div class="tocline"><a href="#Hospedar_y_gestionar_una_web">1 Hospedar y gestionar una web</a><br /></div>
+<div class="tocindent">
+<p><a href="#Apache_sirve_la_web">1.1 Apache sirve la web</a><br />
+</p>
+<div class="tocindent">
+<p><a href="#Una_prueba_est.C3.A1tica">1.1.1 Una prueba estática</a><br />
+</p>
+</div>
+<p><a href="#MySQL_gestiona_los_datos">1.2 MySQL gestiona los datos</a><br />
+<a href="#PHP.2C_Perl_y_Python">1.3 PHP, Perl y Python</a><br />
+<a href="#Gestores_de_contenidos">1.4 Gestores de contenidos</a><br />
+</p>
+<div class="tocindent">
+<p><a href="#Blosxom">1.4.1 Blosxom</a><br />
+<a href="#Drupal">1.4.2 Drupal</a><br />
+<a href="#Mediawiki">1.4.3 Mediawiki</a><br />
+<a href="#Wordpress">1.4.4 Wordpress</a><br />
+</p>
+</div>
+</div>
+</td></tr></table>
+<a name="Hospedar_y_gestionar_una_web"></a><h1> Hospedar y gestionar una web </h1>
+<p>Un servidor no sirve si no tiene nada que servir. Vamos a empezar a poner remedio a esto montando nuestra propia página web. Aunque de entrada pueda parecer que lo más sencillo sea componer algunas páginas web y subirlas al servidor, lo propio es poner en solfa un gestor de contenidos. Hay decenas, centenares de gestores de contenidos libres con diversos grados de complejidad y calidad, diversos fines, plataformas, paradigmas. 
+</p><p>Aquí vamos a abordar unos pocos, muy recomendables. Pero antes deberemos tener unos cuantos conceptos claros.
+</p><p>LAMP es el nombre que recibe una clase de aplicaciones web muy extendidas y construidas con una combinación de estas herramientas de software libre:
+</p>
+<ul><li> GNU/<strong>L</strong>inux, como sistema operativo.
+</li><li> <strong>A</strong>pache, como servidor web.
+</li><li> <strong>M</strong>ySQL, como servidor de bases de datos.
+</li><li> <strong>P</strong>erl, PHP, y/o Python, como lenguajes de programación.
+</li></ul>
+<p>Veamos cómo combinan estas piezas en nuestro servidor que aún no sirve.
+</p><p><br />
+</p>
+<a name="Apache_sirve_la_web"></a><h2> Apache sirve la web </h2>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Screen-apache.png" class="internal" title="Página por defecto de Apache"><img src="imgs/180px-Screen-apache.png" alt="Página por defecto de Apache" width="180" height="129" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Screen-apache.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Página por defecto de Apache</div></div></div>
+<p>Apache <a href="http://www.apache.org" class="external" title="http://www.apache.org">[1]</a><span class="urlexpansion"> (<i>http://www.apache.org</i>)</span> es el servidor web por excelencia, usado por el 70% de los servidores web de todo el mundo. Es una pieza de software ubicada en servidores que se encarga de enviar los contenidos de sus webs a nuestros navegadores a través de Internet y mediante el protocolo HTTP.
+</p><p>La instalación de este software en nuestro servidor es sencilla: instalamos el paquete <strong>apache2</strong> y sus dependencias. Una vez instalado tendremos ya funcionando nuestro servidor web. 
+</p><p>Si nos conectamos desde un navegador a la dirección IP o a nuestro dominio, debería aparecer la página que Apache ofrece por defecto. Si esto es así magnífico, ya podemos empezar a añadir contenidos a nuestra web.
+</p><p><br />
+</p>
+<a name="Una_prueba_est.C3.A1tica"></a><h3> Una prueba estática </h3>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Oofficeweb1.png" class="internal" title="Asistente de Paginas Web de OpenOffice.org"><img src="imgs/180px-180px-Oofficeweb1.png" alt="Asistente de Paginas Web de OpenOffice.org" width="180" height="96" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Oofficeweb1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Asistente de Paginas Web de OpenOffice.org</div></div></div>
+<p>Para publicar una simple página web bastaría con editar el contenido de un fichero en el directorio '/var/www' la raíz de nuestro servidor web, por ejemplo:
+</p><p><strong>$ sudo nano /var/www/hola.html</strong>
+</p><p>e incluir algo tán básico como:
+</p><p><strong>Hola Mundo</strong>
+</p><p><br />
+De esta forma, y siguiendo el ejemplo del anterior apartado, si accedemos con nuestro navegador a  <a href="http://guias-ubuntu.dyndns.org/hola.html" class="external" title="http://guias-ubuntu.dyndns.org/hola.html">http://guias-ubuntu.dyndns.org/hola.html</a> obtendremos el contenido de nuestra página web.
+</p><p>Pero crear contenidos de esta forma es laborioso y complejo. Sirva sólo como ejemplo de una forma tradicional de crear páginas web estáticas.
+</p><p>Podemos realizar una prueba más elaborada de web estática mediante el asistente web de <strong>OpenOffice.org</strong>. Dicho  asistente nos permite generar páginas web de una forma sencilla a partir de nuestros documentos de texto, hojas de cálculo, presentaciones, etc. Además genera menús de navegación sencillos, y permite cambiar el aspecto de las páginas generadas.
+</p><p>Al final del proceso el asistente genera todo el contenido en un directorio que podemos mover a la raíz de nuestro servidor web (/var/www) para dejarlo visible al público.
+</p>
+<a name="MySQL_gestiona_los_datos"></a><h2> MySQL gestiona los datos </h2>
+<p>MySQL es uno de los sistema de gestión de base de datos más populares dentro del mundo del Software Libre. Es usado por muchas aplicaciones para almacenar información. Es muy común que si instalamos un servicio de gestión de contenidos, éste use entre otras cosas MySQL.
+</p><p>La instalación es relativamente sencilla. Buscamos y seleccionamos para instalar el paquete <strong>mysql-server</strong>. 
+</p><p>Durante la instalación nos pedirá que introduzcamos la contraseña para el usuario root de mysql.
+</p><p>Una vez dado este paso, el servidor de MySQL se instalará y se arrancará sin problemas:
+</p><p><strong>Configurando mysql-server-5.0 (5.0.51a-3ubuntu5.1) ...</strong>
+</p><p><strong> * Stopping MySQL database server mysqld                            [ok]</strong>
+</p><p><strong> * Starting MySQL database server mysqld                            [ok]</strong>
+</p><p><strong> Checking for corrupt, not cleanly closed and upgrade needing tables.</strong>
+</p><p>Ya tenemos nuestro servidor MySQL funcionando y operativo.
+</p><p>Muchas aplicaciones web se encargan de crear su base de datos particular dentro de nuestro servidor MySQL con sólo proporcionarles la contraseña <em>root</em> del MySQL. De todas formas, si queremos una administración de MySQL más elaborada, es recomendable instalar otros paquetes como <strong>phpmyadmin</strong> o <strong>mysql-admin</strong>. El primero permite la administración de la base de datos vía web y el segundo desde nuestro escritorio gráfico. 
+</p><p>Un buen punto de partida para profundizar es la documentación en el sitio oficial de MySQL <a href="http://dev.mysql.com/doc/" class="external" title="http://dev.mysql.com/doc/">[2]</a><span class="urlexpansion"> (<i>http://dev.mysql.com/doc/</i>)</span>.
+</p>
+<a name="PHP.2C_Perl_y_Python"></a><h2> PHP, Perl y Python </h2>
+<p>PHP, Perl y Python, son tres lenguajes de programación muy comúnmente usados en aplicaciones web. Mientras no tengamos un poco más de experiencia, lo más recomendable en un servidor como el nuestro es instalar todo el software a través de paquetes. De esta forma, si instalamos una aplicación web, ésta se encargará de instalar las dependencias de PHP, Perl o Python que tenga, sin tener que preocuparnos demasiado este tema. 
+</p><p>Por ejemplo, si una aplicación usa PHP4 y MySQL, es habitual que se instalen como dependencias los paquetes <strong>libapache2-mod-php5</strong> y <strong>php5-mysql</strong>.
+</p>
+<a name="Gestores_de_contenidos"></a><h2> Gestores de contenidos </h2>
+<p>Un Sistema de Gestión de Contenidos (del ingles CMS, <em>Content Management System</em>) o más abreviadamente un gestor de contenidos, es un software que nos permite publicar y gestionar una web de forma sencilla, a través de un interfaz de administración accesible mediante contraseña en la propia web.
+</p><p>Existen infinidad de sistemas de gestión de contenidos. Para ver y probar diferentes gestores OpenSourceCMS <a href="http://www.opensourcecms.com/" class="external" title="http://www.opensourcecms.com/">[3]</a><span class="urlexpansion"> (<i>http://www.opensourcecms.com/</i>)</span> proporciona una completa comparativa, y ofrece la posibilidad de probarlos a través de instalaciones de demostración.
+</p><p>Aquí nos vamos a centrar en gestores sencillos y populares, que además estén empaquetados en nuestra distribución. De esta forma su instalación, uso y mantenimiento será menos laborioso.
+</p><p><br />
+</p>
+<a name="Blosxom"></a><h3> Blosxom </h3>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Blosxom.png" class="internal" title="Nuestra primera entrada en nuestro recién instalado blog basado en blosxom"><img src="imgs/180px-Blosxom.png" alt="Nuestra primera entrada en nuestro recién instalado blog basado en blosxom" width="180" height="129" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Blosxom.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Nuestra primera entrada en nuestro recién instalado blog basado en blosxom</div></div></div>
+<p>Blosxom <a href="http://www.blosxom.com/" class="external" title="http://www.blosxom.com/">[4]</a><span class="urlexpansion"> (<i>http://www.blosxom.com/</i>)</span> es un weblog muy sencillo de instalar y gestionar, aunque se nos puede quedar corto si tenemos ciertas pretensiones. Para instalarlo basta con instalar el paquete <strong>blosxom</strong>: esto dejará ya operativo nuestro nuevo blog en la dirección <a href="http://guias-ubuntu.dyndns.org/cgi-bin/blosxom" class="external" title="http://guias-ubuntu.dyndns.org/cgi-bin/blosxom">http://guias-ubuntu.dyndns.org/cgi-bin/blosxom</a>
+</p><p>Para publicar entradas en el blog, basta con editar ficheros en el directorio apropiado. Por ejemplo podemos editar nuestra primera entrada:
+</p><p><strong>$ sudo nano /var/lib/blosxom/data/hola.txt</strong>
+</p><p><br />
+Esto bastará para que nuestra entrada aparezca ya el blog si accedemos a la dirección anterior y recargamos la página.
+</p><p>En su web hay más información para añadir funcionalidad a nuestro blog, cambiar su aspecto, etc.
+</p>
+<a name="Drupal"></a><h3> Drupal </h3>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Drupal1.png" class="internal" title="Pantalla inicial de Drupal."><img src="imgs/180px-180px-Drupal1.png" alt="Pantalla inicial de Drupal." width="180" height="140" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Drupal1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Pantalla inicial de Drupal.</div></div></div>
+<p>Drupal <a href="http://drupal.org" class="external" title="http://drupal.org">[5]</a><span class="urlexpansion"> (<i>http://drupal.org</i>)</span> es un popular gestor dinámico de contenidos, que sirve para gestionar una página web con artículos, noticias, imágenes, foros, etc, de una forma potente. Existe una gran cantidad de módulos adicionales instalables de Drupal que aumentan enormemente su funcionalidad base.
+</p><p>Para su instalación, seleccionamos <strong>drupal5</strong> y todas sus dependencias. Una vez finalizada la instalación de los paquetes, habilitamos nuestro nuevo sitio web en el apache a partir de la configuración por defecto:
+</p><p><strong>$ sudo cp /etc/drupal/5/apache.conf /etc/apache2/sites-available/drupal</strong>
+</p><p><strong>sudo a2ensite drupal</strong>
+</p><p><strong>sudo /etc/init.d/apache2 reload</strong>
+</p><p>Esto habilitará el gestor en el directorio /drupal/ de nuestra web.
+</p><p>Luego creamos la base de datos en nuestro servidor MySQL siguiendo los pasos indicados en la documentación de Drupal. Debemos recordar la contraseña del usuario root en el gestor de Base de Datos configurada durante la instalación de MySQL.
+</p><p>Realizados estos pasos, podemos apuntar nuestro navegador a <a href="http://guias-ubuntu.dyndns.org/drupal" class="external" title="http://guias-ubuntu.dyndns.org/drupal">http://guias-ubuntu.dyndns.org/drupal</a> y
+y usar nuestro recién instalado gestor de contenidos. Como sugiere la página de inicio, lo mejor es crear el primer usuario, que será el que tenga los permisos de administrador, y empezar a jugar con el gestor de contenidos.
+</p>
+<a name="Mediawiki"></a><h3> Mediawiki </h3>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Mediawikiconf1.png" class="internal" title="Selección de la base de datos durante la configuración de Mediawiki"><img src="imgs/180px-180px-Mediawikiconf1.png" alt="Selección de la base de datos durante la configuración de Mediawiki" width="180" height="140" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Mediawikiconf1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Selección de la base de datos durante la configuración de Mediawiki</div></div></div> <div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Mediawiki1.png" class="internal" title="Página inicial de nuestro recién instalado wiki"><img src="imgs/180px-180px-Mediawiki1.png" alt="Página inicial de nuestro recién instalado wiki" width="180" height="140" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Mediawiki1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Página inicial de nuestro recién instalado wiki</div></div></div>
+<p>Mediawiki <a href="http://www.mediawiki.org" class="external" title="http://www.mediawiki.org">[6]</a><span class="urlexpansion"> (<i>http://www.mediawiki.org</i>)</span> es un software de wiki, una forma de editar los contenidos de una web de forma rápida y sencilla. Inicialmente se creó para la Wikipedia <a href="http://wikipedia.org" class="external" title="http://wikipedia.org">[7]</a><span class="urlexpansion"> (<i>http://wikipedia.org</i>)</span> pero es usado por otras muchas iniciativas, como GuiasUbuntu <a href="http:guias-ubuntu.ourproject.org.html" class="external" title="http:guias-ubuntu.ourproject.org">[8]</a><span class="urlexpansion"> (<i>http:guias-ubuntu.ourproject.org</i>)</span> sin ir más lejos.
+</p><p>Para instalarlo, seleccionamos el paquete <strong>mediawiki</strong> con sus dependencias y opcionalmente <strong>mediawiki-math</strong> para poder introducir ecuaciones y <strong>php5-gd</strong> para poder generar las miniaturas de las imágenes que colguemos en el wiki. 
+</p><p>Una vez instalados los paquetes de Mediwiki, habilitamos nuestro wiki en nuestra web:
+</p><p><strong>$ sudo cp /etc/mediawiki/apache.conf /etc/apache2/sites-available/mediawiki</strong>
+</p><p><strong>$ sudo a2ensite mediawiki</strong>
+</p><p><strong>$ sudo /etc/init.d/apache2 reload</strong>
+</p><p>Hecho esto apuntamos a <a href="http://guias-ubuntu.dyndns.org/mediawiki/" class="external" title="http://guias-ubuntu.dyndns.org/mediawiki/">http://guias-ubuntu.dyndns.org/mediawiki/</a>
+</p><p>Esto nos llevará a la página de configuración del wiki. En ella introducimos el nombre (<em>Site name</em>) que tendrá nuestro wiki (en nuestro ejemplo 'Guias-ubuntu-Mediawiki'), el correo de contacto del administrador, el idioma del wiki, la licencia que usaremos para los contenidos, la cuenta y contraseña del usuario de administración y llegaremos a la parte de la configuración de la Base de Datos, que es quizá lo más complicado. Como siempre, el secreto está en seguir paso a paso la documentación.
+</p><p>Ahora procedemos a aceptar el formulario de configuración y, si todo va bien, nuestro wiki estará casi listo para funcionar. Damos los últimos pasos según nos indican en la página y si apuntamos nuestro navegador a nuestro wiki 
+podemos comprobar que este está totalmente instalado y funcional: <a href="http://guias-ubuntu.dyndns.org/mediawiki/" class="external" title="http://guias-ubuntu.dyndns.org/mediawiki/">http://guias-ubuntu.dyndns.org/mediawiki/</a>
+</p><p>Para una configuración más en detalle recomendamos la FAQ de Mediawiki <a href="http://meta.wikimedia.org/wiki/MediaWiki_FAQ" class="external" title="http://meta.wikimedia.org/wiki/MediaWiki FAQ">[9]</a><span class="urlexpansion"> (<i>http://meta.wikimedia.org/wiki/MediaWiki_FAQ</i>)</span>.
+</p>
+<a name="Wordpress"></a><h3> Wordpress </h3>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Wordpress1.png" class="internal" title="Asistente de configuración inicial de Wordpress"><img src="imgs/180px-180px-Wordpress1.png" alt="Asistente de configuración inicial de Wordpress" width="180" height="140" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Wordpress1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Asistente de configuración inicial de Wordpress</div></div></div>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/180px-Wordpress2.png" class="internal" title="Inicio de nuestro recién instalado Weblog"><img src="imgs/180px-180px-Wordpress2.png" alt="Inicio de nuestro recién instalado Weblog" width="180" height="140" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/180px-Wordpress2.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Inicio de nuestro recién instalado Weblog</div></div></div>
+<p>Wordpress <a href="http://wordpress.org" class="external" title="http://wordpress.org">[10]</a><span class="urlexpansion"> (<i>http://wordpress.org</i>)</span> es un software para gestionar bitácoras o <em>blogs</em> basado también en PHP y MySQL. Para su instalación seleccionamos el paquete <strong>wordpress</strong> y sus dependencias. 
+</p><p>Para habilitar nuestro nuevo web, creamos este fichero 'wordpress':
+</p><p><strong>$ sudo nano /etc/apache2/sites-available/wordpress</strong>
+</p><p>con esta configuración, por ejemplo:
+</p>
+<pre>
+Alias /blog /usr/share/wordpress
+&lt;Directory /usr/share/wordpress&gt;
+  Options FollowSymLinks
+  AllowOverride Limit Options FileInfo
+  DirectoryIndex index.php
+&lt;/Directory&gt;
+</pre>
+<p>Luego habilitamos nuestra nueva web en el Apache:
+</p>
+<pre>
+$ sudo a2ensite wordpress
+$ sudo /etc/init.d/apache2 reload
+</pre>
+<p>y finalmente configuramos la base de datos con la ayuda de este guión:
+</p>
+<pre>
+$ sudo sh /usr/share/doc/wordpress/examples/setup-mysql  -n wordpress guias-ubuntu.dyndns.org
+</pre>
+<p>Si apuntamos nuestro navegador a 
+</p><p><a href="http://guias-ubuntu.dyndns.org/blog" class="external" title="http://guias-ubuntu.dyndns.org/blog">http://guias-ubuntu.dyndns.org/blog</a>
+</p><p>llegamos a un asistente de configuración de Wordpress donde nos pide unos datos iniciales (nombre del blog y correo del administrador) y crea la base de datos y el usuario de administración del blog.
+</p><p>Si volvemos a acceder a <a href="http://guias-ubuntu.dyndns.org/blog" class="external" title="http://guias-ubuntu.dyndns.org/blog">http://guias-ubuntu.dyndns.org/blog</a> veremos que el blog está ya accesible y funcional.
+</p><p><br />
+Pero aparte de la web hay otras formas de compartir contenidos, otras aplicaciones web y otros servicios.
+</p>
+<pre>Sigue: <a href="Poner_archivos_a_la_disposici%C3%B3n.html" title="Guia v5/Poner archivos a la disposición">Poner archivos a disposición de la comunidad</a>
+</pre><div class="printfooter">
+Obtenido de "<a href="http://www.guadalinex.org/guadapedia/index.php/Guia_v5/Hospedar_y_gestionar_una_web">http://www.guadalinex.org/guadapedia/index.php/Guia_v5/Hospedar_y_gestionar_una_web</a>"</div>
+<!-- end content -->
+<div class="visualClear"></div>
+</div>
+</div>
+</div>
+</body>
+</html>

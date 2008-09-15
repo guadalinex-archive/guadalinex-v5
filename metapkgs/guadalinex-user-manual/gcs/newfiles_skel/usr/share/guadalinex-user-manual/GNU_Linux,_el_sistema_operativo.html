@@ -1,0 +1,99 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>GNU_Linux,_el_sistema_operativo</title>
+
+    <link / REL="shortcut icon" HREF="imgs/favicon.ico">
+    <link / REL="stylesheet" TYPE="text/css" MEDIA="screen,projection" HREF="css/main.css">
+    <link / REL="stylesheet" TYPE="text/css" MEDIA="print" HREF="css/commonPrint.css">
+    <script SRC="css/script.js" TYPE="text/javascript"></script>
+    <script SRC="css/wikibits.js" TYPE="text/javascript"></script>
+    
+  </head>
+  <body class="ns-0">
+  <div ID="globalWrapper">
+
+<div id="content">
+<a name="top" id="contentTop"></a>
+<h1 class="firstHeading">Guía v5/GNU Linux, el sistema operativo</h1>
+<div id="bodyContent">
+<h3 id="siteSub">De Guadapedia, la enciclopedia libre.</h3>
+<div id="contentSub"></div>
+<!-- start content -->
+<table border="0" id="toc"><tr id="toctitle"><td align="center">
+<b>Tabla de contenidos</b> <script type="text/javascript">showTocToggle("mostrar","esconder")</script></td></tr><tr id="tocinside"><td>
+<div class="tocline"><a href="#GNU.2FLinux.2C_el_sistema_operativo">1 GNU/Linux, el sistema operativo</a><br /></div>
+<div class="tocindent">
+<p><a href="#La_importancia_de_distinguir_entre_ordenador_y_sistema_operativo">1.1 La importancia de distinguir entre ordenador y sistema operativo</a><br />
+<a href="#El_software_que_despierta_el_hardware">1.2 El software que despierta el hardware</a><br />
+<a href="#Los_programas_de_sistema_del_proyecto_GNU">1.3 Los programas de sistema del proyecto GNU</a><br />
+<a href="#El_kernel_Linux">1.4 El kernel Linux</a><br />
+</p>
+</div>
+</td></tr></table>
+<a name="GNU.2FLinux.2C_el_sistema_operativo"></a><h1>GNU/Linux, el sistema operativo</h1>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Gnu-and-penguin-color.jpg" class="internal" title="&quot;The Dynamic Duo: The Gnu and the Penguin in flight&quot;, de Lissanne Lake"><img src="imgs/180px-Gnu-and-penguin-color.jpg" alt="&quot;The Dynamic Duo: The Gnu and the Penguin in flight&quot;, de Lissanne Lake" width="180" height="166" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Gnu-and-penguin-color.jpg" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>&quot;The Dynamic Duo: The Gnu and the Penguin in flight&quot;, de Lissanne Lake</div></div></div>
+<p>Se denomina sistema operativo al conjunto de programas necesarios para activar un ordenador y convertirlo en una herramienta manejable <a href="http://es.wikipedia.org/wiki/Sistemas_operativos" class="external" title="http://es.wikipedia.org/wiki/Sistemas operativos">[1]</a><span class="urlexpansion"> (<i>http://es.wikipedia.org/wiki/Sistemas_operativos</i>)</span>. Cuando encendemos un ordenador el sistema operativo se encarga de dar los pasos necesarios para que, segundos más tarde, podamos identificarnos, llegar a nuestro escritorio y abrir los programas que queramos utilizar. Aunque pase desapercibido a nuestros ojos, el sistema operativo se encuentra activo siempre que el ordenador está encendido. Todo lo que informáticamente sucede se produce encima suyo. 
+</p><p>Cuatro décadas de historia informática han visto nacer, crecer y morir a decenas de sistemas operativos <a href="http://en.wikipedia.org/wiki/Operating_systems_timeline" class="external" title="http://en.wikipedia.org/wiki/Operating systems timeline">[2]</a><span class="urlexpansion"> (<i>http://en.wikipedia.org/wiki/Operating_systems_timeline</i>)</span>. GNU/Linux nació en 1992 y actualmente es el sistema operativo libre más extendido. Con frecuencia se denomina de forma simplificada &quot;Linux&quot;, aunque como explicaremos a continuación hay motivos para ser precisos y no ahorrarse el prefijo &quot;GNU&quot;.
+</p><p>A veces se menciona a GNU/Linux como <em>el</em> sistema operativo libre. Aunque es el más implantado, no es el único. Destaca la familia BSD <a href="http://es.wikipedia.org/wiki/BSD" class="external" title="http://es.wikipedia.org/wiki/BSD">[3]</a><span class="urlexpansion"> (<i>http://es.wikipedia.org/wiki/BSD</i>)</span> (FreeBSD, OpenBSD...), cuyo kernel se coordina desde la Universidad de Berkeley (California, Estados Unidos). <em>Centralización versus descentralización</em> resumiría las diferencias entre los sistemas *BSD y los del kernel Linux, aunque ambas partes reconocen las ventajas y desventajas de cada estrategia. GNU/Linux oficializa este reconocimiento incorporando componentes clave procedentes del proyecto BSD.
+</p><p>Mac OS X, el sistema operativo utilizado por los ordenadores Apple actuales, es una variante no libre de BSD. Algo así como un primo lejano de GNU/Linux, con quien comparte parentesco (el sistema UNIX). Por este motivo los usuarios de Macintosh tienen un acceso algo más sencillo a aplicaciones de código abierto <a href="http://www.apple.com/downloads/macosx/unix_open_source/" class="external" title="http://www.apple.com/downloads/macosx/unix open source/">[4]</a><span class="urlexpansion"> (<i>http://www.apple.com/downloads/macosx/unix_open_source/</i>)</span> que los usuarios de MS Windows, sistema operativo radicalmente diferente que, además, se ha empeñado en los últimos años en dificultar la compatibilidad e interoperabilidad con el software libre por razones comerciales. Aunque esta estrategia obstaculizadora parece estar cambiando.
+</p><p><br />
+</p>
+<a name="La_importancia_de_distinguir_entre_ordenador_y_sistema_operativo"></a><h2>La importancia de distinguir entre ordenador y sistema operativo</h2>
+<p>Uno de los principales problemas que nos encontramos a la hora de divulgar el software libre es la extendida creencia de que el sistema operativo y el entorno de escritorio son parte intrínseca e inseparable del ordenador. Esta creencia lleva al muy frecuente error de confundir la informática con MS Windows, la ofimática con MS Office y hasta Internet con MS Internet Explorer. Es lógico: millones de usuarios se han encontrado con un sistema operativo y un escritorio MS Windows cada vez que han encendido un ordenador. Cosas de vivir inmersos en uno de los monopolios más extendidos del planeta.
+</p><p>Pero el error sería comparable al de los habitantes de un valle pobremente comunicado que sólo pudieran sintonizar un canal de televisión y pensaran que la que ven es la única programación que su televisor puede mostrar. Algunos vecinos pensarían que para ver otra programación deberían adquirir un televisor diferente. No pocos estarían convencidos de que ese canal es el único que existe. Habría que sacarles del valle con su propio televisor bajo el brazo para que entendieran que pueden elegir entre varios canales y comprobaran que su propio aparato les permite dicha elección si salen de la zona de sombra herziana. También se les podría mostrar el uso de cámaras y cintas de vídeo, DVD, videojuegos... para que entendieran mejor qué es un televisor y cómo es capaz de vehicular múltiples canales y tipos de contenidos.
+</p><p>Algo así es lo que intentamos hacer los difusores del software libre, sólo que con ordenadores en vez de televisores. A muchos usuarios les cuesta imaginar que su propio ordenador sea capaz de funcionar sin pasar por la ventana de Microsoft (o la manzana de Apple). Pero los ordenadores corrientes son capaces de funcionar con varios sistemas operativos. Y pueden funcionar con sistemas operativos libres que activen entornos de escritorio libres, aplicaciones libres, controladores de dispositivo libres, y todo lo necesario para trabajar con un ordenador libremente.
+</p><p>Quien entiende esto empieza a salir del valle de la sombra, de la caverna del mito.
+</p><p><br />
+</p>
+<a name="El_software_que_despierta_el_hardware"></a><h2>El software que despierta el hardware</h2>
+<p>Algunos recordarán la teleserie <em>Los hombres de Harrelson</em> con ese esperado momento en que el teniente Hondo movilizaba a sus agentes en todas las direcciones y enviaba a TJ al tejado. Algo así es lo que hace el sistema operativo con los componentes del ordenador (básicamente sílice, metales y plásticos) cuando encedemos la máquina (suministrándole electricidad).
+</p><p>En los primeros milisegundos de vida el ordenador se encuentra ante una paradoja: debe iniciar el sistema operativo que se encuentra en un dispositivo (disco duro, memoria RAM o memoria Flash), pero antes debe activar este dispositivo y para ello necesita un sistema operativo. Es decir, antes de movilizar a nadie el teniente Hondo se debe movilizar a sí mismo. La solución de esta paradoja la aporta el cargador de arranque, una mínima esencia de un sistema operativo ubicado en la minúscula memoria ROM del ordenador que, como el Barón de Münchhausen, es capaz de levantarse a sí mismo estirando de sus propias botas. De esta fábula proviene el término <em>bootstrapping</em> (tirar de las botas) que denomina este proceso inicial, así como su derivación <em>booting</em> que ha generado los anglicismos no oficiales en español <em>botar</em> (iniciar) o <em>rebotar</em> (reiniciar).
+</p><p>Superada la paradoja, el sistema operativo empieza a pasar lista más o menos en este orden:
+</p>
+<ol><li> Comprobación de la propia integridad del programa de arranque. El teniente Hondo se palpa a sí mismo para comprobar que está entero.
+</li><li> Busqueda y medición de las memorias principales ROM (donde reside el programa de arranque) y RAM (donde se empieza a extender estirando de sus botas).
+</li><li> Búsqueda y comprobación de los canales de comunicación internos (buses) así como de los dispositivos que el sistema requiere para arrancar en condiciones: discos duros, lectores de CD/DVD y disquet, USB, teclado y monitor, principalmente. Pasa lista para ver si podemos emprender la misión.
+</li><li> Generación de un interfaz para la configuración básica del sistema. Ese &quot;Press F1...&quot; que durante unos segundos se nos muestra en la pantalla antes de cargar el sistema operativo en sí y con el que hay que ir con mucho cuidado.
+</li><li> Búsqueda del arranque del sistema operativo y de particiones del disco duro (algo así como las parcelas de una urbanización, donde cada parcela permite construir una casa). Si encuentra varios sistemas arrancables (varias casitas en la urbanización), muestra un menú de selección. Si encuentra sólo uno lo inicia directamente.
+</li><li> Una vez decidido el sistema operativo a utilizar, descompresión y carga del kernel (el grano, la semilla de la que brota todo el sistema).
+</li><li> Cuando el kernel ya está en su puesto y controlando la situación, pasa una lista exhausitiva a todo el hardware. El kernel efectúa las configuraciones necesarias para trabajar correctamente con todos los dispositivos, tanto los que han sido detectados anteriormente como los que ha llegado el momento de activar: ratón, conexiones de red, impresora, módem, escáner, webcam y todo lo demás que tengamos conectado al ordenador.
+</li><li> Arranque de servidores, demonios y demás procesos latentes. Que conste que estos demonios son más griegos (<em>ayudantes de los dioses</em>) que judeo-cristianos (<em>esbirros de Satanás</em>), aunque a veces jueguen alguna mala pasada.
+</li><li> Arranque del entorno gráfico que cargará la bonita pantalla de bienvenida e identificación de usuario.
+</li></ol>
+<p>Y así llegamos a la puerta de acceso al escritorio. Una vez que entremos en nuestra oficina digital, Harrelson y sus agentes ya estarán en sus puestos preparados para acometer todas las misiones que les planteemos.
+</p><p><br />
+</p>
+<a name="Los_programas_de_sistema_del_proyecto_GNU"></a><h2>Los programas de sistema del proyecto GNU</h2>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Heckert_GNU.png" class="internal" title="Imagen: Aurélio A. Hecker"><img src="imgs/180px-Heckert_GNU.png" alt="Imagen: Aurélio A. Hecker" width="180" height="180" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Heckert_GNU.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Imagen: Aurélio A. Hecker</div></div></div>
+<p>Veamos el origen de todos estos programas que acompañan al kernel en el arranque y funcionamiento básico del ordenador.
+</p><p>A mediados de los años 70 un nuevo mercado con grandes expectativas empezaba a tomar forma: la informática doméstica, los ordenadores personales. Hasta entonces los ordenadores habían sido aparatos caros, pesados y de producción no masiva adquiridos por universidades, centros de investigación, organismos públicos y grandes empresas. Los desarrolladores de software mantenían su código abierto y colaboraban entre sí a través de canales como las redes de la Internet de aquellos años, operadas ellas mismas con software libre. Con la comercializasión del software esta tendencia cambió y las empresas obligaron a sus programadores contratados a cerrar el código, vendiendo los programas sin facilitar su código fuente.
+</p><p>Esto generó una reacción de rechazo que se materializó en 1983 con un llamado de Richard Stallman <a href="http://stallman.org" class="external" title="http://stallman.org">[5]</a><span class="urlexpansion"> (<i>http://stallman.org</i>)</span> a la creación del proyecto GNU <a href="http://es.wikipedia.org/wiki/GNU" class="external" title="http://es.wikipedia.org/wiki/GNU">[6]</a><span class="urlexpansion"> (<i>http://es.wikipedia.org/wiki/GNU</i>)</span> con el objetivo de crear un sistema operativo libre. Por aquel entonces el sistema operativo de referencia era UNIX, propiedad de AT&amp;T. La denominación GNU definía una inspiración y desmarque de UNIX, puesto que las siglas responden a &quot;GNU's Not Unix&quot; (<em>GNU no es Unix</em>). Su emblema sería un ñu, el primer especimen de una larga lista zoológica que el software libre ha generado.
+</p><p>El proyecto GNU cuajó, diversos programadores se identificaron con su manifiesto fundacional y empezaron a colaborar y producir componentes libres del futuro sistema operativo. Muchos de esos programas siguen vivos hoy y son herramientas claves del sistema operativo GNU/Linux, a destacar la colección de compiladores GCC (digamos que la fibra muscular de GNU/Linux) y el editor de texto Emacs, con el cual se han escrito kilómetros de código libre.
+</p><p>Otras contribuciones clave de este proyecto fueron el concepto de <em>copyleft</em> (opuesto al <em>copyright</em>) y la Licencia Pública General de GNU (GNU/GPL) que regula legalmente la autoría y derechos de uso del software libre. En 1985 se creó la Free Software Foundation <a href="http://fsf.org" class="external" title="http://fsf.org">[7]</a><span class="urlexpansion"> (<i>http://fsf.org</i>)</span> para canalizar ayudas económicas y dar una cierta estructura al movimiento, que entraba en su primera fase de maduración.
+</p><p>No obstante, faltaba una pieza clave: el kernel. Sin nucleo libre no podía haber sistema operativo libre, y aunque se realizaron aproximaciones como GNU Hurd, la solución práctica y aplicable seguía sin concretarse.
+</p><p><br />
+</p>
+<a name="El_kernel_Linux"></a><h2>El kernel Linux</h2>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Tux.jpg" class="internal" title="Imagen: Anja Gerwinski &amp; co"><img src="imgs/180px-Tux.jpg" alt="Imagen: Anja Gerwinski &amp; co" width="180" height="213" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Tux.jpg" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Imagen: Anja Gerwinski &amp; co</div></div></div>
+<p>El primer kernel libre y operativo no llegaría hasta la década de los 90. Su aparición fue una sorpresa y el día que fue anunciado por primera vez seguramente nadie imaginó lo que se desencadenaría después. En 1991 un estudiante finlandés de 21 años llamado Linus Torvalds <a href="http://www.cs.helsinki.fi/u/torvalds/" class="external" title="http://www.cs.helsinki.fi/u/torvalds/">[8]</a><span class="urlexpansion"> (<i>http://www.cs.helsinki.fi/u/torvalds/</i>)</span> envió un mensaje a un grupo de noticias de Usenet explicando: &quot;<em>Estoy haciendo un sistema operativo libre (sólo un hobby, no será algo grande y profesional como gnu)...</em> <a href="http://en.wikipedia.org/wiki/Linux_kernel" class="external" title="http://en.wikipedia.org/wiki/Linux kernel">[9]</a><span class="urlexpansion"> (<i>http://en.wikipedia.org/wiki/Linux_kernel</i>)</span>
+</p><p>Llevaba cuatro meses desarrollando en solitario este nuevo kernel, empezando a escribir su código desde cero. Días después del anuncio publicó una versión 0.0.1. Pasaron dos años y medio y múltiples versiones de desarrollo hasta llegar a la versión 1.0.0 en marzo de 1994. Mientras tanto el kernel Linux (denominado así como derivación de su nombre Linus con la popular terminación X de UNIX) ya se había consolidado como la punta del iceberg de la comunidad del software libre. 
+</p><p>Dos años más tarde, en 1996, el kernel Linux 2.0.0 vería la luz ya asociado con la mascota pingüino (llamada Tux). En la actualidad el kernel Linux va por la versión 2.6.14, está disponible para una gran variedad de arquitecturas de ordenador y tiene el reconocimiento de la industria informática y de la comunidad como estable, sólido y seguro. 
+</p><p>Su desarrollo no forma parte del proyecto GNU, pero la colaboración entre ambas iniciativas es estrecha y ambos complementos han llevado el software libre a ser una alternativa real al software propietario, materializándose así una parte de las aspiraciones y objetivos que dieron lugar a este movimiento.
+</p>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Babygnutux.png" class="internal" title="&quot;A 3D baby GNU and baby Tux&quot;, de Nicolas Rougier"><img src="imgs/180px-Babygnutux.png" alt="&quot;A 3D baby GNU and baby Tux&quot;, de Nicolas Rougier" width="180" height="90" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Babygnutux.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>&quot;A 3D baby GNU and baby Tux&quot;, de Nicolas Rougier</div></div></div>
+<p><br />
+</p>
+<pre>     Sigue: <a href="Debian%2C_la_distribuci%C3%B3n_madre.html" title="Guia v5/Debian, la distribución madre">Debian, la distribución madre</a>
+</pre><div class="printfooter">
+Obtenido de "<a href="http://www.guadalinex.org/guadapedia/index.php/Guia_v5/GNU_Linux%2C_el_sistema_operativo">http://www.guadalinex.org/guadapedia/index.php/Guia_v5/GNU_Linux%2C_el_sistema_operativo</a>"</div>
+<!-- end content -->
+<div class="visualClear"></div>
+</div>
+</div>
+</div>
+</body>
+</html>

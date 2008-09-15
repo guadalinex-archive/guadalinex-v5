@@ -1,0 +1,202 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>La_red_doméstica</title>
+
+    <link / REL="shortcut icon" HREF="imgs/favicon.ico">
+    <link / REL="stylesheet" TYPE="text/css" MEDIA="screen,projection" HREF="css/main.css">
+    <link / REL="stylesheet" TYPE="text/css" MEDIA="print" HREF="css/commonPrint.css">
+    <script SRC="css/script.js" TYPE="text/javascript"></script>
+    <script SRC="css/wikibits.js" TYPE="text/javascript"></script>
+    
+  </head>
+  <body class="ns-0">
+  <div ID="globalWrapper">
+
+<div id="content">
+<a name="top" id="contentTop"></a>
+<h1 class="firstHeading">Guía v5/La red doméstica</h1>
+<div id="bodyContent">
+<h3 id="siteSub">De Guadapedia, la enciclopedia libre.</h3>
+<div id="contentSub"></div>
+<!-- start content -->
+<table border="0" id="toc"><tr id="toctitle"><td align="center">
+<b>Tabla de contenidos</b> <script type="text/javascript">showTocToggle("mostrar","esconder")</script></td></tr><tr id="tocinside"><td>
+<div class="tocline"><a href="#La_red_dom.C3.A9stica">1 La red doméstica</a><br /></div>
+<div class="tocindent">
+<p><a href="#Principios_b.C3.A1sicos">1.1 Principios básicos</a><br />
+<a href="#Convivencia_con_MS_Windows_o_Mac">1.2 Convivencia con MS Windows o Mac</a><br />
+</p>
+<div class="tocindent">
+<p><a href="#Compartir_carpetas">1.2.1 Compartir carpetas</a><br />
+<a href="#Compartir_un_grupo_de_trabajo">1.2.2 Compartir un grupo de trabajo</a><br />
+</p>
+</div>
+<p><a href="#Compartir_impresora">1.3 Compartir impresora</a><br />
+</p>
+<div class="tocindent">
+<p><a href="#Instalar_una_impresora_de_red">1.3.1 Instalar una impresora de red</a><br />
+</p>
+</div>
+<p><a href="#Conexiones_directas_a_otros_servidores">1.4 Conexiones directas a otros servidores</a><br />
+</p>
+<div class="tocindent">
+<p><a href="#Extender_nuestro_escritorio_a_otros_sistemas">1.4.1 Extender nuestro escritorio a otros sistemas</a><br />
+<a href="#Establecer_una_conexi.C3.B3n">1.4.2 Establecer una conexión</a><br />
+<a href="#Recibir_conexiones">1.4.3 Recibir conexiones</a><br />
+</p>
+</div>
+</div>
+</td></tr></table>
+<a name="La_red_dom.C3.A9stica"></a><h1> La red doméstica </h1>
+<p>Decíamos en el anterior apartado que GNU/Linux es un sistema operativo nacido por y para la red. En las siguientes páginas vamos a partir de este principio teórico para aplicarlo en la práctica a partir de nuestro escritorio y el de nuestros sistemas vecinos. Y ojo porque en las redes telemáticas la vecindad es un concepto que no necesariamente está relacionado con la proximidad física.
+</p><p>Este capítulo interesa tanto a quienes tienen varios ordenadores en casa o la oficina como a los usuarios de una sola máquina bajo un mismo techo... pero con otros vecinos emocionalmente cercanos en algún lugar de Internet.
+</p><p><br />
+</p>
+<a name="Principios_b.C3.A1sicos"></a><h2> Principios básicos </h2>
+<p>Si la informática es una ciencia, administrar redes ocupa un porcentaje apreciable de dicho conocimiento. Aquí vamos a explicar una parte ínfima de todo lo que se puede escribir sobre la conexión, diálogo y cooperación entre ordenadores. Es posible que muchos de nosotros nos conformemos con muy poco más.
+</p><p>De hecho, lo básico que debemos entender/recordar es lo siguiente: 
+</p>
+<ul><li> <strong>La red se ve pero no se toca</strong>. Aunque nuestros ojos vean objetos tangibles tales como ordenadores y cables, las redes están formadas por sistemas, carpetas, usuarios y permisos. Nuestro ordenador puede ser inaccesible para el que tenemos al lado aunque ambos estén conectados al mismo enrutador. O puede ser inaccesible para el usuario Pepito pero no para la usuaria Juanita. Por contra, podemos tener en nuestro escritorio carpetas accesibles que, de hecho, están ubicadas en ordenadores al otro lado del océano; no existe conexión física directa y la gestión se realiza a través de Internet.
+</li><li> <strong>Los protocolos comunican, los sistemas operativos no incomunican</strong>. Ordenadores con diferentes sistemas operativos pueden compartir recursos entre ellos si comparten un mismo protocolo. Ordenadores con un mismo sistema operativo no se comunicarán entre ellos si usan protocolos diferentes. Hay varios protocolos que cubren varias funciones. El protocolo SMB es utilizado en las comunicaciones con/entre sistemas MS Windows, el SSH nos permite operar en otros ordenadores GNU/Linux como en el propio... 
+</li><li> <strong>Hay conexiones en red y conexiones directas</strong>. A efectos prácticos, tenemos sistemas conectados en red formando dominios o grupos de trabajo al estilo MS Windows, y tenemos conexiones directas al estilo GNU/Linux. También se pueden crear redes de ordenadores con estilo genuinamente GNU/Linux, pero esto escapa de las pretensiones de esta Guía.
+</li></ul>
+<p>Entendidos estos tres puntos, el resto es sólo cuestión de metodología.
+</p><p>Para poner en práctica alguna de las propuestas detalladas a continuación, nuestro equipo debe disponer de una conexión debidamente configurada y activada, ya sea a través de cable o tarjeta inalámbrica.
+</p><p><br />
+</p>
+<a name="Convivencia_con_MS_Windows_o_Mac"></a><h2> Convivencia con MS Windows o Mac </h2>
+<p>Vamos a empezar con la que posiblemente sea la situación más frecuente entre los usuarios noveles en el software libre: la red doméstica o laboral con presencia de ordenador(es) con MS Windows. O Mac, que para el caso es lo mismo.
+</p><p>La situación más habitual es que ya exista una red local con un dominio de grupo, y allí aterrizamos nosotros con nuestro ordenador (fijo o portátil) convertido a GNU/Linux. Queremos acceder a carpetas de otros usuarios en esos ordenadores y quizás también a impresoras, si las hay. Posiblemente también queramos compartir carpetas nuestras con otros usuarios. 
+</p><p>Ningún problema, tenemos todo lo necesario para trabajar en esta red casi sin que el resto de usuarios se den cuenta que trabajamos con un sistema operativo diferente.
+</p><p><br />
+</p>
+<a name="Compartir_carpetas"></a><h3> Compartir carpetas </h3>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Gv5-Red-Windows1.png" class="internal" title="Tras ese icono están nuestros compañeros. "><img src="imgs/180px-Gv5-Red-Windows1.png" alt="Tras ese icono están nuestros compañeros. " width="180" height="136" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Gv5-Red-Windows1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Tras ese icono están nuestros compañeros. </div></div></div>
+<p>Para acceder a carpetas de otros ordenadores bajo la red local, lo único que necesitamos es que los usuarios o administradores con los permisos adecuados hagan esas carpetas compartibles a nivel de toda la red. Una vez hecho esto sólo nos queda llegar hasta la carpeta:
+</p><p><strong>Lugares</strong> > <strong>Red</strong>
+</p>
+<ol><li> Se nos abrirá el <strong>Administrador de archivos</strong> y veremos como mínimo una <strong>Red de Windows</strong>. La clicamos.
+</li><li> Aparecerán los ordenadores conectados a esa red. Debemos identificar el ordenador en el que se encuentra la carpeta compartida a la que deseamos acceder. Lo clicamos.
+</li><li> Esto nos llevará a ver los recursos compartidos por dicho ordenador. La carpeta compartida nos debería aparecer a la vista.
+</li><li> Dependiendo de los permisos que se le hayan asignado a esa carpeta, podremos acceder a sus contenidos y modificarlos o añadir nuevos archivos si estamos autorizados para ello.
+</li></ol>
+<p>Si no podemos acceder a la carpeta o a los archivos que hay en ella, deberemos consultar con el administrador de la red o el usuario de ese ordenador.
+</p><p>El proceso a la inversa es casi idéntico. Si queremos compartir carpetas nuestras con otros usuarios debemos marcar dichas carpetas como compartibles y definir  los permisos de acceso que queramos aplicarles. Se ha de proceder de la siguiente manera:
+</p><p>Para añadir una carpeta debemos realizar estos pasos:
+</p>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Gv5-Compartir-carpeta1.png" class="internal" title="Añadiendo una nueva carpeta compartida."><img src="imgs/180px-Gv5-Compartir-carpeta1.png" alt="Añadiendo una nueva carpeta compartida." width="180" height="124" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Gv5-Compartir-carpeta1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Añadiendo una nueva carpeta compartida.</div></div></div>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Gv5-Compartir-carpeta2.png" class="internal" title="Instalando los componentes necesarios."><img src="imgs/180px-Gv5-Compartir-carpeta2.png" alt="Instalando los componentes necesarios." width="180" height="135" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Gv5-Compartir-carpeta2.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Instalando los componentes necesarios.</div></div></div>
+<ol><li> Localizar en el navegador de archivos la carpeta que queremos compartir y sobre ella hacer clicar con el botón derecho del ratón. En el desplegable nos saldrán varias operaciones que podemos realizar con la carpeta seleccionada, en éste caso, seleccionamos <strong>Opciones de compartición</strong>.
+</li><li> Clicar <strong>Compartir esta carpeta</strong>. Por defecto, nos indicará que el servicio de compartición no está instalado y que es necesario instalarlo para poder compartir las carpetas (Ésto nos sucederá en el caso de que únicamente hayamos instalado desde el LiveCD de Guadalinex V5), frente a ésto le indicaremos <strong>Instalar el servicio</strong>. Una vez instalado podremos seguir adelante con el proceso de compartición.
+</li><li> <strong>Nombre compartido</strong> es la identificación que le damos a la carpeta a compartir, tal cual la verán los usuarios que accedan desde fuera a ella. Puede ser el mismo nombre actual de la carpeta u otro.
+</li><li> <strong>Permitir a otras personas escribir en ésta carpeta</strong> indica que los usuarios que accedan a la carpeta podrán visualizar y copiar los archivos que hay en ella, pero no modificarlos o borrarlos, ni añadir nuevos archivos.
+</li><li> <strong>Comentario</strong> es un campo adicional, para ofrecer información sobre la carpeta.
+</li><li> <strong>Acceso de invitado</strong> permite a usuarios sin cuenta en el equipo acceder a los ficheros. 
+</li><li> Para finalizar, clicamos en <strong>Crear compartición</strong>.
+</li></ol>
+<a name="Compartir_un_grupo_de_trabajo"></a><h3> Compartir un grupo de trabajo </h3>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Gv5-Grupo1.png" class="internal" title="Identificándonos en el grupo de trabajo."><img src="imgs/180px-Gv5-Grupo1.png" alt="Identificándonos en el grupo de trabajo." width="180" height="153" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Gv5-Grupo1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Identificándonos en el grupo de trabajo.</div></div></div>
+<p>Las redes de MS Windows agrupan a diversos sistemas bajo un mismo dominio o grupo de trabajo. Si queremos compartir recursos perteneciendo al mismo dominio que el resto, debemos realizar los siguientes pasos.
+</p><p><strong>Sistema</strong> > <strong>Administración</strong> > <strong>Red</strong>
+</p>
+<ol><li> Seleccionamos la pestaña <strong>General</strong>.
+</li><li> En <strong>Nombre del servidor</strong> nos aparecerá el nombre que le pusimos a nuestro ordenador cuando instalamos el sistema operativo. Ese nombre es el que van a ver el resto de usuarios conectados a la red.
+</li><li> En <strong>Nombre del dominio</strong> debemos introducir el dominio o grupo de trabajo al que nos sumaremos. Si no lo sabemos podemos preguntar al administrador de la red o consultarlo en cualquiera de los ordenadores pertenecientes a ese dominio.
+</li></ol>
+<p>Clicando <strong>Aceptar</strong> empezamos nuestra introducción en ese dominio. Para comprobar si estamos dentro, vamos a:
+</p><p><strong>Lugares</strong> > <strong>Red</strong>
+</p><p>Y clicamos en <strong>Red de Windows</strong>.
+</p><p>Hay algunas variables por el camino que pueden dificultar la integración, tales como la configuración de la red, el tipo de conexión (mediante cable o tarjeta inalámbrica), etc. Si no nos vemos dentro de la red y nuestros colegas de red no ven nuestro ordenador en el dominio, probemos a reiniciar nuestro sistema.
+</p>
+<a name="Compartir_impresora"></a><h2> Compartir impresora </h2>
+<p>Compartir impresoras en red ha sido uno de los mayores obstáculos en la integración GNU/Linux - MS Windows. En el momento de redactar estas líneas el escollo está casi salvado para un usuario avanzado y sólo en parte para un usuario poco experimentado. Utilizar desde GNU/Linux impresoras conectadas a ordenadores con MS Windows es relativamente sencillo. Pero a la inversa es más complicado. 
+</p><p>Si tenemos una impresora conectada a nuestro ordenador con GNU/Linux y queremos que usuarios de MS Windows impriman a través de ella deberemos editar a mano la configuración de <strong>CUPS</strong>, la aplicación que se encarga de gestionar la impresora. Podemos encontrar las instrucciones en Ubuntu-es <a href="http://www.ubuntu-es.org/node/298" class="external" title="http://www.ubuntu-es.org/node/298">[1]</a><span class="urlexpansion"> (<i>http://www.ubuntu-es.org/node/298</i>)</span>.
+</p><p><br />
+</p>
+<a name="Instalar_una_impresora_de_red"></a><h3> Instalar una impresora de red </h3>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Gv5-printers-search.png" class="internal" title="Buscando nuevas impresoras..."><img src="imgs/180px-Gv5-printers-search.png" alt="Buscando nuevas impresoras..." width="180" height="74" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Gv5-printers-search.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Buscando nuevas impresoras...</div></div></div>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Gv5-printers-1.png" class="internal" title="¿Qué tenemos por aquí...?"><img src="imgs/180px-Gv5-printers-1.png" alt="¿Qué tenemos por aquí...?" width="180" height="139" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Gv5-printers-1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>¿Qué tenemos por aquí...?</div></div></div>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Gv5-printers-smb.png" class="internal" title="Opciones para impresoras compartidas desde Windows (Samba)"><img src="imgs/180px-Gv5-printers-smb.png" alt="Opciones para impresoras compartidas desde Windows (Samba)" width="180" height="135" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Gv5-printers-smb.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Opciones para impresoras compartidas desde Windows (Samba)</div></div></div>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Gv5-printers-4.png" class="internal" title="Aquí está nuestra impresora lista para ser usada."><img src="imgs/180px-Gv5-printers-4.png" alt="Aquí está nuestra impresora lista para ser usada." width="180" height="112" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Gv5-printers-4.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Aquí está nuestra impresora lista para ser usada.</div></div></div>
+<p>Hay tres diferencias básicas entre operar con una impresora local o una de red y debemos tenerlas muy presentes para instalar con éxito aquellas impresoras que no están directamente conectadas a nuestro ordenador:
+</p>
+<ol><li> En vez de conectarmos directamente a la impresora, lo hacemos a través de una red local que nos dé acceso al ordenador o servidor donde aquélla esté enchufada. Si no tenemos acceso a la red, ésta no está bien configurada o el ordenador de destino no está encendido y accesible desde la red, tendremos problemas.
+</li><li> En vez de mandar órdenes de impresión en local, donde se supone que nuestro usuario tiene permisos para imprimir, debemos mandar esas órdenes a través de un ordenador o servidor que debe estar abierto a compartir su impresora y a atender nuestras peticiones. Si la impresora no está compartida o no tenemos permisos de impresión en ella, tendremos problemas. 
+</li><li> En vez de establecer una comunicación directa entre nuestro sistema y la impresora mediante un controlador o <em>driver</em>, nuestro sistema deberá entenderse con el que está gestionando la impresora. Para que esta acción sea posible ambos sistemas necesitan compartir un mismo protocolo, o de lo contrario tendremos problemas.
+</li></ol>
+<p>Sabido esto, sigamos.
+</p><p>Partimos de la base de que tenemos una impresora conectada a un ordenador o servidor encendido y que ambos se encuentran en una red local debidamente configurada. 
+</p>
+<ol><li> <strong>Sistema > Administración > Impresoras</strong>
+</li><li> Clicamos en el icono de <strong>Impresora nueva</strong>.
+</li><li> La aplicación nos solicitará el protocolo del ordenador o servidor que tiene la impresora conectada. Si se trata de un PC con MS Windows o un Mac debemos seleccionar <strong>Windows Printer via SAMBA</strong>.
+</li><li> Introducimos los datos de conexión del servidor y el nombre de la impresora. Podemos usar el botón <strong>Navegar</strong>... para indicar el equipo y la impresora dentro la red SMB.
+</li><li> Introducimos nuestro <strong>Usuario</strong> y <strong>Contraseña</strong> en el caso de que sean necesarios.
+</li><li> A continuación seleccionamos la marca y modelo de la impresora ó proporcionamos el PPD.
+</li></ol>
+<p>Al final del proceso tendremos la impresora listada como si fuera una impresora local y podremos enviarle documentos como si la tuviéramos conectada a nuestro propio ordenador.
+</p>
+<a name="Conexiones_directas_a_otros_servidores"></a><h2> Conexiones directas a otros servidores </h2>
+<p>Como hemos comentado anteriormente, podemos establecer conexiones de red con otros ordenadores y servidores aun estando fuera de nuestra casa u oficina, incluso a miles de kilómetros. 
+</p><p>Desde nuestro punto de vista, las carpetas a las que tengamos acceso en esos servidores pueden ser un elemento más de nuestro escritorio, como si estuvieran en nuestro disco duro. Las únicas diferencias que notaremos son, a veces, la solicitud de una contraseña de acceso, o un lapso variable de tiempo hasta que se abre la carpeta. Ello dependerá de la potencia del servidor y del tráfico en las denominadas por algunos <em>autopistas de la información</em> y que otros identifican como <em>ciberdespacio</em>.
+</p><p><br />
+</p>
+<a name="Extender_nuestro_escritorio_a_otros_sistemas"></a><h3> Extender nuestro escritorio a otros sistemas </h3>
+<p>Velocidades aparte, lo interesante aquí es asimilar el concepto de que nuestro escritorio no está limitado a nuestro propio ordenador. Podemos acceder a carpetas remotas desde elementos de nuestro escritorio clicándolos igual que para acceder a una carpeta local. Podemos operar con los archivos de una carpeta remota igual que con los archivos de una carpeta local, mediante el mismo <strong>Administrador de archivos</strong>. Se trata de una simple cuestión de permisos: dónde puede acceder nuestro usuario y dónde no.
+</p><p>Todo lo anterior vale igualmente para ordenadores ubicados en nuestra red local. A nuestro sistema le da igual, con tal que le facilitemos identificación de la máquina a enlazar, ya sea una IP numérica local o un nombre de dominio en Internet. Al otro lado del cable, al sistema de destino también le da igual si quien llama a su puerta es un PC contiguo o un vecino en las antípodas. Si tiene los permisos necesarios, pasará.
+</p><p><br />
+</p>
+<a name="Establecer_una_conexi.C3.B3n"></a><h3> Establecer una conexión </h3>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Gv5-Conectar-servidor1.png" class="internal" title='Menú Lugares &gt; "Conectar con el servidor..."'><img src="imgs/180px-Gv5-Conectar-servidor1.png" alt='Menú Lugares &gt; "Conectar con el servidor..."' width="180" height="135" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Gv5-Conectar-servidor1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Menú Lugares > "Conectar con el servidor..."</div></div></div>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Gv5-Conectar-servidor2.png" class="internal" title="Formulario a rellenar para establecer una conexión."><img src="imgs/180px-Gv5-Conectar-servidor2.png" alt="Formulario a rellenar para establecer una conexión." width="180" height="153" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Gv5-Conectar-servidor2.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Formulario a rellenar para establecer una conexión.</div></div></div>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Gv5-Conectar-servidor3.png" class="internal" title='Lista de "Tipos de servicio"'><img src="imgs/180px-Gv5-Conectar-servidor3.png" alt='Lista de "Tipos de servicio"' width="180" height="153" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Gv5-Conectar-servidor3.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Lista de "Tipos de servicio"</div></div></div>
+<p>Por supuesto, para establecer una de estas conexiones debemos antes saber dónde conectar y para qué. Tenemos ejemplos comunes como mantener una página web, mover ficheros pesados entre ordenadores, administrar un servidor remoto... Estas acciones pueden realizarse también mediante aplicaciones especializadas que, a veces, disponen de más posibilidades que el <strong>Administrador de archivos</strong>. También hay quien domina el tema y se va directamente a la linea de comandos. 
+</p><p>Para empezar, este <strong>tres en uno</strong> nos basta y sobra:
+</p><p>Aparece una ventana de configuración, cuyos campos variarán dependiendo del <strong>Tipo de servicio</strong> que seleccionemos.
+</p><p>Hay múltiples combinaciones y vamos a repasar conceptos para entender todas ellas.
+</p>
+<ul><li> <strong>Tipo de servicio</strong> se refiere al protocolo que vamos a utilizar para la conexión. Esto está directamente relacionado con el servidor al que vamos a conectar. Es un dato que si no sabemos nos lo aclarará el administrador del servidor remoto. Veamos rápidamente algunas posibilidades:
+<ul><li> <strong>FTP público</strong> sirve para transmitir archivos a través de un servidor que no nos requiere ninguna contraseña para subir o bajar materiales. Imaginemos que tenemos un archivo que queremos enviar a alguien (o a nosotros mismos, por ejemplo del trabajo a casa) pero es demasiado grande para un disquete y no nos la queremos jugar adjuntándolo a un correo electrónico. Un FTP público nos puede solucionar el problema, con un buscador cualquiera los podemos encontrar.
+</li><li> <strong>FTP (con login)</strong> es lo mismo, pero privado. Es un servicio habitual de muchos proveedores de Internet para acceder a nuestro espacio web.
+</li><li> <strong>SSH</strong> es un protocolo más seguro y completo, utilizado generalmente por usuarios más avanzados. Debemos seleccionar esta opción para conexiones mediante SFTP, que es una combinación de SSH con FTP (la <em>S</em> es de <em>secure</em>, en español <em>seguro</em>).
+</li><li> <strong>Compartido por Windows</strong> utiliza el protocolo SMB, nativo de MS Windows, y nos sirve para conectar directamente con carpetas compartidas con usuarios de este sistema operativo (o Mac, si tienen habilitados los servicios SMB).
+</li><li> <strong>WebDAV (HTTP)</strong> es un protocolo más reciente que los anteriores y, por tanto, menos implantado. Su función es precisamente la de tratar carpetas y archivos en servidores web de la misma forma que en servidores locales, facilitando que varios usuarios trabajen sobre los mismos archivos y carpetas. Se utiliza para gestionar contenidos en páginas web o simplemente para almacenar documentos en linea.
+</li><li> <strong>Dirección personalizada</strong> es simplemente un enlace directo a un recurso en Internet, generalmente una página web.
+</li></ul>
+</li><li> <strong>Servidor</strong> es el nombre de dominio o IP numérica del servidor a conectar. Si se trata de un servidor remoto lo más probable es que utilicemos su nombre de dominio, que tendrá el mismo aspecto que el dominio de una web. Si se trata de un servidor local lo habitual es utilizar la IP numérica, que el administrador o usuario de dicho ordenador nos facilitará.
+</li><li> <strong>Puerto</strong> es el punto de entrada por el que accedemos al servidor. En caso de duda es mejor dejarlo en blanco.
+</li><li> <strong>Carpeta</strong> se refiere a la ubicación en el sistema que tiene la carpeta a la que queremos acceder, partiendo de la raíz del directorio. En caso de duda lo podemos dejar en blanco, ya que de acuerdo con nuestros permisos el servidor nos ubicará donde por defecto nos corresponda.
+</li><li> <strong>Nombre de usuario</strong> es el usuario con permisos de acceso al servidor. Puede ser el mismo que el usuario que utilizamos en nuestro sistema o no, dependiendo del servicio y de cómo se haya configurado nuestro acceso.
+</li><li> <strong>Nombre para usar en la conexión</strong> es simplemente la denominación que esta conexión va a tener en nuestro sistema y que vamos a ver junto al icono de acceso. Podemos denominar la conexión como queramos, esto no influye en la comunicación con el servidor.
+</li></ul>
+<p>Una vez rellenados los campos tendremos el nuevo enlace correspondiente a la conexión tanto en el menú de <strong>Lugares</strong> como en la carpeta de <strong>Servidores de red</strong> también bajo <strong>Lugares</strong>. Si lo deseamos, podemos disponer de un lanzador o acceso directo simplemente arrastrando el icono desde cualquiera de estas ubicaciones hasta el fondo del escritorio.
+</p>
+<a name="Recibir_conexiones"></a><h3> Recibir conexiones </h3>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Gv5-Recibir-conexiones1.png" class="internal" title="Menú Aplicaciones &gt; Herramientas del sistema &gt; Herramientas de red"><img src="imgs/180px-Gv5-Recibir-conexiones1.png" alt="Menú Aplicaciones &gt; Herramientas del sistema &gt; Herramientas de red" width="180" height="135" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Gv5-Recibir-conexiones1.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Menú Aplicaciones > Herramientas del sistema > Herramientas de red</div></div></div>
+<div class="thumb tright"><div style="width:182px;"><a href="imgs/Gv5-Recibir-conexiones2.png" class="internal" title="Mirando la dirección IP de nuestro dispositivo."><img src="imgs/180px-Gv5-Recibir-conexiones2.png" alt="Mirando la dirección IP de nuestro dispositivo." width="180" height="135" /></a> <div class="thumbcaption"><div class="magnify" style="float:right"><a href="imgs/Gv5-Recibir-conexiones2.png" class="internal" title="Enlarge"><img src="imgs/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>Mirando la dirección IP de nuestro dispositivo.</div></div></div>
+<p>Hemos visto cómo conectarnos a otros sistemas que hagan las funciones de servidor. También podemos jugar a la inversa y recibir conexiones actuando como servidores. Para recibir conexiones dentro de una red local y montar algunos tipos de servicios es realmente sencillo y sólo deberemos instalar algún paquete adicional. Por ejemplo, activando el servidor SSH que nos permite aceptar conexiones vía SSH. 
+</p><p>Aparte del tipo de servicio, el dato que tendremos que facilitar a quienes conecten directamente a nuestro sistema es nuestra IP. Para saber la IP actual de nuestro ordenador debemos ir a:
+</p><p>En <strong>Dispositivos</strong> seleccionamos el <strong>Dispositivo de red</strong> a través del cual nos estemos conectando actualmente (<strong>eth0</strong> se refiere al cable de red, <strong>ath0</strong> o <strong>wlan0</strong> a una conexión inalámbrica) y veremos nuestra <strong>Dirección IP</strong> bajo el protocolo IPv5. Sí, de entrada es algo un poco complejo, y esto es sólo el principio.
+</p><p>A partir de aquí, los niveles de complejidad de administración de redes son casi infinitos. Introducimos algunas nociones en el capítulo <strong><a href="Yo_tambi%C3%A9n_sirvo.html" title="Guia v5/Yo también sirvo">8 (Yo también sirvo)</a></strong>.
+</p><p>Si nuestra preocupación es simplemente la transmisión de ficheros podemos optar por herramientas de Internet de sencillo uso preparadas para realizar estas acciones P2P, de par a par, como <strong>aMule</strong> o <strong>Pidgin</strong>. Más sobre todo esto en el siguiente capítulo, donde repasamos los programas que lleva preinstalados nuestra distribución GNU/Linux.
+</p><p><br />
+</p><p><br />
+</p><p><br />
+</p><p><br />
+</p><p><br />
+</p><p><br />
+</p>
+<pre>Sigue: <a href="Mil_y_un_programas_libres_y_gratuitos.html" title="Guia v5/Mil y un programas libres y gratuitos">Mil y un programas libres y gratuitos</a>
+</pre><div class="printfooter">
+Obtenido de "<a href="http://www.guadalinex.org/guadapedia/index.php/Guia_v5/La_red_dom%C3%A9stica">http://www.guadalinex.org/guadapedia/index.php/Guia_v5/La_red_dom%C3%A9stica</a>"</div>
+<!-- end content -->
+<div class="visualClear"></div>
+</div>
+</div>
+</div>
+</body>
+</html>
