@@ -2,7 +2,3 @@
 audio/x-musepack=rhythmbox.desktop
 video/x-ogg=vlc.desktop
 audio/x-ogg=rhythmbox.desktop
-audio/vnd.rn-realaudio=mplayer.desktop
-audio/x-realaudio=mplayer.desktop
-audio/x-pn-realaudio=mplayer.desktop
-video/vnd.rn-realvideo=mplayer.desktop
