@@ -22,7 +22,6 @@ bluez-utils
 brasero
 brltty
 brltty-x11
-bug-buddy
 byzanz
 cheese
 cdparanoia
@@ -82,15 +81,11 @@ gnome-control-center
 gnome-icon-theme
 gnome-media
 gnome-menus
-gnome-netstatus-applet
-gnome-nettool
 gnome-orca
 gnome-panel
-gnome-pilot-conduits
 gnome-power-manager
 gnome-screensaver
 gnome-session
-gnome-spell
 gnome-sudoku
 gnome-system-monitor
 gnome-system-tools
