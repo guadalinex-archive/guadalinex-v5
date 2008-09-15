@@ -1,0 +1,3 @@
+# this Makefile is for building passkey-agent.c, it depends on pkg-config libdbus-1-dev (and build-essential) packages 
+passkey-agent: passkey-agent.c
+	$(CC) `pkg-config --libs --cflags dbus-1` -DDBUS_API_SUBJECT_TO_CHANGE -DVERSION="\"unknown\"" -o passkey-agent passkey-agent.c 

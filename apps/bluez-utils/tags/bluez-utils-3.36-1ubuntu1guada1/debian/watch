@@ -1,0 +1,5 @@
+version=3
+# this is ugly
+#opts=downloadurlmangle=s@.*download%2F(.*)@http://bluez.sf.net/download/$1@,filenamemangle=s/.*download%2F(.*)/$1/ \
+#http://www.bluez.org/download.html .*bluez-utils-(.+)\.tar\.gz
+http://www.bluez.org/download/ .*bluez-utils-(.+)\.tar\.gz

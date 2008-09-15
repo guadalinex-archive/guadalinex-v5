@@ -1,0 +1,11 @@
+diff -Nur bluez-utils-3.30/tools/hciconfig.8 bluez-utils-3.30.new/tools/hciconfig.8
+--- bluez-utils-3.30/tools/hciconfig.8	2008-06-17 23:24:41.000000000 +0200
++++ bluez-utils-3.30.new/tools/hciconfig.8	2008-06-17 23:25:17.000000000 +0200
+@@ -10,6 +10,7 @@
+ .br
+ .B hciconfig
+ .RB [\| \-a \|]
++.RI hciX
+ .RI [\| command
+ .RI [\| "command parameters" \|]\|]
+ 

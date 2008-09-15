@@ -1,0 +1,2 @@
+# code for moving conffiles
+bluez-utils binary: maintainer-script-uses-dpkg-status-directly preinst

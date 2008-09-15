@@ -1,0 +1,10 @@
+--- audio/gsta2dpsink.c.orig	2008-04-05 15:05:52.000000000 +0200
++++ audio/gsta2dpsink.c	2008-04-05 15:06:05.000000000 +0200
+@@ -696,6 +696,6 @@
+ gboolean gst_a2dp_sink_plugin_init (GstPlugin * plugin)
+ {
+ 	return gst_element_register (plugin, "a2dpsink",
+-			GST_RANK_PRIMARY, GST_TYPE_A2DP_SINK);
++			GST_RANK_MARGINAL, GST_TYPE_A2DP_SINK);
+ }
+ 

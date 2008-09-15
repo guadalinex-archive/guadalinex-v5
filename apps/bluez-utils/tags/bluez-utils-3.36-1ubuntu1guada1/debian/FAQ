@@ -1,0 +1,117 @@
+Fri Dec 16 21:13:10 CET 2005 taken from http://www.bluez.org/faq.html
+
+Frequently asked questions
+
+general questions
+
+   1. What is BlueZ?
+           BlueZ is official Linux Bluetooth protocol stack. It is an Open
+           Source project distributed under GNU General Public License (GPL).
+           BlueZ kernel is part of the official Linux kernel since version
+           2.4.6.
+
+   2. Where can I download BlueZ packages?
+           You can download all BlueZ packages from [14]this page.
+
+   3. Whom do I contact for support?
+           Please send your suggestions, questions and problem descriptions
+           to the [15]users mailing list.
+
+   4. Who is developing BlueZ?
+           BlueZ was originally developed by Qualcomm Incorporated. It is now
+           an Open Source project with many contributors through out the
+           world. Look at the [16]credits for more details.
+
+   5. What platforms are supported?
+           Most platforms supported by 2.4.x and newer Linux kernels. Please
+           click [17]here for a complete list of supported platforms and
+           hardware.
+
+   6. What do I need to use Bluetooth on Linux?
+           You need Linux system with 2.4.x or newer kernel, BlueZ user space
+           packages and a Bluetooth device. If you do not have actual
+           Bluetooth device you could use HCI Emulation daemon provided in
+           BlueZ-HCIEmu package.
+
+   7. What Bluetooth protocol and layers are supported by Linux?
+           Linux kernel supports all core Bluetooth protocols and layers.
+           Look at the [18]feature list or read the [19]protocols
+           descriptions.
+
+   8. What interfaces are available for Bluetooth applications?
+           Linux provides standard Berkeley socket interface to all Bluetooth
+           layers. The RFCOMM layer also provides a TTY interface.
+
+   9. Does Linux provide interface to the L2CAP layer?
+           Yes. L2CAP layer provides Berkeley socket interface.
+
+   10. Does Linux support multiple Bluetooth devices?
+           Yes. You can have several Bluetooth devices connected to one
+           computer.
+
+   11. Does Linux support multiple Bluetooth connections?
+           Yes. All Linux Bluetooth layers support multiple connections.
+
+   12. Does Linux have kernel support for RFCOMM protocol?
+           Yes. Both RFCOMM socket and TTY interfaces are supported.
+
+   13. Does Linux support Bluetooth security?
+           Yes. Connection and Service (PSM) level security are supported.
+
+   14. What Bluetooth hardware is supported by Linux?
+           Please visit the [20]hardware list.
+
+   15. Do I still need BlueZ-Kernel package?
+           No. You should upgrade to the latest 2.4.x or 2.6.x Linux kernel.
+
+   16. What if I don't want to upgrade but I do want latest Bluetooth
+   features?
+           We have patches for all Linux kernel's from 2.4.18 onwards. You
+           can find them [21]here.
+
+   17. What is 'rfcommd'?
+           RFCOMMd (or rfcommd) is the user space implementation of the
+           RFCOMM protocol. It was replaced by RFCOMM kernel module and
+           shouldn't be used anymore.
+
+   18. RFCOMM connection using minicom or other tool fails?
+           In case you have created the RFCOMM link using the "rfcomm bind"
+           function this can be caused by application timeouts. This is not a
+           problem of BlueZ or the RFCOMM implementation but rather a problem
+           with the different nature of a RFCOMM virtual TTY and a physical
+           serial TTY device which is normally used by those applications.
+           Some applications implement a timeout protection function while
+           opening the port. If opening the port takes longer than a certain
+           amount of time then the application fails. A serial TTY will
+           usually only take several microseconds to open while the RFCOMM
+           virtual TTY can take several seconds. Try to create the connection
+           before starting your application. This can be done by the "rfcomm
+           connect" function. The Bluetooth connection will then remain until
+           the rfcomm utility is stopped.
+
+   Copyright © 2000-2005 BlueZ Project. All Rights Reserved.
+
+References
+
+   Visible links
+   1. http://www.bluez.org/
+   2. http://www.bluez.org/documentation.html
+   3. http://www.bluez.org/download.html
+   4. http://www.bluez.org/development.html
+   5. http://www.bluez.org/links.html
+   6. http://www.bluez.org/contact.html
+   7. http://sourceforge.net/projects/bluez
+   8. http://www.bluez.org/documentation.html
+   9. http://www.bluez.org/faq.html
+  10. http://www.bluez.org/protocols.html
+  11. http://www.bluez.org/profiles.html
+  12. http://www.bluez.org/drivers.html
+  13. http://www.bluez.org/hardware.html
+  14. http://www.bluez.org/download.html
+  15. http://www.bluez.org/lists.html
+  16. http://www.bluez.org/credits.html
+  17. http://www.bluez.org/about.html
+  18. http://www.bluez.org/about.html
+  19. http://www.bluez.org/protocols.html
+  20. http://www.bluez.org/hardware.html
+  21. http://www.bluez.org/patches.html
