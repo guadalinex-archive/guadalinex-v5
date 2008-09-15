@@ -1,0 +1,10 @@
+In order to use BlueZ you need the BlueZ kernel modules installed.
+
+You will want to install bluez-utils to get useful diagnostic and control
+utilities for Bluetooth devices.
+
+ For additional information about the project visit BlueZ web site:
+
+ http://www.bluez.org
+
+-- Mario Iseli <mario@debian.org>

@@ -1,0 +1,46 @@
+#!/usr/bin/make -f
+# build rules for bluez-utils
+
+include /usr/share/cdbs/1/rules/buildcore.mk
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/rules/simple-patchsys.mk
+include /usr/share/cdbs/1/class/autotools.mk
+
+DEB_UPDATE_RCD_PARAMS = "start 25 2 3 4 5 . stop 74 0 1 6 ."
+DEB_DH_INSTALLINIT_ARGS = "--name=bluetooth"
+#DEB_CONFIGURE_EXTRA_FLAGS := --disable-initscripts --enable-obex --enable-cups --enable-hid2hci --disable-sdpd --enable-glib --enable-pcmciarules --enable-audio --enable-alsa 
+DEB_CONFIGURE_EXTRA_FLAGS := --disable-initscripts --enable-obex --enable-cups --enable-hid2hci --disable-sdpd --enable-glib --enable-pcmciarules --enable-audio --enable-alsa --enable-hidd --enable-pand --enable-dund --enable-dfutool --enable-input --enable-serial --enable-network
+
+DEB_DESTDIR := $(CURDIR)/debian/tmp
+
+install/bluez-utils::
+	# modutils config file
+	#install -D -m 0644 $(CURDIR)/debian/modutils \
+	#	$(DEB_DESTDIR)/etc/modutils/bluez
+
+	mv $(DEB_DESTDIR)/usr/share/man/man1/l2ping.1 \
+		$(DEB_DESTDIR)/usr/share/man/man8/l2ping.8
+
+	install -D -m 0644 $(CURDIR)/debian/passkey-agent-makefile $(CURDIR)/debian/bluez-utils/usr/share/doc/bluez-utils/examples/Makefile
+	install -D -m 0644 $(CURDIR)/debian/bluez-utils.override $(CURDIR)/debian/bluez-utils/usr/share/lintian/overrides/bluez-utils
+
+install/bluetooth::
+	install -D -m 0644 $(CURDIR)/debian/bluetooth.override $(CURDIR)/debian/bluetooth/usr/share/lintian/overrides/bluetooth
+
+install/bluez-audio::
+	install -D -m 0644 $(CURDIR)/audio/audio.conf $(CURDIR)/debian/bluez-audio/etc/bluetooth/audio.conf
+
+install/bluez-network::
+	install -D -m 0644 $(CURDIR)/network/network.conf $(CURDIR)/debian/bluez-network/etc/bluetooth/network.conf
+
+binary-install/bluez-audio::
+	dh_gstscancodecs -pbluez-audio
+
+install/bluez-pcmcia-support::
+	cp -f $(CURDIR)/scripts/bluetooth.rules $(CURDIR)/debian/bluez-pcmcia-support.udev
+
+binary-install/bluez-pcmcia-support::
+	chmod a+x $(CURDIR)/debian/bluez-pcmcia-support/lib/udev/bluetooth_serial
+
+clean::
+	-rm -f $(CURDIR)/debian/bluez-pcmcia-support.udev

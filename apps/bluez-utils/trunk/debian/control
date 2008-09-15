@@ -1,0 +1,105 @@
+Source: bluez-utils
+Section: admin
+Priority: optional
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian Bluetooth Maintainers <pkg-bluetooth-maintainers@lists.alioth.debian.org> 
+Uploaders: Edd Dumbill <ejad@debian.org>, Filippo Giunchedi <filippo@debian.org>, Mario Iseli <mario@debian.org>
+Build-Depends: bison, flex, debhelper (>= 5), libbluetooth-dev (>= 3.36), autotools-dev, cdbs, libdbus-1-dev, libdbus-glib-1-dev (> 0.60), libusb-dev, libglib2.0-dev, libgstreamer-plugins-base0.10-dev, libgstreamer0.10-dev, gstreamer-tools (>= 0.10.14), libasound2-dev, libhal-dev, libexpat1-dev
+Vcs-Svn: svn://svn.debian.org/svn/pkg-bluetooth/packages/bluez-utils
+Vcs-Browser: http://svn.debian.org/wsvn/pkg-bluetooth/packages/bluez-utils
+Homepage: http://www.bluez.org
+Standards-Version: 3.8.0
+
+Package: bluez-utils
+Architecture: any
+Depends: ${shlibs:Depends}, module-init-tools, makedev (<< 3.3.8.2-0) | udev, lsb-base, dbus
+Recommends: bluez-audio, obex-data-server
+Suggests: bluez-gnome | kdebluetooth, bluez-firmware
+Description: Bluetooth tools and daemons
+ This package contains tools and system daemons for using Bluetooth devices.
+ .
+ BlueZ is the official Linux Bluetooth protocol stack. It is an Open Source
+ project distributed under GNU General Public License (GPL).
+Tag: hardware::printer, interface::commandline, interface::daemon, network::server, role::program, scope::utility, use::printing
+
+Package: bluez-pcmcia-support
+Architecture: any
+Priority: extra
+Depends: bluez-utils (= ${binary:Version}), pcmciautils 
+Recommends: setserial
+Description: PCMCIA support files for BlueZ 2.0 Bluetooth tools
+ This package contains files to enable PCMCIA card services to recognise
+ and initialise PCMCIA Bluetooth devices.
+ .
+ BlueZ is the official Linux Bluetooth protocol stack. It is an Open Source
+ project distributed under GNU General Public License (GPL).
+Tag: hardware::printer, role::app-data, use::printing
+
+Package: bluez-cups
+Architecture: any
+Depends: ${shlibs:Depends}, cups
+Description: Bluetooth printer driver for CUPS
+ This package contains a driver to let CUPS print to Bluetooth-connected
+ printers.
+ .
+ BlueZ is the official Linux Bluetooth protocol stack. It is an Open Source
+ project distributed under GNU General Public License (GPL).
+Tag: hardware::printer, role::app-data, uitoolkit::gtk, use::driver, use::printing
+
+Package: bluez-audio
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: Bluetooth audio support 
+ This package contains a driver to communicate with audio-capable bluetooth
+ devices like handsets. 
+ .
+ BlueZ is the official Linux Bluetooth protocol stack. It is an Open Source
+ project distributed under GNU General Public License (GPL).
+Tag: special::not-yet-tagged, special::not-yet-tagged::b
+
+Package: bluez-input
+Architecture: any
+Depends: ${shlibs:Depends}
+Conflicts: bluez-utils (<< 3.30-1)
+Replaces: bluez-utils (<< 3.30-1)
+Description: Bluetooth input support 
+ This package contains a plugin to communicate with input-capable bluetooth
+ devices like mice and keyboards
+ .
+ BlueZ is the official Linux Bluetooth protocol stack. It is an Open Source
+ project distributed under GNU General Public License (GPL).
+Tag: special::not-yet-tagged, special::not-yet-tagged::b
+
+Package: bluez-network
+Architecture: any
+Depends: ${shlibs:Depends}
+Conflicts: bluez-utils (<< 3.30-1)
+Replaces: bluez-utils (<< 3.30-1)
+Description: Bluetooth network support 
+ This package contains a plugin to communicate with network-capable bluetooth
+ devices like phones.
+ .
+ BlueZ is the official Linux Bluetooth protocol stack. It is an Open Source
+ project distributed under GNU General Public License (GPL).
+Tag: special::not-yet-tagged, special::not-yet-tagged::b
+
+Package: bluez-serial
+Architecture: any
+Depends: ${shlibs:Depends}
+Conflicts: bluez-utils (<< 3.30-1)
+Replaces: bluez-utils (<< 3.30-1)
+Description: Bluetooth serial support 
+ This package contains a driver to communicate with serial-capable bluetooth
+ devices like GPS receivers.
+ .
+ BlueZ is the official Linux Bluetooth protocol stack. It is an Open Source
+ project distributed under GNU General Public License (GPL).
+Tag: special::not-yet-tagged, special::not-yet-tagged::b
+
+Package: bluetooth
+Architecture: all
+Depends: bluez-utils
+Description: Bluetooth stack utilities
+ This metapackage provides the bluez utilities for managing the Linux bluetooth
+ stack for kernels 2.4 and 2.6.
+Tag: special::not-yet-tagged, special::not-yet-tagged::b

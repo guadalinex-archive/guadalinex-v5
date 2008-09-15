@@ -1,0 +1,395 @@
+bluez-libs (3.36-1guada1) hardy; urgency=low
+
+  * Guadalinex rebuild 
+
+ -- Carlos Parra Camargo <cparra@emergya.es>  Mon, 15 Sep 2008 17:52:21 +0200
+
+bluez-libs (3.36-1) unstable; urgency=low
+
+  * New upstream release
+    - starting from 3.34 various SDP packet handling functions are provided with
+    safe versions.
+
+ -- Filippo Giunchedi <filippo@debian.org>  Sat, 12 Jul 2008 10:39:27 +0200
+
+bluez-libs (3.35-1) unstable; urgency=medium
+
+  * New upstream version 
+
+ -- Filippo Giunchedi <filippo@debian.org>  Sun, 06 Jul 2008 23:21:25 +0200
+
+bluez-libs (3.33-1) unstable; urgency=low
+
+  * New upstream release
+  * Upgrade to S-V 3.8.0, no changes needed
+
+ -- Filippo Giunchedi <filippo@debian.org>  Sat, 21 Jun 2008 10:25:30 +0200
+
+bluez-libs (3.30-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Filippo Giunchedi <filippo@debian.org>  Sat, 16 Feb 2008 17:22:57 +0100
+
+bluez-libs (3.26-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Filippo Giunchedi <filippo@debian.org>  Sat, 16 Feb 2008 17:18:58 +0100
+
+bluez-libs (3.25-1) unstable; urgency=low
+
+  * New upstream release
+  * Update homepage/vcs fields in control
+  * Bump standards-version
+  * Add patch to configure for avoiding rpath on amd64
+  * Fix NEWS.Debian as lintian complains 
+
+ -- Filippo Giunchedi <filippo@debian.org>  Sun, 10 Feb 2008 10:26:45 +0100
+
+bluez-libs (3.24-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/watch fails to report upstream's version (Closes: #449616)
+  * Bump version in shlibs to 3.14 (Closes: #452961)
+
+ -- Filippo Giunchedi <filippo@debian.org>  Sat, 29 Dec 2007 19:39:11 +0100
+
+bluez-libs (3.22-1) unstable; urgency=low
+
+  * New upstream release.
+  * Added correct VCS fields to debian/control.
+  * Added homepage field to debian/control.
+
+ -- Mario Iseli <mario@debian.org>  Thu, 21 Nov 2007 14:18:45 +0100
+
+bluez-libs (3.20-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Filippo Giunchedi <filippo@debian.org>  Wed, 10 Oct 2007 15:40:35 +0200
+
+bluez-libs (3.19-1) unstable; urgency=low
+
+  * New upstream release.
+  * Added XS-Vcs-* fields in debian/control.
+  * Added a debian/watch file.
+
+ -- Mario Iseli <mario@debian.org>  Thu, 27 Sep 2007 08:47:11 +0200
+
+bluez-libs (3.15-1) unstable; urgency=low
+
+  * New upstream release.
+  * Make package binNMU safe, thanks to Lior Kaplan  (Closes: #439288)
+
+ -- Mario Iseli <mario@debian.org>  Tue, 21 Aug 2007 10:12:19 +0200
+
+bluez-libs (3.14-1) unstable; urgency=low
+
+  * New upstream release.
+  * Updated debian/README.Debian, removed the mailinglists, updated upstream
+    URL (followed the recommendations of Marcel Holtmann).
+  * Updated debian/copyright according to README.
+
+ -- Mario Iseli <mario@debian.org>  Tue, 21 Aug 2007 09:50:14 +0200
+
+bluez-libs (3.13-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Filippo Giunchedi <filippo@debian.org>  Thu, 02 Aug 2007 10:02:29 +0200
+
+bluez-libs (3.12-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Mario Iseli <admin@marioiseli.com>  Mon, 25 Jun 2007 12:07:47 +0200
+
+bluez-libs (3.11-1) unstable; urgency=low
+
+  * New upstream release
+  * Added myself to the uploaders field
+
+ -- Mario Iseli <admin@marioiseli.com>  Thu,  7 Jun 2007 16:37:40 +0200
+
+bluez-libs (3.10-1) unstable; urgency=low
+
+  * New upstream release
+  * libbluetooth2-dev -> libbluetooth-dev transition to allow binNMUs
+
+ -- Filippo Giunchedi <filippo@debian.org>  Wed, 23 May 2007 22:13:52 +0200
+
+bluez-libs (3.9-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Filippo Giunchedi <filippo@debian.org>  Sun,  4 Mar 2007 14:26:32 +0100
+
+bluez-libs (3.7-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Filippo Giunchedi <filippo@debian.org>  Sun,  1 Oct 2006 14:52:28 +0200
+
+bluez-libs (3.5-1) unstable; urgency=medium
+
+  * New upstream release
+  * urgency=medium since bluez-utils will go medium as well, and it is going
+    to depend on this version of bluez-libs
+
+ -- Filippo Giunchedi <filippo@debian.org>  Fri, 15 Sep 2006 15:42:12 +0200
+
+bluez-libs (3.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Filippo Giunchedi <filippo@debian.org>  Fri, 30 Jun 2006 10:49:02 +0200
+
+bluez-libs (3.0-2) unstable; urgency=low
+
+  * Suggest: pkg-config as it is needed to detect libbluetooth presence 
+
+ -- Filippo Giunchedi <filippo@debian.org>  Tue, 27 Jun 2006 13:40:30 +0200
+
+bluez-libs (3.0-1) unstable; urgency=low
+
+  * New upstream release
+  * soname bump to 2, updating packages accordingly. Changes:
+    hci.h: * sniff_subrate_cp.max_{local,remote}_latency merged to
+             max_latency
+           * evt_sniff_subrate.max_{local,remote}_latecy renamed to
+             max_{rx,tx}_latency
+    
+ -- Filippo Giunchedi <filippo@debian.org>  Thu, 15 Jun 2006 16:37:51 +0200
+
+bluez-libs (2.25-3) unstable; urgency=low
+
+  * remove README from package, also from DEBIAN/md5sums (Closes: #370243) 
+
+ -- Filippo Giunchedi <filippo@debian.org>  Thu,  1 Jun 2006 15:34:26 +0200
+
+bluez-libs (2.25-2) unstable; urgency=low
+
+  * exclude README from libbluetooth1* (Closes: #361038) 
+
+ -- Filippo Giunchedi <filippo@debian.org>  Fri, 19 May 2006 09:15:38 -0500
+
+bluez-libs (2.25-1) unstable; urgency=low
+
+  * new upstream release
+  * bump shlibs to (>= 2.25) 
+
+ -- Filippo Giunchedi <filippo@debian.org>  Mon, 13 Feb 2006 21:37:05 +0100
+
+bluez-libs (2.24-1) unstable; urgency=low
+
+  * upload to unstable, nothing changed 
+
+ -- Filippo Giunchedi <filippo@debian.org>  Mon, 26 Dec 2005 13:17:01 +0100
+
+bluez-libs (2.24-0exp1) experimental; urgency=low
+
+  * New upstream christmas release (really bugfix only)
+
+ -- Filippo Giunchedi <filippo@debian.org>  Sun, 25 Dec 2005 16:17:24 +0100
+
+bluez-libs (2.23-0exp1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Filippo Giunchedi <filippo@debian.org>  Mon, 19 Dec 2005 11:50:21 +0100
+
+bluez-libs (2.22-0exp1) experimental; urgency=low
+
+  * New upstream release (Closes: #342494)
+  * imported from ubuntu into pkg-bluetooth.alioth.debian.org and changed
+    Maintainer accordingly
+
+ -- Filippo Giunchedi <filippo@debian.org>  Sun,  6 Nov 2005 21:03:54 +0100
+
+bluez-libs (2.20-0ubuntu2) breezy; urgency=low
+
+  * Put missing flags 
+
+ -- Charles Majola <charles@ubuntu.com>  Wed,  7 Sep 2005 12:52:32 +0200
+
+bluez-libs (2.20-0ubuntu1) breezy; urgency=low
+
+  * New upstream release
+
+ -- Charles Majola <charles@ubuntu.com>  Wed,  7 Sep 2005 10:56:59 +0200
+
+bluez-libs (2.18-0ubuntu1) breezy; urgency=low
+
+  * New upstream release
+
+ -- Charles Majola <charles@ubuntu.com>  Wed, 13 Jul 2005 15:20:19 +0200
+
+bluez-libs (2.15-2) unstable; urgency=low
+
+  * Add in forgotten /usr/share/aclocal/bluez.m4 to the -dev package. 
+
+ -- Edd Dumbill <ejad@debian.org>  Sun,  6 Feb 2005 09:32:44 +0000
+
+bluez-libs (2.15-1) unstable; urgency=low
+
+  * New upstream release.
+  * Retire big-endian patch as fixed upstream. 
+
+ -- Edd Dumbill <ejad@debian.org>  Sat,  5 Feb 2005 17:25:47 +0000
+
+bluez-libs (2.11-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Edd Dumbill <ejad@debian.org>  Wed,  1 Dec 2004 16:05:12 +0000
+
+bluez-libs (2.10-2) unstable; urgency=high
+
+  * Big-endian patch from Matthew Grant.  Fixes HID shutdown on
+    big-endian systems and also fixes a possible buffer overrun.
+    (Closes: #281090)
+
+ -- Edd Dumbill <ejad@debian.org>  Mon, 29 Nov 2004 16:35:46 +0000
+
+bluez-libs (2.10-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Edd Dumbill <ejad@debian.org>  Wed, 15 Sep 2004 16:22:13 +0100
+
+bluez-libs (2.9-1) unstable; urgency=low
+
+  * New upstream release.
+  * Ensure pkgconfig .pc file distributed.
+
+ -- Edd Dumbill <ejad@debian.org>  Sun,  8 Aug 2004 15:03:48 +0100
+
+bluez-libs (2.8-1) unstable; urgency=low
+
+  * New upstream release.
+  * retire hci.h patch.
+  * remove shlibs entry for libsdp.  libsdp no longer exists as a library,
+  programs compiling against it should just use -lbluetooth.
+
+ -- Edd Dumbill <ejad@debian.org>  Fri, 16 Jul 2004 19:12:49 +0100
+
+bluez-libs (2.7-4) unstable; urgency=low
+
+  * libbluetooth1-dev package now conflicts with (now obsolete) bluez-pan
+    (Closes: #253827, #248700)
+
+ -- Edd Dumbill <ejad@debian.org>  Mon, 14 Jun 2004 14:53:18 +0100
+
+bluez-libs (2.7-3) unstable; urgency=low
+
+  * Move to cdbs.
+  * Tidy hci.h patch up into debian/patches/
+  * Upload to unstable.
+
+ -- Edd Dumbill <ejad@debian.org>  Wed,  9 Jun 2004 23:10:31 +0100
+
+bluez-libs (2.7-2) experimental; urgency=low
+
+  * Fix EVT_INQUIRY_RESULT_WITH_RSSI in include/hci.h
+
+ -- Edd Dumbill <ejad@debian.org>  Wed, 26 May 2004 19:47:20 +0100
+
+bluez-libs (2.7-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Edd Dumbill <ejad@debian.org>  Wed, 26 May 2004 12:29:53 +0100
+
+bluez-libs (2.6-1) experimental; urgency=low
+
+  * New upstream release.
+  * Added conflicts to libsdp2.  This package now renders libsdp2
+    needless, as it incorporates SDP functionality into libbluetooth.
+  * Upload to experimental due to radical upstream changes.
+
+ -- Edd Dumbill <ejad@debian.org>  Thu,  6 May 2004 11:35:08 +0100
+
+bluez-libs (2.5-2) unstable; urgency=low
+
+  * Change section to libdevel for libbluetooth1-dev. 
+
+ -- Edd Dumbill <ejad@debian.org>  Thu,  1 Jan 2004 18:06:36 +0000
+
+bluez-libs (2.5-1) unstable; urgency=low
+
+  * New upstream release
+  * Update README.Debian
+  * Change priority to 'optional' 
+
+ -- Edd Dumbill <ejad@debian.org>  Thu,  1 Jan 2004 17:24:42 +0000
+
+bluez-libs (2.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Edd Dumbill <ejad@debian.org>  Sat, 22 Mar 2003 11:39:28 +0000
+
+bluez-libs (2.3-1) unstable; urgency=low
+
+  * New upstream release
+    - adds support for voice settings
+    - fixes device enumeration on big endian machines
+  * Updated README.Debian
+  * Updated standards version to 3.5.8
+
+ -- Edd Dumbill <ejad@debian.org>  Wed,  1 Jan 2003 13:52:39 +0000
+
+bluez-libs (2.2-2) unstable; urgency=low
+
+  * Unreleased.
+  * Ship libbluetooth.a in -dev package.
+  * Add libbluetooth-dev to -dev package Provides, Replaces.
+
+ -- Edd Dumbill <ejad@debian.org>  Mon, 18 Nov 2002 01:58:18 +0000
+
+bluez-libs (2.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Updated standards version to 3.5.7
+  * Updated information about kernel module requirements
+  * Added libbluetooth.la file to the -dev package.
+
+ -- Edd Dumbill <ejad@debian.org>  Tue,  8 Oct 2002 16:00:23 +0100
+
+bluez-libs (2.0-release-1) unstable; urgency=low
+
+  * New upstream release
+  * Updated maintainer to be my Debian address
+  * Updated standards version to 3.5.6
+
+ -- Edd Dumbill <ejad@debian.org>  Sat, 31 Aug 2002 19:36:13 +0100
+
+bluez-libs (2.0-pre10-2) unstable; urgency=low
+
+  * Added AM_MAINTAINER_MODE to configure.in, to avoid timestamp
+    skew problems when building
+  * Now uploaded into Debian (Closes: #145380)
+
+ -- Edd Dumbill <edd@usefulinc.com>  Wed, 31 Jul 2002 12:24:17 +0100
+
+bluez-libs (2.0-pre10-1) unstable; urgency=low
+
+  * New upstream release
+  * Removed confusing README (upstream build instructions)
+
+ -- Edd Dumbill <edd@usefulinc.com>  Wed, 26 Jun 2002 11:50:52 +0100
+
+bluez-libs (2.0-pre9-1) unstable; urgency=low
+
+  * New upstream version.
+  * Renamed source package to follow upstream.
+  * Adopted upstream's versioning conventions.
+
+ -- Edd Dumbill <edd@usefulinc.com>  Thu,  2 May 2002 15:00:00 +0100
+
+libbluetooth (1.99.8-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Edd Dumbill <edd@usefulinc.com>  Wed, 17 Apr 2002 01:00:00 +0100

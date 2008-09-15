@@ -1,0 +1,28 @@
+--- hcid/hcid.conf.orig	2004-05-26 12:47:42.000000000 +0100
++++ hcid/hcid.conf	2004-05-26 12:50:43.000000000 +0100
+@@ -21,7 +21,7 @@
+ 	pairing multi;
+ 
+ 	# Default PIN code for incoming connections
+-	passkey "BlueZ";
++	passkey "1234";
+ }
+ 
+ # Default settings for HCI devices
+@@ -20,7 +29,7 @@
+ 	# Local device name
+ 	#   %d - device id
+ 	#   %h - host name
+-	name "BlueZ (%d)";
++	name "%h-%d";
+ 
+ 	# Local device class
+ 	class 0x100;
+@@ -41,6 +41,7 @@
+ 
+ 	# Inquiry and Page scan
+ 	iscan enable; pscan enable;
++	discovto 0;
+ 
+ 	# Default link mode
+ 	#   none   - no specific policy

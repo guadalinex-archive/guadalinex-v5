@@ -1,0 +1,1365 @@
+bluez-utils (3.36-1ubuntu1guada1) hardy; urgency=low
+
+  * Guadalinex rebuild 
+
+ -- Carlos Parra Camargo <cparra@emergya.es>  Mon, 15 Sep 2008 17:53:28 +0200
+
+bluez-utils (3.36-1ubuntu1) intrepid; urgency=low
+
+  * Merge from Debian unstable. (LP: #211252)
+  * Remaining Ubuntu changes:
+    - Leave 002_hcid_conf_defaults delta to debian.
+    - Check for upgrades before 3.30 and cleanup old service files
+    - Introduce 3 new packages, bluez-network, bluez-serial, bluez-input.
+    - Depend on lsb-base >= 3.2-14, providing status_of_proc()
+    - Add the 'status' action to bluez-utils's init script.
+    - New patch, 010_hciconfig-hciX, add hci interface to command in hciconfig
+      manual page.
+  * Ubuntu changes dropped:
+    - Turn off hidd, dund, and pand to try the plugins again. (LP: #191704)
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Mon, 11 Aug 2008 18:06:07 +1000
+
+bluez-utils (3.36-1) unstable; urgency=medium
+
+  * New upstream version
+    + Use safe function versions for SDP client handling.
+      (since 3.34)
+  * Build-dep on libbluetooth >= 3.36
+  * Remove obsolete pcmcia-cs dep
+  * Remove old cruft:
+    - bluez-pan from /etc/default/bluetooth
+    - bluez-sdp from postinst
+  * Install *-api.txt
+  * Update S-V to 3.8.0, no changes needed
+  * Call hid2hci in init.d restart action (Closes: #490980)
+  * Fix startup/shutdown message for dund (Closes: #490851)
+  * Build dfutool (Closes: #489038)
+  * Fix lintian-catched errors:
+    - change cupsys dep to cups
+    - add #debhelper# to bluez-audio.preinst
+  * Rephrase README.Debian as suggested in #477335
+
+ -- Filippo Giunchedi <filippo@debian.org>  Sun, 20 Jul 2008 17:57:05 +0200
+
+bluez-utils (3.30-3ubuntu3) intrepid; urgency=low
+
+  * debian/control
+    - Depend on lsb-base >= 3.2-14, providing status_of_proc()
+  * debian/bluez-utils.bluetooth.init
+    - Add the 'status' action (LP: #251684)
+
+ -- Nathan Handler <nhandler@ubuntu.com>  Thu, 24 Jul 2008 21:32:31 -0500
+
+bluez-utils (3.30-3ubuntu2) intrepid; urgency=low
+
+  [ Basilio A. Kublik ]
+  * New patch, 010_hciconfig-hciX, add hci interface to command in hciconfig
+    manpage. (LP: #192668)
+
+  [ Loic Minier ]
+  * Rebase above change on top of 3.30-3ubuntu1 and target intrepid.
+  * Convert above change to a patch instead of living in the .diff.
+  * Update upload date.
+  * Add #DEBHELPER# token to debian/bluez-audio.preinst.
+
+ -- Basilio A. Kublik <sourcercito@gmail.com>  Tue, 17 Jun 2008 23:22:48 +0200
+
+bluez-utils (3.30-3ubuntu1) intrepid; urgency=low
+
+  * Merge with debian unstable, remaining changes: (LP: #235576)
+    - debian/control:
+      * Leave maintainer as Ubuntu Core Dev
+    - debian/patches:
+      * Drop 060_gst_marginal, it's now included in debian patch
+        006_a2dpsink_marginal
+      * Leave 007_dell_bluetooth.patch as it's not upstream until 3.32.
+      * Leave 002_hcid_conf_defaults delta to debian.
+    - debian/bluez-utils.preinst:
+      * Check for upgrades before 3.30 and cleanup old service files
+    - debian/rules:
+      * Turn off hidd, dund, and pand to try the plugins again.
+        If bug #191704 or #192043 crop up again, feel free to re-enable
+        these.
+      * Install network plugin conf file.
+  * Introduce 3 new packages, bluez-network, bluez-serial, bluez-input.
+    - debian/bluez-{network,serial,input}.install:
+      * Include the plugins for network, serial, and input.
+    - debian/rules:
+      * Enable network, serial, and input plugins.
+
+ -- Mario Limonciello <mario_limonciello@dell.com>  Wed, 28 May 2008 13:40:48 -0500
+
+bluez-utils (3.30-3) unstable; urgency=low
+
+  * Add watch file 
+  * Properly guard in bluez-utils.postinst before moving a conffile 
+    (Closes: #415480)
+  * Comment conffile renaming for versions <= 2.19
+
+ -- Filippo Giunchedi <filippo@debian.org>  Thu, 17 Apr 2008 18:33:47 +0200
+
+bluez-utils (3.30-2) unstable; urgency=low
+
+  * Add dbus as dependency in the init script (Closes: #475656)
+  * Add a NEWS explaining the switch from services to shared objects 
+    (Closes: #475076)
+  * Downgrade bluez-gnome from recommends to suggests together with
+    kdebluetooth (Closes: #448553, #458945)
+  * Remove old Conflicts/Replaces on bluez-sdp and bluez-pan
+
+ -- Filippo Giunchedi <filippo@debian.org>  Mon, 14 Apr 2008 17:54:56 +0200
+
+bluez-utils (3.30-1) unstable; urgency=low
+
+  * New upstream release (Closes: #473403)
+    + Bump build-dep to libbluetooth-dev >= 3.30
+    + Services are now plugins, so drop 001_audio_service_autostart.patch
+    + Drop 006_baudrates.patch applied upstream
+  * Explicitly enable PAND/DUND/HIDD instead of plugins for now
+  * Fix bashism in init script (Closes: #464495) 
+  * Add patch to register a2dpsink as marginal so it doesn't take over
+  * Reload dbus in postinst (Closes: #466013) 
+  * Change homepage field to bluez.org (Closes: #444332)
+  * Rephrase README.Debian and remove references to 2.4 kernel 
+    (Closes: #413393) 
+
+ -- Filippo Giunchedi <filippo@debian.org>  Sat, 05 Apr 2008 16:09:24 +0200
+
+bluez-utils (3.26-0ubuntu6) hardy; urgency=low
+
+  * debian/rules
+    - Enable hidd and pand as users are experiencing problem without those
+    binaries. (LP: #191704, #192043)
+
+ -- Onkar Shinde <onkarshinde@gmail.com>  Wed, 16 Apr 2008 17:41:18 +0530
+
+bluez-utils (3.26-0ubuntu5) hardy; urgency=low
+
+  * Add 007_dell_bluetooth to enable HID->HCI
+    switching on Dell 370 & 410 BT controllers. (LP: #209715)
+
+ -- Mario Limonciello <mario_limonciello@dell.com>  Fri, 04 Apr 2008 13:34:15 -0500
+
+bluez-utils (3.26-0ubuntu4) hardy; urgency=low
+
+  * enable dund, so that palm pilot ppp-over-BT works.
+
+ -- LaMont Jones <lamont@ubuntu.com>  Tue, 01 Apr 2008 21:16:29 -0600
+
+bluez-utils (3.26-0ubuntu3) hardy; urgency=low
+
+  * Add missing Ubuntu change in bluez-utils to install service files.
+    (LP: #178525, #191704)
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Fri, 15 Feb 2008 10:14:40 +1100
+
+bluez-utils (3.26-0ubuntu2) hardy; urgency=low
+
+  * Add missing Conflicts and Replaces for bluez-audio.  LP: #191304.
+
+ -- Tollef Fog Heen <tfheen@ubuntu.com>  Wed, 13 Feb 2008 12:32:43 +0100
+
+bluez-utils (3.26-0ubuntu1) hardy; urgency=low
+
+  * New upstream release
+  * Merge from debian unstable, remaining changes:
+    - Move bluez-audio from Recommends to Depends (but keep it in a
+      separate package to make merging from Debian easier).
+    - Keep setting discovto 0 in hcid.conf by default
+    - Don't care about stop links if we are shutting down.
+    - Enable network, serial and input modules.
+    - Change maintainer to Ubuntu Core Developers.
+    - Make the a2dp gstreamer plugin be of rank marginal rather than
+      primary.
+
+ -- Tollef Fog Heen <tfheen@ubuntu.com>  Mon, 11 Feb 2008 15:45:49 +0100
+
+bluez-utils (3.24-1) unstable; urgency=low
+
+  * New upstream release, bump build-dep to libbluetooth-dev >= 3.24
+  * Partially pull patch from ubuntu to enable audio support (Closes: #453066)
+  * Split audio support into bluez-audio and make bluez-utils Recommend that
+    (Closes: #452610, #456818)
+  * Install lintian override for conffile handling and bluetooth description
+  * Add debian/patches/003_configure_amd64_rpath.patch for avoiding rpath on
+    amd64
+
+ -- Filippo Giunchedi <filippo@debian.org>  Sun, 13 Jan 2008 11:27:59 +0100
+
+bluez-utils (3.24-0ubuntu2) hardy; urgency=low
+
+  * Install /etc/bluetooth/*.service files as well. (LP: #178525)
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Wed, 09 Jan 2008 13:22:37 +1100
+
+bluez-utils (3.24-0ubuntu1) hardy; urgency=low
+
+  * New upstream version, and merge from Debian unstable:
+    - Add Autostart=true to audio service file.
+    - Patch that downgrades of the rank of a2dpsink from primary to marginal.
+    - Add libgstreamer-plugins-base0.10-dev, libgstreamer0.10-dev,
+      gstreamer-tools and libasound2-dev to the Build-Depends.
+    - Run dh_gstscancodecs during build.
+    - Add -enable-network --enable-serial --enable-input --enable-audio
+      --enable-alsa to the ./configure call.
+    - Install all of the new files.
+    - Don't stop the service when shutting down or rebooting.
+    - Munge Maintainer field as per spec.
+  * Bump the Build-Dependancy on bluez-libs.
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Fri, 04 Jan 2008 21:29:10 +1100
+
+bluez-utils (3.22-2) unstable; urgency=medium
+
+  * Added patches/006_baudrates.patch to fix FTBFS on sparc.
+
+ -- Mario Iseli <mario@debian.org>  Mon, 10 Dec 2007 14:26:30 +0100
+
+bluez-utils (3.22-1ubuntu2) hardy; urgency=high
+
+  * New patch, 060_gst-rank-marginal, downgrades the rank of a2dpsink from
+    primary to marginal; should fix a2dpsink taking over as the default output
+    sink.
+
+ -- Loic Minier <lool@dooz.org>  Thu, 29 Nov 2007 22:09:36 +0100
+
+bluez-utils (3.22-1ubuntu1) hardy; urgency=low
+
+  * Merge from Debian unstable.
+  * Remaining Ubuntu changes:
+    - Add Autostart=true to audio service file.
+    - Add libgstreamer-plugins-base0.10-dev, libgstreamer0.10-dev,
+      gstreamer-tools and libasound2-dev to the Build-Depends.
+    - Run dh_gstscancodecs during build.
+    - Add -enable-network --enable-serial --enable-input --enable-audio
+      --enable-alsa to the ./configure call.
+    - Install all of the new files.
+    - Don't stop the service when shutting down or rebooting.
+    - Munge Maintainer field as per spec.
+  * Ubuntu changes dropped:
+    - Kubuntu's pin helper patch, since it isn't needed any more.
+  * Bump the Build-Dependancy on bluez-libs.
+  * Update the Autostart=true patch.
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Tue, 27 Nov 2007 13:48:54 +1100
+
+bluez-utils (3.22-1) unstable; urgency=low
+
+  * New upstream release (Closes: #440692).
+  * Added myself to the uploaders field.
+  * Added official VCS fields to debian/control.
+  * Added official Homepage field to debian/control.
+  * fixed bluez.sf.net as bluez.org in copyright and control
+  * copyright updated with new copyright holders
+
+ -- Mario Iseli <mario@debian.org>  Thu, 22 Nov 2007 14:15:33 +0100
+
+bluez-utils (3.20-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Filippo Giunchedi <filippo@debian.org>  Thu, 11 Oct 2007 17:22:10 +0200
+
+bluez-utils (3.20-0ubuntu1) hardy; urgency=low
+
+  * New upstream release.
+  * Bump Build-Depends on bluez-libs to be 3.20.
+  * Drop 990_upstream_cvs_gstbluetooth_crasher.patch, integrated upstream.
+  * Correct spelling of Original in the control file.
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Wed, 24 Oct 2007 15:45:03 +1000
+
+bluez-utils (3.19-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Mario Iseli <mario@debian.org>  Thu, 27 Sep 2007 09:57:10 +0200
+
+bluez-utils (3.19-0ubuntu3) gutsy; urgency=low
+
+  * Fix XSBC-Maintainer to be XSBC-Original-Maintainer.
+
+ -- Tollef Fog Heen <tfheen@ubuntu.com>  Wed, 03 Oct 2007 10:28:03 +0200
+
+bluez-utils (3.19-0ubuntu2) gutsy; urgency=low
+
+  * Add patch from upstream CVS to avoid crashing on zero-length files.
+
+ -- Tollef Fog Heen <tfheen@ubuntu.com>  Fri, 28 Sep 2007 14:57:52 +0200
+
+bluez-utils (3.19-0ubuntu1) gutsy; urgency=low
+
+  * New upstream release
+    - Various bugfixes
+  * Bump build-depends to bluez-libs 3.19.
+  * Add Autostart=true to audio service file.
+
+ -- Tollef Fog Heen <tfheen@ubuntu.com>  Wed, 19 Sep 2007 14:33:02 +0200
+
+bluez-utils (3.18-0ubuntu2) gutsy; urgency=low
+
+  * Add libgstreamer-plugins-base0.10-dev and libgstreamer0.10-dev to
+    Build-depends.
+
+ -- Tollef Fog Heen <tfheen@ubuntu.com>  Mon, 10 Sep 2007 10:58:26 +0200
+
+bluez-utils (3.18-0ubuntu1) gutsy; urgency=low
+
+  * New upstream release:
+    - 3.18:
+      - Implement proper locking for headsets.
+      - Fix various A2DP SEP locking issues.
+      - Fix and cleanup audio stream handling.
+      - Fix stream starting if suspend request is pending.
+      - Fix A2DP and AVDTP endianess problems.
+      - Add network timeout and retransmission support.
+      - Add more detailed decoding of EIR elements.
+    - 3.17:
+      - Fix crashes in audio and network services.
+      - Check PAN source and destination roles.
+      - Only export the needed symbols for the plugins.
+  * debian/bluez-utils.install: install usr/lib/gstreamer0.10.
+  * debian/rules: run dh_gstscancodecs.
+  * debian/control:
+    - bump libbluetooth2-dev requirement.
+    - Build-Depends on gstreamer-tools.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Fri, 07 Sep 2007 10:12:05 +0200
+
+bluez-utils (3.16-0ubuntu2) gutsy; urgency=low
+
+  * Fixed bluez-utils.install, install missing files, makes kdebluetooth
+    happy again
+
+ -- Anthony Mercatante <tonio@ubuntu.com>  Wed, 29 Aug 2007 23:49:13 +0200
+
+bluez-utils (3.16-0ubuntu1) gutsy; urgency=low
+
+  * New upstream release:
+    - Add support for headsets with SCO audio over HCI.
+    - Add support for auto-create through ALSA plugin.
+    - Add support for ALSA plugin parameters.
+    - Add GStreamer plugin with SBC decoder and encoder.
+    - Fix network service NAP, GN and PANU servers. Set EIR information from
+      SDP database.
+  * debian/control: bumped libbluetooth2-dev requirement.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Wed, 29 Aug 2007 15:27:30 -0400
+
+bluez-utils (3.15-0ubuntu2) gutsy; urgency=low
+
+  * debian/rules:
+    - --enable-obex dropped,
+    - --enable-network --enable-serial --enable-input --enable-audio and
+      --enable-alsa added.
+  * debian/control: Build-Depends on libasound2-dev.
+  * Fixes "A2DP support is not included in the binary packages of bluez-utils"
+    (LP: #135196)
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Tue, 28 Aug 2007 10:46:05 -0400
+
+bluez-utils (3.15-0ubuntu1) gutsy; urgency=low
+
+  * New upstream release:
+    - 3.15:
+      - Add A2DP support to the audio service.
+      - Add proxy support to the serial service.
+      - Set service classes value from SDP database.
+    - 3.14:
+      - Add missing signals for the adapter interface.
+      - Add basic commands for Simple Pairing.
+      - Add correct Simple Pairing and EIR interaction.
+      - Add missing properties for remote information.
+      - Add EPoX endian quirk to the input service.
+      - Fix HID descriptor import and storage functions.
+      - Fix handling of adapters in raw mode.
+      - Fix remote device listing methods.
+    - 3.13:
+      - Fix some issues with the headset support.
+      - Fix concurrent pending connection attempts.
+      - Fix usage of devname instead of netdev.
+      - Add identifier for Nokia SyncML records.
+      - Add command for reading the CSR chip revision.
+      - Add generic CSR radio test support.
+  * debian/control: bump libbluetooth2-dev requirement.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Mon, 27 Aug 2007 17:38:54 -0400
+
+bluez-utils (3.13-1) unstable; urgency=low
+
+  * New upstream release
+    - pand/main.c fix for devname/devname (Closes: #433080)
+    - debian/patches/001_pand_manpage.patch no longer needed
+  * binNMU-safety patch by Lior Kaplan (Closes: #433545)
+  * Do not install sdpd, explict --enable-glib configure flag and build-dep 
+
+ -- Filippo Giunchedi <filippo@debian.org>  Thu, 02 Aug 2007 16:01:59 +0200
+
+bluez-utils (3.12-1) unstable; urgency=low
+
+     The "sorry this was long due" release
+
+  * New upstream release (Closes: #425678, #388635)
+  * finish libbluetooth2-dev transition (Closes: #427270)
+  * completely remove devfs support
+  * remove modprobe.d/bluez as well as it is in the standard aliases
+  * remove bluez-passkey-gnome from Recommends since now it is provided by
+    bluez-gnome (Closes: #429300)
+  * don't do anything on stop in init.d/bluetooth if BLUETOOTH_ENABLED == 0
+    (Closes: #406624)
+  * Refer to /etc/default/bluetooth in init script, instead of bluez-utils
+    (Closes: #426750)
+  * Move /etc/dbus-1/system.d/bluez-hcid.conf to bluetooth.conf
+  * Add HCID_OPTIONS to init script, with default set to "-x -s"
+    (Closes: #412751)
+  * This release removes sdpd, instead the "-s" flag is passed to hcid
+  * Stop shipping /usr/lib/bluetooth dir (Closes: #427159)
+  * Add HID2HCI_ENABLED switch to init/default scripts
+  * Remove mention of /etc/bluetooth/pan/dev-up from pand.1 manpage and add a
+    note to /etc/default/bluetooth (Closes: #398190)
+  * fix README.Debian.gz passkey incorrect name (Closes: #379403)
+  * fix NEWS.Debian capital lettering (Closes: #416158)
+  * Removed bashisms from etc/init.d/bluetooth, shell is back to bin/sh
+  * do not install modutils files and remove Depends: line
+
+ -- Filippo Giunchedi <filippo@debian.org>  Thu, 12 Jul 2007 16:19:40 +0200
+
+bluez-utils (3.12-0ubuntu1) gutsy; urgency=low
+
+  * New upstream release:
+    - Add support for limited discovery mode.
+    - Add support for setting of event mask.
+    - Add GetRemoteServiceIdentifiers method.
+    - Add skeleton for local D-Bus server.
+    - Add headset gain control methods.
+    - Fix various headset implementation issues.
+    - Fix various serial port service issues.
+    - Fix various input service issues.
+    - Let CUPS plugin discover printers in range.
+    - Improve the BCM2035 UART init routine.
+    - Ignore connection events for non-ACL links.
+  * debian/control: bumped bluez-libs requirement.
+
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Tue, 26 Jun 2007 10:39:33 +0200
+
+bluez-utils (3.11-0ubuntu1) gutsy; urgency=low
+
+  * New upstream release.
+  * debian/control:
+    - bump libbluetooth-dev Build-Depends.
+    - change from ${Source-Version} to ${source:Version}.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Fri, 08 Jun 2007 14:32:15 +0200
+
+bluez-utils (3.9-0ubuntu4) feisty; urgency=low
+
+  * debian/control:
+    - Recommends bluez-gnome instead of bluez-passkey-gnome.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Fri, 30 Mar 2007 14:59:45 +0200
+
+bluez-utils (3.9-0ubuntu3) feisty; urgency=low
+
+  * debian/patches/010-kubuntu-pin-helper.patch:
+    - updated for better debugging output.
+
+ -- Anthony Mercatante <tonio@ubuntu.com>  Wed, 28 Mar 2007 00:47:12 +0100
+
+bluez-utils (3.9-0ubuntu2) feisty; urgency=low
+
+  * debian/patches/010-kubuntu-pin-helper.patch:
+    - updated for with 3.9
+
+ -- Anthony Mercatante <tonio@ubuntu.com>  Wed, 21 Mar 2007 21:35:30 +0100
+
+bluez-utils (3.9-0ubuntu1) feisty; urgency=low
+
+  * New upstream release:
+    - Add RemoteDeviceDisconnectRequested signal.
+    - Add updated service framework.
+    - Add embedded GLib library.
+    - Add support for using system GLib library.
+    - Create internal SDP server library.
+  * debian/control:
+    - bump bluez-libs requirement.
+    - add libglib2.0-dev as Build-Depends.
+  * debian/patches/010-kubuntu-pin-helper.patch:
+    - updated.
+  * debian/rules, debian/bluez-utils.examples:
+    - updated location of example passkey-agent.c
+  * debian/rules:
+    - use --disable-sdpd and --enable-glib.
+  * debian/bluez-utils.bluetooth.init:
+    - don't start/stop sdpd, pass hcid -s instead.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Mon, 19 Feb 2007 11:09:01 +0100
+
+bluez-utils (3.8-0ubuntu1) feisty; urgency=low
+
+  * New upstream release:
+    - The new service and authorization API has been added and marked as
+      experimental features at the moment.
+  * debian/patches/010-kubuntu-pin-helper.patch:
+    - updated.
+  * debian/patches/015-add-ids-for-logitech-dinovo-laser.patch:
+    - dropped, added upstream.
+  * debian/control:
+    - bumped libbluetooth2-dev Build-Depends.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Mon,  8 Jan 2007 12:23:21 +0100
+
+bluez-utils (3.7-1ubuntu5) feisty; urgency=low
+
+  * debian/patches/015-add-ids-for-logitech-dinovo-laser.patch:
+    - add IDs for Logitech diNovo Laser keyboard and mouse (Malone: #66884)
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Wed,  6 Dec 2006 18:59:47 +0100
+
+bluez-utils (3.7-1ubuntu4) edgy; urgency=low
+
+  * debian/bluez-utils.bluetooth.init:
+    - pass -- $HCID_OPTIONS to 'restart' too, not only to 'start' (Malone:
+      #67169), thanks James Henstridge <james.henstridge@canonical.com> for
+      finding out.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Fri, 20 Oct 2006 17:47:23 +0200
+
+bluez-utils (3.7-1ubuntu3) edgy; urgency=low
+
+  * debian/rules:
+    - install usr/bin/passkey-agent.
+  * debian/patches/010-kubuntu-pin-helper.patch:
+    - applied modified version of http://kmobiletools.org/node/228
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Fri, 13 Oct 2006 13:40:52 +0200
+
+bluez-utils (3.7-1ubuntu2) edgy; urgency=low
+
+  * Add discovto 0 to the default config file leading to iscan enable
+    working out of the box.  Malone: #59222
+
+ -- Tollef Fog Heen <tfheen@ubuntu.com>  Wed, 11 Oct 2006 13:22:49 +0200
+
+bluez-utils (3.7-1ubuntu1) edgy; urgency=low
+
+  * Merge from debian unstable.
+    - Remove extra space after Architecture: any
+    - We still don't want modutils
+    - Better description -- Bluetooth services, not just bluetooth
+    - Enable experimental DBUS interfaces by default
+    - Respect VERBOSE when logging messages.
+    - Don't stop init script in runlevel 0 and 6.
+    - We install udev rules directly to the rules.d directory, so remove
+      symlink magic from bluez-pcmcia-support.postinst
+
+ -- Tollef Fog Heen <tfheen@ubuntu.com>  Wed, 11 Oct 2006 12:26:36 +0200
+
+bluez-utils (3.7-1) unstable; urgency=low
+
+  * New upstream release
+  * removed some more patched included upstream
+  * do not Suggest python anymore, bluez-pin is gone
+  * remove hidd/hcid/pand/dund man pages, they are included upstream
+  * remove sysvinit dep (closes: #386132)
+
+ -- Filippo Giunchedi <filippo@debian.org>  Mon,  2 Oct 2006 00:20:01 +0200
+
+bluez-utils (3.5-1) unstable; urgency=medium
+
+  * New upstream release (closes: #384379)
+  * urgency medium since we are closing RC bugs
+  * removed bluez-bcm203x, obsoleted by upstream
+  * fix MAKEDEV usage (Closes: #387182, #387193, #387197, #387410)
+  * removed merged/obsolete patches:
+    - debian/patches/000_rfcomm_conf_example.patch
+    - debian/patches/006_xsims.patch
+    - debian/patches/007_hcid_typo.patch
+    - debian/patches/004_rfcomm_usage.patch
+  * correctly set and restore IFS in /etc/init.d/bluetooth while parsing
+    SDPTOOL_OPTIONS (Closes: #388514)
+
+ -- Filippo Giunchedi <filippo@debian.org>  Sun, 17 Sep 2006 13:35:40 +0200
+
+bluez-utils (3.1-4) unstable; urgency=medium
+
+  * Acknowledge NMU by Marga, this closes: #379200
+  * fixed udev rules accordingly with upstream
+  * strip trailing \n if found in passkey (also closes: 383188)
+  * fix /etc/default/bluetooth in README.Debian (closes: #383783)
+  * add dbus to depends: for passkey management while discussing a better
+    solution  (closes: #382791, #380283)
+  * register_passkeys when doing an initscript restart (closes: 381582)
+  * fix register-passkeys shell redirection (closes: #380452) 
+
+ -- Filippo Giunchedi <filippo@debian.org>  Sun, 20 Aug 2006 14:18:19 +0200
+
+bluez-utils (3.1-3.1) unstable; urgency=medium
+
+  * Non-maintainer upload to fix Failure To Build From Source in builders
+    that use sudo instead of fakeroot. (Closes: #379200)
+
+ -- Margarita Manterola <marga@debian.org>  Wed,  2 Aug 2006 19:38:40 -0300
+
+bluez-utils (3.1-3) unstable; urgency=low
+
+  * s/PWD/CURDIR/ to avoid sudo FTBFSage, thanks Dato! (Closes: #379200)
+  * new handling of outgoing PIN requests: there's a
+    /usr/lib/bluetooth/register-passkey script that is invoked by the init
+    script, it registers every passkey found in /etc/bluetooth/passkeys via
+    the /usr/lib/bluetooth/add-passkey (a modified version of upstream's
+    passkey-agent). /etc/bluetooth/pin is converted to
+    /etc/bluetooth/passkeys/default if found.
+    I hope this Closes: #378446 . README.Debian updated accordingly.
+  * fix postinst for bluez-pcmcia-support as we don't ship
+    /etc/pcmcia/bluetooth anymore (Closes: #378836) 
+
+ -- Filippo Giunchedi <filippo@debian.org>  Tue, 25 Jul 2006 12:05:58 +0200
+
+bluez-utils (3.1-2) unstable; urgency=low
+
+  * more LSB info added to init script
+  * default pin (or passkey) is 1234 (patch to hcid.conf)
+  * drop bluez-pin dep (see #378427) as it is obsolete and install
+    passkey-agent from upstream instead (Closes: #378446, #239820, #241120)
+  * drop bluetooth-desktop as well
+  * really install pcmcia-support udev rules (Closes: #377976)
+  * do not install devfs rules as it is deprecated (Closes: #374307) 
+
+ -- Filippo Giunchedi <filippo@debian.org>  Sun, 17 Jul 2006 09:21:50 +0200
+
+bluez-utils (3.1-1ubuntu10) edgy; urgency=low
+
+  * Use proper if construct to avoid exiting with non-zero value if
+    /etc/pcmcia/bluetooth doesn't exist.
+
+ -- Tollef Fog Heen <tfheen@ubuntu.com>  Thu, 14 Sep 2006 22:19:58 +0200
+
+bluez-utils (3.1-1ubuntu9) edgy; urgency=low
+
+  * Only chmod /etc/pcmcia/bluetooth if it exists.
+
+ -- Tollef Fog Heen <tfheen@ubuntu.com>  Thu, 14 Sep 2006 19:51:34 +0200
+
+bluez-utils (3.1-1ubuntu8) edgy; urgency=low
+
+  * Drop totally unnecessary dependency on sysvinit.
+
+ -- Scott James Remnant <scott@ubuntu.com>  Thu, 31 Aug 2006 17:15:26 +0100
+
+bluez-utils (3.1-1ubuntu7) edgy; urgency=low
+
+  * Rebuild against dbus 0.90
+
+ -- Sebastian Dröge <slomo@ubuntu.com>  Thu, 24 Aug 2006 17:26:19 +0200
+
+bluez-utils (3.1-1ubuntu6) edgy; urgency=low
+
+  * Fix the patch so it actually applies.
+
+ -- Matthew Garrett <mjg59@srcf.ucam.org>  Mon, 21 Aug 2006 19:52:50 +0100
+
+bluez-utils (3.1-1ubuntu5) edgy; urgency=low
+
+  * Fix the init script
+
+ -- Matthew Garrett <mjg59@srcf.ucam.org>  Mon, 21 Aug 2006 19:37:17 +0100
+
+bluez-utils (3.1-1ubuntu4) edgy; urgency=low
+
+  * Fix up the DBUS SDP interface
+
+ -- Matthew Garrett <mjg59@srcf.ucam.org>  Mon, 21 Aug 2006 19:26:09 +0100
+
+bluez-utils (3.1-1ubuntu3) edgy; urgency=low
+
+  * Fix discoverability of host
+  * Enable DBUS functionality
+  * Add RFCOMM interface over DBUS
+
+ -- Matthew Garrett <mjg59@srcf.ucam.org>  Mon, 21 Aug 2006 15:09:34 +0100
+
+bluez-utils (3.1-1ubuntu2) edgy; urgency=low
+
+  * Remove stop links from rc0 and rc6
+
+ -- Scott James Remnant <scott@ubuntu.com>  Thu, 20 Jul 2006 23:57:42 +0100
+
+bluez-utils (3.1-1ubuntu1) edgy; urgency=low
+
+  * Merge from debian unstable, remaining changes:
+    - drop dependency on modutils,
+    - don't build bluez-bcm203x package,
+    - LSB init script.
+
+ -- Scott James Remnant <scott@ubuntu.com>  Wed, 12 Jul 2006 17:18:45 +0100
+
+bluez-utils (3.1-1) unstable; urgency=low
+
+  * New upstream release
+  * removed patches/003_hcid_conf_addition.patch: external PIN helper is no
+    longer used, DBUS is used instead
+  * removed patches/003_manpages.patch: applied upstream
+  * removed patches/010_rfcomm_tty.patch: applied upstream
+
+ -- Filippo Giunchedi <filippo@debian.org>  Mon,  3 Jul 2006 18:58:07 +0200
+
+bluez-utils (2.25-2) unstable; urgency=low
+
+  * added BLUETOOTH_ENABLE to /etc/default/bluetooth (Closes: #360915)
+  * document /etc/bluetooth/pan/dev-up in pand.1 (Closes: #237825)
+  * added info about discovering devices to README.Debian (Closes: #304222)
+  * improved /etc/init.d/bluetooth, now featuring SDPTOOL_OPTIONS and using
+    bash instead of sh (because of $IFS usage, improvements are welcome)
+    (Closes: #185082) 3+ years old!
+  * Depend: makedev | udev
+  * fix the rfcomm 'anycommand' bug, upstream CVS patch (Closes: #229167)
+  * fix the obscure error message from rfcomm when tty support is not
+    available (Closes: #322732) 
+
+ -- Filippo Giunchedi <filippo@debian.org>  Fri,  2 Jun 2006 14:10:35 +0200
+
+bluez-utils (2.25-1ubuntu1) edgy; urgency=low
+
+  * merged from debian/unstable:
+    - updated debian/bluez-utils.bluetooth.init with our verbose
+      handling
+    - debian/patches/008_unsafe_pand_option.patch: re-added
+    - patches/002_hcid_conf_defaults.patch: use pinwrapper instead of bluez-pin
+    - don't build bluez-bcm203x
+    - build-dep on libbluetooth2-dev
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 30 Jun 2006 15:46:52 +0200
+
+bluez-utils (2.25-1) unstable; urgency=low
+
+  * new upstream version
+  * install anything from /etc/dbus*/, thanks to Hendrik Sattler
+    (Closes: #284745)
+  * first remove dangling init.d links, then move /etc/init.d/bluez-utils to
+    bluetooth (Closes: #351330) 
+
+ -- Filippo Giunchedi <filippo@debian.org>  Mon, 13 Feb 2006 22:31:26 +0100
+
+bluez-utils (2.24-2) unstable; urgency=high
+
+  * tight the dependency on lsb-base (>= 3.0-3) since we are using
+    log_daemon_msg (Closes: #350876)
+  * change dependency on makedev as suggested by Steve Langasek
+    (Closes: #350591)
+  * expand on hcid.conf(5) about pin helper parameters (Closes: #297566) 
+
+ -- Filippo Giunchedi <filippo@debian.org>  Sun,  5 Feb 2006 21:52:39 +0100
+
+bluez-utils (2.24-1) unstable; urgency=low
+
+  * upload to unstable, rebuilding against dbus 0.60
+    (Closes: #337988, #338794) 
+  * make use of makedev in bluez-utils.postinst and conflict with
+    experimental's makedev (Closes: #338743)
+
+ -- Filippo Giunchedi <filippo@debian.org>  Mon,  9 Jan 2006 14:04:55 +0100
+
+bluez-utils (2.24-0exp1) experimental; urgency=low
+
+  * New upstream christmas release, really bugfix only
+  * rebuild against dbus (closes: #338794)
+  * fix hcid/security.c typo (closes: #339413)
+  * reworked bluetooth init script
+ 
+ -- Filippo Giunchedi <filippo@debian.org>  Mon, 26 Dec 2005 11:51:03 +0100
+
+bluez-utils (2.24-0ubuntu6) dapper; urgency=low
+
+  * Fix the 'install' call harder, to deal with every possible mangling
+    of coreutils semantics we've seen over the last 6 months, really.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Mon, 20 Mar 2006 12:39:11 +1100
+
+bluez-utils (2.24-0ubuntu5) dapper; urgency=low
+
+  * Use POSIX-compliant syntax with 'install' in debian/rules, so it
+    doesn't accuse us of overwriting directories with files.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Sun, 19 Mar 2006 22:30:51 +1100
+
+bluez-utils (2.24-0ubuntu4) dapper; urgency=low
+
+  * Enable hid2hci by default and start hidd with the --search option
+  * Apply unsafe handling of pand -e option patch (LP #6714)
+
+ -- Charles Majola <charles@ubuntu.com>  Wed, 15 Feb 2006 03:00:24 +0000
+
+bluez-utils (2.24-0ubuntu3) dapper; urgency=low
+
+  * pinwrapper script added and 002_hcid_conf_defaults.patch modified
+    to use it for kubuntu compatibility
+    https://launchpad.net/distros/ubuntu/+source/kdebluetooth/+bug/30889
+  * Fix by Anthony Mercatante <tonio@ubuntu.com>
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Sun, 02 Feb 2006 00:59:16 +0100
+
+bluez-utils (2.24-0ubuntu2) dapper; urgency=low
+
+  * Prefer module-init-tools over modutils
+
+ -- Matt Zimmerman <mdz@ubuntu.com>  Mon, 30 Jan 2006 07:14:21 -0800
+
+bluez-utils (2.24-0ubuntu1) dapper; urgency=low
+
+  * New upstream version
+
+ -- Charles Majola <charles@ubuntu.com>  Tue, 17 Jan 2006 10:57:52 +0200
+
+bluez-utils (2.23-0exp1) experimental; urgency=low
+
+  * New upstream release, Closes: #338260
+  * suggest: python (>=1.5) this closes: #328410
+  * dbus_pin_helper is now documented in hcid.conf manpage (Closes: #295742)
+  * added bluetooth and bluetooth-desktop metapackages for LSB 3.0 compilance
+  * updated 003_manpages.patch 
+
+ -- Filippo Giunchedi <filippo@debian.org>  Tue, 20 Dec 2005 14:15:37 +0100
+
+bluez-utils (2.22-0ubuntu3) dapper; urgency=low
+
+  * debian/patches/007_dbus-0.60-api:
+    - fix a FTBFS because of dbus api changes
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 20 Dec 2005 21:44:22 +0100
+
+bluez-utils (2.22-0ubuntu2) dapper; urgency=low
+
+  * rebuild for latest dbus, changed dependencies accordingly
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 20 Dec 2005 20:41:48 +0100
+
+bluez-utils (2.22-0ubuntu1) dapper; urgency=low
+
+  * New upstream version
+
+ -- Charles Majola <charles@ubuntu.com>  Tue,  1 Nov 2005 22:08:47 +0000
+
+bluez-utils (2.20-0ubuntu3) breezy; urgency=low
+
+  * bluez-utils.init
+    - don't start hid2hci by default
+
+ -- Charles Majola <charles@ubuntu.com>  Fri, 30 Sep 2005 09:33:00 +0200
+
+bluez-utils (2.20-0ubuntu2) breezy; urgency=low
+
+  * Remove depends on bluez-pin for bluez-utils
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 12 Sep 2005 14:12:16 +0100
+
+bluez-utils (2.20-0ubuntu1) breezy; urgency=low
+
+  * New upstream release
+  * Retire patches merged upstream
+    - debian/patches/009_escape_pinhelper_quotes.patch
+    - debian/patches/008_let_bluepin_check_for_Xorg.patch
+
+ -- Charles Majola <charles@ubuntu.com>  Wed,  7 Sep 2005 11:04:01 +0200
+
+bluez-utils (2.19-1) unstable; urgency=high
+
+  * New upstream release.
+  * Urgency high as fixes hcid pin helper vulnerability (CAN-2005-2547)
+    (Closes: #323365)
+  * Bump libbluetooth1-dev build dependency to 2.19
+  * Add note about new features in debian/NEWS
+
+ -- Edd Dumbill <ejad@debian.org>  Fri, 19 Aug 2005 01:12:02 +0100
+
+bluez-utils (2.18-1) unstable; urgency=low
+
+  * New upstream version (Closes: #311743)
+  * Add amd64 to archs for bluez-pcmcia-support (Closes: #294489)
+  * bluez-utils.init: use -q option to hid2hci, remove /dev/null
+    redirection.
+
+ -- Edd Dumbill <ejad@debian.org>  Sat, 16 Jul 2005 14:15:37 +0100
+
+bluez-utils (2.18-0ubuntu4) breezy; urgency=low
+
+  * Remove "PIN" prefix, only pin helpers use it, security is set to auto
+  * CAN Entry
+
+ -- Charles Majola <charles@ubuntu.com>  Mon, 29 Aug 2005 10:06:31 +0200
+
+bluez-utils (2.18-0ubuntu3) breezy; urgency=low
+
+  * Change maintainer
+  * Bump Standards Version
+  * Remove package bcm203x, doesn't work with 2.6 kernels
+  * Fix pairing failure due to wrong default pin "1234" -> "PIN:1234"
+
+ -- Charles Majola <charles@ubuntu.com>  Mon, 15 Aug 2005 11:32:49 +0200
+
+bluez-utils (2.18-0ubuntu2) breezy; urgency=low
+
+  * debian/patches/009_escape_pinhelper_quotes.patch
+    - possible security valnerability (CAN-2005-2547)
+
+ -- Charles Majola <charles@ubuntu.com>  Wed, 10 Aug 2005 12:49:39 +0200
+
+bluez-utils (2.18-0ubuntu1) breezy; urgency=low
+
+  * New upstream release
+     - retire dbus patch, included upstream
+
+ -- Charles Majola <charles@ubuntu.com>  Wed, 13 Jul 2005 15:30:40 +0200
+
+bluez-utils (2.15-2) unstable; urgency=low
+
+  * Don't make device nodes if using udev (Closes: #283866) 
+
+ -- Edd Dumbill <ejad@debian.org>  Sun,  6 Feb 2005 15:55:45 +0000
+
+bluez-utils (2.15-1ubuntu2) breezy; urgency=low
+
+  * debian/patches/001_dbus.patch:
+    - updated for the new dbus.
+  * debian/control.in:
+    - updated the Build-Depends on dbus.
+
+ -- Sebastien Bacher <seb128@canonical.com>  Thu, 26 May 2005 23:03:03 +0200
+
+bluez-utils (2.15-1ubuntu1) breezy; urgency=low
+
+  * Resynchronise with Debian.
+
+ -- Jeff Bailey <jbailey@ubuntu.com>  Wed, 20 Apr 2005 10:59:58 -0400
+
+bluez-utils (2.15-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control: require libbluetooth1-dev 2.15 or better to build.
+  * Update 003_manpages.patch.
+  * Retire 007_hidd_role_switch.patch as now in upstream.
+
+ -- Edd Dumbill <ejad@debian.org>  Sat,  5 Feb 2005 18:09:24 +0000
+
+bluez-utils (2.10-6) unstable; urgency=low
+
+  * Move the bluez-bcm203x package to contrib and make it depend on the
+    non-free firmware.
+
+ -- Edd Dumbill <ejad@debian.org>  Wed,  1 Dec 2004 14:53:30 +0000
+
+bluez-utils (2.10-5ubuntu3) hoary; urgency=low
+
+  * Let bluez-pin also check for Xorg server.
+
+ -- Matthias Urlichs <smurf@debian.org>  Thu,  3 Mar 2005 21:29:06 +0100
+
+bluez-utils (2.10-5ubuntu2) hoary; urgency=low
+
+  * Suggest python instead of python2.2.
+
+ -- Matthias Klose <m@klose.in-berlin.de>  Thu, 13 Jan 2005 00:31:50 +0100
+
+bluez-utils (2.10-5ubuntu1) hoary; urgency=low
+
+  * Resynchronise with Debian.
+
+ -- Scott James Remnant <scott@canonical.com>  Thu, 02 Dec 2004 12:46:42 +0000
+
+bluez-utils (2.10-5) unstable; urgency=high
+
+  * Build depend on libbluetooth1 >= 2.10-2, to get HID fix in for
+    big endian PowerPC machines and fix possible buffer overflow
+    vulnerability.  See bug 281090 for more information.
+
+ -- Edd Dumbill <ejad@debian.org>  Mon, 29 Nov 2004 16:48:39 +0000
+
+bluez-utils (2.10-4ubuntu1) hoary; urgency=low
+
+  * Nathaniel McCallum
+    - debian/init.d: pretty initscript
+    - debian/control: versioned depend on lsb-base
+
+ -- Thom May <thom@canonical.com>  Mon, 29 Nov 2004 11:06:57 +0000
+
+bluez-utils (2.10-4) unstable; urgency=low
+
+  * Reflect rename of bluez-bcm203x-firmware to bluez-firmware.
+  * Update README.Debian to reference use of firmware packages.
+
+ -- Edd Dumbill <ejad@debian.org>  Fri, 12 Nov 2004 14:13:30 +0000
+
+bluez-utils (2.10-3) unstable; urgency=low
+
+  * New package: bluez-bcm203x for Broadcom firmware loading on 2.4 series
+    kernels.
+  * bluez-utils now suggests the firmware package; many dongles require
+    it to work.
+
+ -- Edd Dumbill <ejad@debian.org>  Fri, 12 Nov 2004 14:00:59 +0000
+
+bluez-utils (2.10-2) unstable; urgency=high
+
+  * rules, bluez-pcmcia-support.postinst: ensure /etc/pcmcia/bluetooth is
+    executable.
+
+ -- Edd Dumbill <ejad@debian.org>  Fri, 12 Nov 2004 10:55:41 +0000
+
+bluez-utils (2.10-1) unstable; urgency=medium
+
+  * New upstream release.  Contains bugfixes useful for sarge.
+  * Retire 007_pcmcia_conf.patch.
+  * Add 007_hidd_role_switch.patch, which stops hidd forcing role switch.
+    Added --master to HIDD_OPTIONS to ensure that Apple Bluetooth Keyboards
+    reconnect automatically.  (Closes: #274495)
+
+ -- Edd Dumbill <ejad@debian.org>  Thu, 14 Oct 2004 15:03:06 +0100
+
+bluez-utils (2.9-4) unstable; urgency=high
+
+  * Added patch 007_pcmcia_conf.patch, to fix breakage with PCMCIA startup.
+    Thanks Zoltan Ivanfi. (Closes: #271622)
+
+ -- Edd Dumbill <ejad@debian.org>  Wed, 15 Sep 2004 12:26:47 +0100
+
+bluez-utils (2.9-3) unstable; urgency=high
+
+  * debian/bluez-utils.init: Kill HCI connection on stop/start. Avoids need
+    for taking batteries out of Microsoft Bluetooth mouse on restart.
+  * debian/bluez-utils.init: Silence hid2hci output, it's noisy and shouldn't
+    complain if no hid dongles found.
+  * Fix a path in README.Debian (Closes: #266041)
+
+ -- Edd Dumbill <ejad@debian.org>  Sun, 29 Aug 2004 18:21:22 +0100
+
+bluez-utils (2.9-2) unstable; urgency=low
+
+  * Add in libusb-dev dependency so hid2hci is built. 
+
+ -- Edd Dumbill <ejad@debian.org>  Sun,  8 Aug 2004 16:58:39 +0100
+
+bluez-utils (2.9-1) unstable; urgency=low
+
+  * New upstream release.
+  * Remove "XSI-isms" from init script, thanks David Weinehall
+    (Closes: #259837)
+  * Update configure flags.
+  * Update Debian NEWS file.
+  * Depend on libbluetooth1-dev >= 2.9-1.
+
+ -- Edd Dumbill <ejad@debian.org>  Sun,  8 Aug 2004 15:44:08 +0100
+
+bluez-utils (2.8-1) unstable; urgency=low
+
+  * New upstream release.
+    - Fixes initialisation of bnep interfaces (Closes: #256436)
+  * Remove everything in the 2.6 modprobe conf that's in the default
+  installation anyway.  This basically leaves hidp protocol.
+  * Move dbus1-dev builddep to right place in control file (Closes: #257055)
+  * Don't install unrequired printers.conf.
+  * Amend README.Debian.bluez-cups to reflect no printers.conf.
+  * Retire hidd patch.
+  * Make hid startup happen before PAN startup (Closes: #258835)
+  * Include hcid.conf man page (Closes: #257041)
+  * Depend on libbluetooth1-dev >= 2.8-1 
+
+ -- Edd Dumbill <ejad@debian.org>  Fri, 16 Jul 2004 21:08:55 +0100
+
+bluez-utils (2.7-5) unstable; urgency=low
+
+  * Add separate modprobe config for kernel 2.6 (Closes: #255188) 
+
+ -- Edd Dumbill <ejad@debian.org>  Sat, 19 Jun 2004 20:37:40 +0100
+
+bluez-utils (2.7-4) unstable; urgency=low
+
+  * Add support for HID proxy dongles in the init script.  These
+    will now be switched on after hidd starts.
+  * Don't scribble permissions for /dev/rfcomm* on each install
+    (Closes: #231510)
+
+ -- Edd Dumbill <ejad@debian.org>  Mon, 14 Jun 2004 14:24:12 +0100
+
+bluez-utils (2.7-3) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Edd Dumbill <ejad@debian.org>  Wed,  9 Jun 2004 23:25:51 +0100
+
+bluez-utils (2.7-2) experimental; urgency=low
+
+  * Add fix from Marcel Holtmann for hidd killall command
+
+ -- Edd Dumbill <ejad@debian.org>  Wed, 26 May 2004 19:43:04 +0100
+
+bluez-utils (2.7-1) experimental; urgency=low
+
+  * New upstream.
+  * Further large changes: this package now incorporates dund and pand.
+  * Updated man page patches.
+  * Updated hcid.conf patch.
+  * Enable building with D-BUS support.
+  * Enable building of CUPS backend: goes in new package bluez-cups.
+    Added printers.conf file and CUPS readme file.
+  * Integrated pand and dund startup stuff into the init script.
+  * Updated README.Debian.
+  * Now Conflicts, Replaces bluez-pan.
+  * Install module aliases in /etc/modprobe.d.
+
+ -- Edd Dumbill <ejad@debian.org>  Wed, 26 May 2004 12:43:08 +0100
+
+bluez-utils (2.6-1) experimental; urgency=low
+
+  * New upstream.  In experimental as big changes.
+  * Build for all except s390.
+  * Conflicts with old bluez-sdp: this functionality is now in
+    the bluez-utils package.
+  * Merged startup from bluez-sdp into bluez-utils startup.
+    postinst now removes rc.d links for bluez-sdp.
+
+ -- Edd Dumbill <ejad@debian.org>  Thu,  6 May 2004 11:58:16 +0100
+
+bluez-utils (2.4-6) unstable; urgency=high
+
+  * Remove others-readable permissions from devfs configuration of
+  rfcomm devices. Do the same for the non-devfs versions.
+  (Closes: #229782)
+
+ -- Edd Dumbill <ejad@debian.org>  Mon, 26 Jan 2004 15:55:52 +0000
+
+bluez-utils (2.4-5) unstable; urgency=low
+
+  * Use $(DEB_DESTDIR) in rules, don't assume debian/tmp. This should
+  fix build failures on some of the buildds.
+
+ -- Edd Dumbill <ejad@debian.org>  Thu, 15 Jan 2004 23:22:56 +0000
+
+bluez-utils (2.4-4) unstable; urgency=low
+
+  * Practically all of the work for this upload done by Philipp Matthias Hahn
+    -- thanks Philipp!
+  * bluez-pcmcia-support is Arch: alpha,arm,i386,ia64,powerpc only, because
+    hppa,m68k,mips,mipsel,s390,sparc don't have pcmcia-cs. (Closes: #227925)
+  * Improve all manual pages. (patch 003_manpages.patch)
+  * Update rfcomm/main.h:usage() and rfcomm/rfcomm.1 (Closes: #227069)
+    (patch 004_rfcomm_usage.patch)
+  * Move bluepin and hcitool to /usr/bin (Closes: #226876)
+  * Moved l2ping to /sbin.
+
+ -- Edd Dumbill <ejad@debian.org>  Thu, 15 Jan 2004 18:22:20 +0000
+
+bluez-utils (2.4-3) unstable; urgency=low
+
+  * Don't install devfsd devices file, really (Closes: #220146)
+  * Add corresponding note about older kernels and devfs.
+  * Ensure NEWS.Debian is distributed (Closes: #227390)
+
+ -- Edd Dumbill <ejad@debian.org>  Wed, 14 Jan 2004 11:47:19 +0000
+
+bluez-utils (2.4-2) unstable; urgency=low
+
+  * Depend on modutils or module-init-tools (Closes: #226366)
+  * Maybe bluez-pcmcia-support be extra in priority, like pcmcia-cs
+
+ -- Edd Dumbill <ejad@debian.org>  Tue,  6 Jan 2004 10:41:31 +0000
+
+bluez-utils (2.4-1) unstable; urgency=low
+
+  * New upstream.
+  * Fix restart order (Closes: #224199)
+  * Use mksymlink in devfsd conf file (Closes: #220146)
+  * Add cmtp alias to the modutils file
+  * Updated NEWS.Debian to note rfcomm config file change,
+    update sample rfcomm config file
+
+ -- Edd Dumbill <ejad@debian.org>  Thu,  1 Jan 2004 20:19:09 +0000
+
+bluez-utils (2.3-4) unstable; urgency=low
+
+  * Restart rfcomm in init script restart (Closes: #216907)
+
+ -- Edd Dumbill <ejad@debian.org>  Sat, 25 Oct 2003 22:30:39 +0100
+
+bluez-utils (2.3-3) unstable; urgency=low
+
+  * Change python-gtk suggests to python-gtk-1.2 (Closes: #208119)
+
+ -- Edd Dumbill <ejad@debian.org>  Wed, 24 Sep 2003 13:21:58 +0100
+
+bluez-utils (2.3-2) unstable; urgency=low
+
+  * Fix net-pf-31 alias to 'bluez' not 'hci_usb'
+  * Move to cdbs
+  * Change priority to 'optional'
+  * Bump standards version to 3.5.9
+  * Depend on the DBUS bluez-pin helper, and deprecate use of the
+    buggy Python pin helper as a default. (Closes: #196092, #191444)
+  * Move Python deps to Suggests.
+  * Add explanation to README.Debian that headset utils are very
+    experimental and not for installation (Closes: #196225)
+  * Use start-stop-daemon in init file.
+  * Change default PIN to '1234' as 'BlueZ' can't be used with most cellphone
+    PIN requests.
+  * Change default hcid.conf to include hostname in interface ID.
+
+ -- Edd Dumbill <ejad@debian.org>  Thu, 28 Aug 2003 12:38:35 +0100
+
+bluez-utils (2.3-1) unstable; urgency=low
+
+  * New upstream release
+    - hciconfig: CSR firmware revision support, voice commands now
+      working on big endian machines
+    - hciattach: support Texas Bluetooth modules, high UART rates on
+      Ericsson modules, BCSP initialisation fixes
+    - hcitool: support role switch command
+    - removes glib dependency
+  * Remove rfcomm lexing patch, now incorporated upstream
+
+ -- Edd Dumbill <ejad@debian.org>  Sat, 22 Mar 2003 13:53:09 +0000
+
+bluez-utils (2.2-4) unstable; urgency=low
+
+  * Moved to Colin's Build System.
+
+ -- Edd Dumbill <ejad@debian.org>  Sat, 22 Mar 2003 12:27:26 +0000
+
+bluez-utils (2.2-3) unstable; urgency=low
+
+  * Added versioned pcmcia-cs dependency for bluez-pcmcia-support,
+    needs pcmcia-cs 3.2 or better. (Closes: #181685)
+  * Amended bluepin to explictly require gtk 1.2 in anticipation
+    of the change of python-gtk to default to gtk 2.0.
+  * Fixed spelling mistake in bluepin.
+
+ -- Edd Dumbill <ejad@debian.org>  Sat, 22 Feb 2003 11:54:32 +0000
+
+bluez-utils (2.2-2) unstable; urgency=low
+
+  * Fixed permissions of /dev/bluetooth and /dev/bluetooth/rfcomm.
+    Thanks Gerd Flaig. (Closes: #181428)
+  * Added rfcomm initialisation into init file, commented out example
+    entry in rfcomm.conf so it doesn't get set up on init
+  * Fixed a bug in rfcomm which meant an empty config file would
+    generate a syntax error.
+
+ -- Edd Dumbill <ejad@debian.org>  Tue, 18 Feb 2003 00:32:26 +0000
+
+bluez-utils (2.2-1) unstable; urgency=low
+
+  * New upstream release
+    - support for voice settings in hciconfig
+    - updated man pages
+    - bug fixes to hcitool
+  * Updated standards version to 3.5.8
+
+ -- Edd Dumbill <ejad@debian.org>  Wed,  1 Jan 2003 14:28:29 +0000
+
+bluez-utils (2.1-3) unstable; urgency=low
+
+  * /dev/rfcomm* now chgrp to 'dialout', thanks to Joey Hess for
+    pointing this out
+  * README.Debian updated to reflect status quo of kernel modules
+
+ -- Edd Dumbill <ejad@debian.org>  Mon,  2 Dec 2002 20:03:42 +0000
+
+bluez-utils (2.1-2) unstable; urgency=low
+
+  * Added directory creation to devfs devices file (thanks Zdzislaw
+    A.Kaleta)
+  * Fixed chgrp of /dev/rfcomm* to group 'bluetooth'
+
+ -- Edd Dumbill <ejad@debian.org>  Thu, 31 Oct 2002 07:47:44 +0000
+
+bluez-utils (2.1-1) unstable; urgency=low
+
+  * New upstream release
+    - adds kernel support for rfcomm
+  * Made postinst create correct rfcomm* and vhci devices
+    and add a system group 'bluetooth'
+
+ -- Edd Dumbill <ejad@debian.org>  Tue,  8 Oct 2002 17:01:35 +0100
+
+bluez-utils (2.0-release-2) unstable; urgency=low
+
+  * Added modutils alias entries for bnep and rfcomm, which will be
+    available in the latest releases of the kernel modules.
+
+ -- Edd Dumbill <ejad@debian.org>  Tue, 08 Oct 2002 16:59:57 +0100
+
+bluez-utils (2.0-release-1) unstable; urgency=low
+
+  * New upstream release
+  * Updated maintainer address to my Debian address
+  * Updated standards version to 3.5.6
+  * Package now updates /etc/modutils/bluez for the BlueZ modules
+  * hcid is now stopped and started on an upgrade
+
+ -- Edd Dumbill <ejad@debian.org>  Sat, 31 Aug 2002 20:27:43 +0100
+
+bluez-utils (2.0-pre12-2) unstable; urgency=low
+
+  * Added AM_MAINTAINER_MODE to configure.in (Closes: #154929)
+    For more info on why I did this, see
+    http://lists.debian.org/debian-devel/2001/debian-devel-200111/msg01422.html
+
+ -- Edd Dumbill <edd@usefulinc.com>  Wed, 31 Jul 2002 11:28:30 +0100
+
+bluez-utils (2.0-pre12-1) unstable; urgency=low
+
+  * New upstream release
+  * Added TODO list, removed redundant upstream README
+
+ -- Edd Dumbill <edd@usefulinc.com>  Wed, 26 Jun 2002 12:37:26 +0100
+
+bluez-utils (2.0-pre9-5) unstable; urgency=low
+
+  * Added missing build-depends on bison and flex
+
+ -- Edd Dumbill <edd@usefulinc.com>  Sat, 15 Jun 2002 20:19:05 +0100
+
+bluez-utils (2.0-pre9-4) unstable; urgency=low
+
+  * Added build-depends on libglib1.2-dev
+
+ -- Edd Dumbill <edd@usefulinc.com>  Tue, 11 Jun 2002 21:57:00 +0100
+
+bluez-utils (2.0-pre9-3) unstable; urgency=low
+
+  * Moved startup priority to 25, so as to be after pcmcia.
+
+ -- Edd Dumbill <edd@usefulinc.com>  Sun,  5 May 2002 18:33:00 +0100
+
+bluez-utils (2.0-pre9-2) unstable; urgency=low
+
+  * Fixed bluepin to find the running X server properly under Debian.
+
+ -- Edd Dumbill <edd@usefulinc.com>  Sun,  5 May 2002 15:32:00 +0100
+
+bluez-utils (2.0-pre9-1) unstable; urgency=low
+
+  * New upstream version.
+  * Follow upstream's versioning conventions.
+
+ -- Edd Dumbill <edd@usefulinc.com>  Thu,  2 May 2002 16:24:00 +0100
+
+bluez-utils (1.99.8-3) unstable; urgency=low
+
+  * Separated out PCMCIA support files into bluez-pcmcia-support.
+  * Added --always-pcmcia option to configure script so we can force
+    PCMCIA support scripts install.
+
+ -- Edd Dumbill <edd@usefulinc.com>  Fri, 19 Apr 2002 11:36:00 +0100
+
+bluez-utils (1.99.8-2) unstable; urgency=low
+
+  * Fixed killall returning error in init script.
+
+ -- Edd Dumbill <edd@usefulinc.com>  Wed, 17 Apr 2002 01:00:00 +0100
+
+bluez-utils (1.99.8-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Edd Dumbill <edd@usefulinc.com>  Wed, 17 Apr 2002 01:00:00 +0100
+
