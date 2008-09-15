@@ -1,0 +1,15 @@
+#!/bin/sh
+set -e
+
+. /usr/share/debconf/confmodule
+
+file="$1"
+
+cat > $file << EOF
+deb http://v5.guadalinex.org/ubuntu hardy main restricted universe multiverse
+deb http://v5.guadalinex.org/guadalinex-lobo lobo main restricted universe multiverse
+deb http://v5.guadalinex.org/guadalinex-lobo lobo-updates main restricted universe multiverse
+deb http://v5.guadalinex.org/guadalinex-lobo lobo-security main restricted universe multiverse
+deb http://v5.guadalinex.org/guadalinex-lobo lobo-backports main restricted universe multiverse
+EOF
+
