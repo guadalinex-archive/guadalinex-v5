@@ -1,0 +1,7 @@
+bluez-libs (2.6-1) unstable; urgency=low
+
+  IMPORTANT: this package merges bluez-sdp into the bluez-libs package.
+  Applications no longer need to link against libsdp -- they should
+  use libbluetooth instead.
+
+ -- Edd Dumbill <ejad@debian.org>  Thu,  6 May 2004 11:35:08 +0100

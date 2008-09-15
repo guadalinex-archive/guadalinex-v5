@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+
+#DEB_DH_ALWAYS_EXCLUDE = README
+
+soname=2
+
+DEB_SHLIBDEPS_INCLUDE = debian/libbluetooth${soname}/usr/lib
+DEB_INSTALL_DOCS_libbluetooth${soname} = debian/README.Debian
+
+include /usr/share/cdbs/1/rules/buildcore.mk
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/rules/simple-patchsys.mk
+include /usr/share/cdbs/1/class/autotools.mk
+
+binary-install/libbluetooth-dev::
+	rm $(CURDIR)/debian/libbluetooth-dev/usr/share/doc/libbluetooth-dev/README
+
+binary-install/libbluetooth${soname}::
+	rm $(CURDIR)/debian/libbluetooth${soname}/usr/share/doc/libbluetooth${soname}/README
