@@ -12,9 +12,7 @@ amule-utils
 anacron
 apmd
 aspell-es
-audacity
 avahi-daemon
-avidemux
 bc
 bluetooth
 bluez-cups
@@ -44,7 +42,6 @@ cupsys-driver-gutenprint
 dasher
 dcraw
 desktop-file-utils
-devede
 discover1
 doc-base
 dvd+rw-tools
@@ -191,8 +188,6 @@ seahorse
 serpentine
 slocate
 smbclient
-sound-juicer
-soundtracker
 ssh-askpass-gnome
 synaptic
 system-config-printer-gnome
@@ -200,7 +195,6 @@ tangerine-icon-theme
 tango-icon-theme
 tango-icon-theme-common
 transmission-gtk
-tsclient
 ttf-bitstream-vera
 ttf-dejavu-core
 ttf-freefont
