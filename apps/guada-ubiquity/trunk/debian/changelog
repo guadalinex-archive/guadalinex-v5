@@ -1,3 +1,9 @@
+guada-ubiquity (0.9-1guada3) hardy; urgency=low
+
+  * Fixed some splitted strings.
+
+ -- Alfredo Matas <amatas@emergya.es>  Mon, 15 Sep 2008 11:48:25 +0200
+
 guada-ubiquity (0.9-1guada2) hardy; urgency=low
 
   * Kill hermes while ubiquity runs. 
