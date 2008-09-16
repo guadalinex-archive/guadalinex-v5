@@ -14,7 +14,6 @@ apmd
 aspell-es
 audacity
 avahi-daemon
-avidemux
 bc
 bluetooth
 bluez-gnome
@@ -44,6 +43,7 @@ dasher
 dcraw
 desktop-file-utils
 discover1
+displayconfig-gtk
 doc-base
 dvd+rw-tools
 eciadsl
@@ -97,6 +97,7 @@ gnome-system-monitor
 gnome-system-tools
 gnome-terminal
 gnome-themes
+gnome-user-guide
 gnome-utils
 gnome-volume-manager
 gpaint
@@ -190,7 +191,6 @@ serpentine
 slocate
 smbclient
 sound-juicer
-soundtracker
 ssh-askpass-gnome
 synaptic
 system-config-printer-gnome
