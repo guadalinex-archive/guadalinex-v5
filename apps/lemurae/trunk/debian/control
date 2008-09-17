@@ -8,5 +8,5 @@ Standards-Version: 3.6.1
 Package: lemurae
 Architecture: any
 Depends: python, python-gnome2-extras
-Description: Graphical frontend for DRAE
- Graphical frontend for DRAE written Python.
+Description: Interfaz gráfica para DRAE
+ Interfaz gráfica para DRAE escrita en python.
