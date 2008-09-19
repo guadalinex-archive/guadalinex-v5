@@ -1,0 +1,5 @@
+#!/bin/bash
+
+[ "/usr/bin/gnome-app-install" != "$(dpkg-divert --truename /usr/bin/gnome-app-install)" ] && rm -f /usr/bin/gnome-app-install && dpkg-divert --rename --remove /usr/bin/gnome-app-install
+dpkg-divert --package guadalinex-supplement-installer --rename --quiet --add /usr/bin/gnome-app-install
+ln -fs /usr/bin/guadalinex-app-install /usr/bin/gnome-app-install
