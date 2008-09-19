@@ -1,0 +1,17 @@
+[Desktop Entry]
+Version=1.0
+Name=Reproductor de Vídeo (VLC)
+name[es]=Reproductor de Vídeo (VLC)
+Name[fr]=Lecteur multimédia VLC
+Comment=Read, capture, broadcast your multimedia streams
+Comment[es]=Reproduce distintos archivos de audio y vídeo
+Comment[fr]=Lire, capturer, diffuser vos flux multimedia
+Name[sv]=Mediaspelaren VLC
+Comment[sv]=Allmän uppspelare av film och musik
+na[ru]=Медиаплеер VLC
+Comment[ru]=Универсальный проигрыватель видео и аудио
+Exec=vlc --vout-filter deinterlace --deinterlace-mode blend --volume 512 %f
+Icon=vlc
+Terminal=false
+Type=Application
+NoDisplay=true
