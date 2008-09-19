@@ -1,0 +1,96 @@
+BODY {background: url(fondo.jpg) 
+        top repeat-x #FFFFFF; 
+        font: 0.7em sans-serif; 
+        color:#333333}	
+        
+a {padding: 0px 0px; 
+    font-family: sans-serif; 
+    color:#087021; 
+    text-decoration: underline}
+    
+a:hover {color:#FFFFFF; 
+    text-decoration: underline; 
+    background:#087021}
+    
+div.contenido {float:left;
+    width:580px;
+    margin-left:-250px; 
+    position:absolute; 
+    left:50%;}
+    
+div.cab { background:#284D92; 
+    border:1px solid #C5C5C5; 
+    margin:7% 0% 0% 0%; 
+    padding:10px 0px 10px 0px; 
+    color:#FFFFFF; 
+    -moz-border-radius:8px}
+    
+div.logo {background: url("hermes_logo.png") no-repeat white; 
+    margin:0px 0px 0px 440px; 
+    background=white;
+    padding:20px 0px 32px 0px}
+
+    
+h1 {font: 24px sans-serif;
+    color:black; 
+    line-height:0.1px}	
+    
+div.cuerpo {float:left; 
+    margin: 0% auto 4% auto; 
+    width:100%}
+    
+.titulo { background: white; 
+    border:3px solid #C7CACD; 
+    color:#ffffff;
+    margin:2% 0% 0% 0%; 
+    padding:10px 10px 10px 10px; 
+    -moz-border-radius:8px}   
+    
+.intro { background: #EBEFB0; 
+    border:1px solid #C5C5C5; 
+    float:left;
+    margin:2% 0% 0% 0%; 
+    padding:10px 10px 10px 10px; 
+    color:#000000; 
+    -moz-border-radius:8px}
+
+.obtencion_datos { background: #E7EEED; 
+    border:1px solid #C5C5C5; 
+    float:left;
+    margin:2% 0% 0% 0%; 
+    padding:10px 10px 10px 10px; 
+    color:#000000; 
+    -moz-border-radius:8px}
+
+.envio_datos { background: #F3E8D2; 
+    border:1px solid #C5C5C5; 
+    float:left;
+    margin:2% 0% 0% 0%; 
+    padding:10px 10px 10px 10px; 
+    color:#000000; 
+    -moz-border-radius:8px}    
+    
+.gforja {margin-right: 0.9em;
+    border:1px solid #C5C5C5;
+    float:left; background: url("logo_gforja.gif") top no-repeat#F9F5EC;
+    width:20%; padding:65px 9px 44px 9px;
+    -moz-border-radius:8px}	
+    
+.wikipedia {border:1px solid #C5C5C5; 
+    float:left; 
+    background:  url("logo_wikipedia.gif") top no-repeat #F3E8D2; 
+    width:20%; 
+    padding: 65px 9px 97px 9px; 
+    -moz-border-radius:8px}	
+    
+div.pie {float:left; 
+    width:100%;
+    background: url("logo_junta.gif") bottom no-repeat;
+    padding:0px 0px 80px 0px; 
+    margin:0px 0px; 
+    text-align: center}
+    
+ul {list-style:none; 
+    padding:0px}
+    
+ul li {float:left}

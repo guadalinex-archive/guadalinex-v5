@@ -1,0 +1,261 @@
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB
+
+info.bus:usb_device
+info.linux.driver:usb
+info.product:Transcend JetFlash 2.0
+info.udi:/org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB
+info.vendor:Ours Technology, Inc.
+linux.hotplug_type:1
+linux.subsystem:usb
+linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.7/usb5/5-6
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.7/usb5/5-6
+usb_device.bus_number:5
+usb_device.can_wake_up:0
+usb_device.configuration_value:1
+usb_device.device_class:0
+usb_device.device_protocol:0
+usb_device.device_revision_bcd:512
+usb_device.device_subclass:0
+usb_device.is_self_powered:0
+usb_device.linux.device_number:30
+usb_device.linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.7/usb5/5-6
+usb_device.max_power:200
+usb_device.num_configurations:1
+usb_device.num_interfaces:1
+usb_device.num_ports:0
+usb_device.product:Transcend JetFlash 2.0
+usb_device.product_id:8552
+usb_device.serial:BA03043C4A2530AB
+usb_device.speed_bcd:294912
+usb_device.vendor:Ours Technology, Inc.
+usb_device.vendor_id:3744
+usb_device.version_bcd:512
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0
+
+info.bus:usb
+info.parent:/org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB
+info.product:USB Mass Storage Interface
+info.udi:/org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0
+linux.hotplug_type:1
+linux.subsystem:usb
+linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.7/usb5/5-6/5-6:1.0
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.7/usb5/5-6/5-6:1.0
+usb.bus_number:5
+usb.can_wake_up:0
+usb.configuration_value:1
+usb.device_class:0
+usb.device_protocol:0
+usb.device_revision_bcd:512
+usb.device_subclass:0
+usb.interface.class:8
+usb.interface.number:0
+usb.interface.protocol:80
+usb.interface.subclass:6
+usb.is_self_powered:0
+usb.linux.device_number:30
+usb.linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.7/usb5/5-6/5-6:1.0
+usb.max_power:200
+usb.num_configurations:1
+usb.num_interfaces:1
+usb.num_ports:0
+usb.product:USB Mass Storage Interface
+usb.product_id:8552
+usb.serial:BA03043C4A2530AB
+usb.speed_bcd:294912
+usb.vendor:Ours Technology, Inc.
+usb.vendor_id:3744
+usb.version_bcd:512
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0_scsi_host
+
+info.capabilities:['scsi_host']
+info.category:scsi_host
+info.parent:/org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0
+info.product:SCSI Host Adapter
+info.udi:/org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0_scsi_host
+linux.hotplug_type:2
+linux.subsystem:scsi_host
+linux.sysfs_path:/sys/class/scsi_host/host0
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.7/usb5/5-6/5-6:1.0/host0
+scsi_host.host:0
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0_scsi_host_scsi_device_lun0
+
+info.bus:scsi
+info.parent:/org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0_scsi_host
+info.product:SCSI Device
+info.udi:/org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0_scsi_host_scsi_device_lun0
+linux.hotplug_type:1
+linux.subsystem:scsi
+linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.7/usb5/5-6/5-6:1.0/host0/target0:0:0/0:0:0:0
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.7/usb5/5-6/5-6:1.0/host0/target0:0:0/0:0:0:0
+scsi.bus:0
+scsi.host:0
+scsi.lun:0
+scsi.target:0
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/storage_model_TS64MJF2B
+
+block.device:/dev/sda
+block.is_volume:0
+block.major:8
+block.minor:0
+block.storage_device:/org/freedesktop/Hal/devices/storage_model_TS64MJF2B
+info.addons:['hald-addon-storage']
+info.capabilities:['storage', 'block']
+info.category:storage
+info.parent:/org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0_scsi_host_scsi_device_lun0
+info.product:TS64MJF2B
+info.udi:/org/freedesktop/Hal/devices/storage_model_TS64MJF2B
+info.vendor:JetFlash
+linux.hotplug_type:3
+linux.sysfs_path:/sys/block/sda
+linux.sysfs_path_device:/sys/block/sda
+storage.automount_enabled_hint:1
+storage.bus:usb
+storage.drive_type:disk
+storage.hotpluggable:1
+storage.lun:0
+storage.media_check_enabled:1
+storage.model:TS64MJF2B
+storage.no_partitions_hint:0
+storage.physical_device:/org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0
+storage.policy.should_mount:1
+storage.removable:1
+storage.requires_eject:0
+storage.vendor:JetFlash
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/volume_uuid_1BDF_1919
+
+block.device:/dev/sda
+block.is_volume:1
+block.major:8
+block.minor:0
+block.storage_device:/org/freedesktop/Hal/devices/storage_model_TS64MJF2B
+info.capabilities:['volume', 'block']
+info.category:volume
+info.parent:/org/freedesktop/Hal/devices/storage_model_TS64MJF2B
+info.product:Volume (vfat)
+info.udi:/org/freedesktop/Hal/devices/volume_uuid_1BDF_1919
+linux.hotplug_type:3
+linux.sysfs_path:/sys/block/sda/fakevolume
+linux.sysfs_path_device:/sys/block/sda/fakevolume
+volume.block_size:512
+volume.fstype:vfat
+volume.fsusage:filesystem
+volume.fsversion:FAT16
+volume.is_disc:0
+volume.is_mounted:0
+volume.is_partition:1
+volume.label:
+volume.mount_point:
+volume.num_blocks:128000
+volume.policy.desired_mount_point:usbdisk
+volume.policy.mount_filesystem:vfat
+volume.policy.mount_option.noatime:1
+volume.policy.mount_option.sync:0
+volume.policy.should_mount:1
+volume.size:65536000
+volume.uuid:1BDF-1919
+
+
+#############################################
+DESCONEXIÓN  ################################
+#############################################
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0_scsi_host_scsi_device_lun0
+
+info.bus:scsi
+info.parent:/org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0_scsi_host
+info.product:SCSI Device
+info.udi:/org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0_scsi_host_scsi_device_lun0
+linux.hotplug_type:1
+linux.subsystem:scsi
+linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.7/usb5/5-6/5-6:1.0/host0/target0:0:0/0:0:0:0
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.7/usb5/5-6/5-6:1.0/host0/target0:0:0/0:0:0:0
+scsi.bus:0
+scsi.host:0
+scsi.lun:0
+scsi.target:0
+
+
+#############################################
+DESCONEXIÓN  ################################
+#############################################
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0_scsi_host_scsi_device_lun0
+
+info.bus:scsi
+info.parent:/org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0_scsi_host
+info.product:SCSI Device
+info.udi:/org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0_scsi_host_scsi_device_lun0
+linux.hotplug_type:1
+linux.subsystem:scsi
+linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.7/usb5/5-6/5-6:1.0/host0/target0:0:0/0:0:0:0
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.7/usb5/5-6/5-6:1.0/host0/target0:0:0/0:0:0:0
+scsi.bus:0
+scsi.host:0
+scsi.lun:0
+scsi.target:0
+
+
+#############################################
+DESCONEXIÓN  ################################
+#############################################
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0_scsi_host_scsi_device_lun0
+
+info.bus:scsi
+info.parent:/org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0_scsi_host
+info.product:SCSI Device
+info.udi:/org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0_scsi_host_scsi_device_lun0
+linux.hotplug_type:1
+linux.subsystem:scsi
+linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.7/usb5/5-6/5-6:1.0/host0/target0:0:0/0:0:0:0
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.7/usb5/5-6/5-6:1.0/host0/target0:0:0/0:0:0:0
+scsi.bus:0
+scsi.host:0
+scsi.lun:0
+scsi.target:0
+
+
+#############################################
+DESCONEXIÓN  ################################
+#############################################
+
+
+-----------------------------------------------
+Dispositivo:  /org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0_scsi_host_scsi_device_lun0
+
+info.bus:scsi
+info.parent:/org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0_scsi_host
+info.product:SCSI Device
+info.udi:/org/freedesktop/Hal/devices/usb_device_ea0_2168_BA03043C4A2530AB_if0_scsi_host_scsi_device_lun0
+linux.hotplug_type:1
+linux.subsystem:scsi
+linux.sysfs_path:/sys/devices/pci0000:00/0000:00:1d.7/usb5/5-6/5-6:1.0/host0/target0:0:0/0:0:0:0
+linux.sysfs_path_device:/sys/devices/pci0000:00/0000:00:1d.7/usb5/5-6/5-6:1.0/host0/target0:0:0/0:0:0:0
+scsi.bus:0
+scsi.host:0
+scsi.lun:0
+scsi.target:0

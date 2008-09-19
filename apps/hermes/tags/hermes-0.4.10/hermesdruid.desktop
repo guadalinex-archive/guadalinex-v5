@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=hermesdruid
+GenericName=Hermes druid
+Name[es]=Informe sobre nuevos dispositivos (Hermes)
+Comment=Druid for capture hardware data
+Comment[es]=Asistente para la recogida de datos sobre dispositivos para Hermes.
+Exec=hermesdruid
+Icon=/usr/share/hermes/img/logo.svg
+Terminal=false
+Type=Application
+Categories=GNOME;Application;System;Settings;Help;
+StartupNotify=true
