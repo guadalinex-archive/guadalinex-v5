@@ -56,8 +56,8 @@
       <child>
 	<widget class="GtkLabel" id="title_label">
 	  <property name="visible">True</property>
-	  <property name="label" translatable="yes">&lt;b&gt;Inserta una memoria USB, selecciónala, pulsa siguiente y Guadalinex live se 
-instalará en tu pendrive. Podrás arrancar tu equipo con él, con la diferencia 
+	  <property name="label" translatable="yes">&lt;b&gt;Inserte una memoria USB, selecciónela, pulse siguiente y Guadalinex live se 
+instalará en su pendrive. Podrá arrancar su equipo con él, con la diferencia 
 de que los datos del usuario permanecerán en próximos reinicios&lt;/b&gt;</property>
 	  <property name="use_underline">False</property>
 	  <property name="use_markup">True</property>

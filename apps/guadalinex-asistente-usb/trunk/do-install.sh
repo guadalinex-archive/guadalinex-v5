@@ -62,7 +62,7 @@ if [ $? != 0 ]; then
 fi
 
 copiar_guadalinex() {
-  echo " * Copiando archivos de Guadalinex... (tarda un rato)"
+  echo " * Copiando archivos de Guadalinex... (espere, por favor)"
 #  cp -a /cdrom/* /mnt/guadav5/
 #  los llaveros generados con cp dan problemas al arrancar
   rsync -Pazv /cdrom/ /mnt/guadav5/  >&2
@@ -99,7 +99,7 @@ mkfs.vfat -F 32 -n "guadav5" "${1}1" >&2
 mkfs.ext2 -b 4096 -L "home-rw" "${1}2" >&2
 mount -t vfat -o noatime,rw ${DEVICE}1 /mnt/guadav5
 copiar_guadalinex
-echo " * Sincronizando... (puede tardar un rato)"
+echo " * Sincronizando... (espere, por favor)"
 sync
 syslinux ${DEVICE}1
 umount /mnt/guadav5
