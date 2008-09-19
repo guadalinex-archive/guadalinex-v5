@@ -1,3 +1,10 @@
+guadalinex-supplement-installer (0.3.1guada2) lobo; urgency=low
+
+  * Added support to backup sources.list and restore it after installing any
+    package.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Fri, 19 Sep 2008 13:43:42 +0100
+
 guadalinex-supplement-installer (0.3.1guada1) lobo; urgency=low
 
   * Changed guadalinex-app-install: scan supplements cdroms and lauch
