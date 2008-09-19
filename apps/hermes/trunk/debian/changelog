@@ -1,3 +1,9 @@
+hermeshardware (0.4.10) hardy; urgency=low
+
+  * Installs language-pack-kde-es on kaffeine installing by dvb actor
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Mon, 19 Sep 2008 10:54:43 +0100
+
 hermeshardware (0.4.9) hardy; urgency=low
 
   * Fixed USB DVB-T actor for link to V5 URL help webpage
