@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# backup old sources.list
+
+cp /etc/apt/sources.list /etc/apt/sources.list.addon
+
+
 MOUNTPOINT=$(mount |grep iso9660|awk '{print $3}')
 LABEL=$(volname|grep GSD)
 
@@ -9,3 +14,6 @@ else
     zenity --error --text "No hay ningún disco de suplementos en la unidad"
 fi
 
+# restore old sources.list
+
+cp /etc/apt/sources.list.addon /etc/apt/sources.list

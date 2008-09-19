@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -f /usr/bin/gnome-app-install
+dpkg-divert --package guadalinex-supplement-installer --rename --quiet --remove  /usr/bin/gnome-app-install
