@@ -1,0 +1,6 @@
+packages:
+    - gthumb
+
+
+conn_commands:
+    - gthumb --import-photos &

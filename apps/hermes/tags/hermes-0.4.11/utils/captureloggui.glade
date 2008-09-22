@@ -1,0 +1,190 @@
+<?xml version="1.0" standalone="no"?> <!--*- mode: xml -*-->
+<!DOCTYPE glade-interface SYSTEM "http://glade.gnome.org/glade-2.0.dtd">
+
+<glade-interface>
+<requires lib="gnome"/>
+
+<widget class="GtkWindow" id="mainwindow">
+  <property name="width_request">500</property>
+  <property name="height_request">350</property>
+  <property name="visible">True</property>
+  <property name="title" translatable="yes">Hermes Information</property>
+  <property name="type">GTK_WINDOW_TOPLEVEL</property>
+  <property name="window_position">GTK_WIN_POS_CENTER_ALWAYS</property>
+  <property name="modal">False</property>
+  <property name="resizable">False</property>
+  <property name="destroy_with_parent">False</property>
+  <property name="decorated">True</property>
+  <property name="skip_taskbar_hint">False</property>
+  <property name="skip_pager_hint">False</property>
+  <property name="type_hint">GDK_WINDOW_TYPE_HINT_NORMAL</property>
+  <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
+  <property name="focus_on_map">True</property>
+  <property name="urgency_hint">False</property>
+
+  <child>
+    <widget class="GnomeDruid" id="druid1">
+      <property name="border_width">4</property>
+      <property name="visible">True</property>
+      <property name="show_help">True</property>
+      <signal name="cancel" handler="on_cancel" last_modification_time="Thu, 20 Oct 2005 07:25:29 GMT"/>
+      <signal name="help" handler="on_help_clicked" last_modification_time="Thu, 20 Oct 2005 11:13:04 GMT"/>
+
+      <child>
+	<widget class="GnomeDruidPageEdge" id="druidpagestart">
+	  <property name="visible">True</property>
+	  <property name="position">GNOME_EDGE_START</property>
+	  <property name="title" translatable="yes">Welcome</property>
+	  <property name="text" translatable="yes">Welcome to the data harvester wizard about Hermes devices.</property>
+	  <property name="background_color">#0807706f2121</property>
+	  <property name="logo_background_color">#0807706f2121</property>
+	  <property name="textbox_color">#ffffffffffff</property>
+	</widget>
+      </child>
+
+      <child>
+	<widget class="GnomeDruidPageStandard" id="druidpagestandard1">
+	  <property name="visible">True</property>
+	  <property name="title" translatable="yes">Data harvesting</property>
+	  <property name="background">#0807706f2121</property>
+	  <property name="logo_background">#0807706f2121</property>
+	  <property name="contents_background">#ffffffffffff</property>
+	  <signal name="next" handler="on_capturelog" last_modification_time="Thu, 20 Oct 2005 07:21:55 GMT"/>
+
+	  <child internal-child="vbox">
+	    <widget class="GtkVBox" id="druid-vbox1">
+	      <property name="border_width">16</property>
+	      <property name="visible">True</property>
+	      <property name="homogeneous">False</property>
+	      <property name="spacing">6</property>
+
+	      <child>
+		<widget class="GtkHBox" id="hbox1">
+		  <property name="visible">True</property>
+		  <property name="homogeneous">False</property>
+		  <property name="spacing">0</property>
+
+		  <child>
+		    <widget class="GtkLabel" id="label2">
+		      <property name="visible">True</property>
+		      <property name="label" translatable="yes">Device Name:</property>
+		      <property name="use_underline">False</property>
+		      <property name="use_markup">False</property>
+		      <property name="justify">GTK_JUSTIFY_LEFT</property>
+		      <property name="wrap">False</property>
+		      <property name="selectable">False</property>
+		      <property name="xalign">0.5</property>
+		      <property name="yalign">0.5</property>
+		      <property name="xpad">0</property>
+		      <property name="ypad">0</property>
+		      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		      <property name="width_chars">-1</property>
+		      <property name="single_line_mode">False</property>
+		      <property name="angle">0</property>
+		    </widget>
+		    <packing>
+		      <property name="padding">0</property>
+		      <property name="expand">False</property>
+		      <property name="fill">False</property>
+		    </packing>
+		  </child>
+
+		  <child>
+		    <widget class="GtkEntry" id="devname">
+		      <property name="visible">True</property>
+		      <property name="can_focus">True</property>
+		      <property name="editable">True</property>
+		      <property name="visibility">True</property>
+		      <property name="max_length">0</property>
+		      <property name="text" translatable="yes">newdevice</property>
+		      <property name="has_frame">True</property>
+		      <property name="invisible_char">*</property>
+		      <property name="activates_default">False</property>
+		    </widget>
+		    <packing>
+		      <property name="padding">0</property>
+		      <property name="expand">True</property>
+		      <property name="fill">True</property>
+		    </packing>
+		  </child>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">True</property>
+		  <property name="fill">True</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkHSeparator" id="hseparator1">
+		  <property name="visible">True</property>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkLabel" id="label1">
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Harvesting correct data about a device
+requires to follow the next steps:
+
+&lt;b&gt;1)&lt;/b&gt; Attach the device.
+
+&lt;b&gt;2)&lt;/b&gt; Wait about 10 seconds.
+
+&lt;b&gt;3)&lt;/b&gt; Detach the device.
+</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">True</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+	    </widget>
+	  </child>
+	</widget>
+      </child>
+
+      <child>
+	<widget class="GnomeDruidPageEdge" id="druidpagefinish">
+	  <property name="visible">True</property>
+	  <property name="position">GNOME_EDGE_FINISH</property>
+	  <property name="title" translatable="yes">Thanks!</property>
+	  <property name="text" translatable="yes">On your Desktop it is located a file with the required information about your device:
+
+     &lt;DEVICENAME&gt;.log
+
+Please, send us that file so we can improve hardware changes notification in Hermes.
+
+For more information, click Help.
+
+Thank you.</property>
+	  <property name="background_color">#0807706f2121</property>
+	  <property name="logo_background_color">#efefebeae7e7</property>
+	  <property name="textbox_color">#ffffffffffff</property>
+	  <signal name="finish" handler="on_finish" last_modification_time="Thu, 20 Oct 2005 07:36:35 GMT"/>
+	</widget>
+      </child>
+    </widget>
+  </child>
+</widget>
+
+</glade-interface>

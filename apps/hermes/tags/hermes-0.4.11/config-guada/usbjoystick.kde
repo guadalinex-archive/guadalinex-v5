@@ -1,0 +1,5 @@
+packages:
+    - jscalibrator
+
+conn_commands:
+    - jscalibrator

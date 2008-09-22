@@ -1,0 +1,14 @@
+Hermes se compone de dos programas
+
+
+hermes-notifier (hermes.py):
+    Es un notificador de mensajes que aparece en el área de notificación del
+    sistema. Exporta una interfaz de comunicaciones a DBUS para que se puedan
+    enviar mensajes desde cualquier aplicación. Más información en el código
+    fuente.
+
+hermes_hwclient (hermes_hwclient.py):
+    Este es un programa que reacciona ante eventos de hal en dbus, tales como
+    conectar/desconectar dispositivos, y cosas por el estilo. Se comunica con
+    hermes-notifier para mostrar mensajes al usuario.
+    

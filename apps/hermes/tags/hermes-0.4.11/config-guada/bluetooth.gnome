@@ -1,0 +1,8 @@
+# Listado de paquetes. Enumerados con guiones
+packages:
+    - bluez-gnome
+    - obex-data-server
+
+# Listado de aplicaciones a lanzar cuando se conecte
+conn_commands:
+    - bluetooth-properties; pidof bluetooth-applet || bluetooth-applet

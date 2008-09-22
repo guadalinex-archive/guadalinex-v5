@@ -1,0 +1,36 @@
+Source: hermeshardware
+Section: utils
+Priority: optional
+Maintainer: J. Félix Ontañón <fontanon@emergya.es>
+Build-Depends: debhelper (>= 4.0.0), python-gnome2-dev, python-gtk2-dev, python-all-dev, gnome-common, xsltproc
+Standards-Version: 3.7.3
+
+Package: hermeshardware
+Architecture: any
+Depends: hal, dbus, python-dbus, python2.5, notification-daemon, libsane, grepmap, python-syck, hermeshardware-descriptors, hermeshardware-actors, python-gnome2-extras, python-glade2, xsltproc, python-apt, synaptic ${shlibs:Depends}, ${misc:Depends}
+Description: Detección y soporte de dispositivos
+ Engloba tanto las tareas de detección y soporte de dispositivos, 
+ como aquellas que tienen que ver con la  configuración de los mismos 
+ y la interacción con el usuario.
+
+Package: hermeshardware-actors
+Depends: hermeshardware, ${shlibs:Depends}, ${misc:Depends}
+Architecture: any
+Description: Set de actores Hermes
+ Engloba tanto las tareas de detección y soporte de dispositivos, 
+ como aquellas que tienen que ver con la  configuración de los mismos 
+ y la interacción con el usuario.
+ .
+ Este es el set de actores para el sistema de detección de hardware.
+
+Package: hermeshardware-guada
+Architecture: any
+Depends: hermeshardware
+Conflicts: hermeshardware-kde
+Provides: hermeshardware-descriptors
+Description: Selección de paquetes Hermes para GNOME
+ Engloba tanto las tareas de detección y soporte de dispositivos, 
+ como aquellas que tienen que ver con la  configuración de los mismos 
+ y la interacción con el usuario.
+ .
+ Esta es la selección de paquetes hermes para GNOME.
