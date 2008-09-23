@@ -1,0 +1,13 @@
+CONDICIONES, PARA EL USUARIO FINAL, DE USO E INSTALACIÓN DEL CERTIFICADO RAÍZ DE LA FÁBRICA NACIONAL DE MONEDA Y TIMBRE - REAL CASA DE LA MONEDA.
+
+ADVERTENCIA LEGAL: El hecho de instalar el certificado raíz de la Fábrica Nacional de Moneda y Timbre - Real Casa de la Moneda (FNMT-RCM) en su equipo, determina la aceptación de las siguientes
+
+CONDICIONES:
+
+1) La FNMT-RCM, como Prestador de Servicios de Certificación, de conformidad con su regulación específica y la normativa de Firma Electrónica Española, otorga una licencia no exclusiva, intransferible y gratuita del certificado raíz de la FNMT-RCM que va a instalar en su equipo.
+
+2) El certificado raíz que se dispone a instalar, es un documento electrónico propiedad de la FNMT-RCM y es de libre distribución (siempre que se ajuste a lo establecido en las presentes condiciones). Usted solo podrá utilizarlo para el propósito para el que fue concebido: que su navegador/equipo identifique el sitio Web de la FNMT-RCM y genere la confianza necesaria para el uso de firma electrónica avanzada o reconocida. Tenga en cuenta que el certificado raíz que usted va a descargar, tiene una vigencia extensa pero limitada en el tiempo.
+
+3) No están autorizados otros usos, ni realizar modificaciones, alteraciones, compilaciones, ingeniería inversa u otras formas de aprovechamiento distinto que su mera ejecución e instalación en su equipo para el propósito citado. Queda prohibido firmar otros certificados electrónicos con el certificado raíz de la FNMT-RCM.
+
+4) EXONERACIÓN DE RESPONSABILIDAD. De conformidad con el propósito para el que, este certificado raíz ha sido creado, la FNMT-RCM no será responsable de: (I) usos no autorizados de su certificado raíz, (II) usos fraudulentos o de usurpación de personalidad basados en el certificado raíz, (III) ninguna reclamación, del titular del equipo receptor o de un tercero, como consecuencia de no respetar las presentes condiciones y (IV) producirse una alteración en el equipo receptor una vez que dicho certificado raíz sea descargado e instalado, en el improbable caso de que esta situación se produzca. 
