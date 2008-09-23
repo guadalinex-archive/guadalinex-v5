@@ -202,7 +202,7 @@ class FireFoxSecurityUtils(object):
 
 DNIE_ROOT_CERT_NAME = "AC RAIZ DNIE - DIRECCION GENERAL DE LA POLICIA"
 DNIE_ROOT_CERT_FILE = "/usr/share/opensc-dnie/ac_raiz_dnie.crt"
-FNMT_ROOT_CERT_NAME = "FNMT"
+FNMT_ROOT_CERT_NAME = "FNMT Clase 2 CA - FNMT"
 FNMT_ROOT_CERT_FILE = "/usr/share/ca-certificates/fnmt/FNMTClase2CA.crt"
 FNMT_LICENSE        = "/usr/share/ca-certificates/fnmt/condiciones_uso.txt"
 DNIE_PKCS11_LIB     = "/usr/lib/opensc-pkcs11.so"

@@ -1,8 +1,10 @@
 guadalinex-eadmin (v5-0.6) hardy; urgency=low
 
-  * Install FNMT cert into cert8.db firefox default profile
+  * Install FNMT CA cert into cert8.db firefox user default profile
+  * Bugfix on certmanager.py to correctly check for FNMT CA cert on user default
+    profile
 
- -- J. Félix Ontañón <fontanon@emergya.es>  Wed, 24 Sep 2008 13:54:12 +0100
+ -- J. Félix Ontañón <fontanon@emergya.es>  Wed, 24 Sep 2008 15:14:12 +0100
 
 guadalinex-eadmin (v5-0.5) hardy; urgency=low
 
