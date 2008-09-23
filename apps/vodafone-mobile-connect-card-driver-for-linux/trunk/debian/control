@@ -9,6 +9,7 @@ Standards-Version: 3.7.2
 Package: vodafone-mobile-connect-card-driver-for-linux
 Architecture: any
 Replaces: vodafone-mobile-connect-card-driver-for-linux
+Conflicts: escritorio-movistar
 Depends: ${python:Depends}, python-gnome2, python-twisted, python-glade2, wvdial, python-serial, python-dbus, python-notify, python-gnome2-extras, python-tz, xdg-utils
 Recommends: python-vte, python-gnome2-extras, bluez-utils (>= 3.16), bluez-gnome
 XB-Python-Version: ${python:Versions}

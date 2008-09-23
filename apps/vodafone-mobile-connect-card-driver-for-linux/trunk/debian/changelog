@@ -1,3 +1,8 @@
+vodafone-mobile-connect-card-driver-for-linux (2.0.beta1guada1) gutsy; urgency=low
+
+  * Added conflicts with escritorio-movistar
+
+ --  <dteyssiere@emergya.es>  Tue,  23 Sep 2008 10:57:11 +0100
 vodafone-mobile-connect-card-driver-for-linux (2.0.beta1) gutsy; urgency=low
 
   * 2.0.beta1 Release
