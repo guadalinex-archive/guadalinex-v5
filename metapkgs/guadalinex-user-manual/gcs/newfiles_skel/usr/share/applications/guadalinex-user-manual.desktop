@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Guía de usuario de Guadalinex
+Name[es]=Guía de usuario de Guadalinex
+Comment=Te lleva a la página de ayuda de Guadalinex
+Exec=firefox %u /usr/share/guadalinex-user-manual/manual.html
+Terminal=false
+Type=Application
+Icon=ayuda
+Categories=GNOME;GTK;Core;Help;
+GenericName[es_ES]=
