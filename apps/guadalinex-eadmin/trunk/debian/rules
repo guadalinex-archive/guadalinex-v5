@@ -25,6 +25,7 @@ install: build
 	dh_install  "ceres/inst_kde_pkcs11_cert.pl.gv5" "usr/share/opensc-ceres"
 	dh_install  "dnie/inst_gnome_pkcs11_cert.pl.gv5" "usr/share/opensc-dnie"
 	dh_install  "dnie/inst_kde_pkcs11_cert.pl.gv5" "usr/share/opensc-dnie"
+	dh_install  "cert8.db" "etc/firefox-3.0/profile"
 
 binary-indep:  build install
 
