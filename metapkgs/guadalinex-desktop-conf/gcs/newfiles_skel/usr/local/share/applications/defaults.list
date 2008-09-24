@@ -3,3 +3,6 @@ audio/x-musepack=rhythmbox.desktop
 video/x-ogg=vlc.desktop
 audio/x-ogg=rhythmbox.desktop
 x-content/video-dvd=vlc-dvd.desktop
+audio/mpeg=rhythmbox.desktop
+audio/x-mp3=rhythmbox.desktop
+audio/x-wav=rhythmbox.desktop
