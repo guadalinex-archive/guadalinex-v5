@@ -1,0 +1,6 @@
+# Lenovo
+
+setkeycodes	e016	$KEY_WLAN	# Fn+F5		Wireless (e016)
+setkeycodes	e017	$KEY_SLEEP	# Fn+F4		Suspend (e017)
+setkeycodes	e018	$KEY_SUSPEND	# Fn+F12	Hibernate (e018)
+setkeycodes     e034	$KEY_PROG1	# Lenovo care

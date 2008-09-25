@@ -1,0 +1,43 @@
+When the machine should be put to sleep in some fashion:
+
+KEY_SLEEP signals Suspend to RAM (Suspend, technically called "standby")
+KEY_SUSPEND signals Suspend to Disk (Hibernate, technically called "suspend"...)
+
+KEY_MAIL is used in preference to KEY_EMAIL.
+
+For functions that have not been assigned a named Linux kernel keycode,
+with a value <=255, then the following aliases are used:
+
+KEY_LOCK=$KEY_COFFEE
+KEY_PRESENTATION=$KEY_F23
+
+# This has been assigned 236 now
+KEY_BATTERY=236
+
+# Acer 1690, VGA toggle
+KEY_VIDEOOUT=$KEY_F20
+
+# Toshiba (and other) Tablets,
+# the support to actually rotate the screen is only in very recent i810 drivers.
+#KEY_ROTATESCREEN=$KEY_F21
+
+# ThinkPad Fn+Spacebar (called "Zoom")
+KEY_VIDEOMODECYCLE=$KEY_F22
+
+# ThinkPad Fn+PgUp (called ThinkLight)
+# On Apple laptop, under-keyboard lighting
+KEY_LIGHT=$KEY_F19
+
+# All the laptops except 1 Medion (Acer) I've seen using ACPI for the wifikey hotkey.
+#KEY_WIFI=$KEY_CONNECT
+
+Avoiding remapping already mapped hotkeys.  'atkbd.hk' contains a list of the keycodes
+and KEY_NAME mappings used by the 'drivers/input/keyboard/atkbd.c' driver at boot-time.
+This may be useful as a reference and for grepping out entries that don't actually need
+to be matched.
+
+  awk '/^setkeycodes/{x=strtonum("0x"$2);if(x>127)x-=(0xe000-128);sub("^.","",$3);print$3"="x }' *.hk \
+  | xargs -d"\n" -n1 grep -c < key-constants | grep -cv 0
+
+ -- Paul Sladen <ubuntu@paul.sladen.org>  Thu, 02 Mar 2006 04:00:09 +0000
+

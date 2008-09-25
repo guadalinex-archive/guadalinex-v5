@@ -1,0 +1,9 @@
+# HP Laptops with "Hewlett-Packard" in the dmi identifier
+setkeycodes	e001	$KEY_PROG1	# Fn+Escape?
+setkeycodes	e008	$KEY_PRESENTATION # Presentation (Misc 1)
+setkeycodes	e009	$KEY_BATTERY	# Battery
+setkeycodes	e00a	$KEY_COFFEE	# Lock
+setkeycodes	e00c	$KEY_SOUND	# Music
+setkeycodes	e00e	$KEY_MEDIA	# DVD
+setkeycodes	e031	$KEY_HELP	# Help
+setkeycodes	e059	$KEY_HELP	# Another help key

@@ -1,0 +1,4 @@
+# Asus Laptops
+setkeycodes	6f	$KEY_MUTE	# Mute key
+setkeycodes	6d	$KEY_VOLUMEUP	# Volume up
+setkeycodes	6e	$KEY_VOLUMEDOWN	# Volume down

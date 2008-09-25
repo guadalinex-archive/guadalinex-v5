@@ -1,0 +1,19 @@
+# MSI inifity (e.g. MSI MS-1035 aka L725)
+
+# Fn-key combinations
+						# Fn-F2   External VGA toggle	# Handled by ACPI
+setkeycodes	e064	$KEY_PROG1		# Fn-F3   Touchpad disable	# No Elantech Touchpad support yet :(
+						# Just choose some key to quiet it?
+setkeycodes	e077	$KEY_BRIGHTNESSDOWN	# Fn-F4   Brightness down
+setkeycodes	e078	$KEY_BRIGHTNESSUP	# Fn-F5   Brightness up
+#setkeycodes	e02e	$KEY_VOLUMEDOWN		# Fn-F7   Volume down		# Canonical mapping, commented out.
+#setkeycodes	e030	$KEY_VOLUMEUP		# Fn-F8   Volume up		# Canonical mapping, commented out.
+#setkeycodes	e020	$KEY_MUTE		# Fn-F9   Sound On/Off		# Canonical mapping, commented out.
+#setkeycodes	e05f	$KEY_SLEEP		# Fn-F12  Sleep Zz		# Canonical mapping, commented out.
+
+# Four special keys around power button
+#setkeycodes	e06c	$KEY_MAIL		# &#39;envelope&#39; button	 Mail	# Canonical mapping, commented out.		
+#setkeycodes	e032	$KEY_WWW		# &#39;e&#39; button		 WWW	# Canonical mapping, commented out.
+setkeycodes	e076	$KEY_WLAN		# &#39;satellite dish&#39; key   WLAN on
+setkeycodes	e062	$KEY_BLUETOOTH		# &#39;sattelite dish&#39; key   Bluetooth on
+setkeycodes	e079	$KEY_SEARCH		# &#39;magnifying glass&#39; key Search?

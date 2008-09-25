@@ -1,0 +1,16 @@
+hotkey-setup (0.1-21ubuntu0~ppa1guada1) hardy; urgency=low
+
+  * Guadalinex repackage
+
+ -- Carlos Parra Camargo <cparra@emergya.es>  Fri, 26 Sep 2008 00:51:02 +0200
+
+hotkey-setup (0.1-21ubuntu0~ppa1) hardy; urgency=low
+
+  * Merged with Debian unstable
+  * Allow more than one driver in xorg.conf
+  * Added 'coreutils' to Depends (because we need '/usr/bin/uniq')
+  * Added 'pciutils' to Depends (because we need '/usr/bin/lspci')
+  * Changing DOS to 7 for HP's 8086:2a03 (LP: #157691)
+  * Changed small typo in init script
+
+ -- Patrick Kuijvenhoven <pet@painfullscratch.nl>  Mon, 02 Jun 2008 23:47:49 +0200

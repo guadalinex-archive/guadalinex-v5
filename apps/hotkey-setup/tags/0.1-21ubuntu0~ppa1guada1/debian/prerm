@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+if dpkg --compare-versions "$2" lt "0.1-19"; then
+	# setkeycodes exits with error sometimes (#437360) and has
+	# completely broken the upgrade path for some users.
+	# remove the saved state file if installed package prerm
+	# maintainer script fails.
+	rm -f /var/run/hotkey-setup
+fi
+
+#DEBHELPER#

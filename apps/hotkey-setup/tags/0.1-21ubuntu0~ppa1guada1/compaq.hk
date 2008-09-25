@@ -1,0 +1,5 @@
+# Compaq Armada E500
+setkeycodes	e023	$KEY_WWW	# I key (has an 'i' on it, similar font to that used for information booths etc)
+setkeycodes	e01f	$KEY_HOMEPAGE	# Home key (has a little picture of a house) 
+setkeycodes	e01a	$KEY_SEARCH	# Search key (i asume, because it has a picture of a magnifing glass) 
+setkeycodes	e01e	$KEY_MAIL	# Email (has an envolope on the button)

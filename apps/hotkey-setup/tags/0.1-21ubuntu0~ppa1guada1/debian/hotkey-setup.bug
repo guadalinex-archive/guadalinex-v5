@@ -1,0 +1,11 @@
+#!/bin/sh
+
+manufacturer="$(dmidecode --string system-manufacturer 2>/dev/null )"
+name="$(dmidecode --string system-product-name 2>/dev/null )"
+version="$(dmidecode --string system-version 2>/dev/null )"
+
+cat <<EOF
+manufacturer="$manufacturer"
+name="$name"
+version="$version"
+EOF

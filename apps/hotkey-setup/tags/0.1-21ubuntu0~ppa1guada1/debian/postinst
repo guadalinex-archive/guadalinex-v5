@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+# Remove symlinks to script to have them reinserted by debhelper
+# without the shutdown and reboot links; this init script does not
+# need them.
+if dpkg --compare-versions "$2" lt "0.1-17.2"; then
+	update-rc.d -f hotkey-setup remove
+fi
+
+#DEBHELPER#

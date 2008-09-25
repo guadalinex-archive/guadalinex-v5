@@ -1,0 +1,5 @@
+# CLEVO D500P Laptop
+# also known as Keynux Agora H8
+#
+setkeycodes	e001	$KEY_PROG1
+

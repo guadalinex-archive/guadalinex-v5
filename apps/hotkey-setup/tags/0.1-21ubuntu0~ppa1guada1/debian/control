@@ -1,0 +1,16 @@
+Source: hotkey-setup
+Section: misc
+Priority: optional
+Maintainer: Patrick Kuijvenhoven <pet@painfullscratch.nl>
+XSBC-Original-Maintainer: Petter Reinholdtsen <pere@debian.org>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.7.3
+
+Package: hotkey-setup
+Architecture: i386 amd64 lpia
+Depends: ${shlibs:Depends}, ${misc:Depends}, dmidecode (>= 2.7), laptop-detect, console-tools | console-utilities, coreutils, pciutils
+Conflicts: tpb
+Description: auto-configures laptop hotkeys
+ This package will attempt to auto-detect your laptop hardware and then
+ configure its hotkeys to produce useful keycodes. These can then be used by
+ userspace applications.

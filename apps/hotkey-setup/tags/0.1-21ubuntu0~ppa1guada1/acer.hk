@@ -1,0 +1,7 @@
+# Acer Laptops
+setkeycodes	e025	$KEY_HELP	# Help key
+setkeycodes	e074	$KEY_PROG1	# Misc 1
+setkeycodes	e073	$KEY_PROG2	# Misc 2
+#setkeycodes	e057	$KEY_		# Blue		Bluetooth On (hardware, led, informational only)
+#setkeycodes	e058	$KEY_		# Blue		Bluetooth Off (hardware, led, informational only)
+#Also: PreviousTrack, NextTrack, Play, Stop, WWW, Email, VolumeUp, VolumeDown, Mute, BrightnessDown...
