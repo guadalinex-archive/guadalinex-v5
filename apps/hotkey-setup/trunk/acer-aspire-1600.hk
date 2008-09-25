@@ -1,0 +1,19 @@
+# Acer 1690 and Aspire 1680  Manufacturer: "Acer", Product Name: "Aspire 1680   ",
+# http://users.linuxbourg.ch/didier/blog/?p=29
+setkeycodes	e025	$KEY_HELP	# Fn-F1		Help
+setkeycodes	e026	$KEY_SETUP	# Fn-F2		eSetting
+#setkeycodes	e027	$KEY_		# Fn-F3		ePowerManagement
+					# Fn-F4		Sleep Zz.
+setkeycodes	e029	$KEY_VIDEOOUT	# Fn-F5		External VGA toggle
+					# Fn-F6		Blank screen (hardware)
+#setkeycodes	e071	$KEY_		# Fn-F7		TrackPad On (hardware, informational only)
+#setkeycodes	e072	$KEY_		# Fn-F7		TrackPad Off (hardware, informational only)
+setkeycodes	e06e	$KEY_BRIGHTNESSUP # Fn-->	LCD Brightness up
+# mjg59 thinks these two are the most crack ever seen on a laptop...
+#setkeycodes	e033	$KEY_EURO	# '€' hard to do out-of-the-box
+#setkeycodes	e034	$KEY_DOLLAR	# '$' hard to do out-of-the-box
+setkeycodes	e073	$KEY_PROG1	# 'P' button
+setkeycodes	e074	$KEY_MAIL	# 'e' button
+#setkeycodes	e055	$KEY_		# Orange	Wireless On (hardware, led, informational only)
+#setkeycodes	e056	$KEY_		# Orange	Wireless Off (hardware, led, informational only)
+

@@ -1,0 +1,7 @@
+# Medion Laptop
+# MedionMD6200, Manufactuer: "MEDION", Product: "FID2060"
+
+#setkeycodes	6b	$KEY_		# Thottle Down	Reduce CPU Speed
+setkeycodes	6b	$KEY_PROG3	# Instead, remap it to something usable
+#setkeycodes	6d	$KEY_		# Thottle Up	Increase CPU Speed
+setkeycodes	6d	$KEY_PROG4	# Instead, remap it to something usable

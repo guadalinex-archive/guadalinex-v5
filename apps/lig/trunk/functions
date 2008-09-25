@@ -272,6 +272,24 @@ function unfake_daemons ()
                 fi
      
 }
+
+function clean_gnome_help ()
+{
+
+cd ${sources_dir}/usr/share/gnome/help/
+for i in `ls -1`; do
+    cd $i
+    for e in `ls -1`; do
+       if [ "$e" != "C" ] && [ "$e" != "es" ]; then
+           rm -fr ${sources_dir}/usr/share/gnome/help/$i/$e
+       fi
+    done
+    cd ${sources_dir}/usr/share/gnome/help/
+done
+cd /tmp
+
+}
+
 function mount_virtualfs ()
 {
 
@@ -438,6 +456,52 @@ function install_pkgs ()
 
     apt_get install || error "install_pkgs upgrade"
 
+    cat > ${sources_dir}/etc/locale.nopurge << EOF
+####################################################
+# This is the configuration file for localepurge(8).
+####################################################
+
+####################################################
+# Uncommenting this string enables removal of localized 
+# man pages based on the configuration information for
+# locale files defined below:
+
+MANDELETE
+
+####################################################
+# Uncommenting this string causes localepurge to simply delete
+# locales which have newly appeared on the system without
+# bothering you about it:
+
+DONTBOTHERNEWLOCALE
+
+####################################################
+# Uncommenting this string enables display of freed disk
+# space if localepurge has purged any superfluous data:
+
+SHOWFREEDSPACE
+
+#####################################################
+# Commenting out this string enables faster but less
+# accurate calculation of freed disk space:
+
+#QUICKNDIRTYCALC
+
+#####################################################
+# Commenting out this string disables verbose output:
+
+#VERBOSE
+
+#####################################################
+# Following locales won't be deleted from this system
+# after package installations done with apt-get(8):
+
+es
+es_ES
+es_ES@euro
+es_ES.UTF-8
+EOF
+
     #FIXME: Check if more than one stage is needed
     apt_get install $base_pkgs || error "install_pkgs base packages"
 
@@ -509,8 +573,20 @@ function set_debconf(){
     db_set debconf/frontend noninteractive
 EOF
 
+    cat > ${sources_dir}/tmp/preseed.cfg << EOF
+localepurge	localepurge/remove_no	note	
+localepurge	localepurge/none_selected	boolean	false
+localepurge	localepurge/nopurge	multiselect	es_ES, es_ES@euro, es_ES.UTF-8
+localepurge	localepurge/mandelete	boolean	true
+localepurge	localepurge/dontbothernew	boolean	false
+localepurge	localepurge/showfreedspace	boolean	true
+localepurge	localepurge/verbose	boolean	false
+localepurge	localepurge/quickndirtycalc	boolean	true
+EOF
+
     chmod +x ${sources_dir}/tmp/debconf-set
     chroot ${sources_dir} /tmp/debconf-set
+    chroot ${sources_dir} /usr/bin/debconf-set-selections /tmp/preseed.cfg
     ret="$?"
     return ret
 }
@@ -607,6 +683,8 @@ function install_image ()
     unfake_daemons || error "unfake_daemons"
 
 #    update_initramfs || error "update_initramfs"
+
+    clean_gnome_help || error "clean unused files"
 
     create_squashfs || error "create_squashfs"
 

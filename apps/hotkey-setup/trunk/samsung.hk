@@ -1,0 +1,5 @@
+# Samsung X05
+# (i) [x] [v/] [wifi]
+setkeycodes	75	$KEY_WWW	#
+setkeycodes	78	$KEY_MAIL	# 
+setkeycodes	74	$KEY_PROG1	# Looks like Tick

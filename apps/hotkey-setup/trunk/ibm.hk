@@ -1,0 +1,60 @@
+# IBM/Lenovo ThinkPads
+setkeycodes	e05d	$KEY_WAKEUP	# Fn-click (Press & release with no action), observed on R52
+#setkeycodes	e063	$KEY_WAKEUP	# Fn-click (Press & release with no action), found on Google and LenovoPads  # Canonical mapping, commented out.
+
+# ThinkPad A and S series
+#setkeycodes	e032	$KEY_WWW	# Home  # Canonical mapping, commented out.
+#setkeycodes	e065	$KEY_SEARCH 	# Search  # Canonical mapping, commented out.
+#setkeycodes	e06c	$KEY_MAIL	# Mail [also: KEY_EMAIL]  # Canonical mapping, commented out.
+
+# ThinkPad A-series
+#setkeycodes	e066	$KEY_BOOKMARKS	# Favorites  # Canonical mapping, commented out.
+#setkeycodes	e067	$KEY_REFRESH	# Reload  # Canonical mapping, commented out.
+#setkeycodes	e068	$KEY_STOP	# Abort  # Canonical mapping, commented out.
+
+# ThinkPads from 2002 onwards
+#setkeycodes	e069	$KEY_BACK	# Back  # Canonical mapping, commented out.
+#setkeycodes	e06a	$KEY_FORWARD	# Forward  # Canonical mapping, commented out.
+
+# X41 Tablet series only
+# L-to-R:  Scancodes have differing reports.  Are these correct?
+#   Power and Power lock (ACPI), Ctrl-Alt-Delete (recessed),
+#     Screen Rotate, Tablet Utility, Escape, Enter,
+#       Page Up, Page Down
+setkeycodes	67	$KEY_COFFEE	# Tablet Ctrl-Alt-Delete
+setkeycodes	6c	$KEY_DIRECTION	# Tablet Rotate
+setkeycodes	68	$KEY_SETUP	# Tablet Utility Menu
+setkeycodes	6b	$KEY_ESC	# Tablet Escape
+setkeycodes	69	$KEY_ENTER	# Tablet Enter
+setkeycodes	6d	$KEY_PAGEUP	# Tablet Up
+setkeycodes	6e	$KEY_PAGEDOWN	# Tablet Down
+setkeycodes	6f	$KEY_RIGHT	# Tablet Right
+setkeycodes	71	$KEY_LEFT	# Tablet Left
+
+# New Lenovo *60* Series
+					# Fn (e063)
+					# Fn-PrtSc	SysRq (3854)
+					# Fn-ScrLk	NumLk (45)
+					# Fn-Pause	Break (e11d45)
+					# Fn-Up 	Media Stop (e024)
+					# Fn-Down	Media PlayPause (e022)
+					# Fn-Left	Media Previous (e019)
+					# Fn-Right	Media Right (e010)
+
+# Handled via a daemon:
+# DONE: Fn + Spacebar -> $KEY_ZOOM  (/dev/nvram, thinkpad-keys)
+# DONE: ThinkPad Button -> $KEY_PROG1  (/dev/nvram, thinkpad-keys)
+# DONE: ThinkPad R30, R31, R40e (Acer OEMs, no hardware mixer on these):
+# DONE: Map Volume Mute/Down/Up to KEY_MUTE, KEY_VOLUMEDOWN, KEY_VOLUMEUP (/dev/nvram, thinkpad-keys)
+
+# TODO: Fix Num-Lock, work out what it's going on.
+#
+# ThinkPads internally map Shift+ScrollLock -> NumLock;  however shift key
+# is also down at this point, so the actual code that gets sent is  Shift+NumLock
+# and by default X maps  Shift+NumLock to Pointer_Emulation_Enable.
+# Shift+Scroll_Lock (0x45) to NumLock (77) and disable X's Pointer_EnableKeys
+#
+# Works in X with  xmodmap -e 'keycode 77 = Num_Lock'
+# Fixed in by removing Pointer_EnableKeys from the default policy in X
+# setkeycodes	45	$KEY_KP6  	# ???
+

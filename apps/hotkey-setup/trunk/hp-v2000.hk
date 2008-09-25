@@ -1,0 +1,25 @@
+# Machines ID'ing as Compaq Preario
+# From Compaq Presario (from: LV2417LA, Thanks to Cristian Aravena Romero)
+setkeycodes	e01f	$KEY_PROG1	# Fn-Esc	Unknown	
+setkeycodes	e075	$KEY_HELP	# Fn-F1		Help
+					# Fn-F2		Print, sends Ctrl-p (1d19)
+#setkeycodes	e032	$KEY_WWW	# Fn-F3		Web  # Canonical mapping, commented out.
+					# Fn-F4		External VGA
+#setkeycodes	e05f	$KEY_SLEEP	# Fn-F5		Sleep (Hibernate)  # Canonical mapping, commented out.
+setkeycodes	e012	$KEY_COFFEE	# Fn-F6		Lock Screen
+					# Fn-F7		Brightness Down
+					# Fn-F8		Brightness Up
+#setkeycodes	e022	$KEY_PLAYPAUSE	# Fn-F9		Media Play/Pause  # Canonical mapping, commented out.
+#setkeycodes	e024	$KEY_STOP	# Fn-F10	Media Stop  # Canonical mapping, commented out.
+#setkeycodes	e010	$KEY_PREVIOUSSONG # Fn-F11	Media Previous Song  # Canonical mapping, commented out.
+#setkeycodes	e019	$KEY_NEXTSONG	# Fn-F12	Media Next Song  # Canonical mapping, commented out.
+					# Fn-Scroll	Num_Lock (0x45)
+					# Fn-Pause	Pause/Break (e11d45)
+					# Fn-Ins	PrintScreen (e02ae037)
+					# Fn-Del	PrintScreen (e02ae037)
+					# Fn-Enter	KP_Enter (e01c)
+					# Wireless	Wireless RF_Kill with LED
+#setkeycodes	e02e	$KEY_VOLUMEDOWN	# Sound Down	Volume Down  # Canonical mapping, commented out.
+#setkeycodes	e030	$KEY_VOLUMEUP	# Sound Up	Volume Up  # Canonical mapping, commented out.
+#setkeycodes	e020	$KEY_MUTE	# Sound On/Off	Volume Mute  # Canonical mapping, commented out.
+

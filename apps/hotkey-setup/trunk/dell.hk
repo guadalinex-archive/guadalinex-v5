@@ -1,0 +1,26 @@
+# Dell Laptops
+					# Fn+Esc	Standby (ACPI)
+setkeycodes	e00a	$KEY_SUSPEND	# Fn+F1		Hibernate (e00a)
+#setkeycodes	e008	$KEY_		# Fn+F2		Wireless (e008)
+setkeycodes	e007	$KEY_BATTERY	# Fn+F3		Battery (e007)
+setkeycodes	e00b	$KEY_VIDEOOUT	# Fn+F8		CRT/LCD (e00b)
+setkeycodes	e009	$KEY_EJECTCD	# Fn+F10	EjectCD (e009)
+setkeycodes	e005	$KEY_BRIGHTNESSDOWN # Fn+Down	Brightness Down (e005)
+setkeycodes	e006	$KEY_BRIGHTNESSUP # Fn+Up	Brightness Up (e006)
+setkeycodes	e012	$KEY_MEDIA	# MediaDirect	Load Media Player (e012)
+
+# inspiron multimedia keys
+setkeycodes	e001	$KEY_PLAYPAUSE	# Dell E Key	Play/Pause (e001)
+setkeycodes	e002	$KEY_STOP	# Dell i Key	Stop (e002)
+setkeycodes	e003	$KEY_PREVIOUSSONG # Dell 1 Key	Previous Song (e003)
+setkeycodes	e004	$KEY_NEXTSONG	# Dell 2 Key	Next Song (e004)
+setkeycodes     e022    $KEY_PLAYPAUSE	# front		Play/Pause (e022)
+setkeycodes     e010    $KEY_PREVIOUSSONG # panel	Previous Song (e010)
+setkeycodes     e019    $KEY_NEXTSONG	# media		Next Song (e019)
+setkeycodes     e024    $KEY_STOPCD	# buttons	Stop (e024)
+setkeycodes	e06d	$KEY_MEDIA	# (Inspiron)	Media (e06d)
+
+# Dell XPS M1330
+setkeycodes     e020    $KEY_MUTE       # mute          (e020)
+setkeycodes     e02e    $KEY_VOLUMEDOWN # volume down   (e0e2)
+setkeycodes     e030    $KEY_VOLUMEUP   # volume up     (e030)

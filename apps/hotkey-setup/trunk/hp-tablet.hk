@@ -1,0 +1,7 @@
+# HP Tablets
+setkeycodes	e002	$KEY_PROG2	# Funny key
+setkeycodes	e003	$KEY_PROG1	# Q
+setkeycodes	e004	$KEY_TAB	# Tab
+setkeycodes	e005	$KEY_ESC	# Escape 
+setkeycodes	e006	$KEY_PAGEUP	# Rocker left (Page up)
+setkeycodes	e007	$KEY_PAGEDOWN	# Rocker right (Page down)
