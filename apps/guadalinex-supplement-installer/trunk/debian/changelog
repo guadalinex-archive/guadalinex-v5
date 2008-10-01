@@ -1,3 +1,10 @@
+guadalinex-supplement-installer (0.3.2) lobo; urgency=low
+
+  * Modified guadalinex-app-install for some cases that is called by another
+    program.
+  * Modified guadalinex-app-install.desktop, added argument --addon-cd
+
+ -- David Teyssiere <dteyssiere@emergya.es>  Wed, 01 Oct 2008 14:23:42 +0100
 guadalinex-supplement-installer (0.3.1guada2) lobo; urgency=low
 
   * Added support to backup sources.list and restore it after installing any
