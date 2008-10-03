@@ -1,3 +1,8 @@
+guadalinex-asistente-usb (0.2guada2) hardy; urgency=low
+
+  * Modified some chains in do-install.sh
+
+ -- David Teyssiere <dteyssiere@emergya.es>  Fri, 03 Oct 2008 08:32:15 +0200
 guadalinex-asistente-usb (0.2guada1) hardy; urgency=low
 
   * Fixed a return bug
