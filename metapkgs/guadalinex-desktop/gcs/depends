@@ -149,6 +149,7 @@ network-manager
 network-manager-gnome
 notification-daemon
 ntfs-3g
+ntfsprogs
 onboard
 samba
 sun-java6-jre
