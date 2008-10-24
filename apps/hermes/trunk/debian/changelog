@@ -1,3 +1,9 @@
+hermeshardware (0.4.12) hardy; urgency=low
+
+  * Disable actions on USB Printer devices
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Fri, 24 Oct 2008 12:56:42 +0100
+
 hermeshardware (0.4.11) hardy; urgency=low
 
   * Disable actions on 3G devices
