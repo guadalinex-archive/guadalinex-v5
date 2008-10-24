@@ -135,6 +135,7 @@ libglut3
 libgnome2-perl
 libgnomevfs2-bin
 libgnomevfs2-extra
+libpam-gnome-keyring
 libsasl2-modules
 libxp6
 metacity
