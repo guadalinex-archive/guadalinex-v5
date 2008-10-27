@@ -17,7 +17,7 @@ section: base
 shortdesc: "Guadalinex Artwork auxiliar package"
 
 # Descipción larga, las lineas han de estar separadas por "\n "
-longdesc: "This package complements 'guadalinex-artwork' package"
+longdesc: "This package complements 'guadalinex-artwork' package."
 
 # Versión del paquete
 version: v5
