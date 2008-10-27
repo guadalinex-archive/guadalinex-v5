@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:export-ydpi="90.000000"
+   inkscape:export-xdpi="90.000000"
+   inkscape:export-filename="/home/gcoronel/hermes/img/trayicon.png"
+   sodipodi:docname="trayicon.svg"
+   sodipodi:docbase="/home/gcoronel/hermes/img"
+   inkscape:version="0.41"
+   sodipodi:version="0.32"
+   id="svg1291"
+   height="20.000000px"
+   width="20.000000px">
+  <defs
+     id="defs3">
+    <linearGradient
+       id="linearGradient2863">
+      <stop
+         id="stop2865"
+         offset="0.0000000"
+         style="stop-color:#ffffff;stop-opacity:1.0000000;" />
+      <stop
+         id="stop2867"
+         offset="1"
+         style="stop-color:#000000;stop-opacity:0;" />
+    </linearGradient>
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       r="25.695162"
+       fy="12.297360"
+       fx="13.093794"
+       cy="12.297355"
+       cx="13.245236"
+       gradientTransform="scale(0.982299,1.018019)"
+       id="radialGradient2869"
+       xlink:href="#linearGradient2863"
+       inkscape:collect="always" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-y="25"
+     inkscape:window-x="0"
+     inkscape:window-height="789"
+     inkscape:window-width="1152"
+     inkscape:document-units="px"
+     inkscape:grid-bbox="true"
+     showgrid="true"
+     inkscape:current-layer="layer2"
+     inkscape:cy="8.8501751"
+     inkscape:cx="15.999999"
+     inkscape:zoom="11.197802"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF
+       id="RDF5">
+      <cc:Work
+         id="Work6"
+         rdf:about="">
+        <dc:format
+           id="format7">image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+           id="type9" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="fondo"
+     id="layer2"
+     inkscape:groupmode="layer">
+    <path
+       inkscape:export-filename="/home/gcoronel/hermes/img/trayicon.png"
+       inkscape:export-ydpi="90.000000"
+       inkscape:export-xdpi="90.000000"
+       transform="matrix(0.935645,0.000000,0.000000,0.902815,-2.187062,-1.720298)"
+       d="M 22.683023 12.837095 A 9.8233566 10.180570 0 1 1  3.0363102,12.837095 A 9.8233566 10.180570 0 1 1  22.683023 12.837095 z"
+       sodipodi:ry="10.180570"
+       sodipodi:rx="9.8233566"
+       sodipodi:cy="12.837095"
+       sodipodi:cx="12.859667"
+       id="path2861"
+       style="fill:url(#radialGradient2869);fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000;stroke-linejoin:round;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000"
+       sodipodi:type="arc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1"
+     id="layer1">
+    <g
+       inkscape:export-ydpi="90.000000"
+       inkscape:export-xdpi="90.000000"
+       inkscape:export-filename="/home/gcoronel/hermes/img/trayicon.png"
+       transform="matrix(0.509679,0.000000,0.000000,0.535175,1.658134,0.548111)"
+       id="g2856">
+      <path
+         sodipodi:nodetypes="ccccc"
+         id="path2068"
+         d="M 20.571148,6.1291347 C 20.571148,8.9604164 18.125482,23.000000 15.207846,23.000000 C 12.290208,23.000000 10.000000,8.9604164 10.000000,6.1291347 C 10.000000,3.2978521 12.367937,1.0000000 15.285574,1.0000000 C 18.203211,1.0000000 20.571148,3.2978521 20.571148,6.1291347 z "
+         style="fill:#000000;fill-opacity:0.39639637;stroke:none;stroke-width:0.77801782;stroke-linejoin:round;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         id="path2063"
+         d="M 19.610991,5.8952493 C 19.610991,8.6105767 17.526750,22.075172 15.040286,22.075172 C 12.553822,22.075172 10.602064,8.6105767 10.602064,5.8952493 C 10.602064,3.1799219 12.620064,0.97617796 15.106528,0.97617796 C 17.592991,0.97617796 19.610991,3.1799219 19.610991,5.8952493 z "
+         style="fill:#fe8200;fill-opacity:1.0000000;stroke:#000000;stroke-width:0.77801782;stroke-linejoin:round;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000" />
+    </g>
+    <path
+       inkscape:export-ydpi="90.000000"
+       inkscape:export-xdpi="90.000000"
+       inkscape:export-filename="/home/gcoronel/hermes/img/trayicon.png"
+       transform="matrix(0.708317,0.000000,0.000000,0.708318,-0.824462,-4.364830)"
+       d="M 18.307164 29.499510 A 3.5721295 3.5721295 0 1 1  11.162905,29.499510 A 3.5721295 3.5721295 0 1 1  18.307164 29.499510 z"
+       sodipodi:ry="3.5721295"
+       sodipodi:rx="3.5721295"
+       sodipodi:cy="29.499510"
+       sodipodi:cx="14.735035"
+       id="path2828"
+       style="fill:#000000;fill-opacity:0.51801801;stroke:none;stroke-width:1.0000000;stroke-linejoin:round;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000"
+       sodipodi:type="arc" />
+    <path
+       inkscape:export-ydpi="90.000000"
+       inkscape:export-xdpi="90.000000"
+       inkscape:export-filename="/home/gcoronel/hermes/img/trayicon.png"
+       transform="matrix(0.571428,0.000000,0.000000,0.571428,0.906917,-0.529876)"
+       d="M 18.307164 29.499510 A 3.5721295 3.5721295 0 1 1  11.162905,29.499510 A 3.5721295 3.5721295 0 1 1  18.307164 29.499510 z"
+       sodipodi:ry="3.5721295"
+       sodipodi:rx="3.5721295"
+       sodipodi:cy="29.499510"
+       sodipodi:cx="14.735035"
+       id="path2066"
+       style="fill:#fe8200;fill-opacity:1.0000000;stroke:#000000;stroke-width:1.0000000;stroke-linejoin:round;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000"
+       sodipodi:type="arc" />
+  </g>
+</svg>

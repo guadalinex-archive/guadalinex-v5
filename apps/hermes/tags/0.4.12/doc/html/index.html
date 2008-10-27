@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html >
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Recogida de datos para Hermes</title>
+	  <link rel="stylesheet" href="files/estilos.css" type="text/css">
+</head>
+
+<body>
+<div class="contenido">
+	<div class="titulo">		
+	   <center><img src="files/hermes_logo.png"/>
+            <h1>Recogida de datos para Hermes.</h1>
+            <center>
+	</div> 
+	
+	<div class="cuerpo">
+	
+	<div class="intro">
+	   <h2><img src="files/go-next.png/"> Introducción </h2>
+	        <p>Hermes es el notificador y detector de cambios en el hardware de Guadalinex v5. 
+	        Es el encargado de avisar al usuario de la detección de dispositivos conectados al sistema, 
+	        así como de instalar los paquetes necesarios para que esos dispositivos funcionen.</p> 	
+	        
+	        <p>Para el correcto funcionamiento de Hermes, este debe conocer información sobre los distintos dispositivos
+	        que se pueden conectar al sistema. Para la recogida de esta informacion se ha creado el "Informe sobre nuevos dispositivos".
+	        </p>
+        </div>
+        
+	<div class="obtencion_datos">
+	 <h2><img src="files/view-refresh.png/">¿Cómo obtener la información?</h2>
+
+	    <p> El software necesario para recoger información sobre dispositivos está incluído en Guadalinex V5. 
+	    Este software no es más que un asistente embebido en el sistema de notificación de cambios en el hardware: HERMES.
+	    La recogida de datos consta de tres pasos: inicio, obtención de datos, y fin.</p>
+	
+	    <p>El paso realmente útil es el segundo, que es el momento en el que hermes obtiene la información del dispositivo. 
+	    Es MUY IMPORTANTE para el proceso de obtención de datos seguir bien las indicaciones de este paso, a saber:<p>
+	    <ol>
+	        <li>Conectar el dispositivo. Es en este paso donde debe conectar el dispositivo al sistema (al puerto usb, firewire, o donde proceda).</li>
+	        
+	        <li>Esperar unos 10 segundos. Durante este período de tiempo es cuando hermes obtiene los datos del dispositivo. 
+	        Puede variar en función del tipo de dispositivo que se esté detectando. 
+	        Por regla general, este paso estará acompañado de mensajes de notificación del sistema (abajo y a la derecha, junto al panel).</li>
+	        
+	       <li>Desconectar el dispositivo. Al contrario que en el paso 1, el dispositivo debe quedar desconectado del sistema.</li>
+	    </ol>
+	    <p>Tras concluir dicho asistente, debe aparecer un nuevo fichero de texto en el escritorio, el cual contiene toda la información 
+	    que Hermes necesita para poder administrar correctamente el dispositivo en cuestión.</p>
+        </div>
+        
+        <div class="envio_datos">
+            <h2><img src="files/internet-mail.png/">¿Cómo hacernos llegar la información?</h2>
+            <p>Tras la ejecución del "Informe sobre nuevos dispositivos" podemos encontrar un fichero en el escritorio
+            que contiene toda información necesaria para que Hermes pueda identificar el nuevo dispositivo. 
+            </p>
+            <p>Es necesario hacer llegar esa información al equipo de desarrollo de Hermes. Para ello se ha habilitado la siguiente cuenta 
+            de correo: <a href="mailto:hermes@guadalinex.org">hermes@guadalinex.org</a>.</p>
+            <p>Así pues, una vez tengamos el fichero con  la información sobre el dispositivo en el escritorio, basta con enviar
+            un correo a esa dirección adjuntándolo.
+        </div>
+        
+	</div>
+	<div class="pie" title="Logo Junta de Andalucía, Consejería de Innovación, Ciencia y Empresa">
+        Para más información puede consultar la siguiente dirección: <a 
+            href="http://www.guadalinex.org/guadapedia/index.php/Hermes">http://www.guadalinex.org/guadapedia/index.php/Hermes</a></span</div>
+</div>
+</body>
+</html>

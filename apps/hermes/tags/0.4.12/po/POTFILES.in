@@ -1,0 +1,37 @@
+[encoding: UTF-8] 
+actors/deviceactor.py
+actors/bluetooth.py
+actors/c3pocardreader.py
+actors/camera.py
+actors/network.py
+actors/ipod.py
+actors/pcmcia.py
+actors/usbdevice.py
+actors/usbmouse.py
+actors/usbprinter.py
+actors/usbscanner.py
+actors/usbwebcam.py
+actors/volume.py
+actors/g3gpcmcia.py
+actors/wifinetwork.py
+actors/dvb.py
+actors/dvbfw.py
+actors/usbjoystick.py
+actors/sdcard.py
+actors/usbtablet.py
+actors/usbkeyboard.py
+coldassistant/app.py
+coldassistant/devicelist.py
+coldassistant/ui.glade
+tests/test_bluetooth.py
+tests/test_notify.py
+utils/captureloggui.glade
+utils/hermes_notifier.py
+utils/synaptic.py
+utils/sudo.py
+hermes_hardware.py
+# files added by intltool-prepare
+hermesdruid.desktop.in
+hcoldassistant.desktop.in
+debian/hermeshardware/usr/share/applications/hermesdruid.desktop.in
+debian/hermeshardware/usr/share/applications/hcoldassistant.desktop.in

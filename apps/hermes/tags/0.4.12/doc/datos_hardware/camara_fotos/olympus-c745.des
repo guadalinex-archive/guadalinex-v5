@@ -1,0 +1,10 @@
+signal sender=:1.0 -> dest=(null destination) interface=org.freedesktop.Hal.Manager; member=DeviceRemoved
+ string "/org/freedesktop/Hal/devices/usb_device_7b4_105_000304732949_if0_scsi_host_scsi_device_lun0"
+signal sender=:1.0 -> dest=(null destination) interface=org.freedesktop.Hal.Manager; member=DeviceRemoved
+ string "/org/freedesktop/Hal/devices/usb_device_7b4_105_000304732949_if0_scsi_host"
+signal sender=:1.0 -> dest=(null destination) interface=org.freedesktop.Hal.Manager; member=DeviceRemoved
+ string "/org/freedesktop/Hal/devices/usb_device_7b4_105_000304732949_if0"
+signal sender=:1.0 -> dest=(null destination) interface=org.freedesktop.Hal.Manager; member=DeviceRemoved
+ string "/org/freedesktop/Hal/devices/usb_device_7b4_105_000304732949"
+signal sender=:1.0 -> dest=(null destination) interface=org.freedesktop.Hal.Manager; member=DeviceRemoved
+ string "/org/freedesktop/Hal/devices/storage_model_C745UZ"

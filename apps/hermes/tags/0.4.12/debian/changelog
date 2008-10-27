@@ -1,0 +1,264 @@
+hermeshardware (0.4.12) hardy; urgency=low
+
+  * Disable actions on USB Printer devices
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Fri, 24 Oct 2008 12:56:42 +0100
+
+hermeshardware (0.4.11) hardy; urgency=low
+
+  * Disable actions on 3G devices
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Mon, 22 Sep 2008 08:53:21 +0100
+
+hermeshardware (0.4.10) hardy; urgency=low
+
+  * Installs language-pack-kde-es on kaffeine installing by dvb actor
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Fri, 19 Sep 2008 10:54:43 +0100
+
+hermeshardware (0.4.9) hardy; urgency=low
+
+  * Fixed USB DVB-T actor for link to V5 URL help webpage
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Mon, 10 Jun 2008 18:02:11 +0100
+
+hermeshardware (0.4.8) hardy; urgency=low
+
+  * New hermes feature: an actor can disable other actors on polling phase
+  * Added joystick product_id to usbjoystick actor
+  * Improved usbjoystick, usbmouse, usbkeyboard actors
+  * Added python-apt, synaptic as dependences and xsltproc as build-dependence
+  * HermesDruid uses xdg-user-dirs to fetch the right Desktop user directory
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Mon, 09 Jun 2008 13:10:22 +0100
+
+hermeshardware (0.4.7) hardy; urgency=low
+
+  * Adapted docs to v5
+  * New variable on DeviceActor for easily change "Use device" button title
+  * Added new actors: USB Joystick, USB Keyboard, SD Card, Graphics Tablet
+  * Improved USB Mouse and iPod actor
+  * Fixed dvbfw to avoid some errors
+  * DVB-actor require to run kaffeine in DVB mode
+  * Bluetooth actor runs bluetooth-properties
+  * Several debian-package bugfixes
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Sat, 31 May 2008 22:12:23 +0100
+
+hermeshardware (0.4.6) hardy; urgency=low
+
+  * Added hermes.desktop to launch the application at session start.
+  * Modified get-username-way on smartcard-reader actors
+  * Bugfix installing cheese instead camorama
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Wed, 28 May 2008 15:59:01 +0100
+
+hermeshardware (0.4.5) hardy; urgency=low
+
+  * Exceptions controlled on synaptic calls
+  * Usbwebcam actors now installs and runs cheese instead camorama
+  * Added gspca as detectable webcam driver by usbwebcam actor
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Wed, 23 Apr 2008 12:25:54 +0100
+
+hermeshardware (0.4.4) hardy; urgency=low
+
+  * Removed every #!/usr/bin/python from actors and other non-script python
+    files
+  * Fixed some bugs on debian package
+  * Updated bluetooth devices associated actions: Use bluetooth-applet instead
+    gnome-obex-server
+  * Modified volume::CertificateListener to seek certificates in other devices
+    than usbdisks 
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Wed, 9 Apr 2008 12:48:10 +0100
+
+hermeshardware (0.4.3) lobo; urgency=low
+
+  * Initial Guadalinex v5 version: fixed some dependences to make it work
+    with gv5.
+
+ -- Roberto C. Morano Vazquez <rcmorano@emergya.es>  Tue, 8 Apr 2008 13:17:20 +0100
+
+hermeshardware (0.4.2) feisty; urgency=low
+
+  * Added checking for the automount medias Gconf key at the cdrommount.py
+    actor
+
+ -- Juanje Ojeda Croissier <jojeda@emergya.es>  Wed, 14 Nov 2007 12:27:12 +0200
+
+hermeshardware (0.4.1) feisty; urgency=low
+
+  * Added new actor for automount data cdroms and dvds
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Wed, 7 Nov 2007 19:10:33 +0200
+
+hermeshardware (0.4) feisty; urgency=low
+
+  * Included all gv4 and ggv4 concrete actors
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Thu, 30 Aug 2007 10:34:33 +0200
+
+hermeshardware (0.3.14) feisty; urgency=low
+
+  * Added support for omnikey card reader 
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Mon, 13 Aug 2007 11:52:31 +0200
+
+hermeshardware (0.3.13) unstable; urgency=low
+
+  * Fixed problem with USB printers.
+
+ -- Carlos Parra Camargo <cparra@emergya.es>  Wed, 11 Apr 2007 19:22:31 +0200
+
+hermeshardware (0.3.12) unstable; urgency=low
+
+  * Fixed problem with i18n support. 
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Mon, 19 Mar 2007 12:44:21 +0100
+
+hermeshardware (0.3.11) unstable; urgency=low
+
+  * Fixed some problems with 3g actors (the pkg name was wrong)
+
+ --  <rmartin@emergya.es>  Fri,  2 Mar 2007 04:39:18 +0100
+
+hermeshardware (0.3.10) unstable; urgency=low
+
+  * Modifying TDT URL
+
+ --  <rmartin@emergya.es>  Tue, 27 Feb 2007 00:50:19 +0100
+
+hermeshardware (0.3.9) unstable; urgency=low
+
+  * TDT without firmware support.
+  * Basic support for Wifi network cards.
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Mon, 26 Feb 2007 13:35:56 +0100
+
+hermeshardware (0.3.8) unstable; urgency=low
+
+  * Added g3g actor for 3G devices.
+  * Disable usbdevice actor.
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Thu, 22 Feb 2007 16:49:53 +0100
+
+hermeshardware (0.3.7-1) unstable; urgency=low
+
+  * Added hermeshardware-actors package.
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Thu, 22 Feb 2007 14:19:20 +0100
+
+hermeshardware (0.3.7) unstable; urgency=low
+
+  * 
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Tue, 20 Feb 2007 22:00:45 +0100
+
+hermeshardware (0.3.5) unstable; urgency=low
+
+  * Coldassistants explanations. 
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Tue, 20 Feb 2007 18:57:19 +0100
+
+hermeshardware (0.3.4) unstable; urgency=low
+
+  * Added Hermes trayicon. 
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Thu, 15 Feb 2007 17:06:52 +0100
+
+hermeshardware (0.3.3) unstable; urgency=low
+
+  * Added coldassistant for connected devices. 
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Wed, 14 Feb 2007 13:31:23 +0100
+
+hermeshardware (0.3.2) unstable; urgency=low
+
+  * Added support for "Packages Actors".
+  * Added gnome flavour for packages install, using synaptic.
+  * Added stuff for rpm installation (basic features).
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Thu, 18 Jan 2007 17:11:13 +0100
+
+hermeshardware (0.3.1-1) unstable; urgency=low
+
+  * Fixed prefix problem.
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Tue, 19 Dec 2006 16:33:51 +0100
+
+hermeshardware (0.3) unstable; urgency=low
+
+  * Adding translation support.
+  * Merge branches/i18n.
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Wed, 13 Dec 2006 16:41:28 +0100
+
+hermeshardware (0.2) unstable; urgency=low
+
+  * Improve volume listeners. 
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Wed, 13 Dec 2006 16:40:36 +0100
+
+hermeshardware (0.1-8) unstable; urgency=low
+
+  * Dapper compatible
+  * -
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.es>  Wed, 13 Dec 2006 16:40:32 +0100
+
+hermeshardware (0.1-7) unstable; urgency=low
+
+  * Added hermesdruid icon.
+  * Added help in local file (html).
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.info>  Wed, 31 May 2006 13:59:10 +0200
+
+hermeshardware (0.1-6) unstable; urgency=low
+
+  * Added support for Apple iPod.
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.info>  Tue, 20 Dec 2005 11:03:16 +0100
+
+hermeshardware (0.1-5) unstable; urgency=low
+
+  * Added support for usb webcam devices.
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.info>  Wed, 23 Nov 2005 13:08:48 +0100
+
+hermeshardware (0.1-4) unstable; urgency=low
+
+  * Added support for usb scanners and usb printers. 
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.info>  Tue, 22 Nov 2005 13:44:46 +0100
+
+hermeshardware (0.1-3) unstable; urgency=low
+
+  * Added support for net devices and printers.
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.info>  Tue, 22 Nov 2005 13:44:11 +0100
+
+hermeshardware (0.1-2) unstable; urgency=low
+
+  * Added support for more devices. 
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.info>  Thu,  3 Nov 2005 09:04:04 +0100
+
+hermeshardware (0.1-1) unstable; urgency=low
+
+  * Hermes/notification-daemon init bug. 
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.info>  Wed,  2 Nov 2005 10:26:39 +0100
+
+hermeshardware (0.1) unstable; urgency=low
+
+  * Release for Guadalinex 2005 beta
+
+ -- Gumersindo Coronel Pérez <gcoronel@emergya.info>  Wed,  2 Nov 2005 10:26:25 +0100
+
+hermeshardware (0-1) unstable; urgency=low
+
+  * Initial release 
+
+ -- Carlos Parra Camargo <cparra@emergya.info>  Mon, 10 Oct 2005 09:57:39 +0200
+

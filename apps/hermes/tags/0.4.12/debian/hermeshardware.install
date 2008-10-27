@@ -1,0 +1,5 @@
+defs.py doc img utils hermes_hardware.py README coldassistant /usr/share/hermes
+hermeshardware hermesdruid hcoldassistant /usr/bin
+hermesdruid.desktop hcoldassistant.desktop /usr/share/applications/
+hermes.desktop /etc/xdg/autostart/
+
