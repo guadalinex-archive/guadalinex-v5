@@ -1,0 +1,16 @@
+#!/bin/bash
+
+MENU_LST="/boot/grub/menu.lst"
+MENU_LST_BACKUP="/boot/grub/menu.lst.gv5bak"
+
+if [ -f $MENU_LST_BACKUP ]
+then
+	cp $MENU_LST_BACKUP $MENU_LST && rm $MENU_LST_BACKUP
+fi
+
+grep "splashimage=" $MENU_LST
+if [ $? -ne 0 ]
+then
+	splashroot=$(grep -A 1 -m 1 "Guadalinex V5" /boot/grub/menu.lst|grep root|awk '{print $2}')
+	sed -i "s|End Default Options ##|End Default Options ##\nsplashimage=$splashroot/boot/grub/splash.xpm.gz|g" /boot/grub/menu.lst
+fi

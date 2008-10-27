@@ -1,7 +1,10 @@
 #!/bin/bash
 
 MENU_LST="/boot/grub/menu.lst"
+MENU_LST_BACKUP="/boot/grub/menu.lst.gv5bak"
 
-test -f $MENU_LST && rm -f $MENU_LST
-test -f /boot/grub/menu.lst.gv5 && rm -f /boot/grub/menu.lst.gv5
-update-grub -y
+if [ -f $MENU_LST ]
+then
+	sed -i 's/^splashimage.*//g' $MENU_LST
+fi
+
