@@ -138,6 +138,7 @@ informe-diagnostico
 jockey-gtk
 language-pack-es
 language-pack-es-base
+language-pack-gnome-es
 lftp
 libbluetooth2
 libdvdcss2
@@ -150,6 +151,7 @@ libgnomevfs2-extra
 libpam-gnome-keyring
 libsasl2-modules
 libxp6
+localepurge
 metacity
 mount-systray
 mozilla-plugin-vlc
