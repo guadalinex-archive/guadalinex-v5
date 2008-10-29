@@ -1,0 +1,23 @@
+#!/bin/sh -e
+#Provides all mythbuntu questions asked by
+#ubiquity during install process
+# Written by Mario Limonciello <superm1@ubuntu.com>
+# Copyright (C) 2007 Mario Limonciello
+# Copyright (C) 2007 Jared Greenwald
+
+. /usr/share/debconf/confmodule
+
+#detemine plugins
+db_input high mythbuntu/mytharchive || true
+db_input high mythbuntu/mythbrowser || true
+db_input high mythbuntu/mythcontrols || true
+db_input high mythbuntu/mythflix || true
+db_input high mythbuntu/mythgallery || true
+db_input high mythbuntu/mythgame || true
+db_input high mythbuntu/mythmovies || true
+db_input high mythbuntu/mythmusic || true
+db_input high mythbuntu/mythnews || true
+db_input high mythbuntu/mythphone || true
+db_input high mythbuntu/mythvideo || true
+db_input high mythbuntu/mythweather || true
+db_input high mythbuntu/mythweb || true

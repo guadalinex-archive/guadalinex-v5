@@ -1,0 +1,2805 @@
+localechooser (1.42ubuntu5) hardy; urgency=low
+
+  * Don't assume that /etc/lsb-release is valid shell (LP: #214861).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 10 Apr 2008 00:35:24 +0100
+
+localechooser (1.42ubuntu4) hardy; urgency=low
+
+  * Allow preseeding of debian-installer/language (LP: #85162).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sun, 06 Apr 2008 13:46:16 +0100
+
+localechooser (1.42ubuntu3) hardy; urgency=low
+
+  * If OVERRIDE_SHOW_ALL_LANGUAGES is set in the environment, display all
+    languages regardless of frontend (LP: #202291).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 17 Mar 2008 20:07:38 +0000
+
+localechooser (1.42ubuntu2) hardy; urgency=low
+
+  * Drop build dependency on python-xml.
+  * iso3166tab.py: Include ErrorPrinter and DefaultHandler from obsolete
+    saxutils.py
+
+ -- Matthias Klose <doko@ubuntu.com>  Fri, 29 Feb 2008 16:45:05 +0000
+
+localechooser (1.42ubuntu1) hardy; urgency=low
+
+  * Resynchronise with Debian. Remaining changes:
+    - Add a localechooser-data package containing lists useful for packages
+      that create automatic installation scripts.
+    - Always support English, unless preseeded otherwise.
+    - Check whether the language has changed after asking the country
+      question, and recalculate a number of things if so.
+    - Drop fallbacks for Norwegian Bokmål and Nynorsk.
+    - Simplify use of locale-gen using the new command-line argument
+      facility in Ubuntu's locales package.
+    - Move Portuguese above Portuguese (Brazil) in languagelist.l10n.
+    - Add encoding field to languagelist file and use the full SUPPORTED
+      file rather than SUPPORTED-short.
+    - If the language question was already marked as seen and the answer
+      didn't change, then don't recalculate the locale.
+  * Set Vcs-Bzr for Ubuntu.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 27 Nov 2007 12:24:59 +0000
+
+localechooser (1.42) unstable; urgency=low
+
+  * Since /etc/default/locale is now a conffile provided by locales,
+    sed changes into it rather than overwriting. (Fall back to writing to the
+    file if necessary.)
+
+  [ Updated translations ]
+  * Belarusian (be.po) by Hleb Rubanau
+  * Bulgarian (bg.po) by Damyan Ivanov
+  * Bengali (bn.po) by Jamil Ahmed
+  * Catalan (ca.po) by Jordi Mallach
+  * Czech (cs.po) by Miroslav Kure
+  * Esperanto (eo.po) by Serge Leblanc
+  * Spanish (es.po) by Javier Fernández-Sanguino Peña
+  * Galician (gl.po) by Jacobo Tarrio
+  * Hebrew (he.po) by Lior Kaplan
+  * Hungarian (hu.po) by SZERVÁC Attila
+  * Italian (it.po) by Stefano Canepa
+  * Korean (ko.po) by Sunjae Park
+  * Lithuanian (lt.po) by Kęstutis Biliūnas
+  * Nepali (ne.po) by Nabin Gautam
+  * Dutch (nl.po) by Frans Pop
+  * Norwegian Nynorsk (nn.po) by Håvard Korsvoll
+  * Polish (pl.po) by Bartosz Fenski
+  * Portuguese (Brazil) (pt_BR.po) by Felipe Augusto van de Wiel (faw)
+  * Portuguese (pt.po) by Miguel Figueiredo
+  * Romanian (ro.po) by Eddy Petrișor
+  * Russian (ru.po) by Yuri Kozlov
+  * Slovak (sk.po) by Peter Mann
+  * Albanian (sq.po) by Elian Myftiu
+  * Tamil (ta.po) by Dr.T.Vasudevan
+  * Vietnamese (vi.po) by Clytie Siddall
+
+ -- Christian Perrier <bubulle@debian.org>  Thu, 01 Nov 2007 08:54:49 +0100
+
+localechooser (1.41) unstable; urgency=low
+
+  [ Frans Pop ]
+  * Change continents prefix to correct characters in Vietnamese translation.
+    Closes: #432339.
+
+  [ Christian Perrier ]
+  * Set the Bulgarian, Esperanto, Georgian and (commented) Kazakh
+    to use UTF-8
+  * Unconditionnally set debian-installer/charmap to UTF-8 for
+    console-setup purposes.
+  * TF region moved to Indian Ocean. Remaining of #426890
+  * Create a region named "Atlantic Ocean". Put Bouvet Island, Falkland
+    Islands, South Georgia and South Sandwich and Saint-Helena in there.
+    Iceland remains in Europe and Greenland as well.
+  * Change the default kbd encoding for Bulgarian to "utf8"
+  * Change the console settings for (commented) Kazakh to
+    "CyrAsia-Terminus16(utf8)"
+
+  [ Jérémy Bobbio ]
+  * Prevent grep to exit with an error when country2code is called with a
+    region as argument in localechooser.
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 21 Jul 2007 08:38:53 +0200
+
+localechooser (1.40) unstable; urgency=low
+
+  [ Christian Perrier ]
+  * Add the new Serbia and Montenegro entries to Europe.
+    Remove the former entry for "Serbia and Montenegro".
+    Thanks to Piotr Engelking for the patch. Closes: #426821
+  * Correct misplaced countries.
+    Thanks to Piotr Engelking for the patch. Closes: #426890
+
+  [ Colin Watson ]
+  * Rewrite some inefficient if blocks that can be done in a single
+    assignment instead.
+
+  [ Frans Pop ]
+  * Set better defaults when localechooser is run again after it has been
+    run preseeded the first time.
+  * Select language selection template before checking preseeding. This
+    allows us to preseed the correct template for the environment we're
+    working in. It also improves behavior when preseeding without setting
+    the 'seen' flag.
+  * Fix bug in code2country function.
+  * If for country selection the current (preseeded) value is not in the
+    shortlist, show the full list instead.
+
+ -- Frans Pop <fjp@debian.org>  Fri, 06 Jul 2007 00:19:06 +0200
+
+localechooser (1.39) unstable; urgency=low
+
+  * Add localized name for Armenian.
+  * Add (commented) entry for Armenian in the language list.
+  * No longer write locale settings to /etc/environment after #389466 was
+    fixed.
+
+  [ Updated translations ]
+  * Catalan (ca.po) by Jordi Mallach
+  * Basque (eu.po) by Piarres Beobide
+  * Romanian (ro.po) by Eddy Petri?or
+
+ -- Christian Perrier <bubulle@debian.org>  Mon, 21 May 2007 20:55:03 +0200
+
+localechooser (1.38ubuntu2) gutsy; urgency=low
+
+  * Backport from trunk (Christian Perrier, LP: #140931):
+    - Add the new Serbia and Montenegro entries to Europe.
+      Remove the former entry for "Serbia and Montenegro"
+      Thanks to Piotr Engelking for the patch. Closes: #426821
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 20 Sep 2007 02:30:59 +0100
+
+localechooser (1.38ubuntu1) gutsy; urgency=low
+
+  * Resynchronise with Debian. Remaining changes:
+    - Add a localechooser-data package containing lists useful for packages
+      that create automatic installation scripts.
+    - Always support English, unless preseeded otherwise.
+    - Check whether the language has changed after asking the country
+      question, and recalculate a number of things if so.
+    - Drop fallbacks for Norwegian Bokmål and Nynorsk.
+    - Simplify use of locale-gen using the new command-line argument
+      facility in Ubuntu's locales package.
+    - Move Portuguese above Portuguese (Brazil) in languagelist.l10n.
+    - Add encoding field to languagelist file and use the full SUPPORTED
+      file rather than SUPPORTED-short.
+    - If the language question was already marked as seen and the answer
+      didn't change, then don't recalculate the locale.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 15 May 2007 14:11:57 +0100
+
+localechooser (1.38) unstable; urgency=low
+
+  * Multiply menu-item-numbers by 100
+
+  [ Updated translations ]
+  * Esperanto (eo.po) by Serge Leblanc
+  * Tamil (ta.po) by Dr.T.Vasudevan
+
+ -- Joey Hess <joeyh@debian.org>  Tue, 10 Apr 2007 14:41:33 -0400
+
+localechooser (1.37ubuntu1) feisty; urgency=low
+
+  * Resynchronise with Debian. Remaining changes:
+    - Add a localechooser-data package containing lists useful for packages
+      that create automatic installation scripts.
+    - Always support English, unless preseeded otherwise.
+    - Check whether the language has changed after asking the country
+      question, and recalculate a number of things if so.
+    - Drop fallbacks for Norwegian Bokmål and Nynorsk.
+    - Simplify use of locale-gen using the new command-line argument
+      facility in Ubuntu's locales package.
+    - Move Portuguese above Portuguese (Brazil) in languagelist.l10n.
+    - Add encoding field to languagelist file and use the full SUPPORTED
+      file rather than SUPPORTED-short.
+    - If the language question was already marked as seen and the answer
+      didn't change, then don't recalculate the locale.
+  * Set Maintainer to ubuntu-installer@lists.ubuntu.com.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue,  6 Mar 2007 10:41:47 +0000
+
+localechooser (1.37) unstable; urgency=low
+
+  [ Christian Perrier ]
+  * Fix default for shortlists from locale preseeding. Closes: #411082.
+  * Change the localized name for Finnish to "Suomi". Closes: #410354
+
+  [ Updated translations ]
+  * Hebrew (he.po) by Lior Kaplan
+  * Swedish (sv.po) by Daniel Nylander
+
+ -- Frans Pop <fjp@debian.org>  Wed, 21 Feb 2007 14:19:36 +0100
+
+localechooser (1.36) unstable; urgency=low
+
+  * Parameter for hands-off installs has been changed to auto-install/enable
+    for consistency with rescue.
+
+ -- Frans Pop <fjp@debian.org>  Fri,  2 Feb 2007 17:07:14 +0100
+
+localechooser (1.35) unstable; urgency=low
+
+  [ Christian Perrier ]
+  * Change localized name for Belarusian on request of translators.
+  * Disable the installation of localization-config as it is not ready for
+    production use.
+
+  [ Updated translations ]
+  * Italian (it.po) by Stefano Canepa
+  * Romanian (ro.po) by Eddy Petri?or
+
+ -- Frans Pop <fjp@debian.org>  Wed, 31 Jan 2007 11:44:21 +0100
+
+localechooser (1.34) unstable; urgency=low
+
+  * Add country names in English to the shortlists to ensure we don't display
+    only country codes if translations are unavailable. English country names
+    go in the Choices field; the Choices-C field is used for the country
+    codes. Also put the default for the shortlists in a general Default field,
+    instead of setting a language-specific default. Closes: #396109.
+
+  [ Updated translations ]
+  * Arabic (ar.po) by Ossama M. Khayat
+  * Danish (da.po) by Claus Hindsgaul
+  * Spanish (es.po) by Javier Fernández-Sanguino Peña
+  * Galician (gl.po) by Jacobo Tarrio
+  * Kurdish (ku.po) by Amed Çeko Jiyan
+  * Latvian (lv.po) by Aigars Mahinovs
+  * Panjabi (pa.po) by A S Alam
+  * Portuguese (Brazil) (pt_BR.po) by Felipe Augusto van de Wiel (faw)
+  * Portuguese (pt.po) by Miguel Figueiredo
+  * Slovenian (sl.po) by Matej Kovačič
+  * Swedish (sv.po) by Daniel Nylander
+  * Thai (th.po) by Theppitak Karoonboonyanan
+  * Turkish (tr.po) by Recai Oktaş
+
+ -- Frans Pop <fjp@debian.org>  Wed, 24 Jan 2007 02:17:05 +0100
+
+localechooser (1.33ubuntu1) feisty; urgency=low
+
+  * Resynchronise with Debian. Remaining changes:
+    - Add a localechooser-data package containing lists useful for packages
+      that create automatic installation scripts.
+    - Always support English, unless preseeded otherwise.
+    - Check whether the language has changed after asking the country
+      question, and recalculate a number of things if so.
+    - Drop fallbacks for Norwegian Bokmål and Nynorsk.
+    - Simplify use of locale-gen using the new command-line argument
+      facility in Ubuntu's locales package.
+    - Move Portuguese above Portuguese (Brazil) in languagelist.l10n.
+    - Add encoding field to languagelist file and use the full SUPPORTED
+      file rather than SUPPORTED-short.
+    - If the language question was already marked as seen and the answer
+      didn't change, then don't recalculate the locale.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 15 Dec 2006 10:34:14 +0000
+
+localechooser (1.33) unstable; urgency=low
+
+  * Switch default font used in graphical installer based on selected
+    language.
+
+  [ Updated translations ]
+  * Belarusian (be.po) by Pavel Piatruk
+
+ -- Frans Pop <fjp@debian.org>  Mon, 11 Dec 2006 23:40:46 +0100
+
+localechooser (1.32) unstable; urgency=low
+
+  [ Colin Watson ]
+  * If there's no default country for the selected language, leave the
+    default for countrychooser/country-name alone.
+
+  [ Updated translations ]
+  * Arabic (ar.po) by Ossama M. Khayat
+  * Bulgarian (bg.po) by Damyan Ivanov
+  * Kurdish (ku.po) by rizoye-xerzi
+  * Latvian (lv.po) by Aigars Mahinovs
+  * Malayalam (ml.po) by Praveen A
+  * Punjabi (pa.po) by A S Alam
+
+ -- Christian Perrier <bubulle@debian.org>  Tue,  5 Dec 2006 18:47:54 +0100
+
+localechooser (1.31) unstable; urgency=low
+
+  [ Christian Perrier ]
+  * Re-activate Georgian after it reached 100% again
+  * Activate Malayalam
+
+  [ Colin Watson ]
+  * Fix check for selected language when trying to display "no translations
+    available" template.
+
+  [ Updated translations ]
+  * Bulgarian (bg.po) by Damyan Ivanov
+  * Malayalam (ml.po) by Praveen A
+  * Punjabi (pa.po) by A S Alam
+  * Slovenian (sl.po) by Matej Kovacic
+
+ -- Christian Perrier <bubulle@debian.org>  Thu, 16 Nov 2006 08:12:21 +0100
+
+localechooser (1.30ubuntu1) feisty; urgency=low
+
+  * Resynchronise with Debian. Remaining changes:
+    - Add a localechooser-data package containing lists useful for packages
+      that create automatic installation scripts.
+    - Always support English, unless preseeded otherwise.
+    - Check whether the language has changed after asking the country
+      question, and recalculate a number of things if so.
+    - Drop fallbacks for Norwegian Bokmål and Nynorsk.
+    - Simplify use of locale-gen using the new command-line argument
+      facility in Ubuntu's locales package.
+    - Move Portuguese above Portuguese (Brazil) in languagelist.l10n.
+    - Add encoding field to languagelist file and use the full SUPPORTED
+      file rather than SUPPORTED-short.
+    - If the language question was already marked as seen and the answer
+      didn't change, then don't recalculate the locale.
+  * Drop wording change in location question. I think the wording in Debian
+    is sufficiently better now than it was back in the dawn of time when we
+    changed this that we no longer need to carry around a giant diff for all
+    the resulting translation changes.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 27 Nov 2006 13:44:11 +0000
+
+localechooser (1.30) unstable; urgency=low
+
+  * Added localized name for Amharic
+  * Re-activate Belarusian after it reached 100% again
+  [ Updated translations ]
+    * Bulgarian (bg.po) by Damyan Ivaniv
+
+ -- Christian Perrier <bubulle@debian.org>  Wed, 15 Nov 2006 06:39:26 +0100
+
+localechooser (1.29) unstable; urgency=low
+
+  * Re-activate Northern Sami to keep that option for Debian-Edu
+
+ -- Christian Perrier <bubulle@debian.org>  Sun, 29 Oct 2006 18:21:12 +0100
+
+localechooser (1.28) unstable; urgency=low
+
+  [ Christian Perrier ]
+  * Add Urdu to the localized language list (commented)
+  * Write /etc/environment again to circumvent #389466
+    This will reopen #379052
+  * Languages (hopefully temporarily) disabled because not enough complete
+    - Welsh
+    - Kazakh
+    - Northern Sami
+    - Malagasy
+    - Persian
+    - Icelandic
+    - Georgian
+
+  [ Frans Pop ]
+  * Add Lintian override for standards-version.
+  * Add myself to uploaders.
+
+  [ Updated translations ]
+  * Belarusian (be.po) by Andrei Darashenka
+  * Dzongkha (dz.po) by Jurmey Rabgay
+  * Spanish (es.po) by Javier Fernández-Sanguino Peña
+  * Hindi (hi.po) by Nishant Sharma
+  * Kurdish (ku.po) by Erdal Ronahi
+  * Nepali (ne.po) by Shiva Prasad Pokharel
+  * Romanian (ro.po) by Eddy Petri?or
+  * Tamil (ta.po) by Damodharan Rajalingam
+  * Vietnamese (vi.po) by Clytie Siddall
+
+ -- Frans Pop <fjp@debian.org>  Tue, 24 Oct 2006 15:01:11 +0200
+
+localechooser (1.27) unstable; urgency=low
+
+  [ Frans Pop ]
+  * Don't display "no translations available" template for floppy based
+    installs if selected language is English.
+
+  [ Christian Perrier ]
+  * Desactivate Irish (too incomplete translation now)
+
+  [ Updated translations ]
+  * Dzongkha (dz.po) by Jurmey Rabgay
+  * Tamil (ta.po) by Damodharan Rajalingam
+
+ -- Christian Perrier <bubulle@debian.org>  Fri, 13 Oct 2006 19:31:28 +0200
+
+localechooser (1.26) unstable; urgency=low
+
+  * Desactivate Xhosa (too incomplete translation now)
+  * Desactivate Belarusian (too incomplete translation now)
+
+  [ Updated translations ]
+  * Esperanto (eo.po) by Serge Leblanc
+  * Estonian (et.po) by Siim Põder
+  * Basque (eu.po) by Piarres Beobide
+  * Hebrew (he.po) by Lior Kaplan
+  * Hindi (hi.po) by Nishant Sharma
+  * Croatian (hr.po) by Josip Rodin
+  * Kurdish (ku.po) by Erdal Ronahi
+  * Latvian (lv.po) by Aigars Mahinovs
+
+ -- Christian Perrier <bubulle@debian.org>  Sat,  7 Oct 2006 22:15:49 +0200
+
+localechooser (1.25) unstable; urgency=low
+
+  * Warn users about temporary use of English during floppy-based installs
+    Closes: #269972, #286018
+
+  [ Updated translations ]
+    * Basque (eu.po) by Piarres Beobide
+    * Indonesian (id.po) by Arief S Fitrianto
+    * Vietnamese (vi.po) by Clytie Siddall
+
+ -- Christian Perrier <bubulle@debian.org>  Thu,  7 Sep 2006 20:21:52 +0200
+
+localechooser (1.24) unstable; urgency=low
+
+  * Do not configure console-cyrillic anymor efor languages using it
+    Closes: #384323
+
+ -- Christian Perrier <bubulle@debian.org>  Fri, 1 Sep 2006 07:27:41 +0200
+
+localechooser (1.23) unstable; urgency=low
+
+  [ Frans Pop ]
+  * Stop writing the locale to /etc/environment. Closes: #379052.
+
+  [ Christian Perrier ]
+  * Add Telugu to the localized language list (commented)
+  * Activate Gujarati in the language list
+
+  [ Philip Hands ]
+  * add isinstallable: to delay configuration if auto-install/enabled=true
+
+ -- Christian Perrier <bubulle@debian.org>  Sun, 27 Aug 2006 11:39:07 +0200
+
+localechooser (1.22) unstable; urgency=low
+
+  [ Christian Perrier ]
+  * Fix the Default field for countrychooser/country-name so that it uses
+    brackets to be different from "United States" we have elsewhere as
+    translatable string. Fixes the default choice for the long country list.
+
+ -- Frans Pop <fjp@debian.org>  Sun, 30 Jul 2006 21:29:35 +0200
+
+localechooser (1.21) unstable; urgency=low
+
+  [ Colin Watson ]
+  * Change ACM for Irish to UTF-8 to match its default locale encoding.
+  * Add Guernsey, the Isle of Man, and Jersey to regionmap.
+  * Fix mk_shortlist_templates to avoid literal "EN_DESCR" showing up in
+    templates files when countrychooser/shortlist is untranslated in the
+    associated language.
+  * Fix mktemplates.country to avoid bashisms and reliance on multiple
+    counterintuitive backslash expansions.
+  * Unregister shortlist templates before registering new ones, to ensure
+    that the question gets effectively reset. The debconf specification does
+    not say what happens when you re-register an existing template, and
+    cdebconf and debconf have different (reasonable) interpretations;
+    unregistration forces the old question to go away.
+  * Fix check-data target.
+  * Fix incorrect field ordering in Finnish languagelist line.
+
+  [ Christian Perrier ]
+  * Safe calls to validlocale and gen-locale. Closes: #379502
+
+ -- Christian Perrier <bubulle@debian.org>  Mon, 24 Jul 2006 17:55:34 +0200
+
+localechooser (1.20ubuntu8) edgy; urgency=low
+
+  * Fetch the previous language before processing preseeding, so that
+    preseeding still works properly (closes: Malone #66532).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 17 Oct 2006 12:58:44 +0100
+
+localechooser (1.20ubuntu7) edgy; urgency=low
+
+  * If the language question was already marked as seen and the answer
+    didn't change, then don't recalculate the locale (closes: Malone #63569;
+    also see Malone #60067).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon,  9 Oct 2006 10:40:02 +0100
+
+localechooser (1.20ubuntu6) edgy; urgency=low
+
+  * Remove oem-config-locale package, moved into oem-config proper.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 22 Aug 2006 16:37:08 +0100
+
+localechooser (1.20ubuntu5) edgy; urgency=low
+
+  * Ignore failures from locale-gen.
+  * Backport from trunk:
+    - Fix check-data target.
+    - Fix incorrect field ordering in Finnish languagelist line.
+  * Add encoding field to languagelist file and use the full SUPPORTED file
+    rather than SUPPORTED-short, so that we can tell that (e.g.) se_NO and
+    vi_VN are really UTF-8 locales (closes: Malone #47742).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu,  3 Aug 2006 04:55:38 +0100
+
+localechooser (1.20ubuntu4) edgy; urgency=low
+
+  * Backport from trunk:
+    - Fix mktemplates.country to avoid bashisms and reliance on multiple
+      counterintuitive backslash expansions.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 19 Jul 2006 15:59:16 +0100
+
+localechooser (1.20ubuntu3) edgy; urgency=low
+
+  * Backport from trunk:
+    - Fix mk_shortlist_templates to avoid literal "EN_DESCR" showing up in
+      templates files when countrychooser/shortlist is untranslated in the
+      associated language.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sun, 16 Jul 2006 13:07:52 +0100
+
+localechooser (1.20ubuntu2) edgy; urgency=low
+
+  * Ignore errors while unregistering shortlist templates (e.g. not
+    previously registered).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 13 Jul 2006 14:52:50 +0100
+
+localechooser (1.20ubuntu1) edgy; urgency=low
+
+  * Resynchronise with Debian.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 10 Jul 2006 16:30:37 +0100
+
+localechooser (1.20) unstable; urgency=low
+
+  [ Christian Perrier ]
+  * Add localized name for Malay
+  * Add (commented) entry for Malay
+  * Add localized name for Marathi
+  * Add (commented) entry for Marathi
+  * Switch Russian console to UTF-8 on the installed system
+    Closes: #376414
+  * Removed Standards-Version in control. Not meaningful for udebs
+
+  [ Colin Watson ]
+  * Put debhelper in Build-Depends rather than in Build-Depends-Indep.
+  * Remove some dead code in locale2langname.
+  * Never select C when preseeding debian-installer/locale=en_*.
+  * Fix handling of debian-installer/locale preseeding to cope with
+    languages that only have ll_CC in shortlists.
+  * Fix bashism in mkshort leading to incorrect contents of shortlist
+    templates when /bin/sh is dash.
+
+ -- Christian Perrier <bubulle@debian.org>  Sat,  8 Jul 2006 08:12:49 +0200
+
+localechooser (1.19ubuntu1) edgy; urgency=low
+
+  * Resynchronise with Debian.
+  * Unregister shortlist templates before registering new ones, to ensure
+    that the question gets effectively reset. The debconf specification does
+    not say what happens when you re-register an existing template, and
+    cdebconf and debconf have different (reasonable) interpretations;
+    unregistration forces the old question to go away. This replaces
+    previous hacks done for the benefit of oem-config.
+  * Restore build-dependency on dash | ash, as dash is in Ubuntu's base
+    system again.
+  * Drop Default-$LANG.UTF-8: -> Default: shortlist template change, which
+    is no longer needed thanks to the unregistration fix above.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 10 Jul 2006 12:12:31 +0100
+
+localechooser (1.19) unstable; urgency=low
+
+  * Rename prebaseconfig progress template.
+
+ -- Joey Hess <joeyh@debian.org>  Wed,  7 Jun 2006 22:04:00 -0400
+
+localechooser (1.18) unstable; urgency=low
+
+  * Rename the prebaseconfig script to "finish-install" and install
+    it to /usr/lib/finish-install.d
+
+  [ Updated translations ]
+  * Lithuanian (lt.po) by Kestutis Biliūnas
+
+ -- Christian Perrier <bubulle@debian.org>  Mon,  5 Jun 2006 15:01:16 +0700
+
+localechooser (1.17) unstable; urgency=low
+
+  * Activate Georgian in the language list
+
+  [ Updated translations ]
+  * Arabic (ar.po) by Ossama M. Khayat
+  * Catalan (ca.po) by Jordi Mallach
+  * Basque (eu.po) by Piarres Beobide
+  * Georgian (ka.po) by Aiet Kolkhi
+  * Khmer (km.po) by Khoem Sokhem
+  * Northern Sami (se.po) by Børre Gaup
+
+ -- Christian Perrier <bubulle@debian.org>  Sun, 28 May 2006 16:12:44 +0200
+
+localechooser (1.16) unstable; urgency=low
+
+  * Activate Nepali in the language list
+
+ -- Christian Perrier <bubulle@debian.org>  Thu, 18 May 2006 17:16:51 -0500
+
+localechooser (1.15) unstable; urgency=low
+
+  [ Christian Perrier ]
+  * Add Valencian-Catalan to the languagelist (commented). Closes: #362502
+  * Use critical priority for language and country questions. Closes: #367080
+
+  [ Joey Hess ]
+  * Remove some unnecessary logging of success and debug logging.
+  * Discard locale-gen stdout.
+
+ -- Christian Perrier <bubulle@debian.org>  Mon, 15 May 2006 07:45:03 -0500
+
+localechooser (1.14) unstable; urgency=low
+
+  [ Christian Perrier ]
+  * Use new "flag" comment feature of po-debconf to avoid "${SHORTLIST}" to
+    be included in translation files
+
+  [ Frans Pop ]
+  * Old-style options for head/tail are no longer supported by new busybox.
+  * Write locale to /etc/default/locale in /target instead of d-i environment.
+
+ -- Christian Perrier <bubulle@debian.org>  Fri,  5 May 2006 15:38:51 +0200
+
+localechooser (1.13) unstable; urgency=low
+
+  [ Joey Hess ]
+  * Fix inverted entry for Dzongkha in languagelist.l10n.
+  * debian-installer/fallbacklocale question is internal use only, so
+    don't mark translatable.
+  * Remove unused debian-installer/invalidlocale template.
+
+ -- Christian Perrier <bubulle@debian.org>  Thu, 27 Apr 2006 20:45:15 +0200
+
+localechooser (1.12) unstable; urgency=low
+
+  [ Christian Perrier ]
+  * Activate Thai as a supported language
+
+  [ Updated translations ]
+    * Thai (th.po) by Theppitak Karoonboonyanan
+
+ -- Christian Perrier <bubulle@debian.org>  Mon, 17 Apr 2006 20:09:56 +0200
+
+localechooser (1.11) unstable; urgency=low
+
+  * Change the searched field in local2langname to have locale
+    preseeding work again. Closes: #362427
+
+ -- Christian Perrier <bubulle@debian.org>  Thu, 13 Apr 2006 13:53:41 +0200
+
+localechooser (1.10) unstable; urgency=low
+
+  * Set French as backup for Wolof on translator's request
+  * Activate Dzongkha as a supported language
+
+ -- Christian Perrier <bubulle@debian.org>  Tue, 11 Apr 2006 13:59:49 +0200
+
+localechooser (1.09) unstable; urgency=low
+
+  [ Christian Perrier ]
+  * Add Thai to the list of languages (commented)
+  * Write locale data to both /etc/environment and /etc/default/locale
+    to cope with changes in locales
+  * No more install belocs-locales-* for Kurdish and Sanskrit as these
+    locales are now in locales
+
+  [ Updated translations ]
+  * Added Northern Sami by Børre Gaup
+
+ -- Christian Perrier <bubulle@debian.org>  Fri,  7 Apr 2006 09:07:19 +0200
+
+localechooser (1.08) unstable; urgency=low
+
+  * Fix mkshort to better fix languages with more than one territory
+    supported and avoid listing Czech in the list
+  * Get rid of the languagelist third field which was a weird way to
+    decide whether a given language should have a short list of
+    countries to display. This simplifies the languagelist file
+  * Use a more natural order for fields in the languagelist file
+
+ -- Christian Perrier <bubulle@debian.org>  Sat,  1 Apr 2006 16:35:24 +0200
+
+localechooser (1.07) unstable; urgency=low
+
+  * Only use LANGUAGELIST list of languages when really needed, ie
+    when a language needs and benefits from something else than English.
+    Should avoid reports like #356997.
+  * code2country() will now return US in case the iso_3166.tab file
+    isn't available on the system
+  * Allow country selection for Catalan. Closes: #359128
+  * Allow country selection for Greek
+
+ -- Christian Perrier <bubulle@debian.org>  Tue, 28 Mar 2006 14:33:10 +0200
+
+localechooser (1.06) unstable; urgency=low
+
+  * Add "../countrylist" in debian/po/POTFILES.in to make the region
+    names translatable again. Old translations from countrychooser
+    are grabbed back from it in the master files
+  * Remove the hacked intltool-merge and use new "flag:partial"
+    functionnality of po-debconf to allow partially translated
+    country lists
+  * Remove comments inside the default value for country name and code
+    Fix for a possible po2debconf bug but this is a good occasion to
+    remove this cruft anyway and use normal comments
+    Closes: #358097
+  * Activate Irish in the languagelist
+  * Add Dzongkha to the list of languages (commented)
+
+  [ Updated translations ]
+  * Danish (da.po) by Claus Hindsgaul
+  * Esperanto (eo.po) by Serge Leblanc
+  * Spanish (es.po) by Javier Fernández-Sanguino Peña
+  * Basque (eu.po) by Piarres Beobide
+  * French (fr.po) by Christian Perrier
+  * Irish (ga.po) by Kevin Patrick Scannell
+  * Galician (gl.po) by Jacobo Tarrio
+  * Japanese (ja.po) by Kenshi Muto
+  * Khmer (km.po) by hok kakada
+  * Macedonian (mk.po) by Georgi Stanojevski
+  * Dutch (nl.po) by Bart Cornelis
+  * Polish (pl.po) by Bartosz Fenski
+  * Portuguese (Brazil) (pt_BR.po) by André Luís Lopes
+  * Portuguese (pt.po) by Miguel Figueiredo
+  * Swedish (sv.po) by Daniel Nylander
+  * Tagalog (tl.po) by Eric Pareja
+  * Simplified Chinese (zh_CN.po) by Carlos Z.F. Liu
+
+ -- Christian Perrier <bubulle@debian.org>  Sun, 26 Mar 2006 22:44:39 +0200
+
+localechooser (1.05) unstable; urgency=low
+
+  * Punjabi is now referenced as "pa" so adapt its line in languagelist
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 18 Mar 2006 18:50:14 +0100
+
+localechooser (1.04) unstable; urgency=low
+
+  [ Colin Watson ]
+  * locale2langname: If there are multiple matches for a given language
+    code, try matching the country as well; improves handling of preseeding
+    for Portuguese and Chinese.
+  * post-base-installer: Don't clobber existing contents of
+    /etc/environment, in case some package in the base system starts putting
+    things there.
+
+  [ Christian Perrier ]
+  * Add localized name for Lao
+  * Add Lao to the list of languages (commented)
+  * Set locale environment to POSIX for languages that cannot be displayed
+    at the Linux console. Languages categories are now 1 to 4.
+    Closes: #243404, #263575
+  * Add localized name for Dzongkha
+  * Add Dzongkha to the list of languages (commented)
+  * All languages now switched to UTF-8 (both Chinese, Russian,
+    commented Irish)
+  * Activate Khmer and Tamil
+
+  [ Frans Pop ]
+  * Use iso3166tab.py to generate iso_3166.tab from iso_3166.xml instead of
+    using obsoleted .tab file from iso-codes package (closes: #302111).
+  * get-iso-codes: remove redundant check if iso-codes package is installed;
+    we do build-depend on it after all.
+  * Add template to set info box during babelbox demo runs. Does not really
+    belong in localechooser, but this is the best place for it.
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 11 Mar 2006 17:18:05 +0100
+
+localechooser (1.03) unstable; urgency=low
+
+  [ Changwoo Ryu ]
+  * Default to UTF-8 for Korean.
+  * en_US is prefered over en_GB for Korean.
+
+  [ Updated translations ]
+  * Catalan (ca.po) by Jordi Mallach
+  * Greek, Modern (1453-) (el.po) by Konstantinos Margaritis
+  * Basque (eu.po) by Piarres Beobide
+  * Lithuanian (lt.po) by Kęstutis Biliūnas
+  * Malagasy (mg.po) by Jaonary Rabarisoa
+  * Bokmål, Norwegian (nb.po) by Bjørn Steensrud
+  * Punjabi (Gurmukhi) (pa_IN.po) by Amanpreet Singh Alam
+  * Portuguese (Brazil) (pt_BR.po) by André Luís Lopes
+  * Romanian (ro.po) by Eddy Petrişor
+  * Slovenian (sl.po) by Jure Cuhalev
+  * Albanian (sq.po) by Elian Myftiu
+  * Ukrainian (uk.po) by Eugeniy Meshcheryakov
+  * Vietnamese (vi.po) by Clytie Siddall
+
+ -- Christian Perrier <bubulle@debian.org>  Tue, 24 Jan 2006 22:02:30 +0100
+
+localechooser (1.02) unstable; urgency=low
+
+  * Change the default locale for Esperanto to eo as planned
+    by the locales maintainers
+  * Change the name of console-terminus fonts for languages using them
+  * Change prebaseconfig to install console-terminus when the consolefont
+    name contains "Terminus"
+
+ -- Christian Perrier <bubulle@debian.org>  Thu, 12 Jan 2006 20:26:04 +0100
+
+localechooser (1.01) unstable; urgency=low
+
+  [ Christian Perrier ]
+  * Correct the entry for Esperanto
+
+  [ Updated translations ]
+  * Bulgarian (bg.po) by Ognyan Kulev
+  * Indonesian (id.po) by Parlin Imanuel Toh
+  * Slovak (sk.po) by Peter Mann
+  * Turkish (tr.po) by Recai Oktaş
+  * Traditional Chinese (zh_TW.po) by Tetralet
+
+ -- Christian Perrier <bubulle@debian.org>  Wed, 11 Jan 2006 06:44:22 +0100
+
+localechooser (1.0) unstable; urgency=low
+
+  [ Updated translations ]
+  * German (de.po) by Jens Seidel
+  * Finnish (fi.po) by Tapio Lehtonen
+  * Italian (it.po) by Giuseppe Sacco
+  * Japanese (ja.po) by Kenshi Muto
+  * Korean (ko.po) by Sunjae park
+  * Polish (pl.po) by Bartosz Fenski
+  * Simplified Chinese (zh_CN.po) by Ming Hua
+
+  [ Christian Perrier ]
+  * Bump version to 1.0 as localechooser is fairly stable now
+  * Re-add some code to install the bterm-unifont package
+    which brings a complete unifont font for later steps of d-i
+    Closes: #346339
+
+ -- Christian Perrier <bubulle@debian.org>  Sat,  7 Jan 2006 07:42:33 +0100
+
+localechooser (0.28) unstable; urgency=low
+
+  [ Frans Pop ]
+  * Move code to check preseeding to separate function.
+  * During preseeding checks, make sure we don't match on partial matches.
+  * Only do preseeding checks the first time localechooser is being run.
+    Closes: #343495
+  * Make sure locale2langname only returns one language name; move Portuguese
+    up in the languagelist so it is prefered over Brazillian.
+  * Unset seen flag for debian-installer/locale if it was preseeded with an
+    invalid locale.
+
+  [ Joey Hess ]
+  * Remove unused pkginstall function.
+  * Don't apt-install iso-codes, base-config apt-setup used this, but it has
+    been replaced.
+  * Stop installing jfbterm, unifont, which were only used by base-config,
+    which is being removed.
+  * Stop installing bterm-unifont, not even used by base-config.
+  * Removed two minor base-config references, left one.
+
+  [ Christian Perrier ]
+  * Add localized name and (commented) languagelist entry for Nepali
+  * Generate the installed languagelist file from the original one
+    by removing comments. This saves 1.5k
+  * Move the languagelist file to /usr/share/localechooser. Let's make
+    things clean even if we don't really care.
+
+  [ Colin Watson ]
+  * Add a comment to the top of languagelist explaining what the fields
+    mean.
+  * Drop obsolete comment about English and Swedish @euro locale modifiers.
+  * Drop unnecessary "in Debian" from a couple of templates, to reduce
+    branding problems for derivatives.
+
+ -- Christian Perrier <bubulle@debian.org>  Wed,  4 Jan 2006 10:24:37 +0100
+
+localechooser (0.27ubuntu22) dapper; urgency=low
+
+  * Fix handling of debian-installer/locale preseeding to cope with
+    languages that only have ll_CC in shortlists (closes: Malone #43911).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 30 May 2006 23:13:02 +0100
+
+localechooser (0.27ubuntu21) dapper; urgency=low
+
+  * oem-config/locale: Fix /etc/environment modification to avoid
+    accidentally clobbering other variables (closes: Malone #40328).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 24 May 2006 11:22:02 +0100
+
+localechooser (0.27ubuntu20) dapper; urgency=low
+
+  * Change button order in oem-config's glade file. Malone #40226.
+
+ -- Tollef Fog Heen <tfheen@ubuntu.com>  Mon, 15 May 2006 12:25:21 +0200
+
+localechooser (0.27ubuntu19) dapper; urgency=low
+
+  * Stop running locale-gen on live CDs and in oem-config when changing
+    language. localedef is extremely memory-hungry, and it turns out that
+    it's possible to get correct debconf translations (which is all we
+    actually care about) by setting LANGUAGE instead (closes: Malone
+    #43071).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 12 May 2006 15:20:23 +0100
+
+localechooser (0.27ubuntu18) dapper; urgency=low
+
+  * Set default $LANGUAGE for English installs to just "en" rather than
+    "en_US:en_GB:en" (it will be prefixed with the appropriate en_* for the
+    selected country), since fallbacks from American to British English and
+    vice versa are too annoying (closes: Malone #10822). Previously fixed in
+    localechooser 0.04.0ubuntu9, but lost in localechooser 0.22ubuntu1.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed,  3 May 2006 10:36:40 +0100
+
+localechooser (0.27ubuntu17) dapper; urgency=low
+
+  * Use vi_VN (which is UTF-8) rather than the non-existent vi_VN.UTF-8 for
+    Vietnamese (bug misfiled as a comment in Malone #42260).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue,  2 May 2006 20:13:35 +0100
+
+localechooser (0.27ubuntu16) dapper; urgency=low
+
+  * Set Thai console font to tis-phaisarn.f16 (closes: Malone #35022).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 13 Apr 2006 15:14:39 +0100
+
+localechooser (0.27ubuntu15) dapper; urgency=low
+
+  * Guard locale-gen calls to make sure that we don't try to call locale-gen
+    with C or with an empty argument list, neither of which will work as
+    desired.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 12 Apr 2006 17:00:58 +0100
+
+localechooser (0.27ubuntu14) dapper; urgency=low
+
+  * Never select C when preseeding debian-installer/locale=en_*.
+  * Set countrychooser/shortlist as well as countrychooser/shortlist-$LANG;
+    debconf doesn't always take the default value of a question from its
+    registered template.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 12 Apr 2006 14:26:03 +0100
+
+localechooser (0.27ubuntu13) dapper; urgency=low
+
+  * Remove espresso-locale package, moved into espresso proper.
+  * Re-enable country name sorting for Turkish now that the tr_TR locale has
+    been fixed.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed,  5 Apr 2006 15:51:23 +0100
+
+localechooser (0.27ubuntu12) dapper; urgency=low
+
+  * Update Portuguese translation from Rosetta.
+  * Add Thai (thanks, Theppitak Karoonboonyanan; closes: Malone #35022).
+  * Allow country selection for Catalan (thanks, Robert Millan; closes:
+    Malone #37007).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sat,  1 Apr 2006 21:15:32 +0100
+
+localechooser (0.27ubuntu11) dapper; urgency=low
+
+  * espresso/language.py: Change values in dictionary passed to
+    frontend.set_language_choices() to be (English name, code). Requires
+    espresso (>= 0.99.30).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 17 Mar 2006 00:27:16 +0000
+
+localechooser (0.27ubuntu10) dapper; urgency=low
+
+  * Backport from trunk (Christian Perrier, closes: Malone #31722):
+    - Re-add some code to install the bterm-unifont package which brings a
+      complete unifont font for later steps of d-i
+      Closes: #346339
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu,  2 Mar 2006 11:04:01 +0000
+
+localechooser (0.27ubuntu9) dapper; urgency=low
+
+  * espresso/language.py, oem-config/locale.py: Explicitly decode strings
+    returned by debconf as UTF-8, since apparently we get confused when
+    running with the KDE frontend otherwise (which presumably does something
+    funky with Python's default encoding).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 22 Feb 2006 17:44:29 +0000
+
+localechooser (0.27ubuntu8) dapper; urgency=low
+
+  * Generate the locale immediately if locale-gen is present; improves
+    support for running localechooser on a live CD.
+  * Add a cleanup method to espresso/language.py to switch the LANG
+    environment variable according to the result of localechooser.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 21 Feb 2006 12:38:29 +0000
+
+localechooser (0.27ubuntu7) dapper; urgency=low
+
+  * Add an espresso-locale package, providing localechooser as an Espresso
+    module (only language selection for now).
+  * Fix a couple of bugs introduced into locale2langname in 0.27ubuntu5.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 21 Feb 2006 11:25:25 +0000
+
+localechooser (0.27ubuntu6) dapper; urgency=low
+
+  * post-base-installer: Don't clobber existing contents of
+    /etc/environment.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 16 Feb 2006 15:21:28 +0000
+
+localechooser (0.27ubuntu5) dapper; urgency=low
+
+  * oem-config/locale: Add /usr/lib/oem-config/locale to localechooser's
+    $PATH.
+  * locale2langname: If there are multiple matches for a given language
+    code, try matching the country as well; improves handling of preseeding
+    for Portuguese and Chinese (closes: Malone #31477).
+  * Move Portuguese above Portuguese (Brazil) in languagelist so that
+    debian-installer/locale=pt selects Portuguese.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 16 Feb 2006 13:49:20 +0000
+
+localechooser (0.27ubuntu4) dapper; urgency=low
+
+  * oem-config/locale.mnu: Update Repeat-If-Changed template names.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sat, 28 Jan 2006 10:23:39 +0000
+
+localechooser (0.27ubuntu3) dapper; urgency=low
+
+  * Remove language pack installation from here, since it doesn't work
+    properly before apt-setup in all cases; moved to pkgsel.
+  * Remove anna-install, apt-install, and udpkg oem-config compatibility
+    helpers; moved to oem-config.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 17 Jan 2006 15:35:39 +0000
+
+localechooser (0.27ubuntu2) dapper; urgency=low
+
+  * Disable country name sorting for Turkish for now, since glibc's ISO 4217
+    list is out of sync with the LC_MONETARY definition for tr_TR in locales
+    and so our build fails.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 13 Jan 2006 10:25:59 +0000
+
+localechooser (0.27ubuntu1) dapper; urgency=low
+
+  * Resynchronise with Debian.
+  * Various languagelist updates for UTF-8 consistency.
+  * Drop casper symlinks, no longer required following casper's
+    reimplementation as initramfs hooks.
+  * Drop neutralisation of some templates to apply to both the installer and
+    live CDs; the live CD no longer uses localechooser, and we never did get
+    the new text fully translated, so just drop back to Debian's versions.
+  * Put back the sorting of country names by each language's collation
+    order, since locales now provides actual locale data again.
+  * Simplify use of locale-gen using the new command-line argument facility
+    in locales (>= 2.3.7-1). Drop oem-config-locale's dependency on
+    base-config since we no longer use validlocale.
+  * Drop build-dependency on dash | ash; only check scripts if one of these
+    happens to be installed.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sun,  1 Jan 2006 18:36:38 +0000
+
+localechooser (0.27) unstable; urgency=low
+
+  * Kazakh is now supported
+
+ -- Christian Perrier <bubulle@debian.org>  Fri, 23 Dec 2005 18:32:08 +0100
+
+localechooser (0.26) unstable; urgency=low
+
+  [ Christian Perrier ]
+  * Add Khmer languagelist entry (commented)
+  * Move language-dependent packages installation to prebaseconfig.
+    Closes: #343497
+  * Install console-terminus for languages requiring it in languagielist
+    rather than hardcoding the list of languages in the prebaseconfig script.
+  * Remove the current locale from the list of locales proposed as
+    additionnal locales so that users can't uncheck it.
+    Closes: #316003
+
+  [ Colin Watson ]
+  * Move locale generation to a post-base-installer hook so that later udebs
+    such as pkgsel that chroot into /target have a working locale.
+  * Install locales (or belocs-locales-*) if localechooser/supported-locales
+    is set, as well as if the primary locale is not C.
+
+  [ Frans Pop ]
+  * Also move installation of localization-config to prebaseconfig script.
+
+ -- Christian Perrier <bubulle@debian.org>  Wed, 21 Dec 2005 22:54:22 +0100
+
+localechooser (0.25) unstable; urgency=low
+
+  [ Christian Perrier ]
+  * Remove Russian as alternative language for Belarusian
+  * Change the definition of "C". We now set the country.
+  * Console font changes:
+    - Bosnian: replace lat2-sun16 by ter-v16f
+    - Georgian: use the ka8x16thin font for the console
+    - Turkish: replace ter-916f by ter-v16f
+  * Add Khmer localized language name
+
+  [ Frans Pop ]
+  * Save some space by using tab to indent.
+  * Set language for d-i to 'en' when locale C is selected to make sure all
+    questions are "translated" to English instead of showing codes.
+  * Don't prematurely exit localechooser script when locale C is selected.
+  * Don't ask for additional locales when locale C is selected as we are not
+    installing the locales package.
+  * Improvements in script consistency and comments.
+
+ -- Christian Perrier <bubulle@debian.org>  Fri, 16 Dec 2005 17:00:15 +0100
+
+localechooser (0.24) unstable; urgency=low
+
+  * Allow choosing a country even when the locale is preset or
+    preseeded to "C". Closes: #315925
+
+ -- Christian Perrier <bubulle@debian.org>  Mon,  5 Dec 2005 22:40:24 +0100
+
+localechooser (0.23) unstable; urgency=low
+
+  [ Frans Pop ]
+  * List the "C" locale at the top of the languagelist. Closes: #315924.
+
+  [ Christian Perrier ]
+  * Better setup of localization for installs where localechooser is not
+    run at the beginning of the install process (e.g. s390).
+    Closes: #281341, #281538
+  * Set the console font for all consoles. Closes: #293635
+  * Switch all languages but a few CJK and cyrillic ones to default UTF-8
+    Consistent use of .UTF-8 modifiers (only appear in 4th fields of
+    languagelist and not 3rd field where they are useless)
+
+ -- Christian Perrier <bubulle@debian.org>  Sun, 20 Nov 2005 13:08:50 +0100
+
+localechooser (0.22ubuntu4) dapper; urgency=low
+
+  * Disable the nice sorting of country names by each language's collation
+    order for now, to avoid having to build-depend on all language packs.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 13 Dec 2005 16:28:02 +0000
+
+localechooser (0.22ubuntu3) dapper; urgency=low
+
+  * Arrange for the appropriate language pack to be installed after
+    installing the base system.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 12 Dec 2005 22:39:36 +0000
+
+localechooser (0.22ubuntu2) dapper; urgency=low
+
+  * Update oem-config handling to check $langname_all rather than $langname.
+  * Make oem-config hooks executable.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 15 Nov 2005 18:16:27 +0000
+
+localechooser (0.22ubuntu1) dapper; urgency=low
+
+  * Resynchronise with Debian.
+    - UTF-8-ise all locales again
+    - Remove locale generation part from prebaseconfig
+    - Ship casper hooks
+    - Fix up English in templates.
+    - Ship oem-config
+
+ -- Tollef Fog Heen <tfheen@ubuntu.com>  Mon, 14 Nov 2005 16:24:51 +0100
+
+localechooser (0.22) unstable; urgency=low
+
+  * Load jfbterm and unifont for Wolof and Vietnamese which will need it
+    in 2nd stage
+
+ -- Christian Perrier <bubulle@debian.org>  Tue,  8 Nov 2005 20:45:50 +0100
+
+localechooser (0.21) unstable; urgency=low
+
+  [ Miroslav Kure ]
+  * Switch Czech and Slovak to use UTF-8 by default
+
+  [ Christian Perrier ]
+  * Change the console entry for Belarusian to use console-cyrillic
+    with proper settings. Closes: #337986
+
+ -- Christian Perrier <bubulle@debian.org>  Tue,  8 Nov 2005 20:33:26 +0100
+
+localechooser (0.20) unstable; urgency=low
+
+  * Rewrite the language selection screen to make it less
+    debconf interface-ism and use better English
+  * Activate support for Bengali
+
+ -- Christian Perrier <bubulle@debian.org>  Tue, 18 Oct 2005 08:38:17 +0200
+
+localechooser (0.19) unstable; urgency=low
+
+  [ Christian Perrier ]
+  * Add Sanskrit to languagelist (commented)
+    Use belocs-locales-data for it until it is added to locales
+  * Log the template used to input for languages
+  * Remove a useless debug statement in locale2langname()
+
+  [ Joey Hess ]
+  * Consistent indentation.
+
+  [ Frans Pop ]
+  * Use correct environment variable (DEBIAN_FRONTEND) to determine which
+    frontend is running and log this.
+
+ -- Christian Perrier <bubulle@debian.org>  Wed, 12 Oct 2005 09:45:11 +0200
+
+localechooser (0.18) unstable; urgency=low
+
+  [ Christian Perrier ]
+  * languagelist: replace a wrongly place semi-colon in the line
+                  for Italian. Closes: #255219
+  * languagelist: replace *two* wrongly place semi-colons in the line
+                  for Kurdish
+  * Add Gujarati to languagelist (commented)
+  * Add Malayalam to languagelist (commented)
+  * Add Gujarati to languagelist (commented)
+
+  [ Joey Hess ]
+  * Converted part of prebaseconfig to use log-output. Two other parts
+    remain unconverted.
+
+  [ Colin Watson ]
+  * Use log-output --pass-stdout to convert remaining parts of prebaseconfig
+    to syslogging.
+
+  * Updated translations: 
+    - Dutch (nl.po) by Bart Cornelis
+
+ -- Joey Hess <joeyh@debian.org>  Thu, 22 Sep 2005 09:25:21 +0200
+
+localechooser (0.17) unstable; urgency=low
+
+  * Add Malayalam to languagelist (commented)
+  * languagemap: always set LOCALE, FALLBACKLOCALE, LANGUAGE, COUNTRY
+                 even when they were already set before calling the script
+    Closes: #315929
+  * languagelist: correct 3rd field for Persian which only has one 
+    supported country. Closes: #278009
+  * Updated translations:
+    - Basque (eu.po) by Piarres Beobide
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 17 Sep 2005 12:10:20 +0200
+
+localechooser (0.16) unstable; urgency=low
+
+  * Implement four different lists of languages depending on
+    the interface
+  * Change the kbd= entry for French after we changed to UTF-8 default
+    after recommendation by Denis Barbier
+  * Add Tamil to languagelist (commented)
+  * Add Icelandic to languagelist (commented)
+
+ -- Christian Perrier <bubulle@debian.org>  Wed, 14 Sep 2005 22:26:16 +0200
+
+localechooser (0.15) unstable; urgency=low
+
+  * Use belocs-locales-* as an alternative to locales
+    for languages not (yet) supported in locales:
+    Kurdish
+  * French now defaults to UTF-8 after reaching some consensus
+    the French devel lists
+
+ -- Christian Perrier <bubulle@debian.org>  Mon,  5 Sep 2005 11:35:43 +0200
+
+localechooser (0.14) unstable; urgency=low
+
+  [ Christian Perrier ]
+  * Update languagelist and sync it with PROSPECTIVE. Document why
+    Sami is kept even if the translation is nearly 0%. Serbian commented
+    as we don't have any Serbian translation yet.
+  * Remove extra character for Wolof
+  * Use correct name of the script for Punjabi
+  * Add Bengali to languagelist (commented)
+  * Add Kurdish to languagelist
+    Install console-terminus for Kurdish
+    Most console settings copied from Turkish entries
+  * Add Kannada to languagelist (commented)
+  * Add Georgian to languagelist (commented)
+
+  [ Kenshi Muto ]
+  * Default to UTF-8 for Japanese.
+
+  [ Joey Hess ]
+  * Set Menu-Item-Number to 10 (9 is reserved).
+  * Remove duplicate debian-installer/country from templates.
+
+  [ Colin Watson ]
+  * Reduce use of cut and sed a bit.
+  * Separate choices by comma-space rather than just comma, to be friendlier
+    to Perl debconf.
+  * Fix quoting problem when building the list of possible locales.
+  * List pt_PT ahead of pt in LANGUAGE for Portuguese (Portugal)
+    installations, otherwise pt_BR translations get displayed in preference
+    if the pt translations are shipped as pt_PT.
+
+  [ Joey Hess ]
+  * Stop writing debootstrap_settings, dropping woody installation support.
+
+ -- Christian Perrier <bubulle@debian.org>  Sat,  3 Sep 2005 07:49:21 +0200
+
+localechooser (0.13ubuntu12) breezy; urgency=low
+
+  * Set labels in oem-config locale window to the translated descriptions of
+    the same questions in the installer (Ubuntu #17366).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 11 Oct 2005 21:45:44 +0100
+
+localechooser (0.13ubuntu11) breezy; urgency=low
+
+  * Make nb_NO.UTF8 the locale for Norwegian installs, not no_NO.UTF8.
+    Ubuntu #16780
+
+ -- Tollef Fog Heen <tfheen@ubuntu.com>  Mon,  3 Oct 2005 10:50:06 +0200
+
+localechooser (0.13ubuntu10) breezy; urgency=low
+
+  * Update French translation (thanks, Sebastien Bacher).
+  * Update Ubuntu-specific translations from Rosetta (with some strings from
+    Debian where available): Finnish, Hungarian, Indonesian, Macedonian,
+    Portuguese, Slovak, Swedish.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 30 Sep 2005 17:56:27 +0100
+
+localechooser (0.13ubuntu9) breezy; urgency=low
+
+  * Backport from trunk (Christian Perrier, closes: Ubuntu #14670):
+    - languagemap: always set LOCALE, FALLBACKLOCALE, LANGUAGE, COUNTRY
+                   even when they were already set before calling the script
+      Closes: #315929
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 20 Sep 2005 15:49:18 +0100
+
+localechooser (0.13ubuntu8) breezy; urgency=low
+
+  * oem-config/locale.glade: Set window gravity to center.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 14 Sep 2005 13:22:15 +0100
+
+localechooser (0.13ubuntu7) breezy; urgency=low
+
+  * List pt_PT ahead of pt in LANGUAGE for Portuguese (Portugal)
+    installations, otherwise pt_BR translations get displayed in preference
+    if the pt translations are shipped as pt_PT.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri,  2 Sep 2005 14:26:22 +0100
+
+localechooser (0.13ubuntu6) breezy; urgency=low
+
+  * Drop fallbacks for Norwegian bokmål and nynorsk (Ubuntu #4172)
+
+ -- Tollef Fog Heen <tfheen@ubuntu.com>  Wed, 24 Aug 2005 10:47:06 +0200
+
+localechooser (0.13ubuntu5) breezy; urgency=low
+
+  * oem-config-locale: Forcibly fetch languagechooser/language-name's list
+    of choices in English, to match how the templates file is laid out.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue,  9 Aug 2005 16:31:03 +0100
+
+localechooser (0.13ubuntu4) breezy; urgency=low
+
+  * oem-config-locale: Write the new default LANG to /etc/default/gdm too.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 29 Jul 2005 16:30:43 +0100
+
+localechooser (0.13ubuntu3) breezy; urgency=low
+
+  * oem-config-locale:
+    - Generate the new locale even when backing up out of localechooser, so
+      that the debconf frontend can be restarted under it. Yes, this does
+      mean that if you select lots of languages in turn you'll end up with a
+      huge /etc/locale.gen ...
+    - Don't reset debian-installer/locale at the end of localechooser;
+      oem-config needs the value, and will reset it itself.
+    - When changing the language, continue through localechooser until
+      localechooser/supported-locales is asked, so that
+      debian-installer/locale gets set.
+    - Check whether the language has changed after asking the country
+      question, and recalculate a number of things if so.
+    - Recover from broken debian-installer/locale settings.
+  * Just use Default: rather than Default-$LANG.UTF-8: in shortlist
+    templates, so that they can be reset without having to switch debconf's
+    locale.
+  * Set a sensible default when re-registering countrychooser/shortlist.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 29 Jul 2005 15:32:09 +0100
+
+localechooser (0.13ubuntu2) breezy; urgency=low
+
+  * Add oem-config-locale, providing localechooser as an oem-config module.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 28 Jul 2005 18:51:44 +0100
+
+localechooser (0.13ubuntu1) breezy; urgency=low
+
+  * Resynchronise with Debian.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 19 Jul 2005 17:16:30 +0100
+
+localechooser (0.13) unstable; urgency=low
+
+  [ Frans Pop ]
+  * Add default full country name for Dutch
+  * Fix changed named of target in Makefile
+  * Fix error in countrylist script when adding countries to region "other"
+  [ Christian Perrier ]
+  * Default to UTF-8 for Hebrew. Closes: #317800
+  [ Colin Watson ]
+  * Add Xhosa to the list of languages.
+
+ -- Christian Perrier <bubulle@debian.org>  Fri, 15 Jul 2005 23:16:29 +0200
+
+localechooser (0.12) unstable; urgency=low
+
+  * Rebuilt to get correct defaults for all languages
+  * Added translations: 
+    - Vietnamese (vi.po) added by Clytie Siddall
+
+ -- Christian Perrier <bubulle@debian.org>  Wed,  6 Jul 2005 14:47:09 +0200
+
+localechooser (0.11) unstable; urgency=low
+
+  * Remove whitespace after "US" in defaults, which po-debconf does not strip.
+    Really fixes English default.
+
+ -- Christian Perrier <bubulle@debian.org>  Wed,  6 Jul 2005 14:24:01 +0200
+
+localechooser (0.10) unstable; urgency=low
+
+  * Fix default country for English.
+
+ -- Joey Hess <joeyh@debian.org>  Fri,  1 Jul 2005 10:14:35 -0400
+
+localechooser (0.09) unstable; urgency=low
+
+  [ Christian Perrier ]
+  * Add Wolof to the list of languages (commented)
+  * Set per-language default countries for the short lists at build time
+    and no more at run-time
+    Closes: #275904
+  * Clean out debian/SUPPORTED-short in the clean target
+  * Install localization-config except when there is no localization
+    (C locale). Install it always for powerpc
+    Closes: #277073
+  [ Eddy Petrisor ]
+  * changed console font to ter-g16f for Romanian
+
+ -- Christian Perrier <bubulle@debian.org>  Thu, 30 Jun 2005 19:49:19 +0200
+
+localechooser (0.08) unstable; urgency=low
+
+  [ Joey Hess ]
+  * Remove some cruft, avoid a hang if the iso_3166.tab is missing.
+  * Fix display of questions if localechooser is re-run, which I broke
+    before.
+  * Make seen flags only be set on variables derived from
+    debian-installer/locale if its seen flag is set, which allows for
+    preseeding w/o seen flag setting to work also, but means that to avoid
+    the questions lowmem must set the seen flag.
+  * Clean up seen flag misuses, except for some I didn't fully understand.
+  
+  * Updated translations: 
+    - Greek, Modern (1453-) (el.po) by Greek Translation Team
+    - French (fr.po) by Christian Perrier
+    - Portuguese (pt.po) by Miguel Figueiredo
+
+ -- Joey Hess <joeyh@debian.org>  Fri, 17 Jun 2005 20:52:48 -0400
+
+localechooser (0.07) unstable; urgency=low
+
+  * Colin Watson
+    - Improve copyright file a little, thanks to lintian.
+  * Joey Hess
+    - Remove preseed/locale, support preseeding of debian-installer/locale.
+    - Update documentation of what lowmem needs to do; just preseeding
+      debian-installer/locale is sufficient.
+
+ -- Joey Hess <joeyh@debian.org>  Sat, 11 Jun 2005 14:50:31 -0400
+
+localechooser (0.06) unstable; urgency=low
+
+  * Colin Watson
+    - Add localechooser/supported-locales, asked at medium priority, to
+      allow the user to select support for extra locales in expert mode.
+  * Joey Hess
+    - Add missing dependency on iso-3166-udeb.
+  * Updated translations: 
+    - Arabic (ar.po) by Ossama M. Khayat
+    - Bulgarian (bg.po) by Ognyan Kulev
+    - Czech (cs.po) by Miroslav Kure
+    - Danish (da.po) by Claus Hindsgaul
+    - German (de.po) by Dennis Stampfer
+    - Greek, Modern (1453-) (el.po) by Greek Translation Team
+    - Spanish (es.po) by Javier Fernández-Sanguino Peña
+    - Basque (eu.po) by Piarres Beobide
+    - French (fr.po) by Christian Perrier
+    - Hebrew (he.po) by Lior Kaplan
+    - Italian (it.po) by Giuseppe Sacco
+    - Japanese (ja.po) by Kenshi Muto
+    - Korean (ko.po) by Changwoo Ryu
+    - Dutch (nl.po) by Bart Cornelis
+    - Portuguese (pt.po) by Miguel Figueiredo
+    - Portuguese (Brazil) (pt_BR.po) by André Luís Lopes
+    - Russian (ru.po) by Yuri Kozlov
+    - Albanian (sq.po) by Elian Myftiu
+    - Turkish (tr.po) by Recai Oktaş
+    - Ukrainian (uk.po) by Eugeniy Meshcheryakov
+    - Simplified Chinese (zh_CN.po) by Carlos Z.F. Liu
+
+ -- Joey Hess <joeyh@debian.org>  Thu,  9 Jun 2005 11:24:00 -0400
+
+localechooser (0.05) unstable; urgency=low
+
+  * Christian Perrier
+    - Add Tagalog to the list of languages
+    - Add Punjabi (Gumurkhi) to the list of languages
+    - Mark not-yet-supported languages so that they don't appear in the
+      languages list
+    - Remove Spanish as alternative for Galician as this gives a false
+      impression of a bad mix of both languages
+    - Remove Macedonian as alternative for Bulgarian
+    - Add Esperanto to the list of languages
+    - Add Kazakh to the list of languages
+    - debian/control: remove initial capital to the package
+                      description
+  * Colin Watson
+    - anna-install bterm-unifont rather than trying to apt-install it.
+  * Frans Pop
+    - Don't add Denmark to shortlist for English (per #276067)
+
+ -- Christian Perrier <bubulle@debian.org>  Tue,  3 May 2005 17:32:14 +0200
+
+localechooser (0.04.0ubuntu17) hoary; urgency=low
+
+  * Update Norwegian Bokmål translation (thanks, Terance Edward Sola).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue,  5 Apr 2005 16:40:36 +0100
+
+localechooser (0.04.0ubuntu16) hoary; urgency=low
+
+  * Add symlink to post-base-installer hook in /usr/lib/casper/pre.d/,
+    restoring locale generation on the live CD.
+  * Update Greek translation (thanks, Giorgos Logiotatidis).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue,  5 Apr 2005 13:58:45 +0100
+
+localechooser (0.04.0ubuntu15) hoary; urgency=low
+
+  * Actually create /usr/lib/post-base-installer.d.
+  * Include copyright file and changelog in localechooser-data.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 31 Mar 2005 18:21:35 +0100
+
+localechooser (0.04.0ubuntu14) hoary; urgency=low
+
+  * Move locale generation to a post-base-installer hook, so that
+    base-config questions that are pulled back to the first stage are
+    properly translated. Requires base-installer 1.15ubuntu14.
+  * Update Romanian translation (thanks, Ovidiu Damian).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 31 Mar 2005 17:30:14 +0100
+
+localechooser (0.04.0ubuntu13) hoary; urgency=low
+
+  * anna-install bterm-unifont rather than trying to apt-install it (closes:
+    Ubuntu #8172).
+  * Update Spanish translation (thanks, Enrique Matías Sánchez).
+  * Update Xhosa translation (thanks, Adi Attar).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 29 Mar 2005 16:48:20 +0100
+
+localechooser (0.04.0ubuntu12) hoary; urgency=low
+
+  * Update Hungarian translation (thanks, Gabor Burjan).
+  * Update Indonesian translation (thanks, Yoppy Hidayanto).
+  * Update Polish translation (thanks, Dominik Zabłotny).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 28 Mar 2005 20:05:05 +0100
+
+localechooser (0.04.0ubuntu11) hoary; urgency=low
+
+  * Update Brazilian Portuguese translation (thanks, Carlos Eduardo Pedroza
+    Santiviago).
+  * Update French translation (thanks, Sebastien Bacher).
+  * Update German translation (thanks, Herbert Straub).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sat, 26 Mar 2005 01:20:00 +0000
+
+localechooser (0.04.0ubuntu10) hoary; urgency=low
+
+  * Add draft Xhosa translation (thanks, Adi Attar).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 22 Mar 2005 13:25:49 +0000
+
+localechooser (0.04.0ubuntu9) hoary; urgency=low
+
+  * Set default $LANGUAGE for English installs to just "en" rather than
+    "en_US:en_GB:en" (it will be prefixed with the appropriate en_* for the
+    selected country), since fallbacks from American to British English and
+    vice versa are too annoying (closes: Ubuntu #4271).
+  * Add Xhosa, xh_ZA (thanks, Adi Attar).
+  * Don't try to install localization-config, since it's not in Ubuntu.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 17 Mar 2005 18:36:27 +0000
+
+localechooser (0.04.0ubuntu8) hoary; urgency=low
+
+  * Use locale-gen --keep-existing, for better performance on the live CD.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 10 Mar 2005 18:32:03 +0000
+
+localechooser (0.04.0ubuntu7) hoary; urgency=low
+
+  * Fix missing space while adding en_US.UTF-8 to
+    localechooser/supported-locales.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed,  9 Mar 2005 01:24:25 +0000
+
+localechooser (0.04.0ubuntu6) hoary; urgency=low
+
+  * Always support English (unless preseeded otherwise), so that we get
+    English language packs (closes: Ubuntu #7103).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue,  8 Mar 2005 02:00:28 +0000
+
+localechooser (0.04.0ubuntu5) hoary; urgency=low
+
+  * Run debconf-updatepo.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue,  8 Feb 2005 11:55:37 +0000
+
+localechooser (0.04.0ubuntu4) hoary; urgency=low
+
+  * Add localechooser/supported-locales, asked at medium priority, to allow
+    the user to select support for extra locales in expert mode.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue,  8 Feb 2005 11:30:10 +0000
+
+localechooser (0.04.0ubuntu3) hoary; urgency=low
+
+  * Add a localechooser-data package containing lists useful for packages
+    (like the Kickstart user interface) that create automatic installation
+    scripts.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu,  3 Feb 2005 12:09:41 +0000
+
+localechooser (0.04.0ubuntu2) hoary; urgency=low
+
+  * Re-merge changes from 0.03ubuntu1 to 0.03ubuntu4.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 28 Jan 2005 16:56:05 +0000
+
+localechooser (0.04.0ubuntu1) hoary; urgency=low
+
+  * Neutralize template text so that it applies to both the installer and live
+    CDs
+
+ -- Matt Zimmerman <mdz@canonical.com>  Tue, 25 Jan 2005 23:19:17 -0800
+
+localechooser (0.04) unstable; urgency=low
+
+  * Colin Watson
+    - Fix prebaseconfig progress bar template name.
+    - Drop priority to optional to avoid causing problems with anna pulling
+      in localechooser on top of initrds that use languagechooser instead.
+  * Updated translations:
+    - Czech (cs.po) by Miroslav Kure
+    - Slovak (sk.po) by Peter KLFMANiK Mann
+
+ -- Colin Watson <cjwatson@debian.org>  Thu, 13 Jan 2005 18:06:10 +0000
+
+localechooser (0.03ubuntu4) hoary; urgency=low
+
+  * Add link to prebaseconfig script in /usr/lib/casper/pre.d.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 18 Jan 2005 19:40:38 +0000
+
+localechooser (0.03ubuntu3) hoary; urgency=low
+
+  * Fix prebaseconfig progress bar template name.
+
+ -- Colin Watson <cjwatson@canonical.com>  Wed, 12 Jan 2005 23:23:27 +0000
+
+localechooser (0.03ubuntu2) hoary; urgency=low
+
+  * Drop country question priority back to high.
+
+ -- Colin Watson <cjwatson@canonical.com>  Sat,  1 Jan 2005 23:54:11 +0000
+
+localechooser (0.03ubuntu1) hoary; urgency=low
+
+  * Resynchronise with Debian.
+
+ -- Colin Watson <cjwatson@canonical.com>  Fri, 24 Dec 2004 16:46:15 +0000
+
+localechooser (0.03) unstable; urgency=low
+
+  * Christian Perrier
+    - debian/control: add missing Build-Depends on iso-codes and locales
+      Closes: #286848
+
+ -- Christian Perrier <bubulle@debian.org>  Thu, 23 Dec 2004 09:01:07 +0100
+
+localechooser (0.02ubuntu1) hoary; urgency=low
+
+  * Merge changes from Ubuntu languagechooser and countrychooser:
+    - Switch to UTF-8 for all languages where it's available in
+      /usr/share/i18n/SUPPORTED (all except Bosnian and Tagalog).
+    - Ask about your "location" rather than "country, territory or area"
+      (Ubuntu #1686).
+    - Go back to asking country question at critical priority, not high.
+  * Ubuntu branding.
+
+ -- Colin Watson <cjwatson@canonical.com>  Thu, 23 Dec 2004 12:56:56 +0000
+
+localechooser (0.02) unstable; urgency=low
+
+  * Christian Perrier
+    - debian/templates-in, Makefile, debian/po/POTFILES.in
+      Renamed templates.in to localechooser.templates-in
+    - Added belarusian to the list of languages
+  * Updated translations:
+    - Czech (cs.po) by Miroslav Kure
+    - Danish (da.po) by Claus Hindsgaul
+    - Spanish (Castilian) (es.po) by Javier Fernandez-Sanguino Peña
+    - French (fr.po) by French Team
+    - Hebrew (he.po) by Lior Kaplan
+    - Japanese (ja.po) by Kenshi Muto
+    - Lithuanian (lt.po) by Kęstutis Biliūnas
+    - Dutch (nl.po) by Bart Cornelis
+    - Portuguese (Brazil) (pt_BR.po) by André Luís Lopes
+    - Portuguese (pt.po) by Miguel Figueiredo
+    - Romanian (ro.po) by Eddy Petrisor
+    - Turkish (tr.po) by Recai Oktaş
+    - Ukrainian (uk.po) by Eugeniy Meshcheryakov
+    - Simplified Chinese (zh_CN.po) by Carlos Z.F. Liu
+
+ -- Christian Perrier <bubulle@debian.org>  Mon, 13 Dec 2004 14:23:00 +0100
+
+localechooser (0.01) unstable; urgency=low
+
+  * New package built by merging languagechooser and countrychooser
+    First published in d-i repository. Specific changelog starts here.
+    This release will close the following languagechooser bugs:
+    - 265085: languagechooser and countrychooser being not different
+      packages anymore, the user may change the language at any
+      time. Also closes 268815 and 272325
+    - 271258: picking a C "locale" is now possible
+    - 259104: only display languages marked as OK for it when
+      debian-installer/framebuffer=false
+  * Christian Perrier
+    - removed unused replace_translations
+    - Welsh properly spelled in Welsh
+    - Add entries for post-sarge supported languages
+
+ -- Christian Perrier <bubulle@debian.org>  Sun, 28 Nov 2004 11:08:35 +0100
+
+languagechooser (1.42) unstable; urgency=low
+
+  * Frans Pop
+    - Make prebaseconfig script append to messages instead of overwriting it
+      Closes: #279072
+  * Updated translations: 
+    - Finnish (fi.po) by Tapio Lehtonen
+    - Hungarian (hu.po) by VEROK Istvan
+    - Russian (ru.po) by Yuri Kozlov
+
+ -- Joey Hess <joeyh@debian.org>  Sun, 31 Oct 2004 13:49:22 -0500
+
+languagechooser (1.41) unstable; urgency=HIGH
+
+  * Joey Hess
+    - Revert untested and broken localization-config installation test change.
+      HINT: LANG is NOT defined anywhere in languagechooser.
+      Reopens: #277073
+
+ -- Joey Hess <joeyh@debian.org>  Tue, 19 Oct 2004 14:30:34 -0400
+
+languagechooser (1.40) unstable; urgency=low
+
+  * Christian Perrier
+    - Revert back to non-UTF8 for Hebrew as this breaks more things
+      than it solves. Use LatArCyrHeb font. Closes: #276076
+  * Konstantinos Margaritis
+    - Install localization-config when LANG <> en_US on all arches
+      except powerpc. On powerpc arches, always install it.
+      Closes: #277073
+
+ -- Christian Perrier <bubulle@debian.org>  Mon, 18 Oct 2004 20:06:19 +0200
+
+languagechooser (1.39) unstable; urgency=low
+
+  * Christian Perrier
+    - use UTF-8 default locales for Hebrew. Closes: #276071
+
+ -- Christian Perrier <bubulle@debian.org>  Tue, 12 Oct 2004 20:25:20 +0200
+
+languagechooser (1.38) unstable; urgency=low
+
+  * Joey Hess
+    - Move prebaseconfig script to run at 05 since it uses apt-install, which
+      is not available after the CD is ejected.
+
+ -- Joey Hess <joeyh@debian.org>  Mon, 11 Oct 2004 13:24:05 -0400
+
+languagechooser (1.37) unstable; urgency=low
+
+  * Otavio Salvador
+    - Change console-data font to be lat1-16(iso01) when using Portuguese
+      (Brazil). This solves some display problem in this language.
+
+ -- Joey Hess <joeyh@debian.org>  Thu,  7 Oct 2004 14:32:45 -0400
+
+languagechooser (1.36) unstable; urgency=low
+
+  * Updated translations: 
+    - Welsh (cy.po) by Dafydd Harries
+    - Greek, Modern (1453-) (el.po) by Greek Translation Team
+    - Hebrew (he.po) by Lior Kaplan
+    - Hungarian (hu.po) by VEROK Istvan
+    - Indonesian (id.po) by Debian Indonesia Team
+    - Japanese (ja.po) by Kenshi Muto
+    - Latvian (lv.po) by Aigars Mahinovs
+    - Dutch (nl.po) by Bart Cornelis
+    - Portuguese (Brazil) (pt_BR.po) by André Luís Lopes
+    - Romanian (ro.po) by Eddy Petrisor
+    - Traditional Chinese (zh_TW.po) by Tetralet
+
+ -- Joey Hess <joeyh@debian.org>  Wed,  6 Oct 2004 14:21:12 -0400
+
+languagechooser (1.35) unstable; urgency=low
+
+  * Christian Perrier
+    - Remove Russian as backup language for Lithuanian. Closes: #274441
+    - ditto for Latvian
+
+ -- Christian Perrier <bubulle@debian.org>  Sat,  2 Oct 2004 07:42:38 +0200
+
+languagechooser (1.34) unstable; urgency=low
+
+  * Christian Perrier
+    - use UTF-8 default locales for Arabic. Closes: #273718
+    - do not use Swedish as fallback language for Finnish.
+      Closes: #273881
+
+ -- Christian Perrier <bubulle@debian.org>  Tue, 28 Sep 2004 21:05:20 +0200
+
+languagechooser (1.33) unstable; urgency=low
+
+  * Updated translations: 
+    - Bulgarian (bg.po) by Ognyan Kulev
+    - Greek, Modern (1453-) (el.po) by Greek Translation Team
+    - Hebrew (he.po) by Lior Kaplan
+    - Indonesian (id.po) by Parlin Imanuel Toh
+    - Italian (it.po) by Giuseppe Sacco
+    - Korean (ko.po) by Changwoo Ryu
+    - Lithuanian (lt.po) by Kęstutis Biliūnasn
+    - Bøkmal, Norwegian (nb.po) by Axel Bojer
+    - Norwegian Nynorsk (nn.po) by Håvard Korsvoll
+    - Portuguese (Brazil) (pt_BR.po) by André Luís Lopes
+    - Swedish (sv.po) by Per Olofsson
+
+ -- Joey Hess <joeyh@debian.org>  Mon, 27 Sep 2004 21:09:35 -0400
+
+languagechooser (1.32) unstable; urgency=low
+
+  * Eugeniy Meshcheryakov
+    - Use ruscii_8x16 font to setup console for Bulgarian and Ukrainian.
+      Closes: 260227
+  * Anton Zinoviev
+    - Use iso05.f16 font to setup console for Serbian.
+    - Add entry for Macedonian in languagelist and languagelist.l18n
+    - Use Bosnian as an alternative translation for Serbian and Macedonian
+      as an alternative translation for Bulgarian.  Note: Serbian and
+      Bulgarian should not be used as alternative translations for Bosnian
+      and Macedonian.
+  * Christian Perrier
+    - Correct the country code of Sweden in languagelist
+    - Add an entry for Malagasy (currently commented, waiting for the locale)
+    - Remove commented lines at the end of languagelist.l10n
+    - Re-add the languagelist entries for Northern Sami. How does one spell
+      "sorry" in Sami? Closes: #271886
+    - Revert the (never documented) change in the entry for Russian
+
+ -- Christian Perrier <bubulle@debian.org>  Wed, 15 Sep 2004 23:18:09 +0200
+
+languagechooser (1.31) unstable; urgency=low
+
+  * Christian Perrier
+    - Acknowledge the new eu_FR locale and make Basque a "multi-country"
+      language with the use of @euro variant
+    - Move localization-config install queueing out of prebaseconfig into
+      languagechooser. Closes: #270563
+    - Make the main menu entry translatable. Explicitely ask translators
+      to keep English aside from their translation. Closes: #228036
+    - Add @euro to the English locale. Needed for en_IE. Explain why
+      this does not harm for other locales.
+    
+  * Ognyan Kulev
+    - Don't setup console-cyrillic for Bulgarian in languagelist,
+      so that console-cyrillic is not preconfigured without asking
+      questions during first stage.
+
+ -- Christian Perrier <bubulle@debian.org>  Sun, 12 Sep 2004 11:10:31 +0200
+
+languagechooser (1.30) unstable; urgency=low
+
+  * Added Hindi to the list of choices. Thanks to Pankaj Kaushal (sp0onman)
+    for the help on initial steps. Choice is commented because Hindi
+    currently not displayable.
+  * Use correct English name (Persian) for "fa"
+  * Ognyan Kulev
+    - Use console-cyrillic setup in languagelist entry for Bulgarian.
+      (Closes: #261476)
+  * Petter Reinholdtsen
+    - generate the locale needed in 2nd stage in prebaseconfig. Closes: #261256
+  * Christian Perrier
+    - set console font with APP_CHARSET_MAP for the first 6 virtual consoles
+      Closes: #266103
+    - Corrected entry for Slovenian. Thanks to Jure Cuhalev
+    - Translated entry for Vietnamese. Thanks to Jean-Christophe André
+    - Check all languages names translations with translators. No more
+      English names left. Closes: #261671
+    - Add a default country for all languages. Closes: #265161
+  * Konstantinos Margaritis
+    - prebaseconfig:
+      - Install localization-config when locale!=en_US
+
+ -- Christian Perrier <bubulle@debian.org>  Tue,  7 Sep 2004 22:06:24 +0200
+
+languagechooser (1.29) unstable; urgency=low
+
+  * Petter Reinholdtsen
+    - Do not install jfbterm and unifont for Ukrainian (uk_UK).
+      (Closes: #260258)
+  * Changwoo Ryu
+    - Changed Korean locale back to ko_KR.EUC-KR.  Still many apps are not
+      UTF-8 ready.
+  * Christian Perrier
+    - Add @euro to the fallback locale for all languages
+      for which the "primary" country is a Euro country
+      This will force the @euro variant for all Euro countries if
+      one of these languages is chosen
+
+ -- Christian Perrier <bubulle@debian.org>  Wed, 18 Aug 2004 18:20:59 +0200
+
+languagechooser (1.28) unstable; urgency=low
+
+  * Correct the loading specifics for RTL languages so that
+    libfribidi0 is really loaded
+
+ -- Christian Perrier <bubulle@kheops.frmug.org>  Thu, 22 Jul 2004 12:25:02 +0200
+
+languagechooser (1.27) unstable; urgency=low
+
+  * Christian Perrier
+    - Removed useless lines in languagemap
+    - Add a comment about charset or modifier goind to 2nd field
+      (fallback locale)
+    - Activated Croatian
+  * Joey Hess
+    - Remove scary and obsolete menutest script.
+
+ -- Christian Perrier <bubulle@kheops.frmug.org>  Thu, 22 Jul 2004 12:24:56 +0200
+
+languagechooser (1.26) unstable; urgency=low
+
+  * Kęstutis Biliūnas
+    - Changed Lithuanian console font to LatArCyrHeb-16
+  * Joey Hess
+    - Simplified the menu item for English.
+    - Removed the extended description of language choice question, surely
+      it's less useful now that we have only one selection per language.
+
+ -- Joey Hess <joeyh@debian.org>  Fri,  9 Jul 2004 17:44:14 -0400
+
+languagechooser (1.25) unstable; urgency=low
+
+  * Christian Perrier
+    - Rewritten README file, documenting the language/country
+      selection system
+    - Corrected translation of Bosnian, thanks Safir Secerovic
+  * Steve Langasek
+    - Add support for apt-installing fribidi support for RTL languages
+
+ -- Christian Perrier <bubulle@debian.org>  Fri, 25 Jun 2004 09:54:00 +0200
+
+languagechooser (1.24) unstable; urgency=low
+
+  * Christian Perrier
+    - add myself to Uploaders
+    - Translate "Arabic" to Arabic in languagelist.l10n
+    - Translate "Farsi" to Farsi in languagelist.l10n
+    - Correct Hebrew entry so that it just says "Hebrew"
+      Thanks, Alan Moray for the Hebrew lesson..:-)
+    - Remove "with locales/country settings" for English
+      Does not make sense as the "C" entry idea has been dropped/delayed
+    - Comment Irish and Latvian which don't have any active translator
+      currently
+    - Remove the now unused languagelist.skolelinux file. Agreed by Petter
+
+ -- Christian Perrier <bubulle@debian.org>  Fri, 18 Jun 2004 19:47:37 +0200
+
+languagechooser (1.23) unstable; urgency=low
+
+  * Recai Oktas
+    - prebaseconfig patched for setting up APP_CHARSET_MAP properly
+      in /etc/console-tools/config. The variable value as well as
+      SCREEN_FONT_MAP is enforced at the end of the config file.
+      Closes: #250376
+  * debconf hacking team:
+    - Use LANGUAGE instead of LANGUAGELIST, fixes languages that have no list;
+      this code used to work when it was in base-installer, because it ran
+      after countrychooser.
+    - Make this change in the three places LANGUAGELIST was used in
+      languagechooser
+  * Christian Perrier
+    - New layout back in place. One entry per language. "C" entry for
+      skipping country selection step and live without locale except the
+      default POSIX locale (currently commented)
+
+ -- Christian Perrier <bubulle@debian.org>  Mon,  7 Jun 2004 10:06:56 +0200
+
+languagechooser (1.22) unstable; urgency=medium
+
+  * Christian Perrier
+    - for beta5 release : go back to the 1.19 layout. Changes from
+      1.20, 1.21 and 1.22 below are kept into languagelist.postbeta5
+      and languagelist.l10n.postbeta5. Unrelated changes are kept, of
+      course
+  * Christian Perrier
+    - New entry for "C"=="English with no locales settings"
+    - Added alternative possible layouts in mktemplates
+    - Changed the name of the "C" entry so that it does not mention
+      "English" anymore but appears as a default for quick setup
+      Could be used for skipping other questions further
+
+ -- Christian Perrier <bubulle@debian.org>  Tue, 18 May 2004 14:21:55 +0200
+
+languagechooser (1.21) unstable; urgency=low
+
+  * Sylvain Ferriol
+    - language-name template default fix to English Closes:248929
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 15 May 2004 09:16:57 +0200
+
+languagechooser (1.20) unstable; urgency=low
+
+  * Recai Oktas
+    - languagechooser: more fixes to enable Turkish on 2nd stage.
+  * Christian Perrier
+    - THE BIG CHANGE : one translation<->one entry
+      We temporarily keep old languagelist and languagelist.l10n entries
+      in the new files in case this change need to be reverted
+      Modified files:
+      - languagelist
+      - languagelist.l10n
+      - mktemplates (a few lines)
+    - Ellipsis typography fix
+
+ -- Christian Perrier <bubulle@debian.org>  Thu, 13 May 2004 18:35:32 +0200
+
+languagechooser (1.19) unstable; urgency=low
+
+  * Christian Perrier
+    - Added Galician (gl) to langage list
+    - Added Basque (and translation) to language list
+    - Added an entry for Serbian language
+    - Added an entry for Vietnamese language
+    - Added an entry for Chinese Simplified+China
+    - Added an entry for Chinese Traditional+Taiwan
+    - two other entries for Chinese variants+other countries
+    Changes made as a first tentative to solve the issue for the official
+    name of TW
+  * Denis Barbier
+    - Add @euro modifier to ca_ES, de_AT, ga_IE, pt_PT and sv_FI.
+    - Add informations for keyboard configuration into languagelist,
+      so that termwrap can set up console keyboard.  Console-data is
+      currently supported, bterm and cyr have to be added.
+    - Fix canonical locale name for Ukrainian, uk_UA is listed in
+      /usr/share/i18n/SUPPORTED and not uk_UA.KOI8-U.
+    - prebaseconfig: Set font in /etc/console-tools/config from the value
+      found in the debian-installer/consoledisplay debconf question.
+      Console is then configured for the 2nd stage and a good default is
+      provided for later use.
+  * Eugeniy Meshcheryako
+    - Add support for cyr in languagelist, and let Ukrainian uses it instead
+      of console-tools.  Closes: #243034
+  * Petter Reinholdtsen
+    - Moved code for adding extra packages into /target/ from
+      languagechooser.postinst and base-installer.postinst to the
+      languagechooser script to keep everything in one place and
+      avoid cluttering base-installer with language-specific code.
+  * Denis Barbier
+    - The info function is not defined in languagechooser, replace
+      its call by log.  Thanks to Jean Christophe ANDRÉ for reporting.
+    - Change Turkish console font to ter-916f
+
+ -- Petter Reinholdtsen <pere@debian.org>  Wed,  5 May 2004 22:40:55 +0200
+
+languagechooser (1.18) unstable; urgency=low
+
+  * Christian Perrier
+    - Added Indonesian (id) to language list
+  * Denis Barbier
+    - Fix colons in languagelist for Romanian and French (Belgium).
+  * Updated translations: 
+    - French (fr.po) by Pierre Machard
+    - Hebrew (he.po) by Lior Kaplan
+    - Indonesian (id.po) by Parlin Imanuel Toh
+    - Japanese (ja.po) by Kenshi Muto
+    - Turkish (tr.po) by Osman Yüksel 
+
+ -- Joey Hess <joeyh@debian.org>  Tue, 30 Mar 2004 14:30:20 -0500
+
+languagechooser (1.17) unstable; urgency=low
+
+  * Anton Zinoviev
+    - remove bg, ru and uk from the languages requiring bterm-unifont
+  * Updated translations
+    - Russian by Nikolai Prokoschenko
+    - Matjaz Horvat: Added Slovenian translation (sl.po)
+    - Giuseppe Sacco: Added italian translation (it.po)
+
+ -- Christian Perrier <bubulle@kheops.frmug.org>  Fri, 19 Mar 2004 14:19:00 +0100
+
+languagechooser (1.16) unstable; urgency=low
+
+  * Translations
+    - Dafydd Harries : Added Welsh translation (cy.po)
+
+ -- Joey Hess <joeyh@debian.org>  Sat, 13 Mar 2004 00:05:51 -0500
+
+languagechooser (1.15) unstable; urgency=low
+
+  * Joey Hess
+    - Don't mess with seen flags, allow db pre-seeding.
+  * Translations
+    - Kęstutis Biliūnas, updated line for Lithuanian in languagelist.
+    - Lior Kaplan, updated Hebrew line for removing the leading "Hebrew:"
+      in Hebrew. Closes: #235918
+    - Ognyan Kulev: Added Bulgarian translation (bg.po).
+    - Javier Fernandez-Sanguino: Fixed spanish translation of 
+      'others' in languagelist.l10n (partially fixes #236125,
+      other languages need to be fixed too)
+    - Andre Dahlqvist: Udpate Swedish translation (sv.po)
+
+ -- Joey Hess <joeyh@debian.org>  Mon,  8 Mar 2004 18:05:48 -0500
+
+languagechooser (1.14) unstable; urgency=low
+
+  * Christian Perrier
+    - Added entry for Romanian by Eddy Petrisor
+  * Translations
+    - Miguel Figueiredo: Added Portuguese translation (pt.po)
+    - Bartosz Fenski: Added Polish translation (pl.po)
+    - Alwin Meschede: Added German translation (de.po)
+    - Andre Dahlqvist: Initial Swedish translation (sv.po)
+    - Changwoo Ryu: Added Korean translation (ko.po)
+    - Jordi Mallach: Added Catalan translation (ca.po)
+    - Peter Mann: Added Slovak translation (sk.po)
+    - Bart Cornelis: Added Dutch translation (nl.po)
+    - Javier Fernandez-Sanguino: Added Spanish translation (es.po)
+    - Eddy Petrisor: Added Romanian translation (ro.po)
+
+ -- Joey Hess <joeyh@debian.org>  Tue,  2 Mar 2004 13:38:20 -0500
+
+languagechooser (1.13) unstable; urgency=low
+
+  * Joey Hess
+    - Use three dots in elipses for consistency.
+  * Joshua Kwan
+    - iconv all the .po files to UTF-8 to silence unifont building.
+  * Denis Barbier
+    - Add a missing debian/po/output file, which is the proper fix for
+      the problem mentioned just above.
+  * Translations
+    - Pierre Machard: Added French translation (fr.po)
+    - Carlos Z.F. Liu: Added Simplified Chinese translation (zh_CN.po)
+    - André Luís Lopes: Added Brazilian Portuguese translation (pt_BR.po)
+    - Kenshi Muto: Update Japanese translation (ja.po)
+    - Konstantinos Margaritis: Added Greek translation (el.po)
+    - Eugeniy Meshcheryakov: Fixed Ukrainian translation (uk.po)
+    - Miroslav Kure: Fixed Czech translation (cs.po)
+    - Elian Myftiu: Fixed Albanian translation (sq.po)
+    - Claus Hindsgaul: Added Danish translation (da.po)
+    - Håvard Korsvoll: Added Norwegian, nynorsk translation (nn.po).
+
+ -- Joey Hess <joeyh@debian.org>  Tue, 24 Feb 2004 13:54:50 -0500
+
+languagechooser (1.12) unstable; urgency=low
+
+  * Christian Perrier
+    - change the (currently commented) line for Esperanto to use
+      eo_XX as locale (will probably soon be valid, see #233308)
+  * Joey Hess
+    - Add a prebaseconfig progress template.
+    - Update to debhelper v4 and use its new udeb support.
+    - Build package in binary-indep, not binary-arch, it is arch all.
+  
+  * Translations
+    - Changwoo Ryu: Updated Korean translation in langaugelist and
+      langaugelist.l10n.
+    - Eugeniy Meshcheryakov: update Ukrainian translation in languagelist.l10n
+      - Added Ukrainian translation (uk.po)
+    - Kenshi Muto: Added Japanese translation (ja.po)
+    - Claus Hindsgaul: Added Danish translation (da.po)
+    - Kęstutis Biliūnas: Added Lithuanian translation (lt.po)
+    - Miroslav Kure: Add Czech translation (cs.po)
+    - Elian Myftiu: Added Albanian translation (sq.po)
+
+ -- Joey Hess <joeyh@debian.org>  Sun, 22 Feb 2004 22:11:05 -0500
+
+languagechooser (1.11) unstable; urgency=low
+
+  *  Translations
+    - Giuseppe Sacco, update italian translation in languagelist.l10n
+    - Dennis Stampfer, update German translation in languagelist.l10n
+    - Andre Dahlqvist, update Swedish translation in languagelist.l10n
+    - Lior Kaplan, added Hebrew translation in languagelist.l10n
+    - Kęstutis Biliūnas, updated Lithuanian translation in
+      languagelist.l10n and updated languagelist.
+  * Joey Hess
+    - Fix Arabic display.
+  * Matt Kraai
+    - Queue bterm-unifont for installation if the language is ar, bg, el,
+      he, ja, ko, ru, tr, uk, or zh.
+  * Christian Perrier
+    - Changed the Chinese language handling : Traditional and Simplified
+      come back : both trigger countrychooser. Interesting side effect :
+      each variant will become a fallback value for the other variant
+
+ -- Christian Perrier <bubulle@debian.org>  Wed, 18 Feb 2004 15:55:45 +0100
+
+languagechooser (1.10) unstable; urgency=low
+
+  * Joey Hess
+    - Lowercase "Other" and "Other countries".
+    - Don't warn about locales with no _ (type 1; locale completed by
+      countrychooser)
+    - Fix indent before "-" for type 2 locales.
+    - Order type 2 locales after type 3 locales, so "other" comes last.
+
+ -- Joey Hess <joeyh@debian.org>  Sun,  8 Feb 2004 19:44:22 -0500
+
+languagechooser (1.09) unstable; urgency=low
+
+  * Christian Perrier
+    - Added language list for Chinese. Otherwise, Chinese messages
+      were not showed in other modules. Closes: #228469
+    - Added new languagechooser/locale debconf value for remembering the
+      locale inherited from languagechooser, which is supposed to ba a valid
+      locale. Will be used by countrychooser.
+    - Added Albanian to languagelist and languagelist.l10n (in english,
+      temporarily)
+    - re-activate Turkish, Catalan, Hebrew as these now have enough translation
+      ratio
+  * Petter Reinholdtsen
+    - Prefix all language choices with their locale name.
+  * Konstantinos Margaritis
+    - Converted greek locale to el_GR.UTF-8 instead of el_GR.
+  * Christian Perrier
+    - languagelist and languagelist.l10n adapted to new country selection
+      scheme:
+      - type 1 languages (Arabic...) do not set country at all. They
+        will always trigger countrychooser
+      - type 2 languages (Bulgarian...) force ONE country. They don't
+        trigger countrychooser except at medium priority
+      - type 3 languages (ENglish, Spanish...) offer up to three
+        country choices as well as "Other". "Other" will trigger
+        countrychooser
+  * Eugen Meshcheryakov
+    - added Ukrainian (uk) to language list
+
+ -- Christian Perrier <bubulle@debian.org>  Sun,  8 Feb 2004 09:03:24 +0100
+
+languagechooser (1.08) unstable; urgency=low
+
+  * Petter Reinholdtsen
+    - Sync Catalan entry in languagelist.skolelinux with languagelist.
+  * Joey Hess
+    - Fix encoding of Arabic entry in languagelist.l10n.
+
+ -- Joey Hess <joeyh@debian.org>  Sat,  3 Jan 2004 10:15:59 -0900
+
+languagechooser (1.07) unstable; urgency=low
+
+  * Christian Perrier on behalf of Anmar Oueja
+    - Added 'Arabic' as language option. This MAY break something
+      as BIDI support is not already there.
+  * Jure Cuhalev
+    - Modified slovenian entry
+
+ -- Joey Hess <joeyh@debian.org>  Thu, 25 Dec 2003 19:29:01 -0500
+
+languagechooser (1.06) unstable; urgency=low
+
+  * VEROK Istvan
+    - Updated hungarian translation.
+  * Karsten Merker
+    - Apply workaround to prevent language-chooser crashing on
+      mipsel (closes: Bug#219765)
+  * Otavio Salvador
+    - Fix the Brazilian Portuguese translation to smaller one.
+  * Ognyan Kulev
+    - Added 'Bulgarian' as language option.
+
+ -- Joey Hess <joeyh@debian.org>  Mon, 22 Dec 2003 13:56:59 -0500
+
+languagechooser (1.05) unstable; urgency=low
+
+  * Petter Reinholdtsen
+    - Add 'Spanish (Mexico)' as language option.  Patch from Gunnar Wolf.
+  * Konstantinos Margaritis
+    - Updated languagelist.l10n (small change for Greek language)
+  * Alastair McKinstry
+    - Added 'English (Ireland)' as language option.
+
+ -- Joey Hess <joeyh@debian.org>  Tue,  9 Dec 2003 15:55:01 -0500
+
+languagechooser (1.04) unstable; urgency=low
+
+  * Petter Reinholdtsen
+    - Include a shorter langauge list used in Skolelinux: Catalan,
+      Danish, Dutch (Belgium), Dutch (The Netherlands), English (USA),
+      Finnish, French (Belgium), French (France), German (Belgium),
+      German (Germany), Greek, Italian (Italy), Japanese, Latvian,
+      Northern Saami (Norway), Norwegian Bokmaal, Norwegian Nynorsk,
+      Portuguese (Brazil), Portuguese (Portugal) and Spanish (Spain).
+    - Fix typo in languagechooser, making the UTF-8 test work at least
+      most of the time.
+    - Update entries for Chinese (Simplified) and Chinese (Traditional),
+      thanks to patch from Ming Hua.
+    - Fix typo in Bosnian info.
+  * Miroslav Kure
+    - Update Czech info.
+
+ -- Joey Hess <joeyh@debian.org>  Tue, 11 Nov 2003 14:00:08 -0500
+
+languagechooser (1.03) unstable; urgency=low
+
+  * Safir Secerovic
+   - Add Bosnian entries.
+  * Alastair McKinstry
+   - Typo in Irish entry.
+   - Better detection of UTF-8 mode.
+  * Petter Reinholdtsen
+   - Make sure the makefile uses the filenames in $(LIST) and $(L1NLIST).
+  * Peter Mann
+   - Add Slovak entries
+
+ -- Petter Reinholdtsen <pere@debian.org>  Fri,  7 Nov 2003 17:59:57 +0100
+
+languagechooser (1.02) unstable; urgency=low
+
+  * Joey Hess
+    - Polished the wording of the question.
+
+ -- Joey Hess <joeyh@debian.org>  Sat,  1 Nov 2003 11:18:27 -0500
+
+languagechooser (1.01) unstable; urgency=low
+
+  * Marcin Owsiany
+    - Updated Polish text.
+  * Petter Reinholdtsen
+    - Get 'make demo' working again by removing template comments
+      before handing it to debconf.
+    - Comment out language choices Chinese (Simplified),
+      Chinese (Traditional), Croatian, Hebrew and Icelandic,
+      as the translated options are not up to date.
+    - Correct spelling of Icelandic.
+    - Add code to make it easy to test using locale name prefix in
+      the language list.
+    - Add check to make sure languagelist.l10n is valid UTF-8.
+    - Start on entry for Spanish in Mexico.  Currently commented out until
+      someone check the translation.
+  * Murat Demirten
+    - Updated Turkish text.
+  * Denis Barbier
+    - Recoded Turkish text from ISO-8859-9 to UTF-8.
+  * Jordi Mallach
+    - Update Catalan text.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Fri, 31 Oct 2003 01:18:07 +0100
+
+languagechooser (1.0) unstable; urgency=low
+
+  * Denis Barbier
+    - Let mktemplates remove comments from templates-in
+  * Bart Cornelis
+    - removed period at end of translated string (thanks to Bas Zoetekouw)
+  * Joey Hess
+    - Put the comments back in templates-in
+  * Matt Kraai
+    - Do not set the title.
+  * Petter Reinholdtsen
+    - Update language option for Esperanto, text
+      from Edmund Grimley Evans.
+    - Set version to 1.0.  I believe languagechooser have all the
+      features it need, and only need more language choices.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sat, 18 Oct 2003 23:54:11 +0200
+
+languagechooser (0.37) unstable; urgency=low
+
+  * Christian Perrier
+    - Slightly change French wording
+  * Petter Reinholdtsen  
+    - Add support for lithuanian (lt_LT), patch from Kęstutis Biliūnas
+  * Joey Hess
+    - Remove the comment at the end of template-in. pos-debconf does not strip
+      it for some reaosn, and this produces a corrupt file in the udeb.
+      (See bug #215985)
+
+ -- Joey Hess <joeyh@debian.org>  Mon, 13 Oct 2003 21:46:52 +0200
+
+languagechooser (0.36) unstable; urgency=low
+
+  * Make menu item template to avoid warning from main-menu every time
+    it display the menu.
+
+ -- Sebastian Ley <ley@debian.org>  Sun, 12 Oct 2003 19:34:25 +0200
+
+languagechooser (0.35) unstable; urgency=low
+
+  * Make sure the translated language choices are sorted when
+    presented.  The sorting is done using the C/POSIX locale.  I'm not
+    sure if this is the best choice, but at least it will be available
+    for all builders.
+  * Small cleanup in the code.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sat,  4 Oct 2003 01:26:42 +0200
+
+languagechooser (0.34) unstable; urgency=low
+
+  * Let the build scripts insert escape characters into the
+    translations, to avoid depending on the translators to get this
+    right.
+  * Use db_settitle instead of db_title.
+  * Small cleanup in Makefile.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sun, 28 Sep 2003 14:21:09 +0200
+
+languagechooser (0.33) unstable; urgency=low
+
+  * Rewrite translation processing in perl to avoid problems with
+    backslash escaping.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sat, 27 Sep 2003 14:30:24 +0200
+
+languagechooser (0.32) unstable; urgency=low
+
+  * Escape comma using \, in the Russian entry.
+  * Try to get rid of the 'press enter' part of Galician, Portuguese
+    (Portugal) and Spanish (Spain).
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sat, 27 Sep 2003 13:31:49 +0200
+
+languagechooser (0.031) unstable; urgency=low
+
+  * Steinar H. Gunderson
+    - Add Slovenian as a language, patch from Jure Cuhalev.
+  * Petter Reinholdtsen
+    - Improve translator instructions in README.trans.
+    - Remove languagelist.long, as bug #188043 is fixed.
+    - Correct charset/locale typo in Slovenian languagelist entry,
+      based on info from Jure Cuhalev.  Removing the charset specifier
+      from the list should make sure ISO-8859-2 is used.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Wed, 24 Sep 2003 20:23:22 +0200
+
+languagechooser (0.030) unstable; urgency=low
+
+  * Change Russian locale from ru_RU to ru_RU.KOI8-R.  Based
+    on information from Serge Winitzki.
+  * Drop the language-selected provides.  It is no longer used by main-
+    menu, as cdebconf is able to switch language on the fly now.
+  * Add Swiss Italian and Swiss German translations, patch by
+    Simon Hurliman.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Mon, 22 Sep 2003 22:28:57 +0200
+
+languagechooser (0.029) unstable; urgency=low
+
+  * Add Greek option.  Patch from  George Papamichelakis.
+  * The greek option did not use valid UTF-8 characters.  Assuming
+    it is ISO-8859-7, and converted it to UTF-8.  No idea if this is
+    correct.
+  * Corrected Russian entry, patch from Serge Winitzki.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sun, 14 Sep 2003 18:26:25 +0200
+
+languagechooser (0.028) unstable; urgency=low
+
+  * Add new target check-data, comparing the locale list with
+    /usr/share/i18n/SUPPORTED.
+  * Made sure the Japanese and the Korean locale are listed in the
+    SUPPORTED file.  The selected charset was picked at random, assuming
+    that almost no-one uses UTF-8 at the moment.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Tue,  9 Sep 2003 20:42:31 +0200
+
+languagechooser (0.027) unstable; urgency=low
+
+  * Use locale es_ES@euro for Spanish in Spain.
+  * Updated question text for Portuguese (Brazil), thanks to
+    Frederico Goncalves Guimaraes.
+  * Use it_IT@euro locale for Italian, thanks to Marco Ghirlanda.
+  * Tomohiro KUBOTA
+    - Updated question text for Japanese.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Thu, 28 Aug 2003 23:00:08 +0200
+
+languagechooser (0.026) unstable; urgency=low
+
+  * Send log messages to syslog instead of /var/log/messages.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Mon, 28 Jul 2003 15:52:15 +0200
+
+languagechooser (0.025) unstable; urgency=low
+
+  * Alastair McKinstry
+    - Convert changelog to UTF-8 for Standards-Version 3.6.0
+  * Petter Reinholdtsen
+    - Correct the german menu entry.  Patch from Max Vozeler.
+    - Add missing menutest script to CVS.  Copied the one from the archive.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sun, 27 Jul 2003 00:16:15 +0200
+
+languagechooser (0.024) unstable; urgency=low
+
+  * Petter Reinholdtsen
+   - Get 'make demo' working.
+   - Make it easier to switch language list.
+  * Alastair McKinstry
+   - menutest now tries to set up the framebuffer if necessary;
+     required for floppy use
+  
+ -- Alastair McKinstry <mckinstry@computer.org>  Tue, 10 Jun 2003 11:16:40 +0200
+
+languagechooser (0.023) unstable; urgency=low
+
+  * Rename templates.in to templates-in to avoid confusing
+    dh_installdebconf.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sat, 17 May 2003 20:08:12 +0200
+
+languagechooser (0.022) unstable; urgency=low
+
+  * Stop using po-debconf, as only the option text should be translated.
+    Patch from Denis Barbier.  Add the translated text in
+    languagelist.l10n instead.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Fri, 16 May 2003 21:15:19 +0200
+
+languagechooser (0.021) unstable; urgency=low
+
+  * Fix typo using LANG instead of $LANG to test the locale.
+  * Correct depend listing from Build-Depends to Build-Depends-Indep.
+  * Add dephelper token in postinst to make lintian happy.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Mon,  5 May 2003 17:06:54 +0200
+
+languagechooser (0.020) unstable; urgency=low
+
+  * Only display the translated choices when using UTF-8 locale.
+  * Update nb.po and nn.po.
+  * Use the complete list of languages now that bug #188043 is fixed.
+  * Javier Fernández-Sanguino
+     - Translated to Spanish the template
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sun,  4 May 2003 22:44:49 +0200
+
+languagechooser (0.019) unstable; urgency=low
+
+  * Updated Danish (me), Dutch (Bart Cornelis),
+    Finnish (Dagfinn Ilmari Mannsåker), French (Bart Cornelis),
+    German (Frank Matthiess, Bart Cornelis), Latvian (Aigars Mahinovs) and
+    Nothern Saami (Regnor Jernsletten) choices.
+  * Cut the list short while we wait for bug #188043 to be fixed.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Wed, 16 Apr 2003 22:54:04 +0200
+
+languagechooser (0.018) unstable; urgency=low
+
+  * Add nn.po thanks to Gaute Hvoslef Kvalnes and updated nb.po
+    thanks to Bjørn Steensrud.
+  * Update fallback langauges for lv_LV, se_NO, no_NO and nn_NO.
+  * Add en.po which should contain translated text for all the
+    language options, to make it easier for people without knowledge
+    in English to choose the correct language.
+  * Use dash or ash to check the scripts for parse errors at build time.
+  * Try to set the language to 'en' before showing the list of
+    available languages.
+  * André Luís Lopes :
+    - Update Brazilian Portuguese (pt_BR) debconf template translation.
+  * Denis Barbier
+    - Remove obsolete entries from debian/templates.in
+
+ -- Petter Reinholdtsen <pere@debian.org>  Tue,  8 Apr 2003 23:52:14 +0200
+
+languagechooser (0.017) unstable; urgency=low
+
+  * Denis Barbier:
+    - Fixed Portuguese locales.
+    - Update French locales: 'French (Belgium);fr_BE@euro;fr;BE;',
+      'French (Canada);fr_CA;fr;CA;', 'French (France);fr_FR@euro;fr;FR;',
+      'French (Luxembourg);fr_LU@euro;fr;LU;',
+      'French (Switzerland);fr_CH;fr;CH;
+  * Petter Reinholdtsen
+    - Change German locale to de_DE@euro on request from Martin Herweg.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Fri, 14 Mar 2003 20:55:11 +0100
+
+languagechooser (0.016) unstable; urgency=low
+
+  * Add a few language options.
+  * Remove unused debconf templates.
+  * Move language information into separate file and generate template
+    based on this list.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Thu, 13 Mar 2003 00:23:32 +0100
+
+languagechooser (0.015) unstable; urgency=low
+
+  * Alastair McKinstry:
+   - Add to languagemap all the languages previously supported by
+     boot-floppies.
+  * Denis Barbier:
+    - Update debian/po/fr.po
+  * Petter Reinholdtsen
+    - Remove LANGUAGELIST when it is the same as LANGAUGE.
+    - Fix typos in templates: Japanesse -> Japanese, Portuigese -> Portuguese.
+    - Remove MIRROR info, as it is not used for anything, and might
+      belong to a different package.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Mon, 10 Mar 2003 13:36:35 +0100
+
+languagechooser (0.014) unstable; urgency=low
+
+  * André Luís Lopes :
+    - Run debconf2po-update in order to reflect latest changes in the
+      original english templates into the translated ones.
+    - Update pt_BR (Brazilian Portuguese) template translations.
+  * Petter Reinholdtsen
+    - Pass language list to base-config as LANGUAGE_INST.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Tue,  4 Mar 2003 16:56:04 +0100
+
+languagechooser (0.013) unstable; urgency=low
+
+  * Denis Barbier:
+    - Add debian/po/output file to convert templates into UTF-8
+    - Add backup capabilities to languagechooser
+    - Managing country list seems not obvious, only countries which
+      provide Debian mirrors are printed.  This criterion may change
+      later.
+    - Replace parens by brackets in language list, because parens are
+      displayed with some country names.  The iso-codes package contains
+      translations of many language and country names.
+    - Add support for multiple languages.
+    - Make debconf/language question an alias to debian-installer/language
+    - French debconf templates, by Pierre Machard and Christian Perrier.
+  * Alastair McKinstry
+    - Irish translation
+  * Martin Sjögren
+    - Provide language-selected
+  * Petter Reinholdtsen
+    - Rename prebaseconfig.d script to 65languagechooser to make sure it
+      is executed before /target is umounted.
+    - Use 'apt-install locales' to give base-config a chance to generate
+      the locale it needs to display translations.
+    - Package languagechooser should depend on cdebconf-udeb.
+    - Rewrite to ask only once for language name.
+  * Serge Winitzki
+    - Translate to Russian (closes: #180003).
+
+ -- Petter Reinholdtsen <pere@debian.org>  Mon,  3 Mar 2003 15:40:48 +0100
+
+languagechooser (0.012) unstable; urgency=low
+
+  * Changed to use Architecture: all.
+  * Corrected build-dep.  No need to depend on libcdebconf-dev any more.
+  * Change menu item from 25 to 10.
+  * Remove translated description from debian/control.  lintian
+    complains, so this must be the wrong place for it.
+  * Use language part from locale if language-name question fails.
+  * Denis Barbier:
+    - Converted to use po-debconf.  A dependency against po-debconf >= 0.6.0
+      is needed because language list choice has 2 leading underscores.
+    - Language selection is performed by the debian-installer/language-name
+      question, debian-installer/language only contains language code.
+  * André Luís Lopes :
+    - Add pt_BR template translation.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Mon, 16 Dec 2002 10:23:00 +0100
+
+languagechooser (0.011) unstable; urgency=low
+
+  * Moved source from Skolelinux CVS to Debian CVS.
+  * Change package arch to all.  The source is a shell script now, not
+    C code.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Mon, 16 Dec 2002 00:29:15 +0100
+
+language (0.010) unstable; urgency=low
+
+  * Make sure the locale code is reported to the log file.
+  * Code cleanup.
+
+ -- Petter Reinholdtsen <pere@hungry.com>  Sun, 15 Dec 2002 18:54:48 +0100
+
+language (0.009) unstable; urgency=low
+
+  * Use shell script implementation from Per Harald Westby instead of a
+    C implementation.  This makes the package library and platform
+    independant.
+
+ -- Petter Reinholdtsen <pere@hungry.com>  Sun, 15 Dec 2002 17:03:11 +0100
+
+language (0.008) unstable; urgency=low
+
+  * Change menu number from 1 to 25 to match to allocation schema.
+
+ -- Petter Reinholdtsen <pere@hungry.com>  Sun,  8 Dec 2002 23:06:05 +0100
+
+language (0.007) unstable; urgency=low
+
+  * Cleanup.
+
+ -- Petter Reinholdtsen <pere@hungry.com>  Sat,  7 Dec 2002 00:21:39 +0100
+
+language (0.006) unstable; urgency=low
+
+  * Add code to pass the locale information into base-config.
+
+ -- Petter Reinholdtsen <pere@hungry.com>  Mon, 11 Nov 2002 17:31:39 +0100
+
+language (0.005) unstable; urgency=low
+
+  * Ask for locale, and set language and country debconf values based on
+    this.
+
+ -- Petter Reinholdtsen <pere@hungry.com>  Fri, 30 Aug 2002 20:44:21 +0200
+
+language (0.004) unstable; urgency=low
+
+  * Change build-deb from cdebconf-dev to libcdebconf-dev.
+
+ -- Petter Reinholdtsen <pere@hungry.com>  Wed, 21 Aug 2002 14:09:02 +0200
+
+language (0.003) unstable; urgency=low
+
+  * Code cleanup.
+  * Reduce the number of options from "nb, nn, se, sv, dk" to "nb, nn,
+    se", to avoid having to handle different countries.
+
+ -- Petter Reinholdtsen <pere@hungry.com>  Fri, 26 Apr 2002 19:54:08 +0200
+
+language (0.002) unstable; urgency=low
+
+  * Skolelinux packages 2002-04-21T13:17+0200
+
+ -- Petter Reinholdtsen <pere@hungry.com>  Sun, 21 Apr 2002 13:17:18 +0200
+
+language (0.001) unstable; urgency=low
+
+  * First release.
+
+ -- Tollef Fog Heen <tfheen@debian.org>  Wed, 21 Nov 2001 13:56:25 +0100
