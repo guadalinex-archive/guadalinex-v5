@@ -33,6 +33,8 @@ iputils-ping
 less
 libc6-i686
 libfribidi0
+linux-image-generic
+linux-restricted-modules-generic
 locales
 login
 lsb-release
