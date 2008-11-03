@@ -1,3 +1,9 @@
+guadalinex-eadmin (v5-0.7) hardy; urgency=low
+
+  * Bugfix on certmanager.py with indentation
+
+ -- J. Félix Ontañón <fontanon@emergya.es>  Mon, 03 Nov 2008 14:14:53 +0100
+
 guadalinex-eadmin (v5-0.6) hardy; urgency=low
 
   * Install FNMT CA cert into cert8.db firefox user default profile
