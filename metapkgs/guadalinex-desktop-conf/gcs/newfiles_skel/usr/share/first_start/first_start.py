@@ -52,7 +52,7 @@ class FirstStart:
 
     def response(self, widget, res):
         if res == gtk.RESPONSE_ACCEPT:
-            os.spawnlp(os.P_NOWAIT,'firefox', 'firefox', 'file:///usr/share/guadalinex-user-manual/Gestionar_nuestros_programas.html')
+            os.spawnlp(os.P_NOWAIT,'firefox', 'firefox', 'file:///usr/share/guadalinex-user-manual/Gestionar_nuestros_programas_screenshot.html')
         if self.checkShow.get_active() == True:
             f = open(os.environ['HOME'] + "/.gnome2_private/first_start","w")
             f.write("OK\n")
