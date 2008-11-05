@@ -138,3 +138,4 @@ X-GNOME-Bugzilla-Product=gnome-utils
 X-GNOME-Bugzilla-Component=gdict
 X-GNOME-Bugzilla-Version=2.20.0.1
 X-Ubuntu-Gettext-Domain=gnome-utils-2.0
+NoDisplay=true
