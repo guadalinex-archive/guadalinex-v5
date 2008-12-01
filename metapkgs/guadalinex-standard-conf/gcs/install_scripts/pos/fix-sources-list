@@ -1,0 +1,42 @@
+# this script will fix the watermain marks which were missing in a default
+# installation, but only if the guadalinexv5 repository lines are as default.
+
+#REPOSITORIO="ubuntu.com"
+REPOSITORIO="v5.guadalinex.org"
+SOURCES_LIST="/etc/apt/sources.list"
+#SOURCES_LIST="/tmp/sources.list"
+
+TITLE="#TITLE:Sitio principal de Guadalinex en la Junta de Andalucia"
+ID="#ID:jda"
+END="#END"
+
+# lets check sources.list are "pure"
+
+grep ID $SOURCES_LIST || grep TITLE $SOURCES_LIST || grep END $SOURCES_LIST
+if [ $? -ne 0 ]
+then
+	#echo "not edited with watermain"
+	COINCIDENCIAS=$(grep $REPOSITORIO $SOURCES_LIST|wc -l)
+	if [ $COINCIDENCIAS -ge 5 ]
+	then
+		#echo "it has the 5 guadalinex.org lines"
+		LINE_NO=$(grep -i -n $REPOSITORIO $SOURCES_LIST | head -n1 | awk -F\: '{print $1}')
+		COUNTER=$LINE_NO
+		while [ $COUNTER -lt $(expr $LINE_NO + 5) ]
+		do
+			#echo "line $COUNTER:"
+			sed -n "$COUNTER p" $SOURCES_LIST | grep -i $REPOSITORIO
+			if [ $? -ne 0 ]
+			then
+				# not consecutive repositories, aborting...
+				exit 0
+			else
+				COUNTER=$(expr $COUNTER + 1)
+			fi
+		done
+		cp $SOURCES_LIST $SOURCES_LIST.bak
+		sed -i "$(expr $LINE_NO + 5) i $END" $SOURCES_LIST
+		sed -i "$LINE_NO i $ID" $SOURCES_LIST
+		sed -i "$LINE_NO i $TITLE" $SOURCES_LIST
+	fi
+fi 
