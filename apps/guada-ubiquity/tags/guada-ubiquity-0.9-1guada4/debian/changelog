@@ -1,0 +1,79 @@
+guada-ubiquity (0.9-1guada4) hardy; urgency=low
+
+  * Added watermain marks to final sources.list
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Mon, 1 Dic 2008 12:10:51 +0200
+
+guada-ubiquity (0.9-1guada3) hardy; urgency=low
+
+  * Fixed some splitted strings.
+
+ -- Alfredo Matas <amatas@emergya.es>  Mon, 15 Sep 2008 11:48:25 +0200
+
+guada-ubiquity (0.9-1guada2) hardy; urgency=low
+
+  * Kill hermes while ubiquity runs. 
+
+ -- Alfredo Matas <amatas@emergya.es>  Tue, 26 Aug 2008 10:38:28 +0200
+
+guada-ubiquity (0.9-1guada1) hardy; urgency=low
+
+  * Done a workaround with gtklabel in welcome screen.
+
+ -- Alfredo Matas <amatas@emergya.es>  Mon, 07 Jul 2008 14:00:17 +0200
+
+guada-ubiquity (0.9-1) hardy; urgency=low
+
+  * Upstream version 
+
+ -- Roberto Majadas <roberto.majadas@openshine.com>  Mon, 07 Jul 2008 09:23:42 +0200
+
+guada-ubiquity (0.8-1) hardy; urgency=low
+
+  * Added correct .desktop and diverts 
+
+ -- Roberto Majadas <roberto.majadas@openshine.com>  Thu, 26 Jun 2008 09:56:34 +0200
+
+guada-ubiquity (0.7-1) hardy; urgency=low
+
+  * Better 70reuse bash syntax
+
+ -- Roberto Majadas <roberto.majadas@openshine.com>  Tue, 24 Jun 2008 10:20:24 +0200
+
+guada-ubiquity (0.6-1) hardy; urgency=low
+
+  * Add reuse partitions option
+  * Corp texts to welcome page and preparted page
+
+ -- Roberto Majadas <roberto.majadas@openshine.com>  Thu, 12 Jun 2008 15:10:03 +0200
+
+guada-ubiquity (0.5-1) hardy; urgency=low
+
+  * 92guadalinexrepos
+
+ -- Roberto Majadas <roberto.majadas@openshine.com>  Mon, 26 May 2008 12:28:49 +0200
+
+guada-ubiquity (0.4-1) hardy; urgency=low
+
+  * Fix bug in summary
+
+ -- Roberto Majadas <roberto.majadas@openshine.com>  Mon, 26 May 2008 10:18:20 +0200
+
+guada-ubiquity (0.3-1) hardy; urgency=low
+
+  * Added desktop
+
+ -- Roberto Majadas <roberto.majadas@openshine.com>  Tue, 13 May 2008 12:14:47 +0200
+
+guada-ubiquity (0.2-1) hardy; urgency=low
+
+  * Added repository guadalinex hook
+
+ -- Roberto Majadas <roberto.majadas@openshine.com>  Fri, 09 May 2008 13:03:25 +0200
+
+guada-ubiquity (0.1-1) unstable; urgency=low
+
+  * Initial release 
+
+ -- Roberto Majadas <roberto.majadas@openshine.com>  Fri, 02 May 2008 13:31:22 +0200
+

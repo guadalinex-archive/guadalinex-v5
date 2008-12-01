@@ -1,0 +1,14 @@
+Documentacion de guada-ubiquity
+-------------------------------
+
+Guada-ubiquity es un customización del paquete ubiquity. La orientacion de este paquete es crear un instalador para guadalinex propio y que permita mantener la transicion en futuras versiones.
+
+Ubiquity es un instalador cuya base esta orientada a objetos. De este modo guada-ubiquity esencialmente es una clase nueva que hereda de Ubiquity como instalador. El codigo de esta clase esta en src/frontend/guada_ui.py. Y este es el principal componente de este paquete. Como detalles importantes sobre este fichero, hagase notar el pressiding de debconf que realiza y la customizacion de las pestañas que se realiza para quitar e incluir algunas necesarias. 
+
+Otra parte importante es el componente DiskPreview, cuyo codigo es heredado de la version de guadalinex GV4 y ha sido reutilizado para esta version. DiskPreview es un previsualizador de particiones y es llamado desde guada_ui.
+
+El en directorio src/scripts se encuentra los script de post-instalacion de la distribucion. Pricipalmente los usamos para recrear la base de datos de apt y el fichero sources.list
+
+En el directorio src/automatically_partition se incluye scripts para añadir funcionalidades al particionador partman. En este caso para poder proponer al usuario que instala la reutilizacion del espacio libre.
+
+
