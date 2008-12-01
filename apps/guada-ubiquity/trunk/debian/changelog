@@ -1,3 +1,9 @@
+guada-ubiquity (0.9-1guada4) hardy; urgency=low
+
+  * Added watermain marks to final sources.list
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Mon, 1 Dic 2008 12:10:51 +0200
+
 guada-ubiquity (0.9-1guada3) hardy; urgency=low
 
   * Fixed some splitted strings.
