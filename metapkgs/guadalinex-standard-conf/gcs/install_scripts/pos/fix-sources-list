@@ -35,7 +35,12 @@ then
 			fi
 		done
 		cp $SOURCES_LIST $SOURCES_LIST.bak
-		sed -i "$(expr $LINE_NO + 5) i $END" $SOURCES_LIST
+		if [ $(expr $LINE_NO + 5) -gt $(cat $SOURCES_LIST|wc -l) ]
+		then
+			echo "$END" >> $SOURCES_LIST
+		else
+			sed -i "$(expr $LINE_NO + 5) i $END" $SOURCES_LIST
+		fi
 		sed -i "$LINE_NO i $ID" $SOURCES_LIST
 		sed -i "$LINE_NO i $TITLE" $SOURCES_LIST
 	fi
