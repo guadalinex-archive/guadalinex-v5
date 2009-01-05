@@ -6,7 +6,7 @@ Build-Depends: debhelper (>= 5)
 Standards-Version: 3.7.2
 
 Package: guadalinex-nano-installer
-Architecture: all
+Architecture: i386
 Depends: ${shlibs:Depends}, ${misc:Depends}, dialog
 Description: Guadalinex Nano Installer
  Guadalinex Nano Installer it's a simple text based menu that shows a list
