@@ -1,3 +1,9 @@
+guadalinex-nano-meta (0.1.3) unstable; urgency=low
+
+  * Fixing depends
+
+ -- Javier Hernández Antúnez <jhernandez@emergya.es>  Mon, 05 Jan 2009 13:51:54 +0100
+
 guadalinex-nano-meta (0.1.2) unstable; urgency=low
 
   * Added 'language-pack-es' & 'console-setup' as dependences.
