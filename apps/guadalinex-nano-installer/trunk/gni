@@ -33,6 +33,7 @@ case $retval in
 	PKGS=$(grep "$choice" $CONFFILE|awk -F';' '{print $5}')
 	echo $SOURCES > /etc/apt/sources.list
 	apt-get install --force-yes --assume-yes $PKGS;;
+	exit 0
   1)
     echo "Cancel pressed.";;
   255)
