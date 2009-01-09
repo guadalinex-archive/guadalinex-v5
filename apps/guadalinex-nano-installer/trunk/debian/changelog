@@ -1,8 +1,8 @@
-guadalinex-nano-installer (0.2.2) lobo; urgency=low
+guadalinex-nano-installer (0.2.3) lobo; urgency=low
 
-  * Remove setup.sh just if apt-get install was performed.
+  * Added some checkpoints to setup.sh
 
- -- Roberto C. Morano <rcmorano@emergya.es>  Fri, 09 Jan 2009 13:05:46 +0100
+ -- Roberto C. Morano <rcmorano@emergya.es>  Fri, 09 Jan 2009 13:28:16 +0100
 
 guadalinex-nano-installer (0.2.1) lobo; urgency=low
 
