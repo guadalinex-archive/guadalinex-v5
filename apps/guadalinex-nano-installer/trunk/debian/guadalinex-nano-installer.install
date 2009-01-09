@@ -1,2 +1,3 @@
 gni usr/sbin/
 gni-options etc/
+setup.sh sbin/

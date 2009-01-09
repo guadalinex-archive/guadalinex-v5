@@ -1,5 +1,11 @@
+guadalinex-nano-installer (0.2) lobo; urgency=low
+
+  * Added setup.sh
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Fri, 09 Jan 2009 11:57:31 +0100
+
 guadalinex-nano-installer (0.1) lobo; urgency=low
 
   * Initial Release.
 
- -- Roberto C. Morano <rcmorano@emergya.es>  Wed, 24 Dic 2008 10:42:23 +0100
+ -- Roberto C. Morano <rcmorano@emergya.es>  Wed, 24 Dec 2008 10:42:23 +0100
