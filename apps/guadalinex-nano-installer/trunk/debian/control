@@ -7,7 +7,7 @@ Standards-Version: 3.7.2
 
 Package: guadalinex-nano-installer
 Architecture: i386
-Depends: ${shlibs:Depends}, ${misc:Depends}, dialog
+Depends: ${shlibs:Depends}, ${misc:Depends}, dialog, wget
 Description: Guadalinex Nano Installer
  Guadalinex Nano Installer it's a simple text based menu that shows a list
  of package sets  defined in a config file and let you choose a set to be
