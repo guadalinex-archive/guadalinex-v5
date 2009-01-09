@@ -1,0 +1,41 @@
+#!/bin/bash
+
+DIALOG=${DIALOG=dialog}
+tempfile=`tempfile 2>/dev/null` || tempfile=/tmp/test$$
+CONFFILE=/etc/gni-options
+
+while read line
+do
+	echo $line | grep -v "^$\|^#"
+	if [ $? -eq 0 ]
+	then
+        	OPTIONS="$OPTIONS $(echo $line|awk -F';' '{print $1" "$2" "$3}')"
+	fi
+done < $CONFFILE 
+
+trap "rm -f $tempfile" 0 1 2 5 15
+
+
+cat > /tmp/menu$$ << EOF
+$DIALOG --backtitle "Seleccion de aplicaciones de Guadalinex nano" \
+	--title "Aplicaciones" --clear \
+        --radiolist "Marque en esta lista las aplicaciones que desee instalar:" 20 61 5 $OPTIONS 2> $tempfile
+EOF
+chmod +x /tmp/menu$$ && /tmp/menu$$
+retval=$?
+rm /tmp/menu$$
+
+choice=`cat $tempfile`
+case $retval in
+  0)
+    #echo "$choice han sido seleccionados";;
+	SOURCES=$(grep "$choice" $CONFFILE|awk -F';' '{print $4}')
+	PKGS=$(grep "$choice" $CONFFILE|awk -F';' '{print $5}')
+	echo $SOURCES > /etc/apt/sources.list
+	apt-get install --force-yes --assume-yes $PKGS;;
+	exit 0
+  1)
+    echo "Cancel pressed.";;
+  255)
+    echo "ESC pressed.";;
+esac
