@@ -7,6 +7,6 @@ Standards-Version: 3.7.0
 
 Package: guadalinex-nano-meta
 Architecture: any
-Depends: sudo, guadalinex-nano-installer, language-pack-es, language-pack-es-base, console-setup, console-terminus, xkb-data
+Depends: sudo, guadalinex-nano-installer, language-pack-es, language-pack-es-base, console-setup, console-terminus, xkb-data, perl
 Description: Guadalinex Nano metapackage
  Guadalinex Nano metapackage
