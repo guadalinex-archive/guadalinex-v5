@@ -2,16 +2,22 @@
 
 DIALOG=${DIALOG=dialog}
 tempfile=`tempfile 2>/dev/null` || tempfile=/tmp/test$$
-CONFFILE=/etc/gni-options
+INDEXFILE=/etc/gni/index
+LOGFILE=/var/log/gni.log
 
 while read line
 do
 	echo $line | grep -v "^$\|^#"
 	if [ $? -eq 0 ]
 	then
-        	OPTIONS="$OPTIONS $(echo $line|awk -F';' '{print $1" "$2" "$3}')"
+#        	OPTIONS="$OPTIONS $(echo $line|awk -F';' '{print $1" "$2" "$3}')"
+		DESC=$(echo $line | awk -F';' '{print $1}')
+		SOURCESLIST=$(echo $line | awk -F';' '{print $2}')
+		test -z $SOURCESLIST && SOURCESLIST="/etc/apt/sources.list"
+		PROFILE=$(echo $line | awk -F';' '{print $3}' | sed -e 's|.*/||g' -e 's|\.profile||g')
+		OPTIONS="$OPTIONS \"$DESC\" \"\" off"
 	fi
-done < $CONFFILE 
+done < $INDEXFILE 
 
 trap "rm -f $tempfile" 0 1 2 5 15
 
@@ -29,11 +35,26 @@ choice=`cat $tempfile`
 case $retval in
   0)
     #echo "$choice han sido seleccionados";;
-	SOURCES=$(grep "$choice" $CONFFILE|awk -F';' '{print $4}')
-	PKGS=$(grep "$choice" $CONFFILE|awk -F';' '{print $5}')
-	echo $SOURCES > /etc/apt/sources.list
-	apt-get install --force-yes --assume-yes $PKGS
-	exit 0
+        SOURCESLIST=$(grep "$choice" $INDEXFILE | awk -F';' '{print $2}')
+        if [ ! -z $SOURCESLIST ]
+	then
+		mv /etc/apt/sources.list /etc/apt/sources.list.distrib
+		wget $SOURCESLIST -O /etc/apt/sources.list
+	fi
+	
+	PROFILE=$(grep "$choice" $CONFFILE|awk -F';' '{print $3}')
+	PKGS=$(wget $PROFILE -q -O /dev/stdout)
+	
+	test -f $LOGFILE && rm $LOGFILE
+	apt-get update 2>&1 | tee -a $LOGFILE
+	test $? -eq 0 &&  apt-get install --force-yes --assume-yes $PKGS 2>&1 | tee -a $LOGFILE
+	
+	if [ $? -ne 0 ]
+	then
+		exit 69
+	else
+		exit 0	
+	fi
 	;;
   1)
     echo "Cancel pressed."

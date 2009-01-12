@@ -1,9 +1,12 @@
 #!/bin/bash
 
-GNICONF="gni-options"
+VERSION="V5"
+DIALOG="/usr/bin/dialog"
 
 # download options file
-wget http://gensys/$GNICONF -O /etc/gni-options
+#wget http://gensys/$GNICONF -O /etc/gni-options
+wget http://www.guadalinex.org/distro/$VERSION/perfiles/index -O /etc/gni/index
+
 if [ $? -ne 0 ]
 then
 	$DIALOG --aspect 15 --cr-wrap --title "Error de conexión" --trim \
@@ -20,4 +23,15 @@ fi
 if [ $? -eq 0 ]
 then
 	rm $0
+	exit 0
+fi
+
+if [ $? -eq 69 ]
+then
+        $DIALOG --aspect 15 --cr-wrap --title "Error en la instalación" --trim \
+        --msgbox "Hubo algún problema durante la instalación de paquetes,
+		 revise el fichero '/var/log/gni.log' para obtener más
+		 información." 0 0
+	rm $0
+	exit 1
 fi
