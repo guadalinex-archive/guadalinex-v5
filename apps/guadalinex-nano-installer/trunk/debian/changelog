@@ -1,3 +1,9 @@
+guadalinex-nano-installer (0.2.7) lobo; urgency=low
+
+  * Fixed exit codes in gni script.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Mon, 12 Jan 2009 13:13:51 +0100
+
 guadalinex-nano-installer (0.2.6) lobo; urgency=low
 
   * Fixed a bug in postinstall script.
