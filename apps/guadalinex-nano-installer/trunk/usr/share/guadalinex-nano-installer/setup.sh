@@ -5,6 +5,7 @@ DIALOG="/usr/bin/dialog"
 
 # download options file
 #wget http://gensys/$GNICONF -O /etc/gni-options
+test -f /etc/gni/index && rm /etc/gni/index
 wget http://www.guadalinex.org/distro/$VERSION/perfiles/index -O /etc/gni/index
 
 if [ $? -ne 0 ]
