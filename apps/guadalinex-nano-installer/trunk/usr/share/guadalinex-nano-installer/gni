@@ -36,7 +36,11 @@ case $retval in
 	exit 0
 	;;
   1)
-    echo "Cancel pressed.";;
+    echo "Cancel pressed."
+    exit 1
+    ;;
   255)
-    echo "ESC pressed.";;
+    echo "ESC pressed."
+    exit 255
+    ;;
 esac
