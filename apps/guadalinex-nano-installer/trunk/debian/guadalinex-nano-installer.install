@@ -1,3 +1,3 @@
-gni usr/sbin/
-gni-options etc/
-setup.sh sbin/
+usr/share/guadalinex-nano-installer/gni usr/sbin/
+usr/share/guadalinex-nano-installer/setup.sh usr/share/guadalinex-nano-installer/
+etc/gni-options etc/
