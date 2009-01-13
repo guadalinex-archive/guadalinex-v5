@@ -1,3 +1,9 @@
+extras-installer (0.2.0) hardy; urgency=low
+
+  * Version changed for compatibility with v5 upgrade from gv4.2
+
+ -- Junta de Andalucía <packmaster@guadalinex.org>  Tue, 13 Jan 2009 11:34:44 +0100
+
 extras-installer (0.0.2) hardy; urgency=low
 
   * Import V5 version 
