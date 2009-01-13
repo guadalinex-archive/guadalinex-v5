@@ -8,7 +8,7 @@ INDEXURL="http://www.guadalinex.org/distro/$VERSION/perfiles/index"
 $DIALOG --aspect 15 --cr-wrap --nocancel --title "Confirmación de la URL" \
 --backtitle "Instalación de Guadalinex Mínima" \
 --trim --inputbox "Por favor, confirme que esta es la URL de indices que quiere \
-usar o modifiquela manualmente:" 0 100 "$URL" 2> /tmp/gni-url
+usar o modifiquela manualmente:" 0 100 $INDEXURL 2> /tmp/gni-url
 
 # reset index download url from the inputbox
 INDEXURL=$(cat /tmp/gni-url)

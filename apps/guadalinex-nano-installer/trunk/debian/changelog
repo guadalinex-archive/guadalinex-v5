@@ -1,3 +1,9 @@
+guadalinex-nano-installer (0.3.2) lobo; urgency=low
+
+  * Added some missing features and some missing backtitles.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Tue, 13 Jan 2009 13:06:52 +0100
+
 guadalinex-nano-installer (0.3.1) lobo; urgency=low
 
   * Changed the "dh_install" for an empty dir by a 'mkdir'.
