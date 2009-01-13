@@ -1,0 +1,13 @@
+Source: extras-installer
+Section: utils
+Priority: optional
+Maintainer: Junta de Andalucía <packmaster@guadalinex.org>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.2
+
+Package: extras-installer
+Architecture: any
+Depends: zenity, guadafox 
+Description: Utilidad para instalación de software extra
+ Script con zenity para la instalación de software extra no incluido
+ en Guadalinex v5.
