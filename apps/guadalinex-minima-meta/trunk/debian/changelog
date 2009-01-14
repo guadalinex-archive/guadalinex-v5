@@ -1,3 +1,11 @@
+guadalinex-minima-meta (0.2.1) unstable; urgency=low
+
+  * Added 'console-data' as dependence.
+  * Added '/etc/issue' and '/etc/issue.net' for identifying distro as "Guadalinex
+    Minima.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Wed, 14 Jan 2009 12:51:31 +0100
+
 guadalinex-minima-meta (0.2) unstable; urgency=low
 
   * Package renamed to "guadalinex-minima".

@@ -4,3 +4,13 @@
 [ "/etc/lsb-release" != "$(dpkg-divert --truename /etc/lsb-release)" ] && rm -f /etc/lsb-release && dpkg-divert --rename --remove /etc/lsb-release
 dpkg-divert --package guadalinex-minima-meta --rename --quiet --add /etc/lsb-release
 ln -fs /etc/lsb-release.gv5 /etc/lsb-release
+
+# diversion of /etc/issue
+[ "/etc/issue" != "$(dpkg-divert --truename /etc/issue)" ] && rm -f /etc/issue && dpkg-divert --rename --remove /etc/issue
+dpkg-divert --package guadalinex-minima-meta --rename --quiet --add /etc/issue
+ln -fs /etc/issue.gv5 /etc/issue
+
+# diversion of /etc/issue.net
+[ "/etc/issue.net" != "$(dpkg-divert --truename /etc/issue.net)" ] && rm -f /etc/issue.net && dpkg-divert --rename --remove /etc/issue.net
+dpkg-divert --package guadalinex-minima-meta --rename --quiet --add /etc/issue.net
+ln -fs /etc/issue.net.gv5 /etc/issue.net

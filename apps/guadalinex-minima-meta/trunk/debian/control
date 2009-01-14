@@ -7,6 +7,6 @@ Standards-Version: 3.7.0
 
 Package: guadalinex-minima-meta
 Architecture: any
-Depends: sudo, guadalinex-minima-installer, language-pack-es, language-pack-es-base, console-setup, console-terminus, xkb-data, perl
+Depends: sudo, guadalinex-minima-installer, language-pack-es, language-pack-es-base, console-setup, console-terminus, xkb-data, perl, console-data
 Description: Guadalinex Minima metapackage
  Guadalinex Minima metapackage
