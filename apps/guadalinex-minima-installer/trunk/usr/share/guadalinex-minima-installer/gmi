@@ -58,12 +58,6 @@ case $retval in
 	then
 		exit 69
 	else
-		$DIALOG --aspect 15 --cr-wrap --title "Reinicio del sistema" \
-		--backtitle "Instalación de Guadalinex Mínima" \
-		--msgbox "Se procederá a reinicar el sistema para terminar \
-		la instalación." 6 50
-		echo "Reiniciando el sistema para acabar la instalación..."
-		reboot
 		exit 0	
 	fi
 	;;

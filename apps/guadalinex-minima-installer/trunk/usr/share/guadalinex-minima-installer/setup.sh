@@ -34,6 +34,12 @@ fi
 # remove myself (/sbin/setup.sh) if apt-get install was launched
 if [ $? -eq 0 ]
 then
+        $DIALOG --aspect 15 --cr-wrap --title "Reinicio del sistema" \
+        --backtitle "Instalación de Guadalinex Mínima" \
+        --msgbox "Se procederá a reinicar el sistema para terminar \
+        la instalación." 6 50
+        echo "Reiniciando el sistema para acabar la instalación..."
+        reboot
 	rm $0
 	exit 0
 fi
