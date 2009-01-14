@@ -1,5 +1,7 @@
 guadalinex-minima-installer (0.4.2) lobo; urgency=low
 
+  * Fixes/Closes bug/task #5882: system was not rebooting on installation
+    complete.
   * Fixed a bug: it didnt notice when 'apt-get install' failed.
 
  -- Roberto C. Morano <rcmorano@emergya.es>  Wed, 14 Jan 2009 13:20:12 +0100
