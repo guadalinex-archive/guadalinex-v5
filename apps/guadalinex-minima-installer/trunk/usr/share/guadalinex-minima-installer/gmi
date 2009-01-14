@@ -3,7 +3,7 @@
 DIALOG=${DIALOG=dialog}
 tempfile=`tempfile 2>/dev/null` || tempfile=/tmp/test$$
 INDEXFILE=/etc/gni/index
-LOGFILE=/var/log/gni.log
+LOGFILE=/var/log/gmi.log
 
 while read line
 do
@@ -54,7 +54,7 @@ case $retval in
 	apt-get update 2>&1 | tee -a $LOGFILE
 	test $? -eq 0 &&  apt-get install --force-yes --assume-yes $PKGS 2>&1 | tee -a $LOGFILE
 	
-	if [ $? -ne 0 ]
+	if [ $PIPESTATUS -ne 0 ]
 	then
 		exit 69
 	else
