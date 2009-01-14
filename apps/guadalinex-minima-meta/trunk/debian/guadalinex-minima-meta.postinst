@@ -2,5 +2,5 @@
 
 # diversion of /etc/lsb-release
 [ "/etc/lsb-release" != "$(dpkg-divert --truename /etc/lsb-release)" ] && rm -f /etc/lsb-release && dpkg-divert --rename --remove /etc/lsb-release
-dpkg-divert --package guadalinex-nano-meta --rename --quiet --add /etc/lsb-release
+dpkg-divert --package guadalinex-minima-meta --rename --quiet --add /etc/lsb-release
 ln -fs /etc/lsb-release.gv5 /etc/lsb-release
