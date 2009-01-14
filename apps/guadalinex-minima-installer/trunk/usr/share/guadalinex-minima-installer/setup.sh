@@ -39,7 +39,7 @@ then
         --msgbox "Se procederá a reinicar el sistema para terminar \
         la instalación." 6 50
         echo "Reiniciando el sistema para acabar la instalación..."
-        reboot
+        sleep 5 && reboot &
 	rm $0
 	exit 0
 fi
