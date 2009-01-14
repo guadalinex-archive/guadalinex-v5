@@ -1,0 +1,29 @@
+guadalinex-nano-installer (0.2.3) lobo; urgency=low
+
+  * Added some checkpoints to setup.sh
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Fri, 09 Jan 2009 13:28:16 +0100
+
+guadalinex-nano-installer (0.2.2) lobo; urgency=low
+
+  * Remove setup.sh just if apt-get install was performed.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Fri, 09 Jan 2009 13:05:46 +0100
+
+guadalinex-nano-installer (0.2.1) lobo; urgency=low
+
+  * Added 'wget' as dependence.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Fri, 09 Jan 2009 12:35:16 +0100
+
+guadalinex-nano-installer (0.2) lobo; urgency=low
+
+  * Added setup.sh
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Fri, 09 Jan 2009 11:57:31 +0100
+
+guadalinex-nano-installer (0.1) lobo; urgency=low
+
+  * Initial Release.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Wed, 24 Dec 2008 10:42:23 +0100
