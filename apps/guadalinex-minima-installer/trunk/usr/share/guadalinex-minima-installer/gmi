@@ -35,8 +35,13 @@ choice=`cat $tempfile`
 case $retval in
   0)
     #echo "$choice han sido seleccionados";;
+	# choice vacio = exit 1 (nada seleccionado)
+	if [ -z $choice ]
+	then
+		exit 1	
+	fi
         SOURCESLIST=$(grep "$choice" $INDEXFILE | awk -F';' '{print $2}')
-        if [ ! -z $SOURCESLIST ]
+        if [ ! -z "$SOURCESLIST" ]
 	then
 		mv /etc/apt/sources.list /etc/apt/sources.list.distrib
 		wget $SOURCESLIST -O /etc/apt/sources.list
