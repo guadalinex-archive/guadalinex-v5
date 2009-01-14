@@ -8,14 +8,14 @@ INDEXURL="http://www.guadalinex.org/distro/$VERSION/perfiles/index"
 $DIALOG --aspect 15 --cr-wrap --nocancel --title "Confirmación de la URL" \
 --backtitle "Instalación de Guadalinex Mínima" \
 --trim --inputbox "Por favor, confirme que esta es la URL de indices que quiere \
-usar o modifiquela manualmente:" 0 100 $INDEXURL 2> /tmp/gni-url
+usar o modifiquela manualmente:" 0 100 $INDEXURL 2> /tmp/gmi-url
 
 # reset index download url from the inputbox
-INDEXURL=$(cat /tmp/gni-url)
+INDEXURL=$(cat /tmp/gmi-url)
 
 # download index file
-test -f /etc/gni/index && rm /etc/gni/index
-wget $INDEXURL -O /etc/gni/index
+test -f /etc/gmi/index && rm /etc/gmi/index
+wget $INDEXURL -O /etc/gmi/index
 
 # show any error if there was any
 if [ $? -ne 0 ]
@@ -29,7 +29,7 @@ then
 fi
 
 # launch menu app
-/usr/sbin/gni
+/usr/sbin/gmi
 
 # remove myself (/sbin/setup.sh) if apt-get install was launched
 if [ $? -eq 0 ]

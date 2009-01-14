@@ -23,7 +23,7 @@ trap "rm -f $tempfile" 0 1 2 5 15
 
 
 cat > /tmp/menu$$ << EOF
-$DIALOG --backtitle "Seleccion de aplicaciones de Guadalinex nano" \
+$DIALOG --backtitle "Seleccion de aplicaciones de Guadalinex Mínima" \
 	--title "Aplicaciones" --clear \
         --radiolist "Marque en esta lista las aplicaciones que desee instalar:" 20 61 5 $OPTIONS 2> $tempfile
 EOF
