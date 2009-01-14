@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# remove diversion of /etc/lsb-release
+rm -f /etc/lsb-release
+dpkg-divert --package guadalinex-minima-meta --rename --quiet --remove /etc/lsb-release
