@@ -1,3 +1,9 @@
+guadalinex-minima-installer (0.4.2) lobo; urgency=low
+
+  * Fixed a bug: it didnt notice when 'apt-get install' failed.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Wed, 14 Jan 2009 13:20:12 +0100
+
 guadalinex-minima-installer (0.4.1) lobo; urgency=low
 
   * Fixed a bug produced when no option is selected in menu.
