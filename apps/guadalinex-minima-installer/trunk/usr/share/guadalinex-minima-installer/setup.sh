@@ -30,9 +30,10 @@ fi
 
 # launch menu app
 /usr/sbin/gmi
+gmiexit=$?
 
 # remove myself (/sbin/setup.sh) if apt-get install was launched
-if [ $? -eq 0 ]
+if [ $gmiexit -eq 0 ]
 then
         $DIALOG --aspect 15 --cr-wrap --title "Reinicio del sistema" \
         --backtitle "Instalación de Guadalinex Mínima" \
@@ -44,7 +45,7 @@ then
 	exit 0
 fi
 
-if [ $? -eq 69 ]
+if [ $gmiexit -eq 69 ]
 then
         $DIALOG --aspect 15 --cr-wrap --title "Error en la instalación" --trim \
 	--backtitle "Instalación de Guadalinex Mínima" \

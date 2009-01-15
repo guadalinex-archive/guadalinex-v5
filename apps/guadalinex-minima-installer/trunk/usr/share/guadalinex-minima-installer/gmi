@@ -36,7 +36,7 @@ case $retval in
   0)
     #echo "$choice han sido seleccionados";;
 	# choice vacio = exit 1 (nada seleccionado)
-	if [ -z $choice ]
+	if [ -z "$choice" ]
 	then
 		exit 1	
 	fi
@@ -53,8 +53,8 @@ case $retval in
 	test -f $LOGFILE && rm $LOGFILE
 	apt-get update 2>&1 | tee -a $LOGFILE
 	test $? -eq 0 &&  apt-get install --force-yes --assume-yes $PKGS 2>&1 | tee -a $LOGFILE
-	
-	if [ $PIPESTATUS -ne 0 ]
+	aptexit=$PIPESTATUS
+	if [ $aptexit -ne 0 ]
 	then
 		exit 69
 	else
