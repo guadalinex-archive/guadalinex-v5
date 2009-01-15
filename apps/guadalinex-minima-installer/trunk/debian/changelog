@@ -1,3 +1,9 @@
+guadalinex-minima-installer (0.4.3) lobo; urgency=low
+
+  * Fixed a bug related o exit codes and in consecuence, with info messages.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Thu, 15 Jan 2009 11:05:25 +0100
+
 guadalinex-minima-installer (0.4.2) lobo; urgency=low
 
   * Fixes/Closes bug/task #5882: system was not rebooting on installation
