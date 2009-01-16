@@ -2,7 +2,7 @@
 
 DIALOG=${DIALOG=dialog}
 tempfile=`tempfile 2>/dev/null` || tempfile=/tmp/test$$
-INDEXFILE=/etc/gni/index
+INDEXFILE=/etc/gmi/index
 LOGFILE=/var/log/gmi.log
 
 while read line
