@@ -1,0 +1,72 @@
+#!/bin/bash
+
+DIALOG=${DIALOG=dialog}
+tempfile=`tempfile 2>/dev/null` || tempfile=/tmp/test$$
+INDEXFILE=/etc/gmi/index
+LOGFILE=/var/log/gmi.log
+
+while read line
+do
+	echo $line | grep -v "^$\|^#"
+	if [ $? -eq 0 ]
+	then
+#        	OPTIONS="$OPTIONS $(echo $line|awk -F';' '{print $1" "$2" "$3}')"
+		DESC=$(echo $line | awk -F';' '{print $1}')
+		SOURCESLIST=$(echo $line | awk -F';' '{print $2}')
+		test -z $SOURCESLIST && SOURCESLIST="/etc/apt/sources.list"
+		PROFILE=$(echo $line | awk -F';' '{print $3}' | sed -e 's|.*/||g' -e 's|\.profile||g')
+		OPTIONS="$OPTIONS \"$DESC\" \"\" off"
+	fi
+done < $INDEXFILE 
+
+trap "rm -f $tempfile" 0 1 2 5 15
+
+
+cat > /tmp/menu$$ << EOF
+$DIALOG --backtitle "Seleccion de aplicaciones de Guadalinex Mínima" \
+	--title "Aplicaciones" --clear \
+        --radiolist "Marque en esta lista las aplicaciones que desee instalar:" 20 61 5 $OPTIONS 2> $tempfile
+EOF
+chmod +x /tmp/menu$$ && /tmp/menu$$
+retval=$?
+rm /tmp/menu$$
+
+choice=`cat $tempfile`
+case $retval in
+  0)
+    #echo "$choice han sido seleccionados";;
+	# choice vacio = exit 1 (nada seleccionado)
+	if [ -z "$choice" ]
+	then
+		exit 1	
+	fi
+        SOURCESLIST=$(grep "$choice" $INDEXFILE | awk -F';' '{print $2}')
+        if [ ! -z "$SOURCESLIST" ]
+	then
+		mv /etc/apt/sources.list /etc/apt/sources.list.distrib
+		wget $SOURCESLIST -O /etc/apt/sources.list
+	fi
+	
+	PROFILE=$(grep "$choice" $INDEXFILE|awk -F';' '{print $3}')
+	PKGS=$(wget $PROFILE -q -O /dev/stdout)
+	
+	test -f $LOGFILE && rm $LOGFILE
+	apt-get update 2>&1 | tee -a $LOGFILE
+	test $? -eq 0 &&  apt-get install --force-yes --assume-yes $PKGS 2>&1 | tee -a $LOGFILE
+	aptexit=$PIPESTATUS
+	if [ $aptexit -ne 0 ]
+	then
+		exit 69
+	else
+		exit 0	
+	fi
+	;;
+  1)
+    echo "Cancel pressed."
+    exit 1
+    ;;
+  255)
+    echo "ESC pressed."
+    exit 255
+    ;;
+esac

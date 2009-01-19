@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -f /usr/share/guadalinex-minima-installer/setup.sh ]
+then
+	ln -s /usr/share/guadalinex-minima-installer/setup.sh /sbin/setup.sh
+fi
+
+if [ ! -d /etc/gmi ]
+then
+	mkdir /etc/gmi
+fi
