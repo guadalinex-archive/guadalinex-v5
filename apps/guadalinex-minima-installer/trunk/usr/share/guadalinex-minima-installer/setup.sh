@@ -1,5 +1,29 @@
 #!/bin/bash
 
+function neterror() {
+
+$DIALOG --aspect 15 --cr-wrap --title "Error de conexión" --trim \
+--backtitle "Instalación de Guadalinex Mínima" \
+--yesno "No se pudo descargar la configuración del instalador.
+	 La instalación no ha sido completada ¿ Desea completarla la
+	 próxima vez que se inicie el sistema ?" 0 0
+
+return $?
+
+}
+
+function cancelled() {
+
+$DIALOG --aspect 15 --cr-wrap --title "Cancelar instalación" --trim \
+--backtitle "Instalación de Guadalinex Mínima" \
+--yesno "Ha cancelado la instalación, por lo tanto la instalación no ha sido
+         completada ¿ Desea completarla la
+	 próxima vez que se inicie el sistema ?" 0 0
+
+return $?
+
+}
+
 VERSION="V5"
 DIALOG="/usr/bin/dialog"
 INDEXURL="http://www.guadalinex.org/distro/$VERSION/perfiles/index"
@@ -20,12 +44,14 @@ wget $INDEXURL -O /etc/gmi/index
 # show any error if there was any
 if [ $? -ne 0 ]
 then
-	$DIALOG --aspect 15 --cr-wrap --title "Error de conexión" --trim \
-	--backtitle "Instalación de Guadalinex Mínima" \
-        --msgbox "No se pudo descargar la configuración del instalador.
-		 La instalación no ha sido completada, se intentará completar
-		 la próxima vez que se inicie el sistema." 0 0
-	exit 0
+	neterror
+	if [ $? -eq 0 ]
+	then
+		exit 0	
+	else
+		rm $0
+		exit 0
+	fi
 fi
 
 # launch menu app
@@ -45,6 +71,7 @@ then
 	exit 0
 fi
 
+# there was any error
 if [ $gmiexit -eq 69 ]
 then
         $DIALOG --aspect 15 --cr-wrap --title "Error en la instalación" --trim \
@@ -54,4 +81,17 @@ then
 		 información." 0 0
 	rm $0
 	exit 1
+fi
+
+# no option chosen or cancel pressed
+if [[ $gmiexit -eq 1 || $gmiexit -eq 255 ]]
+then
+	cancelled
+        if [ $? -eq 0 ]
+        then
+                exit 0
+        else
+                rm $0
+                exit 0
+        fi	
 fi
