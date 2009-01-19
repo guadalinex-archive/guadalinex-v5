@@ -1,3 +1,10 @@
+guadalinex-minima-installer (0.4.5) lobo; urgency=low
+
+  * Added confirmation when instalation is cancelled or it gives network
+    error.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Mon, 19 Jan 2009 12:02:41 +0100
+
 guadalinex-minima-installer (0.4.4) lobo; urgency=low
 
   * Changed an unchanged "gni" string.
