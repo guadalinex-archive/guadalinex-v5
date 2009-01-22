@@ -1,3 +1,9 @@
+guadalinex-minima-meta (0.2.2) unstable; urgency=low
+
+  * Added 'lsb-release' as dependence.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Thu, 22 Jan 2009 13:57:12 +0100
+
 guadalinex-minima-meta (0.2.1) unstable; urgency=low
 
   * Added 'console-data' as dependence.
