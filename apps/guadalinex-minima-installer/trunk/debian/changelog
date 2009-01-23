@@ -1,3 +1,9 @@
+guadalinex-minima-installer (0.4.6) lobo; urgency=low
+
+  * Clarified some instalation strings.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Fri, 23 Jan 2009 09:13:15 +0100
+
 guadalinex-minima-installer (0.4.5) lobo; urgency=low
 
   * Added confirmation when instalation is cancelled or it gives network

@@ -23,9 +23,10 @@ trap "rm -f $tempfile" 0 1 2 5 15
 
 
 cat > /tmp/menu$$ << EOF
-$DIALOG --backtitle "Seleccion de aplicaciones de Guadalinex Mínima" \
-	--title "Aplicaciones" --clear \
-        --radiolist "Marque en esta lista las aplicaciones que desee instalar:" 20 61 5 $OPTIONS 2> $tempfile
+$DIALOG --backtitle "GUADALINEX Mínima. Selección de un perfil." \
+	--title "Perfiles" --clear \
+        --radiolist "Elija uno de estos perfiles de instalación pulsando SPACE \
+                     y pulse INTRO para continuar.:" 20 61 5 $OPTIONS 2> $tempfile
 EOF
 chmod +x /tmp/menu$$ && /tmp/menu$$
 retval=$?
