@@ -77,7 +77,7 @@ then
         $DIALOG --aspect 15 --cr-wrap --title "Errores en la instalación" --trim \
 	--backtitle "GUADALINEX Mínima. Errores en la instalación." \
         --msgbox "Hubo algún problema durante la instalación de paquetes,
-		 revise el fichero '/var/log/gni.log' para obtener más
+		 revise el fichero '/var/log/gmi.log' para obtener más
 		 información." 0 0
 	rm $0
 	exit 1
