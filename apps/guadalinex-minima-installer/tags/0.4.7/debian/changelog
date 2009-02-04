@@ -1,0 +1,122 @@
+guadalinex-minima-installer (0.4.7) lobo; urgency=low
+
+  * Established 'LANG' variable before init packages instalation.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Wed, 04 Feb 2009 18:15:55 +0100
+
+guadalinex-minima-installer (0.4.6) lobo; urgency=low
+
+  * Clarified some instalation strings.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Fri, 23 Jan 2009 09:13:15 +0100
+
+guadalinex-minima-installer (0.4.5) lobo; urgency=low
+
+  * Added confirmation when instalation is cancelled or it gives network
+    error.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Mon, 19 Jan 2009 12:02:41 +0100
+
+guadalinex-minima-installer (0.4.4) lobo; urgency=low
+
+  * Changed an unchanged "gni" string.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Fri, 16 Jan 2009 10:03:44 +0100
+
+guadalinex-minima-installer (0.4.3) lobo; urgency=low
+
+  * Fixed a bug related o exit codes and in consecuence, with info messages.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Thu, 15 Jan 2009 11:05:25 +0100
+
+guadalinex-minima-installer (0.4.2) lobo; urgency=low
+
+  * Fixes/Closes bug/task #5882: system was not rebooting on installation
+    complete.
+  * Fixed a bug: it didnt notice when 'apt-get install' failed.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Wed, 14 Jan 2009 13:20:12 +0100
+
+guadalinex-minima-installer (0.4.1) lobo; urgency=low
+
+  * Fixed a bug produced when no option is selected in menu.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Wed, 14 Jan 2009 13:20:12 +0100
+
+guadalinex-minima-installer (0.4) lobo; urgency=low
+
+  * Package renamed to "guadalinex-minima-installer"
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Wed, 14 Jan 2009 09:16:32 +0100
+
+guadalinex-nano-installer (0.3.2) lobo; urgency=low
+
+  * Added some missing features and some missing backtitles.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Tue, 13 Jan 2009 13:06:52 +0100
+
+guadalinex-nano-installer (0.3.1) lobo; urgency=low
+
+  * Changed the "dh_install" for an empty dir by a 'mkdir'.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Tue, 13 Jan 2009 11:32:45 +0100
+
+guadalinex-nano-installer (0.3) lobo; urgency=low
+
+  * Changed completely the paradigm.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Mon, 12 Jan 2009 16:31:14 +0100
+
+guadalinex-nano-installer (0.2.7) lobo; urgency=low
+
+  * Fixed exit codes in gni script.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Mon, 12 Jan 2009 13:13:51 +0100
+
+guadalinex-nano-installer (0.2.6) lobo; urgency=low
+
+  * Fixed a bug in postinstall script.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Mon, 12 Jan 2009 12:58:25 +0100
+
+guadalinex-nano-installer (0.2.5) lobo; urgency=low
+
+  * Package resorted/improved.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Mon, 12 Jan 2009 09:43:12 +0100
+
+guadalinex-nano-installer (0.2.4) lobo; urgency=low
+
+  * Fixed a little bug in 'gni' script.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Fri, 09 Jan 2009 15:21:33 +0100
+
+guadalinex-nano-installer (0.2.3) lobo; urgency=low
+
+  * Added some checkpoints to setup.sh
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Fri, 09 Jan 2009 13:28:16 +0100
+
+guadalinex-nano-installer (0.2.2) lobo; urgency=low
+
+  * Remove setup.sh just if apt-get install was performed.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Fri, 09 Jan 2009 13:05:46 +0100
+
+guadalinex-nano-installer (0.2.1) lobo; urgency=low
+
+  * Added 'wget' as dependence.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Fri, 09 Jan 2009 12:35:16 +0100
+
+guadalinex-nano-installer (0.2) lobo; urgency=low
+
+  * Added setup.sh
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Fri, 09 Jan 2009 11:57:31 +0100
+
+guadalinex-nano-installer (0.1) lobo; urgency=low
+
+  * Initial Release.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Wed, 24 Dec 2008 10:42:23 +0100
