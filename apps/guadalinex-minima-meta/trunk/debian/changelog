@@ -1,3 +1,9 @@
+guadalinex-minima-meta (0.2.4) unstable; urgency=low
+
+  * Added 'ssl-cert' as dependence.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Wed, 04 Feb 2009 18:05:41 +0100
+
 guadalinex-minima-meta (0.2.3) unstable; urgency=low
 
   * Added 'openssl' as dependence.
