@@ -53,7 +53,7 @@ case $retval in
 	
 	test -f $LOGFILE && rm $LOGFILE
 	apt-get update 2>&1 | tee -a $LOGFILE
-	test $? -eq 0 &&  apt-get install --force-yes --assume-yes $PKGS 2>&1 | tee -a $LOGFILE
+	test $? -eq 0 &&  LANG=es_ES.UTF-8 apt-get install --force-yes --assume-yes $PKGS 2>&1 | tee -a $LOGFILE
 	aptexit=$PIPESTATUS
 	if [ $aptexit -ne 0 ]
 	then

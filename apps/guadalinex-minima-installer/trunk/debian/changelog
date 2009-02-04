@@ -1,3 +1,9 @@
+guadalinex-minima-installer (0.4.7) lobo; urgency=low
+
+  * Established 'LANG' variable before init packages instalation.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Wed, 04 Feb 2009 18:15:55 +0100
+
 guadalinex-minima-installer (0.4.6) lobo; urgency=low
 
   * Clarified some instalation strings.
