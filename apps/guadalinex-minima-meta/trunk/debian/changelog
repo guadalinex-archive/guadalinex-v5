@@ -1,3 +1,9 @@
+guadalinex-minima-meta (0.2.5) unstable; urgency=low
+
+  * Added config file for localepurge.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Thu, 05 Feb 2009 09:11:15 +0100
+
 guadalinex-minima-meta (0.2.4) unstable; urgency=low
 
   * Added 'ssl-cert' as dependence.
