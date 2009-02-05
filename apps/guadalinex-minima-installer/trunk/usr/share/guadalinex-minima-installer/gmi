@@ -1,5 +1,25 @@
 #!/bin/bash
 
+preseed-localepurge() {
+
+cat > /tmp/preseed.cfg << EOF
+localepurge     localepurge/remove_no   note    
+localepurge     localepurge/none_selected       boolean false
+localepurge     localepurge/nopurge     multiselect     es_ES, es_ES@euro, es_ES.UTF-8
+localepurge     localepurge/mandelete   boolean true
+localepurge     localepurge/dontbothernew       boolean false
+localepurge     localepurge/showfreedspace      boolean true
+localepurge     localepurge/verbose     boolean false
+localepurge     localepurge/quickndirtycalc     boolean true
+EOF
+
+/usr/bin/debconf-set-selections /tmp/preseed.cfg
+
+exit $?
+
+}
+
+
 DIALOG=${DIALOG=dialog}
 tempfile=`tempfile 2>/dev/null` || tempfile=/tmp/test$$
 INDEXFILE=/etc/gmi/index
@@ -35,25 +55,39 @@ rm /tmp/menu$$
 choice=`cat $tempfile`
 case $retval in
   0)
-    #echo "$choice han sido seleccionados";;
-	# choice vacio = exit 1 (nada seleccionado)
+	# empty choice -> exit 1 (nothing was chosen)
 	if [ -z "$choice" ]
 	then
 		exit 1	
 	fi
+
+	# establish sources.list
         SOURCESLIST=$(grep "$choice" $INDEXFILE | awk -F';' '{print $2}')
         if [ ! -z "$SOURCESLIST" ]
 	then
 		mv /etc/apt/sources.list /etc/apt/sources.list.distrib
 		wget $SOURCESLIST -O /etc/apt/sources.list
 	fi
-	
+
+	# set pkg list
 	PROFILE=$(grep "$choice" $INDEXFILE|awk -F';' '{print $3}')
 	PKGS=$(wget $PROFILE -q -O /dev/stdout)
-	
+
+	# clean logfile
 	test -f $LOGFILE && rm $LOGFILE
+
+	# update repositories
 	apt-get update 2>&1 | tee -a $LOGFILE
-	test $? -eq 0 &&  LANG=es_ES.UTF-8 apt-get install --force-yes --assume-yes $PKGS 2>&1 | tee -a $LOGFILE
+
+	# preseed some shit
+	preseed-localepurge # function defined at top
+
+	# start pkgs installation
+	test $? -eq 0 &&\
+        LANG=es_ES.UTF-8 DEBCONF_PRIORITY=critical DEBCONF_FRONTEND=noninteractive\
+        apt-get install --force-yes --assume-yes $PKGS 2>&1 | tee -a $LOGFILE
+
+	# get apt exit status and return exit value to setup.sh
 	aptexit=$PIPESTATUS
 	if [ $aptexit -ne 0 ]
 	then

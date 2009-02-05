@@ -1,3 +1,10 @@
+guadalinex-minima-installer (0.4.8) lobo; urgency=low
+
+  * Established DEBCONF variables before init packages instalation.
+  * Preseed localepurge instalation.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Thu, 05 Feb 2009 10:20:45 +0100
+
 guadalinex-minima-installer (0.4.7) lobo; urgency=low
 
   * Established 'LANG' variable before init packages instalation.
