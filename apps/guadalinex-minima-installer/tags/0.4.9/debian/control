@@ -1,0 +1,14 @@
+Source: guadalinex-minima-installer
+Section: utils
+Priority: optional
+Maintainer: Roberto C. Morano <rcmorano@emergya.es>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.2
+
+Package: guadalinex-minima-installer
+Architecture: i386
+Depends: ${shlibs:Depends}, ${misc:Depends}, dialog, wget
+Description: Guadalinex Minima Installer
+ Guadalinex Minima Installer it's a simple text based menu that shows a list
+ of package sets defined in a config file and let you choose a set to be
+ installed.
