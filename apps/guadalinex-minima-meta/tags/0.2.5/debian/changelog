@@ -1,0 +1,74 @@
+guadalinex-minima-meta (0.2.5) unstable; urgency=low
+
+  * Added config file for localepurge.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Thu, 05 Feb 2009 09:11:15 +0100
+
+guadalinex-minima-meta (0.2.4) unstable; urgency=low
+
+  * Added 'ssl-cert' as dependence.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Wed, 04 Feb 2009 18:05:41 +0100
+
+guadalinex-minima-meta (0.2.3) unstable; urgency=low
+
+  * Added 'openssl' as dependence.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Fri, 23 Jan 2009 12:15:24 +0100
+
+guadalinex-minima-meta (0.2.2) unstable; urgency=low
+
+  * Added 'lsb-release' as dependence.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Thu, 22 Jan 2009 13:57:12 +0100
+
+guadalinex-minima-meta (0.2.1) unstable; urgency=low
+
+  * Added 'console-data' as dependence.
+  * Added '/etc/issue' and '/etc/issue.net' for identifying distro as "Guadalinex
+    Minima.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Wed, 14 Jan 2009 12:51:31 +0100
+
+guadalinex-minima-meta (0.2) unstable; urgency=low
+
+  * Package renamed to "guadalinex-minima".
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Wed, 14 Jan 2009 09:44:23 +0100
+
+guadalinex-nano-meta (0.1.5) unstable; urgency=low
+
+  * Added 'perl' as dependence.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Mon, 12 Jan 2009 17:16:11 +0100
+
+guadalinex-nano-meta (0.1.4) unstable; urgency=low
+
+  * Added lsb-release customization.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Mon, 12 Jan 2009 13:40:51 +0100
+
+guadalinex-nano-meta (0.1.3) unstable; urgency=low
+
+  * Fixing depends
+
+ -- Javier Hernández Antúnez <jhernandez@emergya.es>  Mon, 05 Jan 2009 13:51:54 +0100
+
+guadalinex-nano-meta (0.1.2) unstable; urgency=low
+
+  * Added 'language-pack-es' & 'console-setup' as dependences.
+
+ -- Javier Hernández Antúnez <jhernandez@emergya.es>  Mon, 05 Jan 2009 12:08:29 +0100
+
+guadalinex-nano-meta (0.1.1) unstable; urgency=low
+
+  * Added 'guadalinex-nano-installer' as dependence.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Mon, 05 Jan 2009 11:20:11 +0100
+
+guadalinex-nano-meta (0.1) unstable; urgency=low
+
+  * First import
+
+ -- Alfredo Matas <amatas@emergya.es>  Tue, 23 Dec 2008 11:06:21 +0100
+
