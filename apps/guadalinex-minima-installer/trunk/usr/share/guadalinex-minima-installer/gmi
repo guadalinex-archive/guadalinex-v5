@@ -15,7 +15,7 @@ EOF
 
 /usr/bin/debconf-set-selections /tmp/preseed.cfg
 
-exit $?
+return $?
 
 }
 
