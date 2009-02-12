@@ -19,7 +19,7 @@ return $?
 
 }
 
-
+LANG=es_ES
 DIALOG=${DIALOG=dialog}
 tempfile=`tempfile 2>/dev/null` || tempfile=/tmp/test$$
 INDEXFILE=/etc/gmi/index

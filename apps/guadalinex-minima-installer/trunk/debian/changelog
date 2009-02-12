@@ -1,3 +1,10 @@
+guadalinex-minima-installer (0.5) lobo; urgency=low
+
+  * Set 'LANG' environment language to 'es_ES' which is not set yet when the
+    installer is launched, so 'dialog' buttons were not translated to Spanish.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Thu, 12 Feb 2009 14:06:22 +0100
+
 guadalinex-minima-installer (0.4.9) lobo; urgency=low
 
   * Fixed a little bug: a function was exiting instead of returning exit code.

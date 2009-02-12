@@ -23,7 +23,7 @@ $DIALOG --aspect 15 --cr-wrap --title "Cancelar instalación" --trim \
 return $?
 
 }
-
+LANG=es_ES
 VERSION="V5"
 DIALOG="/usr/bin/dialog"
 INDEXURL="http://www.guadalinex.org/distro/$VERSION/perfiles/index"
